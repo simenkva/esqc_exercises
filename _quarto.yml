@@ -1,7 +1,7 @@
 profile:
   default: student
   group:
-    - [student, instructor]
+    - [student, tutor]
 
 project:
   type: book

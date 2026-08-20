@@ -2,6 +2,6 @@
 
 Content coming soon.
 
-::: {.content-visible when-profile="instructor"}
-Instructor-only content coming soon.
+::: {.content-visible when-profile="tutor"}
+Tutor-only content coming soon.
 :::

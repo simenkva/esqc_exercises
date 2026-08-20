@@ -1,5 +1,0 @@
-project:
-  output-dir: docs/instructor
-
-execute:
-  echo: false
