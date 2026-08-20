@@ -12,7 +12,7 @@ $$ {#eq-matrix-exponential}
 
 :::{#exr-matrix-exponential}
 
-Consider equation {eq-matrix-exponential}. 
+Consider equation @eq-matrix-exponential.
 
 a. Write out the 5 first terms of the series expansion.
 b. Why must we require that $T$ is a square matrix in order for the series to be well-defined?
@@ -27,16 +27,19 @@ $$
 
 Compute the first 5 terms of the matrix exponential $\exp(T)$ using the series expansion. You may find it useful to compute the powers of $T$ first.
 
-
-
-
 :::
+
+
+
+
+
+
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions
 
-### Solution to {#exr-matrix-exponential}
+### Solution to @exr-matrix-exponential
 
 a. The first five terms of the series expansion of $\exp(T)$ are:  
 

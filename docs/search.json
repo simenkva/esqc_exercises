@@ -146,7 +146,18 @@
     "href": "chapters/bch-expansion.html",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "",
-    "text": "Content coming soon.",
+    "text": "13.1 Introduction\nIn coupled-cluster theory we have need for computing the exponential of an operator. Mathematically, this topic is rather delicate, but it simplifies once we assume that the operators are merely matrices. Thus, let \\(T\\) be a square matrix, and define the matrix exponential of \\(T\\) as\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/bch-expansion.html#exercises",
+    "href": "chapters/bch-expansion.html#exercises",
+    "title": "13  BCH expansion and exponentials of operators",
+    "section": "13.2 Exercises",
+    "text": "13.2 Exercises\n\nExercise 13.1 Consider equation {Equation 13.1}.\n\nWrite out the 5 first terms of the series expansion.\nWhy must we require that \\(T\\) is a square matrix in order for the series to be well-defined?\nLet \\(T\\) be the \\(2\\times 2\\) matrix\n\n\\[\n    T = \\begin{bmatrix}\n        0 & 1 \\\\\n        -1 & 0\n    \\end{bmatrix}.\n\\]\nCompute the first 5 terms of the matrix exponential \\(\\exp(T)\\) using the series expansion. You may find it useful to compute the powers of \\(T\\) first.",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"

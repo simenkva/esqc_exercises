@@ -1,2 +1,5 @@
+project:
+  output-dir: docs/student
+
 execute:
   echo: false
