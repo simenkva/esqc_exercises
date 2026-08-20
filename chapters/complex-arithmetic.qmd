@@ -6,7 +6,7 @@ Cartesian and polar forms connect complex arithmetic with plane geometry, rotati
 
 ### Complex numbers
 
-:::{#exr-recommended-complex-arithmetic-compute-real-imaginary-parts-functions}
+::: {#exr-complex-arithmetic-compute-real-imaginary-parts-functions .recommended topic="recommended"}
 
 Let $z = x + \mathrm{i}y \in \mathbb{C}$, and compute the real and imaginary parts of $z^2$, $z^3$, and $z^4$, as functions of $x$ and $y$.
 
@@ -24,7 +24,7 @@ Compute closed-form expression for $z^{-1}$, exhibiting the real and imaginary p
 
 :::
 
-:::{#exr-recommended-complex-arithmetic-complex-numbers-can-written-polar-form}
+::: {#exr-complex-arithmetic-complex-numbers-can-written-polar-form .recommended topic="recommended"}
 
 A complex number $z = x + \mathrm{i}y$ can be written in polar form, $$x = r \cos(\theta), \quad y = r \sin(\theta).$$ Write down the rule for $z^n = R\cos \phi + \mathrm{i}R\sin\phi$ using angle $\theta$ and modulus $r$.
 
@@ -40,7 +40,7 @@ Consider the polynomial equation $f(z) = z^3 + 1 = 0$. Find all the roots in the
 
 ![The parallelogram rule. (From Butkov.)](../figures/exercises/parallelogram-rule.png){#fig-parallelogram-rule width="75%"}
 
-:::{#exr-recommended-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule}
+::: {#exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule .recommended topic="recommended"}
 
 Let $z = x + \mathrm{i}y \in \mathbb{C}$. Illustrate the addition $w = z + \bar{z}$ in a coordinate system using the parallelogram rule.
 
@@ -68,11 +68,11 @@ Show that the function $z \mapsto \mathrm{i}z$ is a counterclockwise rotation by
 
 ## Solutions
 
-### Solution to @exr-recommended-complex-arithmetic-compute-real-imaginary-parts-functions
+### Solution to @exr-complex-arithmetic-compute-real-imaginary-parts-functions {.unnumbered}
 
 $$(x + \mathrm{i}y)^2 = x^2 + 2\mathrm{i}xy + \mathrm{i}^2 y^2 = (x^2 - y^2) + 2\mathrm{i}xy.$$ Obtain the next powers by multiplying the preceding result by $z$.
 
-### Solution to @exr-complex-arithmetic-compute-closed-form-expression-real-imaginary
+### Solution to @exr-complex-arithmetic-compute-closed-form-expression-real-imaginary {.unnumbered}
 
 The binomial expansion gives $$(x + \mathrm{i}y)^n = \sum_{j=0}^n \binom{n}{j} x^{n-j} (\mathrm{i}y)^j.$$ Even powers satisfy $\mathrm{i}^{2k}=(-1)^k$. The even indices between $0$ and $n$ are $2j$ for $j=0,1,\ldots,\lfloor n/2\rfloor$, while the odd indices are $2j+1$ for $j=0,1,\ldots,\lfloor(n-1)/2\rfloor$. Let $K=\lfloor n/2\rfloor$ and $L=\lfloor(n-1)/2\rfloor$.
 
@@ -84,7 +84,7 @@ $$
 + \mathrm{i}\sum_{j=0}^{L} (-1)^j\binom{n}{2j+1} x^{n-2j-1} y^{2j+1}.
 $$
 
-### Solution to @exr-complex-arithmetic-compute-closed-form-expression-exhibiting-real
+### Solution to @exr-complex-arithmetic-compute-closed-form-expression-exhibiting-real {.unnumbered}
 
 Multiply by the complex conjugate:
 
@@ -96,27 +96,27 @@ $$
 
 The formulas from the previous exercise then apply with $y\mapsto-y$ and a prefactor $(x^2+y^2)^{-n}$.
 
-### Solution to @exr-recommended-complex-arithmetic-complex-numbers-can-written-polar-form
+### Solution to @exr-complex-arithmetic-complex-numbers-can-written-polar-form {.unnumbered}
 
 The geometric interpretation gives $\phi = n\theta$ (modulus $2\pi$) and $R = r^n$.
 
-### Solution to @exr-complex-arithmetic-consider-polynomial-equation-find-all-roots
+### Solution to @exr-complex-arithmetic-consider-polynomial-equation-find-all-roots {.unnumbered}
 
 $-1$ has modulus 1 and angle $\pi$. A root must be such that $r^n = 1$ (which implies $r=1$), and $3\theta = \pi + 2k\pi$, since the angle wraps around at $2\pi$ when we multiply complex numbers. Thus, $\theta = \pi/3 + 2k\pi/3$. $k=0$ gives $\pi/3$, $k=1$ gives $3\pi/3=\pi$, and $k=2$ gives $5\pi/3$. Now any larger $k$ wraps around to these three angles. So we have found the roots.
 
-### Solution to @exr-recommended-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule
+### Solution to @exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-arithmetic-recall-our-earlier-exercise-where-was
+### Solution to @exr-complex-arithmetic-recall-our-earlier-exercise-where-was {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-arithmetic-another-product-indeed-cross-product-matrix
+### Solution to @exr-complex-arithmetic-another-product-indeed-cross-product-matrix {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-arithmetic-function-counterclockwise-rotation-find-function-performs
+### Solution to @exr-complex-arithmetic-function-counterclockwise-rotation-find-function-performs {.unnumbered}
 
 *The source does not supply a solution.*
 

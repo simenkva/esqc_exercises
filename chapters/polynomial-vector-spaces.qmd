@@ -8,13 +8,13 @@ Recall that a polynomial of degree $n$ over $\mathbb{F}$ has the form $$p(x) = a
 
 ## Exercises
 
-:::{#exr-recommended-polynomial-vector-spaces-set-all-polynomials-degree-less-than}
+::: {#exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than .recommended topic="recommended"}
 
 Let $P_n$ be the set of all polynomials of degree less than or equal to $n$. Show that $P_n$ is a vector space of dimension $n+1$ over $\mathbb{C}$.
 
 :::
 
-:::{#exr-recommended-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear}
+::: {#exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear .recommended topic="recommended"}
 
 Let $D : P_n \to P_n$ be the differentiation operator, i.e., $$(D p)(x) = p'(x).$$ Show that $D$ is indeed a linear operator.
 
@@ -86,43 +86,43 @@ The so-called Golub--Welsch algorithm is a simple algorithm based on diagonaliza
 
 **Tutor note:** Treating functions as vectors is important in quantum chemistry. The recommended sub-exercises should be broadly accessible; the remaining exercises may require tutor preparation.
 
-### Solution to @exr-recommended-polynomial-vector-spaces-set-all-polynomials-degree-less-than
+### Solution to @exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than {.unnumbered}
 
 The sum of two polynomials is a polynomial. A scalar multiple of a polynomial is a polynomial. The polynomials $x^i$ are clearly linearly independent. Since all polynomials are linear combinations of such, the dimension must be equal to the number of coefficients, $n+1$.
 
-### Solution to @exr-recommended-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear
+### Solution to @exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-does-there-exist-inverse
+### Solution to @exr-polynomial-vector-spaces-does-there-exist-inverse {.unnumbered}
 
 No inverse exists, since the null space of $D$ is nontrivial (the constant polynomials). The indefinite integral would be a candidate for inverse, but the integral is only determined up to a constant.
 
-### Solution to @exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write
+### Solution to @exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write {.unnumbered}
 
 Since $(x^{i-1})' = (i-1)x^{i-2}$ for $i>1$, we get $$T_{i-1,i}=i-1, \qquad i=2,\ldots,n+1,$$ and all other matrix elements are zero.
 
-### Solution to @exr-polynomial-vector-spaces-indeed-inner-product-checking-axioms
+### Solution to @exr-polynomial-vector-spaces-indeed-inner-product-checking-axioms {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis
+### Solution to @exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis {.unnumbered}
 
 $$\int_{-1}^1 x^i x^j \; \mathrm{d}x = \frac{1}{i+j+1}(1-(-1)^{i+j+1}).$$ Clearly not an orthonormal basis, since the matrix is not the identity matrix.
 
-### Solution to @exr-polynomial-vector-spaces-formulate-gram-schmidt-procedure-bra-ket
+### Solution to @exr-polynomial-vector-spaces-formulate-gram-schmidt-procedure-bra-ket {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-use-gram-schmidt-decomposition-hand-compute
+### Solution to @exr-polynomial-vector-spaces-use-gram-schmidt-decomposition-hand-compute {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-compute-matrix-differential-operator-normalized-legendre
+### Solution to @exr-polynomial-vector-spaces-compute-matrix-differential-operator-normalized-legendre {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-repeat-previous-exercise-operator
+### Solution to @exr-polynomial-vector-spaces-repeat-previous-exercise-operator {.unnumbered}
 
 *The source does not supply a solution.*
 

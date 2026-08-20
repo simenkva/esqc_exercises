@@ -60,31 +60,31 @@ Show that $\exp(z) \neq 0$.
 
 **Tutor note:** I think that this exercise is very nice. It is not too hard if the student has some experience with the equation $y'' = -y$.
 
-### Solution to @exr-complex-exponential-thus-need-determine
+### Solution to @exr-complex-exponential-thus-need-determine {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-set-hence-hint-cauchy-riemann
+### Solution to @exr-complex-exponential-set-hence-hint-cauchy-riemann {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-general-solution-ode-where-constants-determined
+### Solution to @exr-complex-exponential-general-solution-ode-where-constants-determined {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-conclude
+### Solution to @exr-complex-exponential-conclude {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-cauchy-riemann-everywhere-analytic
+### Solution to @exr-complex-exponential-cauchy-riemann-everywhere-analytic {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-equation-has-infinitely-many-solutions-any
+### Solution to @exr-complex-exponential-equation-has-infinitely-many-solutions-any {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-exponential-exercise
+### Solution to @exr-complex-exponential-exercise {.unnumbered}
 
 *The source does not supply a solution.*
 

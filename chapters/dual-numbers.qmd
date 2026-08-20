@@ -12,7 +12,7 @@ Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i
 
 ## Exercises
 
-:::{#exr-curious-dual-numbers-dual-numbers}
+::: {#exr-dual-numbers-dual-numbers .recommended topic="curious"}
 
 1.  Compute the multiplication law in terms of real and "dual" parts, i.e., $z_1z_2 = z = x + \varepsilon y$, and find $x$ and $y$. Compute the addition law for $z_1 + z_2$.
 
@@ -38,7 +38,7 @@ Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i
 
 This exercise is perhaps for the specially interested.
 
-### Solution to @exr-curious-dual-numbers-dual-numbers
+### Solution to @exr-dual-numbers-dual-numbers {.unnumbered}
 
 **For part 2.**
 

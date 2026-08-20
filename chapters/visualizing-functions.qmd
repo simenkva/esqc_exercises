@@ -6,7 +6,7 @@ Some paths and their curves:
 
 ## Exercises
 
-:::{#exr-recommended-visualizing-functions-path-defined-sketch-curve-traced-path}
+::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path .recommended topic="recommended"}
 
 Let $f : \mathbb{R}\to \mathbb{R}^2$ be a path defined by $$f(t) = [r(t)\cos(4t), r(t)\sin(4t)], \quad r(t) = \exp(-t).$$ Sketch the curve traced by the path for $0 \leq t \leq 2\pi$. You can check your sketch against, say, a Python plot.
 
@@ -26,7 +26,7 @@ Let $f : [0,\pi] \to \mathbb{R}^2$ be given by $f(t)=[x(t),y(t)]$, with $x(t) = 
 
 Level curves:
 
-:::{#exr-recommended-visualizing-functions-sketch-level-curves}
+::: {#exr-visualizing-functions-sketch-level-curves .recommended topic="recommended"}
 
 Let $f(x,y) = x^2 + y^2$. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 1$ and $n=2$, $n=3$, and $n=4$.
 
@@ -103,43 +103,43 @@ Write a program to visualize *sections* of the orbital graphs. For example, fix 
 
 **Tutor note:** The first few exercises are not hard, and the plots give quick visual feedback. The later exercises require some straightforward programming. The level-curve exercise comes from Marsden and Tromba.
 
-### Solution to @exr-recommended-visualizing-functions-path-defined-sketch-curve-traced-path
+### Solution to @exr-visualizing-functions-path-defined-sketch-curve-traced-path {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2
+### Solution to @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-sketch-curve-here-it-probably-easiest
+### Solution to @exr-visualizing-functions-sketch-curve-here-it-probably-easiest {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-recommended-visualizing-functions-sketch-level-curves
+### Solution to @exr-visualizing-functions-sketch-level-curves {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-sketch-level-curves-where-can-you
+### Solution to @exr-visualizing-functions-sketch-level-curves-where-can-you {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle
+### Solution to @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-write-python-program-sketching-level-curves
+### Solution to @exr-visualizing-functions-write-python-program-sketching-level-curves {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-adapt-your-program-draw-level-curves
+### Solution to @exr-visualizing-functions-adapt-your-program-draw-level-curves {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-write-python-program-draw-level-surfaces
+### Solution to @exr-visualizing-functions-write-python-program-draw-level-surfaces {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals
+### Solution to @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals {.unnumbered}
 
 *The source does not supply a solution.*
 

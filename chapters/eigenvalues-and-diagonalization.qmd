@@ -14,7 +14,7 @@ In this section, we let $M(n) = M(n,n,\mathbb{C}) = \mathbb{C}^{n\times n}$ be t
 
 Two matrices $A$ and $B$ are said to be *similar* if there is an invertible matrix $U$ such that $A = U B U^{-1}$. If $U$ is unitary, then $A$ and $B$ are *unitarily similar*. ($U$ is unitary if and only if $U^H = U^{-1}$.)
 
-:::{#exr-curious-eigenvalues-and-diagonalization-eigenvalue-decomposition}
+::: {#exr-eigenvalues-and-diagonalization-eigenvalue-decomposition .recommended topic="curious"}
 
 1.  What does it mean that $A \in M(n)$ is normal?
 
@@ -116,7 +116,7 @@ For which values of $z$ does there exist a basis of eigenvectors?
 
 **Tutor note:** This exercise may be considered for the especially interested student. It requires some mathematical argument skill. I would not consider it *hard*, though, but perhaps not focus on this exercise to begin with. I will try to make a solution for this in time.
 
-### Solution to @exr-curious-eigenvalues-and-diagonalization-eigenvalue-decomposition
+### Solution to @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition {.unnumbered}
 
 *The source does not supply a solution.*
 
@@ -126,31 +126,31 @@ For which values of $z$ does there exist a basis of eigenvectors?
 
 I think this is one of th exercises that the tutors should spend some time with.
 
-### Solution to @exr-eigenvalues-and-diagonalization-write-out-set-permutations
+### Solution to @exr-eigenvalues-and-diagonalization-write-out-set-permutations {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise
+### Solution to @exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension
+### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator
+### Solution to @exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2
+### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2 {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues
+### Solution to @exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors
+### Solution to @exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors {.unnumbered}
 
 *The source does not supply a solution.*
 

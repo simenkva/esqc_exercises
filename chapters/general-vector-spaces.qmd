@@ -70,7 +70,7 @@ In this exercise, we will train our ability to think abstractly, and also try to
 
 ## Exercises
 
-:::{#exr-recommended-general-vector-spaces-general-vector-spaces}
+::: {#exr-general-vector-spaces-general-vector-spaces .recommended topic="recommended"}
 
 1.  Consider viewing the set $L$ of cake recipe ingredient lists as a vector space. Thus, the components of $L$ are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?
 
@@ -92,7 +92,7 @@ In this exercise, we will train our ability to think abstractly, and also try to
 
 ## Solutions
 
-### Solution to @exr-recommended-general-vector-spaces-general-vector-spaces
+### Solution to @exr-general-vector-spaces-general-vector-spaces {.unnumbered}
 
 **For part 1.**
 

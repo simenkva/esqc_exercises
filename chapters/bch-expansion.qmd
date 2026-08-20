@@ -41,7 +41,7 @@ c. Let
 
 ## Solutions
 
-### Solution to @exr-matrix-exponential
+### Solution to @exr-matrix-exponential {.unnumbered}
 
 a. Substituting $n=0,1,2,3,4$ in @eq-matrix-exponential gives
 

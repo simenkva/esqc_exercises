@@ -54,7 +54,7 @@ Let $$A = \{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x < 1, \quad 0 \leq y < 1\}.$$ C
 
 **Tutor note:** This exercise really develops the basic skills thinking about open and closed sets, and also mathematical argumentation. Even if the exercises are fairly basic by undergrad maths standards, maybe this style of thinking is difficult for some students, and therefore I think it is worthwhile.
 
-### Solution to @exr-open-and-closed-sets-any-ball-open
+### Solution to @exr-open-and-closed-sets-any-ball-open {.unnumbered}
 
 Let $A = B_\epsilon(\mathbf{x}_0)$ and $\mathbf{x}\in A$. Set $r = \|\mathbf{x}-\mathbf{x}_0\| < \epsilon$ and $\delta = \epsilon-r>0$. If $\mathbf{y}\in B_\delta(\mathbf{x})$, then
 
@@ -66,23 +66,23 @@ $$
 
 Thus $B_\delta(\mathbf{x})\subset A$. Every point of $A$ has an open ball contained in $A$, so $A$ is open.
 
-### Solution to @exr-open-and-closed-sets-closed
+### Solution to @exr-open-and-closed-sets-closed {.unnumbered}
 
 Let $C=(A\cup\partial A)^\complement$. If $\mathbf{x}\in C$, then $\mathbf{x}\notin A$ and $\mathbf{x}\notin\partial A$. Since $\mathbf{x}$ is not a boundary point, some ball $B_\epsilon(\mathbf{x})$ lies wholly in $A$ or wholly in $A^\complement$. It cannot lie in $A$ because it contains $\mathbf{x}$, so it lies in $A^\complement$ and contains no boundary point. Hence $B_\epsilon(\mathbf{x})\subset C$. The complement $C$ is open, so $A\cup\partial A$ is closed.
 
-### Solution to @exr-open-and-closed-sets-if-closed-then-if-sequence-converges
+### Solution to @exr-open-and-closed-sets-if-closed-then-if-sequence-converges {.unnumbered}
 
 *The source does not supply a completed solution.*
 
-### Solution to @exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal
+### Solution to @exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal {.unnumbered}
 
 We have shown that $A \cup \partial A$ is closed. Suppose $A \cup \partial A$ is not the smallest closed set that contains $A$, i.e., $(A\cup\partial A)\setminus\bar{A}$ contains some point $\mathbf{x}$. Since both sets contain $A$, we must have $\mathbf{x}\in \partial A$. From this, we should look for a contradiction, because intuitively, the boundary must be part of $\bar{A}$. For all $\epsilon>0$, $B_\epsilon(\mathbf{x})$ intersects both $A$ and $A^\complement$. Therefore, there exists a sequence $\mathbf{x}_i\in A$ such that $\mathbf{x}_i \to \mathbf{x}\in  \partial A$, but the smallest closed set containing $A$ must contain this $\mathbf{x}$.
 
-### Solution to @exr-open-and-closed-sets-closed-2
+### Solution to @exr-open-and-closed-sets-closed-2 {.unnumbered}
 
 Consider $A^\complement$, the plane without the interval $[-1,1]$ on the $x$-axis. For a point $(x,y)\in A^\complement$ with $y\neq0$, choose any $0<\epsilon<|y|$. If $y=0$, then $|x|>1$, and we may choose any $0<\epsilon<|x|-1$. In either case, the $\epsilon$-ball around $(x,y)$ misses $A$. Thus $A^\complement$ is open and $A$ is closed.
 
-### Solution to @exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior
+### Solution to @exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior {.unnumbered}
 
 Let $p/q \in \mathbb{Q}$ be a rational number, and let $]p/q-\epsilon, p/q + \epsilon[$ be an $\epsilon$-"ball" around $p/q$. But we know that between any two real numbers, there are infinitely many rational numbers, and also irrational numbers. Hence, the ball is not contained in $\mathbb{Q}$, so the rational numbers do not form an open set. Hence no rational number has an open ball around it, and hence the interior of $\mathbb{Q}$ is empty. To show that $\mathbb{Q}$ is not closed, consider the openness of the complement, $\mathbb{R}\setminus\mathbb{Q}$, the irrational numbers. The same argument can be applied, the irrationals are not open.
 
@@ -90,7 +90,7 @@ The boundary of $\mathbb{Q}$ is all of $\mathbb{R}$, since any ball around a rat
 
 Finally, the closure of $\mathbb{Q}$ is then $\mathbb{R}$.
 
-### Solution to @exr-open-and-closed-sets-compute-interior-boundary-closure
+### Solution to @exr-open-and-closed-sets-compute-interior-boundary-closure {.unnumbered}
 
 The interior of $A$ is $$\{ (x,y) \in \mathbb{R}^2 \mid 0 < x < 1, \quad 0 < y < 1\}.$$ The boundary of $A$ is the border of the square, $$\partial A = \{ (0,t) \mid 0 \leq t \leq 1 \} \cup \{ (1,t) \mid 0 \leq t \leq 1 \} \cup \{ (t,0) \mid 0 \leq t \leq 1 \} \cup \{ (t,1) \mid 0 \leq t \leq 1 \}$$ The closure of $A$ is $A$ with the border, hence $$\{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x \leq 1, \quad 0 \leq y \leq 1\}.$$
 

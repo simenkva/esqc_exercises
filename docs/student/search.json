@@ -10,586 +10,586 @@
     ]
   },
   {
-    "objectID": "chapters/recommendations-first-day.html",
-    "href": "chapters/recommendations-first-day.html",
-    "title": "1  The first day",
+    "objectID": "_generated/recommendations-first-day.html",
+    "href": "_generated/recommendations-first-day.html",
+    "title": "Recommended exercises for the first day",
     "section": "",
-    "text": "1.1 Recommended exercises\nThis page collects two selections from the exercise chapters. Each entry links to the exercise in its subject part. The lists are generated from exercise IDs.",
+    "text": "Basic exercises recommended for beginners\nThis chapter contains recommended exercises for the mathematics tutorial on the first day of the school. These recommended exercises are considered especially useful.\nWe provide also a list of recommended exercises for the ‘beginners’. If you feel that you need training in the absolute basics of the mathematics used in quantum chemistry, we recommend that you start here.\nIn the next chapter, we provide lists of recommended exercises for each quantum chemistry topic taught at the school.",
     "crumbs": [
       "Exercise recommendations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>The first day</span>"
+      "Recommended exercises for the first day"
     ]
   },
   {
-    "objectID": "chapters/recommendations-first-day.html#recommended-exercises",
-    "href": "chapters/recommendations-first-day.html#recommended-exercises",
-    "title": "1  The first day",
-    "section": "",
-    "text": "Sets and functions\n\nExercise 3.1\nExercise 3.2\nExercise 3.8\n\nCardinality and countability\n\nExercise 4.1\n\nGeneral vector spaces\n\nExercise 5.1\n\nVectors and matrices\n\nExercise 6.2\nExercise 6.3\nExercise 6.6\nExercise 6.7\n\nGaussian elimination\n\nExercise 8.3\n\nPolynomial vector spaces\n\nExercise 13.1\nExercise 13.2\n\nMetric spaces\n\nExercise 14.1\n\nVisualizing functions\n\nExercise 16.1\nExercise 16.4\n\nContinuity and differentiability\n\nExercise 17.1\nExercise 17.4\n\nComplex arithmetic and geometry\n\nExercise 19.1\nExercise 19.4\nExercise 19.6\n\nSubsets of the complex plane\n\nExercise 20.1\n\nSingularities and contour integrals\n\nExercise 23.1",
+    "objectID": "_generated/recommendations-first-day.html#recommended-exercises",
+    "href": "_generated/recommendations-first-day.html#recommended-exercises",
+    "title": "Recommended exercises for the first day",
+    "section": "Recommended exercises",
+    "text": "Recommended exercises\n\nExercise 1.1\nExercise 1.2\nExercise 1.8\nExercise 2.1\nExercise 3.1\nExercise 4.2\nExercise 4.3\nExercise 4.6\nExercise 4.7\nExercise 6.3\nExercise 11.1\nExercise 11.2\nExercise 12.1\nExercise 14.1\nExercise 14.4\nExercise 15.1\nExercise 15.4\nExercise 17.1\nExercise 17.4\nExercise 17.6\nExercise 18.1\nExercise 21.1",
     "crumbs": [
       "Exercise recommendations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>The first day</span>"
+      "Recommended exercises for the first day"
     ]
   },
   {
-    "objectID": "chapters/recommendations-first-day.html#for-the-curious",
-    "href": "chapters/recommendations-first-day.html#for-the-curious",
-    "title": "1  The first day",
-    "section": "1.2 For the curious",
-    "text": "1.2 For the curious\n\n\nThe complex numbers as a real vector space\n\nExercise 7.1\n\nEigenvalues and diagonalization\n\nExercise 10.1\n\nGram–Schmidt orthogonalization\n\nExercise 11.1\n\nThe singular-value decomposition\n\nExercise 12.1\n\nDual numbers and automatic differentiation\n\nExercise 24.1\n\nComplex-step differentiation\n\nExercise 26.1",
+    "objectID": "_generated/recommendations-first-day.html#exercises-for-the-curious",
+    "href": "_generated/recommendations-first-day.html#exercises-for-the-curious",
+    "title": "Recommended exercises for the first day",
+    "section": "Exercises for the curious",
+    "text": "Exercises for the curious\n\nExercise 5.1\nExercise 8.1\nExercise 9.1\nExercise 10.1\nExercise 22.1\nExercise 24.1",
     "crumbs": [
       "Exercise recommendations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>The first day</span>"
+      "Recommended exercises for the first day"
     ]
   },
   {
-    "objectID": "chapters/recommendations-per-topic.html",
-    "href": "chapters/recommendations-per-topic.html",
-    "title": "2  Recommended exercises per topic",
+    "objectID": "_generated/recommendations-per-topic.html",
+    "href": "_generated/recommendations-per-topic.html",
+    "title": "Recommended exercises by topic",
     "section": "",
-    "text": "2.1 List of recommended exercises",
+    "text": "Coupled-cluster theory\nThis chapter contains lists of mathematics exercises grouped by each quantum chemistry topic taught at the school. These exercises can be useful as a warm-up to the proper exercises given each day.",
     "crumbs": [
       "Exercise recommendations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Recommended exercises per  topic</span>"
+      "Recommended exercises by topic"
     ]
   },
   {
-    "objectID": "chapters/recommendations-per-topic.html#list-of-recommended-exercises",
-    "href": "chapters/recommendations-per-topic.html#list-of-recommended-exercises",
-    "title": "2  Recommended exercises per topic",
-    "section": "",
-    "text": "Second quantization\n\nBinomial expansion\nbinomial coefficients\nPascal’s triangle\nCauchy product of series\nProof by induction (or direct)\nHandling summation signs (also in combination with Kronecker deltas)\nDefinition of exp as a power series\nPartial derivatives of vectors (CI eigenvalue problem)\nFinding eigenvalues and eigenvectors of a 2x2 matrix.\n\nSCF\n\nMatrix algebra: matrix multiplication, unitary transformation\n\nDFT\n\nfunctional derivatives\nTransformation formula for multidimensional integrals (calculating Jacobi determinant for transformation from one set of coordinates to another).\n\nResponse theory\n\nBCH expansion, manipulation of exponentials of operators.\nExponential of antihermitian operator is unitary (and maybe also the opposite: Every unitary can be written as an exponential of an antihermitian operator).\nPoles and residues of complex functions\nFourier transform\nexponential form of the sin and cos functions\nEuler’s formula for complex exponentials\nPartial derivatives with respect to dependent variables (In this case: the parameters Pn and their complex conjugates Pn∗)\n\nRelativity\n\nLevi-Civita symbol\nRoots of a 3rd order polynomial\n\nCoupled cluster\n\nTaylor expansion\n\nMolecular properties\n\nWriting cross product in terms of Levi-Civita symbols\nEvaluating commutator of momentum operator with a local operator (like vector potential)\nLagrange multiplier method\nTotal and partial derivatives \n\nMulticonfigurational methods\n\nresolution of the identity, projection operators",
+    "objectID": "_generated/recommendations-per-topic.html#second-quantization",
+    "href": "_generated/recommendations-per-topic.html#second-quantization",
+    "title": "Recommended exercises by topic",
+    "section": "Second quantization",
+    "text": "Second quantization",
     "crumbs": [
       "Exercise recommendations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Recommended exercises per  topic</span>"
+      "Recommended exercises by topic"
     ]
   },
   {
     "objectID": "chapters/sets-and-functions.html",
     "href": "chapters/sets-and-functions.html",
-    "title": "3  Sets and functions",
+    "title": "1  Sets and functions",
     "section": "",
-    "text": "3.1 Exercises\nThese exercises use elementary set notation, ordered pairs, Cartesian products, functions, and complements.\nDe Morgan’s laws are useful when discussing subsets \\(A,B\\) of a larger set \\(X\\). Recall that the complement of \\(A\\) relative to \\(X\\) is \\(A^\\complement = X \\setminus A\\). De Morgan’s laws state that:",
+    "text": "1.1 Exercises\nThese exercises use elementary set notation, ordered pairs, Cartesian products, functions, and complements.\nDe Morgan’s laws are useful when discussing subsets \\(A,B\\) of a larger set \\(X\\). Recall that the complement of \\(A\\) relative to \\(X\\) is \\(A^\\complement = X \\setminus A\\). De Morgan’s laws state that:",
     "crumbs": [
       "Mathematical foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sets and functions</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sets and functions</span>"
     ]
   },
   {
     "objectID": "chapters/sets-and-functions.html#exercises",
     "href": "chapters/sets-and-functions.html#exercises",
-    "title": "3  Sets and functions",
+    "title": "1  Sets and functions",
     "section": "",
-    "text": "Exercise 3.1 Write the days of the week as a set\n\n\nExercise 3.2 Write the five first natural numbers using set notation as indicated in the lecture notes\n\n\nExercise 3.3 An ordered pair \\((x,y)\\) is a two-element “set” where the order matters. Two ordered pairs \\((x,y)\\) and \\((u,v)\\) are equal if and only if \\(x=u\\) and \\(y = v\\). From this it follows that \\((x,y) = (y,x)\\) if and only if \\(x=y\\). A definition of an ordered pair as a set is \\[(x,y) = \\{ \\{x\\}, \\{x,y\\} \\}.\\] Show that \\((x,y) = (y,x)\\) if and only if \\(x=y\\) using the set theoretic definition.\n\n\nExercise 3.4 A nonnegative rational number \\(p/q\\), \\(p,q\\in\\mathbb{N}\\), \\(q &gt; 0\\), can be written as an ordered pair \\((p,q)\\). Write down the rational numbers \\(1/4\\), \\(2/3\\), \\(0\\), \\(1/3\\) as ordered pairs using set theory, both for the pair and for each integer. (Strictly speaking we the number itself is an equivalence class of such pairs, i.e., \\(pn/qn = p/q\\), so we must identify \\((p,q)\\) and \\((np,nq)\\). Ignore equivalence classes in this exercise.)\n\n\nExercise 3.5 The cartesian product of two sets \\(A\\) and \\(B\\) is \\[A \\times B = \\{ (a,b) \\mid a\\in A, \\; b\\in B\\}.\\] Write down the cartesian product of \\(\\{\\heartsuit,\\diamondsuit,\\spadesuit,\\clubsuit\\}\\) and \\(\\{1,2,3\\}\\), using the set theoretic definition for the ordered pair. You can skip spelling out the set theoretic definition of the natural numbers.\n\n\nExercise 3.6 Similar to the previous exercise, write down \\(\\{1,2,3\\} \\times \\{2,3,4\\}\\).\n\n\nExercise 3.7 A function \\(f: A \\to B\\) from one set \\(A\\) to another set \\(B\\) is a rule that assigns to every \\(a\\in A\\) precisely one \\(b\\in B\\). In terms of set theory, a function \\(f:A\\to B\\) is a subset of \\(A\\times B\\), such that\n\nFor all \\(a\\in A\\) there exists \\(b\\in B\\) such that \\((a,b)\\in f\\).\nFor all \\(a \\in A\\) and \\(b,b'\\in B\\), if \\((a,b)\\in f\\) and \\((a,b')\\in f\\), then \\(b=b'\\).\n\nWrite down the function \\(f:\\{1,2,3\\} \\to \\{1,2,3\\}\\), \\(f(1) = 2\\), \\(f(2)=3\\), \\(f(3)=1\\), using the set theoretic definition of ordered pairs and the cartesian product.\n\n\n\n\\((A \\cup B)^\\complement = A^\\complement \\cap B^\\complement\\).\n\\((A \\cap B)^\\complement = A^\\complement \\cup B^\\complement\\).\n\n\nExercise 3.8 Draw a picture, representing \\(X\\) as the whole sheet, \\(A\\) and \\(B\\) as overlapping shapes, e.g., circles. Label \\(A\\), \\(B\\), \\(A\\cap B\\), and \\(A \\cup B\\), making another drawing if necessary. Convince yourself that De Morgan’s laws are correct.\n\n\nExercise 3.9 Prove De Morgan’s laws mathematically. Note that the complement operation acts like negation of truth, i.e., \\(a \\in A^\\complement\\) if and only if \\(a \\in X\\) and \\(a \\notin A\\).",
+    "text": "Exercise 1.1 Write the days of the week as a set\n\n\nExercise 1.2 Write the five first natural numbers using set notation as indicated in the lecture notes\n\n\nExercise 1.3 An ordered pair \\((x,y)\\) is a two-element “set” where the order matters. Two ordered pairs \\((x,y)\\) and \\((u,v)\\) are equal if and only if \\(x=u\\) and \\(y = v\\). From this it follows that \\((x,y) = (y,x)\\) if and only if \\(x=y\\). A definition of an ordered pair as a set is \\[(x,y) = \\{ \\{x\\}, \\{x,y\\} \\}.\\] Show that \\((x,y) = (y,x)\\) if and only if \\(x=y\\) using the set theoretic definition.\n\n\nExercise 1.4 A nonnegative rational number \\(p/q\\), \\(p,q\\in\\mathbb{N}\\), \\(q &gt; 0\\), can be written as an ordered pair \\((p,q)\\). Write down the rational numbers \\(1/4\\), \\(2/3\\), \\(0\\), \\(1/3\\) as ordered pairs using set theory, both for the pair and for each integer. (Strictly speaking we the number itself is an equivalence class of such pairs, i.e., \\(pn/qn = p/q\\), so we must identify \\((p,q)\\) and \\((np,nq)\\). Ignore equivalence classes in this exercise.)\n\n\nExercise 1.5 The cartesian product of two sets \\(A\\) and \\(B\\) is \\[A \\times B = \\{ (a,b) \\mid a\\in A, \\; b\\in B\\}.\\] Write down the cartesian product of \\(\\{\\heartsuit,\\diamondsuit,\\spadesuit,\\clubsuit\\}\\) and \\(\\{1,2,3\\}\\), using the set theoretic definition for the ordered pair. You can skip spelling out the set theoretic definition of the natural numbers.\n\n\nExercise 1.6 Similar to the previous exercise, write down \\(\\{1,2,3\\} \\times \\{2,3,4\\}\\).\n\n\nExercise 1.7 A function \\(f: A \\to B\\) from one set \\(A\\) to another set \\(B\\) is a rule that assigns to every \\(a\\in A\\) precisely one \\(b\\in B\\). In terms of set theory, a function \\(f:A\\to B\\) is a subset of \\(A\\times B\\), such that\n\nFor all \\(a\\in A\\) there exists \\(b\\in B\\) such that \\((a,b)\\in f\\).\nFor all \\(a \\in A\\) and \\(b,b'\\in B\\), if \\((a,b)\\in f\\) and \\((a,b')\\in f\\), then \\(b=b'\\).\n\nWrite down the function \\(f:\\{1,2,3\\} \\to \\{1,2,3\\}\\), \\(f(1) = 2\\), \\(f(2)=3\\), \\(f(3)=1\\), using the set theoretic definition of ordered pairs and the cartesian product.\n\n\n\n\\((A \\cup B)^\\complement = A^\\complement \\cap B^\\complement\\).\n\\((A \\cap B)^\\complement = A^\\complement \\cup B^\\complement\\).\n\n\nExercise 1.8 Draw a picture, representing \\(X\\) as the whole sheet, \\(A\\) and \\(B\\) as overlapping shapes, e.g., circles. Label \\(A\\), \\(B\\), \\(A\\cap B\\), and \\(A \\cup B\\), making another drawing if necessary. Convince yourself that De Morgan’s laws are correct.\n\n\nExercise 1.9 Prove De Morgan’s laws mathematically. Note that the complement operation acts like negation of truth, i.e., \\(a \\in A^\\complement\\) if and only if \\(a \\in X\\) and \\(a \\notin A\\).",
     "crumbs": [
       "Mathematical foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Sets and functions</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sets and functions</span>"
     ]
   },
   {
     "objectID": "chapters/cardinality-and-countability.html",
     "href": "chapters/cardinality-and-countability.html",
-    "title": "4  Cardinality and countability",
+    "title": "2  Cardinality and countability",
     "section": "",
-    "text": "4.1 Exercises\nCardinality compares sets through bijections. The exercises cover countable sets, Cantor’s diagonal argument, and the cardinality of the continuum.\nRecall that the cardinality \\(|S|\\) of a set \\(S\\) is the number of elements in \\(S\\). For finite sets, this is intuitive, but what about infinite sets?\nOne says that \\(A\\) and \\(B\\) have the same cardinality if there exists a bijection \\(f : A \\to B\\), i.e., \\(f\\) is one-to-one and onto. (Intuitively, you can draw lines between individual elements of \\(A\\) and \\(B\\), only one line to/from each element. Precisely: Onto means, to every \\(b \\in B\\) there exists a \\(a \\in A\\) such that \\(f(a) = b\\). One-to-one: \\(f(a)=f(a')\\) implies \\(a=a'\\).) One can think of the bijection as labelling each \\(b\\in B\\) by exactly one element \\(a\\in A\\), and that all labels from \\(A\\) are used up.\nLet \\(\\mathbb{N}_n = \\{1, 2, \\cdots, n\\}\\). This set has cardinality \\(n\\).\nThe set \\(\\mathbb{N}\\) has an infinite number of elements. By definition, \\(|\\mathbb{N}|= \\aleph_0\\) (“aleph-nought”).",
+    "text": "2.1 Exercises\nCardinality compares sets through bijections. The exercises cover countable sets, Cantor’s diagonal argument, and the cardinality of the continuum.\nRecall that the cardinality \\(|S|\\) of a set \\(S\\) is the number of elements in \\(S\\). For finite sets, this is intuitive, but what about infinite sets?\nOne says that \\(A\\) and \\(B\\) have the same cardinality if there exists a bijection \\(f : A \\to B\\), i.e., \\(f\\) is one-to-one and onto. (Intuitively, you can draw lines between individual elements of \\(A\\) and \\(B\\), only one line to/from each element. Precisely: Onto means, to every \\(b \\in B\\) there exists a \\(a \\in A\\) such that \\(f(a) = b\\). One-to-one: \\(f(a)=f(a')\\) implies \\(a=a'\\).) One can think of the bijection as labelling each \\(b\\in B\\) by exactly one element \\(a\\in A\\), and that all labels from \\(A\\) are used up.\nLet \\(\\mathbb{N}_n = \\{1, 2, \\cdots, n\\}\\). This set has cardinality \\(n\\).\nThe set \\(\\mathbb{N}\\) has an infinite number of elements. By definition, \\(|\\mathbb{N}|= \\aleph_0\\) (“aleph-nought”).",
     "crumbs": [
       "Mathematical foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cardinality and countability</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cardinality and countability</span>"
     ]
   },
   {
     "objectID": "chapters/cardinality-and-countability.html#exercises",
     "href": "chapters/cardinality-and-countability.html#exercises",
-    "title": "4  Cardinality and countability",
+    "title": "2  Cardinality and countability",
     "section": "",
-    "text": "Exercise 4.1 Show that \\(|\\mathbb{Z}|=\\aleph_0\\) by explicitly constructing a bijection \\(f : \\mathbb{N}\\to \\mathbb{Z}\\).\n\n\nExercise 4.2 Show that \\(|\\mathbb{N}\\times \\mathbb{N}| = \\aleph_0\\). Hint: Draw a picture of \\(\\mathbb{N}\\times \\mathbb{N}\\), and try to draw a line through all the points in this set. How does this show the existence of a bijection between \\(\\mathbb{N}\\) and \\(\\mathbb{N}\\times\\mathbb{N}\\)?\n\n\nExercise 4.3 Show that \\(|\\mathbb{Q}|= \\aleph_0\\).\n\n\nExercise 4.4 Show that the interval \\(I = (-1,1)\\) has the same cardinality as \\(\\mathbb{R}\\). You must construct a function \\(f : (-1,1)\\to\\mathbb{R}\\) that is a bijection.\n\n\nExercise 4.5 In this exercise, we show that \\(|\\mathbb{R}|  &gt; \\aleph_0\\). The cardinality would be \\(\\aleph_0\\) if we could write a list of the real numbers. It suffices to find a list of the numbers in \\(I = [0,1[\\), i.e., infinite decimal expansions \\(0.d_1d_2d_3\\cdots\\), with \\(d_i\\in \\{0,1,2,3,4,5,6,7,8,9\\}\\).\nWe will look for a contradiction. Consider a list \\(x_1,x_2,x_3,\\ldots\\) of all real numbers in \\([0,1[\\). This is essentially an infinite matrix of digits. Can you find a real number \\(x \\in [0,1]\\) which is not in this list, i.e., \\(x \\neq x_j\\) for all \\(j\\)? Hint: consider the diagonal of the matrix.\nThe cardinality of \\(\\mathbb{R}\\), “the continuum”, is written \\(2^{\\aleph_0}\\).\n\n\nExercise 4.6 Show that \\(|[0,1[\\times [0,1[| = |[0,1[|\\), by constructing a one-to-one map. Hint: Use decimal expansions. Conclude that also \\(|\\mathbb{R}^2| = |\\mathbb{C}| = |\\mathbb{R}|\\).",
+    "text": "Exercise 2.1 Show that \\(|\\mathbb{Z}|=\\aleph_0\\) by explicitly constructing a bijection \\(f : \\mathbb{N}\\to \\mathbb{Z}\\).\n\n\nExercise 2.2 Show that \\(|\\mathbb{N}\\times \\mathbb{N}| = \\aleph_0\\). Hint: Draw a picture of \\(\\mathbb{N}\\times \\mathbb{N}\\), and try to draw a line through all the points in this set. How does this show the existence of a bijection between \\(\\mathbb{N}\\) and \\(\\mathbb{N}\\times\\mathbb{N}\\)?\n\n\nExercise 2.3 Show that \\(|\\mathbb{Q}|= \\aleph_0\\).\n\n\nExercise 2.4 Show that the interval \\(I = (-1,1)\\) has the same cardinality as \\(\\mathbb{R}\\). You must construct a function \\(f : (-1,1)\\to\\mathbb{R}\\) that is a bijection.\n\n\nExercise 2.5 In this exercise, we show that \\(|\\mathbb{R}|  &gt; \\aleph_0\\). The cardinality would be \\(\\aleph_0\\) if we could write a list of the real numbers. It suffices to find a list of the numbers in \\(I = [0,1[\\), i.e., infinite decimal expansions \\(0.d_1d_2d_3\\cdots\\), with \\(d_i\\in \\{0,1,2,3,4,5,6,7,8,9\\}\\).\nWe will look for a contradiction. Consider a list \\(x_1,x_2,x_3,\\ldots\\) of all real numbers in \\([0,1[\\). This is essentially an infinite matrix of digits. Can you find a real number \\(x \\in [0,1]\\) which is not in this list, i.e., \\(x \\neq x_j\\) for all \\(j\\)? Hint: consider the diagonal of the matrix.\nThe cardinality of \\(\\mathbb{R}\\), “the continuum”, is written \\(2^{\\aleph_0}\\).\n\n\nExercise 2.6 Show that \\(|[0,1[\\times [0,1[| = |[0,1[|\\), by constructing a one-to-one map. Hint: Use decimal expansions. Conclude that also \\(|\\mathbb{R}^2| = |\\mathbb{C}| = |\\mathbb{R}|\\).",
     "crumbs": [
       "Mathematical foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cardinality and countability</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Cardinality and countability</span>"
     ]
   },
   {
     "objectID": "chapters/general-vector-spaces.html",
     "href": "chapters/general-vector-spaces.html",
-    "title": "5  General vector spaces",
+    "title": "3  General vector spaces",
     "section": "",
-    "text": "5.1 Exercises\nA vector space needs vector addition and scalar multiplication, but it need not resemble Euclidean coordinate space.\nYou may be very familiar with Euclidean space \\(\\mathbb{R}^n\\) as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. A general vector space does not have an inner product or a norm, just a “linear structure”: Consider for example a general vector space over \\(\\mathbb{R}\\): An abstract set \\(V\\) with operations such that one can add vectors, \\[z = x + y \\in V,\\] and multiply vectors by constants \\(c\\in\\mathbb{R}\\), \\[z = c x \\in V\\] where \\(c \\in \\mathbb{R}\\). The full set of axioms is as follows:\nIn this exercise, we will train our ability to think abstractly, and also try to get acquainted with general vector spaces.",
+    "text": "3.1 Exercises\nA vector space needs vector addition and scalar multiplication, but it need not resemble Euclidean coordinate space.\nYou may be very familiar with Euclidean space \\(\\mathbb{R}^n\\) as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. A general vector space does not have an inner product or a norm, just a “linear structure”: Consider for example a general vector space over \\(\\mathbb{R}\\): An abstract set \\(V\\) with operations such that one can add vectors, \\[z = x + y \\in V,\\] and multiply vectors by constants \\(c\\in\\mathbb{R}\\), \\[z = c x \\in V\\] where \\(c \\in \\mathbb{R}\\). The full set of axioms is as follows:\nIn this exercise, we will train our ability to think abstractly, and also try to get acquainted with general vector spaces.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>General vector spaces</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General vector spaces</span>"
     ]
   },
   {
     "objectID": "chapters/general-vector-spaces.html#exercises",
     "href": "chapters/general-vector-spaces.html#exercises",
-    "title": "5  General vector spaces",
+    "title": "3  General vector spaces",
     "section": "",
-    "text": "Exercise 5.1  \n\nConsider viewing the set \\(L\\) of cake recipe ingredient lists as a vector space. Thus, the components of \\(L\\) are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?\nHow would you handle recipe lists with different units, such as pints and liters?\nConsider the vector space \\(L\\) as a vector space of functions on the form \\(f : S \\to \\mathbb{R}\\), where \\(S\\) is a set. Which set would \\(S\\) be?\nDefine addition of two recipe ingredient lists. Does the sum define a new cake recipe? What is missing?\nConsider the scaling of a recipe list to produce a new ingredient list. What are the units of the scaling factor?\nNot every element in the constructed vector space is a valid recipe list. Which lists must be discarded?\nLet us turn to the recipe steps. At least some of the steps can be interpreted as linear operators on the space of ingredients. For example, creaming butter and sugar transforms these two ingredients to an ingredient named “creamed butter and sugar”. Can all steps be treated as linear transformations?",
+    "text": "Exercise 3.1  \n\nConsider viewing the set \\(L\\) of cake recipe ingredient lists as a vector space. Thus, the components of \\(L\\) are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?\nHow would you handle recipe lists with different units, such as pints and liters?\nConsider the vector space \\(L\\) as a vector space of functions on the form \\(f : S \\to \\mathbb{R}\\), where \\(S\\) is a set. Which set would \\(S\\) be?\nDefine addition of two recipe ingredient lists. Does the sum define a new cake recipe? What is missing?\nConsider the scaling of a recipe list to produce a new ingredient list. What are the units of the scaling factor?\nNot every element in the constructed vector space is a valid recipe list. Which lists must be discarded?\nLet us turn to the recipe steps. At least some of the steps can be interpreted as linear operators on the space of ingredients. For example, creaming butter and sugar transforms these two ingredients to an ingredient named “creamed butter and sugar”. Can all steps be treated as linear transformations?",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>General vector spaces</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>General vector spaces</span>"
     ]
   },
   {
     "objectID": "chapters/vectors-and-matrices.html",
     "href": "chapters/vectors-and-matrices.html",
-    "title": "6  Vectors and matrices",
+    "title": "4  Vectors and matrices",
     "section": "",
-    "text": "6.1 Exercises\nThese exercises connect bases and vector decomposition with matrix multiplication and linear systems.",
+    "text": "4.1 Exercises\nThese exercises connect bases and vector decomposition with matrix multiplication and linear systems.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors and matrices</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors and matrices</span>"
     ]
   },
   {
     "objectID": "chapters/vectors-and-matrices.html#exercises",
     "href": "chapters/vectors-and-matrices.html#exercises",
-    "title": "6  Vectors and matrices",
+    "title": "4  Vectors and matrices",
     "section": "",
-    "text": "6.1.1 Basic vectors\n\nExercise 6.1 We work in the space \\(V = \\mathbb{R}^2\\), plane vectors. We define two vectors, \\[\n    \\mathbf{b}_1 = [1, 2]^T, \\quad \\mathbf{b}_2 = [-1,1]^T.\\] The superscript \\(T\\) denotes the transpose, so these are column vectors. Show by elementary means that the two vectors are linearly independent. Why do they form a basis for \\(V\\)? Make a 2D drawing or plot of them as arrows from the origin.\n\n\nExercise 6.2 Let \\(\\mathbf{v} = [2,2]^T\\). Using Gaussian elimination, compute the coefficients \\(x_1\\) and \\(x_2\\) such that \\[\\mathbf{v} = x_1 \\mathbf{b}_1 + x_2 \\mathbf{b}_2.\\] Illustrate this decomposition in the graph from the previous point, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.\n\n\nExercise 6.3 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.\nWhat are the coordinates of the office, relative to the person’s home?\nWhat is the distance to home, as the crow flies?\n\n\nExercise 6.4 A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?\n\n\nExercise 6.5 (Robert Beezer) A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.\n\n\n\n6.1.2 More vectors and matrices\nThese exercises are to get practice with computing matrix-matrix products, and to get an intuitive feel for them.\n\nExercise 6.6 Let \\[A = \\begin{bmatrix} 1 & 3 \\\\ 0 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 7 & -1 & 0 \\\\ 8 & 1 & -1 \\end{bmatrix}, \\quad C = \\begin{bmatrix} 0 & -1 \\\\ 5 & 7 \\\\ 0 & 7 \\end{bmatrix}\\] Which matrix products between pairs of these matrices are defined? Compute the products.\n\n\nExercise 6.7 Let \\(A\\) be the \\(n\\times n\\) matrix defined by \\(A_{i,i+1} = i^2\\) for \\(1 \\leq i &lt; n\\), and zero otherwise. Compute the action of \\(A\\) and \\(A^T\\) on the standard basis for \\(\\mathbb{R}^n\\). Compute the action of \\(A\\) and \\(A^T\\) on an arbitrary vector \\(\\mathbf{x}\\in \\mathbb{R}^n\\).\n\n\nExercise 6.8 Let \\(A \\in M(n,m,\\mathbb{F})\\), \\(B \\in M(m,o,\\mathbb{F})\\). Write \\(B\\) in terms of column vectors, \\(B = [\\mathbf{b}_1,\\cdots,\\mathbf{b}_o]\\). Prove that \\[AB = [A\\mathbf{b}_1, \\cdots, A\\mathbf{b}_o],\\] i.e., \\(A\\) acts on each individual column of \\(B\\). Similarly, show that, if we write \\(A\\) in terms of its row vectors, \\[A = \\begin{bmatrix} \\mathbf{a}_1^T \\\\ \\mathbf{a}_2^T \\\\ \\cdots \\\\ \\mathbf{a}_n^T \\end{bmatrix},\\] then \\[AB = \\begin{bmatrix} \\mathbf{a}_1^T B \\\\ \\mathbf{a}_2^T B \\\\ \\cdots \\\\ \\mathbf{a}_n^T B  \\end{bmatrix}.\\]\n\n\nExercise 6.9 Show that each column of \\(C = AB\\) is a linear combination of the columns of \\(A\\) with coefficients determined by \\(B\\), \\[\\mathbf{c}_i = \\sum_j \\mathbf{a}_j B_{ji}.\\] Show a similar result for the rows of \\(C\\).",
+    "text": "4.1.1 Basic vectors\n\nExercise 4.1 We work in the space \\(V = \\mathbb{R}^2\\), plane vectors. We define two vectors, \\[\n    \\mathbf{b}_1 = [1, 2]^T, \\quad \\mathbf{b}_2 = [-1,1]^T.\\] The superscript \\(T\\) denotes the transpose, so these are column vectors. Show by elementary means that the two vectors are linearly independent. Why do they form a basis for \\(V\\)? Make a 2D drawing or plot of them as arrows from the origin.\n\n\nExercise 4.2 Let \\(\\mathbf{v} = [2,2]^T\\). Using Gaussian elimination, compute the coefficients \\(x_1\\) and \\(x_2\\) such that \\[\\mathbf{v} = x_1 \\mathbf{b}_1 + x_2 \\mathbf{b}_2.\\] Illustrate this decomposition in the graph from the previous point, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.\n\n\nExercise 4.3 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.\nWhat are the coordinates of the office, relative to the person’s home?\nWhat is the distance to home, as the crow flies?\n\n\nExercise 4.4 A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?\n\n\nExercise 4.5 (Robert Beezer) A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.\n\n\n\n4.1.2 More vectors and matrices\nThese exercises are to get practice with computing matrix-matrix products, and to get an intuitive feel for them.\n\nExercise 4.6 Let \\[A = \\begin{bmatrix} 1 & 3 \\\\ 0 & -2 \\end{bmatrix}, \\quad B = \\begin{bmatrix} 7 & -1 & 0 \\\\ 8 & 1 & -1 \\end{bmatrix}, \\quad C = \\begin{bmatrix} 0 & -1 \\\\ 5 & 7 \\\\ 0 & 7 \\end{bmatrix}\\] Which matrix products between pairs of these matrices are defined? Compute the products.\n\n\nExercise 4.7 Let \\(A\\) be the \\(n\\times n\\) matrix defined by \\(A_{i,i+1} = i^2\\) for \\(1 \\leq i &lt; n\\), and zero otherwise. Compute the action of \\(A\\) and \\(A^T\\) on the standard basis for \\(\\mathbb{R}^n\\). Compute the action of \\(A\\) and \\(A^T\\) on an arbitrary vector \\(\\mathbf{x}\\in \\mathbb{R}^n\\).\n\n\nExercise 4.8 Let \\(A \\in M(n,m,\\mathbb{F})\\), \\(B \\in M(m,o,\\mathbb{F})\\). Write \\(B\\) in terms of column vectors, \\(B = [\\mathbf{b}_1,\\cdots,\\mathbf{b}_o]\\). Prove that \\[AB = [A\\mathbf{b}_1, \\cdots, A\\mathbf{b}_o],\\] i.e., \\(A\\) acts on each individual column of \\(B\\). Similarly, show that, if we write \\(A\\) in terms of its row vectors, \\[A = \\begin{bmatrix} \\mathbf{a}_1^T \\\\ \\mathbf{a}_2^T \\\\ \\cdots \\\\ \\mathbf{a}_n^T \\end{bmatrix},\\] then \\[AB = \\begin{bmatrix} \\mathbf{a}_1^T B \\\\ \\mathbf{a}_2^T B \\\\ \\cdots \\\\ \\mathbf{a}_n^T B  \\end{bmatrix}.\\]\n\n\nExercise 4.9 Show that each column of \\(C = AB\\) is a linear combination of the columns of \\(A\\) with coefficients determined by \\(B\\), \\[\\mathbf{c}_i = \\sum_j \\mathbf{a}_j B_{ji}.\\] Show a similar result for the rows of \\(C\\).",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Vectors and matrices</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Vectors and matrices</span>"
     ]
   },
   {
     "objectID": "chapters/complex-vector-space.html",
     "href": "chapters/complex-vector-space.html",
-    "title": "7  The complex numbers as a real vector space",
+    "title": "5  The complex numbers as a real vector space",
     "section": "",
-    "text": "7.1 Exercises\nIdentifying \\(x + \\mathrm{i}y\\) with \\((x,y)\\) turns the complex plane into a two-dimensional real vector space.\nThe geometrical interpretation of the \\(\\mathbb{C}\\) as the plane \\(\\mathbb{R}^2\\) indicates that \\(\\mathbb{C}\\) can be viewed as a two-dimensional real vector space. Indeed, addition and multiplication with real scalars are compatible with the axioms for Euclidean space \\(\\mathbb{R}^2\\).",
+    "text": "5.1 Exercises\nIdentifying \\(x + \\mathrm{i}y\\) with \\((x,y)\\) turns the complex plane into a two-dimensional real vector space.\nThe geometrical interpretation of the \\(\\mathbb{C}\\) as the plane \\(\\mathbb{R}^2\\) indicates that \\(\\mathbb{C}\\) can be viewed as a two-dimensional real vector space. Indeed, addition and multiplication with real scalars are compatible with the axioms for Euclidean space \\(\\mathbb{R}^2\\).",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>The complex numbers as a real vector space</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The complex numbers as a real vector space</span>"
     ]
   },
   {
     "objectID": "chapters/complex-vector-space.html#exercises",
     "href": "chapters/complex-vector-space.html#exercises",
-    "title": "7  The complex numbers as a real vector space",
+    "title": "5  The complex numbers as a real vector space",
     "section": "",
-    "text": "Exercise 7.1  \n\nShow that \\(\\mathbb{C}\\) regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in \\(\\mathbb{R}^2\\)? Conclude that \\(\\mathbb{C}\\) can be regarded as a real Euclidean vector space of dimension \\(2\\).\nShow that multiplication with a complex number \\(z\\) is a linear operator on \\(\\mathbb{R}^2\\), and find its matrix in the standard basis. What is the matrix of multiplication with \\(\\mathrm{i}\\)?\nShow that multiplication with a complex number of modulus 1 is a rotation in \\(\\mathbb{R}^2\\).\nShow that the map \\(z \\mapsto \\bar{z}\\) is a linear transformation in \\(\\mathbb{R}^2\\). What kind of linear transformation is this? Is it a linear transformation in \\(\\mathbb{C}\\)?",
+    "text": "Exercise 5.1  \n\nShow that \\(\\mathbb{C}\\) regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in \\(\\mathbb{R}^2\\)? Conclude that \\(\\mathbb{C}\\) can be regarded as a real Euclidean vector space of dimension \\(2\\).\nShow that multiplication with a complex number \\(z\\) is a linear operator on \\(\\mathbb{R}^2\\), and find its matrix in the standard basis. What is the matrix of multiplication with \\(\\mathrm{i}\\)?\nShow that multiplication with a complex number of modulus 1 is a rotation in \\(\\mathbb{R}^2\\).\nShow that the map \\(z \\mapsto \\bar{z}\\) is a linear transformation in \\(\\mathbb{R}^2\\). What kind of linear transformation is this? Is it a linear transformation in \\(\\mathbb{C}\\)?",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>The complex numbers as a real vector space</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>The complex numbers as a real vector space</span>"
     ]
   },
   {
     "objectID": "chapters/gaussian-elimination.html",
     "href": "chapters/gaussian-elimination.html",
-    "title": "8  Gaussian elimination",
+    "title": "6  Gaussian elimination",
     "section": "",
-    "text": "8.1 Exercises\nElementary row operations solve linear systems, compute inverses, and expose the rank and consistency of a system.",
+    "text": "6.1 Exercises\nElementary row operations solve linear systems, compute inverses, and expose the rank and consistency of a system.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Gaussian elimination</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Gaussian elimination</span>"
     ]
   },
   {
     "objectID": "chapters/gaussian-elimination.html#exercises",
     "href": "chapters/gaussian-elimination.html#exercises",
-    "title": "8  Gaussian elimination",
+    "title": "6  Gaussian elimination",
     "section": "",
-    "text": "Exercise 8.1 Compute the overlap matrix \\(S\\) of the basis defined in the vectors and matrices chapter. Use Gaussian elimination to compute \\(S^{-1}\\).\n\n\nExercise 8.2 Write down the dual basis of \\(B = \\{\\mathbf{b}_1,\\mathbf{b}_2\\}\\).\n\n\nExercise 8.3 (Robert Beezer) Consider the following system of equations: \\[\\begin{aligned}\n    2 x_1 -3x_2 + x_3 + 7 x_4 &= 14\\\\\n    2x_1 + 8x_2 - 4x_3 + 5x_4 &= -1\\\\\n    x_1 + 3x_2 - 3x_3 &= 4\\\\\n    -5 x_1 + 2x_2 + 3 x_3 + 4x_4 &= -19\n\\end{aligned}\\] Use Gaussian elimination to find all possible solutions. Write the solution set using set notation.\n\n\nExercise 8.4 (Robert Beezer) Find all possible solutions of the linear system \\[\\begin{aligned}\n    3 x_1 + 4 x_2 - x_3 + 2 x_4 &= 6 \\\\\n    x_1 - 2 x_2 + 3 x_3 + x_4 &= 2 \\\\\n    10 x_2 - 10 x_3 - x_4 &= 1\n\\end{aligned}\\] Write down the solution set using set notation.\n\n\nExercise 8.5 (Robert Beezer) Find all possible solutions of the linear system \\[\\begin{aligned}\n    2 x_1 + 4 x_2 + 5 x_3 + 7 x_4 &= -26 \\\\\n    x_1 + 2x_2 + x_3 - x_4 &= -4 \\\\\n    -2 x_1 - 4 x_2 + x_3 + 11 x_4 &= -10\n\\end{aligned}\\] Write down the solution set using set notation.\n\n\n\nExercise 8.6 Let \\(\\mathbf{b}_i\\), \\(i=1,2,\\cdots,n\\) be a basis for \\(\\mathbb{R}^n\\). Let \\[B = [\\mathbf{b}_1, \\mathbf{b}_2, \\cdots, \\mathbf{b}_n]\\] be the basis matrix, whose columns are precisely the \\(\\mathbf{b}_i\\). Explain that if \\(\\mathbf{y} = x_1 \\mathbf{b}_1 + \\cdots + x_n \\mathbf{b}_n\\), then \\[B \\mathbf{x} = \\mathbf{y}.\\] Solve for \\(\\mathbf{x}\\) using \\(B\\) in symbols.\n\n\nExercise 8.7 Let \\(n\\) linearly independent vectors \\(B = \\{\\mathbf{b}_1, \\cdots,\\mathbf{b}_n\\}\\) of \\(\\mathbb{F}^n\\) be given. Write down a formula for the dual basis in terms of the overlap matrix.",
+    "text": "Exercise 6.1 Compute the overlap matrix \\(S\\) of the basis defined in the vectors and matrices chapter. Use Gaussian elimination to compute \\(S^{-1}\\).\n\n\nExercise 6.2 Write down the dual basis of \\(B = \\{\\mathbf{b}_1,\\mathbf{b}_2\\}\\).\n\n\nExercise 6.3 (Robert Beezer) Consider the following system of equations: \\[\\begin{aligned}\n    2 x_1 -3x_2 + x_3 + 7 x_4 &= 14\\\\\n    2x_1 + 8x_2 - 4x_3 + 5x_4 &= -1\\\\\n    x_1 + 3x_2 - 3x_3 &= 4\\\\\n    -5 x_1 + 2x_2 + 3 x_3 + 4x_4 &= -19\n\\end{aligned}\\] Use Gaussian elimination to find all possible solutions. Write the solution set using set notation.\n\n\nExercise 6.4 (Robert Beezer) Find all possible solutions of the linear system \\[\\begin{aligned}\n    3 x_1 + 4 x_2 - x_3 + 2 x_4 &= 6 \\\\\n    x_1 - 2 x_2 + 3 x_3 + x_4 &= 2 \\\\\n    10 x_2 - 10 x_3 - x_4 &= 1\n\\end{aligned}\\] Write down the solution set using set notation.\n\n\nExercise 6.5 (Robert Beezer) Find all possible solutions of the linear system \\[\\begin{aligned}\n    2 x_1 + 4 x_2 + 5 x_3 + 7 x_4 &= -26 \\\\\n    x_1 + 2x_2 + x_3 - x_4 &= -4 \\\\\n    -2 x_1 - 4 x_2 + x_3 + 11 x_4 &= -10\n\\end{aligned}\\] Write down the solution set using set notation.\n\n\n\nExercise 6.6 Let \\(\\mathbf{b}_i\\), \\(i=1,2,\\cdots,n\\) be a basis for \\(\\mathbb{R}^n\\). Let \\[B = [\\mathbf{b}_1, \\mathbf{b}_2, \\cdots, \\mathbf{b}_n]\\] be the basis matrix, whose columns are precisely the \\(\\mathbf{b}_i\\). Explain that if \\(\\mathbf{y} = x_1 \\mathbf{b}_1 + \\cdots + x_n \\mathbf{b}_n\\), then \\[B \\mathbf{x} = \\mathbf{y}.\\] Solve for \\(\\mathbf{x}\\) using \\(B\\) in symbols.\n\n\nExercise 6.7 Let \\(n\\) linearly independent vectors \\(B = \\{\\mathbf{b}_1, \\cdots,\\mathbf{b}_n\\}\\) of \\(\\mathbb{F}^n\\) be given. Write down a formula for the dual basis in terms of the overlap matrix.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Gaussian elimination</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Gaussian elimination</span>"
     ]
   },
   {
     "objectID": "chapters/bra-ket-notation.html",
     "href": "chapters/bra-ket-notation.html",
-    "title": "9  Bra-ket notation",
+    "title": "7  Bra-ket notation",
     "section": "",
-    "text": "9.1 Exercises\nBra-ket notation represents vectors, inner products, operators, and basis expansions in a form used throughout quantum mechanics.",
+    "text": "7.1 Exercises\nBra-ket notation represents vectors, inner products, operators, and basis expansions in a form used throughout quantum mechanics.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Bra-ket notation</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Bra-ket notation</span>"
     ]
   },
   {
     "objectID": "chapters/bra-ket-notation.html#exercises",
     "href": "chapters/bra-ket-notation.html#exercises",
-    "title": "9  Bra-ket notation",
+    "title": "7  Bra-ket notation",
     "section": "",
-    "text": "Exercise 9.1 Let \\(B = \\{b_1, b_2,\\cdots, b_n\\}\\) be a basis for a finite-dimensional Hilbert space \\(V\\), and let \\(\\{\\left|i\\right\\rangle\\}\\) be the standard basis for \\(\\mathbb{C}^n\\). Consider the operator \\[\\hat{B} = \\sum_{i=1}^n \\left|b_i\\right\\rangle \\left\\langle i\\right|.\\] What are the domain and range of \\(\\hat{B}\\)?\n\n\nExercise 9.2 Let \\(\\left|x\\right\\rangle \\in \\mathbb{C}^n\\), and consider \\[\\left|\\psi\\right\\rangle = \\hat{B} \\left|x\\right\\rangle.\\] Can you interpret this expression in terms of bases and expansion coefficients?\n\n\nExercise 9.3 Show that \\[\\hat{S} = \\sum_{ij} \\left|i\\right\\rangle \\left\\langle{b}_i|{b}_j\\right\\rangle \\left\\langle j\\right|.\\] This is the overlap matrix expressed as an operator. Find an expression for the basis coefficients \\(x_i\\) in terms of the basis alone.",
+    "text": "Exercise 7.1 Let \\(B = \\{b_1, b_2,\\cdots, b_n\\}\\) be a basis for a finite-dimensional Hilbert space \\(V\\), and let \\(\\{\\left|i\\right\\rangle\\}\\) be the standard basis for \\(\\mathbb{C}^n\\). Consider the operator \\[\\hat{B} = \\sum_{i=1}^n \\left|b_i\\right\\rangle \\left\\langle i\\right|.\\] What are the domain and range of \\(\\hat{B}\\)?\n\n\nExercise 7.2 Let \\(\\left|x\\right\\rangle \\in \\mathbb{C}^n\\), and consider \\[\\left|\\psi\\right\\rangle = \\hat{B} \\left|x\\right\\rangle.\\] Can you interpret this expression in terms of bases and expansion coefficients?\n\n\nExercise 7.3 Show that \\[\\hat{S} = \\sum_{ij} \\left|i\\right\\rangle \\left\\langle{b}_i|{b}_j\\right\\rangle \\left\\langle j\\right|.\\] This is the overlap matrix expressed as an operator. Find an expression for the basis coefficients \\(x_i\\) in terms of the basis alone.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Bra-ket notation</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Bra-ket notation</span>"
     ]
   },
   {
     "objectID": "chapters/eigenvalues-and-diagonalization.html",
     "href": "chapters/eigenvalues-and-diagonalization.html",
-    "title": "10  Eigenvalues and diagonalization",
+    "title": "8  Eigenvalues and diagonalization",
     "section": "",
-    "text": "10.1 Exercises\nThese exercises develop the spectral theorem and apply determinants to finite-dimensional eigenvalue problems.",
+    "text": "8.1 Exercises\nThese exercises develop the spectral theorem and apply determinants to finite-dimensional eigenvalue problems.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Eigenvalues and diagonalization</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Eigenvalues and diagonalization</span>"
     ]
   },
   {
     "objectID": "chapters/eigenvalues-and-diagonalization.html#exercises",
     "href": "chapters/eigenvalues-and-diagonalization.html#exercises",
-    "title": "10  Eigenvalues and diagonalization",
+    "title": "8  Eigenvalues and diagonalization",
     "section": "",
-    "text": "10.1.1 Eigenvalue decomposition\nOf great importance to quantum chemistry is the time-independent Schrödinger equation: Given the Hamiltonian operator \\(\\hat{H}\\), which is usually Hermitian, find a nonzero \\(\\left|\\psi\\right\\rangle\\), called an eigenvector, and a real number \\(E\\), called an eigenvalue, such that \\[\\hat{H} \\left|\\psi\\right\\rangle = E \\left|\\psi\\right\\rangle.\\] Choosing a particular orthonormal basis \\(\\{\\left|\\phi_i\\right\\rangle\\}\\) for Hilbert space, a matrix eigenvalue problem arises, \\[A \\mathbf{u} = E \\mathbf{u}, \\quad u_i = \\left\\langle\\phi_i|\\psi\\right\\rangle, \\quad A_{ij} = \\left\\langle\\phi_i|\\hat{H}|\\phi_j\\right\\rangle.\\]\nWe prove the spectral theorem for normal operators over finite dimensional Hilbert spaces. The spectral theorem states that one can actually find a basis of eigenvectors for normal operators. The normal operators include the Hermitian operators.\nIn this section, we let \\(M(n) = M(n,n,\\mathbb{C}) = \\mathbb{C}^{n\\times n}\\) be the set of complex square matrices of dimension \\(n\\).\nTwo matrices \\(A\\) and \\(B\\) are said to be similar if there is an invertible matrix \\(U\\) such that \\(A = U B U^{-1}\\). If \\(U\\) is unitary, then \\(A\\) and \\(B\\) are unitarily similar. (\\(U\\) is unitary if and only if \\(U^H = U^{-1}\\).)\n\nExercise 10.1  \n\nWhat does it mean that \\(A \\in M(n)\\) is normal?\nProve that a diagonal matrix \\(D \\in M(n)\\) is normal. (A matrix \\(A\\) is diagonal if and only if \\(A_{ij}=0\\) whenever \\(i\\neq j\\).)\nProve that \\(U\\) is unitary if and only if its columns are orthonormal.\nProve that if \\(A\\) is normal and \\(B\\) is unitarily similar to \\(A\\), then \\(B\\) is normal.\nProve that if \\(A\\) is unitarily equivalent to a diagonal matrix, then \\(A\\) is normal.\n\nThe next part requires Schur’s Lemma:\n\nLemma: Schur’s Lemma. Let \\(A \\in M(n)\\). Then \\(A\\) is unitarily equivalent to an upper triangular matrix. (\\(R\\) is upper triangular if \\(R_{ij}=0\\) whenever \\(i &gt; j\\).)\n\nThe proof of Shur’s Lemma can be found in, e.g., Fraleigh and Beauregard.\n\nProve that every normal matrix \\(A\\) is unitarily equivalent to a normal upper-triangular matrix \\(B\\). (Use Schur’s Lemma and exercise that normality is preserved by unitary similarity.)\nProve that a normal upper triangular matrix \\(B\\) must be diagonal. Hint: Let \\(C = B^H B = BB^H\\), and compute \\(C_{11}\\) to show that \\(B_{1j} = 0\\) if \\(j &gt; 1\\). Continue to \\(C_{22}\\), and all the way up to \\(C_{nn}\\).\n\nWe have now proved:\n\nTheorem: Spectral theorem for normal matrices. Suppose \\(A \\in M(n)\\) is normal, i.e., \\(AA^H = A^H A\\). Then there is a unitary matrix \\(U \\in M(n)\\) and a diagonal matrix \\(D \\in M(n)\\) such that \\[A = U D U^H. \\quad\\text{spectral decomposition}\\]\n\n\nLet \\(\\mathbf{u}_i = U_{:.i}\\) be the \\(i\\)th column for \\(U\\). Explain why these vectors form a basis for \\(\\mathbb{C}^n\\).\nShow that \\[A = \\sum_{i=1}^n d_i \\mathbf{u}_i \\mathbf{u}_i^H, \\quad d_i = D_{ii}. \\quad\\text{spectral decomposition}\\] Write this formula also using bra-ket notation.\nWhat does \\(A\\) do with the vector \\(\\mathbf{u}_k\\) for some \\(k\\)? What does \\(A\\) do to a linear combination of the basis vectors?\n\nA special kind of normal matrix is a Hermitian matrix, for which \\[A^H = A.\\]\n\nShow that a Hermitian matrix is unitarily equivalent to a diagonal matrix with real numbers on the diagonal, i.e., \\(A = U D U^H\\) with \\(D_{ii} \\in \\mathbb{R}\\).\n\n\n\n\n10.1.2 Diagonalization of a matrix\nA matrix \\(A\\) has an eigenvalue \\(E\\) if and only if there is a nonzero solution to the linear system \\[(A - EI)\\mathbf{x} = 0.\\] Thus, the matrix \\(A - EI\\) must be singular, i.e., not invertible. The eigenvector \\(\\mathbf{x}\\) is then a vector in the null space of this matrix.\nA sufficient and necessary criterion for invertibility of a matrix \\(B\\) is that the determinant is nonzero. The definition of the determinant can be stated as follows:\n\nDefinition: Determinant. Let \\(A \\in M(n)\\). The determinant, written \\(\\det(A) \\in \\mathbb{C}\\) is defined by \\[\\det(A) = \\sum_{p \\in S_n} (-1)^{|p|} A_{1,p(1)} A_{2,p(2)} \\cdots A_{n,p(n)}.\\] Here, \\(S_N\\) is the set of permutations of the numbers \\(\\{1,2,\\cdots,n\\}\\). A permutation is by definition any bijective map.\n\nEach permutation \\(p \\in S_n\\) is a rearrangement is thus completely specified by the new order of the numbers \\(\\{1,2,\\cdots,n\\}\\), i.e., \\((p(1),p(2),\\cdots,p(n))\\). For example, \\((1,2,3,4,5,6) \\in S_6\\) is the identity permutation that leaves any number alone. The permutation \\((3,2,1,4,6,5)\\) makes 1 and 3 switch place, and 5 and 6.\nAny permutation can be written as a product (composition) of transpositions, i.e., exchanges of exactly two elements. Thus, \\((3,1,2) = (1,2)(2,3)\\). Here, the two-element notation indicates which elements are switched. Every decomposition of a given permutation uses either an even number of transpositions or an odd number, denoted \\(|p|\\) modulo \\(2\\). The sign of a permutation \\(p\\) is \\((-1)^{|p|}\\).\nThere are \\(n!\\) unique permutations of an \\(n\\)-element set.\n\nExercise 10.2 Write out the set of permutations \\(S_1\\), \\(S_2\\) and \\(S_3\\).\n\n\nExercise 10.3 Compute the sign of the permutations of the previous exercise.\n\n\nExercise 10.4 Compute explicit expressions for the determinants of matrices of dimension 1, 2, and 3.\n\n\nExercise 10.5 (Extra.) In Python, the module itertools contains an iterator class permutations that allow efficient looping over permutations. Can you write a function that computes the sign of a permutation? Use the internet for efficiency.\n\n\nExercise 10.6 Compute explicit expressions for the determinants of matrices of dimension up to 3. By equating the determinant of \\(A - EI\\) with zero, a polynomial equation in \\(E\\) is obtained. Find the solutions in the case \\(n=2\\).\n\n\nExercise 10.7 Consider the matrix \\[A = \\begin{bmatrix} -1 & z \\\\ z & 1 \\end{bmatrix} .\\] For which \\(z \\in \\mathbb{C}\\) is \\(A\\) Hermitian? Normal? Compute the eigenvalues as function of \\(z\\). Also find the eigenvectors.\n\n\nExercise 10.8 For which values of \\(z\\) does there exist a basis of eigenvectors?",
+    "text": "8.1.1 Eigenvalue decomposition\nOf great importance to quantum chemistry is the time-independent Schrödinger equation: Given the Hamiltonian operator \\(\\hat{H}\\), which is usually Hermitian, find a nonzero \\(\\left|\\psi\\right\\rangle\\), called an eigenvector, and a real number \\(E\\), called an eigenvalue, such that \\[\\hat{H} \\left|\\psi\\right\\rangle = E \\left|\\psi\\right\\rangle.\\] Choosing a particular orthonormal basis \\(\\{\\left|\\phi_i\\right\\rangle\\}\\) for Hilbert space, a matrix eigenvalue problem arises, \\[A \\mathbf{u} = E \\mathbf{u}, \\quad u_i = \\left\\langle\\phi_i|\\psi\\right\\rangle, \\quad A_{ij} = \\left\\langle\\phi_i|\\hat{H}|\\phi_j\\right\\rangle.\\]\nWe prove the spectral theorem for normal operators over finite dimensional Hilbert spaces. The spectral theorem states that one can actually find a basis of eigenvectors for normal operators. The normal operators include the Hermitian operators.\nIn this section, we let \\(M(n) = M(n,n,\\mathbb{C}) = \\mathbb{C}^{n\\times n}\\) be the set of complex square matrices of dimension \\(n\\).\nTwo matrices \\(A\\) and \\(B\\) are said to be similar if there is an invertible matrix \\(U\\) such that \\(A = U B U^{-1}\\). If \\(U\\) is unitary, then \\(A\\) and \\(B\\) are unitarily similar. (\\(U\\) is unitary if and only if \\(U^H = U^{-1}\\).)\n\nExercise 8.1  \n\nWhat does it mean that \\(A \\in M(n)\\) is normal?\nProve that a diagonal matrix \\(D \\in M(n)\\) is normal. (A matrix \\(A\\) is diagonal if and only if \\(A_{ij}=0\\) whenever \\(i\\neq j\\).)\nProve that \\(U\\) is unitary if and only if its columns are orthonormal.\nProve that if \\(A\\) is normal and \\(B\\) is unitarily similar to \\(A\\), then \\(B\\) is normal.\nProve that if \\(A\\) is unitarily equivalent to a diagonal matrix, then \\(A\\) is normal.\n\nThe next part requires Schur’s Lemma:\n\nLemma: Schur’s Lemma. Let \\(A \\in M(n)\\). Then \\(A\\) is unitarily equivalent to an upper triangular matrix. (\\(R\\) is upper triangular if \\(R_{ij}=0\\) whenever \\(i &gt; j\\).)\n\nThe proof of Shur’s Lemma can be found in, e.g., Fraleigh and Beauregard.\n\nProve that every normal matrix \\(A\\) is unitarily equivalent to a normal upper-triangular matrix \\(B\\). (Use Schur’s Lemma and exercise that normality is preserved by unitary similarity.)\nProve that a normal upper triangular matrix \\(B\\) must be diagonal. Hint: Let \\(C = B^H B = BB^H\\), and compute \\(C_{11}\\) to show that \\(B_{1j} = 0\\) if \\(j &gt; 1\\). Continue to \\(C_{22}\\), and all the way up to \\(C_{nn}\\).\n\nWe have now proved:\n\nTheorem: Spectral theorem for normal matrices. Suppose \\(A \\in M(n)\\) is normal, i.e., \\(AA^H = A^H A\\). Then there is a unitary matrix \\(U \\in M(n)\\) and a diagonal matrix \\(D \\in M(n)\\) such that \\[A = U D U^H. \\quad\\text{spectral decomposition}\\]\n\n\nLet \\(\\mathbf{u}_i = U_{:.i}\\) be the \\(i\\)th column for \\(U\\). Explain why these vectors form a basis for \\(\\mathbb{C}^n\\).\nShow that \\[A = \\sum_{i=1}^n d_i \\mathbf{u}_i \\mathbf{u}_i^H, \\quad d_i = D_{ii}. \\quad\\text{spectral decomposition}\\] Write this formula also using bra-ket notation.\nWhat does \\(A\\) do with the vector \\(\\mathbf{u}_k\\) for some \\(k\\)? What does \\(A\\) do to a linear combination of the basis vectors?\n\nA special kind of normal matrix is a Hermitian matrix, for which \\[A^H = A.\\]\n\nShow that a Hermitian matrix is unitarily equivalent to a diagonal matrix with real numbers on the diagonal, i.e., \\(A = U D U^H\\) with \\(D_{ii} \\in \\mathbb{R}\\).\n\n\n\n\n8.1.2 Diagonalization of a matrix\nA matrix \\(A\\) has an eigenvalue \\(E\\) if and only if there is a nonzero solution to the linear system \\[(A - EI)\\mathbf{x} = 0.\\] Thus, the matrix \\(A - EI\\) must be singular, i.e., not invertible. The eigenvector \\(\\mathbf{x}\\) is then a vector in the null space of this matrix.\nA sufficient and necessary criterion for invertibility of a matrix \\(B\\) is that the determinant is nonzero. The definition of the determinant can be stated as follows:\n\nDefinition: Determinant. Let \\(A \\in M(n)\\). The determinant, written \\(\\det(A) \\in \\mathbb{C}\\) is defined by \\[\\det(A) = \\sum_{p \\in S_n} (-1)^{|p|} A_{1,p(1)} A_{2,p(2)} \\cdots A_{n,p(n)}.\\] Here, \\(S_N\\) is the set of permutations of the numbers \\(\\{1,2,\\cdots,n\\}\\). A permutation is by definition any bijective map.\n\nEach permutation \\(p \\in S_n\\) is a rearrangement is thus completely specified by the new order of the numbers \\(\\{1,2,\\cdots,n\\}\\), i.e., \\((p(1),p(2),\\cdots,p(n))\\). For example, \\((1,2,3,4,5,6) \\in S_6\\) is the identity permutation that leaves any number alone. The permutation \\((3,2,1,4,6,5)\\) makes 1 and 3 switch place, and 5 and 6.\nAny permutation can be written as a product (composition) of transpositions, i.e., exchanges of exactly two elements. Thus, \\((3,1,2) = (1,2)(2,3)\\). Here, the two-element notation indicates which elements are switched. Every decomposition of a given permutation uses either an even number of transpositions or an odd number, denoted \\(|p|\\) modulo \\(2\\). The sign of a permutation \\(p\\) is \\((-1)^{|p|}\\).\nThere are \\(n!\\) unique permutations of an \\(n\\)-element set.\n\nExercise 8.2 Write out the set of permutations \\(S_1\\), \\(S_2\\) and \\(S_3\\).\n\n\nExercise 8.3 Compute the sign of the permutations of the previous exercise.\n\n\nExercise 8.4 Compute explicit expressions for the determinants of matrices of dimension 1, 2, and 3.\n\n\nExercise 8.5 (Extra.) In Python, the module itertools contains an iterator class permutations that allow efficient looping over permutations. Can you write a function that computes the sign of a permutation? Use the internet for efficiency.\n\n\nExercise 8.6 Compute explicit expressions for the determinants of matrices of dimension up to 3. By equating the determinant of \\(A - EI\\) with zero, a polynomial equation in \\(E\\) is obtained. Find the solutions in the case \\(n=2\\).\n\n\nExercise 8.7 Consider the matrix \\[A = \\begin{bmatrix} -1 & z \\\\ z & 1 \\end{bmatrix} .\\] For which \\(z \\in \\mathbb{C}\\) is \\(A\\) Hermitian? Normal? Compute the eigenvalues as function of \\(z\\). Also find the eigenvectors.\n\n\nExercise 8.8 For which values of \\(z\\) does there exist a basis of eigenvectors?",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Eigenvalues and diagonalization</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Eigenvalues and diagonalization</span>"
     ]
   },
   {
     "objectID": "chapters/gram-schmidt.html",
     "href": "chapters/gram-schmidt.html",
-    "title": "11  Gram–Schmidt orthogonalization",
+    "title": "9  Gram–Schmidt orthogonalization",
     "section": "",
-    "text": "11.1 Exercises\nOrthogonal projection leads to the Gram–Schmidt construction and the QR factorization of a full-rank matrix.\nLet \\(V\\) be a vector space over \\(\\mathbb{F}\\) with \\(\\dim(V) = n &lt; +\\infty\\). Recall that every finite-dimensional vector space has a basis. In the lecture notes, it is claimed that every finite dimensional Hilbert space has a basis of orthonormal vectors! Recall, that in an orthonormal basis, computations are usually much simpler than in nonorthogonal bases.\nIn this exercise, we show that any set of linearly independent vectors can be orthonormalized. We work in the space \\(\\mathbb{F}^n\\) for simplicity. That is, let \\(B = [\\mathbf{b}_1,\\cdots,\\mathbf{b}_m]\\subset \\mathbb{F}^n\\) be a set of \\(m \\leq n\\) linearly independent vectors, spanning a subspace \\(V = \\operatorname{span}(B)\\). We denote the vector set by its basis matrix \\(B\\). Equivalently, \\(B\\) is an arbitrary matrix in \\(M(n,m,\\mathbb{F})\\) of full rank \\(m\\), and the vectors \\(\\mathbf{b}_i\\) are the columns of \\(B\\).\nWe will find a set of orthonormal vectors \\(U = [\\mathbf{u}_1,\\cdots,\\mathbf{u}_m]\\), again denoted by a matrix in \\(M(n,m,\\mathbb{F})\\), such that \\(\\operatorname{span}(B) = \\operatorname{span}(U)\\). That is, the two sets of vectors are bases for the same subspace, but one of them is an orthonormal basis.\nWe first define the notion of orthogonal projection onto the span of a single vector: Let \\(\\mathbf{y}\\in \\mathbb{F}^n\\) be nonzero, \\(Y = \\operatorname{span}(\\mathbf{y})\\), and let \\(\\mathbf{x} \\in \\mathbb{F}^n\\).",
+    "text": "9.1 Exercises\nOrthogonal projection leads to the Gram–Schmidt construction and the QR factorization of a full-rank matrix.\nLet \\(V\\) be a vector space over \\(\\mathbb{F}\\) with \\(\\dim(V) = n &lt; +\\infty\\). Recall that every finite-dimensional vector space has a basis. In the lecture notes, it is claimed that every finite dimensional Hilbert space has a basis of orthonormal vectors! Recall, that in an orthonormal basis, computations are usually much simpler than in nonorthogonal bases.\nIn this exercise, we show that any set of linearly independent vectors can be orthonormalized. We work in the space \\(\\mathbb{F}^n\\) for simplicity. That is, let \\(B = [\\mathbf{b}_1,\\cdots,\\mathbf{b}_m]\\subset \\mathbb{F}^n\\) be a set of \\(m \\leq n\\) linearly independent vectors, spanning a subspace \\(V = \\operatorname{span}(B)\\). We denote the vector set by its basis matrix \\(B\\). Equivalently, \\(B\\) is an arbitrary matrix in \\(M(n,m,\\mathbb{F})\\) of full rank \\(m\\), and the vectors \\(\\mathbf{b}_i\\) are the columns of \\(B\\).\nWe will find a set of orthonormal vectors \\(U = [\\mathbf{u}_1,\\cdots,\\mathbf{u}_m]\\), again denoted by a matrix in \\(M(n,m,\\mathbb{F})\\), such that \\(\\operatorname{span}(B) = \\operatorname{span}(U)\\). That is, the two sets of vectors are bases for the same subspace, but one of them is an orthonormal basis.\nWe first define the notion of orthogonal projection onto the span of a single vector: Let \\(\\mathbf{y}\\in \\mathbb{F}^n\\) be nonzero, \\(Y = \\operatorname{span}(\\mathbf{y})\\), and let \\(\\mathbf{x} \\in \\mathbb{F}^n\\).",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gram--Schmidt orthogonalization</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Gram--Schmidt orthogonalization</span>"
     ]
   },
   {
     "objectID": "chapters/gram-schmidt.html#exercises",
     "href": "chapters/gram-schmidt.html#exercises",
-    "title": "11  Gram–Schmidt orthogonalization",
+    "title": "9  Gram–Schmidt orthogonalization",
     "section": "",
-    "text": "Exercise 11.1  \n\nShow that the vector \\(\\mathbf{x}_Y\\) given by \\[\\mathbf{x}_Y = \\mathbf{y}\\frac{\\left\\langle\\mathbf{y}, \\mathbf{x}\\right\\rangle}{\\left\\langle\\mathbf{y},\\mathbf{y}\\right\\rangle}\\] is the unique vector in \\(Y\\), such that \\[\\forall \\mathbf{y}' \\in Y, \\quad \\|\\mathbf{x} - \\mathbf{x}_Y\\| \\leq \\|\\mathbf{x} - \\mathbf{y}'\\|.\\] Hint: Find a function \\(f : \\mathbb{R}\\to \\mathbb{R}\\) which you can study, by using the definition of \\(Y = \\operatorname{span}(\\mathbf{y})\\).\nShow that \\[\\mathbf{x} = \\mathbf{x}_Y + \\mathbf{x}_{Y^\\bot},\\] where \\[\\left\\langle\\mathbf{x}_{Y^\\bot}|\\mathbf{x}_Y\\right\\rangle = 0.\\] Illustrate with a picture of the situation in \\(\\mathbb{R}^2\\).\n\nThe vector \\(\\mathbf{x}_Y\\) is called the orthogonal projection of \\(\\mathbf{x}\\) onto \\(Y\\) or \\(\\mathbf{y}\\).\n\nExplain that the orthogonal projection is given by acting with an operator, \\[\\mathbf{x}_Y = P_{\\mathbf{y}} \\mathbf{x}, \\quad P_{\\mathbf{y}} = \\mathbf{y} \\left\\langle\\mathbf{y},\\mathbf{y}\\right\\rangle^{-1} \\mathbf{y}^H.\\] The operator \\(P_{\\mathbf{y}}\\) is called the orthogonal projection operator onto \\(Y=\\operatorname{span}(\\mathbf{y})\\).\n\n\n\nShow that \\(P^2 = P\\) and that \\(P^\\dagger= P\\).\n\nThe Gram–Schmidt orthogonalization proceeds recursively:\n\n\\(\\mathbf{u}_1 = \\mathbf{b}_1 \\left\\langle\\mathbf{b}_1,\\mathbf{b}_1\\right\\rangle^{-1/2}\\) (normalization)\n\\(\\mathbf{u}_2' = \\mathbf{b}_2 - P_{\\mathbf{u}_1} \\mathbf{b}_2\\) (removal of projection), and \\(\\mathbf{u}_2 = \\mathbf{u}_2' \\left\\langle\\mathbf{u}_2',\\mathbf{u}_2'\\right\\rangle^{-1/2}\\) (normalization)\n\\(\\mathbf{u}_3' = \\mathbf{b}_3 - P_{\\mathbf{u}_1} \\mathbf{b}_3-P_{\\mathbf{u}_2} \\mathbf{b}_3\\) (removal of projection), and \\(\\mathbf{u}_3 = \\mathbf{u}_3' \\left\\langle\\mathbf{u}_3',\\mathbf{u}_3'\\right\\rangle^{-1/2}\\) (normalization)\nContinue recursively.\n\\(\\mathbf{u}_m' = \\mathbf{b}_m - \\sum_{i=1}^{m-1} P_{\\mathbf{u}_i} \\mathbf{b}_m\\) (removal of projection), and \\(\\mathbf{u}_m = \\mathbf{u}_m' \\left\\langle\\mathbf{u}_m',\\mathbf{u}_m'\\right\\rangle^{-1/2}\\) (normalization)\n\nWe see that each \\(\\mathbf{u}_i\\) is given by projecting away from \\(\\mathbf{b}_i\\) the components of all the previously generated \\(\\mathbf{u}_j\\), \\(j&lt;i\\).\n\nShow that all the generated vectors \\(\\mathbf{u}_i\\) are orthonormal.\nShow that a set of orthonormal vectors are linearly independent.\nShow that the span of the first \\(k\\) original vectors is the same as the span of the first \\(k\\) generated vectors. Show that \\[B = U R,\\] where \\(R \\in M(m,m,\\mathbb{F})\\) is upper triangular, i.e., \\(R_{ij}=0\\) whenever \\(i &gt; j\\). This is called the QR decomposition of the operator \\(B\\). (The “Q” is just our \\(U\\).)\nWe have shown the existence of the QR decomposition when \\(B\\) had full rank. Can you show the existence of the decomposition when \\(B\\) does not have full rank? It always exists. Hint: What happens when \\(B\\) does not have full rank?\n\nWe now turn to a computational exercise:\n\nWrite a Python function to compute the QR decomposition of a matrix with full rank. In SciPy, the function scipy.linalg.qr is an advanced implementation with pivoting. To compare with your implementation, use the call\n    Q,R = qr(A,mode='economic',pivoting=False)\nWith pivoting=False, the function computes essentially the same as our presented algorithm. (Turning on pivoting stabilizes the algorithm, rearranging the vectors before orthogonalizing.)\nLet \\(n\\geq m&gt;0\\) be integers, and define the matrix \\(A\\in \\mathbb{R}^{n\\times m}\\) by \\[A_{ij} = \\left(\\frac{i-1}{n-1}\\right)^{j-1}.\\] This the matrix of the \\(m\\) first monomials \\(x^{j-1}\\) evaluated at an equidistant grid of \\(n\\) points in the interval \\([0,1]\\). Test your QR implementation on \\(A\\) for various \\(n,m\\), say \\(m=10\\) and \\(m=200\\). In particular, compute the difference between your factorization and \\(A\\), and compare also with the NumPy implementation.",
+    "text": "Exercise 9.1  \n\nShow that the vector \\(\\mathbf{x}_Y\\) given by \\[\\mathbf{x}_Y = \\mathbf{y}\\frac{\\left\\langle\\mathbf{y}, \\mathbf{x}\\right\\rangle}{\\left\\langle\\mathbf{y},\\mathbf{y}\\right\\rangle}\\] is the unique vector in \\(Y\\), such that \\[\\forall \\mathbf{y}' \\in Y, \\quad \\|\\mathbf{x} - \\mathbf{x}_Y\\| \\leq \\|\\mathbf{x} - \\mathbf{y}'\\|.\\] Hint: Find a function \\(f : \\mathbb{R}\\to \\mathbb{R}\\) which you can study, by using the definition of \\(Y = \\operatorname{span}(\\mathbf{y})\\).\nShow that \\[\\mathbf{x} = \\mathbf{x}_Y + \\mathbf{x}_{Y^\\bot},\\] where \\[\\left\\langle\\mathbf{x}_{Y^\\bot}|\\mathbf{x}_Y\\right\\rangle = 0.\\] Illustrate with a picture of the situation in \\(\\mathbb{R}^2\\).\n\nThe vector \\(\\mathbf{x}_Y\\) is called the orthogonal projection of \\(\\mathbf{x}\\) onto \\(Y\\) or \\(\\mathbf{y}\\).\n\nExplain that the orthogonal projection is given by acting with an operator, \\[\\mathbf{x}_Y = P_{\\mathbf{y}} \\mathbf{x}, \\quad P_{\\mathbf{y}} = \\mathbf{y} \\left\\langle\\mathbf{y},\\mathbf{y}\\right\\rangle^{-1} \\mathbf{y}^H.\\] The operator \\(P_{\\mathbf{y}}\\) is called the orthogonal projection operator onto \\(Y=\\operatorname{span}(\\mathbf{y})\\).\n\n\n\nShow that \\(P^2 = P\\) and that \\(P^\\dagger= P\\).\n\nThe Gram–Schmidt orthogonalization proceeds recursively:\n\n\\(\\mathbf{u}_1 = \\mathbf{b}_1 \\left\\langle\\mathbf{b}_1,\\mathbf{b}_1\\right\\rangle^{-1/2}\\) (normalization)\n\\(\\mathbf{u}_2' = \\mathbf{b}_2 - P_{\\mathbf{u}_1} \\mathbf{b}_2\\) (removal of projection), and \\(\\mathbf{u}_2 = \\mathbf{u}_2' \\left\\langle\\mathbf{u}_2',\\mathbf{u}_2'\\right\\rangle^{-1/2}\\) (normalization)\n\\(\\mathbf{u}_3' = \\mathbf{b}_3 - P_{\\mathbf{u}_1} \\mathbf{b}_3-P_{\\mathbf{u}_2} \\mathbf{b}_3\\) (removal of projection), and \\(\\mathbf{u}_3 = \\mathbf{u}_3' \\left\\langle\\mathbf{u}_3',\\mathbf{u}_3'\\right\\rangle^{-1/2}\\) (normalization)\nContinue recursively.\n\\(\\mathbf{u}_m' = \\mathbf{b}_m - \\sum_{i=1}^{m-1} P_{\\mathbf{u}_i} \\mathbf{b}_m\\) (removal of projection), and \\(\\mathbf{u}_m = \\mathbf{u}_m' \\left\\langle\\mathbf{u}_m',\\mathbf{u}_m'\\right\\rangle^{-1/2}\\) (normalization)\n\nWe see that each \\(\\mathbf{u}_i\\) is given by projecting away from \\(\\mathbf{b}_i\\) the components of all the previously generated \\(\\mathbf{u}_j\\), \\(j&lt;i\\).\n\nShow that all the generated vectors \\(\\mathbf{u}_i\\) are orthonormal.\nShow that a set of orthonormal vectors are linearly independent.\nShow that the span of the first \\(k\\) original vectors is the same as the span of the first \\(k\\) generated vectors. Show that \\[B = U R,\\] where \\(R \\in M(m,m,\\mathbb{F})\\) is upper triangular, i.e., \\(R_{ij}=0\\) whenever \\(i &gt; j\\). This is called the QR decomposition of the operator \\(B\\). (The “Q” is just our \\(U\\).)\nWe have shown the existence of the QR decomposition when \\(B\\) had full rank. Can you show the existence of the decomposition when \\(B\\) does not have full rank? It always exists. Hint: What happens when \\(B\\) does not have full rank?\n\nWe now turn to a computational exercise:\n\nWrite a Python function to compute the QR decomposition of a matrix with full rank. In SciPy, the function scipy.linalg.qr is an advanced implementation with pivoting. To compare with your implementation, use the call\n    Q,R = qr(A,mode='economic',pivoting=False)\nWith pivoting=False, the function computes essentially the same as our presented algorithm. (Turning on pivoting stabilizes the algorithm, rearranging the vectors before orthogonalizing.)\nLet \\(n\\geq m&gt;0\\) be integers, and define the matrix \\(A\\in \\mathbb{R}^{n\\times m}\\) by \\[A_{ij} = \\left(\\frac{i-1}{n-1}\\right)^{j-1}.\\] This the matrix of the \\(m\\) first monomials \\(x^{j-1}\\) evaluated at an equidistant grid of \\(n\\) points in the interval \\([0,1]\\). Test your QR implementation on \\(A\\) for various \\(n,m\\), say \\(m=10\\) and \\(m=200\\). In particular, compute the difference between your factorization and \\(A\\), and compare also with the NumPy implementation.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gram--Schmidt orthogonalization</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Gram--Schmidt orthogonalization</span>"
     ]
   },
   {
     "objectID": "chapters/singular-value-decomposition.html",
     "href": "chapters/singular-value-decomposition.html",
-    "title": "12  The singular-value decomposition",
+    "title": "10  The singular-value decomposition",
     "section": "",
-    "text": "12.1 Exercises\nThe singular-value decomposition gives orthogonal matrix expansions and low-rank approximations, including image compression.\nThe SVD is a powerful linear algebra tool. In quantum chemistry it is used to compress electron-repulsion integrals, for example.\nIn this small exercise, we demonstrate its power applied to image compression. For this exercise, a good grayscale image is handy. You can find a nice picture of a parrot in Figure 12.1.\nRecall first the Hilbert–Schmidt inner product on the set \\(M(n,m,\\mathbb{F})\\) of matrices: \\[\\left\\langle X,Y\\right\\rangle_\\text{HS} = \\operatorname{Tr}(X^H Y)\\] The trace \\(\\operatorname{Tr}(A)\\) is the sum of the diagonal elements of \\(A\\).\nRecall also the SVD: For \\(A \\in M(n,m,\\mathbb{F})\\) and \\(k = \\min(n,m)\\), there are unitary matrices \\(U \\in M(n)\\) and \\(V\\in M(m)\\) and singular values \\(\\sigma_1 \\geq \\sigma_2 \\geq \\cdots \\geq \\sigma_k\\geq0\\) such that\n\\[\nA = U \\Sigma V^H = \\sum_{i=1}^k \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^H.\n\\]\nHere \\(\\Sigma \\in M(n,m,\\mathbb{R})\\) has the singular values in its upper \\(k\\times k\\) diagonal block and zeros elsewhere. Removing unused columns gives the economical SVD\n\\[\nA=U_{:,:k}\\Sigma_{:k,:k}V_{:,:k}^H.\n\\]",
+    "text": "10.1 Exercises\nThe singular-value decomposition gives orthogonal matrix expansions and low-rank approximations, including image compression.\nThe SVD is a powerful linear algebra tool. In quantum chemistry it is used to compress electron-repulsion integrals, for example.\nIn this small exercise, we demonstrate its power applied to image compression. For this exercise, a good grayscale image is handy. You can find a nice picture of a parrot in Figure 10.1.\nRecall first the Hilbert–Schmidt inner product on the set \\(M(n,m,\\mathbb{F})\\) of matrices: \\[\\left\\langle X,Y\\right\\rangle_\\text{HS} = \\operatorname{Tr}(X^H Y)\\] The trace \\(\\operatorname{Tr}(A)\\) is the sum of the diagonal elements of \\(A\\).\nRecall also the SVD: For \\(A \\in M(n,m,\\mathbb{F})\\) and \\(k = \\min(n,m)\\), there are unitary matrices \\(U \\in M(n)\\) and \\(V\\in M(m)\\) and singular values \\(\\sigma_1 \\geq \\sigma_2 \\geq \\cdots \\geq \\sigma_k\\geq0\\) such that\n\\[\nA = U \\Sigma V^H = \\sum_{i=1}^k \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^H.\n\\]\nHere \\(\\Sigma \\in M(n,m,\\mathbb{R})\\) has the singular values in its upper \\(k\\times k\\) diagonal block and zeros elsewhere. Removing unused columns gives the economical SVD\n\\[\nA=U_{:,:k}\\Sigma_{:k,:k}V_{:,:k}^H.\n\\]",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>The singular-value decomposition</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>The singular-value decomposition</span>"
     ]
   },
   {
     "objectID": "chapters/singular-value-decomposition.html#exercises",
     "href": "chapters/singular-value-decomposition.html#exercises",
-    "title": "12  The singular-value decomposition",
+    "title": "10  The singular-value decomposition",
     "section": "",
-    "text": "Exercise 12.1  \n\nHow is the Hilbert–Schmidt inner product related to the Euclidean inner product and the standard Euclidean vector space?\nShow that \\(\\operatorname{Tr}(ABC) = \\operatorname{Tr}(CAB)\\) (cyclic invariance).\nLet \\(\\mathbf{u}_i\\) and \\(\\mathbf{v}_i\\) be the left and right singular vectors of a matrix \\(A\\). Show that the matrices \\(X^{ij} = \\mathbf{u}_i\\mathbf{v}_j^H\\) form an orthonormal set in the Hilbert–Schmidt inner product.\nConclude that the SVD is an expansion of a matrix in an orthonormal basis.\n\nThe truncated SVD\n\\[\nA^{(m)} = \\sum_{i=1}^m \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^H\n\\]\nis the best approximation to \\(A\\) of rank at most \\(m\\) in the Hilbert–Schmidt norm:\n\\[\nA^{(m)} = \\mathop{\\mathrm{arg\\,min}}_{\\operatorname{rank}(B)\\leq m}\n\\|B-A\\|_{\\text{HS}}.\n\\]\n\nWrite a Python program/notebook that reads an image file and converts it to a matrix \\(A \\in M(n,m,\\mathbb{R})\\). The module imageio can be useful.\nContinue writing the program, so it computes the truncated and full SVD of \\(A\\). You can use, say, scipy.linalg.svd to find the full SVD.\nPlot the singular values. Discuss.\nShow that the error in the Hilbert–Schmidt norm is \\[\\| A^{(m)} - A\\|_\\text{HS} = \\sqrt{\\sum_{i={m+1}}^k \\sigma_i^2}.\\]\nMake visualizations of the truncated SVD of the image \\(A\\), with various \\(m\\). Compute the relative error \\(\\| A^{(m)} - A\\|_\\text{HS} / \\|A\\|_\\text{HS}\\) for each \\(m\\) you consider. Discuss the image quality.",
+    "text": "Exercise 10.1  \n\nHow is the Hilbert–Schmidt inner product related to the Euclidean inner product and the standard Euclidean vector space?\nShow that \\(\\operatorname{Tr}(ABC) = \\operatorname{Tr}(CAB)\\) (cyclic invariance).\nLet \\(\\mathbf{u}_i\\) and \\(\\mathbf{v}_i\\) be the left and right singular vectors of a matrix \\(A\\). Show that the matrices \\(X^{ij} = \\mathbf{u}_i\\mathbf{v}_j^H\\) form an orthonormal set in the Hilbert–Schmidt inner product.\nConclude that the SVD is an expansion of a matrix in an orthonormal basis.\n\nThe truncated SVD\n\\[\nA^{(m)} = \\sum_{i=1}^m \\mathbf{u}_i \\sigma_i \\mathbf{v}_i^H\n\\]\nis the best approximation to \\(A\\) of rank at most \\(m\\) in the Hilbert–Schmidt norm:\n\\[\nA^{(m)} = \\mathop{\\mathrm{arg\\,min}}_{\\operatorname{rank}(B)\\leq m}\n\\|B-A\\|_{\\text{HS}}.\n\\]\n\nWrite a Python program/notebook that reads an image file and converts it to a matrix \\(A \\in M(n,m,\\mathbb{R})\\). The module imageio can be useful.\nContinue writing the program, so it computes the truncated and full SVD of \\(A\\). You can use, say, scipy.linalg.svd to find the full SVD.\nPlot the singular values. Discuss.\nShow that the error in the Hilbert–Schmidt norm is \\[\\| A^{(m)} - A\\|_\\text{HS} = \\sqrt{\\sum_{i={m+1}}^k \\sigma_i^2}.\\]\nMake visualizations of the truncated SVD of the image \\(A\\), with various \\(m\\). Compute the relative error \\(\\| A^{(m)} - A\\|_\\text{HS} / \\|A\\|_\\text{HS}\\) for each \\(m\\) you consider. Discuss the image quality.",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>The singular-value decomposition</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>The singular-value decomposition</span>"
     ]
   },
   {
     "objectID": "chapters/polynomial-vector-spaces.html",
     "href": "chapters/polynomial-vector-spaces.html",
-    "title": "13  Polynomial vector spaces",
+    "title": "11  Polynomial vector spaces",
     "section": "",
-    "text": "13.1 Exercises\nPolynomials form finite-dimensional vector spaces on which differentiation, multiplication, and changes of basis act as linear maps.\nIn this exercise, we study a vector space that is not \\(\\mathbb{F}^n\\). We start out without an inner product, but supply this later.\nRecall that a polynomial of degree \\(n\\) over \\(\\mathbb{F}\\) has the form \\[p(x) = a_0 + a_1 x + a_2 x^2 + \\cdots + a_n x^n,\\] with \\(a_i \\in \\mathbb{F}\\) and \\(a_n \\neq 0\\).\nWe now restrict our attention to the interval \\(x \\in [-1,1]\\). That is, \\[V_n = \\{ p : [-1,1] \\to \\mathbb{C}\\mid p \\text{ a polynomial of deg $\\leq n$} \\}.\\] The above subexercises did not depend on the domain of the polynomial.\nWe define an inner product on \\(V\\), \\[\\left\\langle p|q\\right\\rangle := \\int_{-1}^1 \\overline{p(x)} q(x) \\, \\mathrm{d}x.\\] We will now define the Legendre polynomials.\nThe Legendre polynomials are orthogonal polynomials \\(P_i : [-1,1]\\to \\mathbb{R}\\) obtained from the monomials by Gram–Schmidt orthogonalization and normalized by \\(P_i(1)=1\\). They are orthogonal but not normalized. The endpoint normalization gives \\[\\int_{-1}^1 P_i(x) P_j(x) \\, \\mathrm{d}x = \\frac{2}{2i + 1} \\delta_{ij}.\\] With \\(P_0(x)=1\\) and \\(P_{-1}\\equiv0\\), they satisfy the recurrence relation \\[(i + 1) P_{i+1}(x) = (2i + 1) x P_i(x) - i P_{i-1}(x).\\] From this, one can show: \\[P'_{i+1}(x) = \\frac{2 P_i(x)}{\\|P_i\\|^2} + \\frac{2 P_{i-2}(x)}{\\|P_{i-2}\\|^2} + \\frac{2 P_{i-4}(x)}{\\|P_{i-4}\\|^2} + \\ldots \\]\nOrthogonal polynomials define efficient quadrature rules. Consider approximating an integral by \\[\\int_{-1}^1 f(x) \\, \\mathrm{d}x \\approx \\sum_{i=1}^n f(x_i) w_i,\\] where the \\(w_i\\) are weights and the \\(x_i\\) are nodes. A unique choice of nodes and weights makes the rule exact for every polynomial of degree at most \\(2n-1\\). The nodes are the zeros of \\(P_n\\), and the weights are \\[w_i = \\frac{2}{(1-x_i^2)[P'_n(x_i)]^2}.\\] The Wikipedia page on Gauss–Legendre quadrature contains more details.\nThe so-called Golub–Welsch algorithm is a simple algorithm based on diagonalization of a tridiagonal Hermitian matrix for computing the nodes and weights of Gaussian quadratures, see the Wikipedia page on Gaussian quadrature. The interested student should check it out!",
+    "text": "11.1 Exercises\nPolynomials form finite-dimensional vector spaces on which differentiation, multiplication, and changes of basis act as linear maps.\nIn this exercise, we study a vector space that is not \\(\\mathbb{F}^n\\). We start out without an inner product, but supply this later.\nRecall that a polynomial of degree \\(n\\) over \\(\\mathbb{F}\\) has the form \\[p(x) = a_0 + a_1 x + a_2 x^2 + \\cdots + a_n x^n,\\] with \\(a_i \\in \\mathbb{F}\\) and \\(a_n \\neq 0\\).\nWe now restrict our attention to the interval \\(x \\in [-1,1]\\). That is, \\[V_n = \\{ p : [-1,1] \\to \\mathbb{C}\\mid p \\text{ a polynomial of deg $\\leq n$} \\}.\\] The above subexercises did not depend on the domain of the polynomial.\nWe define an inner product on \\(V\\), \\[\\left\\langle p|q\\right\\rangle := \\int_{-1}^1 \\overline{p(x)} q(x) \\, \\mathrm{d}x.\\] We will now define the Legendre polynomials.\nThe Legendre polynomials are orthogonal polynomials \\(P_i : [-1,1]\\to \\mathbb{R}\\) obtained from the monomials by Gram–Schmidt orthogonalization and normalized by \\(P_i(1)=1\\). They are orthogonal but not normalized. The endpoint normalization gives \\[\\int_{-1}^1 P_i(x) P_j(x) \\, \\mathrm{d}x = \\frac{2}{2i + 1} \\delta_{ij}.\\] With \\(P_0(x)=1\\) and \\(P_{-1}\\equiv0\\), they satisfy the recurrence relation \\[(i + 1) P_{i+1}(x) = (2i + 1) x P_i(x) - i P_{i-1}(x).\\] From this, one can show: \\[P'_{i+1}(x) = \\frac{2 P_i(x)}{\\|P_i\\|^2} + \\frac{2 P_{i-2}(x)}{\\|P_{i-2}\\|^2} + \\frac{2 P_{i-4}(x)}{\\|P_{i-4}\\|^2} + \\ldots \\]\nOrthogonal polynomials define efficient quadrature rules. Consider approximating an integral by \\[\\int_{-1}^1 f(x) \\, \\mathrm{d}x \\approx \\sum_{i=1}^n f(x_i) w_i,\\] where the \\(w_i\\) are weights and the \\(x_i\\) are nodes. A unique choice of nodes and weights makes the rule exact for every polynomial of degree at most \\(2n-1\\). The nodes are the zeros of \\(P_n\\), and the weights are \\[w_i = \\frac{2}{(1-x_i^2)[P'_n(x_i)]^2}.\\] The Wikipedia page on Gauss–Legendre quadrature contains more details.\nThe so-called Golub–Welsch algorithm is a simple algorithm based on diagonalization of a tridiagonal Hermitian matrix for computing the nodes and weights of Gaussian quadratures, see the Wikipedia page on Gaussian quadrature. The interested student should check it out!",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Polynomial vector spaces</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Polynomial vector spaces</span>"
     ]
   },
   {
     "objectID": "chapters/polynomial-vector-spaces.html#exercises",
     "href": "chapters/polynomial-vector-spaces.html#exercises",
-    "title": "13  Polynomial vector spaces",
+    "title": "11  Polynomial vector spaces",
     "section": "",
-    "text": "Exercise 13.1 Let \\(P_n\\) be the set of all polynomials of degree less than or equal to \\(n\\). Show that \\(P_n\\) is a vector space of dimension \\(n+1\\) over \\(\\mathbb{C}\\).\n\n\nExercise 13.2 Let \\(D : P_n \\to P_n\\) be the differentiation operator, i.e., \\[(D p)(x) = p'(x).\\] Show that \\(D\\) is indeed a linear operator.\n\n\nExercise 13.3 Does there exist an inverse of \\(D\\)?\n\n\nExercise 13.4 Let \\(B = \\{1, x, x^2, \\cdots, x^n\\}\\) be the basis of monomials. Using bra-ket notation, we write the basis operator as \\[\\hat{B} = \\sum_{i=1}^{n+1} \\left|x^{i-1}\\right\\rangle\\left\\langle i\\right|,\\] where \\(\\left|i\\right\\rangle\\) is a standard basis vector for \\(\\mathbb{F}^{n+1}\\). Compute the matrix of \\(D\\) relative to this basis. (Note carefully that we do not have an inner product defined.) That is, find a matrix \\(T\\) such that \\[D \\hat{B} = \\hat{B} T.\\]\n\n\n\n\nExercise 13.5 Show that \\(\\left\\langle\\cdot|\\cdot\\right\\rangle\\) is indeed an inner product by checking the axioms.\n\n\nExercise 13.6 Compute the overlap matrix \\(S\\) of the monomial basis. Is the basis orthonormal?\n\n\nExercise 13.7 Formulate the Gram–Schmidt procedure using the bra-ket notation. Explain how the procedure generates an upper triangular matrix \\(R\\) such that \\[\\hat{B} = \\hat{U} R,\\] where \\(\\hat{U}\\) is the basis matrix of the orthonormal set of vectors.\n\n\nExercise 13.8 Use the Gram–Schmidt decomposition by hand to compute the first three normalized Legendre polynomials \\(\\left|\\hat{P}_i\\right\\rangle\\), \\(i=0,1,2\\), defined using the Gram–Schmidt orthogonalization of \\(\\{1,x,x^2\\}\\).\n\n\n\nExercise 13.9 Compute the matrix of the differential operator \\(D\\) in the normalized Legendre polynomial basis, both by using matrix multiplication involving \\(X\\), \\(R\\), and \\(R^{-1}\\), and also by using the derivative relation above. Compare the two explicitly using pen-and-paper calculations.\n\n\nExercise 13.10 Repeat the previous exercise with the operator \\(D^2\\).",
+    "text": "Exercise 11.1 Let \\(P_n\\) be the set of all polynomials of degree less than or equal to \\(n\\). Show that \\(P_n\\) is a vector space of dimension \\(n+1\\) over \\(\\mathbb{C}\\).\n\n\nExercise 11.2 Let \\(D : P_n \\to P_n\\) be the differentiation operator, i.e., \\[(D p)(x) = p'(x).\\] Show that \\(D\\) is indeed a linear operator.\n\n\nExercise 11.3 Does there exist an inverse of \\(D\\)?\n\n\nExercise 11.4 Let \\(B = \\{1, x, x^2, \\cdots, x^n\\}\\) be the basis of monomials. Using bra-ket notation, we write the basis operator as \\[\\hat{B} = \\sum_{i=1}^{n+1} \\left|x^{i-1}\\right\\rangle\\left\\langle i\\right|,\\] where \\(\\left|i\\right\\rangle\\) is a standard basis vector for \\(\\mathbb{F}^{n+1}\\). Compute the matrix of \\(D\\) relative to this basis. (Note carefully that we do not have an inner product defined.) That is, find a matrix \\(T\\) such that \\[D \\hat{B} = \\hat{B} T.\\]\n\n\n\n\nExercise 11.5 Show that \\(\\left\\langle\\cdot|\\cdot\\right\\rangle\\) is indeed an inner product by checking the axioms.\n\n\nExercise 11.6 Compute the overlap matrix \\(S\\) of the monomial basis. Is the basis orthonormal?\n\n\nExercise 11.7 Formulate the Gram–Schmidt procedure using the bra-ket notation. Explain how the procedure generates an upper triangular matrix \\(R\\) such that \\[\\hat{B} = \\hat{U} R,\\] where \\(\\hat{U}\\) is the basis matrix of the orthonormal set of vectors.\n\n\nExercise 11.8 Use the Gram–Schmidt decomposition by hand to compute the first three normalized Legendre polynomials \\(\\left|\\hat{P}_i\\right\\rangle\\), \\(i=0,1,2\\), defined using the Gram–Schmidt orthogonalization of \\(\\{1,x,x^2\\}\\).\n\n\n\nExercise 11.9 Compute the matrix of the differential operator \\(D\\) in the normalized Legendre polynomial basis, both by using matrix multiplication involving \\(X\\), \\(R\\), and \\(R^{-1}\\), and also by using the derivative relation above. Compare the two explicitly using pen-and-paper calculations.\n\n\nExercise 11.10 Repeat the previous exercise with the operator \\(D^2\\).",
     "crumbs": [
       "Linear algebra",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Polynomial vector spaces</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Polynomial vector spaces</span>"
     ]
   },
   {
     "objectID": "chapters/metric-spaces.html",
     "href": "chapters/metric-spaces.html",
-    "title": "14  Metric spaces",
+    "title": "12  Metric spaces",
     "section": "",
-    "text": "14.1 Exercises\nA metric measures distance through symmetry, positivity, and the triangle inequality.\nA metric encodes the intuition behind measuring distances in a set \\(M\\). It is a distance function \\(d(x,y)\\), where \\(x,y\\in M\\).\nThe definition of a metric space is as follows:\nIn this exercise, we will try to understand why the axioms are as they are, i.e., what makes them encode the concept of a metric.",
+    "text": "12.1 Exercises\nA metric measures distance through symmetry, positivity, and the triangle inequality.\nA metric encodes the intuition behind measuring distances in a set \\(M\\). It is a distance function \\(d(x,y)\\), where \\(x,y\\in M\\).\nThe definition of a metric space is as follows:\nIn this exercise, we will try to understand why the axioms are as they are, i.e., what makes them encode the concept of a metric.",
     "crumbs": [
       "Metric spaces and topology",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Metric spaces</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Metric spaces</span>"
     ]
   },
   {
     "objectID": "chapters/metric-spaces.html#exercises",
     "href": "chapters/metric-spaces.html#exercises",
-    "title": "14  Metric spaces",
+    "title": "12  Metric spaces",
     "section": "",
-    "text": "Exercise 14.1  \n\nConsider two persons \\(X\\) and \\(Y\\) located at \\(x\\) and \\(y\\) in a set \\(M\\). They both measure the distance to the other person. What would happen if axiom a) is violated? Is this reasonable?\nWhat would happen if axiom b) is violated? Is this reasonable?\nA third person \\(Z\\) located at \\(z\\) enters the picture. Consider axiom c). What happens if this axiom is violated? Is this reasonable?\nLet \\(M = \\mathbb{R}^2\\), and let \\(d\\) be Euclidean distance, “as the crow flies”. But there are other distance measures as well. Consider for example the “Manhattan distance”, given by \\[d(\\mathbf{x},\\mathbf{y}) = |x_1-y_1| + |x_2-y_2|.\\] This has a standard interpretation in terms of cities with straight streets and taxis driving on these streets. Discuss.\nConsider a king moving on a chessboard. The king can move one step at a time, either horizontally or vertically, or diagonally. Consider the minimum number of steps the king has to move in order to get from one point to another. See Figure 14.1 for an illustration. The metric is \\[d(\\mathbf{x},\\mathbf{y}) = \\max (|x_1-y_1|, |x_2-y_2|).\\] This is also called the “maximum metric”. Can you verify the metric axioms? How does the maximum metric compare to the Manhattan metric?\n\n\n\n\n\n\n\nFigure 14.1: Illustration of “chessboard metric”: The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels “faster” that way!",
+    "text": "Exercise 12.1  \n\nConsider two persons \\(X\\) and \\(Y\\) located at \\(x\\) and \\(y\\) in a set \\(M\\). They both measure the distance to the other person. What would happen if axiom a) is violated? Is this reasonable?\nWhat would happen if axiom b) is violated? Is this reasonable?\nA third person \\(Z\\) located at \\(z\\) enters the picture. Consider axiom c). What happens if this axiom is violated? Is this reasonable?\nLet \\(M = \\mathbb{R}^2\\), and let \\(d\\) be Euclidean distance, “as the crow flies”. But there are other distance measures as well. Consider for example the “Manhattan distance”, given by \\[d(\\mathbf{x},\\mathbf{y}) = |x_1-y_1| + |x_2-y_2|.\\] This has a standard interpretation in terms of cities with straight streets and taxis driving on these streets. Discuss.\nConsider a king moving on a chessboard. The king can move one step at a time, either horizontally or vertically, or diagonally. Consider the minimum number of steps the king has to move in order to get from one point to another. See Figure 12.1 for an illustration. The metric is \\[d(\\mathbf{x},\\mathbf{y}) = \\max (|x_1-y_1|, |x_2-y_2|).\\] This is also called the “maximum metric”. Can you verify the metric axioms? How does the maximum metric compare to the Manhattan metric?\n\n\n\n\n\n\n\nFigure 12.1: Illustration of “chessboard metric”: The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels “faster” that way!",
     "crumbs": [
       "Metric spaces and topology",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Metric spaces</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Metric spaces</span>"
     ]
   },
   {
     "objectID": "chapters/open-and-closed-sets.html",
     "href": "chapters/open-and-closed-sets.html",
-    "title": "15  Open and closed sets in Euclidean space",
+    "title": "13  Open and closed sets in Euclidean space",
     "section": "",
-    "text": "15.1 Exercises\nOpen balls define interior points, open sets, closed sets, boundaries, and closures in Euclidean space.",
+    "text": "13.1 Exercises\nOpen balls define interior points, open sets, closed sets, boundaries, and closures in Euclidean space.",
     "crumbs": [
       "Metric spaces and topology",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Open and closed sets in Euclidean space</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Open and closed sets in Euclidean space</span>"
     ]
   },
   {
     "objectID": "chapters/open-and-closed-sets.html#exercises",
     "href": "chapters/open-and-closed-sets.html#exercises",
-    "title": "15  Open and closed sets in Euclidean space",
+    "title": "13  Open and closed sets in Euclidean space",
     "section": "",
-    "text": "Exercise 15.1 Show that any \\(\\epsilon\\)-ball is open.\n\n\nExercise 15.2 Show that \\(A \\cup \\partial A\\) is closed.\n\n\nExercise 15.3 Show that if \\(A \\subset \\mathbb{R}^n\\) is closed and a sequence \\(\\mathbf{x}_i \\in A\\) converges to some \\(\\mathbf{x}\\in \\mathbb{R}^n\\), then \\(\\mathbf{x}\\in A\\). This gives an equivalent characterization of closed subsets of \\(\\mathbb{R}^n\\).\n\n\nExercise 15.4 Show that the closure of \\(A\\), the smallest closed set \\(\\bar{A}\\) that contains \\(A\\), is equal to \\(A\\cup \\partial A\\).\n\n\nExercise 15.5 Show that \\[A = \\{ (x,0) \\mid x \\in [-1,1] \\} \\subset \\mathbb{R}^2\\] is closed.\n\n\nExercise 15.6 Show that \\(\\mathbb{Q} \\subset \\mathbb{R}\\) is neither open nor closed. Show that the boundary of \\(\\mathbb{Q}\\) is \\(\\mathbb{R}\\). Show that the interior of \\(\\mathbb{Q}\\) is empty. What is the closure of \\(\\mathbb{Q}\\)?\n\n\nExercise 15.7 Let \\[A = \\{ (x,y) \\in \\mathbb{R}^2 \\mid 0 \\leq x &lt; 1, \\quad 0 \\leq y &lt; 1\\}.\\] Compute the interior of \\(A\\), the boundary of \\(A\\), the closure of \\(A\\).",
+    "text": "Exercise 13.1 Show that any \\(\\epsilon\\)-ball is open.\n\n\nExercise 13.2 Show that \\(A \\cup \\partial A\\) is closed.\n\n\nExercise 13.3 Show that if \\(A \\subset \\mathbb{R}^n\\) is closed and a sequence \\(\\mathbf{x}_i \\in A\\) converges to some \\(\\mathbf{x}\\in \\mathbb{R}^n\\), then \\(\\mathbf{x}\\in A\\). This gives an equivalent characterization of closed subsets of \\(\\mathbb{R}^n\\).\n\n\nExercise 13.4 Show that the closure of \\(A\\), the smallest closed set \\(\\bar{A}\\) that contains \\(A\\), is equal to \\(A\\cup \\partial A\\).\n\n\nExercise 13.5 Show that \\[A = \\{ (x,0) \\mid x \\in [-1,1] \\} \\subset \\mathbb{R}^2\\] is closed.\n\n\nExercise 13.6 Show that \\(\\mathbb{Q} \\subset \\mathbb{R}\\) is neither open nor closed. Show that the boundary of \\(\\mathbb{Q}\\) is \\(\\mathbb{R}\\). Show that the interior of \\(\\mathbb{Q}\\) is empty. What is the closure of \\(\\mathbb{Q}\\)?\n\n\nExercise 13.7 Let \\[A = \\{ (x,y) \\in \\mathbb{R}^2 \\mid 0 \\leq x &lt; 1, \\quad 0 \\leq y &lt; 1\\}.\\] Compute the interior of \\(A\\), the boundary of \\(A\\), the closure of \\(A\\).",
     "crumbs": [
       "Metric spaces and topology",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Open and closed sets in Euclidean space</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Open and closed sets in Euclidean space</span>"
     ]
   },
   {
     "objectID": "chapters/visualizing-functions.html",
     "href": "chapters/visualizing-functions.html",
-    "title": "16  Visualizing functions",
+    "title": "14  Visualizing functions",
     "section": "",
-    "text": "16.1 Exercises\nGraphs, level sets, and vector fields provide complementary views of scalar- and vector-valued functions.\nSome paths and their curves:\nLevel curves:\nSections and level surfaces:\nConsider the hydrogen-atom eigenfunctions in atomic units. They are indexed by \\(n\\geq1\\), \\(0\\leq\\ell&lt;n\\), and \\(-\\ell\\leq m\\leq\\ell\\). Their separated form is\n\\[\n\\psi_{n\\ell m}(r,\\theta,\\phi)=R_{n\\ell}(r)Y_{\\ell m}(\\theta,\\phi),\n\\]\nwith\n\\[\nR_{n\\ell}(r)=N_{n\\ell}\\rho^\\ell\nL_{n-\\ell-1}^{2\\ell+1}(\\rho)e^{-\\rho/2},\n\\qquad \\rho=\\frac{2r}{n}.\n\\]\nHere \\(N_{n\\ell}\\) is a normalization constant. Coordinate conversion uses\n\\[\nr=\\sqrt{x^2+y^2+z^2},\\quad\nx=r\\sin\\theta\\cos\\phi,\\quad\ny=r\\sin\\theta\\sin\\phi,\\quad\nz=r\\cos\\theta.\n\\]\nIn particular, the 1\\(s\\) and 2\\(p_z\\) functions are given by \\[\\psi_{1s}(x,y,z) = \\frac{1}{\\sqrt{\\pi}} e^{-r(x,y,z)}, \\quad\\] \\[\\psi_{2p_z}(x,y,z) = \\frac{1}{4\\sqrt{2\\pi}} z e^{-r(x,y,z)/2},\\]",
+    "text": "14.1 Exercises\nGraphs, level sets, and vector fields provide complementary views of scalar- and vector-valued functions.\nSome paths and their curves:\nLevel curves:\nSections and level surfaces:\nConsider the hydrogen-atom eigenfunctions in atomic units. They are indexed by \\(n\\geq1\\), \\(0\\leq\\ell&lt;n\\), and \\(-\\ell\\leq m\\leq\\ell\\). Their separated form is\n\\[\n\\psi_{n\\ell m}(r,\\theta,\\phi)=R_{n\\ell}(r)Y_{\\ell m}(\\theta,\\phi),\n\\]\nwith\n\\[\nR_{n\\ell}(r)=N_{n\\ell}\\rho^\\ell\nL_{n-\\ell-1}^{2\\ell+1}(\\rho)e^{-\\rho/2},\n\\qquad \\rho=\\frac{2r}{n}.\n\\]\nHere \\(N_{n\\ell}\\) is a normalization constant. Coordinate conversion uses\n\\[\nr=\\sqrt{x^2+y^2+z^2},\\quad\nx=r\\sin\\theta\\cos\\phi,\\quad\ny=r\\sin\\theta\\sin\\phi,\\quad\nz=r\\cos\\theta.\n\\]\nIn particular, the 1\\(s\\) and 2\\(p_z\\) functions are given by \\[\\psi_{1s}(x,y,z) = \\frac{1}{\\sqrt{\\pi}} e^{-r(x,y,z)}, \\quad\\] \\[\\psi_{2p_z}(x,y,z) = \\frac{1}{4\\sqrt{2\\pi}} z e^{-r(x,y,z)/2},\\]",
     "crumbs": [
       "Multivariable calculus",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Visualizing functions</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualizing functions</span>"
     ]
   },
   {
     "objectID": "chapters/visualizing-functions.html#exercises",
     "href": "chapters/visualizing-functions.html#exercises",
-    "title": "16  Visualizing functions",
+    "title": "14  Visualizing functions",
     "section": "",
-    "text": "Exercise 16.1 Let \\(f : \\mathbb{R}\\to \\mathbb{R}^2\\) be a path defined by \\[f(t) = [r(t)\\cos(4t), r(t)\\sin(4t)], \\quad r(t) = \\exp(-t).\\] Sketch the curve traced by the path for \\(0 \\leq t \\leq 2\\pi\\). You can check your sketch against, say, a Python plot.\n\n\nExercise 16.2 Let \\(f : (0,+\\infty) \\to \\mathbb{R}^2\\) be a path defined by \\[f(t) = [\\ln(t), t].\\] Sketch the curve traced by the path. You can check your sketch against, say, a Python plot.\n\n\nExercise 16.3 Let \\(f : [0,\\pi] \\to \\mathbb{R}^2\\) be given by \\(f(t)=[x(t),y(t)]\\), with \\(x(t) = 16\\sin(t)^3\\) and \\(y(t) = 13\\cos(t) - 5\\cos(2t) - 2\\cos(3t) - \\cos(4t)\\). Sketch the curve. Here, it is probably easiest to use Python or a similar tool.\n\n\n\nExercise 16.4 Let \\(f(x,y) = x^2 + y^2\\). Sketch the level curves \\(\\{(x,y) \\mid f(x,y) = n\\}\\), for \\(n = 1\\) and \\(n=2\\), \\(n=3\\), and \\(n=4\\).\n\n\nExercise 16.5 Let \\(f(x,y) = x + y + 2\\). Sketch the level curves where \\(f(x,y)=0\\), \\(2\\) and \\(4\\). Can you sketch the graph of \\(f\\)?\n\n\nExercise 16.6 Let \\(f(x,y) = x^2 - y^2\\). The graph is called the hyperbolic paraboloid, or a saddle. Sketch the graph. Sketch the level curves \\(\\{(x,y) \\mid f(x,y) = n\\}\\), for \\(n = 0\\) and \\(n=-1\\), \\(n=1\\). Make sure that you get all “pieces”.\n\n\nExercise 16.7 Write a Python program for sketching the level curves in the hyperbolic-paraboloid exercise above, but use more closely spaced constants. There are tools in Matplotlib that are handy.\n\n\nExercise 16.8 Adapt your program to draw level curves of \\((x,y)\\mapsto (x^2 + 3y^2)e^{1-x^2-y^2}\\).\n\n\n\n\n\n\n\n\n\n\nExercise 16.9 Write a Python program to draw the level surfaces of hydrogen orbitals, \\(\\{ (x,y,z)\\mid  \\psi(x,y,z) = c \\}\\). Choose interesting values of \\(c\\). It can be interesting to color code surfaces of opposite positive and negative \\(c\\).\n\n\nExercise 16.10 Write a program to visualize sections of the orbital graphs. For example, fix \\(y=y_\\text{const}\\) and plot \\((x,z)\\mapsto\\psi(x,y_\\text{const},z)\\).",
+    "text": "Exercise 14.1 Let \\(f : \\mathbb{R}\\to \\mathbb{R}^2\\) be a path defined by \\[f(t) = [r(t)\\cos(4t), r(t)\\sin(4t)], \\quad r(t) = \\exp(-t).\\] Sketch the curve traced by the path for \\(0 \\leq t \\leq 2\\pi\\). You can check your sketch against, say, a Python plot.\n\n\nExercise 14.2 Let \\(f : (0,+\\infty) \\to \\mathbb{R}^2\\) be a path defined by \\[f(t) = [\\ln(t), t].\\] Sketch the curve traced by the path. You can check your sketch against, say, a Python plot.\n\n\nExercise 14.3 Let \\(f : [0,\\pi] \\to \\mathbb{R}^2\\) be given by \\(f(t)=[x(t),y(t)]\\), with \\(x(t) = 16\\sin(t)^3\\) and \\(y(t) = 13\\cos(t) - 5\\cos(2t) - 2\\cos(3t) - \\cos(4t)\\). Sketch the curve. Here, it is probably easiest to use Python or a similar tool.\n\n\n\nExercise 14.4 Let \\(f(x,y) = x^2 + y^2\\). Sketch the level curves \\(\\{(x,y) \\mid f(x,y) = n\\}\\), for \\(n = 1\\) and \\(n=2\\), \\(n=3\\), and \\(n=4\\).\n\n\nExercise 14.5 Let \\(f(x,y) = x + y + 2\\). Sketch the level curves where \\(f(x,y)=0\\), \\(2\\) and \\(4\\). Can you sketch the graph of \\(f\\)?\n\n\nExercise 14.6 Let \\(f(x,y) = x^2 - y^2\\). The graph is called the hyperbolic paraboloid, or a saddle. Sketch the graph. Sketch the level curves \\(\\{(x,y) \\mid f(x,y) = n\\}\\), for \\(n = 0\\) and \\(n=-1\\), \\(n=1\\). Make sure that you get all “pieces”.\n\n\nExercise 14.7 Write a Python program for sketching the level curves in the hyperbolic-paraboloid exercise above, but use more closely spaced constants. There are tools in Matplotlib that are handy.\n\n\nExercise 14.8 Adapt your program to draw level curves of \\((x,y)\\mapsto (x^2 + 3y^2)e^{1-x^2-y^2}\\).\n\n\n\n\n\n\n\n\n\n\nExercise 14.9 Write a Python program to draw the level surfaces of hydrogen orbitals, \\(\\{ (x,y,z)\\mid  \\psi(x,y,z) = c \\}\\). Choose interesting values of \\(c\\). It can be interesting to color code surfaces of opposite positive and negative \\(c\\).\n\n\nExercise 14.10 Write a program to visualize sections of the orbital graphs. For example, fix \\(y=y_\\text{const}\\) and plot \\((x,z)\\mapsto\\psi(x,y_\\text{const},z)\\).",
     "crumbs": [
       "Multivariable calculus",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Visualizing functions</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualizing functions</span>"
     ]
   },
   {
     "objectID": "chapters/continuity-and-differentiability.html",
     "href": "chapters/continuity-and-differentiability.html",
-    "title": "17  Continuity and differentiability",
+    "title": "15  Continuity and differentiability",
     "section": "",
-    "text": "17.1 Exercises\nLimits define continuity, while partial derivatives describe local change for functions of several variables.",
+    "text": "15.1 Exercises\nLimits define continuity, while partial derivatives describe local change for functions of several variables.",
     "crumbs": [
       "Multivariable calculus",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Continuity and differentiability</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Continuity and differentiability</span>"
     ]
   },
   {
     "objectID": "chapters/continuity-and-differentiability.html#exercises",
     "href": "chapters/continuity-and-differentiability.html#exercises",
-    "title": "17  Continuity and differentiability",
+    "title": "15  Continuity and differentiability",
     "section": "",
-    "text": "17.1.1 Continuity\n\nExercise 17.1 Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be given by \\[f(x) = \\begin{cases} 1 & x &gt; 0 \\\\\n        -1 & x \\leq 0 \\end{cases}\\] For which \\(x \\in \\mathbb{R}\\) does the limit \\[\\lim_{h \\to 0} f(x + h)\\] not exist? Why?\n\n\nExercise 17.2 Show that any polynomial \\(p:\\mathbb{R}\\to\\mathbb{R}\\) is continuous, by using the theorem on properties of continuous functions.\n\n\nExercise 17.3 (Marsden and Tromba) Consider the function \\[f(x,y) = \\frac{\\sin(x^2 + y^2)}{x^2 + y^2}.\\] This function is defined on \\(\\mathbb{R}^2 \\setminus \\{(0,0)\\}\\). Determine whether \\(f(x,y)\\) approaches some value as \\((x,y)\\to(0,0)\\). What is this value?\n\n\nExercise 17.4 (Marsden and Tromba) Does \\(\\lim_{(x,y)\\to (0,0)} x^2/(x^2+y^2)\\) exist? If you want, plotting the function can help.\n\n\nExercise 17.5 (Marsden and Tromba) Prove that \\(\\lim_{(x,y)\\to(0,0)} 2x^2y/(x^2+y^2) = 0\\) using an \\(\\epsilon\\)-\\(\\delta\\) argument.\n\n\n\n17.1.2 Differentiability\n\nExercise 17.6 Compute the partial derivatives of \\[f(x,y) =  \\frac{xy}{(x^2 + y^2)^{1/2}}.\\]",
+    "text": "15.1.1 Continuity\n\nExercise 15.1 Let \\(f:\\mathbb{R}\\to\\mathbb{R}\\) be given by \\[f(x) = \\begin{cases} 1 & x &gt; 0 \\\\\n        -1 & x \\leq 0 \\end{cases}\\] For which \\(x \\in \\mathbb{R}\\) does the limit \\[\\lim_{h \\to 0} f(x + h)\\] not exist? Why?\n\n\nExercise 15.2 Show that any polynomial \\(p:\\mathbb{R}\\to\\mathbb{R}\\) is continuous, by using the theorem on properties of continuous functions.\n\n\nExercise 15.3 (Marsden and Tromba) Consider the function \\[f(x,y) = \\frac{\\sin(x^2 + y^2)}{x^2 + y^2}.\\] This function is defined on \\(\\mathbb{R}^2 \\setminus \\{(0,0)\\}\\). Determine whether \\(f(x,y)\\) approaches some value as \\((x,y)\\to(0,0)\\). What is this value?\n\n\nExercise 15.4 (Marsden and Tromba) Does \\(\\lim_{(x,y)\\to (0,0)} x^2/(x^2+y^2)\\) exist? If you want, plotting the function can help.\n\n\nExercise 15.5 (Marsden and Tromba) Prove that \\(\\lim_{(x,y)\\to(0,0)} 2x^2y/(x^2+y^2) = 0\\) using an \\(\\epsilon\\)-\\(\\delta\\) argument.\n\n\n\n15.1.2 Differentiability\n\nExercise 15.6 Compute the partial derivatives of \\[f(x,y) =  \\frac{xy}{(x^2 + y^2)^{1/2}}.\\]",
     "crumbs": [
       "Multivariable calculus",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Continuity and differentiability</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Continuity and differentiability</span>"
     ]
   },
   {
     "objectID": "chapters/matrix-exponentials-and-commutators.html",
     "href": "chapters/matrix-exponentials-and-commutators.html",
-    "title": "18  Matrix exponentials and commutators",
+    "title": "16  Matrix exponentials and commutators",
     "section": "",
-    "text": "18.1 Exercises\nPower series define matrix exponentials. Differentiating products of exponentials produces nested commutators.\nConsider the matrix-valued function \\[f(t) = e^{-tA} B e^{tA},\\] where \\(A\\) and \\(B\\) are square matrices. The matrix exponential is defined in terms of the Taylor series, \\[\\exp(X) = \\mathbf{1} + X + \\frac{1}{2!} X^2 + \\frac{1}{3!} X^3 + \\cdots,\\] which is convergent. It is a fact that if \\(XY-YX=[X,Y]=0\\) (commuting matrices) then \\(\\exp(X+Y) = \\exp(X) \\exp(Y)\\), by the same proof as for the exponential function over a field \\(\\mathbb{F}\\).",
+    "text": "16.1 Exercises\nPower series define matrix exponentials. Differentiating products of exponentials produces nested commutators.\nConsider the matrix-valued function \\[f(t) = e^{-tA} B e^{tA},\\] where \\(A\\) and \\(B\\) are square matrices. The matrix exponential is defined in terms of the Taylor series, \\[\\exp(X) = \\mathbf{1} + X + \\frac{1}{2!} X^2 + \\frac{1}{3!} X^3 + \\cdots,\\] which is convergent. It is a fact that if \\(XY-YX=[X,Y]=0\\) (commuting matrices) then \\(\\exp(X+Y) = \\exp(X) \\exp(Y)\\), by the same proof as for the exponential function over a field \\(\\mathbb{F}\\).",
     "crumbs": [
       "Series and matrix functions",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Matrix exponentials and commutators</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Matrix exponentials and commutators</span>"
     ]
   },
   {
     "objectID": "chapters/matrix-exponentials-and-commutators.html#exercises",
     "href": "chapters/matrix-exponentials-and-commutators.html#exercises",
-    "title": "18  Matrix exponentials and commutators",
+    "title": "16  Matrix exponentials and commutators",
     "section": "",
-    "text": "Exercise 18.1 Explain why we may view \\(f\\) as a vector-valued function\n\n\nExercise 18.2 Show that \\(t \\mapsto e^{tA}\\) is differentiable.\n\n\nExercise 18.3 Show that \\(f\\) is differentiable. Compute its derivatives to arbitrary order",
+    "text": "Exercise 16.1 Explain why we may view \\(f\\) as a vector-valued function\n\n\nExercise 16.2 Show that \\(t \\mapsto e^{tA}\\) is differentiable.\n\n\nExercise 16.3 Show that \\(f\\) is differentiable. Compute its derivatives to arbitrary order",
     "crumbs": [
       "Series and matrix functions",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Matrix exponentials and commutators</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Matrix exponentials and commutators</span>"
     ]
   },
   {
     "objectID": "chapters/complex-arithmetic.html",
     "href": "chapters/complex-arithmetic.html",
-    "title": "19  Complex arithmetic and geometry",
+    "title": "17  Complex arithmetic and geometry",
     "section": "",
-    "text": "19.1 Exercises\nCartesian and polar forms connect complex arithmetic with plane geometry, rotations, dot products, and cross products.",
+    "text": "17.1 Exercises\nCartesian and polar forms connect complex arithmetic with plane geometry, rotations, dot products, and cross products.",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Complex arithmetic and geometry</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Complex arithmetic and geometry</span>"
     ]
   },
   {
     "objectID": "chapters/complex-arithmetic.html#exercises",
     "href": "chapters/complex-arithmetic.html#exercises",
-    "title": "19  Complex arithmetic and geometry",
+    "title": "17  Complex arithmetic and geometry",
     "section": "",
-    "text": "19.1.1 Complex numbers\n\nExercise 19.1 Let \\(z = x + \\mathrm{i}y \\in \\mathbb{C}\\), and compute the real and imaginary parts of \\(z^2\\), \\(z^3\\), and \\(z^4\\), as functions of \\(x\\) and \\(y\\).\n\n\nExercise 19.2 Compute a closed-form expression for the real and imaginary parts of \\(z^n\\).\n\n\nExercise 19.3 Compute closed-form expression for \\(z^{-1}\\), exhibiting the real and imaginary parts as functions of \\(x\\) and \\(y\\). (Assuming \\(z\\neq 0\\)). Try to compute closed-form expressions of \\(z^{-2}\\) and \\(z^n\\) as well.\n\n\nExercise 19.4 A complex number \\(z = x + \\mathrm{i}y\\) can be written in polar form, \\[x = r \\cos(\\theta), \\quad y = r \\sin(\\theta).\\] Write down the rule for \\(z^n = R\\cos \\phi + \\mathrm{i}R\\sin\\phi\\) using angle \\(\\theta\\) and modulus \\(r\\).\n\n\nExercise 19.5 Consider the polynomial equation \\(f(z) = z^3 + 1 = 0\\). Find all the roots in the complex plane using polar coordinates. Sketch the roots in a coordinate system.\n\n\n\n19.1.2 Basic calculations\n\n\n\n\n\n\nFigure 19.1: The parallelogram rule. (From Butkov.)\n\n\n\n\nExercise 19.6 Let \\(z = x + \\mathrm{i}y \\in \\mathbb{C}\\). Illustrate the addition \\(w = z + \\bar{z}\\) in a coordinate system using the parallelogram rule.\n\n\nExercise 19.7 Recall our earlier exercise, where \\(\\mathbb{C}\\) was regarded as the real vector space \\(\\mathbb{R}^2\\). Let \\(z_i= x_i + \\mathrm{i}y_i\\), and denote the corresponding vectors in \\(\\mathbb{R}^2\\) by \\(\\mathbf{v}_i\\). Show that \\[\\left\\langle\\mathbf{v}_1,\\mathbf{v}_2\\right\\rangle = \\Re (\\overline{z_1} z_2) = \\Re (z_1 \\overline{z}_2).\\]\n\n\nExercise 19.8 Another product in \\(\\mathbb{R}^2\\) (and indeed \\(\\mathbb{R}^3\\)) is the cross product: \\[\\mathbf{v}_1\\times \\mathbf{v}_2 = \\begin{vmatrix} v_{11} & v_{12} \\\\ v_{21} & v_{22} \\end{vmatrix},\\] the matrix determinant. Show that \\[\\mathbf{v}_1 \\times \\mathbf{v}_2 = \\Im (\\overline{z_1} z_2) = -\\Im (z_1 \\overline{z}_2).\\]\n\n\nExercise 19.9 Show that the function \\(z \\mapsto \\mathrm{i}z\\) is a counterclockwise rotation by \\(\\pi/2\\). Find the function that performs a clockwise rotation by the same angle.",
+    "text": "17.1.1 Complex numbers\n\nExercise 17.1 Let \\(z = x + \\mathrm{i}y \\in \\mathbb{C}\\), and compute the real and imaginary parts of \\(z^2\\), \\(z^3\\), and \\(z^4\\), as functions of \\(x\\) and \\(y\\).\n\n\nExercise 17.2 Compute a closed-form expression for the real and imaginary parts of \\(z^n\\).\n\n\nExercise 17.3 Compute closed-form expression for \\(z^{-1}\\), exhibiting the real and imaginary parts as functions of \\(x\\) and \\(y\\). (Assuming \\(z\\neq 0\\)). Try to compute closed-form expressions of \\(z^{-2}\\) and \\(z^n\\) as well.\n\n\nExercise 17.4 A complex number \\(z = x + \\mathrm{i}y\\) can be written in polar form, \\[x = r \\cos(\\theta), \\quad y = r \\sin(\\theta).\\] Write down the rule for \\(z^n = R\\cos \\phi + \\mathrm{i}R\\sin\\phi\\) using angle \\(\\theta\\) and modulus \\(r\\).\n\n\nExercise 17.5 Consider the polynomial equation \\(f(z) = z^3 + 1 = 0\\). Find all the roots in the complex plane using polar coordinates. Sketch the roots in a coordinate system.\n\n\n\n17.1.2 Basic calculations\n\n\n\n\n\n\nFigure 17.1: The parallelogram rule. (From Butkov.)\n\n\n\n\nExercise 17.6 Let \\(z = x + \\mathrm{i}y \\in \\mathbb{C}\\). Illustrate the addition \\(w = z + \\bar{z}\\) in a coordinate system using the parallelogram rule.\n\n\nExercise 17.7 Recall our earlier exercise, where \\(\\mathbb{C}\\) was regarded as the real vector space \\(\\mathbb{R}^2\\). Let \\(z_i= x_i + \\mathrm{i}y_i\\), and denote the corresponding vectors in \\(\\mathbb{R}^2\\) by \\(\\mathbf{v}_i\\). Show that \\[\\left\\langle\\mathbf{v}_1,\\mathbf{v}_2\\right\\rangle = \\Re (\\overline{z_1} z_2) = \\Re (z_1 \\overline{z}_2).\\]\n\n\nExercise 17.8 Another product in \\(\\mathbb{R}^2\\) (and indeed \\(\\mathbb{R}^3\\)) is the cross product: \\[\\mathbf{v}_1\\times \\mathbf{v}_2 = \\begin{vmatrix} v_{11} & v_{12} \\\\ v_{21} & v_{22} \\end{vmatrix},\\] the matrix determinant. Show that \\[\\mathbf{v}_1 \\times \\mathbf{v}_2 = \\Im (\\overline{z_1} z_2) = -\\Im (z_1 \\overline{z}_2).\\]\n\n\nExercise 17.9 Show that the function \\(z \\mapsto \\mathrm{i}z\\) is a counterclockwise rotation by \\(\\pi/2\\). Find the function that performs a clockwise rotation by the same angle.",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Complex arithmetic and geometry</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Complex arithmetic and geometry</span>"
     ]
   },
   {
     "objectID": "chapters/complex-sets.html",
     "href": "chapters/complex-sets.html",
-    "title": "20  Subsets of the complex plane",
+    "title": "18  Subsets of the complex plane",
     "section": "",
-    "text": "20.1 Exercises\nThe modulus and real and imaginary parts describe curves and regions in the complex plane.\nVisualize the following subsets of \\(\\mathbb{C}\\). Decide which sets are open, closed, or neither.",
+    "text": "18.1 Exercises\nThe modulus and real and imaginary parts describe curves and regions in the complex plane.\nVisualize the following subsets of \\(\\mathbb{C}\\). Decide which sets are open, closed, or neither.",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Subsets of the complex plane</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Subsets of the complex plane</span>"
     ]
   },
   {
     "objectID": "chapters/complex-sets.html#exercises",
     "href": "chapters/complex-sets.html#exercises",
-    "title": "20  Subsets of the complex plane",
+    "title": "18  Subsets of the complex plane",
     "section": "",
-    "text": "Exercise 20.1 \\(\\{ z \\mid |z-1| = 1 \\}\\)\n\n\nExercise 20.2 \\(\\{ z \\mid |\\mathrm{i}z-1| &lt; 1 \\}\\)\n\n\nExercise 20.3 \\(\\{ z \\mid |z-\\mathrm{i}| + |z + \\mathrm{i}| &lt; 4 \\}\\)\n\n\nExercise 20.4 \\(\\{ z^2 \\mid |z - \\mathrm{i}| = 1 \\}\\)\n\n\nExercise 20.5 \\(\\{ z \\mid \\Re(e^{\\mathrm{i}\\pi/2} z) &gt; 0 \\}\\)\n\n\nExercise 20.6 \\(\\{ z \\mid \\Im(z^2) &gt; 0 \\}\\)",
+    "text": "Exercise 18.1 \\(\\{ z \\mid |z-1| = 1 \\}\\)\n\n\nExercise 18.2 \\(\\{ z \\mid |\\mathrm{i}z-1| &lt; 1 \\}\\)\n\n\nExercise 18.3 \\(\\{ z \\mid |z-\\mathrm{i}| + |z + \\mathrm{i}| &lt; 4 \\}\\)\n\n\nExercise 18.4 \\(\\{ z^2 \\mid |z - \\mathrm{i}| = 1 \\}\\)\n\n\nExercise 18.5 \\(\\{ z \\mid \\Re(e^{\\mathrm{i}\\pi/2} z) &gt; 0 \\}\\)\n\n\nExercise 18.6 \\(\\{ z \\mid \\Im(z^2) &gt; 0 \\}\\)",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Subsets of the complex plane</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Subsets of the complex plane</span>"
     ]
   },
   {
     "objectID": "chapters/complex-exponential.html",
     "href": "chapters/complex-exponential.html",
-    "title": "21  The complex exponential",
+    "title": "19  The complex exponential",
     "section": "",
-    "text": "21.1 Exercises\nThe functional equation for the exponential and the Cauchy–Riemann equations determine the complex exponential.\nIn this section, we give some relatively easy exercises to illustrate the important concepts of complex analytic functions.\nIn this exercise, we derive the complex exponential function. The starting point is the real exponential function, which is the unique function \\(f(x) = \\exp(x)\\) that satisfies \\[f(x_1 + x_2) = f(x_1)f(x_2), \\quad f(0) = 1.\\] We desire to generalize \\(\\exp(x)\\) to the complex plane, so that \\(\\exp(x + 0\\mathrm{i}) = \\exp(x) \\in \\mathbb{R}\\).\nTo avoid confusion, we call this unknown function \\(f : \\mathbb{C}\\to \\mathbb{C}\\).",
+    "text": "19.1 Exercises\nThe functional equation for the exponential and the Cauchy–Riemann equations determine the complex exponential.\nIn this section, we give some relatively easy exercises to illustrate the important concepts of complex analytic functions.\nIn this exercise, we derive the complex exponential function. The starting point is the real exponential function, which is the unique function \\(f(x) = \\exp(x)\\) that satisfies \\[f(x_1 + x_2) = f(x_1)f(x_2), \\quad f(0) = 1.\\] We desire to generalize \\(\\exp(x)\\) to the complex plane, so that \\(\\exp(x + 0\\mathrm{i}) = \\exp(x) \\in \\mathbb{R}\\).\nTo avoid confusion, we call this unknown function \\(f : \\mathbb{C}\\to \\mathbb{C}\\).",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>The complex exponential</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>The complex exponential</span>"
     ]
   },
   {
     "objectID": "chapters/complex-exponential.html#exercises",
     "href": "chapters/complex-exponential.html#exercises",
-    "title": "21  The complex exponential",
+    "title": "19  The complex exponential",
     "section": "",
-    "text": "Exercise 21.1 Show that \\(f(x + \\mathrm{i}y) = \\exp(x) f(\\mathrm{i}y)\\). (Thus, we need to determine \\(f(\\mathrm{i}y)\\).)\n\n\nExercise 21.2 We set \\(f(\\mathrm{i}y) = A(y) + \\mathrm{i}B(y)\\). Show that \\[A(y) =  B'(y), \\quad B(y) = - A'(y),\\] and hence that \\(A''(y) = -A(y)\\). Hint: Cauchy–Riemann.\n\n\nExercise 21.3 The general solution to the ODE \\(A'' = -A\\) is \\[A(y) = \\alpha \\cos(y) + \\beta\\sin(y),\\] where \\(\\alpha\\) and \\(\\beta\\) are constants to be determined. Show that \\(\\alpha = 1\\) and \\(\\beta = 0\\) are the only constants compatible with \\(f(z)\\) being a generalization of the real exponential function.\n\n\nExercise 21.4 Conclude that \\[f(x + \\mathrm{i}y) = e^x(\\cos y + \\mathrm{i}\\sin y)\\]\n\n\nExercise 21.5 Show that \\((\\exp(z))' = \\exp(z)\\), using Cauchy–Riemann, and that \\(\\exp(z)\\) is everywhere analytic.\n\n\nExercise 21.6 Show that the equation \\[\\exp(z) = w\\] has infinitely many solutions for any \\(w\\neq 0\\).\n\n\nExercise 21.7 Show that \\(\\exp(z) \\neq 0\\).",
+    "text": "Exercise 19.1 Show that \\(f(x + \\mathrm{i}y) = \\exp(x) f(\\mathrm{i}y)\\). (Thus, we need to determine \\(f(\\mathrm{i}y)\\).)\n\n\nExercise 19.2 We set \\(f(\\mathrm{i}y) = A(y) + \\mathrm{i}B(y)\\). Show that \\[A(y) =  B'(y), \\quad B(y) = - A'(y),\\] and hence that \\(A''(y) = -A(y)\\). Hint: Cauchy–Riemann.\n\n\nExercise 19.3 The general solution to the ODE \\(A'' = -A\\) is \\[A(y) = \\alpha \\cos(y) + \\beta\\sin(y),\\] where \\(\\alpha\\) and \\(\\beta\\) are constants to be determined. Show that \\(\\alpha = 1\\) and \\(\\beta = 0\\) are the only constants compatible with \\(f(z)\\) being a generalization of the real exponential function.\n\n\nExercise 19.4 Conclude that \\[f(x + \\mathrm{i}y) = e^x(\\cos y + \\mathrm{i}\\sin y)\\]\n\n\nExercise 19.5 Show that \\((\\exp(z))' = \\exp(z)\\), using Cauchy–Riemann, and that \\(\\exp(z)\\) is everywhere analytic.\n\n\nExercise 19.6 Show that the equation \\[\\exp(z) = w\\] has infinitely many solutions for any \\(w\\neq 0\\).\n\n\nExercise 19.7 Show that \\(\\exp(z) \\neq 0\\).",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>The complex exponential</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>The complex exponential</span>"
     ]
   },
   {
     "objectID": "chapters/complex-power-series.html",
     "href": "chapters/complex-power-series.html",
-    "title": "22  Complex power series",
+    "title": "20  Complex power series",
     "section": "",
-    "text": "22.1 Exercises\nGeometric and exponential series give power-series representations of elementary complex functions.",
+    "text": "20.1 Exercises\nGeometric and exponential series give power-series representations of elementary complex functions.",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complex power series</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Complex power series</span>"
     ]
   },
   {
     "objectID": "chapters/complex-power-series.html#exercises",
     "href": "chapters/complex-power-series.html#exercises",
-    "title": "22  Complex power series",
+    "title": "20  Complex power series",
     "section": "",
-    "text": "Exercise 22.1 Consider the geometric series \\[\\sum_{n=0}^\\infty z^n  = 1 + z + z^2 + \\ldots \\longrightarrow \\frac{1}{1-z}.\\] Show that the \\(N\\)th partial sum is\n\\[\n\\sum_{n=0}^{N}z^n=\\frac{1-z^{N+1}}{1-z}.\n\\]\nPolynomial long division may be useful.\n\n\nExercise 22.2 Find an upper bound for \\(|z|\\) such that the partial sum converges to \\(1/(1-z)\\).\n\n\nExercise 22.3 The Taylor series for the exponential function is \\[\\sum_{n=0}^\\infty \\frac{1}{n!} z^n.\\] Using the definition of the complex exponential, find the Taylor series for \\(\\cos(x)\\) and \\(\\sin(x)\\), for \\(x\\in\\mathbb{R}\\).\n\n\nExercise 22.4 Make plots of the partial sums of the sine and cosine Taylor series to verify your result.\n\n\nExercise 22.5 Find the Taylor series for the function \\(f(z) = (e^z - 1)/z\\)\n\n\nExercise 22.6 Find the Taylor series for the function \\(f(z) = \\sin(z)/z\\) for \\(z\\neq 0\\) and \\(f(0) = 1\\).",
+    "text": "Exercise 20.1 Consider the geometric series \\[\\sum_{n=0}^\\infty z^n  = 1 + z + z^2 + \\ldots \\longrightarrow \\frac{1}{1-z}.\\] Show that the \\(N\\)th partial sum is\n\\[\n\\sum_{n=0}^{N}z^n=\\frac{1-z^{N+1}}{1-z}.\n\\]\nPolynomial long division may be useful.\n\n\nExercise 20.2 Find an upper bound for \\(|z|\\) such that the partial sum converges to \\(1/(1-z)\\).\n\n\nExercise 20.3 The Taylor series for the exponential function is \\[\\sum_{n=0}^\\infty \\frac{1}{n!} z^n.\\] Using the definition of the complex exponential, find the Taylor series for \\(\\cos(x)\\) and \\(\\sin(x)\\), for \\(x\\in\\mathbb{R}\\).\n\n\nExercise 20.4 Make plots of the partial sums of the sine and cosine Taylor series to verify your result.\n\n\nExercise 20.5 Find the Taylor series for the function \\(f(z) = (e^z - 1)/z\\)\n\n\nExercise 20.6 Find the Taylor series for the function \\(f(z) = \\sin(z)/z\\) for \\(z\\neq 0\\) and \\(f(0) = 1\\).",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Complex power series</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Complex power series</span>"
     ]
   },
   {
     "objectID": "chapters/singularities-and-contour-integrals.html",
     "href": "chapters/singularities-and-contour-integrals.html",
-    "title": "23  Singularities and contour integrals",
+    "title": "21  Singularities and contour integrals",
     "section": "",
-    "text": "23.1 Exercises\nLaurent series classify isolated singularities and determine contour integrals around poles.",
+    "text": "21.1 Exercises\nLaurent series classify isolated singularities and determine contour integrals around poles.",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Singularities and contour integrals</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Singularities and contour integrals</span>"
     ]
   },
   {
     "objectID": "chapters/singularities-and-contour-integrals.html#exercises",
     "href": "chapters/singularities-and-contour-integrals.html#exercises",
-    "title": "23  Singularities and contour integrals",
+    "title": "21  Singularities and contour integrals",
     "section": "",
-    "text": "23.1.1 Singularities\n\nExercise 23.1 Consider the function \\(f(z) = \\frac{1}{z(z-1)}\\). How many poles does \\(f\\) have, and where are they? What are the order of the poles? Can you write down the Laurent series of \\(f\\) around \\(z=0\\)?\n\n\nExercise 23.2 Does the function \\(f(z) = 1/\\sin(z)\\) have a pole? Where? What order?\n\n\nExercise 23.3 Find the singularities of \\(f(z) = e^{-1/(z-1)^2}\\).\n\n\n\n23.1.2 Line integrals\nLet\n\\[\nf(z)=\\frac{1}{z^3-(2+\\mathrm{i})z^2+(1+2\\mathrm{i})z-\\mathrm{i}}.\n\\]\n\nExercise 23.4 Let \\(\\Gamma_\\epsilon(w)\\) be the simple closed curve defined by the counter-clockwise border of the \\(\\epsilon\\)-ball \\(B_\\epsilon(w)\\). Write down a parameterization (a path) for this curve.\n\n\nExercise 23.5 Identify the poles \\(P = \\{w_1, w_2, \\cdots \\}\\) of \\(f(z)\\) and their order. Hint: A zero of the denominator is \\(z = \\mathrm{i}\\).\n\n\nExercise 23.6 What is the value of \\[\\oint_{\\Gamma_\\epsilon(0)} f(z)\\, \\mathrm{d}z\\] for \\(\\epsilon = 1/2\\)?\n\n\nExercise 23.7 Find the value of the line integrals \\[\\oint_{\\Gamma_\\epsilon(w_i)} f(z) \\, \\mathrm{d}z\\] for \\(\\epsilon=1/2\\). Hint: Do not attempt the integral directly; compute the relevant Laurent coefficient. It can be useful to use the Taylor expansion \\[\\frac{1}{a - z} = \\frac{1}{a} \\frac{1}{1 - z/a} = \\frac{1}{a} \\sum_{n=0}^\\infty (z/a)^n.\\]",
+    "text": "21.1.1 Singularities\n\nExercise 21.1 Consider the function \\(f(z) = \\frac{1}{z(z-1)}\\). How many poles does \\(f\\) have, and where are they? What are the order of the poles? Can you write down the Laurent series of \\(f\\) around \\(z=0\\)?\n\n\nExercise 21.2 Does the function \\(f(z) = 1/\\sin(z)\\) have a pole? Where? What order?\n\n\nExercise 21.3 Find the singularities of \\(f(z) = e^{-1/(z-1)^2}\\).\n\n\n\n21.1.2 Line integrals\nLet\n\\[\nf(z)=\\frac{1}{z^3-(2+\\mathrm{i})z^2+(1+2\\mathrm{i})z-\\mathrm{i}}.\n\\]\n\nExercise 21.4 Let \\(\\Gamma_\\epsilon(w)\\) be the simple closed curve defined by the counter-clockwise border of the \\(\\epsilon\\)-ball \\(B_\\epsilon(w)\\). Write down a parameterization (a path) for this curve.\n\n\nExercise 21.5 Identify the poles \\(P = \\{w_1, w_2, \\cdots \\}\\) of \\(f(z)\\) and their order. Hint: A zero of the denominator is \\(z = \\mathrm{i}\\).\n\n\nExercise 21.6 What is the value of \\[\\oint_{\\Gamma_\\epsilon(0)} f(z)\\, \\mathrm{d}z\\] for \\(\\epsilon = 1/2\\)?\n\n\nExercise 21.7 Find the value of the line integrals \\[\\oint_{\\Gamma_\\epsilon(w_i)} f(z) \\, \\mathrm{d}z\\] for \\(\\epsilon=1/2\\). Hint: Do not attempt the integral directly; compute the relevant Laurent coefficient. It can be useful to use the Taylor expansion \\[\\frac{1}{a - z} = \\frac{1}{a} \\frac{1}{1 - z/a} = \\frac{1}{a} \\sum_{n=0}^\\infty (z/a)^n.\\]",
     "crumbs": [
       "Complex numbers and complex analysis",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Singularities and contour integrals</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Singularities and contour integrals</span>"
     ]
   },
   {
     "objectID": "chapters/dual-numbers.html",
     "href": "chapters/dual-numbers.html",
-    "title": "24  Dual numbers and automatic differentiation",
+    "title": "22  Dual numbers and automatic differentiation",
     "section": "",
-    "text": "24.1 Exercises\nDual numbers adjoin a nonzero element \\(\\varepsilon\\) with \\(\\varepsilon^2=0\\), which encodes first derivatives algebraically.\nWe now consider the number system called the dual numbers, often written \\(\\mathbb{R}(\\varepsilon)\\). The dual numbers form an algebraic extension of \\(\\mathbb{R}\\) with a nonzero element \\(\\varepsilon\\) such that \\(\\varepsilon^2=0\\):\n\\[\n\\mathbb{R}(\\varepsilon)=\\{x+\\varepsilon y\\mid x,y\\in\\mathbb{R}\\}.\n\\]\nTheir construction resembles \\(\\mathbb{C}=\\mathbb{R}(\\mathrm{i})\\), but \\(\\mathrm{i}^2=-1\\) while \\(\\varepsilon^2=0\\). Dual numbers support automatic differentiation.",
+    "text": "22.1 Exercises\nDual numbers adjoin a nonzero element \\(\\varepsilon\\) with \\(\\varepsilon^2=0\\), which encodes first derivatives algebraically.\nWe now consider the number system called the dual numbers, often written \\(\\mathbb{R}(\\varepsilon)\\). The dual numbers form an algebraic extension of \\(\\mathbb{R}\\) with a nonzero element \\(\\varepsilon\\) such that \\(\\varepsilon^2=0\\):\n\\[\n\\mathbb{R}(\\varepsilon)=\\{x+\\varepsilon y\\mid x,y\\in\\mathbb{R}\\}.\n\\]\nTheir construction resembles \\(\\mathbb{C}=\\mathbb{R}(\\mathrm{i})\\), but \\(\\mathrm{i}^2=-1\\) while \\(\\varepsilon^2=0\\). Dual numbers support automatic differentiation.",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Dual numbers and automatic differentiation</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Dual numbers and automatic differentiation</span>"
     ]
   },
   {
     "objectID": "chapters/dual-numbers.html#exercises",
     "href": "chapters/dual-numbers.html#exercises",
-    "title": "24  Dual numbers and automatic differentiation",
+    "title": "22  Dual numbers and automatic differentiation",
     "section": "",
-    "text": "Exercise 24.1  \n\nCompute the multiplication law in terms of real and “dual” parts, i.e., \\(z_1z_2 = z = x + \\varepsilon y\\), and find \\(x\\) and \\(y\\). Compute the addition law for \\(z_1 + z_2\\).\nShow that \\(\\mathbb{R}(\\varepsilon)\\) is not a field.\nCompute the law for all positive powers of \\(z = x + \\varepsilon y\\), and for negative powers when \\(x\\neq0\\).\nConsider \\(z = x + \\varepsilon\\) and evaluate its positive powers, and its negative powers when \\(x\\neq0\\). How is each dual part related to the corresponding real part?\nLet \\(p(x)\\) be a real polynomial and extend it to dual arguments. Show that \\[p(x+\\varepsilon) = p(x) + \\varepsilon p'(x).\\]\nLet \\(q(x)\\) be a polynomial in negative powers of \\(x\\). Show, for \\(x\\neq0\\), that \\(q(x+\\varepsilon) = q(x) + \\varepsilon q'(x)\\).\nLet \\(p(x)\\) and \\(q(x)\\) be polynomials, and consider the rational function \\(f(x) = p(x)/q(x)\\). Where \\(q(x)\\neq0\\), extend the rational function to \\(\\mathbb{R}(\\varepsilon)\\) and prove that \\(f(x+\\varepsilon) = f(x) + \\varepsilon f'(x)\\).",
+    "text": "Exercise 22.1  \n\nCompute the multiplication law in terms of real and “dual” parts, i.e., \\(z_1z_2 = z = x + \\varepsilon y\\), and find \\(x\\) and \\(y\\). Compute the addition law for \\(z_1 + z_2\\).\nShow that \\(\\mathbb{R}(\\varepsilon)\\) is not a field.\nCompute the law for all positive powers of \\(z = x + \\varepsilon y\\), and for negative powers when \\(x\\neq0\\).\nConsider \\(z = x + \\varepsilon\\) and evaluate its positive powers, and its negative powers when \\(x\\neq0\\). How is each dual part related to the corresponding real part?\nLet \\(p(x)\\) be a real polynomial and extend it to dual arguments. Show that \\[p(x+\\varepsilon) = p(x) + \\varepsilon p'(x).\\]\nLet \\(q(x)\\) be a polynomial in negative powers of \\(x\\). Show, for \\(x\\neq0\\), that \\(q(x+\\varepsilon) = q(x) + \\varepsilon q'(x)\\).\nLet \\(p(x)\\) and \\(q(x)\\) be polynomials, and consider the rational function \\(f(x) = p(x)/q(x)\\). Where \\(q(x)\\neq0\\), extend the rational function to \\(\\mathbb{R}(\\varepsilon)\\) and prove that \\(f(x+\\varepsilon) = f(x) + \\varepsilon f'(x)\\).",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Dual numbers and automatic differentiation</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Dual numbers and automatic differentiation</span>"
     ]
   },
   {
     "objectID": "chapters/newtons-method.html",
     "href": "chapters/newtons-method.html",
-    "title": "25  Newton’s method",
+    "title": "23  Newton’s method",
     "section": "",
-    "text": "25.1 Exercises\nNewton’s method replaces a nonlinear system by its first-order Taylor approximation at each iteration.\nIn the next exercise, we derive the Newton–Raphson method for root finding.\nLet \\(f : \\Omega \\subset \\mathbb{R}^n \\to \\mathbb{R}^n\\) be a function of class \\(C^2\\). We seek \\(\\mathbf{x}\\in\\Omega\\) such that \\(f(\\mathbf{x})=0\\).\nAssume we have an initial guess \\(\\mathbf{x}_0\\in\\Omega\\).",
+    "text": "23.1 Exercises\nNewton’s method replaces a nonlinear system by its first-order Taylor approximation at each iteration.\nIn the next exercise, we derive the Newton–Raphson method for root finding.\nLet \\(f : \\Omega \\subset \\mathbb{R}^n \\to \\mathbb{R}^n\\) be a function of class \\(C^2\\). We seek \\(\\mathbf{x}\\in\\Omega\\) such that \\(f(\\mathbf{x})=0\\).\nAssume we have an initial guess \\(\\mathbf{x}_0\\in\\Omega\\).",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Newton's method</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Newton's method</span>"
     ]
   },
   {
     "objectID": "chapters/newtons-method.html#exercises",
     "href": "chapters/newtons-method.html#exercises",
-    "title": "25  Newton’s method",
+    "title": "23  Newton’s method",
     "section": "",
-    "text": "Exercise 25.1 Explain why the following polynomial is a good approximation to \\(f(\\mathbf{x})\\) near \\(\\mathbf{x}_0\\): \\[p(\\mathbf{x}) = f(\\mathbf{x}_0) + J(\\mathbf{x}-\\mathbf{x}_0), \\quad J = Df(\\mathbf{x}_0).\\]\n\n\nExercise 25.2 Newton’s method now finds a new guess \\(\\mathbf{x}_1\\) by finding the root of the Taylor polynomial, i.e., \\(p(\\mathbf{x}_1) = 0\\). Write down a formula for \\(\\mathbf{x}_1\\), assuming that the matrix \\(J\\) has an inverse.\n\n\nExercise 25.3 Suppose the true solution is \\(\\mathbf{x}_* \\in \\Omega\\), and assume that the error in \\(\\mathbf{x}_0\\) is sufficiently small. Find an estimate for the error of \\(\\mathbf{x}_1\\). Assuming that the error can be converted to significant digits \\(n\\), what is the number of significant digits in \\(\\mathbf{x}_1\\)? Hint: Look at the remainder term.\n\n\nExercise 25.4 Suppose successive iterations are performed. How many digits do you have after \\(k\\) iterations?\n\n\nExercise 25.5 Make a Python implementation of Newton’s method and test it on the following function: \\[f(x,y) = (e^x y^3 - 1, y^2 - \\sin(x) - 1).\\] It can be an idea to try and visualize the function. Two roots are: \\[\\{ (4.38277027, 0.23202192), \\; (0,1) \\}\\] Try different initial guesses \\(\\mathbf{x}_0\\), close to the roots and further away. How many iterations do you need to achieve machine precision for your guesses? Can you find more roots?",
+    "text": "Exercise 23.1 Explain why the following polynomial is a good approximation to \\(f(\\mathbf{x})\\) near \\(\\mathbf{x}_0\\): \\[p(\\mathbf{x}) = f(\\mathbf{x}_0) + J(\\mathbf{x}-\\mathbf{x}_0), \\quad J = Df(\\mathbf{x}_0).\\]\n\n\nExercise 23.2 Newton’s method now finds a new guess \\(\\mathbf{x}_1\\) by finding the root of the Taylor polynomial, i.e., \\(p(\\mathbf{x}_1) = 0\\). Write down a formula for \\(\\mathbf{x}_1\\), assuming that the matrix \\(J\\) has an inverse.\n\n\nExercise 23.3 Suppose the true solution is \\(\\mathbf{x}_* \\in \\Omega\\), and assume that the error in \\(\\mathbf{x}_0\\) is sufficiently small. Find an estimate for the error of \\(\\mathbf{x}_1\\). Assuming that the error can be converted to significant digits \\(n\\), what is the number of significant digits in \\(\\mathbf{x}_1\\)? Hint: Look at the remainder term.\n\n\nExercise 23.4 Suppose successive iterations are performed. How many digits do you have after \\(k\\) iterations?\n\n\nExercise 23.5 Make a Python implementation of Newton’s method and test it on the following function: \\[f(x,y) = (e^x y^3 - 1, y^2 - \\sin(x) - 1).\\] It can be an idea to try and visualize the function. Two roots are: \\[\\{ (4.38277027, 0.23202192), \\; (0,1) \\}\\] Try different initial guesses \\(\\mathbf{x}_0\\), close to the roots and further away. How many iterations do you need to achieve machine precision for your guesses? Can you find more roots?",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Newton's method</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Newton's method</span>"
     ]
   },
   {
     "objectID": "chapters/complex-step-differentiation.html",
     "href": "chapters/complex-step-differentiation.html",
-    "title": "26  Complex-step differentiation",
+    "title": "24  Complex-step differentiation",
     "section": "",
-    "text": "26.1 Exercises\nComplex-step differentiation estimates derivatives without the subtractive cancellation of a centered finite difference.\nLet \\(f(x)\\) be a real-valued function, assumed to be analytic near some \\(x\\), i.e., it agrees with its Taylor series in the vicinity of \\(x\\).",
+    "text": "24.1 Exercises\nComplex-step differentiation estimates derivatives without the subtractive cancellation of a centered finite difference.\nLet \\(f(x)\\) be a real-valued function, assumed to be analytic near some \\(x\\), i.e., it agrees with its Taylor series in the vicinity of \\(x\\).",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Complex-step differentiation</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Complex-step differentiation</span>"
     ]
   },
   {
     "objectID": "chapters/complex-step-differentiation.html#exercises",
     "href": "chapters/complex-step-differentiation.html#exercises",
-    "title": "26  Complex-step differentiation",
+    "title": "24  Complex-step differentiation",
     "section": "",
-    "text": "Exercise 26.1  \n\nExplain why there exists a complex analytic function near \\(x + 0\\mathrm{i}\\) that agrees with \\(f\\) on the real axis.\n\nA classical method for computing a numerical derivative of a \\(C^1\\) function is the finite difference approximation: \\[f'(x) \\approx \\delta_h f(x) := \\frac{f(x+h) - f(x-h)}{2h}.\\] The error is \\(\\mathcal{O}(h^2)\\). In the rest of the exercise, let \\(f\\) be given by \\[f(x) = \\exp(x),\\] and we wish to differentiate around \\(x=1\\).\n\nWrite a small program that uses standard double precision floating point arithmetic to compute the finite difference derivative for step lengths from the interval \\(h \\in [10^{-9}, 10^{-1}]\\).\nMake a plot of the absolute value of the error in the approximation as function of \\(h\\). Use log scales.\n\nThe complex step method utilizes complex analyticity to avoid the cancellation errors seen in the finite difference scheme. It relies on the function in question being implemented/implementable using complex arithmetic.\n\nShow that \\[f(x + \\mathrm{i}h) = f(x) + \\mathrm{i}h f'(x) - \\frac{1}{2}h^2 f''(x) - \\frac{\\mathrm{i}h^3}{6} f'''(x) + \\mathcal{O}(h^4).\\]\nSolve for \\(f'(x)\\), and show that \\[f'(x) = \\Im \\frac{f(x + \\mathrm{i}h)}{h} + \\mathcal{O}(h^2).\\] This is the complex step method.\nIn the plot from above, add a plot of the error of the complex step method. Compare.",
+    "text": "Exercise 24.1  \n\nExplain why there exists a complex analytic function near \\(x + 0\\mathrm{i}\\) that agrees with \\(f\\) on the real axis.\n\nA classical method for computing a numerical derivative of a \\(C^1\\) function is the finite difference approximation: \\[f'(x) \\approx \\delta_h f(x) := \\frac{f(x+h) - f(x-h)}{2h}.\\] The error is \\(\\mathcal{O}(h^2)\\). In the rest of the exercise, let \\(f\\) be given by \\[f(x) = \\exp(x),\\] and we wish to differentiate around \\(x=1\\).\n\nWrite a small program that uses standard double precision floating point arithmetic to compute the finite difference derivative for step lengths from the interval \\(h \\in [10^{-9}, 10^{-1}]\\).\nMake a plot of the absolute value of the error in the approximation as function of \\(h\\). Use log scales.\n\nThe complex step method utilizes complex analyticity to avoid the cancellation errors seen in the finite difference scheme. It relies on the function in question being implemented/implementable using complex arithmetic.\n\nShow that \\[f(x + \\mathrm{i}h) = f(x) + \\mathrm{i}h f'(x) - \\frac{1}{2}h^2 f''(x) - \\frac{\\mathrm{i}h^3}{6} f'''(x) + \\mathcal{O}(h^4).\\]\nSolve for \\(f'(x)\\), and show that \\[f'(x) = \\Im \\frac{f(x + \\mathrm{i}h)}{h} + \\mathcal{O}(h^2).\\] This is the complex step method.\nIn the plot from above, add a plot of the error of the complex step method. Compare.",
     "crumbs": [
       "Numerical methods",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Complex-step differentiation</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Complex-step differentiation</span>"
     ]
   }
 ]

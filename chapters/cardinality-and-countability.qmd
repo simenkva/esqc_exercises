@@ -12,7 +12,7 @@ The set $\mathbb{N}$ has an infinite number of elements. By definition, $|\mathb
 
 ## Exercises
 
-:::{#exr-recommended-cardinality-and-countability-explicitly-constructing-bijection}
+::: {#exr-cardinality-and-countability-explicitly-constructing-bijection .recommended topic="recommended"}
 
 Show that $|\mathbb{Z}|=\aleph_0$ by explicitly constructing a bijection $f : \mathbb{N}\to \mathbb{Z}$.
 
@@ -56,19 +56,19 @@ Show that $|[0,1[\times [0,1[| = |[0,1[|$, by constructing a one-to-one map. Hin
 
 ## Solutions
 
-### Solution to @exr-recommended-cardinality-and-countability-explicitly-constructing-bijection
+### Solution to @exr-cardinality-and-countability-explicitly-constructing-bijection {.unnumbered}
 
 We construct a map $f : \mathbb{N}\to \mathbb{Z}$. We let the even numbers in $\mathbb{N}$ map to positive numbers in $\mathbb{Z}$, and odd numbers in $\mathbb{N}$ to negative numbers. For every $n \in \mathbb{N}$, $$f(2n) = n, \quad f(2n+1) = -n-1.$$ We get $f(0) = 0$, $f(1) = -1$, $f(2) = 1$, $f(3) = -2$, etc.
 
-### Solution to @exr-cardinality-and-countability-hint-draw-picture-try-draw-line
+### Solution to @exr-cardinality-and-countability-hint-draw-picture-try-draw-line {.unnumbered}
 
 Draw a picture of $\mathbb{N}\times \mathbb{N}$ - a uniform grid. The line can be drawn in many ways, but the easiest is perhaps to connect $(0,0) - (0,1) - (1,0) - (2,0) - (1,1) - (0,2) - \ldots$
 
-### Solution to @exr-cardinality-and-countability-exercise
+### Solution to @exr-cardinality-and-countability-exercise {.unnumbered}
 
 Use that $x \in \mathbb{Q}$ is represented as a fraction, i.e., a point in $\mathbb{N}\times \mathbb{N}$. Actually, $x$ is an equivalence class, so some points in $\mathbb{N}\times \mathbb{N}$ are eliminated.
 
-### Solution to @exr-cardinality-and-countability-interval-has-same-cardinality-you-must
+### Solution to @exr-cardinality-and-countability-interval-has-same-cardinality-you-must {.unnumbered}
 
 One possible bijection is
 
@@ -78,13 +78,13 @@ $$
 
 Its inverse is $g(y)=y/(1+|y|)$ for $y\in\mathbb{R}$.
 
-### Solution to @exr-cardinality-and-countability-exercise-cardinality-would-if-could-write
+### Solution to @exr-cardinality-and-countability-exercise-cardinality-would-if-could-write {.unnumbered}
 
 The proof is called Cantor's diagonalization argument, and is used in several other important results. (For example, to prove that there is no Turing machine that can determine whether an arbitrary Turing machine stops.)
 
 Let the $k$th digit be different from the $k$th digit of number $k$ in the list. Then the real number thus constructed cannot be equal to any of the numbers in the list.
 
-### Solution to @exr-cardinality-and-countability-constructing-one-one-map-hint-use
+### Solution to @exr-cardinality-and-countability-constructing-one-one-map-hint-use {.unnumbered}
 
 Let every even-numbered decimal from $x$ be the decimal of $y_1$ and odd decimal the decimal of $y_2$, respectively. This maps decimal expansions $x$ onto pairs of decimal expansions $(y_1,y_2)$. Clearly, the inverse mapping can be created, too.
 

@@ -50,27 +50,27 @@ Find the Taylor series for the function $f(z) = \sin(z)/z$ for $z\neq 0$ and $f(
 
 ## Solutions
 
-### Solution to @exr-complex-power-series-consider-taylor-series-th-partial-sum
+### Solution to @exr-complex-power-series-consider-taylor-series-th-partial-sum {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-power-series-find-upper-bound-such-partial-sum
+### Solution to @exr-complex-power-series-find-upper-bound-such-partial-sum {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-power-series-taylor-series-exponential-function-definition-complex
+### Solution to @exr-complex-power-series-taylor-series-exponential-function-definition-complex {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-power-series-make-plots-partial-sums-sine-cosine
+### Solution to @exr-complex-power-series-make-plots-partial-sums-sine-cosine {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-power-series-find-taylor-series-function
+### Solution to @exr-complex-power-series-find-taylor-series-function {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-complex-power-series-find-taylor-series-function-2
+### Solution to @exr-complex-power-series-find-taylor-series-function-2 {.unnumbered}
 
 *The source does not supply a solution.*
 

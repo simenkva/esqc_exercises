@@ -13,13 +13,13 @@ We work in the space $V = \mathbb{R}^2$, plane vectors. We define two vectors, $
 
 :::
 
-:::{#exr-recommended-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate}
+::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate .recommended topic="recommended"}
 
 Let $\mathbf{v} = [2,2]^T$. Using Gaussian elimination, compute the coefficients $x_1$ and $x_2$ such that $$\mathbf{v} = x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2.$$ Illustrate this decomposition in the graph from the previous point, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.
 
 :::
 
-:::{#exr-recommended-vectors-and-matrices-person-walks-home-first-they-walk}
+::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk .recommended topic="recommended"}
 
 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.
 
@@ -45,13 +45,13 @@ A boat is sailing on the ocean, at a constant speed 20 km/h relative to the wate
 
 These exercises are to get practice with computing matrix-matrix products, and to get an intuitive feel for them.
 
-:::{#exr-recommended-vectors-and-matrices-matrix-products-between-pairs-these-matrices}
+::: {#exr-vectors-and-matrices-matrix-products-between-pairs-these-matrices .recommended topic="recommended"}
 
 Let $$A = \begin{bmatrix} 1 & 3 \\ 0 & -2 \end{bmatrix}, \quad B = \begin{bmatrix} 7 & -1 & 0 \\ 8 & 1 & -1 \end{bmatrix}, \quad C = \begin{bmatrix} 0 & -1 \\ 5 & 7 \\ 0 & 7 \end{bmatrix}$$ Which matrix products between pairs of these matrices are defined? Compute the products.
 
 :::
 
-:::{#exr-recommended-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action}
+::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action .recommended topic="recommended"}
 
 Let $A$ be the $n\times n$ matrix defined by $A_{i,i+1} = i^2$ for $1 \leq i < n$, and zero otherwise. Compute the action of $A$ and $A^T$ on the standard basis for $\mathbb{R}^n$. Compute the action of $A$ and $A^T$ on an arbitrary vector $\mathbf{x}\in \mathbb{R}^n$.
 
@@ -73,11 +73,11 @@ Show that each column of $C = AB$ is a linear combination of the columns of $A$ 
 
 ## Solutions
 
-### Solution to @exr-vectors-and-matrices-work-space-plane-vectors-define-two
+### Solution to @exr-vectors-and-matrices-work-space-plane-vectors-define-two {.unnumbered}
 
 Suppose we write $\mathbf{b}_1 x_1 + \mathbf{b}_2 x_2 = 0$. We must show that $x_1=x_2 = 0$ is the only solution. By adding the equations, we get $3 x1 = 0$, and then by insertion into the first equation $x_2 = 0$. Since we have 2 linearly independent vectors in $\mathbb{R}^2$, these form a basis.
 
-### Solution to @exr-recommended-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate
+### Solution to @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate {.unnumbered}
 
 The equation gives a linear system $$\begin{gathered}
     \begin{bmatrix}
@@ -87,11 +87,11 @@ The equation gives a linear system $$\begin{gathered}
 
 ![image](../figures/exercises/sol-fig1.png){width="6cm"}
 
-### Solution to @exr-recommended-vectors-and-matrices-person-walks-home-first-they-walk
+### Solution to @exr-vectors-and-matrices-person-walks-home-first-they-walk {.unnumbered}
 
 The first point is solved by simple vector addition. The second point is by computing the euclidean norm.
 
-### Solution to @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed
+### Solution to @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed {.unnumbered}
 
 Take east and north as the first and second coordinate directions. The boat's velocity relative to the water is
 
@@ -110,23 +110,23 @@ $$
 The drift speed is $\|\mathbf{u}\|$, and its direction follows from
 $\operatorname{atan2}(u_2,u_1)$.
 
-### Solution to @exr-vectors-and-matrices-robert-beezer-three-digit-number-has
+### Solution to @exr-vectors-and-matrices-robert-beezer-three-digit-number-has {.unnumbered}
 
 Let $a$ be the hundreds digit, $b$ the tens digit, and $c$ the ones digit. Then the first condition says that $b + c = 5$. The original number is $100a + 10b + c$, while the reversed number is $100c + 10b + a$. So the second condition is $792 = (100a + 10b + c) - (100c + 10b + a) = 99a - 99c$. So we arrive at the system of equations $b + c = 5$, $99a - 99c = 792$. By elementary row operations, we arrive at the equivalent system $a - c = 8$, $b + c = 5$. We can vary $c$ and obtain infinitely many solutions. However, $c$ must be a digit, restricting us to ten values $(0 - 9)$. Furthermore, if $c > 1$, then the first equation forces $a > 9$, an impossibility. Setting $c = 0$, yields $850$ as a solution, and setting $c = 1$ yields $941$ as another solution.
 
-### Solution to @exr-recommended-vectors-and-matrices-matrix-products-between-pairs-these-matrices
+### Solution to @exr-vectors-and-matrices-matrix-products-between-pairs-these-matrices {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-recommended-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action
+### Solution to @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-vectors-and-matrices-write-terms-column-vectors-prove-i
+### Solution to @exr-vectors-and-matrices-write-terms-column-vectors-prove-i {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined
+### Solution to @exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined {.unnumbered}
 
 *The source does not supply a solution.*
 

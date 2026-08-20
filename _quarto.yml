@@ -5,6 +5,7 @@ profile:
 
 project:
   type: book
+  pre-render: scripts/generate_recommendations.py
   output-dir: docs
   resources:
     - /figures/**
@@ -21,8 +22,8 @@ book:
     - index.qmd
     - part: "Exercise recommendations"
       chapters:
-        - chapters/recommendations-first-day.qmd
-        - chapters/recommendations-per-topic.qmd
+        - _generated/recommendations-first-day.qmd
+        - _generated/recommendations-per-topic.qmd
 
     - part: "Mathematical foundations"
       chapters:

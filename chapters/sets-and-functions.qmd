@@ -4,13 +4,13 @@ These exercises use elementary set notation, ordered pairs, Cartesian products, 
 
 ## Exercises
 
-:::{#exr-recommended-sets-and-functions-write-days-week-set}
+::: {#exr-sets-and-functions-write-days-week-set .recommended topic="recommended"}
 
 Write the days of the week as a set
 
 :::
 
-:::{#exr-recommended-sets-and-functions-write-five-first-natural-numbers-set}
+::: {#exr-sets-and-functions-write-five-first-natural-numbers-set .recommended topic="recommended"}
 
 Write the five first natural numbers using set notation as indicated in the lecture notes
 
@@ -58,7 +58,7 @@ De Morgan's laws are useful when discussing subsets $A,B$ of a larger set $X$. R
 
 - $(A \cap B)^\complement = A^\complement \cup B^\complement$.
 
-:::{#exr-recommended-sets-and-functions-draw-picture-representing-whole-sheet-overlapping}
+::: {#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping .recommended topic="recommended"}
 
 Draw a picture, representing $X$ as the whole sheet, $A$ and $B$ as overlapping shapes, e.g., circles. Label $A$, $B$, $A\cap B$, and $A \cup B$, making another drawing if necessary. Convince yourself that De Morgan's laws are correct.
 
@@ -80,11 +80,11 @@ The first two exercises should be accessible to everyone. The von Neumann repres
 
 The visual exercise on De Morgan's laws supports the later discussion of open sets and is recommended.
 
-### Solution to @exr-recommended-sets-and-functions-write-days-week-set
+### Solution to @exr-sets-and-functions-write-days-week-set {.unnumbered}
 
 $$U = \{ \text{Mandag, Tirsdag, Onsdag, Torsdag, Fredag, Lørdag, Søndag} \}$$
 
-### Solution to @exr-recommended-sets-and-functions-write-five-first-natural-numbers-set
+### Solution to @exr-sets-and-functions-write-five-first-natural-numbers-set {.unnumbered}
 
 Okay, so each number doubles in size. After ten numbers, we have on the order of 1000 characters per number. So the five first is enough.
 
@@ -100,31 +100,31 @@ $$
 \end{aligned}
 $$
 
-### Solution to @exr-sets-and-functions-ordered-pair-two-element-set-where
+### Solution to @exr-sets-and-functions-ordered-pair-two-element-set-where {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-nonnegative-rational-number-can-written-ordered
+### Solution to @exr-sets-and-functions-nonnegative-rational-number-can-written-ordered {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-cartesian-product-two-sets-write-down
+### Solution to @exr-sets-and-functions-cartesian-product-two-sets-write-down {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-similar-previous-exercise-write-down
+### Solution to @exr-sets-and-functions-similar-previous-exercise-write-down {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-function-one-set-another-set-rule
+### Solution to @exr-sets-and-functions-function-one-set-another-set-rule {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-recommended-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
+### Solution to @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-prove-de-morgan-s-laws-mathematically
+### Solution to @exr-sets-and-functions-prove-de-morgan-s-laws-mathematically {.unnumbered}
 
 Here is the proof of the first one: $x \in (A \cup B)^\complement$ iff $x \notin A \cup B$ iff $x\notin A$ and $x \notin B$ iff $x \in A^\complement$ and $x \in B^\complement$ iff $x \in A^\complement \cap B^\complement$.
 

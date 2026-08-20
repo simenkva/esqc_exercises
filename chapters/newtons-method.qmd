@@ -48,7 +48,7 @@ Make a Python implementation of Newton's method and test it on the following fun
 
 **Tutor note:** Newton--Raphson is an important nonlinear root-finding algorithm, although quantum-chemistry calculations may avoid a full Newton step because solving with the Jacobian is expensive. This exercise also develops Taylor approximations of vector-valued functions.
 
-### Solution to @exr-newtons-method-explain-why-following-polynomial-good-approximation
+### Solution to @exr-newtons-method-explain-why-following-polynomial-good-approximation {.unnumbered}
 
 For a $C^2$ function, Taylor's theorem gives
 
@@ -57,19 +57,19 @@ f(\mathbf{x})=f(\mathbf{x}_0)+Df(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)
 +\mathcal{O}(\|\mathbf{x}-\mathbf{x}_0\|^2).
 $$
 
-### Solution to @exr-newtons-method-newton-s-method-now-finds-new
+### Solution to @exr-newtons-method-newton-s-method-now-finds-new {.unnumbered}
 
 $$\mathbf{x}_1 = \mathbf{x}_0 - J^{-1} f(\mathbf{x}_0).$$
 
-### Solution to @exr-newtons-method-suppose-true-solution-assume-error-sufficiently
+### Solution to @exr-newtons-method-suppose-true-solution-assume-error-sufficiently {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-newtons-method-suppose-successive-iterations-performed-how-many
+### Solution to @exr-newtons-method-suppose-successive-iterations-performed-how-many {.unnumbered}
 
 *The source does not supply a solution.*
 
-### Solution to @exr-newtons-method-make-python-implementation-newton-s-method
+### Solution to @exr-newtons-method-make-python-implementation-newton-s-method {.unnumbered}
 
 *The source does not supply a solution.*
 

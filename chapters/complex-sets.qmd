@@ -6,7 +6,7 @@ Visualize the following subsets of $\mathbb{C}$. Decide which sets are open, clo
 
 ## Exercises
 
-:::{#exr-recommended-complex-sets-exercise}
+::: {#exr-complex-sets-exercise .recommended topic="recommended"}
 
 $\{ z \mid |z-1| = 1 \}$
 
@@ -46,27 +46,27 @@ $\{ z \mid \Im(z^2) > 0 \}$
 
 ## Solutions
 
-### Solution to @exr-recommended-complex-sets-exercise
+### Solution to @exr-complex-sets-exercise {.unnumbered}
 
 Square the equation and introduce $x$ and $y$ to get the equation for a circle, i.e., boundary of a circle. Alternatively just realize that the modulus $|w|$ is the distance from the origin.
 
-### Solution to @exr-complex-sets-exercise-2
+### Solution to @exr-complex-sets-exercise-2 {.unnumbered}
 
 Interior of a circle.
 
-### Solution to @exr-complex-sets-exercise-3
+### Solution to @exr-complex-sets-exercise-3 {.unnumbered}
 
 Ellipse with foci at $\pm \mathrm{i}$.
 
-### Solution to @exr-complex-sets-exercise-4
+### Solution to @exr-complex-sets-exercise-4 {.unnumbered}
 
 Parameterize the original circle by $z(t)=\mathrm{i}+e^{\mathrm{i}t}$, $0\leq t<2\pi$, and plot or analyze the image curve $z(t)^2$.
 
-### Solution to @exr-complex-sets-exercise-5
+### Solution to @exr-complex-sets-exercise-5 {.unnumbered}
 
 This is a half-plane.
 
-### Solution to @exr-complex-sets-exercise-6
+### Solution to @exr-complex-sets-exercise-6 {.unnumbered}
 
 *The source does not supply a solution.*
 

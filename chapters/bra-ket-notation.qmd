@@ -30,15 +30,15 @@ Show that $$\hat{S} = \sum_{ij} \left|i\right\rangle \left\langle{b}_i|{b}_j\rig
 
 I think it is important that the students try to relate bra-ket notation to more standard linear algebra notation.
 
-### Solution to @exr-bra-ket-notation-basis-basis-finite-dimensional-hilbert-space
+### Solution to @exr-bra-ket-notation-basis-basis-finite-dimensional-hilbert-space {.unnumbered}
 
 The domain is $\mathbb{C}^n$, and the range is $V$. It takes vectors in $\mathbb{C}^n$ and moves them to $V$.
 
-### Solution to @exr-bra-ket-notation-consider-can-you-interpret-expression-terms
+### Solution to @exr-bra-ket-notation-consider-can-you-interpret-expression-terms {.unnumbered}
 
 The components $x_i = \left\langle i|x\right\rangle$ are the expansion coefficients of $\left|\psi\right\rangle$ in the basis $B$.
 
-### Solution to @exr-bra-ket-notation-overlap-matrix-expressed-operator-find-expression
+### Solution to @exr-bra-ket-notation-overlap-matrix-expressed-operator-find-expression {.unnumbered}
 
 $\left|x\right\rangle = \hat{S}^{-1} \hat{B}^\dagger\left|\psi\right\rangle$.
 
