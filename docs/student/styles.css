@@ -36,3 +36,18 @@ body[data-bs-theme="dark"] .dark-invert canvas,
   margin-right: auto;
   margin-left: auto;
 }
+
+
+/* Add a horizontal rule between exercises. */
+
+div[id^="exr-"]::after,
+div[id^="exr-"]:not(
+  div[id^="exr-"] + div[id^="exr-"],
+  :is(h1, h2, h3, h4, h5, h6) + div[id^="exr-"]
+)::before {
+  content: "";
+  display: block;
+  width: 50%;
+  margin: 1.5em auto;
+  border-top: 1px solid;
+}
