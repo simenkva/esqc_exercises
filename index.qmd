@@ -1,0 +1,30 @@
+# Preface {.unnumbered}
+
+This is a stripped-down copy of the Physical Chemistry Quarto book, ready to use as the starting point for a new book or course compendium. The fonts, callouts, light and dark themes, and output settings are already in place.
+
+Replace this page with your own preface or course description. The title, author, cover, and chapter list live in `_quarto.yml`.
+
+:::learning-goals
+- Find the main layout and typography settings.
+- Render the book as HTML and EPUB.
+:::
+
+:::preparations
+Install [Quarto](https://quarto.org/) 1.9.38 or newer. The extensions and fonts are included in this folder.
+:::
+
+:::fact
+## A representative equation
+
+For a harmonic oscillator, the vibrational energies are
+
+$$
+E_\nu=\hbar\omega\left(\nu+\frac{1}{2}\right),
+\qquad
+\omega=\sqrt{\frac{k}{\mu}}.
+$$
+:::
+
+:::visualization
+Use this callout for a visualization, dataset, notebook, or another resource that students can explore alongside the text.
+:::

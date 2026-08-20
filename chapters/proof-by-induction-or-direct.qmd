@@ -1,0 +1,3 @@
+# Proof by induction (or direct)
+
+Content coming soon.
