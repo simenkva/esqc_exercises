@@ -10,7 +10,7 @@ book:
   subtitle: "2026 edition"
   author: "Simen Kvaal"
   date: last-modified
-  cover-image: figures/cover.png
+  cover-image: figures/cover-a5.png
   downloads: [epub]
   chapters:
     - index.qmd
@@ -83,7 +83,7 @@ format:
     toc: true
     toc-depth: 3
     css: epub_styles.css
-    cover-image: figures/cover.png
+    cover-image: figures/cover-a5.png
     epub-fonts:
       - fonts/RobotoCondensed-Regular.woff2
       - fonts/RobotoCondensed-Medium.woff2
