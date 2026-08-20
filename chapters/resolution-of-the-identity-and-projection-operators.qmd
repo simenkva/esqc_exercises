@@ -1,3 +1,7 @@
 # Resolution of the identity and projection operators
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::

@@ -1,3 +1,7 @@
 # Partial derivatives with respect to dependent variables
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::

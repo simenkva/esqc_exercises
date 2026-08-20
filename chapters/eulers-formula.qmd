@@ -1,3 +1,7 @@
 # Euler's formula for complex exponentials
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::

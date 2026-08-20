@@ -1,3 +1,8 @@
+profile:
+  default: student
+  group:
+    - [student, instructor]
+
 project:
   type: book
   output-dir: docs

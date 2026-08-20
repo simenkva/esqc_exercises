@@ -1,3 +1,7 @@
 # BCH expansion and exponentials of operators
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::

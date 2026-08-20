@@ -1,3 +1,7 @@
 # Finding eigenvalues and eigenvectors of a 2x2 matrix
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::

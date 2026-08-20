@@ -1,3 +1,7 @@
 # Binomial coefficients
 
 Content coming soon.
+
+::: {.content-visible when-profile="instructor"}
+Instructor-only content coming soon.
+:::
