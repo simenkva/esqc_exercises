@@ -1,0 +1,18 @@
+# Title of chapter
+
+## Introduction
+
+Introduction text goes here.
+
+
+## Exercises
+
+Exercises go here.
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+Solutions go here.
+
+:::

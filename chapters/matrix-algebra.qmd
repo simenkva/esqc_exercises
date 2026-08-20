@@ -1,7 +1,0 @@
-# Matrix algebra: matrix multiplication and unitary transformation
-
-Content coming soon.
-
-::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
-:::

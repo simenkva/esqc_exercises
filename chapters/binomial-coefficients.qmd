@@ -1,7 +1,0 @@
-# Binomial coefficients
-
-Content coming soon.
-
-::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
-:::

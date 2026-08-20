@@ -19,58 +19,50 @@ book:
   downloads: [epub]
   chapters:
     - index.qmd
-    - part: "Exercise recommendations"
+    - part: "Second quantization"
       chapters:
-        - chapters/recommendations-first-day.qmd
-        - chapters/recommendations-per-topic.qmd
-
-    - part: "Mathematical notation and conventions"
+        - chapters/binomial-expansion.qmd
+        - chapters/binomial-coefficients.qmd
+        - chapters/pascals-triangle.qmd
+        - chapters/cauchy-product-of-series.qmd
+        - chapters/proof-by-induction-or-direct.qmd
+        - chapters/handling-summation-signs.qmd
+        - chapters/exponential-as-a-power-series.qmd
+        - chapters/partial-derivatives-of-vectors.qmd
+        - chapters/eigenvalues-and-eigenvectors-of-a-2x2-matrix.qmd
+    - part: "SCF"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Methods of proof"
+        - chapters/matrix-algebra.qmd
+    - part: "DFT"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Linear algebra"
+        - chapters/functional-derivatives.qmd
+        - chapters/multidimensional-integral-transformations.qmd
+    - part: "Response theory"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Calculus"
+        - chapters/bch-expansion.qmd
+        - chapters/exponentials-of-antihermitian-operators.qmd
+        - chapters/poles-and-residues.qmd
+        - chapters/fourier-transform.qmd
+        - chapters/exponential-forms-of-sine-and-cosine.qmd
+        - chapters/eulers-formula.qmd
+        - chapters/partial-derivatives-of-dependent-variables.qmd
+    - part: "Relativity"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-    - part: "Multivariable calculus"
+        - chapters/levi-civita-symbol.qmd
+        - chapters/roots-of-a-cubic-polynomial.qmd
+    - part: "Coupled cluster"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-    - part: "Complex analysis"
+        - chapters/taylor-expansion.qmd
+    - part: "Molecular properties"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Series expansions"
+        - chapters/cross-product-with-levi-civita-symbols.qmd
+        - chapters/commutator-of-momentum-and-local-operators.qmd
+        - chapters/lagrange-multiplier-method.qmd
+        - chapters/total-and-partial-derivatives.qmd
+    - part: "Multiconfigurational methods"
       chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Fourier analysis"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Ordinary differential equations"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Partial differential equations"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Optimization"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
+        - chapters/resolution-of-the-identity-and-projection-operators.qmd
+    - references.qmd
 
 bibliography: references.bib
 

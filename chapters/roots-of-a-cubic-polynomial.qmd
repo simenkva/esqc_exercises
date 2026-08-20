@@ -1,7 +1,0 @@
-# Roots of a third-order polynomial
-
-Content coming soon.
-
-::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
-:::

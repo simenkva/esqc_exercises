@@ -1,7 +1,0 @@
-# Commutator of the momentum operator with a local operator
-
-Content coming soon.
-
-::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
-:::

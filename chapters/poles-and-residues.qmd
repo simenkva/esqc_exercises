@@ -1,7 +1,0 @@
-# Poles and residues of complex functions
-
-Content coming soon.
-
-::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
-:::
