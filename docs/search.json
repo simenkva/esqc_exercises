@@ -1,0 +1,309 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ESQC mathematics exercises",
+    "section": "",
+    "text": "Preface\nThis is a stripped-down copy of the Physical Chemistry Quarto book, ready to use as the starting point for a new book or course compendium. The fonts, callouts, light and dark themes, and output settings are already in place.\nReplace this page with your own preface or course description. The title, author, cover, and chapter list live in _quarto.yml.\n\n\n\n\n\n\nLearning-goalsLearning Goals\n\n\n\n\nFind the main layout and typography settings.\nRender the book as HTML and EPUB.\n\n\n\n\n\n\n\n\n\nPreparationsPreparations\n\n\n\nInstall Quarto 1.9.38 or newer. The extensions and fonts are included in this folder.\n\n\n\n\n\n\n\n\nFactA representative equation\n\n\n\nFor a harmonic oscillator, the vibrational energies are\n\\[\nE_\\nu=\\hbar\\omega\\left(\\nu+\\frac{1}{2}\\right),\n\\qquad\n\\omega=\\sqrt{\\frac{k}{\\mu}}.\n\\]\n\n\n\n\n\n\n\n\nVisualizationVisualization app\n\n\n\nUse this callout for a visualization, dataset, notebook, or another resource that students can explore alongside the text.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapters/binomial-expansion.html",
+    "href": "chapters/binomial-expansion.html",
+    "title": "1  Binomial expansion",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Binomial expansion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/binomial-coefficients.html",
+    "href": "chapters/binomial-coefficients.html",
+    "title": "2  Binomial coefficients",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Binomial coefficients</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/pascals-triangle.html",
+    "href": "chapters/pascals-triangle.html",
+    "title": "3  Pascal’s triangle",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Pascal's triangle</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cauchy-product-of-series.html",
+    "href": "chapters/cauchy-product-of-series.html",
+    "title": "4  Cauchy product of series",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Cauchy product of series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/proof-by-induction-or-direct.html",
+    "href": "chapters/proof-by-induction-or-direct.html",
+    "title": "5  Proof by induction (or direct)",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Proof by induction (or direct)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/handling-summation-signs.html",
+    "href": "chapters/handling-summation-signs.html",
+    "title": "6  Handling summation signs",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Handling summation signs</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/exponential-as-a-power-series.html",
+    "href": "chapters/exponential-as-a-power-series.html",
+    "title": "7  Definition of exp as a power series",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Definition of exp as a power series</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/partial-derivatives-of-vectors.html",
+    "href": "chapters/partial-derivatives-of-vectors.html",
+    "title": "8  Partial derivatives of vectors",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Partial derivatives of vectors</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/eigenvalues-and-eigenvectors-of-a-2x2-matrix.html",
+    "href": "chapters/eigenvalues-and-eigenvectors-of-a-2x2-matrix.html",
+    "title": "9  Finding eigenvalues and eigenvectors of a 2x2 matrix",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Second quantization",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Finding eigenvalues and eigenvectors of a 2x2 matrix</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/matrix-algebra.html",
+    "href": "chapters/matrix-algebra.html",
+    "title": "10  Matrix algebra: matrix multiplication and unitary transformation",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "SCF",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Matrix algebra: matrix multiplication and unitary transformation</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/functional-derivatives.html",
+    "href": "chapters/functional-derivatives.html",
+    "title": "11  Functional derivatives",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "DFT",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Functional derivatives</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/multidimensional-integral-transformations.html",
+    "href": "chapters/multidimensional-integral-transformations.html",
+    "title": "12  Transformation formula for multidimensional integrals",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "DFT",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Transformation formula for multidimensional integrals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/bch-expansion.html",
+    "href": "chapters/bch-expansion.html",
+    "title": "13  BCH expansion and exponentials of operators",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/exponentials-of-antihermitian-operators.html",
+    "href": "chapters/exponentials-of-antihermitian-operators.html",
+    "title": "14  Exponentials of antihermitian operators",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Exponentials of antihermitian operators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/poles-and-residues.html",
+    "href": "chapters/poles-and-residues.html",
+    "title": "15  Poles and residues of complex functions",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Poles and residues of complex functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/fourier-transform.html",
+    "href": "chapters/fourier-transform.html",
+    "title": "16  Fourier transform",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Fourier transform</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/exponential-forms-of-sine-and-cosine.html",
+    "href": "chapters/exponential-forms-of-sine-and-cosine.html",
+    "title": "17  Exponential forms of sine and cosine",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Exponential forms of sine and cosine</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/eulers-formula.html",
+    "href": "chapters/eulers-formula.html",
+    "title": "18  Euler’s formula for complex exponentials",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Euler's formula for complex exponentials</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/partial-derivatives-of-dependent-variables.html",
+    "href": "chapters/partial-derivatives-of-dependent-variables.html",
+    "title": "19  Partial derivatives with respect to dependent variables",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Partial derivatives with respect to dependent variables</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/levi-civita-symbol.html",
+    "href": "chapters/levi-civita-symbol.html",
+    "title": "20  Levi-Civita symbol",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Relativity",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Levi-Civita symbol</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/roots-of-a-cubic-polynomial.html",
+    "href": "chapters/roots-of-a-cubic-polynomial.html",
+    "title": "21  Roots of a third-order polynomial",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Relativity",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Roots of a third-order polynomial</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/taylor-expansion.html",
+    "href": "chapters/taylor-expansion.html",
+    "title": "22  Taylor expansion",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Coupled cluster",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Taylor expansion</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/cross-product-with-levi-civita-symbols.html",
+    "href": "chapters/cross-product-with-levi-civita-symbols.html",
+    "title": "23  Writing the cross product with Levi-Civita symbols",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Molecular properties",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Writing the cross product with Levi-Civita symbols</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/commutator-of-momentum-and-local-operators.html",
+    "href": "chapters/commutator-of-momentum-and-local-operators.html",
+    "title": "24  Commutator of the momentum operator with a local operator",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Molecular properties",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Commutator of the momentum operator with a local operator</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/lagrange-multiplier-method.html",
+    "href": "chapters/lagrange-multiplier-method.html",
+    "title": "25  Lagrange multiplier method",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Molecular properties",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Lagrange multiplier method</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/total-and-partial-derivatives.html",
+    "href": "chapters/total-and-partial-derivatives.html",
+    "title": "26  Total and partial derivatives",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Molecular properties",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Total and partial derivatives</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/resolution-of-the-identity-and-projection-operators.html",
+    "href": "chapters/resolution-of-the-identity-and-projection-operators.html",
+    "title": "27  Resolution of the identity and projection operators",
+    "section": "",
+    "text": "Content coming soon.",
+    "crumbs": [
+      "Multiconfigurational methods",
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Resolution of the identity and projection operators</span>"
+    ]
+  }
+]
