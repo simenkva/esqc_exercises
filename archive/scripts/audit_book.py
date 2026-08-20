@@ -10,7 +10,7 @@ from pathlib import Path
 import update_recommendations
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "_quarto.yml"
 LEGACY = ROOT / "ESQC_2024_text_and_exercises" / "ESQC2024_math_exercises.tex"
 

@@ -109,11 +109,10 @@ bullets into them:
 - `exr-recommended-*` IDs under **Recommended exercises**;
 - `exr-curious-*` IDs under **For the curious**.
 
-Authors should not edit those generated regions by hand.
-`scripts/update_recommendations.py` maintains them in deterministic book and
-document order, replaces only the text between the marker comments, and fails
-on duplicate IDs. Run it after changing exercise IDs; use `--check` in audits
-or continuous integration.
+During migration, `update_recommendations.py` maintained these regions in book
+and document order. The completed migration tooling now lives under
+`archive/`, including this generator, while the recommendation system awaits
+its replacement.
 
 `chapters/recommendations-per-topic.qmd` currently preserves the course-topic
 wishlist from `OUTLINE.md`. It is separate from the generated lists based on
@@ -294,13 +293,14 @@ Migration completed on 2026-08-20:
 - solutions and tutor notes are gated by the `tutor` profile;
 - source figures were copied or converted into `figures/exercises/`;
 - empty future parts remain in `_quarto.yml`;
-- `scripts/migrate_legacy.py` records the one-time Pandoc-based conversion and
-  refuses to overwrite curated chapters unless `--force` is given;
-- `scripts/audit_book.py` checks chapter and asset existence, ID uniqueness,
-  solution structure, legacy marker counts, generated-list freshness, and
-  unsupported source commands;
-- `tests/test_update_recommendations.py` tests recommendation generation and
-  duplicate-ID rejection; and
+- `archive/scripts/migrate_legacy.py` records the one-time Pandoc-based
+  conversion and refuses to overwrite curated chapters unless `--force` is
+  given;
+- `archive/scripts/audit_book.py` records the migration audit for chapter and
+  asset existence, ID uniqueness, solution structure, legacy marker counts,
+  generated-list freshness, and unsupported source commands;
+- `archive/scripts/update_recommendations.py` and its test preserve the retired
+  recommendation generator for reference; and
 - clean student and tutor HTML/EPUB builds are present in `docs/student/` and
   `docs/tutor/`.
 
@@ -308,12 +308,10 @@ Twelve chapters contain one or more explicit tutor-only missing-solution
 placeholders because the legacy source did not supply complete solutions.
 These are preserved gaps in the source material, not migration failures.
 
-For routine verification, run:
+The archived scripts are no longer part of routine book maintenance. Verify
+the current book by rendering both profiles:
 
 ```sh
-python3 scripts/update_recommendations.py --check
-python3 scripts/audit_book.py
-python3 -m unittest discover -s tests
 quarto render --profile student
 quarto render --profile tutor
 ```

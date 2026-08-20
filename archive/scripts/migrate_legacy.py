@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / "ESQC_2024_text_and_exercises" / "ESQC2024_math_exercises.tex"
 CHAPTER_DIR = ROOT / "chapters"
 
