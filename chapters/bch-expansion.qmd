@@ -17,22 +17,31 @@ Consider equation @eq-matrix-exponential.
 a. Write out the 5 first terms of the series expansion.
 b. Why must we require that $T$ is a square matrix in order for the series to be well-defined?
 c. Let $T$ be the $2\times 2$ matrix
-
-$$
-    T = \begin{bmatrix}
-        0 & 1 \\
-        -1 & 0
-    \end{bmatrix}.
-$$
-
-Compute the first 5 terms of the matrix exponential $\exp(T)$ using the series expansion. You may find it useful to compute the powers of $T$ first.
+    
+    $$
+        T = \begin{bmatrix}
+            0 & 1 \\
+            -1 & 0
+        \end{bmatrix}.
+    $$
+    
+    Compute the first 5 terms of the matrix exponential $\exp(T)$ using the series expansion. You may find it useful to compute the powers of $T$ first.
 
 :::
 
 
 
 
+<!--
 
+ooooooooooo ooooo  oooo ooooooooooo   ooooooo  oooooooooo       oooooooooo   o      oooooooooo  ooooooooooo 
+88  888  88  888    88  88  888  88 o888   888o 888    888       888    888 888      888    888 88  888  88 
+    888      888    88      888     888     888 888oooo88        888oooo88 8  88     888oooo88      888     
+    888      888    88      888     888o   o888 888  88o         888      8oooo88    888  88o       888     
+   o888o      888oo88      o888o      88ooo88  o888o  88o8      o888o   o88o  o888o o888o  88o8    o888o    
+                                                                                                            
+                                                                                                            
+-->
 
 
 ::: {.content-visible when-profile="tutor"}
