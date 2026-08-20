@@ -1,0 +1,77 @@
+# Complex power series
+
+Geometric and exponential series give power-series representations of elementary complex functions.
+
+## Exercises
+
+:::{#exr-complex-power-series-consider-taylor-series-th-partial-sum}
+
+Consider the geometric series $$\sum_{n=0}^\infty z^n  = 1 + z + z^2 + \ldots \longrightarrow \frac{1}{1-z}.$$ Show that the $N$th partial sum is
+
+$$
+\sum_{n=0}^{N}z^n=\frac{1-z^{N+1}}{1-z}.
+$$
+
+Polynomial long division may be useful.
+
+:::
+
+:::{#exr-complex-power-series-find-upper-bound-such-partial-sum}
+
+Find an upper bound for $|z|$ such that the partial sum converges to $1/(1-z)$.
+
+:::
+
+:::{#exr-complex-power-series-taylor-series-exponential-function-definition-complex}
+
+The Taylor series for the exponential function is $$\sum_{n=0}^\infty \frac{1}{n!} z^n.$$ Using the definition of the complex exponential, find the Taylor series for $\cos(x)$ and $\sin(x)$, for $x\in\mathbb{R}$.
+
+:::
+
+:::{#exr-complex-power-series-make-plots-partial-sums-sine-cosine}
+
+Make plots of the partial sums of the sine and cosine Taylor series to verify your result.
+
+:::
+
+:::{#exr-complex-power-series-find-taylor-series-function}
+
+Find the Taylor series for the function $f(z) = (e^z - 1)/z$
+
+:::
+
+:::{#exr-complex-power-series-find-taylor-series-function-2}
+
+Find the Taylor series for the function $f(z) = \sin(z)/z$ for $z\neq 0$ and $f(0) = 1$.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-complex-power-series-consider-taylor-series-th-partial-sum
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-power-series-find-upper-bound-such-partial-sum
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-power-series-taylor-series-exponential-function-definition-complex
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-power-series-make-plots-partial-sums-sine-cosine
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-power-series-find-taylor-series-function
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-power-series-find-taylor-series-function-2
+
+*The source does not supply a solution.*
+
+:::

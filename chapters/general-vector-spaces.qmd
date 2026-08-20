@@ -1,0 +1,117 @@
+# General vector spaces
+
+A vector space needs vector addition and scalar multiplication, but it need not resemble Euclidean coordinate space.
+
+You may be very familiar with Euclidean space $\mathbb{R}^n$ as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. A general vector space does not have an inner product or a norm, just a "linear structure": Consider for example a general vector space over $\mathbb{R}$: An abstract set $V$ with operations such that one can *add vectors*, $$z = x + y \in V,$$ and *multiply vectors by constants* $c\in\mathbb{R}$, $$z = c x \in V$$ where $c \in \mathbb{R}$. The full set of axioms is as follows:
+
+> **Definition: Vector space.** A *vector space over the field $\mathbb{F}$* is a set $V$ together with a binary *vector addition* $+ : V \times V \to V$ and *scalar multiplication* $\cdot : \mathbb{F}\times V \to V$ such that, for all $x$, $y$, $z \in V$ and all $\alpha,\beta \in \mathbb{F}$, the following axioms are true:
+>
+> 1.  There exists a $0\in V$ such that $0 + x = x$ for all $x\in V$
+>
+> 2.  $x + (y + z) = (x + y) + z$
+>
+> 3.  $x + y = y + x$
+>
+> 4.  There exists $x'$ such that $x+x'=0$
+>
+> 5.  $(\alpha\beta)\cdot x = \alpha\cdot(\beta\cdot x)$
+>
+> 6.  $1\cdot x = x$
+>
+> 7.  $(\alpha + \beta)\cdot x = \alpha\cdot x + \beta\cdot x$
+>
+> 8.  $\alpha \cdot (x + y) = \alpha\cdot x + \alpha \cdot y$
+
+In this exercise, we will train our ability to think abstractly, and also try to get acquainted with general vector spaces.
+
+> **Example: Somerset Apple Cake.** Ingredients:
+>
+> - 170 g butter
+>
+> - 170 g light brown sugar
+>
+> - 3 eggs
+>
+> - 1 tablespoon liquid honey
+>
+> - 1.5 teaspoons cinnamon
+>
+> - 0.5 teaspoon cloves
+>
+> - 0.5 teaspoon nutmeg
+>
+> - 1 teaspoon baking powder
+>
+> - 240 g wheat flour
+>
+> - 700 g apples, diced
+>
+> - 100 ml apple cider, apple juice, or milk
+>
+> - 100 g light sultana raisins (optional)
+>
+> Instructions:
+>
+> - Cream the room-temperature butter with the sugar until light and fluffy.
+>
+> - Beat in the eggs and honey.
+>
+> - Sift the flour, baking powder, and spices. Add them to the mixture and stir until the batter is smooth and lump-free.
+>
+> - Stir in the milk or apple cider (and the raisins, if you choose to use them; they can be soaked in cider for a couple of hours beforehand, if desired).
+>
+> - Finally, fold the apple pieces into the batter.
+>
+> - Pour the batter into a greased round tin with parchment paper at the bottom, or use a deep, round ovenproof dish (24 cm in diameter).
+>
+> - Bake the cake in the middle of the oven at 160°C for 1.5 hours (check with a cake tester to ensure it's fully baked).
+>
+> - Serve warm or cold with a dollop of whipped cream, clotted cream, vanilla ice cream, or whatever you like.
+
+## Exercises
+
+:::{#exr-recommended-general-vector-spaces-general-vector-spaces}
+
+1.  Consider viewing the set $L$ of cake recipe ingredient lists as a vector space. Thus, the components of $L$ are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?
+
+2.  How would you handle recipe lists with different units, such as pints and liters?
+
+3.  Consider the vector space $L$ as a vector space of functions on the form $f : S \to \mathbb{R}$, where $S$ is a set. Which set would $S$ be?
+
+4.  Define addition of two recipe ingredient lists. Does the sum define a new cake recipe? What is missing?
+
+5.  Consider the scaling of a recipe list to produce a new ingredient list. What are the units of the scaling factor?
+
+6.  Not every element in the constructed vector space is a valid recipe list. Which lists must be discarded?
+
+7.  Let us turn to the recipe steps. At least some of the steps can be interpreted as *linear operators* on the space of ingredients. For example, creaming butter and sugar transforms these two ingredients to an ingredient named "creamed butter and sugar". Can all steps be treated as linear transformations?
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-recommended-general-vector-spaces-general-vector-spaces
+
+**For part 1.**
+
+The space has dimension equal to the number of possible ingredients. If this is idealized as infinite, then the space is infinite dimensional. One must consider that each ingredient has a unit attached. Thus, "1 egg" can be a different ingredient than "100 g egg" or "1 lb egg".
+
+**For part 2.**
+
+It is simplest to standardize the quantities in SI units. Another model could retain several unit systems and convert between cups, deciliters, and grams where a conversion is meaningful.
+
+**For part 3.**
+
+The set of possible $(\text{ingredient},\text{unit})$ pairs, for example.
+
+**For part 5.**
+
+Dimensionless.
+
+**For part 6.**
+
+Lists with negative entries.
+
+:::

@@ -1,0 +1,73 @@
+# Subsets of the complex plane
+
+The modulus and real and imaginary parts describe curves and regions in the complex plane.
+
+Visualize the following subsets of $\mathbb{C}$. Decide which sets are open, closed, or neither.
+
+## Exercises
+
+:::{#exr-recommended-complex-sets-exercise}
+
+$\{ z \mid |z-1| = 1 \}$
+
+:::
+
+:::{#exr-complex-sets-exercise-2}
+
+$\{ z \mid |\mathrm{i}z-1| < 1 \}$
+
+:::
+
+:::{#exr-complex-sets-exercise-3}
+
+$\{ z \mid |z-\mathrm{i}| + |z + \mathrm{i}| < 4 \}$
+
+:::
+
+:::{#exr-complex-sets-exercise-4}
+
+$\{ z^2 \mid |z - \mathrm{i}| = 1 \}$
+
+:::
+
+:::{#exr-complex-sets-exercise-5}
+
+$\{ z \mid \Re(e^{\mathrm{i}\pi/2} z) > 0 \}$
+
+:::
+
+:::{#exr-complex-sets-exercise-6}
+
+$\{ z \mid \Im(z^2) > 0 \}$
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-recommended-complex-sets-exercise
+
+Square the equation and introduce $x$ and $y$ to get the equation for a circle, i.e., boundary of a circle. Alternatively just realize that the modulus $|w|$ is the distance from the origin.
+
+### Solution to @exr-complex-sets-exercise-2
+
+Interior of a circle.
+
+### Solution to @exr-complex-sets-exercise-3
+
+Ellipse with foci at $\pm \mathrm{i}$.
+
+### Solution to @exr-complex-sets-exercise-4
+
+Parameterize the original circle by $z(t)=\mathrm{i}+e^{\mathrm{i}t}$, $0\leq t<2\pi$, and plot or analyze the image curve $z(t)^2$.
+
+### Solution to @exr-complex-sets-exercise-5
+
+This is a half-plane.
+
+### Solution to @exr-complex-sets-exercise-6
+
+*The source does not supply a solution.*
+
+:::

@@ -1,0 +1,79 @@
+# Gram--Schmidt orthogonalization
+
+Orthogonal projection leads to the Gram--Schmidt construction and the QR factorization of a full-rank matrix.
+
+Let $V$ be a vector space over $\mathbb{F}$ with $\dim(V) = n < +\infty$. Recall that every finite-dimensional vector space has a basis. In the lecture notes, it is claimed that every finite dimensional Hilbert space has a basis of orthonormal vectors! Recall, that in an orthonormal basis, computations are usually much simpler than in nonorthogonal bases.
+
+In this exercise, we show that any set of linearly independent vectors can be orthonormalized. We work in the space $\mathbb{F}^n$ for simplicity. That is, let $B = [\mathbf{b}_1,\cdots,\mathbf{b}_m]\subset \mathbb{F}^n$ be a set of $m \leq n$ linearly independent vectors, spanning a subspace $V = \operatorname{span}(B)$. We denote the vector set by its basis matrix $B$. Equivalently, $B$ is an arbitrary matrix in $M(n,m,\mathbb{F})$ of full rank $m$, and the vectors $\mathbf{b}_i$ are the columns of $B$.
+
+We will find a set of orthonormal vectors $U = [\mathbf{u}_1,\cdots,\mathbf{u}_m]$, again denoted by a matrix in $M(n,m,\mathbb{F})$, such that $\operatorname{span}(B) = \operatorname{span}(U)$. That is, the two sets of vectors are bases for the *same* subspace, but one of them is an orthonormal basis.
+
+We first define the notion of orthogonal projection onto the span of a single vector: Let $\mathbf{y}\in \mathbb{F}^n$ be nonzero, $Y = \operatorname{span}(\mathbf{y})$, and let $\mathbf{x} \in \mathbb{F}^n$.
+
+## Exercises
+
+:::{#exr-curious-gram-schmidt-gram-schmidt-orthogonalization}
+
+1.  Show that the vector $\mathbf{x}_Y$ given by $$\mathbf{x}_Y = \mathbf{y}\frac{\left\langle\mathbf{y}, \mathbf{x}\right\rangle}{\left\langle\mathbf{y},\mathbf{y}\right\rangle}$$ is the *unique* vector in $Y$, such that $$\forall \mathbf{y}' \in Y, \quad \|\mathbf{x} - \mathbf{x}_Y\| \leq \|\mathbf{x} - \mathbf{y}'\|.$$ Hint: Find a function $f : \mathbb{R}\to \mathbb{R}$ which you can study, by using the definition of $Y = \operatorname{span}(\mathbf{y})$.
+
+2.  Show that $$\mathbf{x} = \mathbf{x}_Y + \mathbf{x}_{Y^\bot},$$ where $$\left\langle\mathbf{x}_{Y^\bot}|\mathbf{x}_Y\right\rangle = 0.$$ Illustrate with a picture of the situation in $\mathbb{R}^2$.
+
+The vector $\mathbf{x}_Y$ is called the *orthogonal projection of $\mathbf{x}$ onto $Y$ or $\mathbf{y}$*.
+
+1.  Explain that the orthogonal projection is given by acting with an operator, $$\mathbf{x}_Y = P_{\mathbf{y}} \mathbf{x}, \quad P_{\mathbf{y}} = \mathbf{y} \left\langle\mathbf{y},\mathbf{y}\right\rangle^{-1} \mathbf{y}^H.$$ The operator $P_{\mathbf{y}}$ is called the *orthogonal projection operator onto $Y=\operatorname{span}(\mathbf{y})$*.
+
+<!-- -->
+
+1.  Show that $P^2 = P$ and that $P^\dagger= P$.
+
+The Gram--Schmidt orthogonalization proceeds recursively:
+
+1.  $\mathbf{u}_1 = \mathbf{b}_1 \left\langle\mathbf{b}_1,\mathbf{b}_1\right\rangle^{-1/2}$ (normalization)
+
+2.  $\mathbf{u}_2' = \mathbf{b}_2 - P_{\mathbf{u}_1} \mathbf{b}_2$ (removal of projection), and $\mathbf{u}_2 = \mathbf{u}_2' \left\langle\mathbf{u}_2',\mathbf{u}_2'\right\rangle^{-1/2}$ (normalization)
+
+3.  $\mathbf{u}_3' = \mathbf{b}_3 - P_{\mathbf{u}_1} \mathbf{b}_3-P_{\mathbf{u}_2} \mathbf{b}_3$ (removal of projection), and $\mathbf{u}_3 = \mathbf{u}_3' \left\langle\mathbf{u}_3',\mathbf{u}_3'\right\rangle^{-1/2}$ (normalization)
+
+4.  Continue recursively.
+
+5.  $\mathbf{u}_m' = \mathbf{b}_m - \sum_{i=1}^{m-1} P_{\mathbf{u}_i} \mathbf{b}_m$ (removal of projection), and $\mathbf{u}_m = \mathbf{u}_m' \left\langle\mathbf{u}_m',\mathbf{u}_m'\right\rangle^{-1/2}$ (normalization)
+
+We see that each $\mathbf{u}_i$ is given by projecting away from $\mathbf{b}_i$ the components of all the *previously generated* $\mathbf{u}_j$, $j<i$.
+
+1.  Show that all the generated vectors $\mathbf{u}_i$ are orthonormal.
+
+2.  Show that a set of orthonormal vectors are linearly independent.
+
+3.  Show that the span of the first $k$ original vectors is the same as the span of the first $k$ generated vectors. Show that $$B = U R,$$ where $R \in M(m,m,\mathbb{F})$ is *upper triangular*, i.e., $R_{ij}=0$ whenever $i > j$. This is called the QR decomposition of the operator $B$. (The "Q" is just our $U$.)
+
+4.  We have shown the existence of the QR decomposition when $B$ had full rank. Can you show the existence of the decomposition when $B$ does *not* have full rank? It always exists. Hint: What happens when $B$ does not have full rank?
+
+We now turn to a computational exercise:
+
+1.  Write a Python function to compute the QR decomposition of a matrix with full rank. In SciPy, the function `scipy.linalg.qr` is an advanced implementation with pivoting. To compare with your implementation, use the call
+
+            Q,R = qr(A,mode='economic',pivoting=False)
+
+    With `pivoting=False`, the function computes essentially the same as our presented algorithm. (Turning on pivoting stabilizes the algorithm, rearranging the vectors before orthogonalizing.)
+
+2.  Let $n\geq m>0$ be integers, and define the matrix $A\in \mathbb{R}^{n\times m}$ by $$A_{ij} = \left(\frac{i-1}{n-1}\right)^{j-1}.$$ This the matrix of the $m$ first monomials $x^{j-1}$ evaluated at an equidistant grid of $n$ points in the interval $[0,1]$. Test your QR implementation on $A$ for various $n,m$, say $m=10$ and $m=200$. In particular, compute the difference between your factorization and $A$, and compare also with the NumPy implementation.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Gram--Schmidt orthogonalization
+
+**Tutor note:** I think Gram--Schmidt is important, but maybe there is not enough time in the exercise session.
+
+This exercise may be hard for students who have little experience with proofs. Tutors should prepare the projection and span arguments.
+
+### Solution to @exr-curious-gram-schmidt-gram-schmidt-orthogonalization
+
+**For the rank-deficient QR question.**
+
+Sketch: When $B$ has rank $m'<m$, remove $m-m'$ dependent columns and factor the reduced matrix. Extend the resulting orthonormal set with $m-m'$ vectors orthogonal to those already generated, and add the corresponding rows and columns to $R$ so that $B=UR$ still holds.
+
+:::

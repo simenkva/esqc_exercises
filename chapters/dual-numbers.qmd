@@ -1,0 +1,57 @@
+# Dual numbers and automatic differentiation
+
+Dual numbers adjoin a nonzero element $\varepsilon$ with $\varepsilon^2=0$, which encodes first derivatives algebraically.
+
+We now consider the number system called *the dual numbers*, often written $\mathbb{R}(\varepsilon)$. The dual numbers form an algebraic extension of $\mathbb{R}$ with a nonzero element $\varepsilon$ such that $\varepsilon^2=0$:
+
+$$
+\mathbb{R}(\varepsilon)=\{x+\varepsilon y\mid x,y\in\mathbb{R}\}.
+$$
+
+Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i}^2=-1$ while $\varepsilon^2=0$. Dual numbers support automatic differentiation.
+
+## Exercises
+
+:::{#exr-curious-dual-numbers-dual-numbers}
+
+1.  Compute the multiplication law in terms of real and "dual" parts, i.e., $z_1z_2 = z = x + \varepsilon y$, and find $x$ and $y$. Compute the addition law for $z_1 + z_2$.
+
+2.  Show that $\mathbb{R}(\varepsilon)$ is not a field.
+
+3.  Compute the law for all positive powers of $z = x + \varepsilon y$, and for negative powers when $x\neq0$.
+
+4.  Consider $z = x + \varepsilon$ and evaluate its positive powers, and its negative powers when $x\neq0$. How is each dual part related to the corresponding real part?
+
+5.  Let $p(x)$ be a real polynomial and extend it to dual arguments. Show that $$p(x+\varepsilon) = p(x) + \varepsilon p'(x).$$
+
+6.  Let $q(x)$ be a polynomial in negative powers of $x$. Show, for $x\neq0$, that $q(x+\varepsilon) = q(x) + \varepsilon q'(x)$.
+
+7.  Let $p(x)$ and $q(x)$ be polynomials, and consider the *rational function* $f(x) = p(x)/q(x)$. Where $q(x)\neq0$, extend the rational function to $\mathbb{R}(\varepsilon)$ and prove that $f(x+\varepsilon) = f(x) + \varepsilon f'(x)$.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Dual numbers
+
+This exercise is perhaps for the specially interested.
+
+### Solution to @exr-curious-dual-numbers-dual-numbers
+
+**For part 2.**
+
+Since $\varepsilon^2=0$, $\varepsilon$ cannot have an inverse. If $a\varepsilon=1$, multiplication by $\varepsilon$ would give $a\varepsilon^2=\varepsilon$, hence $0=\varepsilon$, a contradiction.
+
+**For part 3.**
+
+Use the binomial formula and $\varepsilon^2=0$.
+
+**For part 4.**
+
+$(x+\varepsilon)^n = x^n + \varepsilon n x^{n-1}$. The dual part is the derivative of the real part.
+
+$$(x + \varepsilon)^{-1} = \frac{x - \varepsilon}{(x - \varepsilon)(x + \varepsilon)} = \frac{x-\varepsilon}{x^2} = x^{-1} - \varepsilon x^{-2}.$$ Computing further, $$(x + \varepsilon)^{-n} = x^{-n} - \varepsilon n x^{-n-1}.$$ Again, the dual part is the derivative of the real part.
+
+:::

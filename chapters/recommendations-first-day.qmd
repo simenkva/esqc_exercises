@@ -1,4 +1,76 @@
 # The first day
 
-## List of recommended exercises
+This page collects two selections from the exercise chapters. Each entry links
+to the exercise in its subject part. The lists are generated from exercise IDs.
 
+## Recommended exercises
+
+<!-- BEGIN GENERATED RECOMMENDED EXERCISES -->
+- **Sets and functions**
+  - @exr-recommended-sets-and-functions-write-days-week-set
+  - @exr-recommended-sets-and-functions-write-five-first-natural-numbers-set
+  - @exr-recommended-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
+
+- **Cardinality and countability**
+  - @exr-recommended-cardinality-and-countability-explicitly-constructing-bijection
+
+- **General vector spaces**
+  - @exr-recommended-general-vector-spaces-general-vector-spaces
+
+- **Vectors and matrices**
+  - @exr-recommended-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate
+  - @exr-recommended-vectors-and-matrices-person-walks-home-first-they-walk
+  - @exr-recommended-vectors-and-matrices-matrix-products-between-pairs-these-matrices
+  - @exr-recommended-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action
+
+- **Gaussian elimination**
+  - @exr-recommended-gaussian-elimination-robert-beezer-consider-following-system-equations
+
+- **Polynomial vector spaces**
+  - @exr-recommended-polynomial-vector-spaces-set-all-polynomials-degree-less-than
+  - @exr-recommended-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear
+
+- **Metric spaces**
+  - @exr-recommended-metric-spaces-metric-spaces
+
+- **Visualizing functions**
+  - @exr-recommended-visualizing-functions-path-defined-sketch-curve-traced-path
+  - @exr-recommended-visualizing-functions-sketch-level-curves
+
+- **Continuity and differentiability**
+  - @exr-recommended-continuity-and-differentiability-given-does-limit-not-exist-why
+  - @exr-recommended-continuity-and-differentiability-marsden-tromba-does-exist-if-you
+
+- **Complex arithmetic and geometry**
+  - @exr-recommended-complex-arithmetic-compute-real-imaginary-parts-functions
+  - @exr-recommended-complex-arithmetic-complex-numbers-can-written-polar-form
+  - @exr-recommended-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule
+
+- **Subsets of the complex plane**
+  - @exr-recommended-complex-sets-exercise
+
+- **Singularities and contour integrals**
+  - @exr-recommended-singularities-and-contour-integrals-consider-function-how-many-poles-does
+<!-- END GENERATED RECOMMENDED EXERCISES -->
+
+## For the curious
+
+<!-- BEGIN GENERATED CURIOUS EXERCISES -->
+- **The complex numbers as a real vector space**
+  - @exr-curious-complex-vector-space-complex-numbers-real-vector-space
+
+- **Eigenvalues and diagonalization**
+  - @exr-curious-eigenvalues-and-diagonalization-eigenvalue-decomposition
+
+- **Gram--Schmidt orthogonalization**
+  - @exr-curious-gram-schmidt-gram-schmidt-orthogonalization
+
+- **The singular-value decomposition**
+  - @exr-curious-singular-value-decomposition-singular-value-decomposition-compression-tool
+
+- **Dual numbers and automatic differentiation**
+  - @exr-curious-dual-numbers-dual-numbers
+
+- **Complex-step differentiation**
+  - @exr-curious-complex-step-differentiation-complex-step-method
+<!-- END GENERATED CURIOUS EXERCISES -->

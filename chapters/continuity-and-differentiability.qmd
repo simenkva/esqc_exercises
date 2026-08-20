@@ -1,0 +1,107 @@
+# Continuity and differentiability
+
+Limits define continuity, while partial derivatives describe local change for functions of several variables.
+
+## Exercises
+
+### Continuity
+
+:::{#exr-recommended-continuity-and-differentiability-given-does-limit-not-exist-why}
+
+Let $f:\mathbb{R}\to\mathbb{R}$ be given by $$f(x) = \begin{cases} 1 & x > 0 \\
+        -1 & x \leq 0 \end{cases}$$ For which $x \in \mathbb{R}$ does the limit $$\lim_{h \to 0} f(x + h)$$ *not* exist? Why?
+
+:::
+
+:::{#exr-continuity-and-differentiability-any-polynomial-continuous-theorem-properties-continuous}
+
+Show that any polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous, by using the theorem on properties of continuous functions.
+
+:::
+
+:::{#exr-continuity-and-differentiability-marsden-tromba-consider-function-function-defined}
+
+(Marsden and Tromba) Consider the function $$f(x,y) = \frac{\sin(x^2 + y^2)}{x^2 + y^2}.$$ This function is defined on $\mathbb{R}^2 \setminus \{(0,0)\}$. Determine whether $f(x,y)$ approaches some value as $(x,y)\to(0,0)$. What is this value?
+
+:::
+
+:::{#exr-recommended-continuity-and-differentiability-marsden-tromba-does-exist-if-you}
+
+(Marsden and Tromba) Does $\lim_{(x,y)\to (0,0)} x^2/(x^2+y^2)$ exist? If you want, plotting the function can help.
+
+:::
+
+:::{#exr-continuity-and-differentiability-marsden-tromba-prove-argument}
+
+(Marsden and Tromba) Prove that $\lim_{(x,y)\to(0,0)} 2x^2y/(x^2+y^2) = 0$ using an $\epsilon$-$\delta$ argument.
+
+:::
+
+### Differentiability
+
+:::{#exr-continuity-and-differentiability-compute-partial-derivatives}
+
+Compute the partial derivatives of $$f(x,y) =  \frac{xy}{(x^2 + y^2)^{1/2}}.$$
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Continuity
+
+**Tutor note:** The concept of continuity is basic, so I recommend some of these exercises for everyone. I do not think the tutors need much preparation for them.
+
+### Solution to @exr-recommended-continuity-and-differentiability-given-does-limit-not-exist-why
+
+The limit does not exist at $x=0$. For every interval $]-\epsilon,\epsilon[$, $f$ maps into $\{-1,1\}$, which does not approach a single value.
+
+### Solution to @exr-continuity-and-differentiability-any-polynomial-continuous-theorem-properties-continuous
+
+The identity function $x \mapsto x$ is continuous. Since sums and products of continuous functions are continuous, every polynomial is continuous.
+
+### Solution to @exr-continuity-and-differentiability-marsden-tromba-consider-function-function-defined
+
+Use $\lim_{t\to0}\sin(t)/t=1$. Given $\epsilon>0$, choose $\eta>0$ such that $0<|t|<\eta$ implies $|\sin(t)/t-1|<\epsilon$. Set $\delta=\sqrt{\eta}$. If $0<\|\mathbf{u}\|<\delta$, then $0<\|\mathbf{u}\|^2<\eta$, so
+
+$$
+\left|\frac{\sin(\|\mathbf{u}\|^2)}{\|\mathbf{u}\|^2}-1\right|<\epsilon.
+$$
+
+Therefore the limit is $1$.
+
+### Solution to @exr-recommended-continuity-and-differentiability-marsden-tromba-does-exist-if-you
+
+A hint to give the students:
+
+Consider the line $x=0$ and the line $y=0$.
+
+The limit does not exist. Along $y=0$ the function equals $1$, while along $x=0$ it equals $0$.
+
+### Solution to @exr-continuity-and-differentiability-marsden-tromba-prove-argument
+
+We have $$|2 x^2 y/(x^2+y^2)| \leq |2 x^2 y/x^2| \leq 2|y|.$$ Thus, given $\epsilon > 0$, choose $\delta = \epsilon /2$. Then $0 < \|(x,y)-(0,0)\| = \sqrt{x^2+y^2} < \delta$ implies $|y|< \delta$, and so $|f(x,y) -0| < 2\delta < \epsilon$.
+
+### Tutor note: Differentiability
+
+**Tutor note:** The source contains only one exercise on differentiability; more exercises may be added later.
+
+### Solution to @exr-continuity-and-differentiability-compute-partial-derivatives
+
+For $(x,y)\neq(0,0)$, write $v=(x^2+y^2)^{1/2}$. The quotient and chain rules give
+
+$$
+\frac{\partial f}{\partial x}
+=\frac{yv-xy(x/v)}{v^2}
+=\frac{y^3}{(x^2+y^2)^{3/2}},
+$$
+
+and, by symmetry,
+
+$$
+\frac{\partial f}{\partial y}
+=\frac{x^3}{(x^2+y^2)^{3/2}}.
+$$
+
+:::

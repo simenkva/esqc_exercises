@@ -1,0 +1,45 @@
+# The complex numbers as a real vector space
+
+Identifying $x + \mathrm{i}y$ with $(x,y)$ turns the complex plane into a two-dimensional real vector space.
+
+The geometrical interpretation of the $\mathbb{C}$ as the plane $\mathbb{R}^2$ indicates that $\mathbb{C}$ can be viewed as a two-dimensional real vector space. Indeed, addition and multiplication with *real* scalars are compatible with the axioms for Euclidean space $\mathbb{R}^2$.
+
+## Exercises
+
+:::{#exr-curious-complex-vector-space-complex-numbers-real-vector-space}
+
+1.  Show that $\mathbb{C}$ regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in $\mathbb{R}^2$? Conclude that $\mathbb{C}$ can be regarded as a *real* Euclidean vector space of dimension $2$.
+
+2.  Show that multiplication with a *complex* number $z$ is a linear operator on $\mathbb{R}^2$, and find its matrix in the standard basis. What is the matrix of multiplication with $\mathrm{i}$?
+
+3.  Show that multiplication with a complex number of modulus 1 is a rotation in $\mathbb{R}^2$.
+
+4.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb{R}^2$. What kind of linear transformation is this? Is it a linear transformation in $\mathbb{C}$?
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: The complex numbers as a real vector space
+
+This exercise is not essential, so can be skipped for most students.
+
+### Solution to @exr-curious-complex-vector-space-complex-numbers-real-vector-space
+
+**Source solution 1.**
+
+The standard basis of $\mathbb{R}^2$ corresponds to $1$ and $\mathrm{i}$.
+
+**Source solution 2.**
+
+    $$(a + \mathrm{i}b)(x + \mathrm{i}y) = (ax - by) + \mathrm{i}(ay + bx)$$ We must find a matrix $A$ such that $$A\begin{bmatrix} x\\ y\end{bmatrix} = \begin{bmatrix} ax - by \\ bx + ay \end{bmatrix}$$ The solution is $$A = \begin{bmatrix}
+        a & -b \\ b & a
+    \end{bmatrix}$$
+
+**Source solution 3.**
+
+Strictly speaking, Euler's formula $e^{\mathrm{i}\theta} = \cos\theta + \mathrm{i}\sin\theta$ has not been introduced, so "cannot" be used here. But a complex number of modulus $1$ forms an angle $\theta$ with the $x$-axis. Since complex multiplication now will not change the length of $z$, only add the angles, this is a rotation.
+
+:::

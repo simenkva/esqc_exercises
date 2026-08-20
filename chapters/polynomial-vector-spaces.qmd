@@ -1,0 +1,129 @@
+# Polynomial vector spaces
+
+Polynomials form finite-dimensional vector spaces on which differentiation, multiplication, and changes of basis act as linear maps.
+
+In this exercise, we study a vector space that is not $\mathbb{F}^n$. We start out without an inner product, but supply this later.
+
+Recall that a polynomial of degree $n$ over $\mathbb{F}$ has the form $$p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n,$$ with $a_i \in \mathbb{F}$ and $a_n \neq 0$.
+
+## Exercises
+
+:::{#exr-recommended-polynomial-vector-spaces-set-all-polynomials-degree-less-than}
+
+Let $P_n$ be the set of all polynomials of degree less than or equal to $n$. Show that $P_n$ is a vector space of dimension $n+1$ over $\mathbb{C}$.
+
+:::
+
+:::{#exr-recommended-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear}
+
+Let $D : P_n \to P_n$ be the differentiation operator, i.e., $$(D p)(x) = p'(x).$$ Show that $D$ is indeed a linear operator.
+
+:::
+
+:::{#exr-polynomial-vector-spaces-does-there-exist-inverse}
+
+Does there exist an inverse of $D$?
+
+:::
+
+:::{#exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write}
+
+Let $B = \{1, x, x^2, \cdots, x^n\}$ be the basis of *monomials*. Using bra-ket notation, we write the basis operator as $$\hat{B} = \sum_{i=1}^{n+1} \left|x^{i-1}\right\rangle\left\langle i\right|,$$ where $\left|i\right\rangle$ is a standard basis vector for $\mathbb{F}^{n+1}$. Compute the matrix of $D$ relative to this basis. (Note carefully that we do not have an inner product defined.) That is, find a matrix $T$ such that $$D \hat{B} = \hat{B} T.$$
+
+:::
+
+We now restrict our attention to the interval $x \in [-1,1]$. That is, $$V_n = \{ p : [-1,1] \to \mathbb{C}\mid p \text{ a polynomial of deg $\leq n$} \}.$$ The above subexercises did not depend on the domain of the polynomial.
+
+We define an inner product on $V$, $$\left\langle p|q\right\rangle := \int_{-1}^1 \overline{p(x)} q(x) \, \mathrm{d}x.$$ We will now define the *Legendre polynomials*.
+
+:::{#exr-polynomial-vector-spaces-indeed-inner-product-checking-axioms}
+
+Show that $\left\langle\cdot|\cdot\right\rangle$ is indeed an inner product by checking the axioms.
+
+:::
+
+:::{#exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis}
+
+Compute the overlap matrix $S$ of the monomial basis. Is the basis orthonormal?
+
+:::
+
+:::{#exr-polynomial-vector-spaces-formulate-gram-schmidt-procedure-bra-ket}
+
+Formulate the Gram--Schmidt procedure using the bra-ket notation. Explain how the procedure generates an upper triangular matrix $R$ such that $$\hat{B} = \hat{U} R,$$ where $\hat{U}$ is the basis matrix of the orthonormal set of vectors.
+
+:::
+
+:::{#exr-polynomial-vector-spaces-use-gram-schmidt-decomposition-hand-compute}
+
+Use the Gram--Schmidt decomposition by hand to compute the first three *normalized Legendre polynomials* $\left|\hat{P}_i\right\rangle$, $i=0,1,2$, defined using the Gram--Schmidt orthogonalization of $\{1,x,x^2\}$.
+
+:::
+
+The Legendre polynomials are orthogonal polynomials $P_i : [-1,1]\to \mathbb{R}$ obtained from the monomials by Gram--Schmidt orthogonalization and normalized by $P_i(1)=1$. They are orthogonal but not normalized. The endpoint normalization gives $$\int_{-1}^1 P_i(x) P_j(x) \, \mathrm{d}x = \frac{2}{2i + 1} \delta_{ij}.$$ With $P_0(x)=1$ and $P_{-1}\equiv0$, they satisfy the recurrence relation $$(i + 1) P_{i+1}(x) = (2i + 1) x P_i(x) - i P_{i-1}(x).$$ From this, one can show: $$P'_{i+1}(x) = \frac{2 P_i(x)}{\|P_i\|^2} + \frac{2 P_{i-2}(x)}{\|P_{i-2}\|^2} + \frac{2 P_{i-4}(x)}{\|P_{i-4}\|^2} + \ldots $$
+
+:::{#exr-polynomial-vector-spaces-compute-matrix-differential-operator-normalized-legendre}
+
+Compute the matrix of the differential operator $D$ in the *normalized* Legendre polynomial basis, both by using matrix multiplication involving $X$, $R$, and $R^{-1}$, and also by using the derivative relation above. Compare the two explicitly using pen-and-paper calculations.
+
+:::
+
+:::{#exr-polynomial-vector-spaces-repeat-previous-exercise-operator}
+
+Repeat the previous exercise with the operator $D^2$.
+
+:::
+
+Orthogonal polynomials define efficient *quadrature rules*. Consider approximating an integral by $$\int_{-1}^1 f(x) \, \mathrm{d}x \approx \sum_{i=1}^n f(x_i) w_i,$$ where the $w_i$ are *weights* and the $x_i$ are *nodes*. A unique choice of nodes and weights makes the rule exact for every polynomial of degree at most $2n-1$. The nodes are the zeros of $P_n$, and the weights are $$w_i = \frac{2}{(1-x_i^2)[P'_n(x_i)]^2}.$$ The [Wikipedia page on Gauss--Legendre quadrature](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_quadrature) contains more details.
+
+The so-called Golub--Welsch algorithm is a simple algorithm based on diagonalization of a tridiagonal Hermitian matrix for computing the nodes and weights of Gaussian quadratures, see [the Wikipedia page on Gaussian quadrature](https://en.wikipedia.org/wiki/Gaussian_quadrature#The_Golub-Welsch_algorithm). The interested student should check it out!
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Space of polynomials
+
+**Tutor note:** Treating functions as vectors is important in quantum chemistry. The recommended sub-exercises should be broadly accessible; the remaining exercises may require tutor preparation.
+
+### Solution to @exr-recommended-polynomial-vector-spaces-set-all-polynomials-degree-less-than
+
+The sum of two polynomials is a polynomial. A scalar multiple of a polynomial is a polynomial. The polynomials $x^i$ are clearly linearly independent. Since all polynomials are linear combinations of such, the dimension must be equal to the number of coefficients, $n+1$.
+
+### Solution to @exr-recommended-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear
+
+*The source does not supply a solution.*
+
+### Solution to @exr-polynomial-vector-spaces-does-there-exist-inverse
+
+No inverse exists, since the null space of $D$ is nontrivial (the constant polynomials). The indefinite integral would be a candidate for inverse, but the integral is only determined up to a constant.
+
+### Solution to @exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write
+
+Since $(x^{i-1})' = (i-1)x^{i-2}$ for $i>1$, we get $$T_{i-1,i}=i-1, \qquad i=2,\ldots,n+1,$$ and all other matrix elements are zero.
+
+### Solution to @exr-polynomial-vector-spaces-indeed-inner-product-checking-axioms
+
+*The source does not supply a solution.*
+
+### Solution to @exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis
+
+$$\int_{-1}^1 x^i x^j \; \mathrm{d}x = \frac{1}{i+j+1}(1-(-1)^{i+j+1}).$$ Clearly not an orthonormal basis, since the matrix is not the identity matrix.
+
+### Solution to @exr-polynomial-vector-spaces-formulate-gram-schmidt-procedure-bra-ket
+
+*The source does not supply a solution.*
+
+### Solution to @exr-polynomial-vector-spaces-use-gram-schmidt-decomposition-hand-compute
+
+*The source does not supply a solution.*
+
+### Solution to @exr-polynomial-vector-spaces-compute-matrix-differential-operator-normalized-legendre
+
+*The source does not supply a solution.*
+
+### Solution to @exr-polynomial-vector-spaces-repeat-previous-exercise-operator
+
+*The source does not supply a solution.*
+
+:::

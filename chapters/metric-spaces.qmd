@@ -1,0 +1,61 @@
+# Metric spaces
+
+A metric measures distance through symmetry, positivity, and the triangle inequality.
+
+A *metric* encodes the intuition behind measuring *distances* in a set $M$. It is a distance function $d(x,y)$, where $x,y\in M$.
+
+The definition of a metric space is as follows:
+
+> **Definition: Metric.** Let $M$ be a set. A function $d: M\times M \to \mathbb{R}$ is a *metric* if it satisfies the following axioms:
+>
+> 1.  $d(x,y) = d(y,x)$
+>
+> 2.  $d(x,y) \geq 0$, and $d(x,y) = 0$ if and only if $x =y$
+>
+> 3.  $d(x,y) \leq d(x,z) + d(z,y)$
+>
+> The pair $(M,d)$ is a *metric space*. If $M$ is a vector space, we say that $(M,d)$ is a *metric vector space*.
+
+In this exercise, we will try to understand why the axioms are as they are, i.e., what makes them encode the concept of a metric.
+
+## Exercises
+
+:::{#exr-recommended-metric-spaces-metric-spaces}
+
+1.  Consider two persons $X$ and $Y$ located at $x$ and $y$ in a set $M$. They both measure the distance to the other person. What would happen if axiom a) is violated? Is this reasonable?
+
+2.  What would happen if axiom b) is violated? Is this reasonable?
+
+3.  A third person $Z$ located at $z$ enters the picture. Consider axiom c). What happens if this axiom is violated? Is this reasonable?
+
+4.  Let $M = \mathbb{R}^2$, and let $d$ be Euclidean distance, "as the crow flies". But there are other distance measures as well. Consider for example the "Manhattan distance", given by $$d(\mathbf{x},\mathbf{y}) = |x_1-y_1| + |x_2-y_2|.$$ This has a standard interpretation in terms of cities with straight streets and taxis driving on these streets. Discuss.
+
+5.  Consider a king moving on a chessboard. The king can move one step at a time, either horizontally or vertically, or diagonally. Consider the *minimum number of steps* the king has to move in order to get from one point to another. See @fig-chessboard for an illustration. The metric is $$d(\mathbf{x},\mathbf{y}) = \max (|x_1-y_1|, |x_2-y_2|).$$ This is also called the "maximum metric". Can you verify the metric axioms? How does the maximum metric compare to the Manhattan metric?
+
+![Illustration of "chessboard metric": The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels "faster" that way!](../figures/exercises/chess.svg){#fig-chessboard width="40%"}
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-recommended-metric-spaces-metric-spaces
+
+**For part 1.**
+
+The two observers would disagree about the distance between the same pair of points. A directed cost can be asymmetric, but it is not a metric under this definition.
+
+**For part 2.**
+
+Zero distances between non-equal points violate the concept of distances measuring how far apart points are.
+
+**For part 3.**
+
+The triangle inequality embodies an essential feature of Euclidean space: Taking detours should never lead to shorter distances traveled!
+
+**For part 5.**
+
+One possible set of observations is the following: The maximum metric is smaller than the Manhattan metric. On the other hand, the Manhattan metric is smaller than 2 times the maximum metric. This means that open sets in the Manhattan metric will be open sets in the maximum metric, and vice versa, since inside an open ball for each metric, we can always place an open ball of the other metric. Therefore, they create the same topology. A function $f:\mathbb{R}^2\to\mathbb{R}$ is continuous with respect to one metric iff it is continuous with respect to the other metric. (The same is also true for the Euclidean metric, they are all *equivalent*.)
+
+:::

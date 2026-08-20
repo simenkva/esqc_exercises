@@ -1,0 +1,91 @@
+# The complex exponential
+
+The functional equation for the exponential and the Cauchy--Riemann equations determine the complex exponential.
+
+In this section, we give some relatively easy exercises to illustrate the important concepts of complex analytic functions.
+
+In this exercise, we derive the complex exponential function. The starting point is the real exponential function, which is the unique function $f(x) = \exp(x)$ that satisfies $$f(x_1 + x_2) = f(x_1)f(x_2), \quad f(0) = 1.$$ We desire to generalize $\exp(x)$ to the complex plane, so that $\exp(x + 0\mathrm{i}) = \exp(x) \in \mathbb{R}$.
+
+To avoid confusion, we call this unknown function $f : \mathbb{C}\to \mathbb{C}$.
+
+## Exercises
+
+:::{#exr-complex-exponential-thus-need-determine}
+
+Show that $f(x + \mathrm{i}y) = \exp(x) f(\mathrm{i}y)$. (Thus, we need to determine $f(\mathrm{i}y)$.)
+
+:::
+
+:::{#exr-complex-exponential-set-hence-hint-cauchy-riemann}
+
+We set $f(\mathrm{i}y) = A(y) + \mathrm{i}B(y)$. Show that $$A(y) =  B'(y), \quad B(y) = - A'(y),$$ and hence that $A''(y) = -A(y)$. Hint: Cauchy--Riemann.
+
+:::
+
+:::{#exr-complex-exponential-general-solution-ode-where-constants-determined}
+
+The general solution to the ODE $A'' = -A$ is $$A(y) = \alpha \cos(y) + \beta\sin(y),$$ where $\alpha$ and $\beta$ are constants to be determined. Show that $\alpha = 1$ and $\beta = 0$ are the only constants compatible with $f(z)$ being a generalization of the real exponential function.
+
+:::
+
+:::{#exr-complex-exponential-conclude}
+
+Conclude that $$f(x + \mathrm{i}y) = e^x(\cos y + \mathrm{i}\sin y)$$
+
+:::
+
+:::{#exr-complex-exponential-cauchy-riemann-everywhere-analytic}
+
+Show that $(\exp(z))' = \exp(z)$, using Cauchy--Riemann, and that $\exp(z)$ is everywhere analytic.
+
+:::
+
+:::{#exr-complex-exponential-equation-has-infinitely-many-solutions-any}
+
+Show that the equation $$\exp(z) = w$$ has infinitely many solutions for any $w\neq 0$.
+
+:::
+
+:::{#exr-complex-exponential-exercise}
+
+Show that $\exp(z) \neq 0$.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: The complex exponential function
+
+**Tutor note:** I think that this exercise is very nice. It is not too hard if the student has some experience with the equation $y'' = -y$.
+
+### Solution to @exr-complex-exponential-thus-need-determine
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-set-hence-hint-cauchy-riemann
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-general-solution-ode-where-constants-determined
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-conclude
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-cauchy-riemann-everywhere-analytic
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-equation-has-infinitely-many-solutions-any
+
+*The source does not supply a solution.*
+
+### Solution to @exr-complex-exponential-exercise
+
+*The source does not supply a solution.*
+
+:::

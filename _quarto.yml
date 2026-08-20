@@ -7,8 +7,8 @@ project:
   type: book
   output-dir: docs
   resources:
-    - figures/**
-    - fonts/**
+    - /figures/**
+    - /fonts/**
 
 book:
   title: "ESQC mathematics exercises"
@@ -25,28 +25,52 @@ book:
         - chapters/recommendations-per-topic.qmd
 
     - part: "Mathematical foundations"
-      chapters: []
+      chapters:
+        - chapters/sets-and-functions.qmd
+        - chapters/cardinality-and-countability.qmd
 
     - part: "Linear algebra"
-      chapters: []
+      chapters:
+        - chapters/general-vector-spaces.qmd
+        - chapters/vectors-and-matrices.qmd
+        - chapters/complex-vector-space.qmd
+        - chapters/gaussian-elimination.qmd
+        - chapters/bra-ket-notation.qmd
+        - chapters/eigenvalues-and-diagonalization.qmd
+        - chapters/gram-schmidt.qmd
+        - chapters/singular-value-decomposition.qmd
+        - chapters/polynomial-vector-spaces.qmd
 
     - part: "Metric spaces and topology"
-      chapters: []
+      chapters:
+        - chapters/metric-spaces.qmd
+        - chapters/open-and-closed-sets.qmd
 
     - part: "Calculus"
       chapters: []
 
     - part: "Multivariable calculus"
-      chapters: []
+      chapters:
+        - chapters/visualizing-functions.qmd
+        - chapters/continuity-and-differentiability.qmd
 
     - part: "Series and matrix functions"
-      chapters: []
+      chapters:
+        - chapters/matrix-exponentials-and-commutators.qmd
 
     - part: "Complex numbers and complex analysis"
-      chapters: []
+      chapters:
+        - chapters/complex-arithmetic.qmd
+        - chapters/complex-sets.qmd
+        - chapters/complex-exponential.qmd
+        - chapters/complex-power-series.qmd
+        - chapters/singularities-and-contour-integrals.qmd
 
     - part: "Numerical methods"
-      chapters: []
+      chapters:
+        - chapters/dual-numbers.qmd
+        - chapters/newtons-method.qmd
+        - chapters/complex-step-differentiation.qmd
 
     - part: "Fourier analysis"
       chapters: []

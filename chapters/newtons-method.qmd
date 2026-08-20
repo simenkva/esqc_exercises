@@ -1,0 +1,76 @@
+# Newton's method
+
+Newton's method replaces a nonlinear system by its first-order Taylor approximation at each iteration.
+
+In the next exercise, we derive the Newton--Raphson method for root finding.
+
+Let $f : \Omega \subset \mathbb{R}^n \to \mathbb{R}^n$ be a function of class $C^2$. We seek $\mathbf{x}\in\Omega$ such that $f(\mathbf{x})=0$.
+
+Assume we have an initial guess $\mathbf{x}_0\in\Omega$.
+
+## Exercises
+
+:::{#exr-newtons-method-explain-why-following-polynomial-good-approximation}
+
+Explain why the following polynomial is a good approximation to $f(\mathbf{x})$ near $\mathbf{x}_0$: $$p(\mathbf{x}) = f(\mathbf{x}_0) + J(\mathbf{x}-\mathbf{x}_0), \quad J = Df(\mathbf{x}_0).$$
+
+:::
+
+:::{#exr-newtons-method-newton-s-method-now-finds-new}
+
+Newton's method now finds a new guess $\mathbf{x}_1$ by finding the root of the Taylor polynomial, i.e., $p(\mathbf{x}_1) = 0$. Write down a formula for $\mathbf{x}_1$, assuming that the matrix $J$ has an inverse.
+
+:::
+
+:::{#exr-newtons-method-suppose-true-solution-assume-error-sufficiently}
+
+Suppose the true solution is $\mathbf{x}_* \in \Omega$, and assume that the error in $\mathbf{x}_0$ is sufficiently small. Find an estimate for the error of $\mathbf{x}_1$. Assuming that the error can be converted to significant digits $n$, what is the number of significant digits in $\mathbf{x}_1$? Hint: Look at the remainder term.
+
+:::
+
+:::{#exr-newtons-method-suppose-successive-iterations-performed-how-many}
+
+Suppose successive iterations are performed. How many digits do you have after $k$ iterations?
+
+:::
+
+:::{#exr-newtons-method-make-python-implementation-newton-s-method}
+
+Make a Python implementation of Newton's method and test it on the following function: $$f(x,y) = (e^x y^3 - 1, y^2 - \sin(x) - 1).$$ It can be an idea to try and visualize the function. Two roots are: $$\{ (4.38277027, 0.23202192), \; (0,1) \}$$ Try different initial guesses $\mathbf{x}_0$, close to the roots and further away. How many iterations do you need to achieve machine precision for your guesses? Can you find more roots?
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Newton--Raphson method
+
+**Tutor note:** Newton--Raphson is an important nonlinear root-finding algorithm, although quantum-chemistry calculations may avoid a full Newton step because solving with the Jacobian is expensive. This exercise also develops Taylor approximations of vector-valued functions.
+
+### Solution to @exr-newtons-method-explain-why-following-polynomial-good-approximation
+
+For a $C^2$ function, Taylor's theorem gives
+
+$$
+f(\mathbf{x})=f(\mathbf{x}_0)+Df(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)
++\mathcal{O}(\|\mathbf{x}-\mathbf{x}_0\|^2).
+$$
+
+### Solution to @exr-newtons-method-newton-s-method-now-finds-new
+
+$$\mathbf{x}_1 = \mathbf{x}_0 - J^{-1} f(\mathbf{x}_0).$$
+
+### Solution to @exr-newtons-method-suppose-true-solution-assume-error-sufficiently
+
+*The source does not supply a solution.*
+
+### Solution to @exr-newtons-method-suppose-successive-iterations-performed-how-many
+
+*The source does not supply a solution.*
+
+### Solution to @exr-newtons-method-make-python-implementation-newton-s-method
+
+*The source does not supply a solution.*
+
+:::

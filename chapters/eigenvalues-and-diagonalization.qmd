@@ -1,0 +1,157 @@
+# Eigenvalues and diagonalization
+
+These exercises develop the spectral theorem and apply determinants to finite-dimensional eigenvalue problems.
+
+## Exercises
+
+### Eigenvalue decomposition
+
+Of great importance to quantum chemistry is the time-independent Schrödinger equation: Given the Hamiltonian operator $\hat{H}$, which is usually Hermitian, find a nonzero $\left|\psi\right\rangle$, called an eigenvector, and a real number $E$, called an eigenvalue, such that $$\hat{H} \left|\psi\right\rangle = E \left|\psi\right\rangle.$$ Choosing a particular orthonormal basis $\{\left|\phi_i\right\rangle\}$ for Hilbert space, a matrix eigenvalue problem arises, $$A \mathbf{u} = E \mathbf{u}, \quad u_i = \left\langle\phi_i|\psi\right\rangle, \quad A_{ij} = \left\langle\phi_i|\hat{H}|\phi_j\right\rangle.$$
+
+We prove the spectral theorem for normal operators over finite dimensional Hilbert spaces. The spectral theorem states that one can actually find a *basis* of eigenvectors for normal operators. The normal operators include the Hermitian operators.
+
+In this section, we let $M(n) = M(n,n,\mathbb{C}) = \mathbb{C}^{n\times n}$ be the set of complex square matrices of dimension $n$.
+
+Two matrices $A$ and $B$ are said to be *similar* if there is an invertible matrix $U$ such that $A = U B U^{-1}$. If $U$ is unitary, then $A$ and $B$ are *unitarily similar*. ($U$ is unitary if and only if $U^H = U^{-1}$.)
+
+:::{#exr-curious-eigenvalues-and-diagonalization-eigenvalue-decomposition}
+
+1.  What does it mean that $A \in M(n)$ is normal?
+
+2.  Prove that a diagonal matrix $D \in M(n)$ is normal. (A matrix $A$ is diagonal if and only if $A_{ij}=0$ whenever $i\neq j$.)
+
+3.  Prove that $U$ is unitary if and only if its columns are orthonormal.
+
+4.  Prove that if $A$ is normal and $B$ is unitarily similar to $A$, then $B$ is normal.
+
+5.  Prove that if $A$ is unitarily equivalent to a diagonal matrix, then $A$ is normal.
+
+The next part requires *Schur's Lemma*:
+
+> **Lemma: Schur's Lemma.** Let $A \in M(n)$. Then $A$ is unitarily equivalent to an upper triangular matrix. ($R$ is upper triangular if $R_{ij}=0$ whenever $i > j$.)
+
+The proof of Shur's Lemma can be found in, e.g., Fraleigh and Beauregard.
+
+1.  Prove that every normal matrix $A$ is unitarily equivalent to a normal upper-triangular matrix $B$. (Use Schur's Lemma and exercise that normality is preserved by unitary similarity.)
+
+2.  Prove that a normal upper triangular matrix $B$ must be diagonal. Hint: Let $C = B^H B = BB^H$, and compute $C_{11}$ to show that $B_{1j} = 0$ if $j > 1$. Continue to $C_{22}$, and all the way up to $C_{nn}$.
+
+We have now proved:
+
+> **Theorem: Spectral theorem for normal matrices.** Suppose $A \in M(n)$ is normal, i.e., $AA^H = A^H A$. Then there is a unitary matrix $U \in M(n)$ and a diagonal matrix $D \in M(n)$ such that $$A = U D U^H. \quad\text{spectral decomposition}$$
+
+1.  Let $\mathbf{u}_i = U_{:.i}$ be the $i$th column for $U$. Explain why these vectors form a basis for $\mathbb{C}^n$.
+
+2.  Show that $$A = \sum_{i=1}^n d_i \mathbf{u}_i \mathbf{u}_i^H, \quad d_i = D_{ii}. \quad\text{spectral decomposition}$$ Write this formula also using bra-ket notation.
+
+3.  What does $A$ do with the vector $\mathbf{u}_k$ for some $k$? What does $A$ do to a linear combination of the basis vectors?
+
+A special kind of normal matrix is a Hermitian matrix, for which $$A^H = A.$$
+
+1.  Show that a Hermitian matrix is unitarily equivalent to a diagonal matrix with *real* numbers on the diagonal, i.e., $A = U D U^H$ with $D_{ii} \in \mathbb{R}$.
+
+:::
+
+### Diagonalization of a matrix
+
+A matrix $A$ has an eigenvalue $E$ if and only if there is a nonzero solution to the linear system $$(A - EI)\mathbf{x} = 0.$$ Thus, the matrix $A - EI$ must be singular, i.e., not invertible. The eigenvector $\mathbf{x}$ is then a vector in the null space of this matrix.
+
+A sufficient and necessary criterion for invertibility of a matrix $B$ is that the *determinant* is nonzero. The definition of the determinant can be stated as follows:
+
+> **Definition: Determinant.** Let $A \in M(n)$. The determinant, written $\det(A) \in \mathbb{C}$ is defined by $$\det(A) = \sum_{p \in S_n} (-1)^{|p|} A_{1,p(1)} A_{2,p(2)} \cdots A_{n,p(n)}.$$ Here, $S_N$ is the set of *permutations* of the numbers $\{1,2,\cdots,n\}$. A permutation is by definition any bijective map.
+
+Each permutation $p \in S_n$ is a rearrangement is thus completely specified by the new order of the numbers $\{1,2,\cdots,n\}$, i.e., $(p(1),p(2),\cdots,p(n))$. For example, $(1,2,3,4,5,6) \in S_6$ is the *identity permutation* that leaves any number alone. The permutation $(3,2,1,4,6,5)$ makes 1 and 3 switch place, and 5 and 6.
+
+Any permutation can be written as a product (composition) of *transpositions*, i.e., exchanges of exactly two elements. Thus, $(3,1,2) = (1,2)(2,3)$. Here, the two-element notation indicates which elements are switched. Every decomposition of a given permutation uses either an even number of transpositions or an odd number, denoted $|p|$ modulo $2$. The *sign* of a permutation $p$ is $(-1)^{|p|}$.
+
+There are $n!$ unique permutations of an $n$-element set.
+
+:::{#exr-eigenvalues-and-diagonalization-write-out-set-permutations}
+
+Write out the set of permutations $S_1$, $S_2$ and $S_3$.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise}
+
+Compute the sign of the permutations of the previous exercise.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension}
+
+Compute explicit expressions for the determinants of matrices of dimension 1, 2, and 3.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator}
+
+(Extra.) In Python, the module `itertools` contains an iterator class `permutations` that allow efficient looping over permutations. Can you write a function that computes the sign of a permutation? Use the internet for efficiency.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2}
+
+Compute explicit expressions for the determinants of matrices of dimension up to 3. By equating the determinant of $A - EI$ with zero, a polynomial equation in $E$ is obtained. Find the solutions in the case $n=2$.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues}
+
+Consider the matrix $$A = \begin{bmatrix} -1 & z \\ z & 1 \end{bmatrix} .$$ For which $z \in \mathbb{C}$ is $A$ Hermitian? Normal? Compute the eigenvalues as function of $z$. Also find the eigenvectors.
+
+:::
+
+:::{#exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors}
+
+For which values of $z$ does there exist a basis of eigenvectors?
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Eigenvalue decomposition
+
+**Tutor note:** This exercise may be considered for the especially interested student. It requires some mathematical argument skill. I would not consider it *hard*, though, but perhaps not focus on this exercise to begin with. I will try to make a solution for this in time.
+
+### Solution to @exr-curious-eigenvalues-and-diagonalization-eigenvalue-decomposition
+
+*The source does not supply a solution.*
+
+### Tutor note: Diagonalization of a matrix
+
+**Tutor note:** This exercise, I find quite important for understanding eigenvalue problems. I therefore recommend it. The students could also use computations in Python or similar if they find the analytic part a little hard.
+
+I think this is one of th exercises that the tutors should spend some time with.
+
+### Solution to @exr-eigenvalues-and-diagonalization-write-out-set-permutations
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues
+
+*The source does not supply a solution.*
+
+### Solution to @exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors
+
+*The source does not supply a solution.*
+
+:::

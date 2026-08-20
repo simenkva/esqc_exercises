@@ -1,0 +1,59 @@
+# Complex-step differentiation
+
+Complex-step differentiation estimates derivatives without the subtractive cancellation of a centered finite difference.
+
+Let $f(x)$ be a real-valued function, assumed to be analytic near some $x$, i.e., it agrees with its Taylor series in the vicinity of $x$.
+
+## Exercises
+
+:::{#exr-curious-complex-step-differentiation-complex-step-method}
+
+1.  Explain why there exists a complex analytic function near $x + 0\mathrm{i}$ that agrees with $f$ on the real axis.
+
+A classical method for computing a numerical derivative of a $C^1$ function is the finite difference approximation: $$f'(x) \approx \delta_h f(x) := \frac{f(x+h) - f(x-h)}{2h}.$$ The error is $\mathcal{O}(h^2)$. In the rest of the exercise, let $f$ be given by $$f(x) = \exp(x),$$ and we wish to differentiate around $x=1$.
+
+1.  Write a small program that uses standard double precision floating point arithmetic to compute the finite difference derivative for step lengths from the interval $h \in [10^{-9}, 10^{-1}]$.
+
+2.  Make a plot of the absolute value of the error in the approximation as function of $h$. Use log scales.
+
+The *complex step method* utilizes complex analyticity to avoid the cancellation errors seen in the finite difference scheme. It relies on the function in question being implemented/implementable using complex arithmetic.
+
+1.  Show that $$f(x + \mathrm{i}h) = f(x) + \mathrm{i}h f'(x) - \frac{1}{2}h^2 f''(x) - \frac{\mathrm{i}h^3}{6} f'''(x) + \mathcal{O}(h^4).$$
+
+2.  Solve for $f'(x)$, and show that $$f'(x) = \Im \frac{f(x + \mathrm{i}h)}{h} + \mathcal{O}(h^2).$$ This is the complex step method.
+
+3.  In the plot from above, add a plot of the error of the complex step method. Compare.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Tutor note: Complex step method
+
+**Tutor note:** I think the tutors might be surprised by this exercise! I learned about the method only last year. This exercise is very nice, in my opinion. However, it may be a little advanced for some students, because it requires basic understanding of cancellation errors in floating point arithmetic.
+
+### Solution to @exr-curious-complex-step-differentiation-complex-step-method
+
+**Source solution 1.**
+
+The real power series has a positive radius of convergence. Using the same coefficients for a complex argument gives a complex power series with the same radius of convergence, and hence a unique analytic extension near $x$.
+
+**Source solution 2.**
+
+The student should observe that the accuracy deteriorates when $h$ becomes too small, around $10^{-7}$.
+
+**Source solution 3.**
+
+Just compute the Taylor series.
+
+**Source solution 4.**
+
+The main observation is that the zeroth and second order terms are purely real, while the first and third are purely imaginary. The given approximation then eliminates the real parts, which explains the second-order error.
+
+**Source solution 5.**
+
+The student should observe that the accuracy does *not* deteriorate as it does for the centered difference. The complex-step formula avoids subtraction of nearly equal function values.
+
+:::

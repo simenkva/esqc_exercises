@@ -1,0 +1,91 @@
+# Cardinality and countability
+
+Cardinality compares sets through bijections. The exercises cover countable sets, Cantor's diagonal argument, and the cardinality of the continuum.
+
+Recall that the *cardinality* $|S|$ of a set $S$ is the number of elements in $S$. For finite sets, this is intuitive, but what about infinite sets?
+
+One says that $A$ and $B$ have the same cardinality if there exists a bijection $f : A \to B$, i.e., $f$ is one-to-one and onto. (Intuitively, you can draw lines between individual elements of $A$ and $B$, only one line to/from each element. Precisely: Onto means, to every $b \in B$ there exists a $a \in A$ such that $f(a) = b$. One-to-one: $f(a)=f(a')$ implies $a=a'$.) One can think of the bijection as labelling each $b\in B$ by exactly one element $a\in A$, and that all labels from $A$ are used up.
+
+Let $\mathbb{N}_n = \{1, 2, \cdots, n\}$. This set has cardinality $n$.
+
+The set $\mathbb{N}$ has an infinite number of elements. By definition, $|\mathbb{N}|= \aleph_0$ ("aleph-nought").
+
+## Exercises
+
+:::{#exr-recommended-cardinality-and-countability-explicitly-constructing-bijection}
+
+Show that $|\mathbb{Z}|=\aleph_0$ by explicitly constructing a bijection $f : \mathbb{N}\to \mathbb{Z}$.
+
+:::
+
+:::{#exr-cardinality-and-countability-hint-draw-picture-try-draw-line}
+
+Show that $|\mathbb{N}\times \mathbb{N}| = \aleph_0$. Hint: Draw a picture of $\mathbb{N}\times \mathbb{N}$, and try to draw a line through all the points in this set. How does this show the existence of a bijection between $\mathbb{N}$ and $\mathbb{N}\times\mathbb{N}$?
+
+:::
+
+:::{#exr-cardinality-and-countability-exercise}
+
+Show that $|\mathbb{Q}|= \aleph_0$.
+
+:::
+
+:::{#exr-cardinality-and-countability-interval-has-same-cardinality-you-must}
+
+Show that the interval $I = (-1,1)$ has the same cardinality as $\mathbb{R}$. You must construct a function $f : (-1,1)\to\mathbb{R}$ that is a bijection.
+
+:::
+
+:::{#exr-cardinality-and-countability-exercise-cardinality-would-if-could-write}
+
+In this exercise, we show that $|\mathbb{R}|  > \aleph_0$. The cardinality would be $\aleph_0$ if we could write a list of the real numbers. It suffices to find a list of the numbers in $I = [0,1[$, i.e., infinite decimal expansions $0.d_1d_2d_3\cdots$, with $d_i\in \{0,1,2,3,4,5,6,7,8,9\}$.
+
+We will look for a contradiction. Consider a list $x_1,x_2,x_3,\ldots$ of all real numbers in $[0,1[$. This is essentially an infinite matrix of digits. Can you find a real number $x \in [0,1]$ which is *not* in this list, i.e., $x \neq x_j$ for all $j$? Hint: consider the diagonal of the matrix.
+
+The cardinality of $\mathbb{R}$, "the continuum", is written $2^{\aleph_0}$.
+
+:::
+
+:::{#exr-cardinality-and-countability-constructing-one-one-map-hint-use}
+
+Show that $|[0,1[\times [0,1[| = |[0,1[|$, by constructing a one-to-one map. Hint: Use decimal expansions. Conclude that also $|\mathbb{R}^2| = |\mathbb{C}| = |\mathbb{R}|$.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-recommended-cardinality-and-countability-explicitly-constructing-bijection
+
+We construct a map $f : \mathbb{N}\to \mathbb{Z}$. We let the even numbers in $\mathbb{N}$ map to positive numbers in $\mathbb{Z}$, and odd numbers in $\mathbb{N}$ to negative numbers. For every $n \in \mathbb{N}$, $$f(2n) = n, \quad f(2n+1) = -n-1.$$ We get $f(0) = 0$, $f(1) = -1$, $f(2) = 1$, $f(3) = -2$, etc.
+
+### Solution to @exr-cardinality-and-countability-hint-draw-picture-try-draw-line
+
+Draw a picture of $\mathbb{N}\times \mathbb{N}$ - a uniform grid. The line can be drawn in many ways, but the easiest is perhaps to connect $(0,0) - (0,1) - (1,0) - (2,0) - (1,1) - (0,2) - \ldots$
+
+### Solution to @exr-cardinality-and-countability-exercise
+
+Use that $x \in \mathbb{Q}$ is represented as a fraction, i.e., a point in $\mathbb{N}\times \mathbb{N}$. Actually, $x$ is an equivalence class, so some points in $\mathbb{N}\times \mathbb{N}$ are eliminated.
+
+### Solution to @exr-cardinality-and-countability-interval-has-same-cardinality-you-must
+
+One possible bijection is
+
+$$
+f(x)=\frac{x}{1-|x|}, \qquad -1<x<1.
+$$
+
+Its inverse is $g(y)=y/(1+|y|)$ for $y\in\mathbb{R}$.
+
+### Solution to @exr-cardinality-and-countability-exercise-cardinality-would-if-could-write
+
+The proof is called Cantor's diagonalization argument, and is used in several other important results. (For example, to prove that there is no Turing machine that can determine whether an arbitrary Turing machine stops.)
+
+Let the $k$th digit be different from the $k$th digit of number $k$ in the list. Then the real number thus constructed cannot be equal to any of the numbers in the list.
+
+### Solution to @exr-cardinality-and-countability-constructing-one-one-map-hint-use
+
+Let every even-numbered decimal from $x$ be the decimal of $y_1$ and odd decimal the decimal of $y_2$, respectively. This maps decimal expansions $x$ onto pairs of decimal expansions $(y_1,y_2)$. Clearly, the inverse mapping can be created, too.
+
+:::
