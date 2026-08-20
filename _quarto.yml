@@ -24,52 +24,41 @@ book:
         - chapters/recommendations-first-day.qmd
         - chapters/recommendations-per-topic.qmd
 
-    - part: "Mathematical notation and conventions"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-
-    - part: "Methods of proof"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+    - part: "Mathematical foundations"
+      chapters: []
 
     - part: "Linear algebra"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
+
+    - part: "Metric spaces and topology"
+      chapters: []
 
     - part: "Calculus"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-    - part: "Multivariable calculus"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-    - part: "Complex analysis"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
 
-    - part: "Series expansions"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+    - part: "Multivariable calculus"
+      chapters: []
+
+    - part: "Series and matrix functions"
+      chapters: []
+
+    - part: "Complex numbers and complex analysis"
+      chapters: []
+
+    - part: "Numerical methods"
+      chapters: []
 
     - part: "Fourier analysis"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
 
     - part: "Ordinary differential equations"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
 
     - part: "Partial differential equations"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
 
     - part: "Optimization"
-      chapters:
-        - chapters/PLACEHOLDER_CHAPTER.qmd
+      chapters: []
 
 
 bibliography: references.bib
