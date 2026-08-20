@@ -1,0 +1,141 @@
+<!--
+CODEX AUTHORING TEMPLATE
+
+Use this file as the structural model when you generate an exercise chapter,
+convert source material from LaTeX, or revise an existing chapter. Copy the
+file to the requested chapter path unless the user asks you to edit this
+template itself.
+
+Authoring rules
+
+1. Keep one level-one heading for the chapter title. Follow it with a short
+   introduction that gives students the definitions, notation, and assumptions
+   needed for the exercises. Do not solve an exercise in the introduction.
+2. Put student tasks under `## Exercises`. Wrap each exercise in its own fenced
+   div with a unique lowercase label of the form `exr-short-name`:
+
+   :::{#exr-short-name}
+   Exercise text.
+   :::
+
+3. Write each task so that a student can identify the given information and
+   the requested result. Use lettered subparts when one calculation has several
+   stages. Keep notation consistent between the introduction, exercise, and
+   solution.
+4. Put all answers under `## Solutions` inside one tutor-only fenced div:
+
+   ::: {.content-visible when-profile="tutor"}
+   ## Solutions
+   ### Solution to @exr-short-name
+   Solution text.
+   :::
+
+5. Match each solution to the exercise through its `@exr-...` reference. Show
+   enough algebra to expose the method and finish with the requested result.
+   Keep answers, hints that reveal an answer, and grading notes inside the
+   tutor-only div.
+
+LaTeX conversion rules
+
+- Convert chapter and section commands to Quarto headings at the same logical
+  depth. Keep the single chapter title at level one.
+- Use `$...$` for inline mathematics and `$$...$$` for display mathematics.
+  Preserve valid LaTeX notation supported by MathJax.
+- Convert each exercise environment to an `exr-...` fenced div. Convert its
+  solution environment to the matching tutor-only solution section.
+- Preserve the mathematical meaning, symbols, assumptions, and supplied data.
+  Flag an ambiguity in a source comment instead of inventing missing data.
+- Do not add citations, learning objectives, or extra exercises unless the user
+  requests them.
+
+Checks before handoff
+
+- Render both `student` and `tutor` profiles.
+- Confirm that exercise references resolve in both profiles.
+- Confirm that the student output contains no solution text.
+- Confirm that the tutor output contains each solution.
+
+The chapter below is a complete worked example. Replace its subject matter when
+you create another chapter, but retain its hierarchy, labels, and profile gate.
+-->
+
+# BCH expansion and exponentials of operators
+
+## Introduction
+
+Coupled-cluster calculations use exponentials of operators. We will treat the
+operators as finite square matrices. For a square matrix $T$, define the matrix
+exponential by the power series
+
+$$
+\exp(T) = \sum_{n=0}^{\infty} \frac{T^n}{n!}.
+$$ {#eq-matrix-exponential}
+
+The zeroth power is the identity matrix, $T^0=I$.
+
+## Exercises
+
+:::{#exr-matrix-exponential}
+
+Consider the matrix exponential in @eq-matrix-exponential.
+
+a. Write the first five terms of the power series.
+
+b. Explain why $T$ must be square for every term in the series to be defined.
+
+c. Let
+
+   $$
+   T =
+   \begin{bmatrix}
+   0 & 1 \\
+   -1 & 0
+   \end{bmatrix}.
+   $$
+
+   Compute $T^2$, $T^3$, and $T^4$. Use the results to evaluate the degree-four
+   approximation to $\exp(T)$.
+
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+### Solution to @exr-matrix-exponential
+
+a. Substituting $n=0,1,2,3,4$ in @eq-matrix-exponential gives
+
+   $$
+   \exp(T)
+   = I + T + \frac{1}{2}T^2 + \frac{1}{6}T^3
+   + \frac{1}{24}T^4 + \cdots.
+   $$
+
+b. The product $T^2=TT$ requires the number of columns of the first factor to
+   equal the number of rows of the second. Repeated powers $T^n$ therefore keep
+   the same dimensions only when $T$ is square. The identity $I=T^0$ must have
+   those dimensions as well.
+
+c. Direct multiplication gives
+
+   $$
+   T^2=-I, \qquad T^3=-T, \qquad T^4=I.
+   $$
+
+   The degree-four approximation is
+
+   $$
+   \begin{aligned}
+   I + T + \frac{1}{2}T^2 + \frac{1}{6}T^3 + \frac{1}{24}T^4
+   &= I + T - \frac{1}{2}I - \frac{1}{6}T + \frac{1}{24}I \\
+   &= \frac{13}{24}I + \frac{5}{6}T \\
+   &=
+   \begin{bmatrix}
+   13/24 & 5/6 \\
+   -5/6 & 13/24
+   \end{bmatrix}.
+   \end{aligned}
+   $$
+
+:::

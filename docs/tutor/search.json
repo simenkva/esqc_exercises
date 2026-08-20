@@ -142,33 +142,33 @@
     ]
   },
   {
-    "objectID": "chapters/bch-expansion.html",
-    "href": "chapters/bch-expansion.html",
+    "objectID": "chapters/exercise-template.html",
+    "href": "chapters/exercise-template.html",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "",
-    "text": "13.1 Introduction\nIn coupled-cluster theory we have need for computing the exponential of an operator. Mathematically, this topic is rather delicate, but it simplifies once we assume that the operators are merely matrices. Thus, let \\(T\\) be a square matrix, and define the matrix exponential of \\(T\\) as\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]",
+    "text": "13.1 Introduction\nCoupled-cluster calculations use exponentials of operators. We will treat the operators as finite square matrices. For a square matrix \\(T\\), define the matrix exponential by the power series\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]\nThe zeroth power is the identity matrix, \\(T^0=I\\).",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
     ]
   },
   {
-    "objectID": "chapters/bch-expansion.html#exercises",
-    "href": "chapters/bch-expansion.html#exercises",
+    "objectID": "chapters/exercise-template.html#exercises",
+    "href": "chapters/exercise-template.html#exercises",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "13.2 Exercises",
-    "text": "13.2 Exercises\n\nExercise 13.1 Consider equation Equation 13.1.\n\nWrite out the 5 first terms of the series expansion.\nWhy must we require that \\(T\\) is a square matrix in order for the series to be well-defined?\nLet \\(T\\) be the \\(2\\times 2\\) matrix\n\\[\n     T = \\begin{bmatrix}\n         0 & 1 \\\\\n         -1 & 0\n     \\end{bmatrix}.\n\\]\nCompute the first 5 terms of the matrix exponential \\(\\exp(T)\\) using the series expansion. You may find it useful to compute the powers of \\(T\\) first.",
+    "text": "13.2 Exercises\n\nExercise 13.1 Consider the matrix exponential in Equation 13.1.\n\nWrite the first five terms of the power series.\nExplain why \\(T\\) must be square for every term in the series to be defined.\nLet\n\\[\nT =\n\\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix}.\n\\]\nCompute \\(T^2\\), \\(T^3\\), and \\(T^4\\). Use the results to evaluate the degree-four approximation to \\(\\exp(T)\\).",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
     ]
   },
   {
-    "objectID": "chapters/bch-expansion.html#solutions",
-    "href": "chapters/bch-expansion.html#solutions",
+    "objectID": "chapters/exercise-template.html#solutions",
+    "href": "chapters/exercise-template.html#solutions",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "13.3 Solutions",
-    "text": "13.3 Solutions\n\n13.3.1 Solution to Exercise 13.1\n\nThe first five terms of the series expansion of \\(\\exp(T)\\) are:\n\n\\[\n\\exp(T) = I + T + \\frac{1}{2} T^2 + \\frac{1}{6} T^3 + \\frac{1}{24} T^4 + \\cdots\n\\]\n\nWe require that \\(T\\) is a square matrix because the powers of \\(T\\) (i.e., \\(T^n\\)) are only defined for square matrices. If \\(T\\) were not square, the product \\(T^n\\) would not be well-defined for \\(n &gt; 1\\), as the dimensions would not match for matrix multiplication.\nTo compute the matrix exponential \\(\\exp(T)\\) for the given \\(2\\times 2\\) matrix \\(T\\), we first calculate the powers of \\(T\\):\n\n\nCompute \\(T^2\\): \\[\nT^2 = \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 0 \\\\\n0 & -1\n\\end{bmatrix} = -I.\n\\]\nCompute \\(T^3\\): \\[\nT^3 = T \\cdot T^2 = \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} \\begin{bmatrix}\n-1 & 0 \\\\\n0 & -1\n\\end{bmatrix} = \\begin{bmatrix}\n0 & -1 \\\\\n1 & 0\n\\end{bmatrix} = -T.\n\\]\nCompute \\(T^4\\): \\[\nT^4 = T^2 \\cdot T^2 = (-I) \\cdot (-I) = I.\n\\]\n\nNow we can substitute these results into the series expansion: \\[\n\\exp(T) = I + T + \\frac{1}{2}(-I) + \\frac{1}{6}(-T) + \\frac{1}{24}I + \\cdots\n\\]\nCombining like terms, we have: \\[\n\\exp(T) = \\left(1 - \\frac{1}{2} + \\frac{1}{24}\\right)I + \\left(1 - \\frac{1}{6}\\right)T + \\cdots\n\\]",
+    "text": "13.3 Solutions\n\n13.3.1 Solution to Exercise 13.1\n\nSubstituting \\(n=0,1,2,3,4\\) in Equation 13.1 gives\n\\[\n\\exp(T)\n= I + T + \\frac{1}{2}T^2 + \\frac{1}{6}T^3\n+ \\frac{1}{24}T^4 + \\cdots.\n\\]\nThe product \\(T^2=TT\\) requires the number of columns of the first factor to equal the number of rows of the second. Repeated powers \\(T^n\\) therefore keep the same dimensions only when \\(T\\) is square. The identity \\(I=T^0\\) must have those dimensions as well.\nDirect multiplication gives\n\\[\nT^2=-I, \\qquad T^3=-T, \\qquad T^4=I.\n\\]\nThe degree-four approximation is\n\\[\n\\begin{aligned}\nI + T + \\frac{1}{2}T^2 + \\frac{1}{6}T^3 + \\frac{1}{24}T^4\n&= I + T - \\frac{1}{2}I - \\frac{1}{6}T + \\frac{1}{24}I \\\\\n&= \\frac{13}{24}I + \\frac{5}{6}T \\\\\n&=\n\\begin{bmatrix}\n13/24 & 5/6 \\\\\n-5/6 & 13/24\n\\end{bmatrix}.\n\\end{aligned}\n\\]",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"

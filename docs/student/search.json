@@ -142,22 +142,22 @@
     ]
   },
   {
-    "objectID": "chapters/bch-expansion.html",
-    "href": "chapters/bch-expansion.html",
+    "objectID": "chapters/exercise-template.html",
+    "href": "chapters/exercise-template.html",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "",
-    "text": "13.1 Introduction\nIn coupled-cluster theory we have need for computing the exponential of an operator. Mathematically, this topic is rather delicate, but it simplifies once we assume that the operators are merely matrices. Thus, let \\(T\\) be a square matrix, and define the matrix exponential of \\(T\\) as\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]",
+    "text": "13.1 Introduction\nCoupled-cluster calculations use exponentials of operators. We will treat the operators as finite square matrices. For a square matrix \\(T\\), define the matrix exponential by the power series\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]\nThe zeroth power is the identity matrix, \\(T^0=I\\).",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
     ]
   },
   {
-    "objectID": "chapters/bch-expansion.html#exercises",
-    "href": "chapters/bch-expansion.html#exercises",
+    "objectID": "chapters/exercise-template.html#exercises",
+    "href": "chapters/exercise-template.html#exercises",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "13.2 Exercises",
-    "text": "13.2 Exercises\n\nExercise 13.1 Consider equation Equation 13.1.\n\nWrite out the 5 first terms of the series expansion.\nWhy must we require that \\(T\\) is a square matrix in order for the series to be well-defined?\nLet \\(T\\) be the \\(2\\times 2\\) matrix\n\\[\n     T = \\begin{bmatrix}\n         0 & 1 \\\\\n         -1 & 0\n     \\end{bmatrix}.\n\\]\nCompute the first 5 terms of the matrix exponential \\(\\exp(T)\\) using the series expansion. You may find it useful to compute the powers of \\(T\\) first.",
+    "text": "13.2 Exercises\n\nExercise 13.1 Consider the matrix exponential in Equation 13.1.\n\nWrite the first five terms of the power series.\nExplain why \\(T\\) must be square for every term in the series to be defined.\nLet\n\\[\nT =\n\\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix}.\n\\]\nCompute \\(T^2\\), \\(T^3\\), and \\(T^4\\). Use the results to evaluate the degree-four approximation to \\(\\exp(T)\\).",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
