@@ -1,7 +1,94 @@
 # BCH expansion and exponentials of operators
 
-Content coming soon.
+## Introduction
+
+In coupled-cluster theory we have need for computing the exponential of an operator. Mathematically, this topic is rather delicate, but it simplifies once we assume that the operators are merely matrices. Thus, let $T$ be a square matrix, and define the matrix exponential of $T$ as
+
+$$
+\exp(T) = \sum_{n=0}^{\infty} \frac{T^n}{n!}.
+$$ {#eq-matrix-exponential}
+
+## Exercises
+
+:::{#exr-matrix-exponential}
+
+Consider equation {eq-matrix-exponential}. 
+
+a. Write out the 5 first terms of the series expansion.
+b. Why must we require that $T$ is a square matrix in order for the series to be well-defined?
+c. Let $T$ be the $2\times 2$ matrix
+
+$$
+    T = \begin{bmatrix}
+        0 & 1 \\
+        -1 & 0
+    \end{bmatrix}.
+$$
+
+Compute the first 5 terms of the matrix exponential $\exp(T)$ using the series expansion. You may find it useful to compute the powers of $T$ first.
+
+
+
+
+:::
 
 ::: {.content-visible when-profile="tutor"}
-Tutor-only content coming soon.
+
+## Solutions
+
+### Solution to {#exr-matrix-exponential}
+
+a. The first five terms of the series expansion of $\exp(T)$ are:  
+
+$$
+\exp(T) = I + T + \frac{1}{2} T^2 + \frac{1}{6} T^3 + \frac{1}{24} T^4 + \cdots
+$$
+
+b. We require that $T$ is a square matrix because the powers of $T$ (i.e., $T^n$) are only defined for square matrices. If $T$ were not square, the product $T^n$ would not be well-defined for $n > 1$, as the dimensions would not match for matrix multiplication.
+
+c. To compute the matrix exponential $\exp(T)$ for the given $2\times 2$ matrix $T$, we first calculate the powers of $T$:
+
+1. Compute $T^2$:
+$$
+T^2 = \begin{bmatrix}
+0 & 1 \\
+-1 & 0
+\end{bmatrix} \begin{bmatrix}
+0 & 1 \\
+-1 & 0
+\end{bmatrix} = \begin{bmatrix}
+-1 & 0 \\
+0 & -1
+\end{bmatrix} = -I.
+$$
+
+2. Compute $T^3$:
+$$
+T^3 = T \cdot T^2 = \begin{bmatrix}
+0 & 1 \\
+-1 & 0
+\end{bmatrix} \begin{bmatrix}
+-1 & 0 \\
+0 & -1
+\end{bmatrix} = \begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix} = -T.
+$$
+
+3. Compute $T^4$:
+$$
+T^4 = T^2 \cdot T^2 = (-I) \cdot (-I) = I.
+$$
+
+Now we can substitute these results into the series expansion:
+$$
+\exp(T) = I + T + \frac{1}{2}(-I) + \frac{1}{6}(-T) + \frac{1}{24}I + \cdots
+$$
+
+Combining like terms, we have:
+$$
+\exp(T) = \left(1 - \frac{1}{2} + \frac{1}{24}\right)I + \left(1 - \frac{1}{6}\right)T + \cdots
+$$
+
 :::

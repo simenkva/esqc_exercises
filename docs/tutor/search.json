@@ -146,7 +146,29 @@
     "href": "chapters/bch-expansion.html",
     "title": "13  BCH expansion and exponentials of operators",
     "section": "",
-    "text": "Content coming soon.\nTutor-only content coming soon.",
+    "text": "13.1 Introduction\nIn coupled-cluster theory we have need for computing the exponential of an operator. Mathematically, this topic is rather delicate, but it simplifies once we assume that the operators are merely matrices. Thus, let \\(T\\) be a square matrix, and define the matrix exponential of \\(T\\) as\n\\[\n\\exp(T) = \\sum_{n=0}^{\\infty} \\frac{T^n}{n!}.\n\\tag{13.1}\\]",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/bch-expansion.html#exercises",
+    "href": "chapters/bch-expansion.html#exercises",
+    "title": "13  BCH expansion and exponentials of operators",
+    "section": "13.2 Exercises",
+    "text": "13.2 Exercises\n\nExercise 13.1 Consider equation {eq-matrix-exponential}.\n\nWrite out the 5 first terms of the series expansion.\nWhy must we require that \\(T\\) is a square matrix in order for the series to be well-defined?\nLet \\(T\\) be the \\(2\\times 2\\) matrix\n\n\\[\n    T = \\begin{bmatrix}\n        0 & 1 \\\\\n        -1 & 0\n    \\end{bmatrix}.\n\\]\nCompute the first 5 terms of the matrix exponential \\(\\exp(T)\\) using the series expansion. You may find it useful to compute the powers of \\(T\\) first.",
+    "crumbs": [
+      "Response theory",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/bch-expansion.html#solutions",
+    "href": "chapters/bch-expansion.html#solutions",
+    "title": "13  BCH expansion and exponentials of operators",
+    "section": "13.3 Solutions",
+    "text": "13.3 Solutions\n\n13.3.1 Solution to\n\nThe first five terms of the series expansion of \\(\\exp(T)\\) are:\n\n\\[\n\\exp(T) = I + T + \\frac{1}{2} T^2 + \\frac{1}{6} T^3 + \\frac{1}{24} T^4 + \\cdots\n\\]\n\nWe require that \\(T\\) is a square matrix because the powers of \\(T\\) (i.e., \\(T^n\\)) are only defined for square matrices. If \\(T\\) were not square, the product \\(T^n\\) would not be well-defined for \\(n &gt; 1\\), as the dimensions would not match for matrix multiplication.\nTo compute the matrix exponential \\(\\exp(T)\\) for the given \\(2\\times 2\\) matrix \\(T\\), we first calculate the powers of \\(T\\):\n\n\nCompute \\(T^2\\): \\[\nT^2 = \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} = \\begin{bmatrix}\n-1 & 0 \\\\\n0 & -1\n\\end{bmatrix} = -I.\n\\]\nCompute \\(T^3\\): \\[\nT^3 = T \\cdot T^2 = \\begin{bmatrix}\n0 & 1 \\\\\n-1 & 0\n\\end{bmatrix} \\begin{bmatrix}\n-1 & 0 \\\\\n0 & -1\n\\end{bmatrix} = \\begin{bmatrix}\n0 & -1 \\\\\n1 & 0\n\\end{bmatrix} = -T.\n\\]\nCompute \\(T^4\\): \\[\nT^4 = T^2 \\cdot T^2 = (-I) \\cdot (-I) = I.\n\\]\n\nNow we can substitute these results into the series expansion: \\[\n\\exp(T) = I + T + \\frac{1}{2}(-I) + \\frac{1}{6}(-T) + \\frac{1}{24}I + \\cdots\n\\]\nCombining like terms, we have: \\[\n\\exp(T) = \\left(1 - \\frac{1}{2} + \\frac{1}{24}\\right)I + \\left(1 - \\frac{1}{6}\\right)T + \\cdots\n\\]",
     "crumbs": [
       "Response theory",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>BCH expansion and exponentials of operators</span>"
