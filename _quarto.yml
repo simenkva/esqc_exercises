@@ -29,7 +29,7 @@ book:
       chapters:
         - chapters/sets-and-functions.qmd
         - chapters/cardinality-and-countability.qmd
-
+        - chapters/combinatorics.qmd
     - part: "Linear algebra"
       chapters:
         - chapters/general-vector-spaces.qmd

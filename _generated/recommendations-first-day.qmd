@@ -17,6 +17,9 @@ quantum chemistry topic taught at the school.
 
 - @exr-sets-and-functions-write-days-week-set
 - @exr-sets-potential-energy-curve
+- @exr-combinatorics-factorial
+- @exr-combinatorics-binomial-coefficients
+- @exr-combinatorics-pascals-triangle
 
 ## Recommended exercises
 
@@ -24,6 +27,7 @@ quantum chemistry topic taught at the school.
 - @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
 - @exr-molecule-sets
 - @exr-cardinality-and-countability-explicitly-constructing-bijection
+- @exr-combinatorics-factorial-arrangements
 - @exr-general-vector-spaces-general-vector-spaces
 - @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate
 - @exr-vectors-and-matrices-person-walks-home-first-they-walk
@@ -45,6 +49,9 @@ quantum chemistry topic taught at the school.
 
 ## Exercises for the curious
 
+- @exr-stirling-factorial
+- @exr-combinatorics-pascals-identity
+- @exr-combinatorics-pascal-sierpinski
 - @exr-complex-vector-space-complex-numbers-real-vector-space
 - @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition
 - @exr-gram-schmidt-gram-schmidt-orthogonalization

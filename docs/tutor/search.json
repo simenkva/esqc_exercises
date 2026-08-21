@@ -25,7 +25,7 @@
     "href": "_generated/recommendations-first-day.html#recommended-exercises",
     "title": "Recommended exercises for the first day",
     "section": "Recommended exercises",
-    "text": "Recommended exercises\n\nExercise 1.2\nExercise 1.8\nExercise 1.11\nExercise 2.1\nExercise 3.1\nExercise 4.2\nExercise 4.3\nExercise 4.6\nExercise 4.7\nExercise 6.3\nExercise 11.1\nExercise 11.2\nExercise 12.1\nExercise 14.1\nExercise 14.4\nExercise 15.1\nExercise 15.4\nExercise 17.1\nExercise 17.4\nExercise 17.6\nExercise 18.1\nExercise 21.1",
+    "text": "Recommended exercises\n\nExercise 1.2\nExercise 1.8\nExercise 1.11\nExercise 2.1\nExercise 3.2\nExercise 3.1\nExercise 4.2\nExercise 4.3\nExercise 4.6\nExercise 4.7\nExercise 6.3\nExercise 11.1\nExercise 11.2\nExercise 12.1\nExercise 14.1\nExercise 14.4\nExercise 15.1\nExercise 15.4\nExercise 17.1\nExercise 17.4\nExercise 17.6\nExercise 18.1\nExercise 21.1",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises for the first day"
@@ -36,7 +36,7 @@
     "href": "_generated/recommendations-first-day.html#exercises-for-the-curious",
     "title": "Recommended exercises for the first day",
     "section": "Exercises for the curious",
-    "text": "Exercises for the curious\n\nExercise 5.1\nExercise 8.1\nExercise 9.1\nExercise 10.1\nExercise 22.1\nExercise 24.1",
+    "text": "Exercises for the curious\n\nExercise 3.4\nExercise 3.7\nExercise 3.8\nExercise 5.1\nExercise 8.1\nExercise 9.1\nExercise 10.1\nExercise 22.1\nExercise 24.1",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises for the first day"
@@ -861,7 +861,7 @@
     "href": "_generated/recommendations-first-day.html#basic-exercises-recommended-for-beginners",
     "title": "Recommended exercises for the first day",
     "section": "",
-    "text": "Exercise 1.1\nExercise 1.10",
+    "text": "Exercise 1.1\nExercise 1.10\nExercise 3.1\nExercise 3.5\nExercise 3.6",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises for the first day"
@@ -887,6 +887,50 @@
     "crumbs": [
       "Mathematical foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sets and functions</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/combinatorics.html",
+    "href": "chapters/combinatorics.html",
+    "title": "3  Combinatorics",
+    "section": "",
+    "text": "3.1 Exercises: Factorials\nCombinatorics is the part of mathematics concerned with counting in a broad sense, for example counting the number of ways to arrange a set of objects or the number of combinations that can be made from a set of objects. It is a fundamental part of discrete mathematics and has applications in many areas of mathematics, computer science, chemistry, and physics.\nThe factorial of a non-negative integer \\(n\\) is defined as the product of all positive integers less than or equal to \\(n\\):\n\\[\n    n! = n \\cdot (n-1) \\cdot (n-2) \\cdots 3 \\cdot 2 \\cdot 1, \\quad n \\geq 1.\n\\]\nIt is also defined that \\(0! = 1\\). The factorial appears in many mathematical contexts, including series expansions, and of course combinatorics. Its basic use is the following:\nIn one exercise, you will need the following approximation for large \\(n\\), known as Stirling’s approximation:",
+    "crumbs": [
+      "Mathematical foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Combinatorics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/combinatorics.html#exercises-factorials",
+    "href": "chapters/combinatorics.html#exercises-factorials",
+    "title": "3  Combinatorics",
+    "section": "",
+    "text": "FactFactorial and counting\n\n\n\nGiven a set of \\(n\\) distinct objects, the number of ways to arrange them in a sequence (i.e., the number of permutations) is \\(n!\\).\n\n\n\n\n\n\n\n\n\nFactStirling’s approximation\n\n\n\nFor large \\(n\\), the factorial \\(n!\\) can be approximated as\n\\[\nn! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n.\n\\]\nIn calculations, especially numerical calculations, it is often convenient to use the logarithm of the factorial. Using Stirling’s approximation, we have\n\\[\n\\log(n!) \\approx \\frac{1}{2}\\log(2\\pi n) + n\\log(n) - n.\n\\]\n\n\n\nExercise 3.1 Compute the factorials \\(0!\\), \\(1!\\), \\(2!\\), \\(3!\\), \\(4!\\), and \\(5!\\).\n\n\nExercise 3.2 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?\n\n\nExercise 3.3 Compute the number of arrangements for the following scenarios:\n\nA chemist has 10 different chemical samples. How many ways can the chemist arrange the samples on a shelf?\nA chemist has 10 different chemical samples. 4 of the samples are liquids, and the other 6 are solids. How many ways can the chemist arrange the samples on a shelf if all the liquids must be together?\n\n\n\nExercise 3.4 (Stirling’s approximation) We study Stirling’s approximation for the factorial.\n\nUse Stirling’s approximation to estimate \\(5!\\). Compare your result with the exact result\n\n\\[\n5! = 120.\n\\]\n\nUse Stirling’s approximation to estimate \\(10!\\). Compare again with the exact number\n\n\\[\n10! = 3\\,628\\,800.\n\\]\n\nThe relative error of an approximation \\(A\\) to an exact value \\(x\\) is\n\n\\[\n\\frac{|A-x|}{x}.\n\\]\nCalculate the relative error of Stirling’s approximation for \\(5!\\) and \\(10!\\). For which value of \\(n\\) is the approximation better?\n\nUse Stirling’s approximation to estimate \\(50!\\). The exact value is approximately\n\n\\[\n50! \\approx 3.041\\times10^{64}.\n\\]\n\nBased on your results above, what happens to the accuracy of Stirling’s approximation as \\(n\\) increases?",
+    "crumbs": [
+      "Mathematical foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Combinatorics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/combinatorics.html#exercises-binomial-coefficients-and-pascals-triangle",
+    "href": "chapters/combinatorics.html#exercises-binomial-coefficients-and-pascals-triangle",
+    "title": "3  Combinatorics",
+    "section": "3.2 Exercises: Binomial coefficients and Pascal’s triangle",
+    "text": "3.2 Exercises: Binomial coefficients and Pascal’s triangle\nThe binomial coefficient \\(\\binom{n}{k}\\) is defined as the number of ways to choose \\(k\\) elements from a set of \\(n\\) elements, without regard to the order of selection. It is given by the formula:\n\\[\n\\binom{n}{k} = \\frac{n!}{k!(n-k)!},\n\\]\nPascal’s triangle is a triangular array of numbers where each number is the sum of the two numbers directly above it:\n\\[\n\\begin{gather}\n1 \\\\\n1 \\quad 1 \\\\\n1 \\quad 2 \\quad 1 \\\\\n1 \\quad 3 \\quad 3 \\quad 1 \\\\\n1 \\quad 4 \\quad 6 \\quad 4 \\quad 1 \\\\\n\\vdots\n\\end{gather}\n\\]\nFact: The \\(n\\)-th row of Pascal’s triangle contains the binomial coefficients \\(\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}\\).\n\nExercise 3.5  \n\nCompute the binomial coefficients \\(\\binom{5}{2}\\), \\(\\binom{6}{3}\\), and \\(\\binom{7}{4}\\).\nIn Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many different combinations of 7 numbers can be drawn?\n\n\n\nExercise 3.6 Compute the first 6 rows of Pascal’s triangle. Verify that the numbers in the \\(n\\)-th row correspond to the binomial coefficients \\(\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}\\).\n\n\nExercise 3.7 (Pascal’s identity) The binomial coefficients satisfy Pascal’s identity,\n\\[\n\\binom{n}{k}\n=\n\\binom{n-1}{k-1}\n+\n\\binom{n-1}{k}.\n\\]\n\nExplain why this relation is equivalent to the construction of Pascal’s triangle, where each number is the sum of the two numbers directly above it.\nWrite each binomial coefficient on the right-hand side in terms of factorials.\nPut the two terms over a common denominator and simplify the expression.\nShow that the resulting expression is\n\\[\n\\frac{n!}{k!(n-k)!},\n\\]\nand hence prove Pascal’s identity.\nGive a combinatorial explanation of Pascal’s identity. Hint: Consider choosing \\(k\\) objects from a set of \\(n\\) objects. Pick one particular object and separate the choices into two cases: those that contain this object and those that do not.\n\n\n\nExercise 3.8 Write a computer program to generate the first \\(2^n\\) rows of Pascal’s triangle, where \\(n=1,2,\\ldots\\). Create a \\(2^n\\times 2^n\\) lower triangular matrix \\(T\\), where \\(T_{k,n} = 0\\) if \\(\\binom{n}{k}\\) is even, and \\(T_{k,n}=1\\) if the coefficient is odd, for \\(k \\leq n\\) (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.\nIf you use Python and sympy, you can generate binomial factors with the function sympy.binomial(n, k). Check for parity using the modulo operator %. For example, sympy.binomial(n, k) % 2 will return 0 for even numbers and 1 for odd numbers.",
+    "crumbs": [
+      "Mathematical foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Combinatorics</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/combinatorics.html#solutions",
+    "href": "chapters/combinatorics.html#solutions",
+    "title": "3  Combinatorics",
+    "section": "3.3 Solutions",
+    "text": "3.3 Solutions\n\nSolution for Exercise 3.1\nRecall that \\(0! = 1\\) and, for a positive integer \\(n\\),\n\\[\nn! = n(n-1)\\cdots 2\\cdot 1.\n\\]\nTherefore,\n\\[\n0! = 1,\\qquad\n1! = 1,\\qquad\n2! = 2,\\qquad\n3! = 6,\\qquad\n4! = 24,\\qquad\n5! = 120.\n\\]\n\n\nSolution for Exercise 3.2\nThere are 42 choices for the first person in the line, 41 choices for the second, and so on. Hence the number of possible arrangements is\n\\[\n42! = 42\\cdot 41\\cdots 2\\cdot 1.\n\\]\n\n\nSolution for Exercise 3.3\n\nThe 10 different chemical samples can be arranged in\n\\[\n10! = 3\\,628\\,800\n\\]\ndifferent ways.\nSince the 4 liquids must be together, we can first regard them as a single object. We then have this object together with the 6 solids, giving 7 objects to arrange. These can be arranged in \\(7!\\) ways. For each such arrangement, the 4 liquids can be arranged among themselves in \\(4!\\). Therefore, the total number of arrangements is\n\\[\n7!4! = 120\\,960.\n\\]\n\n\n\nSolution for Exercise 3.4\nWe use Stirling’s approximation,\n\\[\nn! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n.\n\\]\n\nFor \\(n=5\\),\n\\[\n5! \\approx \\sqrt{10\\pi}\\left(\\frac{5}{e}\\right)^5\n\\approx 118.0.\n\\]\nThe exact value is\n\\[\n5! = 120.\n\\]\nThus, Stirling’s approximation is already quite close for \\(n=5\\).\nFor \\(n=10\\),\n\\[\n10! \\approx \\sqrt{20\\pi}\\left(\\frac{10}{e}\\right)^{10}\n\\approx 3.599\\times 10^6.\n\\]\nThe exact value is\n\\[\n10! = 3.6288\\times 10^6.\n\\]\nAgain, the approximation is very close to the exact value.\nFor \\(5!\\), the relative error is\n\\[\n\\frac{|118.0-120|}{120}\n\\approx 0.0165,\n\\]\nor about\n\\[\n1.65\\%.\n\\]\nFor \\(10!\\), the relative error is\n\\[\n\\frac{|3.599\\times10^6-3.6288\\times10^6|}\n     {3.6288\\times10^6}\n\\approx 0.0083,\n\\]\nor about\n\\[\n0.83\\%.\n\\]\nThus, the approximation is better for \\(n=10\\) than for \\(n=5\\).\nFor \\(n=50\\),\n\\[\n50! \\approx\n\\sqrt{100\\pi}\n\\left(\\frac{50}{e}\\right)^{50}\n\\approx 3.036\\times10^{64}.\n\\]\nFor comparison, the exact value is approximately\n\\[\n50! \\approx 3.041\\times10^{64}.\n\\]\nThe relative error becomes smaller as \\(n\\) increases. Thus, Stirling’s approximation becomes increasingly accurate for large \\(n\\).\n\n\n\nSolution for Exercise 3.5\n\nThe binomial coefficient is given by\n\\[\n\\binom{n}{k} = \\frac{n!}{k!(n-k)!}.\n\\]\nThus,\n\\[\n\\binom{5}{2}\n=\n\\frac{5!}{2!3!}\n=\n\\frac{5\\cdot 4}{2\\cdot 1}\n=\n10,\n\\]\n\\[\n\\binom{6}{3}\n=\n\\frac{6!}{3!3!}\n=\n\\frac{6\\cdot5\\cdot4}{3\\cdot2\\cdot1}\n=\n20,\n\\]\nand\n\\[\n\\binom{7}{4}\n=\n\\frac{7!}{4!3!}\n=\n\\frac{7\\cdot6\\cdot5}{3\\cdot2\\cdot1}\n=\n35.\n\\]\nSince the order in which the 7 numbers are drawn does not matter, the number of possible combinations is\n\\[\n\\binom{34}{7}\n=\n\\frac{34!}{7!27!}\n=\n\\frac{34\\cdot33\\cdot32\\cdot31\\cdot30\\cdot29\\cdot28}\n{7\\cdot6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1}\n=\n5\\,379\\,616.\n\\]\nThus, there are 5 379 616 different combinations of 7 numbers.\n\n\n\nSolution for Exercise 3.7\n\nThe relation is equivalent to the construction of Pascal’s triangle because each number in the triangle is the sum of the two numbers directly above it. The left term on the right-hand side corresponds to the number directly above and to the left, while the right term corresponds to the number directly above and to the right:\n\n\\[\n    \\begin{gather}\n    \\binom{0}{0} \\\\\n    \\binom{1}{0} \\quad \\binom{1}{1} \\\\\n    \\binom{2}{0} \\quad \\binom{2}{1} \\quad \\binom{2}{2} \\\\\n    \\binom{3}{0} \\quad \\binom{3}{1} \\quad \\binom{3}{2} \\quad \\binom{3}{3} \\\\\n    \\vdots\n    \\end{gather}\n\\]\n\nUsing\n\\[\n\\binom{n}{k}\n=\n\\frac{n!}{k!(n-k)!},\n\\]\nwe have\n\\[\n\\binom{n-1}{k-1}\n=\n\\frac{(n-1)!}{(k-1)!(n-k)!}\n\\]\nand\n\\[\n\\binom{n-1}{k}\n=\n\\frac{(n-1)!}{k!(n-k-1)!}.\n\\]\nWe write both terms with the common denominator\n\\[\nk!(n-k)!.\n\\]\nThus,\n\\[\n\\binom{n-1}{k-1}\n=\n\\frac{k(n-1)!}{k!(n-k)!},\n\\]\nand\n\\[\n\\binom{n-1}{k}\n=\n\\frac{(n-k)(n-1)!}{k!(n-k)!}.\n\\]\nTherefore,\n\\[\n\\binom{n-1}{k-1}\n+\n\\binom{n-1}{k}\n=\n\\frac{k(n-1)!+(n-k)(n-1)!}{k!(n-k)!}.\n\\]\nFactoring out \\((n-1)!\\) gives\n\\[\n\\frac{[k+(n-k)](n-1)!}{k!(n-k)!}\n=\n\\frac{n(n-1)!}{k!(n-k)!}.\n\\]\nSince\n\\[\nn(n-1)! = n!,\n\\]\nwe obtain\n\\[\n\\binom{n-1}{k-1}\n+\n\\binom{n-1}{k}\n=\n\\frac{n!}{k!(n-k)!}\n=\n\\binom{n}{k}.\n\\]\nHence,\n\\[\n\\boxed{\n\\binom{n}{k}\n=\n\\binom{n-1}{k-1}\n+\n\\binom{n-1}{k}\n}.\n\\]\nNow consider choosing \\(k\\) objects from a set of \\(n\\) objects. Select one particular object, say \\(x\\).\nEvery choice of \\(k\\) objects falls into exactly one of two cases:\n\nThe choice contains \\(x\\). Then we must choose the remaining \\(k-1\\) objects from the other \\(n-1\\) objects. There are\n\\[\n  \\binom{n-1}{k-1}\n  \\]\nsuch choices.\nThe choice does not contain \\(x\\). Then all \\(k\\) objects must be chosen from the other \\(n-1\\) objects. There are\n\\[\n  \\binom{n-1}{k}\n  \\]\nsuch choices.\n\nSince these two cases are disjoint and include all possible choices,\n\\[\n\\binom{n}{k}\n=\n\\binom{n-1}{k-1}\n+\n\\binom{n-1}{k}.\n\\]\n\n\n\nSolution for Exercise 3.8\n\nfrom sympy import binomial\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nnrows = 128\n\n# Build parity matrix: 1 = odd, 0 = even\nT = np.zeros((nrows, nrows), dtype=int)\n\nfor n in range(nrows):\n    for k in range(n + 1):\n        T[n, k] = int(binomial(n, k) % 2)\n\n# Plot only the valid triangular region cleanly\nmasked = np.ma.masked_where(\n    np.fromfunction(lambda n, k: k &gt; n, (nrows, nrows)),\n    T\n)\n\nplt.figure(figsize=(6, 6))\nplt.imshow(masked, origin=\"upper\", interpolation=\"nearest\", aspect=\"equal\")\nplt.title(f\"Pascal's Triangle modulo 2 — {nrows} rows\")\nplt.xlabel(\"k\")\nplt.ylabel(\"n\")\nplt.show()",
+    "crumbs": [
+      "Mathematical foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Combinatorics</span>"
     ]
   }
 ]

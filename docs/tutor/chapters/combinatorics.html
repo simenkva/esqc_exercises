@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Cardinality and countability – ESQC mathematics exercises</title>
+<title>3&nbsp; Combinatorics – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -34,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../chapters/general-vector-spaces.html" rel="next">
-<link href="../chapters/sets-and-functions.html" rel="prev">
+<link href="../chapters/cardinality-and-countability.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -49,6 +84,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-f2d300d7d3cf9862e200a000ce944afc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -363,7 +401,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/cardinality-and-countability.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cardinality and countability</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/combinatorics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Combinatorics</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -438,8 +476,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/cardinality-and-countability.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/cardinality-and-countability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cardinality and countability</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/combinatorics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Combinatorics</span></span></a>
   </div>
 </li>
       </ul>
@@ -456,55 +500,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/bra-ket-notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/eigenvalues-and-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gram-schmidt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singular-value-decomposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomial-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -521,13 +565,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/open-and-closed-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
   </div>
 </li>
       </ul>
@@ -548,13 +592,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/visualizing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/continuity-and-differentiability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
   </div>
 </li>
       </ul>
@@ -571,7 +615,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/matrix-exponentials-and-commutators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Matrix exponentials and commutators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Matrix exponentials and commutators</span></span></a>
   </div>
 </li>
       </ul>
@@ -588,31 +632,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-arithmetic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-exponential.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-power-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singularities-and-contour-integrals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
   </div>
 </li>
       </ul>
@@ -629,19 +673,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/dual-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/newtons-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-step-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -672,15 +716,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">2.1</span> Exercises</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">2.2</span> Solutions</a>
+  <li><a href="#exercises-factorials" id="toc-exercises-factorials" class="nav-link active" data-scroll-target="#exercises-factorials"><span class="header-section-number">3.1</span> Exercises: Factorials</a></li>
+  <li><a href="#exercises-binomial-coefficients-and-pascals-triangle" id="toc-exercises-binomial-coefficients-and-pascals-triangle" class="nav-link" data-scroll-target="#exercises-binomial-coefficients-and-pascals-triangle"><span class="header-section-number">3.2</span> Exercises: Binomial coefficients and Pascal’s triangle</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">3.3</span> Solutions</a>
   <ul class="collapse">
-  <li><a href="#solution-to-exr-cardinality-and-countability-explicitly-constructing-bijection" id="toc-solution-to-exr-cardinality-and-countability-explicitly-constructing-bijection" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-explicitly-constructing-bijection">Solution to Exercise&nbsp;<span>2.1</span></a></li>
-  <li><a href="#solution-to-exr-cardinality-and-countability-hint-draw-picture-try-draw-line" id="toc-solution-to-exr-cardinality-and-countability-hint-draw-picture-try-draw-line" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-hint-draw-picture-try-draw-line">Solution to Exercise&nbsp;<span>2.2</span></a></li>
-  <li><a href="#solution-to-exr-cardinality-and-countability-exercise" id="toc-solution-to-exr-cardinality-and-countability-exercise" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-exercise">Solution to Exercise&nbsp;<span>2.3</span></a></li>
-  <li><a href="#solution-to-exr-cardinality-and-countability-interval-has-same-cardinality-you-must" id="toc-solution-to-exr-cardinality-and-countability-interval-has-same-cardinality-you-must" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-interval-has-same-cardinality-you-must">Solution to Exercise&nbsp;<span>2.4</span></a></li>
-  <li><a href="#solution-to-exr-cardinality-and-countability-exercise-cardinality-would-if-could-write" id="toc-solution-to-exr-cardinality-and-countability-exercise-cardinality-would-if-could-write" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-exercise-cardinality-would-if-could-write">Solution to Exercise&nbsp;<span>2.5</span></a></li>
-  <li><a href="#solution-to-exr-cardinality-and-countability-constructing-one-one-map-hint-use" id="toc-solution-to-exr-cardinality-and-countability-constructing-one-one-map-hint-use" class="nav-link" data-scroll-target="#solution-to-exr-cardinality-and-countability-constructing-one-one-map-hint-use">Solution to Exercise&nbsp;<span>2.6</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-factorial" id="toc-solution-for-exr-combinatorics-factorial" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-factorial">Solution for Exercise&nbsp;<span>3.1</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-factorial-arrangements" id="toc-solution-for-exr-combinatorics-factorial-arrangements" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-factorial-arrangements">Solution for Exercise&nbsp;<span>3.2</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-factorial-arrangements-chemists" id="toc-solution-for-exr-combinatorics-factorial-arrangements-chemists" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-factorial-arrangements-chemists">Solution for Exercise&nbsp;<span>3.3</span></a></li>
+  <li><a href="#solution-for-exr-stirling-factorial" id="toc-solution-for-exr-stirling-factorial" class="nav-link" data-scroll-target="#solution-for-exr-stirling-factorial">Solution for Exercise&nbsp;<span>3.4</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-binomial-coefficients" id="toc-solution-for-exr-combinatorics-binomial-coefficients" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-binomial-coefficients">Solution for Exercise&nbsp;<span>3.5</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-pascals-identity" id="toc-solution-for-exr-combinatorics-pascals-identity" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-pascals-identity">Solution for Exercise&nbsp;<span>3.7</span></a></li>
+  <li><a href="#solution-for-exr-combinatorics-pascal-sierpinski" id="toc-solution-for-exr-combinatorics-pascal-sierpinski" class="nav-link" data-scroll-target="#solution-for-exr-combinatorics-pascal-sierpinski">Solution for Exercise&nbsp;<span>3.8</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -689,9 +735,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/cardinality-and-countability.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cardinality and countability</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/combinatorics.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Combinatorics</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cardinality and countability</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Combinatorics</span></h1>
 </div>
 
 
@@ -708,64 +754,451 @@ window.Quarto = {
 </header>
 
 
-<p>Cardinality compares sets through bijections. The exercises cover countable sets, Cantor’s diagonal argument, and the cardinality of the continuum.</p>
-<p>Recall that the <em>cardinality</em> <span class="math inline">\(|S|\)</span> of a set <span class="math inline">\(S\)</span> is the number of elements in <span class="math inline">\(S\)</span>. For finite sets, this is intuitive, but what about infinite sets?</p>
-<p>One says that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same cardinality if there exists a bijection <span class="math inline">\(f : A \to B\)</span>, i.e., <span class="math inline">\(f\)</span> is one-to-one and onto. (Intuitively, you can draw lines between individual elements of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, only one line to/from each element. Precisely: Onto means, to every <span class="math inline">\(b \in B\)</span> there exists a <span class="math inline">\(a \in A\)</span> such that <span class="math inline">\(f(a) = b\)</span>. One-to-one: <span class="math inline">\(f(a)=f(a')\)</span> implies <span class="math inline">\(a=a'\)</span>.) One can think of the bijection as labelling each <span class="math inline">\(b\in B\)</span> by exactly one element <span class="math inline">\(a\in A\)</span>, and that all labels from <span class="math inline">\(A\)</span> are used up.</p>
-<p>Let <span class="math inline">\(\mathbb{N}_n = \{1, 2, \cdots, n\}\)</span>. This set has cardinality <span class="math inline">\(n\)</span>.</p>
-<p>The set <span class="math inline">\(\mathbb{N}\)</span> has an infinite number of elements. By definition, <span class="math inline">\(|\mathbb{N}|= \aleph_0\)</span> (“aleph-nought”).</p>
-<section id="exercises" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">2.1</span> Exercises</h2>
-<div id="exr-cardinality-and-countability-explicitly-constructing-bijection" class="recommended theorem exercise" data-topic="recommended">
-<p><span class="theorem-title"><strong>Exercise 2.1</strong></span> Show that <span class="math inline">\(|\mathbb{Z}|=\aleph_0\)</span> by explicitly constructing a bijection <span class="math inline">\(f : \mathbb{N}\to \mathbb{Z}\)</span>.</p>
-</div>
-<div id="exr-cardinality-and-countability-hint-draw-picture-try-draw-line" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2.2</strong></span> Show that <span class="math inline">\(|\mathbb{N}\times \mathbb{N}| = \aleph_0\)</span>. Hint: Draw a picture of <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>, and try to draw a line through all the points in this set. How does this show the existence of a bijection between <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{N}\times\mathbb{N}\)</span>?</p>
-</div>
-<div id="exr-cardinality-and-countability-exercise" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2.3</strong></span> Show that <span class="math inline">\(|\mathbb{Q}|= \aleph_0\)</span>.</p>
-</div>
-<div id="exr-cardinality-and-countability-interval-has-same-cardinality-you-must" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2.4</strong></span> Show that the interval <span class="math inline">\(I = (-1,1)\)</span> has the same cardinality as <span class="math inline">\(\mathbb{R}\)</span>. You must construct a function <span class="math inline">\(f : (-1,1)\to\mathbb{R}\)</span> that is a bijection.</p>
-</div>
-<div id="exr-cardinality-and-countability-exercise-cardinality-would-if-could-write" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2.5</strong></span> In this exercise, we show that <span class="math inline">\(|\mathbb{R}|  &gt; \aleph_0\)</span>. The cardinality would be <span class="math inline">\(\aleph_0\)</span> if we could write a list of the real numbers. It suffices to find a list of the numbers in <span class="math inline">\(I = [0,1[\)</span>, i.e., infinite decimal expansions <span class="math inline">\(0.d_1d_2d_3\cdots\)</span>, with <span class="math inline">\(d_i\in \{0,1,2,3,4,5,6,7,8,9\}\)</span>.</p>
-<p>We will look for a contradiction. Consider a list <span class="math inline">\(x_1,x_2,x_3,\ldots\)</span> of all real numbers in <span class="math inline">\([0,1[\)</span>. This is essentially an infinite matrix of digits. Can you find a real number <span class="math inline">\(x \in [0,1]\)</span> which is <em>not</em> in this list, i.e., <span class="math inline">\(x \neq x_j\)</span> for all <span class="math inline">\(j\)</span>? Hint: consider the diagonal of the matrix.</p>
-<p>The cardinality of <span class="math inline">\(\mathbb{R}\)</span>, “the continuum”, is written <span class="math inline">\(2^{\aleph_0}\)</span>.</p>
-</div>
-<div id="exr-cardinality-and-countability-constructing-one-one-map-hint-use" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2.6</strong></span> Show that <span class="math inline">\(|[0,1[\times [0,1[| = |[0,1[|\)</span>, by constructing a one-to-one map. Hint: Use decimal expansions. Conclude that also <span class="math inline">\(|\mathbb{R}^2| = |\mathbb{C}| = |\mathbb{R}|\)</span>.</p>
-</div>
-</section>
-<section id="solutions" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">2.2</span> Solutions</h2>
-<section id="solution-to-exr-cardinality-and-countability-explicitly-constructing-bijection" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-explicitly-constructing-bijection">Solution to <a href="#exr-cardinality-and-countability-explicitly-constructing-bijection" class="quarto-xref">Exercise&nbsp;<span>2.1</span></a></h3>
-<p>We construct a map <span class="math inline">\(f : \mathbb{N}\to \mathbb{Z}\)</span>. We let the even numbers in <span class="math inline">\(\mathbb{N}\)</span> map to positive numbers in <span class="math inline">\(\mathbb{Z}\)</span>, and odd numbers in <span class="math inline">\(\mathbb{N}\)</span> to negative numbers. For every <span class="math inline">\(n \in \mathbb{N}\)</span>, <span class="math display">\[f(2n) = n, \quad f(2n+1) = -n-1.\]</span> We get <span class="math inline">\(f(0) = 0\)</span>, <span class="math inline">\(f(1) = -1\)</span>, <span class="math inline">\(f(2) = 1\)</span>, <span class="math inline">\(f(3) = -2\)</span>, etc.</p>
-</section>
-<section id="solution-to-exr-cardinality-and-countability-hint-draw-picture-try-draw-line" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-hint-draw-picture-try-draw-line">Solution to <a href="#exr-cardinality-and-countability-hint-draw-picture-try-draw-line" class="quarto-xref">Exercise&nbsp;<span>2.2</span></a></h3>
-<p>Draw a picture of <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span> - a uniform grid. The line can be drawn in many ways, but the easiest is perhaps to connect <span class="math inline">\((0,0) - (0,1) - (1,0) - (2,0) - (1,1) - (0,2) - \ldots\)</span></p>
-</section>
-<section id="solution-to-exr-cardinality-and-countability-exercise" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-exercise">Solution to <a href="#exr-cardinality-and-countability-exercise" class="quarto-xref">Exercise&nbsp;<span>2.3</span></a></h3>
-<p>Use that <span class="math inline">\(x \in \mathbb{Q}\)</span> is represented as a fraction, i.e., a point in <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span>. Actually, <span class="math inline">\(x\)</span> is an equivalence class, so some points in <span class="math inline">\(\mathbb{N}\times \mathbb{N}\)</span> are eliminated.</p>
-</section>
-<section id="solution-to-exr-cardinality-and-countability-interval-has-same-cardinality-you-must" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-interval-has-same-cardinality-you-must">Solution to <a href="#exr-cardinality-and-countability-interval-has-same-cardinality-you-must" class="quarto-xref">Exercise&nbsp;<span>2.4</span></a></h3>
-<p>One possible bijection is</p>
+<p>Combinatorics is the part of mathematics concerned with <em>counting</em> in a broad sense, for example counting the number of ways to arrange a set of objects or the number of combinations that can be made from a set of objects. It is a fundamental part of discrete mathematics and has applications in many areas of mathematics, computer science, chemistry, and physics.</p>
+<section id="exercises-factorials" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="exercises-factorials"><span class="header-section-number">3.1</span> Exercises: Factorials</h2>
+<p>The <em>factorial</em> of a non-negative integer <span class="math inline">\(n\)</span> is defined as the product of all positive integers less than or equal to <span class="math inline">\(n\)</span>:</p>
 <p><span class="math display">\[
-f(x)=\frac{x}{1-|x|}, \qquad -1&lt;x&lt;1.
+    n! = n \cdot (n-1) \cdot (n-2) \cdots 3 \cdot 2 \cdot 1, \quad n \geq 1.
 \]</span></p>
-<p>Its inverse is <span class="math inline">\(g(y)=y/(1+|y|)\)</span> for <span class="math inline">\(y\in\mathbb{R}\)</span>.</p>
+<p>It is also defined that <span class="math inline">\(0! = 1\)</span>. The factorial appears in many mathematical contexts, including series expansions, and of course combinatorics. Its basic use is the following:</p>
+<div class="callout callout-style-default callout-fact callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Fact</span>Factorial and counting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given a set of <span class="math inline">\(n\)</span> distinct objects, the number of ways to arrange them in a sequence (i.e., the number of permutations) is <span class="math inline">\(n!\)</span>.</p>
+</div>
+</div>
+<p>In one exercise, you will need the following approximation for large <span class="math inline">\(n\)</span>, known as Stirling’s approximation:</p>
+<div class="callout callout-style-default callout-fact callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Fact</span>Stirling’s approximation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For large <span class="math inline">\(n\)</span>, the factorial <span class="math inline">\(n!\)</span> can be approximated as</p>
+<p><span class="math display">\[
+n! \approx \sqrt{2\pi n}\left(\frac{n}{e}\right)^n.
+\]</span></p>
+<p>In calculations, especially numerical calculations, it is often convenient to use the logarithm of the factorial. Using Stirling’s approximation, we have</p>
+<p><span class="math display">\[
+\log(n!) \approx \frac{1}{2}\log(2\pi n) + n\log(n) - n.
+\]</span></p>
+</div>
+</div>
+<div id="exr-combinatorics-factorial" class="recommended theorem exercise" data-topic="beginner">
+<p><span class="theorem-title"><strong>Exercise 3.1</strong></span> Compute the factorials <span class="math inline">\(0!\)</span>, <span class="math inline">\(1!\)</span>, <span class="math inline">\(2!\)</span>, <span class="math inline">\(3!\)</span>, <span class="math inline">\(4!\)</span>, and <span class="math inline">\(5!\)</span>.</p>
+</div>
+<div id="exr-combinatorics-factorial-arrangements" class="recommended theorem exercise" data-topic="recommended">
+<p><span class="theorem-title"><strong>Exercise 3.2</strong></span> 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?</p>
+</div>
+<div id="exr-combinatorics-factorial-arrangements-chemists" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3.3</strong></span> Compute the number of arrangements for the following scenarios:</p>
+<ol type="a">
+<li><p>A chemist has 10 different chemical samples. How many ways can the chemist arrange the samples on a shelf?</p></li>
+<li><p>A chemist has 10 different chemical samples. 4 of the samples are liquids, and the other 6 are solids. How many ways can the chemist arrange the samples on a shelf if all the liquids must be together?</p></li>
+</ol>
+</div>
+<div id="exr-stirling-factorial" class="recommended theorem exercise" data-topic="curious">
+<p><span class="theorem-title"><strong>Exercise 3.4 (Stirling’s approximation)</strong></span> We study Stirling’s approximation for the factorial.</p>
+<ol type="a">
+<li>Use Stirling’s approximation to estimate <span class="math inline">\(5!\)</span>. Compare your result with the exact result</li>
+</ol>
+<p><span class="math display">\[
+5! = 120.
+\]</span></p>
+<ol start="2" type="a">
+<li>Use Stirling’s approximation to estimate <span class="math inline">\(10!\)</span>. Compare again with the exact number</li>
+</ol>
+<p><span class="math display">\[
+10! = 3\,628\,800.
+\]</span></p>
+<ol start="3" type="a">
+<li>The relative error of an approximation <span class="math inline">\(A\)</span> to an exact value <span class="math inline">\(x\)</span> is</li>
+</ol>
+<p><span class="math display">\[
+\frac{|A-x|}{x}.
+\]</span></p>
+<p>Calculate the relative error of Stirling’s approximation for <span class="math inline">\(5!\)</span> and <span class="math inline">\(10!\)</span>. For which value of <span class="math inline">\(n\)</span> is the approximation better?</p>
+<ol start="4" type="a">
+<li>Use Stirling’s approximation to estimate <span class="math inline">\(50!\)</span>. The exact value is approximately</li>
+</ol>
+<p><span class="math display">\[
+50! \approx 3.041\times10^{64}.
+\]</span></p>
+<ol start="5" type="a">
+<li>Based on your results above, what happens to the accuracy of Stirling’s approximation as <span class="math inline">\(n\)</span> increases?</li>
+</ol>
+</div>
 </section>
-<section id="solution-to-exr-cardinality-and-countability-exercise-cardinality-would-if-could-write" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-exercise-cardinality-would-if-could-write">Solution to <a href="#exr-cardinality-and-countability-exercise-cardinality-would-if-could-write" class="quarto-xref">Exercise&nbsp;<span>2.5</span></a></h3>
-<p>The proof is called Cantor’s diagonalization argument, and is used in several other important results. (For example, to prove that there is no Turing machine that can determine whether an arbitrary Turing machine stops.)</p>
-<p>Let the <span class="math inline">\(k\)</span>th digit be different from the <span class="math inline">\(k\)</span>th digit of number <span class="math inline">\(k\)</span> in the list. Then the real number thus constructed cannot be equal to any of the numbers in the list.</p>
+<section id="exercises-binomial-coefficients-and-pascals-triangle" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="exercises-binomial-coefficients-and-pascals-triangle"><span class="header-section-number">3.2</span> Exercises: Binomial coefficients and Pascal’s triangle</h2>
+<p>The <em>binomial coefficient</em> <span class="math inline">\(\binom{n}{k}\)</span> is defined as the number of ways to choose <span class="math inline">\(k\)</span> elements from a set of <span class="math inline">\(n\)</span> elements, without regard to the order of selection. It is given by the formula:</p>
+<p><span class="math display">\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!},
+\]</span></p>
+<p>Pascal’s triangle is a triangular array of numbers where each number is the sum of the two numbers directly above it:</p>
+<p><span class="math display">\[
+\begin{gather}
+1 \\
+1 \quad 1 \\
+1 \quad 2 \quad 1 \\
+1 \quad 3 \quad 3 \quad 1 \\
+1 \quad 4 \quad 6 \quad 4 \quad 1 \\
+\vdots
+\end{gather}
+\]</span></p>
+<p>Fact: The <span class="math inline">\(n\)</span>-th row of Pascal’s triangle contains the binomial coefficients <span class="math inline">\(\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}\)</span>.</p>
+<div id="exr-combinatorics-binomial-coefficients" class="recommended theorem exercise" data-topic="beginner">
+<p><span class="theorem-title"><strong>Exercise 3.5</strong></span> &nbsp;</p>
+<ol type="a">
+<li><p>Compute the binomial coefficients <span class="math inline">\(\binom{5}{2}\)</span>, <span class="math inline">\(\binom{6}{3}\)</span>, and <span class="math inline">\(\binom{7}{4}\)</span>.</p></li>
+<li><p>In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many different combinations of 7 numbers can be drawn?</p></li>
+</ol>
+</div>
+<div id="exr-combinatorics-pascals-triangle" class="recommended theorem exercise" data-topic="beginner">
+<p><span class="theorem-title"><strong>Exercise 3.6</strong></span> Compute the first 6 rows of Pascal’s triangle. Verify that the numbers in the <span class="math inline">\(n\)</span>-th row correspond to the binomial coefficients <span class="math inline">\(\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}\)</span>.</p>
+</div>
+<div id="exr-combinatorics-pascals-identity" class="recommended theorem exercise" data-topic="curious">
+<p><span class="theorem-title"><strong>Exercise 3.7 (Pascal’s identity)</strong></span> The binomial coefficients satisfy <strong>Pascal’s identity</strong>,</p>
+<p><span class="math display">\[
+\binom{n}{k}
+=
+\binom{n-1}{k-1}
++
+\binom{n-1}{k}.
+\]</span></p>
+<ol type="a">
+<li><p>Explain why this relation is equivalent to the construction of Pascal’s triangle, where each number is the sum of the two numbers directly above it.</p></li>
+<li><p>Write each binomial coefficient on the right-hand side in terms of factorials.</p></li>
+<li><p>Put the two terms over a common denominator and simplify the expression.</p></li>
+<li><p>Show that the resulting expression is</p>
+<p><span class="math display">\[
+\frac{n!}{k!(n-k)!},
+\]</span></p>
+<p>and hence prove Pascal’s identity.</p></li>
+<li><p>Give a combinatorial explanation of Pascal’s identity. <em>Hint:</em> Consider choosing <span class="math inline">\(k\)</span> objects from a set of <span class="math inline">\(n\)</span> objects. Pick one particular object and separate the choices into two cases: those that contain this object and those that do not.</p></li>
+</ol>
+</div>
+<div id="exr-combinatorics-pascal-sierpinski" class="recommended theorem exercise" data-topic="curious">
+<p><span class="theorem-title"><strong>Exercise 3.8</strong></span> Write a computer program to generate the first <span class="math inline">\(2^n\)</span> rows of Pascal’s triangle, where <span class="math inline">\(n=1,2,\ldots\)</span>. Create a <span class="math inline">\(2^n\times 2^n\)</span> lower triangular matrix <span class="math inline">\(T\)</span>, where <span class="math inline">\(T_{k,n} = 0\)</span> if <span class="math inline">\(\binom{n}{k}\)</span> is even, and <span class="math inline">\(T_{k,n}=1\)</span> if the coefficient is odd, for <span class="math inline">\(k \leq n\)</span> (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.</p>
+<p>If you use Python and sympy, you can generate binomial factors with the function <code>sympy.binomial(n, k)</code>. Check for parity using the modulo operator <code>%</code>. For example, <code>sympy.binomial(n, k) % 2</code> will return <code>0</code> for even numbers and <code>1</code> for odd numbers.</p>
+</div>
+<!--
+ oooooooo8    ooooooo  ooooo      ooooo  oooo ooooooooooo ooooo  ooooooo  oooo   oooo oooooooo8  
+888         o888   888o 888        888    88  88  888  88  888 o888   888o 8888o  88 888         
+ 888oooooo  888     888 888        888    88      888      888 888     888 88 888o88  888oooooo  
+        888 888o   o888 888      o 888    88      888      888 888o   o888 88   8888         888 
+o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o    88 o88oooo888  
+-->
 </section>
-<section id="solution-to-exr-cardinality-and-countability-constructing-one-one-map-hint-use" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-cardinality-and-countability-constructing-one-one-map-hint-use">Solution to <a href="#exr-cardinality-and-countability-constructing-one-one-map-hint-use" class="quarto-xref">Exercise&nbsp;<span>2.6</span></a></h3>
-<p>Let every even-numbered decimal from <span class="math inline">\(x\)</span> be the decimal of <span class="math inline">\(y_1\)</span> and odd decimal the decimal of <span class="math inline">\(y_2\)</span>, respectively. This maps decimal expansions <span class="math inline">\(x\)</span> onto pairs of decimal expansions <span class="math inline">\((y_1,y_2)\)</span>. Clearly, the inverse mapping can be created, too.</p>
+<section id="solutions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="solutions"><span class="header-section-number">3.3</span> Solutions</h2>
+<section id="solution-for-exr-combinatorics-factorial" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-factorial">Solution for <a href="#exr-combinatorics-factorial" class="quarto-xref">Exercise&nbsp;<span>3.1</span></a></h3>
+<p>Recall that <span class="math inline">\(0! = 1\)</span> and, for a positive integer <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[
+n! = n(n-1)\cdots 2\cdot 1.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+0! = 1,\qquad
+1! = 1,\qquad
+2! = 2,\qquad
+3! = 6,\qquad
+4! = 24,\qquad
+5! = 120.
+\]</span></p>
+</section>
+<section id="solution-for-exr-combinatorics-factorial-arrangements" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-factorial-arrangements">Solution for <a href="#exr-combinatorics-factorial-arrangements" class="quarto-xref">Exercise&nbsp;<span>3.2</span></a></h3>
+<p>There are 42 choices for the first person in the line, 41 choices for the second, and so on. Hence the number of possible arrangements is</p>
+<p><span class="math display">\[
+42! = 42\cdot 41\cdots 2\cdot 1.
+\]</span></p>
+</section>
+<section id="solution-for-exr-combinatorics-factorial-arrangements-chemists" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-factorial-arrangements-chemists">Solution for <a href="#exr-combinatorics-factorial-arrangements-chemists" class="quarto-xref">Exercise&nbsp;<span>3.3</span></a></h3>
+<ol type="a">
+<li><p>The 10 different chemical samples can be arranged in</p>
+<p><span class="math display">\[
+10! = 3\,628\,800
+\]</span></p>
+<p>different ways.</p></li>
+<li><p>Since the 4 liquids must be together, we can first regard them as a single object. We then have this object together with the 6 solids, giving 7 objects to arrange. These can be arranged in <span class="math inline">\(7!\)</span> ways. For each such arrangement, the 4 liquids can be arranged among themselves in <span class="math inline">\(4!\)</span>. Therefore, the total number of arrangements is</p>
+<p><span class="math display">\[
+7!4! = 120\,960.
+\]</span></p></li>
+</ol>
+</section>
+<section id="solution-for-exr-stirling-factorial" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-stirling-factorial">Solution for <a href="#exr-stirling-factorial" class="quarto-xref">Exercise&nbsp;<span>3.4</span></a></h3>
+<p>We use Stirling’s approximation,</p>
+<p><span class="math display">\[
+n! \approx \sqrt{2\pi n}\left(\frac{n}{e}\right)^n.
+\]</span></p>
+<ol type="a">
+<li><p>For <span class="math inline">\(n=5\)</span>,</p>
+<p><span class="math display">\[
+5! \approx \sqrt{10\pi}\left(\frac{5}{e}\right)^5
+\approx 118.0.
+\]</span></p>
+<p>The exact value is</p>
+<p><span class="math display">\[
+5! = 120.
+\]</span></p>
+<p>Thus, Stirling’s approximation is already quite close for <span class="math inline">\(n=5\)</span>.</p></li>
+<li><p>For <span class="math inline">\(n=10\)</span>,</p>
+<p><span class="math display">\[
+10! \approx \sqrt{20\pi}\left(\frac{10}{e}\right)^{10}
+\approx 3.599\times 10^6.
+\]</span></p>
+<p>The exact value is</p>
+<p><span class="math display">\[
+10! = 3.6288\times 10^6.
+\]</span></p>
+<p>Again, the approximation is very close to the exact value.</p></li>
+<li><p>For <span class="math inline">\(5!\)</span>, the relative error is</p>
+<p><span class="math display">\[
+\frac{|118.0-120|}{120}
+\approx 0.0165,
+\]</span></p>
+<p>or about</p>
+<p><span class="math display">\[
+1.65\%.
+\]</span></p>
+<p>For <span class="math inline">\(10!\)</span>, the relative error is</p>
+<p><span class="math display">\[
+\frac{|3.599\times10^6-3.6288\times10^6|}
+     {3.6288\times10^6}
+\approx 0.0083,
+\]</span></p>
+<p>or about</p>
+<p><span class="math display">\[
+0.83\%.
+\]</span></p>
+<p>Thus, the approximation is better for <span class="math inline">\(n=10\)</span> than for <span class="math inline">\(n=5\)</span>.</p></li>
+<li><p>For <span class="math inline">\(n=50\)</span>,</p>
+<p><span class="math display">\[
+50! \approx
+\sqrt{100\pi}
+\left(\frac{50}{e}\right)^{50}
+\approx 3.036\times10^{64}.
+\]</span></p>
+<p>For comparison, the exact value is approximately</p>
+<p><span class="math display">\[
+50! \approx 3.041\times10^{64}.
+\]</span></p></li>
+<li><p>The relative error becomes smaller as <span class="math inline">\(n\)</span> increases. Thus, Stirling’s approximation becomes increasingly accurate for large <span class="math inline">\(n\)</span>.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-combinatorics-binomial-coefficients" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-binomial-coefficients">Solution for <a href="#exr-combinatorics-binomial-coefficients" class="quarto-xref">Exercise&nbsp;<span>3.5</span></a></h3>
+<ol type="a">
+<li><p>The binomial coefficient is given by</p>
+<p><span class="math display">\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\binom{5}{2}
+=
+\frac{5!}{2!3!}
+=
+\frac{5\cdot 4}{2\cdot 1}
+=
+10,
+\]</span></p>
+<p><span class="math display">\[
+\binom{6}{3}
+=
+\frac{6!}{3!3!}
+=
+\frac{6\cdot5\cdot4}{3\cdot2\cdot1}
+=
+20,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\binom{7}{4}
+=
+\frac{7!}{4!3!}
+=
+\frac{7\cdot6\cdot5}{3\cdot2\cdot1}
+=
+35.
+\]</span></p></li>
+<li><p>Since the order in which the 7 numbers are drawn does not matter, the number of possible combinations is</p>
+<p><span class="math display">\[
+\binom{34}{7}
+=
+\frac{34!}{7!27!}
+=
+\frac{34\cdot33\cdot32\cdot31\cdot30\cdot29\cdot28}
+{7\cdot6\cdot5\cdot4\cdot3\cdot2\cdot1}
+=
+5\,379\,616.
+\]</span></p>
+<p>Thus, there are <strong>5 379 616</strong> different combinations of 7 numbers.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-combinatorics-pascals-identity" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-pascals-identity">Solution for <a href="#exr-combinatorics-pascals-identity" class="quarto-xref">Exercise&nbsp;<span>3.7</span></a></h3>
+<ol type="a">
+<li>The relation is equivalent to the construction of Pascal’s triangle because each number in the triangle is the sum of the two numbers directly above it. The left term on the right-hand side corresponds to the number directly above and to the left, while the right term corresponds to the number directly above and to the right:</li>
+</ol>
+<p><span class="math display">\[
+    \begin{gather}
+    \binom{0}{0} \\
+    \binom{1}{0} \quad \binom{1}{1} \\
+    \binom{2}{0} \quad \binom{2}{1} \quad \binom{2}{2} \\
+    \binom{3}{0} \quad \binom{3}{1} \quad \binom{3}{2} \quad \binom{3}{3} \\
+    \vdots
+    \end{gather}
+\]</span></p>
+<ol start="2" type="a">
+<li><p>Using</p>
+<p><span class="math display">\[
+\binom{n}{k}
+=
+\frac{n!}{k!(n-k)!},
+\]</span></p>
+<p>we have</p>
+<p><span class="math display">\[
+\binom{n-1}{k-1}
+=
+\frac{(n-1)!}{(k-1)!(n-k)!}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\binom{n-1}{k}
+=
+\frac{(n-1)!}{k!(n-k-1)!}.
+\]</span></p></li>
+<li><p>We write both terms with the common denominator</p>
+<p><span class="math display">\[
+k!(n-k)!.
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\binom{n-1}{k-1}
+=
+\frac{k(n-1)!}{k!(n-k)!},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\binom{n-1}{k}
+=
+\frac{(n-k)(n-1)!}{k!(n-k)!}.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\binom{n-1}{k-1}
++
+\binom{n-1}{k}
+=
+\frac{k(n-1)!+(n-k)(n-1)!}{k!(n-k)!}.
+\]</span></p></li>
+<li><p>Factoring out <span class="math inline">\((n-1)!\)</span> gives</p>
+<p><span class="math display">\[
+\frac{[k+(n-k)](n-1)!}{k!(n-k)!}
+=
+\frac{n(n-1)!}{k!(n-k)!}.
+\]</span></p>
+<p>Since</p>
+<p><span class="math display">\[
+n(n-1)! = n!,
+\]</span></p>
+<p>we obtain</p>
+<p><span class="math display">\[
+\binom{n-1}{k-1}
++
+\binom{n-1}{k}
+=
+\frac{n!}{k!(n-k)!}
+=
+\binom{n}{k}.
+\]</span></p>
+<p>Hence,</p>
+<p><span class="math display">\[
+\boxed{
+\binom{n}{k}
+=
+\binom{n-1}{k-1}
++
+\binom{n-1}{k}
+}.
+\]</span></p></li>
+<li><p>Now consider choosing <span class="math inline">\(k\)</span> objects from a set of <span class="math inline">\(n\)</span> objects. Select one particular object, say <span class="math inline">\(x\)</span>.</p>
+<p>Every choice of <span class="math inline">\(k\)</span> objects falls into exactly one of two cases:</p>
+<ul>
+<li><p>The choice contains <span class="math inline">\(x\)</span>. Then we must choose the remaining <span class="math inline">\(k-1\)</span> objects from the other <span class="math inline">\(n-1\)</span> objects. There are</p>
+<p><span class="math display">\[
+  \binom{n-1}{k-1}
+  \]</span></p>
+<p>such choices.</p></li>
+<li><p>The choice does not contain <span class="math inline">\(x\)</span>. Then all <span class="math inline">\(k\)</span> objects must be chosen from the other <span class="math inline">\(n-1\)</span> objects. There are</p>
+<p><span class="math display">\[
+  \binom{n-1}{k}
+  \]</span></p>
+<p>such choices.</p></li>
+</ul>
+<p>Since these two cases are disjoint and include all possible choices,</p>
+<p><span class="math display">\[
+\binom{n}{k}
+=
+\binom{n-1}{k-1}
++
+\binom{n-1}{k}.
+\]</span></p></li>
+</ol>
+</section>
+<section id="solution-for-exr-combinatorics-pascal-sierpinski" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-combinatorics-pascal-sierpinski">Solution for <a href="#exr-combinatorics-pascal-sierpinski" class="quarto-xref">Exercise&nbsp;<span>3.8</span></a></h3>
+<div id="bf06f8e3" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sympy <span class="im">import</span> binomial</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nrows <span class="op">=</span> <span class="dv">128</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Build parity matrix: 1 = odd, 0 = even</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> np.zeros((nrows, nrows), dtype<span class="op">=</span><span class="bu">int</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(nrows):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(n <span class="op">+</span> <span class="dv">1</span>):</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        T[n, k] <span class="op">=</span> <span class="bu">int</span>(binomial(n, k) <span class="op">%</span> <span class="dv">2</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot only the valid triangular region cleanly</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>masked <span class="op">=</span> np.ma.masked_where(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    np.fromfunction(<span class="kw">lambda</span> n, k: k <span class="op">&gt;</span> n, (nrows, nrows)),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    T</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.imshow(masked, origin<span class="op">=</span><span class="st">"upper"</span>, interpolation<span class="op">=</span><span class="st">"nearest"</span>, aspect<span class="op">=</span><span class="st">"equal"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"Pascal's Triangle modulo 2 — </span><span class="sc">{</span>nrows<span class="sc">}</span><span class="ss"> rows"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"k"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"n"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="combinatorics_files/figure-html/cell-2-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="combinatorics_files/figure-html/cell-2-output-1.png" width="516" height="523" class="figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -1187,17 +1620,49 @@ f(x)=\frac{x}{1-|x|}, \qquad -1&lt;x&lt;1.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/sets-and-functions.html" class="pagination-link" aria-label="Sets and functions">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sets and functions</span></span>
+      <a href="../chapters/cardinality-and-countability.html" class="pagination-link" aria-label="Cardinality and countability">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Cardinality and countability</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/general-vector-spaces.html" class="pagination-link" aria-label="General vector spaces">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">General vector spaces</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">General vector spaces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
