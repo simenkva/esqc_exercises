@@ -6,6 +6,7 @@ profile:
 project:
   type: book
   pre-render: scripts/generate_recommendations.py
+  post-render: scripts/ensure_nojekyll.py
   output-dir: docs
   resources:
     - /figures/**
