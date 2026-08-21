@@ -12,7 +12,13 @@ topics_day_1 = {
 
 topics = {
           'coupled-cluster': 'Coupled-cluster theory',
-          'second-quantization': 'Second quantization'
+          'second-quantization': 'Second quantization',
+          'scf': 'Self-consistent field theory',
+          'dft': 'Density functional theory',
+          'response-theory': 'Response theory',
+          'relativity': 'Relativistic quantum chemistry',
+          'molecular-properties': 'Molecular properties',
+          'multiconfig-methods': 'Multiconfigurational methods',
           }
 
 day_1_intro = r"""# Recommended exercises for the first day {.unnumbered}

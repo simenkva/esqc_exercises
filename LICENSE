@@ -1,21 +1,53 @@
-MIT License
+ESQC Mathematics Exercises - Licensing
 
-Copyright (c) 2026 Simen Kvaal
+Copyright (c) 2026 Simen Kvaal and contributors
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This is a mixed-content repository. Different licenses apply to different
+parts of the project as described below.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Educational content
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Unless otherwise noted, original educational material authored by Simen
+Kvaal and contributors who agree to the contribution terms - including the
+Quarto prose, exercises, solutions, original artwork, and the corresponding
+content in rendered editions - is licensed under the Creative Commons
+Attribution 4.0 International license (CC BY 4.0).
+
+The complete license text is in LICENSE-CONTENT. The canonical license URI is:
+
+https://creativecommons.org/licenses/by/4.0/
+
+Suggested attribution for the project as a whole:
+
+    "ESQC Mathematics Exercises" by Simen Kvaal and contributors,
+    licensed under CC BY 4.0.
+
+The contributors and their requested attribution details are recorded in
+CONTRIBUTORS.md and the Git history.
+
+When sharing an adaptation, identify the creator, provide the license link,
+link to the source where reasonably practicable, and indicate that changes
+were made.
+
+2. Software and build files
+
+Original software, scripts, stylesheets, configuration, and build tooling
+authored for this repository are licensed under the MIT License in
+LICENSE-CODE. This includes standalone source-code files and code contained
+in fenced code blocks or executable code cells in the educational material.
+Surrounding explanatory prose remains licensed under CC BY 4.0. Creative
+Commons licenses are not applied to software.
+
+3. Fonts and other third-party material
+
+Bundled fonts and other third-party components retain their own licenses.
+Material credited to another author or source is not relicensed by this
+notice. See THIRD_PARTY_NOTICES.md and the license files alongside individual
+components.
+
+This license grants rights only to material for which the copyright holder
+has authority to grant them. No rights are granted to excluded third-party
+material beyond those supplied by its respective rights holder or available
+under applicable law.
+
+Contributions are accepted under the terms in CONTRIBUTING.md.
