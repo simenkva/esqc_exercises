@@ -71,9 +71,6 @@ Prove De Morgan's laws mathematically. Note that the complement operation acts l
 
 :::
 
-::: {.content-visible when-profile="tutor"}
-
-
 ## Exercises: Sets in quantum chemistry
 
 
@@ -208,10 +205,7 @@ h. Show that $M$ and $S$ have the same cardinality. Explain why this is possible
 :::
 
 
-
-
-
-
+::: {.content-visible when-profile="tutor"}
 
 ## Solutions
 
@@ -631,4 +625,3 @@ is a bijection. Hence $M$ and $S$ have the same cardinality.
 
 
 :::
-
