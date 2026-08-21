@@ -12,4 +12,22 @@ useful as a warm-up to the proper exercises given each day.
 ## Second quantization
 
 
+## Self-consistent field theory
+
+
+## Density functional theory
+
+
+## Response theory
+
+
+## Relativistic quantum chemistry
+
+
+## Molecular properties
+
+
+## Multiconfigurational methods
+
+
 <!-- END GENERATED RECOMMENDED EXERCISES -->
