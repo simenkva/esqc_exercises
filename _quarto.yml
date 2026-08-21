@@ -18,7 +18,7 @@ book:
   author: "Simen Kvaal"
   date: last-modified
   cover-image: figures/cover-a5.png
-  downloads: [epub]
+  downloads: [pdf, epub]
   chapters:
     - index.qmd
     - part: "Exercise recommendations"
@@ -121,6 +121,32 @@ format:
       - fonts/STIXTwoText-Bold.woff2
       - fonts/STIXTwoText-BoldItalic.woff2
       - fonts/STIXTwoMath-Regular.woff2
+
+  pdf:
+    pdf-engine: lualatex
+    mainfont: "STIX Two Text"
+    sansfont: "Roboto Condensed"
+    mathfont: "STIX Two Math"
+
+    include-in-header:
+      - text: |
+          \definecolor{brandteal}{HTML}{18BC9C}
+
+    toc: true
+    toc-depth: 3
+    colorlinks: true
+    linkcolor: brandteal
+    urlcolor: brandteal
+    citecolor: brandteal
+
+    papersize: a5
+    fontsize: 10pt
+    geometry:
+      - inner=18mm
+      - outer=15mm
+      - top=18mm
+      - bottom=20mm
+
 
 custom-callout:
   fact:
