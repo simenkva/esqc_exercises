@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Simen Kvaal">
-<meta name="dcterms.date" content="2026-08-20">
+<meta name="dcterms.date" content="2026-08-21">
 
 <title>ESQC mathematics exercises</title>
 <style>
@@ -101,6 +101,20 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
+div.callout-fact.callout {
+  border-left-color: #3EAF3E;
+}
+div.callout-fact.callout-style-default .callout-header {
+  background-color: rgba(62, 175, 62, 0.13);
+}
+div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
 div.callout-learning-goals.callout {
   border-left-color: #8B81FF;
 }
@@ -143,51 +157,8 @@ div.callout-preparations.callout-style-default .callout-icon::before, div.callou
   background-position: center;
   content: '';
 }
-div.callout-fact.callout {
-  border-left-color: #3EAF3E;
-}
-div.callout-fact.callout-style-default .callout-header {
-  background-color: rgba(62, 175, 62, 0.13);
-}
-div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: '';
-}
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="math_spacing.css">
@@ -701,7 +672,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 20, 2026</p>
+      <p class="date">August 21, 2026</p>
     </div>
   </div>
   
@@ -716,68 +687,7 @@ window.Quarto = {
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1><p><img src="figures/cover-a5.png" title="ESQC mathematics exercises" class="quarto-cover-image nolightbox img-fluid"></p>
-<p>This is a stripped-down copy of the Physical Chemistry Quarto book, ready to use as the starting point for a new book or course compendium. The fonts, callouts, light and dark themes, and output settings are already in place.</p>
-<p>Replace this page with your own preface or course description. The title, author, cover, and chapter list live in <code>_quarto.yml</code>.</p>
-<div class="callout callout-style-default callout-learning-goals callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Learning-goals</span>Learning Goals
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Find the main layout and typography settings.</li>
-<li>Render the book as HTML and EPUB.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-preparations callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Preparations</span>Preparations
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Install <a href="https://quarto.org/">Quarto</a> 1.9.38 or newer. The extensions and fonts are included in this folder.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-fact callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Fact</span>A representative equation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For a harmonic oscillator, the vibrational energies are</p>
-<p><span class="math display">\[
-E_\nu=\hbar\omega\left(\nu+\frac{1}{2}\right),
-\qquad
-\omega=\sqrt{\frac{k}{\mu}}.
-\]</span></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-visualization callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Visualization</span>Visualization app
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use this callout for a visualization, dataset, notebook, or another resource that students can explore alongside the text.</p>
-</div>
-</div>
+<p>This is a collection of mathematics exercises for the European Summerschool in Quantum Chemistry (ESQC).</p>
 
 
 </section>

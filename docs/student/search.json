@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ESQC mathematics exercises",
     "section": "",
-    "text": "Preface\nThis is a stripped-down copy of the Physical Chemistry Quarto book, ready to use as the starting point for a new book or course compendium. The fonts, callouts, light and dark themes, and output settings are already in place.\nReplace this page with your own preface or course description. The title, author, cover, and chapter list live in _quarto.yml.\n\n\n\n\n\n\nLearning-goalsLearning Goals\n\n\n\n\nFind the main layout and typography settings.\nRender the book as HTML and EPUB.\n\n\n\n\n\n\n\n\n\nPreparationsPreparations\n\n\n\nInstall Quarto 1.9.38 or newer. The extensions and fonts are included in this folder.\n\n\n\n\n\n\n\n\nFactA representative equation\n\n\n\nFor a harmonic oscillator, the vibrational energies are\n\\[\nE_\\nu=\\hbar\\omega\\left(\\nu+\\frac{1}{2}\\right),\n\\qquad\n\\omega=\\sqrt{\\frac{k}{\\mu}}.\n\\]\n\n\n\n\n\n\n\n\nVisualizationVisualization app\n\n\n\nUse this callout for a visualization, dataset, notebook, or another resource that students can explore alongside the text.",
+    "text": "Preface\nThis is a collection of mathematics exercises for the European Summerschool in Quantum Chemistry (ESQC).",
     "crumbs": [
       "Preface"
     ]
@@ -21,11 +21,22 @@
     ]
   },
   {
+    "objectID": "_generated/recommendations-first-day.html#basic-exercises-recommended-for-beginners",
+    "href": "_generated/recommendations-first-day.html#basic-exercises-recommended-for-beginners",
+    "title": "Recommended exercises for the first day",
+    "section": "",
+    "text": "Exercise 1.1",
+    "crumbs": [
+      "Exercise recommendations",
+      "Recommended exercises for the first day"
+    ]
+  },
+  {
     "objectID": "_generated/recommendations-first-day.html#recommended-exercises",
     "href": "_generated/recommendations-first-day.html#recommended-exercises",
     "title": "Recommended exercises for the first day",
     "section": "Recommended exercises",
-    "text": "Recommended exercises\n\nExercise 1.1\nExercise 1.2\nExercise 1.8\nExercise 2.1\nExercise 3.1\nExercise 4.2\nExercise 4.3\nExercise 4.6\nExercise 4.7\nExercise 6.3\nExercise 11.1\nExercise 11.2\nExercise 12.1\nExercise 14.1\nExercise 14.4\nExercise 15.1\nExercise 15.4\nExercise 17.1\nExercise 17.4\nExercise 17.6\nExercise 18.1\nExercise 21.1",
+    "text": "Recommended exercises\n\nExercise 1.2\nExercise 1.8\nExercise 2.1\nExercise 3.1\nExercise 4.2\nExercise 4.3\nExercise 4.6\nExercise 4.7\nExercise 6.3\nExercise 11.1\nExercise 11.2\nExercise 12.1\nExercise 14.1\nExercise 14.4\nExercise 15.1\nExercise 15.4\nExercise 17.1\nExercise 17.4\nExercise 17.6\nExercise 18.1\nExercise 21.1",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises for the first day"
@@ -69,15 +80,15 @@
     "href": "chapters/sets-and-functions.html",
     "title": "1  Sets and functions",
     "section": "",
-    "text": "1.1 Exercises\nThese exercises use elementary set notation, ordered pairs, Cartesian products, functions, and complements.\nDe Morgan’s laws are useful when discussing subsets \\(A,B\\) of a larger set \\(X\\). Recall that the complement of \\(A\\) relative to \\(X\\) is \\(A^\\complement = X \\setminus A\\). De Morgan’s laws state that:",
+    "text": "1.1 Exercises: abstract sets and functions\nSets and set notation appear many places in quantum chemistry. The goal of this chapter is to train you in the basic usage of sets and set notation.\nDe Morgan’s laws are useful when discussing subsets \\(A,B\\) of a larger set \\(X\\). Recall that the complement of \\(A\\) relative to \\(X\\) is \\(A^\\complement = X \\setminus A\\). De Morgan’s laws state that:",
     "crumbs": [
       "Mathematical foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Sets and functions</span>"
     ]
   },
   {
-    "objectID": "chapters/sets-and-functions.html#exercises",
-    "href": "chapters/sets-and-functions.html#exercises",
+    "objectID": "chapters/sets-and-functions.html#exercises-abstract-sets-and-functions",
+    "href": "chapters/sets-and-functions.html#exercises-abstract-sets-and-functions",
     "title": "1  Sets and functions",
     "section": "",
     "text": "Exercise 1.1 Write the days of the week as a set\n\n\nExercise 1.2 Write the five first natural numbers using set notation as indicated in the lecture notes\n\n\nExercise 1.3 An ordered pair \\((x,y)\\) is a two-element “set” where the order matters. Two ordered pairs \\((x,y)\\) and \\((u,v)\\) are equal if and only if \\(x=u\\) and \\(y = v\\). From this it follows that \\((x,y) = (y,x)\\) if and only if \\(x=y\\). A definition of an ordered pair as a set is \\[(x,y) = \\{ \\{x\\}, \\{x,y\\} \\}.\\] Show that \\((x,y) = (y,x)\\) if and only if \\(x=y\\) using the set theoretic definition.\n\n\nExercise 1.4 A nonnegative rational number \\(p/q\\), \\(p,q\\in\\mathbb{N}\\), \\(q &gt; 0\\), can be written as an ordered pair \\((p,q)\\). Write down the rational numbers \\(1/4\\), \\(2/3\\), \\(0\\), \\(1/3\\) as ordered pairs using set theory, both for the pair and for each integer. (Strictly speaking we the number itself is an equivalence class of such pairs, i.e., \\(pn/qn = p/q\\), so we must identify \\((p,q)\\) and \\((np,nq)\\). Ignore equivalence classes in this exercise.)\n\n\nExercise 1.5 The cartesian product of two sets \\(A\\) and \\(B\\) is \\[A \\times B = \\{ (a,b) \\mid a\\in A, \\; b\\in B\\}.\\] Write down the cartesian product of \\(\\{\\heartsuit,\\diamondsuit,\\spadesuit,\\clubsuit\\}\\) and \\(\\{1,2,3\\}\\), using the set theoretic definition for the ordered pair. You can skip spelling out the set theoretic definition of the natural numbers.\n\n\nExercise 1.6 Similar to the previous exercise, write down \\(\\{1,2,3\\} \\times \\{2,3,4\\}\\).\n\n\nExercise 1.7 A function \\(f: A \\to B\\) from one set \\(A\\) to another set \\(B\\) is a rule that assigns to every \\(a\\in A\\) precisely one \\(b\\in B\\). In terms of set theory, a function \\(f:A\\to B\\) is a subset of \\(A\\times B\\), such that\n\nFor all \\(a\\in A\\) there exists \\(b\\in B\\) such that \\((a,b)\\in f\\).\nFor all \\(a \\in A\\) and \\(b,b'\\in B\\), if \\((a,b)\\in f\\) and \\((a,b')\\in f\\), then \\(b=b'\\).\n\nWrite down the function \\(f:\\{1,2,3\\} \\to \\{1,2,3\\}\\), \\(f(1) = 2\\), \\(f(2)=3\\), \\(f(3)=1\\), using the set theoretic definition of ordered pairs and the cartesian product.\n\n\n\n\\((A \\cup B)^\\complement = A^\\complement \\cap B^\\complement\\).\n\\((A \\cap B)^\\complement = A^\\complement \\cup B^\\complement\\).\n\n\nExercise 1.8 Draw a picture, representing \\(X\\) as the whole sheet, \\(A\\) and \\(B\\) as overlapping shapes, e.g., circles. Label \\(A\\), \\(B\\), \\(A\\cap B\\), and \\(A \\cup B\\), making another drawing if necessary. Convince yourself that De Morgan’s laws are correct.\n\n\nExercise 1.9 Prove De Morgan’s laws mathematically. Note that the complement operation acts like negation of truth, i.e., \\(a \\in A^\\complement\\) if and only if \\(a \\in X\\) and \\(a \\notin A\\).",

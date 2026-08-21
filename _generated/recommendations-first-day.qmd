@@ -15,12 +15,14 @@ quantum chemistry topic taught at the school.
 <!-- BEGIN GENERATED RECOMMENDED EXERCISES -->
 ## Basic exercises recommended for beginners
 
+- @exr-sets-and-functions-write-days-week-set
+- @exr-sets-potential-energy-curve
 
 ## Recommended exercises
 
-- @exr-sets-and-functions-write-days-week-set
 - @exr-sets-and-functions-write-five-first-natural-numbers-set
 - @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
+- @exr-molecule-sets
 - @exr-cardinality-and-countability-explicitly-constructing-bijection
 - @exr-general-vector-spaces-general-vector-spaces
 - @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate

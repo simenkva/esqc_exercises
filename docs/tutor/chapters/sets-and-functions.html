@@ -49,6 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-f2d300d7d3cf9862e200a000ce944afc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -100,15 +103,15 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-fact.callout {
-  border-left-color: #3EAF3E;
+div.callout-visualization.callout {
+  border-left-color: #E0479E;
 }
-div.callout-fact.callout-style-default .callout-header {
-  background-color: rgba(62, 175, 62, 0.13);
+div.callout-visualization.callout-style-default .callout-header {
+  background-color: rgba(224, 71, 158, 0.13);
 }
-div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOUAAAEPCAYAAAC9YQNGAAAACXBIWXMAAFxGAABcRgEUlENBAAAWFUlEQVR4nO2d63UbORKFL3z2v5yBORGYG4F7IrAcgdsRLB2BqQhWE4GpCEaKYJoRDBXBNCNYMQLsD1TLbZqPbhKFV9/vHB5ZGhHAULysQqGqYKy1INPAGDMH8Hbvx9WAp24AvPS+b621radlkT0MRVkGxpgKTnDz3lfI1xvFqdfytYET7gYU7VVQlJkh1m4OYAZn5WYA3sVb0VF2cALdwAl2Q6EOg6JMGGPMWzjhVXBC/BBzPR7Ywgm0AdBQpIehKBPDGHOLH0J8H3Ux+jzDCXRlrd1EXksyUJSRMcbM4AR4C+BjzLVEZgvgERQoRRkDEeItgBrlW8NL2AJYwQm0jbuU8FCUATHG1KBFHMsTnDgfYy8kFBSlMmIVF3BWUfNoonS2AJYAHq21L2d+N2soSiXk3HABWkXf7ADcA7gvVZwUpWdEjEvkf3yROsWKk6L0BMUYjeLESVFeCcWYDDsAS2vtfeyFXAtFeSESwFkC+Bx1IWSfLYDaWtvEXsilUJQXYIxZwgVxGE1NlycAixzPOSnKEUgy+Ao88M+FLF1ainIgYh2/xV4HuYhnOJc2i/Q9ivIMtI5F8TUHq0lRnkDS4u7BvWNJrAHcpnx88ib2AlLFGLMC8B0UZGl8ANBKiVyS0FLuIYXFDeiuToE7a+0y9iL2oSh7yP6xQVnWsWvLAbj/NwBo5dGxOefOyYfVvPejSr52PYFyTZ5Izp2lKAVxZ1bIW5Br/OiL04Y+QJeEiq6HUIV8hLqFE2YS0VmKEq8Bne+x1zGSfr+bTSpvqH0kDbGCqyNNeUuwgxNmE3shkxdlZoJ8ghPhY5aZKs4FvkXahd5frLWrmAuYtCgzEeQTXO+aoop7ewJdID0LGvU8c7KiTFyQz3Dno0UJ8RgSYFsgreT+B2ttHWPiSYoyYUE+wNUFJrk/1Eas5wLpJPtHEebkRJmgIIsr0r0WEWcNVxoXW5zBhTkpUYqb9HfsdQgU4xkSspxBhTkZUSaWGHAHinEwPXHGrNIJJsxJiDKh1Lk1XAlRG3kdWSLJCSvES0oIEpWdiigfEfdcbAcnxsk0FNYkcvaV+jlm8VUiUpwcU5BPAGYUpD/ktZzBvbah+S5ZSmoUbSnlxfsr0vS0jgGIZDV3ACqto6tiRSn7yBZxXJxnuDzKNsLckyPSXnMLYK4RrCvZfV0hjiAf4D5F2whzTxJrbWutrQD8EXDad3Dpj94pUpTi0sTYR3611tY86oiDtXYB4AucexmCD8YY79HY4tzXiG5r9OoC4ohwJv3JZ+ygRFGGPv5Ipg6P/CDw2fQOLsLuxUMqyn2VaGtoQVYUZHqIQCq4oJs2N/C4vyxKlHDBnVCohsXJ9fSE+RBgug/GmIWPgYoRpSQJvAs4ZTYdt6eMtfZFclZDCPO/sp+9iiL2lBGCOwzqZIj08tUupF7L8czFlGIpQ5b2/EFB5olYTO095tVubPaWUrI5/gk03ZO1NtnO2uQ8gaKyO7hsn/aSJ5dgKZeB5tnCVcOTjOkFf7aK09zAFbBfRNaWMrCV/DcDO+UQKMHg90uOy3K3lMtA83ylIMtC/p618jSrS56UrSh7fUO1WedwpyEZj6TG3SlO8U4atY0iW1EiTMR1B+4ji0Zu3dIslr4XAzKY3EWpzT1LsCZBDb3KkhuMfK9mGegJ1Lt1a62dKc9BEkG5S8WohPVcLWVdyBwkESRKqlUkPcpaZmcpAx2DXJ0qRfJD9n4b6ORQD7aWOVrKEHvJOsAcJDFEMLXS8IOtZY6i1D4GeWBwZ7qIG6tVUVIP+aWs3FfpvfOn8jS/UZTTRrnq6GyFUW6WklaSqCNurFbCyFkXNjdL+QLdhAHmt5JXjDEtdII+J3Nis7GU4rpqCnJNQZI9lkrj1qf+YzaihCu30WSlPD7JDNn7aZR4fT6VepeTKDX3k1t2EyBHWCqNe/T9nIUoJWFAsykWL+EhB1G0lkcDPlmIEvpRV5ZmkVMsFcZ8L8bmF3IRZaU49jOPQcgpFK3lQWNDUTLAQ4axUhizPvTD5M8pAySgM4OHnEWipf9TGPqX918OlrJSHJuuKxmEZPlo5MT+4sLmIMqr28CfoFEcm5SHRpS+2v/B1EXJoxAyGGm05Tvg88stcTmIUu0ee15hRy7A+we5tCJ5JWlR+rjB6ARrxbFJuawUxqz63yQtSgAzxbEbxbFJoUjRgu/Od1X/m9RFySAPSRHfLuxPW7Qpi5JlWuRSNPaVr+/11EU5qrP0CLZDe3AScoBGYcxsRKkVeW2VxiUTQD7QfV8+m40otWhiL4BkT+N5vPRFuX9245lWcWwyDXzHJNIXpTJt7AWQ7Gk8j3fTtQhJWZSMvJJkUSpkmANpi1Ir8gpGXoknfGeFzYC0RamFRgU5mSat5/FmQNqirJTGbZXGJdOj9TzeDEhblISkju/YxAyYpiib2AsgxaASm0hZlGqBHkI8oXJWmbIo38deACGnUIji3wBpi5KQSTJFUTaxF0CKwndi+iRFSYhPvLqwxpg5RUlIWrylKAlJDIqSkMSgKAlJDIqSkMSgKElxGGNqY0xjjLHGmBdjzKorIM6Bf8VeACG+kDaNK/ycDXYD4DOAuTGmyqGWdoqWsoq9AOIfEWSD4+mZ7wEsFKb2boGnKEpSGHKxcAPJHT1BrTC91xxta21DUZISWOG8IAHgnfI6vJCyKLVuxZopjUsiYIypoXhd4pm5VYJHKYtSi1nsBRCvaOwTh6LScXGKoswmNE5OI8Gdkupu10DaotTqzVrSH3Hq1CN/X/VeSV+kLEq18ySJ1pH8uR35+74/6H17XS9A2qJsFceeKY5NAmCMucX4aKrvD3rfe8oNMF1RVopjkzDUFzxH7VIeTyRvKTXv+9C8p4QoI9uPjxc81dt7StYw5Gx0DGlbSuUcRYoyby49Bmk9rkHjPdQCCYtS0EogeJdT1QD5gfzd6kuea6316X1VHscC8OMmr9RF2SqOXSmOTfRY4DK30fcHvG9L+bq+1EWpua+sFMcmCoiVvNR19f1e8p3a13b/oChJTlxqJQG/QZ6x56NDeF1f0qK01jaKw79nEkE+yN/q2xVDNF4W4qg8jtWRhygF7x2oe1SKYxO/rK547rPn69C9W8q+AcpBlI3i2BpuCPGMMWaB6/ZwjaeldEnwvusyfwpCTV2UH3k0kjYigv9eOczKw1I6ao9jdTT9b6YuSoDWMlnkA/PxymG2ns8nNd4vTf+b5EUpmT2a+8pacWxyHStc7yqurl+GQ8l1/SWgmbwohUZx7A+MwqaHMWaFy/Jb91l5GKNDo8vB0/4PchHltS7MOWK2lCB7SN+dzx6GevAVdRVXWt11BQBjrVWYxz/GmBf4z8rv2FlrGfBJABHkd0/D/eZRlDX8ravPL2vMxVICutbyRl50EhE5+vD1xvdmJYWlx7E6Dp6fUpQ/WCqPT04ge8hrjz76LH0NdGGXgyGsDv0wG1Faax/hv/FRn3dKOY3kBMaYt8aYDfzsITvuPFtJrZjDQUOTjSgFBnwKQj4EW/jtMLgFcO9rMGNMBZ1mz0dT/3ITpbcX+wgf5I9AFBHruALwJ/wH7249d61Yehyrz9H3clailMyMrfI0S+XxJ40E1Fr4dVc77nxm7yhaSeCE15eVKIUQ1rJWnmNyGGNujTENXHRV42jryVq79Dym7/E6Hk5Z82zOKTvkELeF3pkl4PIlZ4rjTwLJlFrAHbpr3nj1DMDrhbCK55IA8PupWuHsRAm8hs813J8+dwqfvMUjQryFyykOcUXEDsDcZ7RVPvg30PkgebbWnuzvk6soZwD+UZ7G+x+7ROQNXMlD2yLus4OzkF7bxhhjlriuy8EpvlhrVyfnz1GUAGCMeYSfhOVTPFlreXbZQ4If894j1oVJWoKcA/jb55g9Bm2LchZlBeCvAFN9ksSFySDWbw5358qs9+9UbixTESQASDBKK+J61koCGYsSUH8BO3YAZsod24MjB/f9ZIm3SEd0p9AU5AJ+U/36DH8fWWuzfcDtY2yAx2Ps/1ePr9lbuHKhEK+b78cL3D5f43WZK699OXQtWVtKIJi1BAa6Hikj+6UGusdJWmzhsnVUegFL/q2WpzDK28oxeWCfZaB57uVNnSWyT1whT0E+w1lILUHeQ9d1Xw4VJFCAKK07hNW6CKjPDYBVxt3vauSxZ9xnDc+JAX0kSeA/GmMLW2vtqCy07EUp1IHmeQ+/PV9CkuPRzoO1VlOQc+inbS7HPqEIUVp3wP8QaLqPcricGzlFj3dwe/haa4Je+0pNd359SRyiCFEKC+gWQff5lmHSei5nrQ9w+8eV1gQiyAb62UfLi54VO0TvOay9QNgQvUp4XvH1WQV+fcY8VnARylJeh9Wl68v+SGQf5dD2PmoH2VpIpFEzsDGGLZxAVjZQjnGgYoarEk5KFKVm7uIhchRmBT/dxy9hB+dKP9rA6YuBBAlceaZdnCgB9Sz/Q2QnTOA1rWwBfXGu4fZwj7Feo4CCXFtrq2sGKFKUQHA3FshUmMCrd3ELl7Z4bXbUM1wR+gZAY3Uv/h1EQEF6KfcrWZSh3VggY2H2kdeuq5M8RyuPlxT/vwMKEvCUilmsKIEobizghFmH3i+Rn5Fjj3uEE6S32tuiRQkETVjfJ/sE9lzpnUOG2r5s4dxWLwkaJSUPHKNGuKSCPt/FdSIBEdc7dDzBa6/Z4kUpm+5YeZ+fjTGbjJPYs0KyrBqEPer56nsvXbwogddKkrtI078H0LLzuh69juvfEbY07cGOrAAZQvF7yj6Bmm2d4g9rLe8r8Yi4qyuEL0vz3mu2Y2qiDB0AOMQzXHQ2ueOD3IgUXQeU249OSpTAa8/YDeJX4N8BuNf4pC2diNYRCHAWPYk9ZR/5dKsQJyLb5xuADfeaw5G94xIuKSSWt7PQ9nImZyk7AvaNHcIazqVtYy8kVSSyeo+4Hk6Qs+fJWcoOich+ib0O4QOAf4wxK3GviWCMqSSPOXRkdZ+voZJBJmspO5RvV7qUB7gOaG3shcRCPJkl4mRj7fNgFVuT7DN5UQLJChOYoDh7ndtTECMQWJAARflKwsIEgCe4SG0TeyEayFFVjTC1nWMILkiAovyJxIUJRGifoYm4qDVcGmTsI6p9oiV6UJR7ZCDMjmc4gT7mJFA5Y6wR/i7LMUSt8KEoD5DhnRvPcH1vkqj079O7VLbrbJCqEDuil9xRlEfIUJh9up44GwCbkJZUXrfuUSGfqxJ2cCVYTeyFUJQnSCRX1gc7OIG2+NE/5wXSwkOE1A5N+eu1C5ntPVKJmI4lqXxkivIMEdpKpEAn4o458vQYhrCG5yLla5m0KLugw5Aom/ItvyQOd9baZexF7DNZUe65poPOoySEr30pDNEn6eZmUxZlg5/3QIOKVnuXr8YsliaXk3zy/yQT0uU+jf2gxHsAzbmEcGvti7QS/Ir45V9kHHfW3XfZxl7IKSZnKQckBwwuYhUBPyL/6GzpJBVdPcekLKUEds5l69wA+HvI/ZPW2tZaOwetZsrcWWvnuQgSmJCllL1gi3FBmge4SvOz4XKxmivke1ZXGsnvHY8xCUvZi7SOjZp+httnzs/9oljNCsAnuMRxEoctXKpc8nvHY0xClHCH/5fu+97DubPLIb8sYfY5XGMsurTh2MG95qpXswfh0iugc3nA75XrDUZcAQ6XirbyOD8fR64yH/N3Sf0RfQHKgrxVehMsR65jRnFSjEMfxQZ6AlR5bOECCc2INc3g+s58VlnRdCi6TUqRopTAzgZhavfWcG+QZugTRJwLuGJfpuwNYwdnGe9LFWNHqYGeBuGKaT9g2I3Hr1gXqV3AubVfwWjtKbZwr9HMWrsoXZBAgZYy8HXaALC11s6uHUS6uNVgTm3HA1wvoib2QkJTlCgjlVd5bR/R6+xWY3rpe2v86DuUTH1jaIoRpViaPwNP68VKHkP2np0FLVWgT/jRX6iNvJYkKEKUEfvp/B7KvRIL2jWfqpB+A6pjbCEihBPiZC3iMbIXZeBIa5+oF8D2GlRV8jVVS7qG+/s0CNzEK1dKEOUG4d+QW7h0rqQ+5aUzwhwuqtuJNpT38AzXjKuBNOeyGVVmpETWoowQae0I5rb64ED3Oez9eyhdF7z+v1taP7/8K/YCLkUirTEE+ZCTIAGAFisvsrSUkSKtgMsqmaXmtpKyyC6jp3fffQxqCpJok5WljBhpBYAn6xpmEaJKNqKMfIXADi7a2kaYm0yMnNzXa7oHXEuxZUIkPbKwlNKK41uk6dfW9d4hJAjJizKBS1z/zSMFEpKk3deBfVo1uaMgSWiStZRSIbFBvMr8JFPpSPkkaSkl0hr7diueSZIoJClKxL+f4ym3VDpSDsm5rxGTzDuYSkeikpSllEhr7PaLg+4OIUSLZCxlxCTzPjyTJNFJQpQR23ns8xszd0hsoruviURaAXcm2UZeAyFxLWXkJPM+ql3pCBlDbEsZM8m8Tx17AYR0RBOlMeYe8SOtQIbtPUjZRHFfE0gy7+CZJEmO4JZS2iCmIEiAZ5IkQYJayoSOPgCeSZJECSbKyP11DsE6SZIkQdzX3tFHKoJknSRJliCWMoEk8z6skyRJo24pExMkwOAOSRxVS5nQ0UcHgzskedREmUjVxz5MOCfJo+K+Rr5a4BhMOCdZ4N1SJtDw6hBMOCfZ4NVSJlSGtU8dewGEDMW3+9ogjaqPPmyCRbLCmyjl6CM1Qe4ALGIvgpAxeBFlgmeRHfcM7pDcuDrQk+BZZAeDOyRLrrKUCQsSYHCHZMrFllLOIv/2uxxvMHOHZMtFokysLvIQzNwh2TLafc1AkMzcIVkzylImWKi8D8uySPYMtpQJFiofgmVZJHsGWcqEmiafgsEdUgRDLWUqTZNPUcdeACE+OCvKhLN1+jC4Q4rhpPtqjFkC+BZsNZfB4A4piqOWUrJ1UhckACwpSFISBy1lBmeRHQzukOL4RZSZRFo72FCZFMch93WJPAT5BwVJSuQnSymX7/wVbTXD4W1ZpFj2LeV9lFWMh5k7pFheRSnR1hzc1mdr7Sr2IgjR4tV9Nca0SDuvteN3NsIiJfMGeLWSOQiSV6GT4unc19uoqxgGO9ORSfBGziU/xl7IAJi5QybBGwBV7EUMYGutzSUyTMhVvAEwj72IAdSxF0BIKN4AmMVexBl47QCZFKmLksEdMjnUr1e/El47QCZHyqLcIp+0P0K88QZAG3sRR2B+K5kkqYpyba19jL0IQmLwBq6gOTXq2AsgJBZv5LhhF3shPR4Y3CFTpgv0pBRQWcZeACEx6YsyBWtJK0kmT7+e8hbAn3GXwyvsCHk9p5Ro50PEtbDLOSE43GJyg/BtQZ6ttTkkxhOizqGMngrAc8A17MAjEEJe+UWUkkVTAVgHWsOC/VsJ+cHB3Fdr7YtcB/CH8vxf2JmOkJ85e2msRGVX8H+vCAVJyAHOVolIVHYOf+7sDsAnCpKQwwwq3bLWtuLOfoIrqbqUNdxdkkw2J+QIo+oprbWP1toZnDifRjz1Gc46VjyLJOQ0Z/eUJ5/s2lNW8jh0ztgAeGR0lZDh/B8EnsqQ9ONqnQAAAABJRU5ErkJggg==');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,6 +131,20 @@ div.callout-learning-goals.callout-style-default .callout-icon::before, div.call
   background-position: center;
   content: '';
 }
+div.callout-fact.callout {
+  border-left-color: #3EAF3E;
+}
+div.callout-fact.callout-style-default .callout-header {
+  background-color: rgba(62, 175, 62, 0.13);
+}
+div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
 div.callout-preparations.callout {
   border-left-color: #8B81FF;
 }
@@ -137,20 +154,6 @@ div.callout-preparations.callout-style-default .callout-header {
 div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAACyCAYAAACeGVmMAAAACXBIWXMAAFxGAABcRgEUlENBAAASTUlEQVR4nO2d7XXjNhaGX+zZ/3EH0VSwSgXDVBClgnAqiLaCKBVEU0E0FaymgqEriFxB6ApiV4D9AUCiaEskQFx83uccnGSztgjSfATg4gIQUkowZSCEWAFYA2j0P9cAvhv92DOAHkAH4ATgJKXsw9SQCYlgufNFCPEAJfJG//N7x496hRK90+UkpXxZXEEmKix3ZujWeaPLR8JLPePSundSyhPhtRgCWO4MEEKsAbRQQru2zj54BLfu2cByJ4oQwrTOG7wdN6fCE65b9z5qbZgrWO5E0N3tBkrmn2LWZQHclU8IljsiurttWuf/RK4OBa+4dONZ9sCw3AHR0W0T2U65u03JedwupeziVqVsWG5iKmidl8KyE8Fye4Zb58Ww7J5guT2gW+cG9HPPNcKyO8JyO+AxM4yxh2WfCcs9k0FmWIN8p6pKhGW/Act9B51I0iB+ZhgzHyP7sfapN5Z7wCAYZqTmYFjeVD3PXr3cg2BYC56qKp2qZK9Sbu5uM5qiZa9Cbp57ZmZiZDe58V3U2iykWLk5us14IttofFFyD4RuweNnhgYju2ndk13Tnr3cnLvNRMasae+Q2H50WcqtW+gtOCDGpEcya9qzklu30ntw/jaTD9E2n/xXiIt45AVqW97XyPVgmLl8B9UY/QbgG4B/hBCdbqhIyarlHiKEaHCJhvNYm8mNVwBryjF6tnIPGc1jN+BxOJMHX6SULdWHFyH3mNFmgw04aYVJk0cpZUP14dHl1q3uefxBkSgwyB9vwAktTDp8klIeqD48itwzprJMhPFcfE4p6PG6KRx5Z2JA2iUHIsgthNhBRQ5dGGYHeUsYYNmZgDwC2IVIZQ0mt+5+7wH84vFjnzGYQ/TVurPsDAE/I3AGW0i5j6Af714lDPj6dmTZmaVIKUXoawaRe2FXfCneV/Ww7MyIJ0zkWhQpt45U/0V6ETu+gq4bb6LyPPVWPuY9OkopeyHEXZFKlbtDuq0byU4co6m3Bix7CZh35Qgl9FV+eHVy6xbtG9kF/GNW9HTweCQty54tr7jIfLz3gzXKfYDf6HhojOxHeFyYP5J9DU6XTYlnXITu5v5SjXK/oKxWargw36fsK1y37Cx7WJ5wEdppaFaV3Bl2yV1g2fPlCcABOiC29MNqk3uHeNNfsaCUfbjqraTeUEi+4kZAbCm1yd0h3Sh5KKhk5wDdPM4BMRBvZlib3CfwJgpjjOxmf63ex4cONolswF+o5yDoVITbJ7XJXd5Ccf9QTb01qGuXGhPhPsTakJDlZqbwLnvBu9SYgFgSxwCx3Iwt3ufZB+P1DfLrwl+lfMatyjUsN7MUrwE63ao3uLTsKbbqZBFun7DcjG98y25a9S3iiT475TMlapO7Q37dvtzxJrsQogWwQxjJnVI+U6I2uUNszsDcZ/FadiHEFsAfHutkMF9E0SLcPpnRU/0ZgQ8O5Ay1ujCy382h1t3zFv7PYvOa8pkSFsPQR1ym7UhFp5Q7tU0amGuu1rLr/9bCv9BZBMSW4hBjegXQUPZaeFUY4xsTEOtQuNDAVR7Bnw6//iSlJDszjFruPYBfyS7ApEKUlM9YDITeYGFciTLQRi33CsDfZBdgYhI95TM0Qggj9AZ+eqT5ttxAEbuxMBeSSvkMgc7Tb+FP6CE/Uk79hZD7AepMbR5750myKZ9UEM4WAJeYxIF6Tj/UvuUbAP8jvxDjky8AtqUHxAx6CNnqQpG48xVK6HDLUAOeONLCLaLIhIf0aNlUGOxw04JmaWzUacCgBwGy4NnwodQu+CDS3YImPTqZRJ0Yp3yuoW6+hk0EcoT8aNnQ+Jy6usEz1CGX0YUeEuV8buBqWqFBmksNa+XnUuaqB+8YxWxN8lOB0eS+qgRv5ZsMMVYv+YRgLnqIU6RbD0c3AB4G//kF+px5EB3tm4TcY1j2aGQZSCOeugLUzIFV9p0eCmwxP/ruf4stCrn1wzbfUi9Luy0sezA+Sym3sSsxB/1ObEEntFOke/BF02JZz8Es7DE75XbWnyClXFyghDtAJavId8oL1IPaAlh7uN4K6uHduyYX+7Lz8T5QFf1330K98BT3f9Kf/+BYL8p38QXqfV/NrpcHqTvHivqWfas/8yUBSXItbWyB3/nbPkB9kVMLPVuaQF8098qGVG6o0L+vyvqWfQ2W3aU0sWUeCX0kus8e6v21etcC1GtuOZHIrW+wI668kX3n44UDyz63RJUbavx8IHynDnBoPJCG0Ff3QiV3rJvswLJTl+By4yI0xd/BCD2rGxuwXkvLwbvc8NsVX1o6sOy+SxtI6LV+l3qi+zi63AsugeGU34E9Zgb8bG889o3dKx1Y9qVll7vQsI90U9fLRznpOq6s7s3iIaR88++VDiy7bdl7FnqFMFNXdi+9qlcOQrew/LKylltfJPbNLi2d/oNuljywwmXvPAhtMrNSFDrW1JVLWfSOSinnZagJIXqUlxXm83SONa4z6HLddeZVSvkw/WPXBFp1ZXK6Z2c7BlivTYb0keM/s5WK/S0WophxTe0t++zIsn5WPBdteT9Qw8W7P7+01ZZSYs7DSilCHrLUKvthhtAHovtwmrpCukKbIcR6VN/d1O+GkrtP4CGlUChk7xK4r/fK+GU0EeVkhNb1apGe0CbTcnWn3rupzyGXGyoIEfthpVp6qJeyvfeHnPmSNvoP3iVwXxJKuBZpzkWnllxivpxazJ1/TkTuJoGHl0vpUa7svorrXHRqQvfQvTjHv+9u6ho+5P437tNM/P/Mhe+htvP5BQCEEM6L76Vau9uZ/603xjflo4e6hsR1XbSJvm+QxuxDdkcOT8nNuFOz7GYH0EPmQpvjdpPa+HA2E92HDvG7QKWWHpdu/KJlrkijG++aXEIZrLMtL3AcOuTYLWfo+B7XLfvVedk2Xb+ILbvTHt0B9jyzwSTIdLKQXV8NLHc6fAeV3fUTkLTsJQj9hEt3O4vxswssd7qkJHsJQld3oOGU3D3SDNjUSGjZXfO5UxHa7DFuutzOawdyZY7cTJrckv0Ey61w35F9nanQ5gvpaHP/pcJyl8NQ9t+EEICayulgL/uk2AlNW+U9XUXIlNzFBhsq4aMui2Q3JCK06W53iHQ0bi5MrucWQrwgjYQCxj+TsicidFHdbSHEDsBvEz/2w9JI/hy5j6BZgM+kh5H9hPhCF9vdnik3oHopJ1ziKFbz8HPkbgH8afOhDONANd1tC7nHWB3UODnPLaU8CCH24K4545+iutsB+GgzkzE3iWUPt28ahhlTXTLJkMF+e65sMDPQPXeDxAeoaTFuvRlbzGq4apNJPG/U+ElKeZh13TlyAzz2ZqyoInf7HkQ7r75CrSDsZ9VhrtwAR86Zm5jsOOtNGUpisMVzC/9p249QJ8J0s+tjKfcD1B8xqz2gGRLMziRVB8MC7Nn+BSq/v7P9RSu5ARa8csyWSVY7yZSITu5pQSP0E1QQe1EvyFru8y+q6bFfXS/MZEGxGxm4QJyt57Ss9h7OcgPnpYI78LLQ0vgMdShgH7sisdHveItEhNb1AYDTVKu+SO7BBVdQN98g77OyGIupllIhXsJqvU5e12cLvSXXiCfo9FSMh0tEG8CZyhyRxsZ3XOaVHdWmgKkX0B7raw4uaCzr1MB+08sOesNNLy33FAWdglkyz1LKVexKhCTAKaBfoLrcs+MVgzpt4d5reAWwCiL3GJY9SX6XUu5iV4KaAEJbH8IwmE7beqzTf20y1B6g9qT2nnHEsifBh1IDaAHmol03kGwJ6/Tprtz6oWyhvuWGXYRFO3pMkcGJGqVRXJc8gNDPuJyq0lvUK8TmF08AmqnB/Nxg2Amejre9U5edvk7soFOJ5Rg7oOXxXdlASUfxnHr9nludEIOwp6rsoR28VZl24QVO8HTi5Tt1M9/Ie7DsvsoutpSehKaQx0S6rU70xEXoPsDfr4dq/K5cu1Up3w+p1w9oi4XnYt2QvdWfH+JBlli2sQV1+LuvQXus7wH2Qq/0Ox6i0ekx0Xi+V8E+QMVeoCKKFLKv9E3zHPv80sSW1UJoytbwCMtDAKEal1BCD0s3WbdRRXeRXq4XqADdzveLhuuEmtgSpVqSlRvqy3oHOqFPcBO6JXyn5jRK8+XWFU6ppetAI3uD+MfdplaSkhv03dsT3I4bbkEndA8drINysZ/4eSu5twm8ZHdvBkpKbxF5cHDOFKuxJZHQ1N3bHu8EnWbUizJY1+NG9B3TjY+V3Lm93N6n33AZrx9QV3BuF1HoFgFawxyEJpEb6qWO/YItLRSy17IAJpjcCDNePcB9LronqFMPyy8ZeJQ79S65S6GSfTfjwedWJl8UD8+utrlopy8ZCrlriCRTyF7KeL3PUGgJ97noHWiFXhzDgEe5KW409eJVdlyCc4dMn+fKk9ApzkWvQBes8yY0ldyxX6wUim/ZV8grmaZloWcXEqG9yw017xv7xUqx+JY99WQaq8UjuMjTEz5/q7loXIJ1WQptKXfPcvt92XzK3iC94NxdkZBgcgloo+9BhbaUW86Re5PAS5Vj8S17CsG5Q+DWUOIyTZSK0BIOw4BU5d5FfJlKKt5kR9zMuS2u4wUU1+jhnlxSrNAsdz7Fp+wr5J8555pcQjmdlpTQLHe+pUbZXZNLqhSaQu42gZegxkIlewrTbge4Z4tVK7RvuQVU1PYbmNiYUzM7LDykPtJusi5b+q5Bd7KHdX1SQgjRYWJzUCmluPsZYLlTJQfZWWgifMn9AOAff9ViiBjKfpIL9hhfKLvL4XUrLD9F4xbFCD3Ei9xSSgghXsAHAeTGM65b9t71gwb7xK91GQu4ROgW/k/28HJ+dcrMkRvA74N/7+T4DIG5g3cuyZceHreThgrSNTafBdrdVLILilEH1G68A+dApvmgXQIvJxe/pQfR3vHvCN2CJrmkKqE9yG3KXkp57pavAfwFpmSG3fiTXHDmG/FRPUWOoW2Z2S2/x4fzWWFCiB7+gx1Murziesw+KTvhOVcstEY3tFssf8Y/DuXeA/h1efWYTBnKfpI6OKODbS1YaDJ08LHF2wM3l/DDUO4VgL89fTBTBs/w25tjoTWDoU0L/yfZfpZSbq+O8BVCHAD84vlCTL28QsncgYUGcDW0ofDsFWon2z2g57kHF15BTWPwnDfjihH6KKU8xq5MCgyy8lrQuPUKNTOyl4M8hCu5dUW2AP4gqABTLiYSz0JriLPyDF+hnvnh3TqM5dYVO8L/FAdTFs9QLfRhybRaSQzG0Vv4z8ozzI5b3JL7AeqbmKqCTJ484fJisdAaPY5uQdcgOqXbvis3cBZ8Dw6w1Y51XnkNEE4RGp6hnvvB9bnflPv8A+pbaQ9OcKmJR1yErj7CbSBergpcgpEHOV4E4sCk3OcfVJI3unB3vVw+3QrQ1Ajx6jYDyZfpbLmvfkl12Ruw7KXxVUq5iV2J2AQKjD3jMo7uKS7gJPebD7mWnarLwtDzoeZxtRCiBc1iGIPpdu9DBCS9yP3mQ1VXphkUlj19vkgp29iVCA3hYpghd+ejqSCR+81F4mzYx9hRzVg7QMYYEKDbPUUQud9c9LKtTwP/SfOMG0V3yXVv0iylpOpJmjTQJBJ7osh9VQEeryeBnNhsL0cCRboB1e0+pJZ6G13uMYM/SAPuwofiUUrZxK6ED4iXUg4xyT2HVHMBkpN7zKALvwFPuVGRvdwBIt3AJZ9+n8MQJnm5hwy+lRvQRjdrI0u5A0W6s13CmpXcYwZR+A04MLeEbOQOFOkGCkjBzVruIYPAnGnZOTA3n6TlDhTpBhKYvvJJMXKP4VbdiuTkDhjpTmr6yifFyj2EW/VJkpA7YKQbAL4gw3G0DVXIPYZb9TdElTtQpBsoYBxtQ5VyD+FWHQDwKqV8CHnBQJFuoLBxtA3Vyz2m1lY9RIZawEg37+8GlvsulbXqP1CIQHSaxntkOx9NBcttgW55TFeytGw5b6vCAka6AT7F5CYstyMFZsstWs9NfPLnGKfdQGuD5fZEAa36s5RyZftLxMfjDOFdWC1huQnIuFX/cc6umxwYywOWOwAZReBvds0DBsZYaE+w3IHJIAJ/br0D7QIKcKSbBJY7MqP95VI5n+0zgBVo68NCE8NyJ0bhhz+w0AFhuRNmtEV0ToG5MUnuMVY6LHdGZBSYAzi5JDosd8Yk1oXnLndisNyFMJpbbxAmCs9CJwzLXSiE43UWOhNY7kpYeKSTSSw5+jg3mgkDy10pM2R/AtCBM8WyheVmAJzH7GsA4Na5DP4Pjy4UUrRD74MAAAAASUVORK5CYII=');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: '';
-}
-div.callout-visualization.callout {
-  border-left-color: #E0479E;
-}
-div.callout-visualization.callout-style-default .callout-header {
-  background-color: rgba(224, 71, 158, 0.13);
-}
-div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -672,10 +675,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">1.1</span> Exercises</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">1.2</span> Solutions</a>
+  <li><a href="#exercises-abstract-sets-and-functions" id="toc-exercises-abstract-sets-and-functions" class="nav-link active" data-scroll-target="#exercises-abstract-sets-and-functions"><span class="header-section-number">1.1</span> Exercises: abstract sets and functions</a></li>
+  <li><a href="#exercises-sets-in-quantum-chemistry" id="toc-exercises-sets-in-quantum-chemistry" class="nav-link" data-scroll-target="#exercises-sets-in-quantum-chemistry"><span class="header-section-number">1.2</span> Exercises: Sets in quantum chemistry</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">1.3</span> Solutions</a>
   <ul class="collapse">
-  <li><a href="#tutor-note-sets-etc." id="toc-tutor-note-sets-etc." class="nav-link" data-scroll-target="#tutor-note-sets-etc."><span class="header-section-number">1.2.1</span> Tutor note: Sets etc.</a></li>
+  <li><a href="#tutor-note-sets-etc." id="toc-tutor-note-sets-etc." class="nav-link" data-scroll-target="#tutor-note-sets-etc."><span class="header-section-number">1.3.1</span> Tutor note: Sets etc.</a></li>
   <li><a href="#solution-to-exr-sets-and-functions-write-days-week-set" id="toc-solution-to-exr-sets-and-functions-write-days-week-set" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-write-days-week-set">Solution to Exercise&nbsp;<span>1.1</span></a></li>
   <li><a href="#solution-to-exr-sets-and-functions-write-five-first-natural-numbers-set" id="toc-solution-to-exr-sets-and-functions-write-five-first-natural-numbers-set" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-write-five-first-natural-numbers-set">Solution to Exercise&nbsp;<span>1.2</span></a></li>
   <li><a href="#solution-to-exr-sets-and-functions-ordered-pair-two-element-set-where" id="toc-solution-to-exr-sets-and-functions-ordered-pair-two-element-set-where" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-ordered-pair-two-element-set-where">Solution to Exercise&nbsp;<span>1.3</span></a></li>
@@ -685,6 +689,8 @@ window.Quarto = {
   <li><a href="#solution-to-exr-sets-and-functions-function-one-set-another-set-rule" id="toc-solution-to-exr-sets-and-functions-function-one-set-another-set-rule" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-function-one-set-another-set-rule">Solution to Exercise&nbsp;<span>1.7</span></a></li>
   <li><a href="#solution-to-exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping" id="toc-solution-to-exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping">Solution to Exercise&nbsp;<span>1.8</span></a></li>
   <li><a href="#solution-to-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically" id="toc-solution-to-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically" class="nav-link" data-scroll-target="#solution-to-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically">Solution to Exercise&nbsp;<span>1.9</span></a></li>
+  <li><a href="#solution-to-exr-sets-potential-energy-curve" id="toc-solution-to-exr-sets-potential-energy-curve" class="nav-link" data-scroll-target="#solution-to-exr-sets-potential-energy-curve">Solution to Exercise&nbsp;<span>1.10</span></a></li>
+  <li><a href="#solution-to-exr-molecule-sets" id="toc-solution-to-exr-molecule-sets" class="nav-link" data-scroll-target="#solution-to-exr-molecule-sets">Solution to Exercise&nbsp;<span>1.11</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -712,10 +718,10 @@ window.Quarto = {
 </header>
 
 
-<p>These exercises use elementary set notation, ordered pairs, Cartesian products, functions, and complements.</p>
-<section id="exercises" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">1.1</span> Exercises</h2>
-<div id="exr-sets-and-functions-write-days-week-set" class="recommended theorem exercise" data-topic="recommended">
+<p>Sets and set notation appear many places in quantum chemistry. The goal of this chapter is to train you in the basic usage of sets and set notation.</p>
+<section id="exercises-abstract-sets-and-functions" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="exercises-abstract-sets-and-functions"><span class="header-section-number">1.1</span> Exercises: abstract sets and functions</h2>
+<div id="exr-sets-and-functions-write-days-week-set" class="recommended theorem exercise" data-topic="beginner">
 <p><span class="theorem-title"><strong>Exercise 1.1</strong></span> Write the days of the week as a set</p>
 </div>
 <div id="exr-sets-and-functions-write-five-first-natural-numbers-set" class="recommended theorem exercise" data-topic="recommended">
@@ -753,10 +759,112 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Exercise 1.9</strong></span> Prove De Morgan’s laws mathematically. Note that the complement operation acts like negation of truth, i.e., <span class="math inline">\(a \in A^\complement\)</span> if and only if <span class="math inline">\(a \in X\)</span> and <span class="math inline">\(a \notin A\)</span>.</p>
 </div>
 </section>
-<section id="solutions" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">1.2</span> Solutions</h2>
-<section id="tutor-note-sets-etc." class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="tutor-note-sets-etc."><span class="header-section-number">1.2.1</span> Tutor note: Sets etc.</h3>
+<section id="exercises-sets-in-quantum-chemistry" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="exercises-sets-in-quantum-chemistry"><span class="header-section-number">1.2</span> Exercises: Sets in quantum chemistry</h2>
+<div id="fig-morse-potential" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-morse-potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../figures/exercises/morse_potential_exercise.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Morse potential"><img src="../figures/exercises/morse_potential_exercise.svg" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-morse-potential-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: Morse potential
+</figcaption>
+</figure>
+</div>
+<div id="exr-sets-potential-energy-curve" class="recommended theorem exercise" data-topic="beginner">
+<p><span class="theorem-title"><strong>Exercise 1.10</strong></span> Figure <a href="#fig-morse-potential" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> shows the <em>Morse potential</em> - a common model potential for vibrational motion of a diatomic molecule:</p>
+<p><span class="math display">\[
+    V(r) = D_e \left( 1 - e^{-a(r-r_e)} \right)^2 - D_e,
+\]</span></p>
+<p>where <span class="math inline">\(D_e&gt;0\)</span> is the dissociation energy, <span class="math inline">\(r_e&gt;0\)</span> is the equilibrium bond length, and <span class="math inline">\(a&gt;0\)</span> is a parameter that determines the width of the potential well. The total energy of the molecule is denoted by <span class="math inline">\(E \in \mathbb{R}\)</span>. The classically allowed region for the total energy <span class="math inline">\(E\)</span> is the set <span class="math inline">\(S_E\)</span> of all bond lengths <span class="math inline">\(r\)</span> such that <span class="math inline">\(V(r) \leq E\)</span>:</p>
+<p><span class="math display">\[
+S_E = \{ r \in \mathbb{R} \mid V(r) \leq E \}
+\]</span></p>
+<ol type="a">
+<li><p>Explain the notation <span class="math inline">\(S_E = \{ r \in \mathbb{R} \mid V(r) \leq E \}\)</span> in words. In particular, what does the vertical bar <span class="math inline">\(|\)</span> mean?</p></li>
+<li><p>Can you find a condition on <span class="math inline">\(E\)</span> such that <span class="math inline">\(S_E\)</span> is the empty set?</p></li>
+<li><p>Can you find a condition on <span class="math inline">\(E\)</span> such that <span class="math inline">\(S_E\)</span> is the whole real line?</p></li>
+<li><p>Based on the figure, which of the following statements are true?</p>
+<ul>
+<li><span class="math inline">\(S_{E_1} = (r_2,r_3)\)</span></li>
+<li><span class="math inline">\(S_{E_1} = [r_2,r_3]\)</span></li>
+<li><span class="math inline">\(S_{E_1} = \{ r_2,r_3 \}\)</span></li>
+</ul></li>
+<li><p>Based on the figure, which of the following statements are true?</p>
+<ul>
+<li><span class="math inline">\(S_{E_2} = (r_1,+\infty)\)</span></li>
+<li><span class="math inline">\(S_{E_2} = [r_1,+\infty)\)</span></li>
+<li><span class="math inline">\(S_{E_2} = \{ r_1,r_2, r_3 \}\)</span></li>
+</ul></li>
+</ol>
+</div>
+<div id="exr-molecule-sets" class="recommended theorem exercise" data-topic="recommended">
+<p><span class="theorem-title"><strong>Exercise 1.11</strong></span> In this exercise, a <em>molecule</em> is informally defined only by its chemical composition: the number of atoms of each element occurring in its molecular formula. Thus, <span class="math inline">\(\mathrm{H_2}\)</span> and <span class="math inline">\(\mathrm{CO}\)</span> are two distinct molecules, while <span class="math inline">\(\mathrm{HCOOH}\)</span> and <span class="math inline">\(\mathrm{CO_2H_2}\)</span> represent the same molecule, since both contain one C atom, two H atoms, and two O atoms.</p>
+<p>We ignore molecular geometry, bonding, isotopes, charge, and all questions of chemical stability. In particular, any formal combination of atoms is deemed a molecule, whether or not such a species could exist physically.</p>
+<p>We restrict our attention to the four elements C, H, O, and N. Let <span class="math inline">\(M\)</span> denote the set of all molecules that can be constructed from these elements. A molecule must contain at least one atom.</p>
+<p>One useful way of describing a molecule is by the ordered quadruple</p>
+<p><span id="eq-ordered-tuple-molecule"><span class="math display">\[
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N}),
+\tag{1.1}\]</span></span></p>
+<p>where each <span class="math inline">\(n_X\)</span> is the number of atoms of element <span class="math inline">\(X\)</span> in the molecule. For example,</p>
+<p><span class="math display">\[
+\mathrm{CH_4}\longleftrightarrow (1,4,0,0),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\mathrm{N_2O}\longleftrightarrow (0,0,1,2).
+\]</span></p>
+<ol type="a">
+<li><p>Explain why <a href="#eq-ordered-tuple-molecule" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> uniquely determines an element of <span class="math inline">\(M\)</span>. Give 4-5 additional examples of molecules in terms of this representation.</p></li>
+<li><p>Express <span class="math inline">\(M\)</span> in terms of <span class="math inline">\(\mathbb N_0=\{0,1,2,\ldots\}\)</span>. What is the cardinality of <span class="math inline">\(M\)</span>? Is it finite, countably infinite, or uncountably infinite? Justify your answer.</p></li>
+<li><p>Let</p>
+<p><span class="math display">\[
+M_2=\{m\in M\mid m\text{ contains exactly two atoms}\}.
+\]</span></p>
+<p>Find <span class="math inline">\(|M_2|\)</span> and list all elements of <span class="math inline">\(M_2\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(S\subset M\)</span> be the set</p>
+<p><span class="math display">\[
+S=\left\{m\in M\mid m\text{ contains at least one H atom}\right\}.
+\]</span></p>
+<p>Describe <span class="math inline">\(S\)</span> in terms of the quadruple representation above. Is <span class="math inline">\(S\)</span> finite, countably infinite, or uncountably infinite? Justify your answer.</p>
+<ol start="4" type="a">
+<li>Describe the complement <span class="math inline">\(M\setminus S\)</span>. What is its cardinality?</li>
+</ol></li>
+<li><p>Define</p>
+<p><span class="math display">\[
+C=\left\{m\in M\mid m\text{ contains at least one C atom}\right\}.
+\]</span></p>
+<p>Describe the following sets both in words and in terms of the quadruple representation:</p>
+<p><span class="math display">\[
+C\cap S,\qquad C\cup S,\qquad C\setminus S.
+\]</span></p>
+<p>Determine the cardinality of each set.</p></li>
+<li><p>For <span class="math inline">\(n\geq 1\)</span>, define</p>
+<p><span class="math display">\[
+M_n=\left\{m\in M\mid m\text{ contains exactly }n\text{ atoms}\right\}.
+\]</span></p>
+<p>Thus, a molecule in <span class="math inline">\(M_n\)</span> satisfies</p>
+<p><span class="math display">\[
+n_{\mathrm C}+n_{\mathrm H}+n_{\mathrm O}+n_{\mathrm N}=n.
+\]</span></p>
+<p>Show that</p>
+<p><span class="math display">\[
+|M_n|=\binom{n+3}{3}.
+\]</span></p>
+<p>Check that your formula agrees with your answer to part <strong>b</strong>.</p></li>
+<li><p>Explain why</p>
+<p><span class="math display">\[
+M=\bigcup_{n=1}^{\infty}M_n.
+\]</span></p>
+<p>Are the sets <span class="math inline">\(M_n\)</span> pairwise disjoint? Use this decomposition to give another argument that <span class="math inline">\(M\)</span> is countably infinite.</p></li>
+<li><p>Show that <span class="math inline">\(M\)</span> and <span class="math inline">\(S\)</span> have the same cardinality. Explain why this is possible even though <span class="math inline">\(S\)</span> is a proper subset of <span class="math inline">\(M\)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="solutions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="solutions"><span class="header-section-number">1.3</span> Solutions</h2>
+<section id="tutor-note-sets-etc." class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="tutor-note-sets-etc."><span class="header-section-number">1.3.1</span> Tutor note: Sets etc.</h3>
 <p>The first two exercises should be accessible to everyone. The von Neumann representation of natural numbers grows quickly, so five numbers suffice.</p>
 <p>The visual exercise on De Morgan’s laws supports the later discussion of open sets and is recommended.</p>
 </section>
@@ -805,6 +913,293 @@ window.Quarto = {
 <section id="solution-to-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically">Solution to <a href="#exr-sets-and-functions-prove-de-morgan-s-laws-mathematically" class="quarto-xref">Exercise&nbsp;<span>1.9</span></a></h3>
 <p>Here is the proof of the first one: <span class="math inline">\(x \in (A \cup B)^\complement\)</span> iff <span class="math inline">\(x \notin A \cup B\)</span> iff <span class="math inline">\(x\notin A\)</span> and <span class="math inline">\(x \notin B\)</span> iff <span class="math inline">\(x \in A^\complement\)</span> and <span class="math inline">\(x \in B^\complement\)</span> iff <span class="math inline">\(x \in A^\complement \cap B^\complement\)</span>.</p>
+</section>
+<section id="solution-to-exr-sets-potential-energy-curve" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-sets-potential-energy-curve">Solution to <a href="#exr-sets-potential-energy-curve" class="quarto-xref">Exercise&nbsp;<span>1.10</span></a></h3>
+<ol type="a">
+<li>The notation</li>
+</ol>
+<p><span class="math display">\[
+S_E = \{ r \in \mathbb{R} \mid V(r) \leq E \}
+\]</span></p>
+<p>means that <span class="math inline">\(S_E\)</span> is the set of all real numbers <span class="math inline">\(r\)</span> for which the potential energy <span class="math inline">\(V(r)\)</span> is less than or equal to the total energy <span class="math inline">\(E\)</span>.</p>
+<p>The vertical bar <span class="math inline">\(|\)</span> means <strong>such that</strong>. Thus, the expression can be read as</p>
+<blockquote class="blockquote">
+<p>the set of all <span class="math inline">\(r\)</span> in the real numbers such that <span class="math inline">\(V(r)\leq E\)</span>.</p>
+</blockquote>
+<ol start="2" type="a">
+<li>The Morse potential has its minimum at the equilibrium bond length <span class="math inline">\(r=r_e\)</span>. At this point,</li>
+</ol>
+<p><span class="math display">\[
+V(r_e)
+=
+D_e(1-e^0)^2-D_e
+=
+-D_e.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+V(r)\geq -D_e
+\]</span></p>
+<p>for all <span class="math inline">\(r\)</span>. If</p>
+<p><span class="math display">\[
+E&lt;-D_e,
+\]</span></p>
+<p>there are no values of <span class="math inline">\(r\)</span> for which <span class="math inline">\(V(r)\leq E\)</span>. Hence,</p>
+<p><span class="math display">\[
+\boxed{S_E=\varnothing \quad\text{if}\quad E&lt;-D_e.}
+\]</span></p>
+<p>Notice that when <span class="math inline">\(E=-D_e\)</span>, the set is not empty; it contains exactly the equilibrium bond length:</p>
+<p><span class="math display">\[
+S_{-D_e}=\{r_e\}.
+\]</span></p>
+<ol start="3" type="a">
+<li>There is no finite value of <span class="math inline">\(E\)</span> for which <span class="math inline">\(S_E\)</span> is the whole real line.</li>
+</ol>
+<p>To see this, consider the limit as <span class="math inline">\(r\to-\infty\)</span>. Since <span class="math inline">\(a&gt;0\)</span>,</p>
+<p><span class="math display">\[
+e^{-a(r-r_e)}\to+\infty,
+\]</span></p>
+<p>and therefore</p>
+<p><span class="math display">\[
+V(r)\to+\infty.
+\]</span></p>
+<p>Thus, for any finite <span class="math inline">\(E\in\mathbb R\)</span>, there are sufficiently negative values of <span class="math inline">\(r\)</span> for which</p>
+<p><span class="math display">\[
+V(r)&gt;E.
+\]</span></p>
+<p>Consequently,</p>
+<p><span class="math display">\[
+\boxed{S_E\neq\mathbb R\quad\text{for every finite }E\in\mathbb R.}
+\]</span></p>
+<ol start="4" type="a">
+<li>At energy <span class="math inline">\(E_1\)</span>, the horizontal energy line intersects the potential at the two turning points <span class="math inline">\(r_2\)</span> and <span class="math inline">\(r_3\)</span>. Between these points,</li>
+</ol>
+<p><span class="math display">\[
+V(r)\leq E_1.
+\]</span></p>
+<p>The endpoints themselves are included because</p>
+<p><span class="math display">\[
+V(r_2)=V(r_3)=E_1
+\]</span></p>
+<p>and the definition uses <span class="math inline">\(\leq\)</span>, rather than <span class="math inline">\(&lt;\)</span>.</p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{S_{E_1}=[r_2,r_3].}
+\]</span></p>
+<p>Hence the statements have truth values</p>
+<ul>
+<li><span class="math inline">\(S_{E_1}=(r_2,r_3)\)</span>: <strong>false</strong></li>
+<li><span class="math inline">\(S_{E_1}=[r_2,r_3]\)</span>: <strong>true</strong></li>
+<li><span class="math inline">\(S_{E_1}=\{r_2,r_3\}\)</span>: <strong>false</strong></li>
+</ul>
+<ol start="5" type="a">
+<li>At energy <span class="math inline">\(E_2\)</span>, the potential first becomes less than or equal to <span class="math inline">\(E_2\)</span> at <span class="math inline">\(r=r_1\)</span>. For all larger <span class="math inline">\(r\)</span>, the potential remains below or equal to <span class="math inline">\(E_2\)</span>.</li>
+</ol>
+<p>Again, the point <span class="math inline">\(r_1\)</span> itself is included because</p>
+<p><span class="math display">\[
+V(r_1)=E_2.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{S_{E_2}=[r_1,+\infty).}
+\]</span></p>
+<p>Hence the statements have truth values</p>
+<ul>
+<li><span class="math inline">\(S_{E_2}=(r_1,+\infty)\)</span>: <strong>false</strong></li>
+<li><span class="math inline">\(S_{E_2}=[r_1,+\infty)\)</span>: <strong>true</strong></li>
+<li><span class="math inline">\(S_{E_2}=\{r_1,r_2,r_3\}\)</span>: <strong>false</strong></li>
+</ul>
+</section>
+<section id="solution-to-exr-molecule-sets" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-molecule-sets">Solution to <a href="#exr-molecule-sets" class="quarto-xref">Exercise&nbsp;<span>1.11</span></a></h3>
+<ol type="a">
+<li>A molecule is uniquely determined by an ordered quadruple</li>
+</ol>
+<p><span class="math display">\[
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N}),
+\]</span></p>
+<p>where each entry is a non-negative integer and not all four entries are zero. Hence</p>
+<p><span class="math display">\[
+M=\mathbb N_0^4\setminus\{(0,0,0,0)\}.
+\]</span></p>
+<p>Since <span class="math inline">\(\mathbb N_0\)</span> is countably infinite, any finite Cartesian product of copies of <span class="math inline">\(\mathbb N_0\)</span> is also countably infinite. Removing one element does not change the cardinality. Therefore</p>
+<p><span class="math display">\[
+|M|=\aleph_0,
+\]</span></p>
+<p>so <span class="math inline">\(M\)</span> is <strong>countably infinite</strong>.</p>
+<ol start="2" type="a">
+<li>A diatomic molecule corresponds to a non-negative integer solution of</li>
+</ol>
+<p><span class="math display">\[
+n_{\mathrm C}+n_{\mathrm H}+n_{\mathrm O}+n_{\mathrm N}=2.
+\]</span></p>
+<p>The possibilities are</p>
+<p><span class="math display">\[
+\mathrm{C_2},\quad
+\mathrm{H_2},\quad
+\mathrm{O_2},\quad
+\mathrm{N_2},\quad
+\mathrm{CH},\quad
+\mathrm{CO},\quad
+\mathrm{CN},\quad
+\mathrm{HO},\quad
+\mathrm{HN},\quad
+\mathrm{ON}.
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+|M_2|=10.
+\]</span></p>
+<ol start="3" type="a">
+<li>In the quadruple representation,</li>
+</ol>
+<p><span class="math display">\[
+S=
+\left\{
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N})
+\in\mathbb N_0^4
+\mid n_{\mathrm H}\geq 1
+\right\}.
+\]</span></p>
+<p>The set <span class="math inline">\(S\)</span> is infinite, since it contains</p>
+<p><span class="math display">\[
+\mathrm H,\mathrm{H_2},\mathrm{H_3},\ldots
+\]</span></p>
+<p>It is also a subset of the countable set <span class="math inline">\(M\)</span>. Therefore</p>
+<p><span class="math display">\[
+|S|=\aleph_0,
+\]</span></p>
+<p>so <span class="math inline">\(S\)</span> is countably infinite.</p>
+<ol start="4" type="a">
+<li>The complement consists of all molecules containing no hydrogen:</li>
+</ol>
+<p><span class="math display">\[
+M\setminus S=
+\left\{
+(n_{\mathrm C},0,n_{\mathrm O},n_{\mathrm N})
+\mid
+n_{\mathrm C},n_{\mathrm O},n_{\mathrm N}\in\mathbb N_0,
+\;
+n_{\mathrm C}+n_{\mathrm O}+n_{\mathrm N}&gt;0
+\right\}.
+\]</span></p>
+<p>This set is again countably infinite:</p>
+<p><span class="math display">\[
+|M\setminus S|=\aleph_0.
+\]</span></p>
+<ol start="5" type="a">
+<li>We have</li>
+</ol>
+<p><span class="math display">\[
+C=
+\left\{
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N})
+\in M
+\mid n_{\mathrm C}\geq 1
+\right\}.
+\]</span></p>
+<p>The intersection</p>
+<p><span class="math display">\[
+C\cap S=
+\left\{
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N})
+\in M
+\mid n_{\mathrm C}\geq 1,\; n_{\mathrm H}\geq 1
+\right\}
+\]</span></p>
+<p>consists of molecules containing both carbon and hydrogen.</p>
+<p>The union</p>
+<p><span class="math display">\[
+C\cup S=
+\left\{
+(n_{\mathrm C},n_{\mathrm H},n_{\mathrm O},n_{\mathrm N})
+\in M
+\mid n_{\mathrm C}\geq 1
+\text{ or }
+n_{\mathrm H}\geq 1
+\right\}
+\]</span></p>
+<p>consists of molecules containing carbon or hydrogen, or both.</p>
+<p>Finally,</p>
+<p><span class="math display">\[
+C\setminus S=
+\left\{
+(n_{\mathrm C},0,n_{\mathrm O},n_{\mathrm N})
+\in M
+\mid n_{\mathrm C}\geq 1
+\right\}
+\]</span></p>
+<p>consists of molecules containing carbon but no hydrogen.</p>
+<p>All three sets are infinite subsets of the countable set <span class="math inline">\(M\)</span>, and each is easily seen to contain a countably infinite sequence of distinct molecules. Hence</p>
+<p><span class="math display">\[
+|C\cap S|
+=
+|C\cup S|
+=
+|C\setminus S|
+=
+\aleph_0.
+\]</span></p>
+<ol start="6" type="a">
+<li>The number of elements of <span class="math inline">\(M_n\)</span> is the number of non-negative integer solutions of</li>
+</ol>
+<p><span class="math display">\[
+n_{\mathrm C}+n_{\mathrm H}+n_{\mathrm O}+n_{\mathrm N}=n.
+\]</span></p>
+<p>By the stars-and-bars formula, the number of such solutions is</p>
+<p><span class="math display">\[
+|M_n|
+=
+\binom{n+4-1}{4-1}
+=
+\binom{n+3}{3}.
+\]</span></p>
+<p>For <span class="math inline">\(n=2\)</span>,</p>
+<p><span class="math display">\[
+|M_2|
+=
+\binom{5}{3}
+=
+10,
+\]</span></p>
+<p>in agreement with part <strong>b</strong>.</p>
+<ol start="7" type="a">
+<li>Every molecule contains some finite positive number <span class="math inline">\(n\)</span> of atoms, so it belongs to exactly one set <span class="math inline">\(M_n\)</span>. Therefore</li>
+</ol>
+<p><span class="math display">\[
+M=\bigcup_{n=1}^{\infty}M_n.
+\]</span></p>
+<p>The sets <span class="math inline">\(M_n\)</span> are pairwise disjoint, since a molecule cannot contain exactly <span class="math inline">\(n\)</span> atoms and exactly <span class="math inline">\(m\)</span> atoms when <span class="math inline">\(n\neq m\)</span>.</p>
+<p>Each <span class="math inline">\(M_n\)</span> is finite, since</p>
+<p><span class="math display">\[
+|M_n|=\binom{n+3}{3}.
+\]</span></p>
+<p>Thus <span class="math inline">\(M\)</span> is a countable union of finite sets. Therefore <span class="math inline">\(M\)</span> is countable. Since there are infinitely many molecules, <span class="math inline">\(M\)</span> is countably infinite.</p>
+<ol start="8" type="a">
+<li>From parts <strong>a</strong> and <strong>c</strong>,</li>
+</ol>
+<p><span class="math display">\[
+|M|=|S|=\aleph_0.
+\]</span></p>
+<p>Thus <span class="math inline">\(M\)</span> and <span class="math inline">\(S\)</span> have the same cardinality, even though</p>
+<p><span class="math display">\[
+S\subsetneq M.
+\]</span></p>
+<p>This is possible because <span class="math inline">\(M\)</span> is infinite. Unlike finite sets, an infinite set can have the same cardinality as one of its proper subsets.</p>
+<p>For example, enumerate the molecules as</p>
+<p><span class="math display">\[
+M=\{m_1,m_2,m_3,\ldots\}
+\]</span></p>
+<p>and the hydrogen-containing molecules as</p>
+<p><span class="math display">\[
+S=\{s_1,s_2,s_3,\ldots\}.
+\]</span></p>
+<p>Then the map</p>
+<p><span class="math display">\[
+f:M\to S,\qquad f(m_i)=s_i,
+\]</span></p>
+<p>is a bijection. Hence <span class="math inline">\(M\)</span> and <span class="math inline">\(S\)</span> have the same cardinality.</p>
 
 
 </section>
@@ -1237,6 +1632,38 @@ window.Quarto = {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
