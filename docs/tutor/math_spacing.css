@@ -1,5 +1,0 @@
-/* Pandoc/Quarto native MathML display equations. */
-math[display="block"] {
-  display: block;
-  margin: 1em 0;
-}

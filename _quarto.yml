@@ -124,13 +124,38 @@ format:
 
   pdf:
     pdf-engine: lualatex
-    mainfont: "STIX Two Text"
-    sansfont: "Roboto Condensed"
-    mathfont: "STIX Two Math"
+    mainfont: "STIXTwoText"
+    mainfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.otf
+      - UprightFont=*-Regular
+      - ItalicFont=*-Italic
+      - BoldFont=*-Bold
+      - BoldItalicFont=*-BoldItalic
+    sansfont: "RobotoCondensed"
+    sansfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.ttf
+      - UprightFont=*-Regular
+      - BoldFont=*-Bold
+    mathfont: "STIXTwoMath-Regular"
+    mathfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.otf
 
     include-in-header:
       - text: |
           \definecolor{brandteal}{HTML}{18BC9C}
+          \usepackage{eso-pic}
+          \AtBeginDocument{%
+            \thispagestyle{empty}%
+            \AddToShipoutPictureBG*{%
+              \AtPageLowerLeft{%
+                \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-a5.png}%
+              }%
+            }%
+            \null\newpage
+          }
 
     toc: true
     toc-depth: 3

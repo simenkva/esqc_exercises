@@ -538,7 +538,7 @@
         "\n",
         "### Solution for @exr-combinatorics-pascal-sierpinski {.unnumbered}\n"
       ],
-      "id": "8bb574b2"
+      "id": "e69e3dd3"
     },
     {
       "cell_type": "code",
@@ -573,7 +573,7 @@
         "plt.ylabel(\"n\")\n",
         "plt.show()"
       ],
-      "id": "8f01b496",
+      "id": "c67fd7af",
       "execution_count": null,
       "outputs": []
     },
@@ -583,7 +583,7 @@
       "source": [
         ":::\n"
       ],
-      "id": "bc35b1e5"
+      "id": "67a8871e"
     }
   ],
   "metadata": {
