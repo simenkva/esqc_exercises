@@ -23,8 +23,8 @@ book:
     - index.qmd
     - part: "Exercise recommendations"
       chapters:
-        - _generated/recommendations-first-day.qmd
-        - _generated/recommendations-per-topic.qmd
+        - _generated/recommended-mathematics.qmd
+        - _generated/recommended-by-topic.qmd
 
     - part: "Mathematical foundations"
       chapters:
