@@ -1,0 +1,435 @@
+# Summing over indices {#sec-summing-over-indices}
+
+
+Summing several things in a single expression occurs frequently in mathematics, and in particular in applications to physics and chemistry. The general syntax for a summation over an index is:
+$$
+    \sum_{i \in I} f(i),
+$$
+where $I$ is some countable set of indices, $i$ is the index of summation, and $f(i)$ is the function/quantity being summed. The set $I$ can be finite or infinite, and the index $i$ can be a number, a vector, or even a more complicated object.
+
+The most basic and common case is a sum over a finite or infinite set of integers, which is usually written as
+$$
+    \sum_{i=a}^{b} f(i)
+$$
+where $i$ is the index of summation, $a$ is the lower limit of the index $i$, $b$ is the upper limit, and $f(i)$ is the function/quantity being summed.
+
+
+
+Here are some concrete examples:
+
+1. A sum over a finite number of terms:
+$$
+    \sum_{i=1}^{5} i = 1 + 2 + 3 + 4 + 5 
+$$
+
+2. An infinite series:
+$$
+    \sum_{n=0}^{\infty} \frac{1}{2^n} = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \ldots
+$$
+
+
+3. A series expansion. In this example, the exponential function is expressed as a Taylor series, summing over all non-negative integers:
+$$
+    e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \ldots
+$$
+
+4. Vector notation. For example, a vector $\mathbf{r}\in\mathbb{R}^3$ can be expressed as a sum over its components:
+$$
+    \sum_{i=1}^3 r_i \mathbf{e}_i = \mathbf{r}
+$$
+    
+5. A matrix-vector product expressed as a sum over indices: The $i$-th component of the product of a matrix $A$ and a vector $\mathbf{x}$ is given by the sum over the products of the corresponding elements of the matrix and vector:
+$$
+   (A \mathbf{x})_i =  \sum_{j=1}^n A_{ij} x_j  
+$$
+
+
+### Manipulating sums
+
+The index in a sum is called a **summation index** or **dummy index**. Its name has no significance. For example,
+
+$$
+\sum_{i=1}^n a_i = \sum_{j=1}^n a_j.
+$$
+
+The index may therefore be renamed, as long as it is renamed consistently within the sum.
+
+Summation is **linear**. Sums can be split or combined,
+
+$$
+\sum_{i=1}^n (a_i+b_i) = \sum_{i=1}^n a_i + \sum_{i=1}^n b_i,
+$$
+
+and factors that do not depend on the summation index can be taken outside the sum,
+
+$$
+\sum_{i=1}^n c a_i = c\sum_{i=1}^n a_i,
+$$
+
+where it is important that $c$ is independent of $i$.
+
+Expressions may contain both summed and unsummed indices. An index that is not summed over is called a **free index**. For example, in the matrix-vector product
+
+$$
+y_i = \sum_{j=1}^n A_{ij}x_j,
+$$
+
+$j$ is a dummy index, while $i$ is a free index. The equation therefore represents one equation for each possible value of $i$.
+
+
+
+### Special symbols used in summation notation
+
+The **Kronecker delta** $\delta_{ij}$ is a special symbol that is often used in summation notation. It is defined as
+$$
+\delta_{ij} = \begin{cases}
+1 & \text{if } i=j, \\
+0 & \text{if } i\neq j.
+\end{cases}
+$$
+Sometimes, if confusion can arise one inserts a comma between the two indices, writing $\delta_{i,j}$ instead of $\delta_{ij}$.
+
+The Kronecker delta forms the matrix elements of the identity matrix.
+
+
+The **Levi-Civita symbol** $\epsilon_{ijk}$ is another special symbol that is often used in summation notation in the three-dimensional case, i.e., where $i,j,k \in \{1,2,3\}$. It is defined as
+$$
+\epsilon_{ijk} = \begin{cases}
+1 & \text{if } (i,j,k) \text{ is an even permutation of } (1,2,3), \\
+-1 & \text{if } (i,j,k) \text{ is an odd permutation of } (1,2,3), \\
+0 & \text{if any two indices are equal.}
+\end{cases}
+$$
+
+
+
+<!--
+
+oooooooooo      o       oooooooo8 ooooo  oooooooo8 
+ 888    888    888     888         888 o888     88 
+ 888oooo88    8  88     888oooooo  888 888         
+ 888    888  8oooo88           888 888 888o     oo 
+o888ooo888 o88o  o888o o88oooo888 o888o 888oooo88  
+                                                   
+-->                                               
+                                                   
+                                                   
+                                                   
+                                                   
+                                                   
+
+## Exercises: Basic summation
+
+These exercises are at a very basic level. If you are already comfortable with summation notation, you may skip them.
+
+
+:::{#exr-summing-1 .recommended topic='beginner'}
+### Very basic sums
+
+Expand the following sums and calculate their values:
+
+a) $\displaystyle \sum_{i=1}^{4} i$
+
+b) $\displaystyle \sum_{i=1}^{4} i^2$
+
+c) $\displaystyle \sum_{k=0}^{3} 2^k$
+
+:::
+
+::: {#exr-summing-2 .recommended topic='beginner'}
+### Simplifying as a sum
+
+Write each expression using summation notation:
+
+a) $x_1+x_2+x_3+x_4+x_5$
+
+b) $1+q+q^2+q^3+q^4$
+
+c) $a_1b_1+a_2b_2+a_3b_3$
+
+:::
+
+
+::: {#exr-summing-3 .recommended topic='recommended'}
+### Estimating $\sqrt{e}$ via a Taylor series
+
+Use the first four terms of the series for $e^x$ to estimate $\sqrt{e}$:
+$$
+    \sqrt{e} = e^{0.5} \approx \sum_{n=0}^{3}\frac{(0.5)^n}{n!}.
+$$
+Write out the four terms and add them. The estimate is not especially
+accurate; the point is to see how the index $n$ controls both the power and the
+factorial.
+:::
+
+::: {#exr-summing-4 .recommended topic='beginner'}
+### Reconstruct a vector
+
+The components of a vector are $r_1=2$, $r_2=-1$, and $r_3=4$. Let $\mathbf{e}_i$ be the standard basis in $\mathbb{R}^3$.
+
+a) Write out $\displaystyle \sum_{i=1}^{3}r_i\mathbf{e}_i$ term by term.
+
+b) Gather the result as a column vector
+:::
+
+:::{#exr-summing-5 .recommended topic='beginner'}
+### Exercise 5: A matrix--vector product
+
+Let
+$$
+    A = \begin{bmatrix}
+        1 & 2 & 0 \\
+        -1 & 0 & 3
+    \end{bmatrix},
+    \qquad
+    \mathbf{x} = \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}.
+$$
+
+Use
+$$
+    (A\mathbf{x})_i=\sum_{j=1}^{3}A_{ij}x_j
+$$
+to write out and calculate $(A\mathbf{x})_1$ and $(A\mathbf{x})_2$. Collect the two answers in a column vector.
+    
+:::
+
+
+::: {#exr-summing-dummy-index .recommended topic='beginner'}
+### The summation index is a dummy index
+
+Consider
+$$
+S=\sum_{i=1}^{4} i^2.
+$$
+
+a. Write out the sum explicitly and calculate its value.
+
+b. Write out and calculate
+$$
+\sum_{j=1}^{4} j^2.
+$$
+
+c. Explain why
+$$
+\sum_{i=1}^{4} i^2 = \sum_{j=1}^{4} j^2.
+$$
+
+d. Rewrite
+$$
+\sum_{k=1}^{5} a_k b_k 
+$$
+using $p$ as the summation index.
+:::
+
+::: {#exr-summing-linearity .recommended topic='beginner'}
+### Linearity of sums
+
+Let $a_i$ and $b_i$, $i=1,2,3$ be two sets of numbers and let $c$ be a constant, i.e., just a number.
+
+a. Write out both sides of
+$$
+\sum_{i=1}^{3}(a_i+b_i) = \sum_{i=1}^{3}a_i+\sum_{i=1}^{3}b_i
+$$
+and verify that they are equal.
+
+b. Write out both sides of
+$$ 
+\sum_{i=1}^{3}c a_i = c\sum_{i=1}^{3}a_i
+$$
+and verify that they are equal.
+
+c. Use these properties to rewrite
+$$
+\sum_{i=1}^{3}(2a_i-3b_i)
+$$
+as two separate sums (i.e., each has a single summation sign).
+:::
+
+
+::: {#exr-summing-constant}
+### When something does not depend on the summation index
+
+Let $x$ be a number independent of the summation index $i$.
+
+a. Simplify
+$$
+\sum_{i=1}^{5} x.
+$$
+
+b. Simplify
+$$
+\sum_{i=1}^{5} i x.
+$$
+
+
+c. Explain why $x$ can be taken outside the sum in
+$$
+\sum_{i=1}^{n} i x = x\sum_{i=1}^{n} i.
+$$
+:::
+
+::: {#exr-summing-free-index}
+### Free and summed indices
+
+Consider the following expression for the $i$-th component of a vector $\mathbf{y}$, being the product of a matrix $A$ and a vector $\mathbf{x}$:
+$$
+y_i=\sum_{j=1}^{3}A_{ij}x_j.
+$$
+
+a. Which index is summed over?
+
+b. Which index is not summed over?
+
+c. For $i=2$, write the right-hand side explicitly.
+
+d. If $A$ has four rows and three columns, how many components does $\mathbf{y}$ have?
+
+e. Explain why replacing $j$ by $k$,
+$$
+y_i=\sum_{k=1}^{3}A_{ik}x_k,
+$$
+does not change the equation.
+:::
+
+
+::: {#exr-summing-reindexing}
+### Shifting the summation index
+
+Consider
+$$
+S=\sum_{i=1}^{4} a_i.
+$$
+
+a. Write out $S$ explicitly.
+
+b. Show that the same sum can be written as
+$$
+S=\sum_{j=0}^{3}a_{j+1}
+$$
+by writing out the terms.
+
+c. Rewrite
+$$
+\sum_{i=2}^{5}a_i
+$$
+as a sum whose index starts at $j=0$.
+
+d. Rewrite
+$$
+\sum_{i=0}^{n-1}a_{i+1}
+$$
+as a sum with index $j$ running from $1$ to $n$.
+:::
+
+
+::: {#exr-kronecker-delta .recommended topic='beginner'}
+### The Kronecker delta: basic exercise
+
+The **Kronecker delta** is defined in the introduction to this chapter. It is a special symbol that is often used in summation notation.
+
+a. Evaluate $\delta_{11}$, $\delta_{12}$, $\delta_{23}$, and $\delta_{33}$.
+
+b. Let $a_1=2$, $a_2=5$, and $a_3=7$. Write out all terms in the sum
+
+    $$
+    \sum_{j=1}^3 \delta_{2,j}a_j
+    $$
+
+    and evaluate it.
+
+c. Repeat (b) for
+
+    $$
+    \sum_{j=1}^3 \delta_{1j}a_j
+    \qquad\text{and}\qquad
+    \sum_{j=1}^3 \delta_{3j}a_j.
+    $$
+
+d. Based on your results, simplify the general expression
+
+    $$
+    \sum_{j=1}^n \delta_{ij}a_j.
+    $$
+
+e. In the expression in (d), which index is a dummy index and which is a free index? What values can the free index take?
+:::
+
+
+
+
+::: {#exr-levi-civita}
+### The Levi--Civita symbol: basic exercise
+
+The **Levi--Civita symbol** $\varepsilon_{ijk}$ is defined in the introduction to this chapter.
+
+a. Evaluate $\varepsilon_{123}$, $\varepsilon_{132}$, $\varepsilon_{231}$, $\varepsilon_{321}$, and $\varepsilon_{223}$.
+
+b. Find all triples $(i,j,k)$ for which $\varepsilon_{ijk}=+1$.
+
+c. Find all triples $(i,j,k)$ for which $\varepsilon_{ijk}=-1$.
+
+d. What happens to $\varepsilon_{ijk}$ if two indices are interchanged? Illustrate with two examples.
+
+e. Let $a_1$, $a_2$, and $a_3$ be the components of a vector. Write out the sum
+
+$$
+\sum_{j=1}^3\sum_{k=1}^3 \varepsilon_{1jk}a_jb_k
+$$
+
+and remove all terms that vanish because of the Levi--Civita symbol.
+:::
+
+
+                                                                                                                  
+<!--                                                                                                                  
+                                                                                                                  
+ooooo oooo   oooo ooooooooooo ooooooooooo oooooooooo  oooo     oooo ooooooooooo ooooooooo  ooooo      o   ooooooooooo ooooooooooo 
+ 888   8888o  88  88  888  88  888    88   888    888  8888o   888   888    88   888    88o 888      888  88  888  88  888    88  
+ 888   88 888o88      888      888ooo8     888oooo88   88 888o8 88   888ooo8     888    888 888     8  88     888      888ooo8    
+ 888   88   8888      888      888    oo   888  88o    88  888  88   888    oo   888    888 888    8oooo88    888      888    oo  
+o888o o88o    88     o888o    o888ooo8888 o888o  88o8 o88o  8  o88o o888ooo8888 o888ooo88  o888o o88o  o888o o888o    o888ooo8888 
+-->
+
+
+
+
+::: {#exr-summing-mo-expansion}
+### A molecular orbital in an atomic-orbital basis
+
+In quantum chemistry, a molecular orbital $\psi_p(\mathbf{r})$ is commonly expanded in a finite set of atomic-orbital basis functions $\chi_\mu(\mathbf{r})$,
+
+$$
+\psi_p(\mathbf{r})=\sum_{\mu=1}^{K} C_{\mu p}\chi_\mu(\mathbf{r}).
+$$
+
+Here, $\mu$ labels the basis functions, while $p$ labels the molecular orbital.
+
+Consider three basis functions and the coefficient matrix
+
+$$
+C= \begin{bmatrix}
+0.7 & 0.5\\
+0.7 & -0.5\\
+0.1 & 0.7
+\end{bmatrix}.
+$$
+
+a. In the expression for $\psi_p(\mathbf{r})$, identify the dummy index and the free index.
+
+b. Write $\psi_1(\mathbf{r})$ explicitly as a linear combination of $\chi_1(\mathbf{r})$, $\chi_2(\mathbf{r})$, and $\chi_3(\mathbf{r})$, using the matrix elements of $C$.
+
+c. Do the same for $\psi_2(\mathbf{r})$.
+
+d. Suppose that at a particular point $\mathbf{r}_0$,
+
+$$
+\chi_1(\mathbf{r}_0)=1.0,\qquad
+\chi_2(\mathbf{r}_0)=0.5,\qquad
+\chi_3(\mathbf{r}_0)=0.2.
+$$
+
+Calculate $\psi_1(\mathbf{r}_0)$ and $\psi_2(\mathbf{r}_0)$.
+
+e. Explain why the summation index $\mu$ could be replaced by another symbol, such as $i$, without changing the meaning of the expression.
+:::
+

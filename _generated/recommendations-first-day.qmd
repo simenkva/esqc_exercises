@@ -17,6 +17,13 @@ quantum chemistry topic taught at the school.
 
 - @exr-sets-and-functions-write-days-week-set
 - @exr-sets-potential-energy-curve
+- @exr-summing-1
+- @exr-summing-2
+- @exr-summing-4
+- @exr-summing-5
+- @exr-summing-dummy-index
+- @exr-summing-linearity
+- @exr-kronecker-delta
 - @exr-combinatorics-factorial
 - @exr-combinatorics-binomial-coefficients
 - @exr-combinatorics-pascals-triangle
@@ -27,6 +34,7 @@ quantum chemistry topic taught at the school.
 - @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
 - @exr-molecule-sets
 - @exr-cardinality-and-countability-explicitly-constructing-bijection
+- @exr-summing-3
 - @exr-combinatorics-factorial-arrangements
 - @exr-general-vector-spaces-general-vector-spaces
 - @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate

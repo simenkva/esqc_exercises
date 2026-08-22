@@ -30,6 +30,7 @@ book:
       chapters:
         - chapters/sets-and-functions.qmd
         - chapters/cardinality-and-countability.qmd
+        - chapters/summing-over-indices.qmd
         - chapters/combinatorics.qmd
     - part: "Linear algebra"
       chapters:

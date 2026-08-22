@@ -1,25 +1,29 @@
+# Script for generating recommended exercise lists.
 
+levels = ["beginner", "intermediate", "advanced"]
 
-# script for generating recommended lists.
+recommendations = ["math", "topic"]
 
-# a dict of topics and their descriptions.
-# 
-topics_day_1 = {
-          'beginner': 'Basic exercises recommended for beginners',
-          'recommended': 'Recommended exercises',
-          'curious': 'Exercises for the curious'
-          }
-
+# Topics and their descriptions, the latter used for writing the recommended
+# exercises per topic.
 topics = {
-          'coupled-cluster': 'Coupled-cluster theory',
-          'second-quantization': 'Second quantization',
-          'scf': 'Self-consistent field theory',
-          'dft': 'Density functional theory',
-          'response-theory': 'Response theory',
-          'relativity': 'Relativistic quantum chemistry',
-          'molecular-properties': 'Molecular properties',
-          'multiconfig-methods': 'Multiconfigurational methods',
-          }
+    "coupled-cluster": "Coupled-cluster theory",
+    "second-quantization": "Second quantization",
+    "scf": "Self-consistent field theory",
+    "dft": "Density functional theory",
+    "response-theory": "Response theory",
+    "relativity": "Relativistic quantum chemistry",
+    "molecular-properties": "Molecular properties",
+    "multiconfig-methods": "Multiconfigurational methods",
+}
+
+# Example exercise syntax:
+#
+# :::{#exr-1 recommended="math;topic" level="beginner" topic="coupled-cluster;scf"}
+# ### Heading
+# body
+# :::
+#
 
 day_1_intro = r"""# Recommended exercises for the first day {.unnumbered}
 
@@ -31,12 +35,12 @@ We provide also a list of recommended exercises for the 'beginners'. If you
 feel that you need training in the _absolute basics_ of the mathematics used
 in quantum chemistry, we recommend that you start here.
 
-In the next chapter, we provide lists of recommended exercises for each 
-quantum chemistry topic taught at the school. 
+In the next chapter, we provide lists of recommended exercises for each
+quantum chemistry topic taught at the school.
 
 """
 
-intro = r"""# Recommended exercises by topic {.unnumbered}
+topic_intro = r"""# Recommended exercises by topic {.unnumbered}
 
 This chapter contains lists of mathematics exercises grouped by each
 quantum chemistry topic taught at the school. These exercises can be
@@ -45,119 +49,345 @@ useful as a warm-up to the proper exercises given each day.
 """
 
 
-# get a list of the chapters in _quarto-student.yml
-
 import yaml
 from pathlib import Path
-import json
 import re
-import subprocess
 
-with open('_quarto.yml', 'r') as f:
+
+# ---------------------------------------------------------------------------
+# Get a list of chapters from _quarto.yml
+# ---------------------------------------------------------------------------
+
+with open("_quarto.yml", "r") as f:
     config = yaml.safe_load(f)
 
-# get all chapter names under all parts of the book
 chapters = []
-for entry in config['book']['chapters']:
-    entry_chapters = [entry] if isinstance(entry, str) else entry.get('chapters', [])
+
+for entry in config["book"]["chapters"]:
+    entry_chapters = [entry] if isinstance(entry, str) else entry.get("chapters", [])
+
     chapters.extend(
-        chapter for chapter in entry_chapters
-        if '_generated' not in Path(chapter).parts and 'chapters' in Path(chapter).parts
+        chapter
+        for chapter in entry_chapters
+        if "_generated" not in Path(chapter).parts
+        and "chapters" in Path(chapter).parts
     )
 
-
-# print the chapters
 print("Chapters in the book:")
 for chapter in chapters:
     print(f" - {chapter}")
-    
-    
-# now we have all the chapters.
 
 
-def extract_recommended_exercises(chapter):
-    result = subprocess.run(
-        ['pandoc', '--from', 'markdown', '--to', 'json', chapter],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    document = json.loads(result.stdout)
+# ---------------------------------------------------------------------------
+# Parse exercise metadata
+# ---------------------------------------------------------------------------
+
+def parse_attributes(attr_string):
+    """Parse attributes from the opening line of an exercise fenced div."""
+
+    result = {
+        "id": None,
+        "classes": [],
+        "recommended": [],
+        "level": None,
+        "topic": [],
+    }
+
+    # Exercise ID
+    match = re.search(r"#([A-Za-z0-9_-]+)", attr_string)
+    if match:
+        result["id"] = match.group(1)
+
+    # Classes
+    result["classes"] = re.findall(r"\.([A-Za-z0-9_-]+)", attr_string)
+
+    # Key-value attributes. Accept both single and double quotes.
+    for key, quote, value in re.findall(
+        r"""([A-Za-z0-9_-]+)\s*=\s*(["'])(.*?)\2""",
+        attr_string,
+    ):
+        if key == "recommended":
+            result["recommended"] = [
+                x.strip() for x in value.split(";") if x.strip()
+            ]
+
+        elif key == "topic":
+            result["topic"] = [
+                x.strip() for x in value.split(";") if x.strip()
+            ]
+
+        elif key == "level":
+            result["level"] = value.strip()
+
+    return result
+
+
+def extract_exercises(filename):
+    """Extract exercises and their metadata from one QMD file."""
+
+    text = Path(filename).read_text(encoding="utf-8")
+    lines = text.splitlines()
+
     exercises = []
+    i = 0
 
-    def visit(node):
-        if isinstance(node, dict):
-            if node.get('t') == 'Div':
-                attributes = node['c'][0]
-                identifier, classes, key_values = attributes
-                attribute_values = dict(key_values)
-                if identifier.startswith('exr-') and 'recommended' in classes:
-                    topics = [
-                        topic.strip()
-                        for topic in re.split(r'[,;]', attribute_values.get('topic', ''))
-                        if topic.strip()
-                    ]
-                    exercises.append({'id': identifier, 'topics': topics})
-            for value in node.values():
-                visit(value)
-        elif isinstance(node, list):
-            for value in node:
-                visit(value)
+    while i < len(lines):
+        line = lines[i]
 
-    visit(document['blocks'])
+        # Opening fenced div
+        match = re.match(r"^\s*:::\s*\{([^}]*)\}\s*$", line)
+
+        if not match:
+            i += 1
+            continue
+
+        attr_string = match.group(1)
+
+        # Only process exercise divs
+        if not re.search(r"#exr-[A-Za-z0-9_-]+", attr_string):
+            i += 1
+            continue
+
+        attrs = parse_attributes(attr_string)
+
+        # Search the exercise body for a heading.
+        heading = None
+        depth = 1
+        j = i + 1
+
+        while j < len(lines) and depth > 0:
+            current = lines[j]
+
+            # Nested fenced div
+            if re.match(r"^\s*:::\s*\{", current):
+                depth += 1
+
+            # Closing fenced div
+            elif re.match(r"^\s*:::\s*$", current):
+                depth -= 1
+
+                if depth == 0:
+                    break
+
+            # Record the first heading at the top exercise-div level
+            if depth == 1 and heading is None:
+                heading_match = re.match(
+                    r"^\s*#{2,6}\s+(.+?)\s*$",
+                    current,
+                )
+
+                if heading_match:
+                    heading = heading_match.group(1)
+
+            j += 1
+
+        exercises.append(
+            {
+                **attrs,
+                "chapter": filename,
+                "heading": heading,
+            }
+        )
+
+        i = j + 1
+
     return exercises
 
 
-recommended_exercises = [
-    exercise
-    for chapter in chapters
-    for exercise in extract_recommended_exercises(chapter)
-]
+# ---------------------------------------------------------------------------
+# Collect exercises
+# ---------------------------------------------------------------------------
 
-# # print the recommended exercises
-# print("Recommended exercises:")
-# for exercise in recommended_exercises:
-#     print(f" - {exercise['id']} (topics: {', '.join(exercise['topics'])})")
-    
+exercises = []
 
-# generate the recommendations-first-day.qmd file
-# these have no topics.
-with open('_generated/recommendations-first-day.qmd', 'w') as f:
-    f.write(day_1_intro)
-    f.write('\n')
-    f.write('<!-- BEGIN GENERATED RECOMMENDED EXERCISES -->\n')
-    for topic, description in topics_day_1.items():     
-            f.write(f"## {description}\n\n")
-            for exercise in recommended_exercises:
-                if topic in exercise['topics']:
-                    f.write(f"- @{exercise['id']}\n")
-            f.write('\n')
-    f.write('<!-- END GENERATED RECOMMENDED EXERCISES -->\n')
-    
-       
-# generate the recommendations-per-topic.qmd file
-with open('_generated/recommendations-per-topic.qmd', 'w') as f:
-    f.write(intro)
-    f.write('\n')
-    f.write('<!-- BEGIN GENERATED RECOMMENDED EXERCISES -->\n')
-    for topic, description in topics.items():     
-        f.write(f"## {description}\n\n")
-        for exercise in recommended_exercises:
-            if topic in exercise['topics']:
-                f.write(f"- @{exercise['id']}\n")
-        f.write('\n')
-    f.write('<!-- END GENERATED RECOMMENDED EXERCISES -->\n')
-    
+for chapter in chapters:
+    exercises.extend(extract_exercises(chapter))
 
-# report the user that the files have been generated
+print(f"\nFound {len(exercises)} exercises.")
 
-print("Generated recommendations-first-day.qmd and recommendations-per-topic.qmd")
-# print the recommended exercises per topic
-print("Recommended exercises per topic:")
+
+# ---------------------------------------------------------------------------
+# Validate metadata
+# ---------------------------------------------------------------------------
+
+valid_levels = set(levels)
+valid_recommendations = set(recommendations)
+valid_topics = set(topics)
+
+errors = []
+seen_ids = set()
+
+for ex in exercises:
+    ex_id = ex["id"]
+
+    if ex_id in seen_ids:
+        errors.append(f"Duplicate exercise id: {ex_id}")
+
+    seen_ids.add(ex_id)
+
+    if ex["level"] is not None and ex["level"] not in valid_levels:
+        errors.append(
+            f"{ex_id}: unknown level {ex['level']!r} "
+            f"in {ex['chapter']}"
+        )
+
+    for recommendation in ex["recommended"]:
+        if recommendation not in valid_recommendations:
+            errors.append(
+                f"{ex_id}: unknown recommendation {recommendation!r} "
+                f"in {ex['chapter']}"
+            )
+
+    for topic in ex["topic"]:
+        if topic not in valid_topics:
+            errors.append(
+                f"{ex_id}: unknown topic {topic!r} "
+                f"in {ex['chapter']}"
+            )
+
+if errors:
+    print("\nMetadata errors:")
+
+    for error in errors:
+        print(f" - {error}")
+
+    raise ValueError("Exercise metadata validation failed.")
+
+
+# ---------------------------------------------------------------------------
+# Formatting helpers
+# ---------------------------------------------------------------------------
+
+level_headings = {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "For the curious",
+}
+
+
+def exercise_list_item(ex):
+    """Return one Markdown list item."""
+
+    if ex["heading"]:
+        return f"- @{ex['id']} — {ex['heading']}"
+
+    return f"- @{ex['id']}"
+
+
+def exercises_for_day_1(level):
+    """Exercises recommended for the mathematics tutorial on day 1."""
+
+    return [
+        ex
+        for ex in exercises
+        if "math" in ex["recommended"]
+        and ex["level"] == level
+    ]
+
+
+def exercises_for_topic(topic, level):
+    """Recommended exercises for a quantum-chemistry topic."""
+
+    return [
+        ex
+        for ex in exercises
+        if "topic" in ex["recommended"]
+        and topic in ex["topic"]
+        and ex["level"] == level
+    ]
+
+
+# ---------------------------------------------------------------------------
+# Generate day-1 exercise list
+# ---------------------------------------------------------------------------
+
+day_1_output = day_1_intro
+
+for level in levels:
+    selected = exercises_for_day_1(level)
+
+    day_1_output += f"## {level_headings[level]} {{.unnumbered}}\n\n"
+
+    if selected:
+        for ex in selected:
+            day_1_output += exercise_list_item(ex) + "\n"
+    else:
+        day_1_output += "_No exercises selected._\n"
+
+    day_1_output += "\n"
+
+
+# ---------------------------------------------------------------------------
+# Generate exercise lists by quantum-chemistry topic
+# ---------------------------------------------------------------------------
+
+topic_output = topic_intro
+
 for topic, description in topics.items():
-    print(f"## {description}")
-    for exercise in recommended_exercises:
-        if topic in exercise['topics']:
-            print(f" - {exercise['id']}")
-    print()
+    topic_output += f"## {description} {{.unnumbered}}\n\n"
+
+    found_any = False
+
+    for level in levels:
+        selected = exercises_for_topic(topic, level)
+
+        if not selected:
+            continue
+
+        found_any = True
+
+        topic_output += f"### {level_headings[level]} {{.unnumbered}}\n\n"
+
+        for ex in selected:
+            topic_output += exercise_list_item(ex) + "\n"
+
+        topic_output += "\n"
+
+    if not found_any:
+        topic_output += "_No exercises selected._\n\n"
+
+
+# ---------------------------------------------------------------------------
+# Write generated files
+# ---------------------------------------------------------------------------
+
+generated_dir = Path("_generated")
+generated_dir.mkdir(parents=True, exist_ok=True)
+
+day_1_file = generated_dir / "recommended-mathematics.qmd"
+topic_file = generated_dir / "recommended-by-topic.qmd"
+
+day_1_file.write_text(day_1_output, encoding="utf-8")
+topic_file.write_text(topic_output, encoding="utf-8")
+
+print(f"\nWrote {day_1_file}")
+print(f"Wrote {topic_file}")
+
+
+# ---------------------------------------------------------------------------
+# Print summary
+# ---------------------------------------------------------------------------
+
+print("\nDay 1:")
+
+for level in levels:
+    print(
+        f"  {level:12s}: "
+        f"{len(exercises_for_day_1(level))}"
+    )
+
+print("\nBy topic:")
+
+for topic, description in topics.items():
+    counts = {
+        level: len(exercises_for_topic(topic, level))
+        for level in levels
+    }
+
+    count_string = ", ".join(
+        f"{level}={counts[level]}"
+        for level in levels
+    )
+
+    print(f"  {description}: {count_string}")
     
