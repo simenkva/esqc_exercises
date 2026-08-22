@@ -6,7 +6,7 @@ Visualize the following subsets of $\mathbb{C}$. Decide which sets are open, clo
 
 ## Exercises
 
-::: {#exr-complex-sets-exercise .recommended topic="recommended"}
+::: {#exr-complex-sets-exercise recommended="math" level="intermediate"}
 
 $\{ z \mid |z-1| = 1 \}$
 

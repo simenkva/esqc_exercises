@@ -24,7 +24,7 @@ $$
 
 ## Exercises
 
-::: {#exr-singular-value-decomposition-singular-value-decomposition-compression-tool .recommended topic="curious"}
+::: {#exr-singular-value-decomposition-singular-value-decomposition-compression-tool recommended="math" level="advanced"}
 
 1.  How is the Hilbert--Schmidt inner product related to the Euclidean inner product and the standard Euclidean vector space?
 

@@ -6,7 +6,7 @@ Some paths and their curves:
 
 ## Exercises
 
-::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path .recommended topic="recommended"}
+::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path recommended="math" level="intermediate"}
 
 Let $f : \mathbb{R}\to \mathbb{R}^2$ be a path defined by $$f(t) = [r(t)\cos(4t), r(t)\sin(4t)], \quad r(t) = \exp(-t).$$ Sketch the curve traced by the path for $0 \leq t \leq 2\pi$. You can check your sketch against, say, a Python plot.
 
@@ -26,7 +26,7 @@ Let $f : [0,\pi] \to \mathbb{R}^2$ be given by $f(t)=[x(t),y(t)]$, with $x(t) = 
 
 Level curves:
 
-::: {#exr-visualizing-functions-sketch-level-curves .recommended topic="recommended"}
+::: {#exr-visualizing-functions-sketch-level-curves recommended="math" level="intermediate"}
 
 Let $f(x,y) = x^2 + y^2$. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 1$ and $n=2$, $n=3$, and $n=4$.
 

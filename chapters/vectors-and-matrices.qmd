@@ -13,13 +13,13 @@ We work in the space $V = \mathbb{R}^2$, plane vectors. We define two vectors, $
 
 :::
 
-::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate .recommended topic="recommended"}
+::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate recommended="math" level="intermediate"}
 
 Let $\mathbf{v} = [2,2]^T$. Using Gaussian elimination, compute the coefficients $x_1$ and $x_2$ such that $$\mathbf{v} = x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2.$$ Illustrate this decomposition in the graph from the previous point, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.
 
 :::
 
-::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk .recommended topic="recommended"}
+::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk recommended="math" level="intermediate"}
 
 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.
 
@@ -45,13 +45,13 @@ A boat is sailing on the ocean, at a constant speed 20 km/h relative to the wate
 
 These exercises are to get practice with computing matrix-matrix products, and to get an intuitive feel for them.
 
-::: {#exr-vectors-and-matrices-matrix-products-between-pairs-these-matrices .recommended topic="recommended"}
+::: {#exr-vectors-and-matrices-matrix-products-between-pairs-these-matrices recommended="math" level="intermediate"}
 
 Let $$A = \begin{bmatrix} 1 & 3 \\ 0 & -2 \end{bmatrix}, \quad B = \begin{bmatrix} 7 & -1 & 0 \\ 8 & 1 & -1 \end{bmatrix}, \quad C = \begin{bmatrix} 0 & -1 \\ 5 & 7 \\ 0 & 7 \end{bmatrix}$$ Which matrix products between pairs of these matrices are defined? Compute the products.
 
 :::
 
-::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action .recommended topic="recommended"}
+::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action recommended="math" level="intermediate"}
 
 Let $A$ be the $n\times n$ matrix defined by $A_{i,i+1} = i^2$ for $1 \leq i < n$, and zero otherwise. Compute the action of $A$ and $A^T$ on the standard basis for $\mathbb{R}^n$. Compute the action of $A$ and $A^T$ on an arbitrary vector $\mathbf{x}\in \mathbb{R}^n$.
 

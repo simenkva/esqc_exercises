@@ -16,7 +16,7 @@ Write down the dual basis of $B = \{\mathbf{b}_1,\mathbf{b}_2\}$.
 
 :::
 
-::: {#exr-gaussian-elimination-robert-beezer-consider-following-system-equations .recommended topic="recommended"}
+::: {#exr-gaussian-elimination-robert-beezer-consider-following-system-equations recommended="math" level="intermediate"}
 
 (Robert Beezer) Consider the following system of equations: $$\begin{aligned}
     2 x_1 -3x_2 + x_3 + 7 x_4 &= 14\\

@@ -41,13 +41,13 @@ $$
 
 
 
-:::{#exr-combinatorics-factorial .recommended topic="beginner"}
+:::{#exr-combinatorics-factorial recommended="math" level="beginner"}
 
 Compute the factorials $0!$, $1!$, $2!$, $3!$, $4!$, and $5!$.
 
 :::
 
-:::{#exr-combinatorics-factorial-arrangements .recommended topic="recommended"}
+:::{#exr-combinatorics-factorial-arrangements recommended="math" level="intermediate"}
 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?
 :::
 
@@ -61,7 +61,7 @@ b. A chemist has 10 different chemical samples. 4 of the samples are liquids, an
 :::
 
 
-::: {#exr-stirling-factorial .recommended topic="curious"}
+::: {#exr-stirling-factorial recommended="math" level="advanced"}
 ## Stirling's approximation
 
 We study Stirling's approximation for the factorial.
@@ -122,20 +122,20 @@ $$
 Fact: The $n$-th row of Pascal's triangle contains the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 
-:::{#exr-combinatorics-binomial-coefficients .recommended topic="beginner"}
+:::{#exr-combinatorics-binomial-coefficients recommended="math" level="beginner"}
 
 a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom{7}{4}$.
 
 b.  In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many different combinations of 7 numbers can be drawn?
 :::
 
-:::{#exr-combinatorics-pascals-triangle .recommended topic="beginner"}
+:::{#exr-combinatorics-pascals-triangle recommended="math" level="beginner"}
 
 Compute the first 6 rows of Pascal's triangle. Verify that the numbers in the $n$-th row correspond to the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 :::
 
-::: {#exr-combinatorics-pascals-identity .recommended topic="curious"}
+::: {#exr-combinatorics-pascals-identity recommended="math" level="advanced"}
 ## Pascal's identity
 
 The binomial coefficients satisfy **Pascal's identity**,
@@ -167,7 +167,7 @@ e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choos
 
 
 
-::: {#exr-combinatorics-pascal-sierpinski .recommended topic="curious"}
+::: {#exr-combinatorics-pascal-sierpinski recommended="math" level="advanced"}
 
 Write a computer program to generate the first $2^n$ rows of Pascal's triangle, where $n=1,2,\ldots$. Create a $2^n\times 2^n$ lower triangular matrix $T$, where $T_{k,n} = 0$ if $\binom{n}{k}$ is even, and $T_{k,n}=1$ if the coefficient is odd, for $k \leq n$ (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.
 
@@ -567,5 +567,3 @@ plt.show()
 
 
 :::
-
-

@@ -6,7 +6,7 @@ Let $f(x)$ be a real-valued function, assumed to be analytic near some $x$, i.e.
 
 ## Exercises
 
-::: {#exr-complex-step-differentiation-complex-step-method .recommended topic="curious"}
+::: {#exr-complex-step-differentiation-complex-step-method recommended="math" level="advanced"}
 
 1.  Explain why there exists a complex analytic function near $x + 0\mathrm{i}$ that agrees with $f$ on the real axis.
 

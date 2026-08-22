@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Open and closed sets in Euclidean space – ESQC mathematics exercises</title>
+<title>15&nbsp; Open and closed sets in Euclidean space – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -100,20 +100,6 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-fact.callout {
-  border-left-color: #3EAF3E;
-}
-div.callout-fact.callout-style-default .callout-header {
-  background-color: rgba(62, 175, 62, 0.13);
-}
-div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: '';
-}
 div.callout-preparations.callout {
   border-left-color: #8B81FF;
 }
@@ -123,6 +109,20 @@ div.callout-preparations.callout-style-default .callout-header {
 div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
   background-image: url('data:image/png;base64,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');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+div.callout-fact.callout {
+  border-left-color: #3EAF3E;
+}
+div.callout-fact.callout-style-default .callout-header {
+  background-color: rgba(62, 175, 62, 0.13);
+}
+div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -363,7 +363,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/open-and-closed-sets.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/open-and-closed-sets.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -460,8 +460,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/summing-over-indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summing over indices</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/combinatorics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Combinatorics</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Combinatorics</span></span></a>
   </div>
 </li>
       </ul>
@@ -478,55 +484,55 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/bra-ket-notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/eigenvalues-and-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gram-schmidt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singular-value-decomposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomial-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -543,13 +549,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/open-and-closed-sets.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
   </div>
 </li>
       </ul>
@@ -570,13 +576,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/visualizing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/continuity-and-differentiability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
   </div>
 </li>
       </ul>
@@ -593,7 +599,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/matrix-exponentials-and-commutators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Matrix exponentials and commutators</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Matrix exponentials and commutators</span></span></a>
   </div>
 </li>
       </ul>
@@ -610,31 +616,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-arithmetic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-exponential.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-power-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singularities-and-contour-integrals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
   </div>
 </li>
       </ul>
@@ -651,19 +657,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/dual-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/newtons-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-step-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -694,17 +700,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">14.1</span> Exercises</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">14.2</span> Solutions</a>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">15.1</span> Exercises</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">15.2</span> Solutions</a>
   <ul class="collapse">
-  <li><a href="#tutor-note-open-and-closed-sets-in-euclidean-space" id="toc-tutor-note-open-and-closed-sets-in-euclidean-space" class="nav-link" data-scroll-target="#tutor-note-open-and-closed-sets-in-euclidean-space"><span class="header-section-number">14.2.1</span> Tutor note: Open and closed sets in Euclidean space</a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-any-ball-open" id="toc-solution-to-exr-open-and-closed-sets-any-ball-open" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-any-ball-open">Solution to Exercise&nbsp;<span>14.1</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-closed" id="toc-solution-to-exr-open-and-closed-sets-closed" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closed">Solution to Exercise&nbsp;<span>14.2</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges" id="toc-solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges">Solution to Exercise&nbsp;<span>14.3</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" id="toc-solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal">Solution to Exercise&nbsp;<span>14.4</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-closed-2" id="toc-solution-to-exr-open-and-closed-sets-closed-2" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closed-2">Solution to Exercise&nbsp;<span>14.5</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" id="toc-solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior">Solution to Exercise&nbsp;<span>14.6</span></a></li>
-  <li><a href="#solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure" id="toc-solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure">Solution to Exercise&nbsp;<span>14.7</span></a></li>
+  <li><a href="#tutor-note-open-and-closed-sets-in-euclidean-space" id="toc-tutor-note-open-and-closed-sets-in-euclidean-space" class="nav-link" data-scroll-target="#tutor-note-open-and-closed-sets-in-euclidean-space"><span class="header-section-number">15.2.1</span> Tutor note: Open and closed sets in Euclidean space</a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-any-ball-open" id="toc-solution-to-exr-open-and-closed-sets-any-ball-open" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-any-ball-open">Solution to Exercise&nbsp;<span>15.1</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-closed" id="toc-solution-to-exr-open-and-closed-sets-closed" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closed">Solution to Exercise&nbsp;<span>15.2</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges" id="toc-solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges">Solution to Exercise&nbsp;<span>15.3</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" id="toc-solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal">Solution to Exercise&nbsp;<span>15.4</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-closed-2" id="toc-solution-to-exr-open-and-closed-sets-closed-2" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-closed-2">Solution to Exercise&nbsp;<span>15.5</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" id="toc-solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior">Solution to Exercise&nbsp;<span>15.6</span></a></li>
+  <li><a href="#solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure" id="toc-solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure" class="nav-link" data-scroll-target="#solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure">Solution to Exercise&nbsp;<span>15.7</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -713,9 +719,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/open-and-closed-sets.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/open-and-closed-sets.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></h1>
 </div>
 
 
@@ -733,38 +739,38 @@ window.Quarto = {
 
 
 <p>Open balls define interior points, open sets, closed sets, boundaries, and closures in Euclidean space.</p>
-<section id="exercises" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">14.1</span> Exercises</h2>
+<section id="exercises" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">15.1</span> Exercises</h2>
 <div id="exr-open-and-closed-sets-any-ball-open" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.1</strong></span> Show that any <span class="math inline">\(\epsilon\)</span>-ball is open.</p>
+<p><span class="theorem-title"><strong>Exercise 15.1</strong></span> Show that any <span class="math inline">\(\epsilon\)</span>-ball is open.</p>
 </div>
 <div id="exr-open-and-closed-sets-closed" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.2</strong></span> Show that <span class="math inline">\(A \cup \partial A\)</span> is closed.</p>
+<p><span class="theorem-title"><strong>Exercise 15.2</strong></span> Show that <span class="math inline">\(A \cup \partial A\)</span> is closed.</p>
 </div>
 <div id="exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.3</strong></span> Show that if <span class="math inline">\(A \subset \mathbb{R}^n\)</span> is closed and a sequence <span class="math inline">\(\mathbf{x}_i \in A\)</span> converges to some <span class="math inline">\(\mathbf{x}\in \mathbb{R}^n\)</span>, then <span class="math inline">\(\mathbf{x}\in A\)</span>. This gives an equivalent characterization of closed subsets of <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 15.3</strong></span> Show that if <span class="math inline">\(A \subset \mathbb{R}^n\)</span> is closed and a sequence <span class="math inline">\(\mathbf{x}_i \in A\)</span> converges to some <span class="math inline">\(\mathbf{x}\in \mathbb{R}^n\)</span>, then <span class="math inline">\(\mathbf{x}\in A\)</span>. This gives an equivalent characterization of closed subsets of <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
 </div>
 <div id="exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.4</strong></span> Show that the closure of <span class="math inline">\(A\)</span>, the smallest closed set <span class="math inline">\(\bar{A}\)</span> that contains <span class="math inline">\(A\)</span>, is equal to <span class="math inline">\(A\cup \partial A\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 15.4</strong></span> Show that the closure of <span class="math inline">\(A\)</span>, the smallest closed set <span class="math inline">\(\bar{A}\)</span> that contains <span class="math inline">\(A\)</span>, is equal to <span class="math inline">\(A\cup \partial A\)</span>.</p>
 </div>
 <div id="exr-open-and-closed-sets-closed-2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.5</strong></span> Show that <span class="math display">\[A = \{ (x,0) \mid x \in [-1,1] \} \subset \mathbb{R}^2\]</span> is closed.</p>
+<p><span class="theorem-title"><strong>Exercise 15.5</strong></span> Show that <span class="math display">\[A = \{ (x,0) \mid x \in [-1,1] \} \subset \mathbb{R}^2\]</span> is closed.</p>
 </div>
 <div id="exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.6</strong></span> Show that <span class="math inline">\(\mathbb{Q} \subset \mathbb{R}\)</span> is neither open nor closed. Show that the boundary of <span class="math inline">\(\mathbb{Q}\)</span> is <span class="math inline">\(\mathbb{R}\)</span>. Show that the interior of <span class="math inline">\(\mathbb{Q}\)</span> is empty. What is the closure of <span class="math inline">\(\mathbb{Q}\)</span>?</p>
+<p><span class="theorem-title"><strong>Exercise 15.6</strong></span> Show that <span class="math inline">\(\mathbb{Q} \subset \mathbb{R}\)</span> is neither open nor closed. Show that the boundary of <span class="math inline">\(\mathbb{Q}\)</span> is <span class="math inline">\(\mathbb{R}\)</span>. Show that the interior of <span class="math inline">\(\mathbb{Q}\)</span> is empty. What is the closure of <span class="math inline">\(\mathbb{Q}\)</span>?</p>
 </div>
 <div id="exr-open-and-closed-sets-compute-interior-boundary-closure" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 14.7</strong></span> Let <span class="math display">\[A = \{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x &lt; 1, \quad 0 \leq y &lt; 1\}.\]</span> Compute the interior of <span class="math inline">\(A\)</span>, the boundary of <span class="math inline">\(A\)</span>, the closure of <span class="math inline">\(A\)</span>.</p>
+<p><span class="theorem-title"><strong>Exercise 15.7</strong></span> Let <span class="math display">\[A = \{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x &lt; 1, \quad 0 \leq y &lt; 1\}.\]</span> Compute the interior of <span class="math inline">\(A\)</span>, the boundary of <span class="math inline">\(A\)</span>, the closure of <span class="math inline">\(A\)</span>.</p>
 </div>
 </section>
-<section id="solutions" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">14.2</span> Solutions</h2>
-<section id="tutor-note-open-and-closed-sets-in-euclidean-space" class="level3" data-number="14.2.1">
-<h3 data-number="14.2.1" class="anchored" data-anchor-id="tutor-note-open-and-closed-sets-in-euclidean-space"><span class="header-section-number">14.2.1</span> Tutor note: Open and closed sets in Euclidean space</h3>
+<section id="solutions" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">15.2</span> Solutions</h2>
+<section id="tutor-note-open-and-closed-sets-in-euclidean-space" class="level3" data-number="15.2.1">
+<h3 data-number="15.2.1" class="anchored" data-anchor-id="tutor-note-open-and-closed-sets-in-euclidean-space"><span class="header-section-number">15.2.1</span> Tutor note: Open and closed sets in Euclidean space</h3>
 <p><strong>Tutor note:</strong> This exercise really develops the basic skills thinking about open and closed sets, and also mathematical argumentation. Even if the exercises are fairly basic by undergrad maths standards, maybe this style of thinking is difficult for some students, and therefore I think it is worthwhile.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-any-ball-open" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-any-ball-open">Solution to <a href="#exr-open-and-closed-sets-any-ball-open" class="quarto-xref">Exercise&nbsp;<span>14.1</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-any-ball-open">Solution to <a href="#exr-open-and-closed-sets-any-ball-open" class="quarto-xref">Exercise&nbsp;<span>15.1</span></a></h3>
 <p>Let <span class="math inline">\(A = B_\epsilon(\mathbf{x}_0)\)</span> and <span class="math inline">\(\mathbf{x}\in A\)</span>. Set <span class="math inline">\(r = \|\mathbf{x}-\mathbf{x}_0\| &lt; \epsilon\)</span> and <span class="math inline">\(\delta = \epsilon-r&gt;0\)</span>. If <span class="math inline">\(\mathbf{y}\in B_\delta(\mathbf{x})\)</span>, then</p>
 <p><span class="math display">\[
 \|\mathbf{y}-\mathbf{x}_0\|
@@ -774,29 +780,29 @@ window.Quarto = {
 <p>Thus <span class="math inline">\(B_\delta(\mathbf{x})\subset A\)</span>. Every point of <span class="math inline">\(A\)</span> has an open ball contained in <span class="math inline">\(A\)</span>, so <span class="math inline">\(A\)</span> is open.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-closed" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closed">Solution to <a href="#exr-open-and-closed-sets-closed" class="quarto-xref">Exercise&nbsp;<span>14.2</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closed">Solution to <a href="#exr-open-and-closed-sets-closed" class="quarto-xref">Exercise&nbsp;<span>15.2</span></a></h3>
 <p>Let <span class="math inline">\(C=(A\cup\partial A)^\complement\)</span>. If <span class="math inline">\(\mathbf{x}\in C\)</span>, then <span class="math inline">\(\mathbf{x}\notin A\)</span> and <span class="math inline">\(\mathbf{x}\notin\partial A\)</span>. Since <span class="math inline">\(\mathbf{x}\)</span> is not a boundary point, some ball <span class="math inline">\(B_\epsilon(\mathbf{x})\)</span> lies wholly in <span class="math inline">\(A\)</span> or wholly in <span class="math inline">\(A^\complement\)</span>. It cannot lie in <span class="math inline">\(A\)</span> because it contains <span class="math inline">\(\mathbf{x}\)</span>, so it lies in <span class="math inline">\(A^\complement\)</span> and contains no boundary point. Hence <span class="math inline">\(B_\epsilon(\mathbf{x})\subset C\)</span>. The complement <span class="math inline">\(C\)</span> is open, so <span class="math inline">\(A\cup\partial A\)</span> is closed.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges">Solution to <a href="#exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="quarto-xref">Exercise&nbsp;<span>14.3</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-if-closed-then-if-sequence-converges">Solution to <a href="#exr-open-and-closed-sets-if-closed-then-if-sequence-converges" class="quarto-xref">Exercise&nbsp;<span>15.3</span></a></h3>
 <p><em>The source does not supply a completed solution.</em></p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal">Solution to <a href="#exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="quarto-xref">Exercise&nbsp;<span>14.4</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal">Solution to <a href="#exr-open-and-closed-sets-closure-smallest-closed-set-contains-equal" class="quarto-xref">Exercise&nbsp;<span>15.4</span></a></h3>
 <p>We have shown that <span class="math inline">\(A \cup \partial A\)</span> is closed. Suppose <span class="math inline">\(A \cup \partial A\)</span> is not the smallest closed set that contains <span class="math inline">\(A\)</span>, i.e., <span class="math inline">\((A\cup\partial A)\setminus\bar{A}\)</span> contains some point <span class="math inline">\(\mathbf{x}\)</span>. Since both sets contain <span class="math inline">\(A\)</span>, we must have <span class="math inline">\(\mathbf{x}\in \partial A\)</span>. From this, we should look for a contradiction, because intuitively, the boundary must be part of <span class="math inline">\(\bar{A}\)</span>. For all <span class="math inline">\(\epsilon&gt;0\)</span>, <span class="math inline">\(B_\epsilon(\mathbf{x})\)</span> intersects both <span class="math inline">\(A\)</span> and <span class="math inline">\(A^\complement\)</span>. Therefore, there exists a sequence <span class="math inline">\(\mathbf{x}_i\in A\)</span> such that <span class="math inline">\(\mathbf{x}_i \to \mathbf{x}\in  \partial A\)</span>, but the smallest closed set containing <span class="math inline">\(A\)</span> must contain this <span class="math inline">\(\mathbf{x}\)</span>.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-closed-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closed-2">Solution to <a href="#exr-open-and-closed-sets-closed-2" class="quarto-xref">Exercise&nbsp;<span>14.5</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-closed-2">Solution to <a href="#exr-open-and-closed-sets-closed-2" class="quarto-xref">Exercise&nbsp;<span>15.5</span></a></h3>
 <p>Consider <span class="math inline">\(A^\complement\)</span>, the plane without the interval <span class="math inline">\([-1,1]\)</span> on the <span class="math inline">\(x\)</span>-axis. For a point <span class="math inline">\((x,y)\in A^\complement\)</span> with <span class="math inline">\(y\neq0\)</span>, choose any <span class="math inline">\(0&lt;\epsilon&lt;|y|\)</span>. If <span class="math inline">\(y=0\)</span>, then <span class="math inline">\(|x|&gt;1\)</span>, and we may choose any <span class="math inline">\(0&lt;\epsilon&lt;|x|-1\)</span>. In either case, the <span class="math inline">\(\epsilon\)</span>-ball around <span class="math inline">\((x,y)\)</span> misses <span class="math inline">\(A\)</span>. Thus <span class="math inline">\(A^\complement\)</span> is open and <span class="math inline">\(A\)</span> is closed.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior">Solution to <a href="#exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="quarto-xref">Exercise&nbsp;<span>14.6</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior">Solution to <a href="#exr-open-and-closed-sets-neither-open-nor-closed-boundary-interior" class="quarto-xref">Exercise&nbsp;<span>15.6</span></a></h3>
 <p>Let <span class="math inline">\(p/q \in \mathbb{Q}\)</span> be a rational number, and let <span class="math inline">\(]p/q-\epsilon, p/q + \epsilon[\)</span> be an <span class="math inline">\(\epsilon\)</span>-“ball” around <span class="math inline">\(p/q\)</span>. But we know that between any two real numbers, there are infinitely many rational numbers, and also irrational numbers. Hence, the ball is not contained in <span class="math inline">\(\mathbb{Q}\)</span>, so the rational numbers do not form an open set. Hence no rational number has an open ball around it, and hence the interior of <span class="math inline">\(\mathbb{Q}\)</span> is empty. To show that <span class="math inline">\(\mathbb{Q}\)</span> is not closed, consider the openness of the complement, <span class="math inline">\(\mathbb{R}\setminus\mathbb{Q}\)</span>, the irrational numbers. The same argument can be applied, the irrationals are not open.</p>
 <p>The boundary of <span class="math inline">\(\mathbb{Q}\)</span> is all of <span class="math inline">\(\mathbb{R}\)</span>, since any ball around a rational number contains both rational and irrational numbers.</p>
 <p>Finally, the closure of <span class="math inline">\(\mathbb{Q}\)</span> is then <span class="math inline">\(\mathbb{R}\)</span>.</p>
 </section>
 <section id="solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure">Solution to <a href="#exr-open-and-closed-sets-compute-interior-boundary-closure" class="quarto-xref">Exercise&nbsp;<span>14.7</span></a></h3>
+<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-open-and-closed-sets-compute-interior-boundary-closure">Solution to <a href="#exr-open-and-closed-sets-compute-interior-boundary-closure" class="quarto-xref">Exercise&nbsp;<span>15.7</span></a></h3>
 <p>The interior of <span class="math inline">\(A\)</span> is <span class="math display">\[\{ (x,y) \in \mathbb{R}^2 \mid 0 &lt; x &lt; 1, \quad 0 &lt; y &lt; 1\}.\]</span> The boundary of <span class="math inline">\(A\)</span> is the border of the square, <span class="math display">\[\partial A = \{ (0,t) \mid 0 \leq t \leq 1 \} \cup \{ (1,t) \mid 0 \leq t \leq 1 \} \cup \{ (t,0) \mid 0 \leq t \leq 1 \} \cup \{ (t,1) \mid 0 \leq t \leq 1 \}\]</span> The closure of <span class="math inline">\(A\)</span> is <span class="math inline">\(A\)</span> with the border, hence <span class="math display">\[\{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x \leq 1, \quad 0 \leq y \leq 1\}.\]</span></p>
 
 
@@ -1220,12 +1226,12 @@ window.Quarto = {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../chapters/metric-spaces.html" class="pagination-link" aria-label="Metric spaces">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Metric spaces</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../chapters/visualizing-functions.html" class="pagination-link" aria-label="Visualizing functions">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

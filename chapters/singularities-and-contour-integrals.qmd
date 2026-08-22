@@ -6,7 +6,7 @@ Laurent series classify isolated singularities and determine contour integrals a
 
 ### Singularities
 
-::: {#exr-singularities-and-contour-integrals-consider-function-how-many-poles-does .recommended topic="recommended"}
+::: {#exr-singularities-and-contour-integrals-consider-function-how-many-poles-does recommended="math" level="intermediate"}
 
 Consider the function $f(z) = \frac{1}{z(z-1)}$. How many poles does $f$ have, and where are they? What are the order of the poles? Can you write down the Laurent series of $f$ around $z=0$?
 

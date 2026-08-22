@@ -5,13 +5,13 @@ Sets and set notation appear many places in quantum chemistry. The goal of this 
 
 ## Exercises: abstract sets and functions
 
-::: {#exr-sets-and-functions-write-days-week-set .recommended topic="beginner"}
+::: {#exr-sets-and-functions-write-days-week-set recommended="math" level="beginner"}
 
 Write the days of the week as a set
 
 :::
 
-::: {#exr-sets-and-functions-write-five-first-natural-numbers-set .recommended topic="recommended"}
+::: {#exr-sets-and-functions-write-five-first-natural-numbers-set recommended="math" level="intermediate"}
 
 Write the five first natural numbers using set notation as indicated in the lecture notes
 
@@ -59,7 +59,7 @@ De Morgan's laws are useful when discussing subsets $A,B$ of a larger set $X$. R
 
 - $(A \cap B)^\complement = A^\complement \cup B^\complement$.
 
-::: {#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping .recommended topic="recommended"}
+::: {#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping recommended="math" level="intermediate"}
 
 Draw a picture, representing $X$ as the whole sheet, $A$ and $B$ as overlapping shapes, e.g., circles. Label $A$, $B$, $A\cap B$, and $A \cup B$, making another drawing if necessary. Convince yourself that De Morgan's laws are correct.
 
@@ -77,7 +77,7 @@ Prove De Morgan's laws mathematically. Note that the complement operation acts l
 ![Morse potential](../figures/exercises/morse_potential_exercise.svg){#fig-morse-potential}
 
 
-::: {#exr-sets-potential-energy-curve .recommended topic="beginner"}
+::: {#exr-sets-potential-energy-curve recommended="math" level="beginner"}
 
 Figure @fig-morse-potential shows the _Morse potential_ - a common model potential for vibrational motion of a diatomic molecule: 
 
@@ -111,7 +111,7 @@ e. Based on the figure, which of the following statements are true?
 :::
 
 
-::: {#exr-molecule-sets .recommended topic="recommended"}
+::: {#exr-molecule-sets recommended="math" level="intermediate"}
 In this exercise, a *molecule* is informally defined only by its chemical composition: the number of atoms of each element occurring in its molecular formula. Thus, $\mathrm{H_2}$ and $\mathrm{CO}$ are two distinct molecules, while $\mathrm{HCOOH}$ and $\mathrm{CO_2H_2}$ represent the same molecule, since both contain one C atom, two H atoms, and two O atoms.
 
 We ignore molecular geometry, bonding, isotopes, charge, and all questions of chemical stability. In particular, any formal combination of atoms is deemed a molecule, whether or not such a species could exist physically.

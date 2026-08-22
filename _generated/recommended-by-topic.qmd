@@ -1,0 +1,38 @@
+# Recommended exercises by topic {.unnumbered}
+
+This chapter contains lists of mathematics exercises grouped by each
+quantum chemistry topic taught at the school. These exercises can be
+useful as a warm-up to the proper exercises given each day.
+
+## Coupled-cluster theory {.unnumbered}
+
+_No exercises selected._
+
+## Second quantization {.unnumbered}
+
+_No exercises selected._
+
+## Self-consistent field theory {.unnumbered}
+
+_No exercises selected._
+
+## Density functional theory {.unnumbered}
+
+_No exercises selected._
+
+## Response theory {.unnumbered}
+
+_No exercises selected._
+
+## Relativistic quantum chemistry {.unnumbered}
+
+_No exercises selected._
+
+## Molecular properties {.unnumbered}
+
+_No exercises selected._
+
+## Multiconfigurational methods {.unnumbered}
+
+_No exercises selected._
+

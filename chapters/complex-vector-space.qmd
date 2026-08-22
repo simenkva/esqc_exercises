@@ -6,7 +6,7 @@ The geometrical interpretation of the $\mathbb{C}$ as the plane $\mathbb{R}^2$ i
 
 ## Exercises
 
-::: {#exr-complex-vector-space-complex-numbers-real-vector-space .recommended topic="curious"}
+::: {#exr-complex-vector-space-complex-numbers-real-vector-space recommended="math" level="advanced"}
 
 1.  Show that $\mathbb{C}$ regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in $\mathbb{R}^2$? Conclude that $\mathbb{C}$ can be regarded as a *real* Euclidean vector space of dimension $2$.
 

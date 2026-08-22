@@ -6,7 +6,7 @@ Limits define continuity, while partial derivatives describe local change for fu
 
 ### Continuity
 
-::: {#exr-continuity-and-differentiability-given-does-limit-not-exist-why .recommended topic="recommended"}
+::: {#exr-continuity-and-differentiability-given-does-limit-not-exist-why recommended="math" level="intermediate"}
 
 Let $f:\mathbb{R}\to\mathbb{R}$ be given by $$f(x) = \begin{cases} 1 & x > 0 \\
         -1 & x \leq 0 \end{cases}$$ For which $x \in \mathbb{R}$ does the limit $$\lim_{h \to 0} f(x + h)$$ *not* exist? Why?
@@ -25,7 +25,7 @@ Show that any polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous, by using the
 
 :::
 
-::: {#exr-continuity-and-differentiability-marsden-tromba-does-exist-if-you .recommended topic="recommended"}
+::: {#exr-continuity-and-differentiability-marsden-tromba-does-exist-if-you recommended="math" level="intermediate"}
 
 (Marsden and Tromba) Does $\lim_{(x,y)\to (0,0)} x^2/(x^2+y^2)$ exist? If you want, plotting the function can help.
 
