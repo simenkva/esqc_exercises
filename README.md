@@ -1,7 +1,7 @@
 # ESQC Mathematics Exercises
 
 This repository contains the mathematics exercise book for the European
-Summer School in Quantum Chemistry (ESQC). 
+Summer School in Quantum Chemistry (ESQC).
 
 ## Build the book
 
@@ -44,14 +44,52 @@ Write the exercise here.
 :::
 ```
 
-Add the `recommended` class and a `topic` attribute when an exercise belongs
-in one of the generated recommendation lists:
+Exercises can carry three kinds of metadata: difficulty level, recommendation
+category, and quantum chemistry topic. For example:
 
 ```markdown
-::: {#exr-short-name .recommended topic="recommended,scf"}
+::: {#exr-short-name recommended="math;topic" level="intermediate" topic="coupled-cluster;scf"}
 Write the exercise here.
 :::
 ```
+
+The `level` attribute describes the mathematical difficulty of the exercise.
+The allowed values are:
+
+- `beginner` — exercises covering basic mathematical skills;
+- `intermediate` — exercises at the standard level;
+- `advanced` — more challenging exercises, presented to students as
+  "For the curious".
+
+The `recommended` attribute controls inclusion in generated recommendation
+lists. It is a semicolon-separated list with the following values:
+
+- `math` — recommended for the mathematics tutorial on the first day;
+- `topic` — recommended for use in the topic-based tutorials on subsequent
+  days.
+
+Thus, `recommended="math;topic"` means that an exercise may appear in both
+kinds of recommendation lists. Omit the attribute if the exercise is not
+specifically recommended.
+
+The `topic` attribute records the quantum chemistry topics for which an
+exercise is relevant. Multiple topics are separated by semicolons:
+
+```markdown
+topic="coupled-cluster;scf"
+```
+
+An exercise may have a level without being recommended or associated with a
+particular quantum chemistry topic:
+
+```markdown
+::: {#exr-short-name level="beginner"}
+Write the exercise here.
+:::
+```
+
+Likewise, do not add a topic merely to classify the difficulty of an exercise:
+difficulty belongs exclusively in the `level` attribute.
 
 Keep solutions and tutor notes inside the tutor profile gate:
 
@@ -89,9 +127,10 @@ record. `MIGRATION.md` documents how that material moved into the Quarto book.
 
 ## Contributions
 
-Are you an ESQC tutor? I welcome contributions to the exercises, solutions, figures, and code. Read
-[CONTRIBUTING.md](CONTRIBUTING.md) before submitting material. Add your name
-and attribution details to [CONTRIBUTORS.md](CONTRIBUTORS.md).
+Are you an ESQC tutor? I welcome contributions to the exercises, solutions,
+figures, and code. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting
+material. Add your name and attribution details to
+[CONTRIBUTORS.md](CONTRIBUTORS.md).
 
 ## Licence
 
