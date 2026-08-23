@@ -223,6 +223,72 @@ f.	Show directly from the power series that $f(-z)=f(z)$. Thus $f$ is an even fu
 
 
 
+::: {#exr-complex-power-series-cauchy-product level="intermediate" recommended="topic" topic="second-quantization"}
+
+### The Cauchy product of power series
+
+Consider two power series
+
+$$
+A(z)=\sum_{n=0}^{\infty}a_nz^n,\qquad B(z)=\sum_{n=0}^{\infty}b_nz^n.
+$$
+
+Their product can be found in the same way as the product of two polynomials, by multiplying terms and collecting equal powers of $z$.
+
+a.	Write out the terms of $A(z)$ and $B(z)$ up to order $z^3$. Multiply the two expressions and show that the first four coefficients of $A(z)B(z)$ are
+
+	$$
+	a_0b_0,\qquad a_0b_1+a_1b_0,\qquad a_0b_2+a_1b_1+a_2b_0,\qquad a_0b_3+a_1b_2+a_2b_1+a_3b_0.
+	$$
+
+b.	In general, show that the coefficient $c_n$ of $z^n$ is
+
+	$$
+	c_n=\sum_{k=0}^n a_kb_{n-k}.
+	$$
+
+	This multiplication rule is called the **Cauchy product**.
+
+c.	Apply the Cauchy product to two copies of the exponential series
+
+	$$
+	e^z=\sum_{n=0}^{\infty}\frac{z^n}{n!}.
+	$$
+
+	Show that the coefficient of $z^n$ in $e^ze^z$ is
+
+	$$
+	c_n=\sum_{k=0}^n\frac{1}{k!(n-k)!}.
+	$$
+
+d.	Use
+
+	$$
+	\frac{1}{k!(n-k)!}=\frac{1}{n!}\binom{n}{k}
+	$$
+
+	and the identity
+
+	$$
+	\sum_{k=0}^n\binom{n}{k}=2^n
+	$$
+
+	to simplify $c_n$.
+
+e.	Use your result to show directly from the power series that
+
+	$$
+	e^ze^z=e^{2z}.
+	$$
+:::
+
+
+
+
+
+
+
+
 
 
 
@@ -472,35 +538,37 @@ b.	The first sine partial sums are
 
 c. and d. One possible Python implementation is
 
-	```python
-	import numpy as np
-	import matplotlib.pyplot as plt
-	from math import factorial
+```{python}
+#|echo: true
 
-	x = np.linspace(-2*np.pi, 2*np.pi, 500)
+import numpy as np
+import matplotlib.pyplot as plt
+from math import factorial
 
-	def C(x, N):
-	    return sum((-1)**n * x**(2*n) / factorial(2*n)
-	               for n in range(N + 1))
+x = np.linspace(-2*np.pi, 2*np.pi, 500)
 
-	def S(x, N):
-	    return sum((-1)**n * x**(2*n + 1) / factorial(2*n + 1)
-	               for n in range(N + 1))
+def C(x, N):
+	return sum((-1)**n * x**(2*n) / factorial(2*n)
+				for n in range(N + 1))
 
-	plt.plot(x, np.cos(x), label="cos(x)")
-	for N in range(4):
-	    plt.plot(x, C(x, N), label=f"C_{N}(x)")
-	plt.ylim(-2, 2)
-	plt.legend()
-	plt.show()
+def S(x, N):
+	return sum((-1)**n * x**(2*n + 1) / factorial(2*n + 1)
+				for n in range(N + 1))
 
-	plt.plot(x, np.sin(x), label="sin(x)")
-	for N in range(4):
-	    plt.plot(x, S(x, N), label=f"S_{N}(x)")
-	plt.ylim(-2, 2)
-	plt.legend()
-	plt.show()
-	```
+plt.plot(x, np.cos(x), label="cos(x)")
+for N in range(4):
+	plt.plot(x, C(x, N), label=f"C_{N}(x)")
+plt.ylim(-2, 2)
+plt.legend()
+plt.show()
+
+plt.plot(x, np.sin(x), label="sin(x)")
+for N in range(4):
+	plt.plot(x, S(x, N), label=f"S_{N}(x)")
+plt.ylim(-2, 2)
+plt.legend()
+plt.show()
+```	
 
 e.	As more terms are included, the partial sums approximate sine and cosine accurately over an increasingly large interval. For a fixed number of terms, the approximation is generally best near the expansion point $x=0$ and becomes poorer as $|x|$ increases.
 
@@ -609,108 +677,112 @@ f.	Only even powers of $z$ occur in the series. Therefore,
 
 
 
+### Solution for @exr-complex-power-series-cauchy-product {.unnumbered}
 
+a.	We have
 
+	$$
+	A(z)=a_0+a_1z+a_2z^2+a_3z^3+\cdots
+	$$
 
+	and
 
+	$$
+	B(z)=b_0+b_1z+b_2z^2+b_3z^3+\cdots.
+	$$
 
+	Multiplying and collecting equal powers of $z$ gives
 
+	$$
+	A(z)B(z)=a_0b_0+(a_0b_1+a_1b_0)z+(a_0b_2+a_1b_1+a_2b_0)z^2+(a_0b_3+a_1b_2+a_2b_1+a_3b_0)z^3+\cdots.
+	$$
 
+b.	To obtain a term proportional to $z^n$, we must multiply a term $a_kz^k$ from the first series by a term $b_{n-k}z^{n-k}$ from the second series, since
 
+	$$
+	z^kz^{n-k}=z^n.
+	$$
 
+	Summing over all possible values $k=0,\ldots,n$ gives
 
+	$$
+	c_n=\sum_{k=0}^n a_kb_{n-k}.
+	$$
 
+	Therefore,
 
+	$$
+	A(z)B(z)=\sum_{n=0}^{\infty}\left(\sum_{k=0}^n a_kb_{n-k}\right)z^n.
+	$$
 
+c.	For the exponential series,
 
+	$$
+	a_k=\frac{1}{k!},\qquad b_k=\frac{1}{k!}.
+	$$
 
+	Hence the Cauchy product gives
 
+	$$
+	c_n=\sum_{k=0}^n\frac{1}{k!(n-k)!}.
+	$$
 
+d.	Using
 
+	$$
+	\frac{1}{k!(n-k)!}=\frac{1}{n!}\binom{n}{k},
+	$$
 
+	we obtain
 
+	$$
+	c_n=\frac{1}{n!}\sum_{k=0}^n\binom{n}{k}.
+	$$
 
+	The sum of the binomial coefficients is $2^n$, so
 
+	$$
+	c_n=\frac{2^n}{n!}.
+	$$
 
+e.	Consequently,
 
+	$$
+	e^ze^z=\sum_{n=0}^{\infty}\frac{2^n}{n!}z^n=\sum_{n=0}^{\infty}\frac{(2z)^n}{n!}.
+	$$
 
+	The expression on the right is precisely the power series for $e^{2z}$. Therefore,
 
+	$$
+	e^ze^z=e^{2z}.
+	$$
 
+	This demonstrates the exponential product rule directly from the power-series representation.
 
-:::{#exr-complex-power-series-consider-taylor-series-th-partial-sum}
-
-Consider the geometric series $$\sum_{n=0}^\infty z^n  = 1 + z + z^2 + \ldots \longrightarrow \frac{1}{1-z}.$$ Show that the $N$th partial sum is
-
-$$
-\sum_{n=0}^{N}z^n=\frac{1-z^{N+1}}{1-z}.
-$$
-
-Polynomial long division may be useful.
-
-:::
-
-:::{#exr-complex-power-series-find-upper-bound-such-partial-sum}
-
-Find an upper bound for $|z|$ such that the partial sum converges to $1/(1-z)$.
-
-:::
-
-:::{#exr-complex-power-series-taylor-series-exponential-function-definition-complex}
-
-The Taylor series for the exponential function is $$\sum_{n=0}^\infty \frac{1}{n!} z^n.$$ Using the definition of the complex exponential, find the Taylor series for $\cos(x)$ and $\sin(x)$, for $x\in\mathbb{R}$.
-
-:::
-
-:::{#exr-complex-power-series-make-plots-partial-sums-sine-cosine}
-
-Make plots of the partial sums of the sine and cosine Taylor series to verify your result.
-
-:::
-
-:::{#exr-complex-power-series-find-taylor-series-function}
-
-Find the Taylor series for the function $f(z) = (e^z - 1)/z$
-
-:::
-
-:::{#exr-complex-power-series-find-taylor-series-function-2}
-
-Find the Taylor series for the function $f(z) = \sin(z)/z$ for $z\neq 0$ and $f(0) = 1$.
-
-:::
-
-::: {.content-visible when-profile="tutor"}
-
-## Solutions
-
-### Solution to @exr-complex-power-series-consider-taylor-series-th-partial-sum {.unnumbered}
-
-*The source does not supply a solution.*
-
-### Solution to @exr-complex-power-series-find-upper-bound-such-partial-sum {.unnumbered}
-
-*The source does not supply a solution.*
-
-### Solution to @exr-complex-power-series-taylor-series-exponential-function-definition-complex {.unnumbered}
-
-*The source does not supply a solution.*
-
-### Solution to @exr-complex-power-series-make-plots-partial-sums-sine-cosine {.unnumbered}
-
-*The source does not supply a solution.*
-
-### Solution to @exr-complex-power-series-find-taylor-series-function {.unnumbered}
-
-*The source does not supply a solution.*
-
-### Solution to @exr-complex-power-series-find-taylor-series-function-2 {.unnumbered}
-
-*The source does not supply a solution.*
 
 :::
 
 
 
 
-::::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
