@@ -50,22 +50,18 @@ book:
         - chapters/open-and-closed-sets.qmd
 
     - part: "Calculus"
-      chapters:
+      chapters: []
         # - chapters/limits-and-continuity.qmd
         # - chapters/differentiation.qmd
         # - chapters/integration.qmd
         # - chapters/multivariable-calculus.qmd
-        - chapters/taylor-series.qmd
 
     - part: "Multivariable calculus"
       chapters:
         - chapters/visualizing-functions.qmd
         - chapters/continuity-and-differentiability.qmd
 
-    - part: "Series and matrix functions"
-      chapters:
-#        - chapters/matrix-exponentials-and-commutators.qmd
-        - chapters/matrix-exp-bch.qmd
+
 
     - part: "Complex numbers and complex analysis"
       chapters:
@@ -74,6 +70,15 @@ book:
         - chapters/complex-exponential.qmd
         - chapters/complex-power-series.qmd
         - chapters/singularities-and-contour-integrals.qmd
+
+    - part: "Series expansions and matrix functions"
+      chapters:
+        - chapters/taylor-series.qmd
+#        - chapters/matrix-exponentials-and-commutators.qmd
+        - chapters/matrix-exp-bch.qmd
+
+
+
 
     - part: "Numerical methods"
       chapters:

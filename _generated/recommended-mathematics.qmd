@@ -28,6 +28,7 @@ quantum chemistry topic taught at the school.
 - @exr-combinatorics-factorial — Basic factorials
 - @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
 - @exr-combinatorics-pascals-triangle — Pascal's triangle
+- @exr-combinatorics-binomial-theorem-basic — The binomial theorem
 - @exr-vector-spaces-basic-operations — Basic vector operations
 - @exr-matrix-vector-multiplication — Matrix-vector products
 - @exr-matrix-matrix-multiplication — Matrix-matrix products
@@ -35,6 +36,7 @@ quantum chemistry topic taught at the school.
 - @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate — Gaussian elimination and vector decomposition
 - @exr-general-vector-spaces-recipes — Cooking with vectors 1
 - @exr-bra-ket-column-vectors — Bra-ket notation and column vectors
+- @exr-complex-power-series-geometric-convergence — Convergence of the geometric series
 - @exr-taylor-exp — Approximating the exponential function
 - @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
 
@@ -46,6 +48,7 @@ quantum chemistry topic taught at the school.
 - @exr-cardinality-and-countability-explicitly-constructing-bijection — Countability of the integers
 - @exr-summing-3 — Estimating $\sqrt{e}$ via a Taylor series
 - @exr-combinatorics-factorial-arrangements — Lunch line
+- @exr-combinatorics-binomial-theorem-coefficients — Coefficients in binomial expansions
 - @exr-vectors-and-matrices-person-walks-home-first-they-walk — Office coordinates
 - @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed — Boat sailing on the ocean
 - @exr-vectors-and-matrices-robert-beezer-three-digit-number-has — An exercise by Robert Beezer
@@ -63,6 +66,7 @@ quantum chemistry topic taught at the school.
 - @exr-complex-arithmetic-complex-numbers-can-written-polar-form
 - @exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule
 - @exr-complex-sets-exercise
+- @exr-complex-power-series-exponential-sine-cosine — The exponential, sine, and cosine series
 - @exr-singularities-and-contour-integrals-consider-function-how-many-poles-does
 
 ## For the curious {.unnumbered}

@@ -1,8 +1,641 @@
 # Complex power series
 
-Geometric and exponential series give power-series representations of elementary complex functions.
+A **power series** is an infinite series of the form
 
-## Exercises
+$$
+\sum_{n=0}^\infty a_n z^n = a_0+a_1z+a_2z^2+\cdots,
+$$
+
+where the variable $z$ may be a complex number. We can think of a power series as a polynomial with infinitely many terms. As with any infinite series, an important question is whether the partial sums approach a finite limit. Typically, a power series converges when $z$ lies inside some circle $|z|<R$ in the complex plane, where $R$ is called the **radius of convergence**.
+
+The simplest example is the **geometric series**
+
+$$
+1+z+z^2+z^3+\cdots=\frac{1}{1-z}, \qquad |z|<1.
+$$
+
+Thus, inside the unit circle, the function $1/(1-z)$ can be represented exactly by an infinite sum of powers of $z$. Truncating the series after finitely many terms gives a polynomial approximation to the function (the MacLaurin series).
+
+Many important functions can be represented by power series. In particular, the complex exponential is defined by
+
+$$
+e^z=\sum_{n=0}^\infty\frac{z^n}{n!}=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\cdots.
+$$
+
+Unlike the geometric series, this series converges for every complex number $z$! Substituting imaginary arguments into the exponential series leads directly to the familiar power series for sine and cosine and provides another way of understanding Euler's formula $e^{ix}=\cos x+i\sin x$.
+
+Power series are especially useful because they can often be manipulated much like ordinary polynomials. We can add and multiply them, substitute expressions for their variables, and use them to investigate functions that may initially appear problematic. For example, the expressions $(e^z-1)/z$ and $\sin z/z$ appear to be undefined at $z=0$, but their power-series representations reveal what happens there and show how the apparent singularity can be removed.
+
+## Exercises {.unnumbered}
+
+
+::: {#exr-complex-power-series-geometric-partial-sum level="beginner"}
+### Partial sums of the geometric series
+
+Consider the geometric series
+
+$$
+1+z+z^2+z^3+\cdots.
+$$
+
+For a finite integer $N\geq 0$, define the partial sum
+
+$$
+S_N(z)=\sum_{n=0}^N z^n=1+z+z^2+\cdots+z^N.
+$$
+
+a.	Write down $S_0(z)$, $S_1(z)$, $S_2(z)$, and $S_3(z)$.
+
+b.	Multiply $S_N(z)$ by $z$ and write down the resulting expression.
+
+c.	Subtract $zS_N(z)$ from $S_N(z)$ and show that
+
+	$$
+	(1-z)S_N(z)=1-z^{N+1}.
+	$$
+
+d.	Hence show, for $z\neq 1$, that
+
+	$$
+	S_N(z)=\frac{1-z^{N+1}}{1-z}.
+	$$
+:::
+
+::: {#exr-complex-power-series-geometric-convergence level="beginner" recommended="math" }
+### Convergence of the geometric series
+
+From @exr-complex-power-series-geometric-partial-sum,
+
+$$
+S_N(z)=\frac{1-z^{N+1}}{1-z}.
+$$
+
+a.	Let $z=\frac12$. What happens to $z^{N+1}$ as $N\to\infty$? Find the limit of $S_N(z)$.
+
+b.	Let $z=\frac{i}{2}$. What happens to $|z^{N+1}|$ as $N\to\infty$?
+
+c.	Show that if $|z|<1$, then
+
+	$$
+	|z^{N+1}|=|z|^{N+1}\longrightarrow 0.
+	$$
+
+d.	Conclude that
+
+	$$
+	\sum_{n=0}^{\infty}z^n=\frac{1}{1-z},\qquad |z|<1.
+	$$
+
+e.	What happens when $z=1$? What happens when $z=-1$? Do these series converge?
+
+f.	The condition $|z|<1$ describes a region in the complex plane. What does this region look like?
+:::
+
+::: {#exr-complex-power-series-exponential-sine-cosine level="intermediate" recommended="math;topic" topic="second-quantization"}
+### The exponential, sine, and cosine series
+
+The complex exponential is represented by the power series
+
+$$
+e^z=\sum_{n=0}^{\infty}\frac{z^n}{n!}=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\cdots.
+$$
+
+Euler's formula states that, for real $x$,
+
+$$
+e^{ix}=\cos x+i\sin x.
+$$
+
+a.	Substitute $z=ix$ into the power series for $e^z$ and write out the first seven terms.
+
+b.	Use
+
+	$$
+	i^0=1,\qquad i^1=i,\qquad i^2=-1,\qquad i^3=-i,\qquad i^4=1
+	$$
+
+	to separate the real and imaginary parts of the series.
+
+c.	By comparing with Euler's formula, show that
+
+	$$
+	\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}
+	$$
+
+	and
+
+	$$
+	\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}.
+	$$
+
+d.	Write out the first four nonzero terms of each series.
+
+e.	Use the series to obtain polynomial approximations to $\cos x$ and $\sin x$ containing terms up to and including order $x^5$.
+:::
+
+::: {#exr-complex-power-series-plot-sine-cosine level="intermediate"}
+### Approximating sine and cosine by polynomials
+
+Define the partial sums
+
+$$
+C_N(x)=\sum_{n=0}^{N}(-1)^n\frac{x^{2n}}{(2n)!},
+\qquad
+S_N(x)=\sum_{n=0}^{N}(-1)^n\frac{x^{2n+1}}{(2n+1)!}.
+$$
+
+a.	Write down $C_0(x)$, $C_1(x)$, and $C_2(x)$ explicitly.
+
+b.	Write down $S_0(x)$, $S_1(x)$, and $S_2(x)$ explicitly.
+
+c.	Plot $\cos x$ together with $C_0(x)$, $C_1(x)$, $C_2(x)$, and $C_3(x)$ over the interval $-2\pi\leq x\leq2\pi$.
+
+d.	Make a corresponding plot for $\sin x$ and $S_0(x)$, $S_1(x)$, $S_2(x)$, and $S_3(x)$.
+
+e.	Describe what happens to the quality of the approximation as more terms are included. Is the approximation equally good close to $x=0$ and far away from $x=0$?
+:::
+
+::: {#exr-complex-power-series-exponential-removable-singularity level="intermediate"}
+### A removable singularity
+
+Consider
+
+$$
+f(z)=\frac{e^z-1}{z},\qquad z\neq0.
+$$
+
+At first sight, this expression is not defined at $z=0$.
+
+a.	Write down the power series for $e^z-1$.
+
+b.	Divide the series by $z$ and show that, for $z\neq0$,
+
+	$$
+	f(z)=1+\frac{z}{2!}+\frac{z^2}{3!}+\frac{z^3}{4!}+\cdots.
+	$$
+
+c.	Write the result using summation notation.
+
+d.	What value does the power series suggest that we should assign to $f(0)$?
+
+e.	Define $f(0)$ using your answer to part d. Explain why the apparent singularity at $z=0$ is then removed.
+:::
+
+::: {#exr-complex-power-series-sinc level="intermediate"}
+### The function $\sin z/z$
+
+Consider the function
+
+$$
+f(z)=
+\begin{cases}
+\dfrac{\sin z}{z}, & z\neq0,\\[4pt]
+1, & z=0.
+\end{cases}
+$$
+
+a.	Start from the power series
+
+	$$
+	\sin z=z-\frac{z^3}{3!}+\frac{z^5}{5!}-\frac{z^7}{7!}+\cdots
+	$$
+
+	and divide by $z$.
+
+b.	Show that
+
+	$$
+	f(z)=1-\frac{z^2}{3!}+\frac{z^4}{5!}-\frac{z^6}{7!}+\cdots.
+	$$
+
+c.	Write this series in summation notation.
+
+d.	Use the series to explain why the choice $f(0)=1$ is natural.
+
+e.	What is the coefficient of $z^2$ in the power series? What is the coefficient of $z^4$?
+
+f.	Show directly from the power series that $f(-z)=f(z)$. Thus $f$ is an even function.
+:::
+
+
+
+
+
+
+
+
+
+
+:::: {.content-visible when-profile="tutor"}
+
+
+## Solutions {.unnumbered}
+
+### Solution for @exr-complex-power-series-geometric-partial-sum {.unnumbered}
+
+a.	The first partial sums are
+
+	$$
+	S_0(z)=1,
+	$$
+
+	$$
+	S_1(z)=1+z,
+	$$
+
+	$$
+	S_2(z)=1+z+z^2,
+	$$
+
+	and
+
+	$$
+	S_3(z)=1+z+z^2+z^3.
+	$$
+
+b.	Multiplication by $z$ gives
+
+	$$
+	zS_N(z)=z+z^2+\cdots+z^N+z^{N+1}.
+	$$
+
+c.	Subtracting the two expressions,
+
+	$$
+	S_N(z)-zS_N(z)=(1+z+\cdots+z^N)-(z+z^2+\cdots+z^{N+1}).
+	$$
+
+	All intermediate terms cancel, leaving
+
+	$$
+	S_N(z)-zS_N(z)=1-z^{N+1}.
+	$$
+
+	Therefore,
+
+	$$
+	(1-z)S_N(z)=1-z^{N+1}.
+	$$
+
+d.	For $z\neq1$, division by $1-z$ gives
+
+	$$
+	S_N(z)=\frac{1-z^{N+1}}{1-z}.
+	$$
+
+
+### Solution for @exr-complex-power-series-geometric-convergence {.unnumbered}
+
+a.	For $z=\frac12$,
+
+	$$
+	z^{N+1}=\left(\frac12\right)^{N+1}\longrightarrow0.
+	$$
+
+	Hence
+
+	$$
+	S_N\left(\frac12\right)\longrightarrow\frac{1}{1-\frac12}=2.
+	$$
+
+b.	For $z=\frac{i}{2}$,
+
+	$$
+	|z^{N+1}|=|z|^{N+1}=\left(\frac12\right)^{N+1}\longrightarrow0.
+	$$
+
+c.	In general,
+
+	$$
+	|z^{N+1}|=|z|^{N+1}.
+	$$
+
+	If $|z|<1$, successive powers of $|z|$ become smaller and smaller, and therefore
+
+	$$
+	|z|^{N+1}\longrightarrow0.
+	$$
+
+	Thus $z^{N+1}\to0$.
+
+d.	Using
+
+	$$
+	S_N(z)=\frac{1-z^{N+1}}{1-z},
+	$$
+
+	we obtain, for $|z|<1$,
+
+	$$
+	\lim_{N\to\infty}S_N(z)=\frac{1}{1-z}.
+	$$
+
+	Therefore,
+
+	$$
+	\sum_{n=0}^{\infty}z^n=\frac{1}{1-z},\qquad |z|<1.
+	$$
+
+e.	For $z=1$, the series is
+
+	$$
+	1+1+1+\cdots,
+	$$
+
+	whose partial sums grow without bound.
+
+	For $z=-1$, the series is
+
+	$$
+	1-1+1-1+\cdots,
+	$$
+
+	whose partial sums alternate between $1$ and $0$. Neither series converges.
+
+f.	The condition
+
+	$$
+	|z|<1
+	$$
+
+	describes the interior of the circle of radius $1$ centred at the origin in the complex plane. It is called the open unit disk.
+
+
+### Solution for @exr-complex-power-series-exponential-sine-cosine {.unnumbered}
+
+a.	Substituting $z=ix$ gives
+
+	$$
+	e^{ix}=1+ix+\frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\frac{(ix)^4}{4!}+\frac{(ix)^5}{5!}+\frac{(ix)^6}{6!}+\cdots.
+	$$
+
+	Using the powers of $i$,
+
+	$$
+	e^{ix}=1+ix-\frac{x^2}{2!}-i\frac{x^3}{3!}+\frac{x^4}{4!}+i\frac{x^5}{5!}-\frac{x^6}{6!}+\cdots.
+	$$
+
+b.	The real terms are
+
+	$$
+	1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots,
+	$$
+
+	while the imaginary terms are
+
+	$$
+	i\left(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots\right).
+	$$
+
+	Hence
+
+	$$
+	e^{ix}=\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\cdots\right)+i\left(x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots\right).
+	$$
+
+c.	Comparing with
+
+	$$
+	e^{ix}=\cos x+i\sin x
+	$$
+
+	gives
+
+	$$
+	\cos x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n}}{(2n)!}
+	$$
+
+	and
+
+	$$
+	\sin x=\sum_{n=0}^{\infty}(-1)^n\frac{x^{2n+1}}{(2n+1)!}.
+	$$
+
+d.	The first four nonzero terms are
+
+	$$
+	\cos x=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots
+	$$
+
+	and
+
+	$$
+	\sin x=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots.
+	$$
+
+e.	Keeping terms up to order $x^5$ gives
+
+	$$
+	\cos x\approx1-\frac{x^2}{2}+\frac{x^4}{24}
+	$$
+
+	and
+
+	$$
+	\sin x\approx x-\frac{x^3}{6}+\frac{x^5}{120}.
+	$$
+
+
+### Solution for @exr-complex-power-series-plot-sine-cosine {.unnumbered}
+
+a.	The first cosine partial sums are
+
+	$$
+	C_0(x)=1,
+	$$
+
+	$$
+	C_1(x)=1-\frac{x^2}{2!},
+	$$
+
+	and
+
+	$$
+	C_2(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}.
+	$$
+
+b.	The first sine partial sums are
+
+	$$
+	S_0(x)=x,
+	$$
+
+	$$
+	S_1(x)=x-\frac{x^3}{3!},
+	$$
+
+	and
+
+	$$
+	S_2(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}.
+	$$
+
+c. and d. One possible Python implementation is
+
+	```python
+	import numpy as np
+	import matplotlib.pyplot as plt
+	from math import factorial
+
+	x = np.linspace(-2*np.pi, 2*np.pi, 500)
+
+	def C(x, N):
+	    return sum((-1)**n * x**(2*n) / factorial(2*n)
+	               for n in range(N + 1))
+
+	def S(x, N):
+	    return sum((-1)**n * x**(2*n + 1) / factorial(2*n + 1)
+	               for n in range(N + 1))
+
+	plt.plot(x, np.cos(x), label="cos(x)")
+	for N in range(4):
+	    plt.plot(x, C(x, N), label=f"C_{N}(x)")
+	plt.ylim(-2, 2)
+	plt.legend()
+	plt.show()
+
+	plt.plot(x, np.sin(x), label="sin(x)")
+	for N in range(4):
+	    plt.plot(x, S(x, N), label=f"S_{N}(x)")
+	plt.ylim(-2, 2)
+	plt.legend()
+	plt.show()
+	```
+
+e.	As more terms are included, the partial sums approximate sine and cosine accurately over an increasingly large interval. For a fixed number of terms, the approximation is generally best near the expansion point $x=0$ and becomes poorer as $|x|$ increases.
+
+	The full power series for sine and cosine converge for every real or complex value of their argument, but a low-order polynomial approximation need not be accurate far from the origin.
+
+
+### Solution for @exr-complex-power-series-exponential-removable-singularity {.unnumbered}
+
+a.	Starting from
+
+	$$
+	e^z=1+z+\frac{z^2}{2!}+\frac{z^3}{3!}+\cdots,
+	$$
+
+	we obtain
+
+	$$
+	e^z-1=z+\frac{z^2}{2!}+\frac{z^3}{3!}+\frac{z^4}{4!}+\cdots.
+	$$
+
+b.	For $z\neq0$, divide every term by $z$:
+
+	$$
+	\frac{e^z-1}{z}=1+\frac{z}{2!}+\frac{z^2}{3!}+\frac{z^3}{4!}+\cdots.
+	$$
+
+c.	In summation notation,
+
+	$$
+	\frac{e^z-1}{z}=\sum_{n=0}^{\infty}\frac{z^n}{(n+1)!}.
+	$$
+
+d.	At $z=0$, the power series gives
+
+	$$
+	f(0)=1.
+	$$
+
+e.	Although the original quotient $(e^z-1)/z$ is undefined at $z=0$, its power-series representation is perfectly well defined there. Defining
+
+	$$
+	f(0)=1
+	$$
+
+	fills in the missing value and removes the apparent singularity. Such a point is called a **removable singularity**.
+
+
+### Solution for @exr-complex-power-series-sinc {.unnumbered}
+
+a.	Dividing
+
+	$$
+	\sin z=z-\frac{z^3}{3!}+\frac{z^5}{5!}-\frac{z^7}{7!}+\cdots
+	$$
+
+	by $z$ gives, for $z\neq0$,
+
+	$$
+	\frac{\sin z}{z}=1-\frac{z^2}{3!}+\frac{z^4}{5!}-\frac{z^6}{7!}+\cdots.
+	$$
+
+b.	Thus
+
+	$$
+	f(z)=1-\frac{z^2}{3!}+\frac{z^4}{5!}-\frac{z^6}{7!}+\cdots.
+	$$
+
+c.	In summation notation,
+
+	$$
+	f(z)=\sum_{n=0}^{\infty}(-1)^n\frac{z^{2n}}{(2n+1)!}.
+	$$
+
+d.	Substituting $z=0$ into this power series gives
+
+	$$
+	f(0)=1.
+	$$
+
+	Thus the separately specified value $f(0)=1$ is exactly the value suggested by the power series. As in the previous exercise, the apparent singularity is removable.
+
+e.	The coefficient of $z^2$ is
+
+	$$
+	-\frac{1}{3!}=-\frac16,
+	$$
+
+	and the coefficient of $z^4$ is
+
+	$$
+	\frac{1}{5!}=\frac{1}{120}.
+	$$
+
+f.	Only even powers of $z$ occur in the series. Therefore,
+
+	$$
+	f(-z)=\sum_{n=0}^{\infty}(-1)^n\frac{(-z)^{2n}}{(2n+1)!}
+	=\sum_{n=0}^{\infty}(-1)^n\frac{z^{2n}}{(2n+1)!}
+	=f(z).
+	$$
+
+	Hence $f$ is even.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :::{#exr-complex-power-series-consider-taylor-series-th-partial-sum}
 
@@ -75,3 +708,9 @@ Find the Taylor series for the function $f(z) = \sin(z)/z$ for $z\neq 0$ and $f(
 *The source does not supply a solution.*
 
 :::
+
+
+
+
+::::
+

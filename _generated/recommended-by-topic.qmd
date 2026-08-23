@@ -32,6 +32,12 @@ useful as a warm-up to the proper exercises given each day.
 - @exr-summing-reindexing — Shifting the summation index
 - @exr-kronecker-delta — The Kronecker delta: basic exercise
 - @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
+- @exr-combinatorics-binomial-theorem-basic — The binomial theorem
+
+### Intermediate {.unnumbered}
+
+- @exr-combinatorics-binomial-theorem-coefficients — Coefficients in binomial expansions
+- @exr-complex-power-series-exponential-sine-cosine — The exponential, sine, and cosine series
 
 ## Self-consistent field theory {.unnumbered}
 
