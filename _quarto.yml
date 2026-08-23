@@ -32,6 +32,8 @@ book:
         - chapters/cardinality-and-countability.qmd
         - chapters/summing-over-indices.qmd
         - chapters/combinatorics.qmd
+        - chapters/basic-mathematical-proofs.qmd
+        
     - part: "Linear algebra"
       chapters:
         - chapters/vectors-and-matrices.qmd

@@ -33,10 +33,12 @@ useful as a warm-up to the proper exercises given each day.
 - @exr-kronecker-delta — The Kronecker delta: basic exercise
 - @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
 - @exr-combinatorics-binomial-theorem-basic — The binomial theorem
+- @exr-proofs-induction-basic — Your first induction proof
 
 ### Intermediate {.unnumbered}
 
 - @exr-combinatorics-binomial-theorem-coefficients — Coefficients in binomial expansions
+- @exr-proofs-direct-matrix — Direct proof with a matrix
 - @exr-complex-power-series-exponential-sine-cosine — The exponential, sine, and cosine series
 - @exr-complex-power-series-cauchy-product — The Cauchy product of power series
 

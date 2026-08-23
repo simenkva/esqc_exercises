@@ -1,0 +1,678 @@
+# Basic mathematical proofs
+
+Mathematics is a way of
+establishing, with certainty, that a statement follows from a set of
+assumptions. A *proof* is a sequence of logical steps that makes this
+connection explicit. In quantum chemistry, proofs are useful even when
+the final goal is numerical. They help us understand why an algorithm
+works, which properties of matrices and operators are guaranteed, and
+which conclusions depend on particular assumptions.
+
+This chapter introduces a small collection of proof strategies that
+occur repeatedly in mathematics and mathematical physics. We consider
+direct proof, disproof by counterexample, proof by contrapositive, proof
+by contradiction, the pigeonhole principle, and proof by induction. The
+beginner exercises are deliberately elementary: their purpose is to
+practise the logical structure of each method without making the algebra
+difficult. The intermediate exercises apply the same ideas to matrices,
+sums, and simple settings related to quantum mechanics and quantum
+chemistry.
+
+## Some basic proof strategies
+
+### Direct proof and counterexamples
+
+In a **direct proof**, we start from the assumptions and use
+definitions, algebra, and previously established facts until we reach
+the desired conclusion. For example, to prove that the sum of two even
+integers is even, write the integers as $2m$ and $2n$. Their sum is
+$2(m+n)$ and is therefore even.
+
+A universal statement such as "for every $x$, property $P(x)$ holds" can
+be disproved by finding a single **counterexample**: one value of $x$
+for which $P(x)$ is false. Counterexamples are often the quickest way to
+test whether a proposed theorem can possibly be correct.
+
+### Proof by contrapositive
+
+A statement of the form
+
+$$
+P \Longrightarrow Q
+$$
+
+is logically equivalent to its **contrapositive**
+
+$$
+\neg Q \Longrightarrow \neg P.
+$$
+
+Sometimes the contrapositive is much easier to prove than the original
+statement. Notice that the contrapositive is not the same as the
+converse $Q\Longrightarrow P$.
+
+### Proof by contradiction
+
+In a **proof by contradiction**, we assume that the statement we want to
+prove is false. We then show that this assumption leads to an
+impossibility: for example, a statement that contradicts an assumption
+or a known fact. We conclude that the original statement must be true.
+
+This method is particularly natural for statements asserting that
+something cannot exist. It also occurs frequently in proofs about linear
+algebra and quantum mechanics.
+
+### The pigeonhole principle
+
+The **pigeonhole principle** says that if more than $n$ objects are
+placed into $n$ boxes, at least one box must contain at least two
+objects. The idea is elementary, but surprisingly powerful. More
+generally, if $N$ objects are distributed among $n$ boxes, at least one
+box contains at least $\lceil N/n\rceil$ objects.
+
+### Proof by induction
+
+**Mathematical induction** is used to prove statements indexed by an
+integer, usually $n=1,2,3,\ldots$. A proof has two main steps:
+
+1.  **Base case:** prove the statement for the first value of $n$.
+2.  **Induction step:** assume the statement is true for some $n$ (the
+    **induction hypothesis**) and use this assumption to prove that it
+    is true for $n+1$.
+
+If both steps succeed, the statement follows for every integer covered
+by the induction.
+
+## Exercises {#exercises .unnumbered}
+
+::: {#exr-proofs-direct-even level="beginner"}
+### A first direct proof
+
+An integer $n$ is *even* if it can be written as $n=2k$ for some integer
+$k$.
+
+a.  Let $m$ and $n$ be even integers. Write $m$ and $n$ using the
+    definition of an even integer.
+
+b.  Use your expressions to show that $m+n$ can be written as $2$ times
+    an integer.
+
+c.  Conclude that the sum of two even integers is even.
+
+d.  Which part of your argument would fail if one of the two integers
+    were odd?
+:::
+
+::: {#exr-proofs-counterexample level="beginner"}
+### Learning to use counterexamples
+
+For each statement below, decide whether it is true. If it is false,
+disprove it by giving one counterexample.
+
+a.  For every real number $x$, $x^2\geq 0$.
+
+b.  For every real number $x$, $x^2>x$.
+
+c.  For all real numbers $x$ and $y$, $(x+y)^2=x^2+y^2$.
+
+d.  Every diagonal $2\times2$ matrix is invertible.
+
+e.  If $A$ is a real matrix, then every entry of $A^\mathsf{T}A$ is
+    positive.
+:::
+
+::: {#exr-proofs-contrapositive-basic level="beginner"}
+### A first proof by contrapositive
+
+Consider the statement: *If $n^2$ is even, then $n$ is even*, where $n$
+is an integer.
+
+a.  Write down the contrapositive of the statement.
+
+b.  An odd integer can be written as $n=2k+1$. Expand $(2k+1)^2$.
+
+c.  Show that the square of an odd integer is odd.
+
+d.  Use the contrapositive to conclude that if $n^2$ is even, then $n$
+    is even.
+:::
+
+::: {#exr-proofs-contradiction-basic level="beginner"}
+### A first proof by contradiction
+
+Prove that there is no largest integer.
+
+a.  Suppose, for contradiction, that there is a largest integer. Call it
+    $N$.
+
+b.  Consider the integer $N+1$. How does it compare with $N$?
+
+c.  Explain why this contradicts the assumption that $N$ is the largest
+    integer.
+
+d.  State the conclusion.
+:::
+
+::: {#exr-proofs-pigeonhole-basic level="beginner"}
+### The pigeonhole principle
+
+a.  A tutorial group contains 13 students. Show that at least two
+    students were born in the same month.
+
+b.  Identify explicitly the "pigeons" and the "pigeonholes" in part a.
+
+c.  A basis set contains 21 basis functions, each assigned one of four
+    angular-momentum labels: $s$, $p$, $d$, or $f$. Show that at least
+    six basis functions have the same label.
+
+d.  Which version of the pigeonhole principle do you need for part c?
+:::
+
+::: {#exr-proofs-induction-basic level="beginner" recommended="topic" topic="second-quantization"}
+### Your first induction proof
+
+Prove by induction that
+
+$$
+1+2+\cdots+n=\frac{n(n+1)}{2}
+$$
+
+for every positive integer $n$.
+
+a.  Check the formula for $n=1$.
+
+b.  Assume that the formula is true for some positive integer $n$. Write
+    down this induction hypothesis explicitly.
+
+c.  Add $n+1$ to both sides of the induction hypothesis.
+
+d.  Simplify the right-hand side and show that you obtain
+    $\frac{(n+1)(n+2)}{2}$.
+
+e.  Explain why the base case and induction step prove the formula for
+    every positive integer $n$.
+:::
+
+::: {#exr-proofs-direct-matrix level="intermediate" recommended="topic" topic="second-quantization"}
+### Direct proof with a matrix
+
+Let $A$ be a real $m\times n$ matrix and $x\in\mathbb{R}^n$. Prove
+directly that
+
+$$
+x^\mathsf{T}A^\mathsf{T}Ax\geq 0.
+$$
+
+a.  Introduce the vector $y=Ax$ and rewrite the expression in terms of
+    $y$.
+
+b.  Write $y^\mathsf{T}y$ as a sum over components.
+
+c.  Complete the proof.
+
+d.  Show that $A^\mathsf{T}A$ is symmetric.
+
+e.  Explain why these results show that $A^\mathsf{T}A$ is positive
+    semidefinite.
+:::
+
+::: {#exr-proofs-contrapositive-matrix level="intermediate"}
+### Invertibility by contrapositive
+
+Let $A$ and $B$ be square matrices of the same dimension. Prove the
+statement
+
+> If $AB$ is invertible, then both $A$ and $B$ are invertible.
+
+Use a contrapositive argument for each factor.
+
+a.  Suppose $B$ is not invertible. Show that there is a nonzero vector
+    $x$ such that $Bx=0$.
+
+b.  Show that $ABx=0$ and conclude that $AB$ cannot be invertible.
+
+c.  Suppose instead that $A$ is not invertible. You may use the fact
+    that then there exists a nonzero row vector $y^\dagger$ such that
+    $y^\dagger A=0$. Show that $y^\dagger AB=0$.
+
+d.  Combine the two arguments to prove the original statement.
+:::
+
+::: {#exr-proofs-contradiction-orthogonal level="intermediate"}
+### Orthogonal eigenvectors from a contradiction
+
+Let $A$ be a Hermitian matrix, and let
+
+$$
+Au=\lambda u,\qquad Av=\mu v,
+$$
+
+where $\lambda\neq\mu$.
+
+a.  Using $Au=\lambda u$, show that $v^\dagger Au=\lambda v^\dagger u$.
+
+b.  Using Hermiticity and $Av=\mu v$, show that the same quantity is
+    $v^\dagger Au=\mu v^\dagger u$.
+
+c.  Suppose, for contradiction, that $v^\dagger u\neq0$. Show that this
+    would imply $\lambda=\mu$.
+
+d.  Conclude that eigenvectors of a Hermitian matrix belonging to
+    distinct eigenvalues are orthogonal.
+
+e.  Why is this result useful when eigenvectors represent quantum states
+    or molecular orbitals?
+:::
+
+::: {#exr-proofs-pigeonhole-orbitals level="intermediate"}
+### Pigeonholes and orbital occupations
+
+Consider $N$ electrons distributed among $K$ spatial orbitals. Assume
+that each spatial orbital can contain at most two electrons.
+
+a.  Use the pigeonhole principle to show that if $N>K$, at least one
+    spatial orbital must be doubly occupied or the assumptions are
+    inconsistent.
+
+b.  If $N=11$ electrons occupy $K=6$ spatial orbitals, what is the
+    minimum possible number of doubly occupied orbitals?
+
+c.  Generalize part b: for $K\leq N\leq2K$, prove that at least $N-K$
+    orbitals must be doubly occupied.
+
+d.  Explain why the result is a counting statement and does not depend
+    on the energies of the orbitals.
+:::
+
+::: {#exr-proofs-induction-geometric level="intermediate"}
+### Induction and a geometric sum
+
+Let $r$ be a number with $r\neq1$. Prove by induction that
+
+$$
+1+r+r^2+\cdots+r^n=\frac{1-r^{n+1}}{1-r}
+$$
+
+for every integer $n\geq0$.
+
+a.  Verify the base case $n=0$.
+
+b.  Write down the induction hypothesis.
+
+c.  Add $r^{n+1}$ and simplify the resulting expression.
+
+d.  Complete the induction proof.
+
+e.  For $|r|<1$, what does the formula suggest as $n\to\infty$?
+:::
+
+::: {#exr-proofs-advanced-commutator level="advanced"}
+### A finite-dimensional quantum-mechanical impossibility
+
+In quantum mechanics, position and momentum satisfy the canonical
+commutation relation
+
+$$
+[\hat{x},\hat{p}]=i\hbar I.
+$$
+
+Here $[A,B]=AB-BA$. Show that **no pair of finite-dimensional matrices**
+$X$ and $P$ can satisfy
+
+$$
+[X,P]=i\hbar I
+$$
+
+when $\hbar\neq0$.
+
+a.  Assume, for contradiction, that $n\times n$ matrices $X$ and $P$
+    satisfying this equation exist.
+
+b.  Prove that $\operatorname{tr}(XP)=\operatorname{tr}(PX)$.
+
+c.  Hence compute $\operatorname{tr}([X,P])$.
+
+d.  On the other hand, compute $\operatorname{tr}(i\hbar I)$.
+
+e.  Derive a contradiction.
+
+f.  Explain what this tells us about representing the exact position and
+    momentum operators by finite matrices. Does it prevent us from using
+    finite matrix approximations in practical quantum chemistry?
+:::
+
+## Solutions {#solutions .unnumbered}
+
+### Solution for @exr-proofs-direct-even {#solution-for-exr-proofs-direct-even .unnumbered}
+
+a.  Since $m$ and $n$ are even, there are integers $p$ and $q$ such that
+    $m=2p$ and $n=2q$.
+
+b.  Their sum is
+
+$$
+m+n=2p+2q=2(p+q).
+$$
+
+Since $p+q$ is an integer, $m+n$ is twice an integer.
+
+c.  Therefore $m+n$ is even.
+
+d.  If, for example, $n$ were odd, we could not write it as $2q$ with
+    $q$ an integer. The first step of the proof would therefore no
+    longer apply.
+
+### Solution for @exr-proofs-counterexample {#solution-for-exr-proofs-counterexample .unnumbered}
+
+a.  True. The square of every real number is nonnegative.
+
+b.  False. For example, $x=1$ gives $x^2=x$, not $x^2>x$. Also $x=1/2$
+    gives $x^2<x$.
+
+c.  False. Take $x=y=1$. Then $(x+y)^2=4$, whereas $x^2+y^2=2$.
+
+d.  False. For example,
+
+$$
+A=\begin{pmatrix}1&0\\0&0\end{pmatrix}
+$$
+
+is diagonal but not invertible.
+
+e.  False. Take
+
+$$
+A=\begin{pmatrix}1&-1\end{pmatrix}.
+$$
+
+Then
+
+$$
+A^\mathsf{T}A=\begin{pmatrix}1&-1\\-1&1\end{pmatrix},
+$$
+
+which has negative off-diagonal entries. What is true is that
+$A^\mathsf{T}A$ is positive semidefinite; this does not mean that every
+matrix element is positive.
+
+### Solution for @exr-proofs-contrapositive-basic {#solution-for-exr-proofs-contrapositive-basic .unnumbered}
+
+a.  The contrapositive is: *If $n$ is odd, then $n^2$ is odd.*
+
+b.  Write $n=2k+1$. Then
+
+$$
+n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
+$$
+
+c.  Since $2k^2+2k$ is an integer, $n^2$ has the form $2m+1$ and is
+    therefore odd.
+
+d.  We have proved the contrapositive. Since a statement and its
+    contrapositive are logically equivalent, it follows that if $n^2$ is
+    even, then $n$ is even.
+
+### Solution for @exr-proofs-contradiction-basic {#solution-for-exr-proofs-contradiction-basic .unnumbered}
+
+a.  Assume that a largest integer $N$ exists.
+
+b.  The number $N+1$ is also an integer, and $N+1>N$.
+
+c.  This contradicts the assumption that no integer is larger than $N$.
+
+d.  Therefore there is no largest integer.
+
+### Solution for @exr-proofs-pigeonhole-basic {#solution-for-exr-proofs-pigeonhole-basic .unnumbered}
+
+a.  There are 13 students but only 12 months. If every month contained
+    at most one birthday, there could be at most 12 students. Therefore
+    at least two students were born in the same month.
+
+b.  The students are the pigeons and the 12 months are the pigeonholes.
+
+c.  There are 21 basis functions and four labels. Since
+
+$$
+\left\lceil\frac{21}{4}\right\rceil=6,
+$$
+
+at least one label must occur at least six times.
+
+d.  We use the generalized pigeonhole principle: distributing $N$
+    objects among $n$ boxes forces some box to contain at least
+    $\lceil N/n\rceil$ objects.
+
+### Solution for @exr-proofs-induction-basic {#solution-for-exr-proofs-induction-basic .unnumbered}
+
+a.  For $n=1$,
+
+$$
+1=\frac{1(1+1)}{2}=1,
+$$
+
+so the base case is true.
+
+b.  Assume that for some positive integer $n$,
+
+$$
+1+2+\cdots+n=\frac{n(n+1)}{2}.
+$$
+
+c.  Adding $n+1$ gives
+
+$$
+1+2+\cdots+n+(n+1)=\frac{n(n+1)}{2}+(n+1).
+$$
+
+d.  Factor and simplify:
+
+$$
+\frac{n(n+1)}{2}+(n+1)=(n+1)\left(\frac n2+1\right)=\frac{(n+1)(n+2)}{2}.
+$$
+
+This is precisely the claimed formula with $n$ replaced by $n+1$.
+
+e.  The statement is true for $n=1$, and whenever it is true for $n$ it
+    is true for $n+1$. By induction, it is true for every positive
+    integer $n$.
+
+### Solution for @exr-proofs-direct-matrix {#solution-for-exr-proofs-direct-matrix .unnumbered}
+
+a.  Let $y=Ax$. Then
+
+$$
+x^\mathsf{T}A^\mathsf{T}Ax=(Ax)^\mathsf{T}(Ax)=y^\mathsf{T}y.
+$$
+
+b.  In components,
+
+$$
+y^\mathsf{T}y=\sum_i y_i^2.
+$$
+
+c.  Every $y_i^2$ is nonnegative, so
+
+$$
+x^\mathsf{T}A^\mathsf{T}Ax=\sum_i y_i^2\geq0.
+$$
+
+d.  Using $(BC)^\mathsf{T}=C^\mathsf{T}B^\mathsf{T}$,
+
+$$
+(A^\mathsf{T}A)^\mathsf{T}=A^\mathsf{T}(A^\mathsf{T})^\mathsf{T}=A^\mathsf{T}A.
+$$
+
+Thus $A^\mathsf{T}A$ is symmetric.
+
+e.  A real symmetric matrix $M$ is positive semidefinite if
+    $x^\mathsf{T}Mx\geq0$ for every $x$. We have proved exactly this
+    property for $M=A^\mathsf{T}A$.
+
+### Solution for @exr-proofs-contrapositive-matrix {#solution-for-exr-proofs-contrapositive-matrix .unnumbered}
+
+a.  If $B$ is not invertible, its null space contains a nonzero vector
+    $x$, so $Bx=0$.
+
+b.  Then
+
+$$
+ABx=A(Bx)=A0=0.
+$$
+
+Thus $AB$ has a nonzero vector in its null space and cannot be
+invertible. We have proved: if $B$ is not invertible, then $AB$ is not
+invertible. This is the contrapositive of "if $AB$ is invertible, then
+$B$ is invertible."
+
+c.  If $A$ is not invertible, choose a nonzero $y^\dagger$ with
+    $y^\dagger A=0$. Then
+
+$$
+y^\dagger AB=(y^\dagger A)B=0.
+$$
+
+Therefore $AB$ cannot be invertible. This proves the corresponding
+contrapositive for $A$.
+
+d.  If $AB$ is invertible, neither $A$ nor $B$ can be noninvertible.
+    Hence both $A$ and $B$ are invertible.
+
+### Solution for @exr-proofs-contradiction-orthogonal {#solution-for-exr-proofs-contradiction-orthogonal .unnumbered}
+
+a.  Since $Au=\lambda u$,
+
+$$
+v^\dagger Au=\lambda v^\dagger u.
+$$
+
+b.  Hermiticity gives $A^\dagger=A$. From $Av=\mu v$, and since the
+    eigenvalues of a Hermitian matrix are real,
+
+$$
+v^\dagger A=\mu v^\dagger.
+$$
+
+Therefore
+
+$$
+v^\dagger Au=\mu v^\dagger u.
+$$
+
+c.  Comparing the two expressions,
+
+$$
+(\lambda-\mu)v^\dagger u=0.
+$$
+
+Suppose $v^\dagger u\neq0$. We could then divide by $v^\dagger u$ and
+obtain $\lambda=\mu$, contradicting the assumption $\lambda\neq\mu$.
+
+d.  Therefore $v^\dagger u=0$: the eigenvectors are orthogonal.
+
+e.  Orthogonality allows distinct eigenstates or molecular orbitals of a
+    Hermitian operator to be used as mutually orthogonal basis vectors.
+    It is one of the central structural properties behind spectral
+    expansions in quantum mechanics.
+
+### Solution for @exr-proofs-pigeonhole-orbitals {#solution-for-exr-proofs-pigeonhole-orbitals .unnumbered}
+
+a.  If $N>K$ and every orbital contained at most one electron, at most
+    $K$ electrons could be accommodated. Therefore at least one orbital
+    must contain two electrons, unless the assumed occupation rules
+    cannot be satisfied.
+
+b.  With 11 electrons in 6 orbitals, first place one electron in each
+    orbital. This accounts for 6 electrons. The remaining 5 electrons
+    must enter already occupied orbitals, so at least 5 orbitals are
+    doubly occupied. This arrangement is possible, so the minimum is 5.
+
+c.  Place at most one electron in each of the $K$ orbitals. This
+    accommodates $K$ electrons. The remaining $N-K$ electrons must each
+    be placed in an already occupied orbital. Since no orbital can hold
+    more than two electrons, these require $N-K$ distinct orbitals.
+    Hence at least $N-K$ orbitals are doubly occupied.
+
+d.  The argument uses only the numbers of electrons, orbitals, and
+    allowed occupants. Orbital energies do not enter.
+
+### Solution for @exr-proofs-induction-geometric {#solution-for-exr-proofs-induction-geometric .unnumbered}
+
+a.  For $n=0$, the left-hand side is $1$, while
+
+$$
+\frac{1-r^{0+1}}{1-r}=\frac{1-r}{1-r}=1.
+$$
+
+b.  Assume that
+
+$$
+1+r+\cdots+r^n=\frac{1-r^{n+1}}{1-r}.
+$$
+
+c.  Add $r^{n+1}$:
+
+$$
+1+r+\cdots+r^n+r^{n+1}=\frac{1-r^{n+1}}{1-r}+r^{n+1}.
+$$
+
+Putting the right-hand side over a common denominator gives
+
+$$
+\frac{1-r^{n+1}+r^{n+1}(1-r)}{1-r}=\frac{1-r^{n+2}}{1-r}.
+$$
+
+d.  This is the required formula with $n$ replaced by $n+1$. Together
+    with the base case, induction proves the result for all $n\geq0$.
+
+e.  If $|r|<1$, then $r^{n+1}\to0$, suggesting the infinite geometric
+    series
+
+$$
+1+r+r^2+\cdots=\frac{1}{1-r}.
+$$
+
+### Solution for @exr-proofs-advanced-commutator {#solution-for-exr-proofs-advanced-commutator .unnumbered}
+
+a.  Assume that finite $n\times n$ matrices $X$ and $P$ exist such that
+
+$$
+[X,P]=XP-PX=i\hbar I.
+$$
+
+b.  For finite matrices, the trace is cyclic:
+
+$$
+\operatorname{tr}(XP)=\operatorname{tr}(PX).
+$$
+
+For example, in components,
+
+$$
+\operatorname{tr}(XP)=\sum_{ij}X_{ij}P_{ji}=\sum_{ji}P_{ji}X_{ij}=\operatorname{tr}(PX).
+$$
+
+c.  It follows that
+
+$$
+\operatorname{tr}([X,P])=\operatorname{tr}(XP)-\operatorname{tr}(PX)=0.
+$$
+
+d.  But the assumed commutation relation gives
+
+$$
+\operatorname{tr}([X,P])=\operatorname{tr}(i\hbar I)=i\hbar\operatorname{tr}(I)=i\hbar n.
+$$
+
+e.  Since $n>0$ and $\hbar\neq0$, we have $i\hbar n\neq0$. Thus the same
+    trace would have to be both $0$ and $i\hbar n$, which is a
+    contradiction. Therefore no finite-dimensional matrices can satisfy
+    the canonical commutation relation exactly.
+
+f.  Exact position and momentum operators therefore cannot both be
+    represented by finite-dimensional matrices while preserving the
+    exact canonical commutator. In quantum mechanics they act naturally
+    on infinite-dimensional spaces. This does **not** prevent finite
+    matrix approximations: quantum chemistry routinely projects
+    operators onto finite basis sets. Such representations can be
+    extremely accurate for the quantities of interest, but they cannot
+    preserve every exact infinite-dimensional operator identity.

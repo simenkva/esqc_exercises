@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recommended exercises by topic – ESQC mathematics exercises</title>
+<title>5&nbsp; Basic mathematical proofs – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/sets-and-functions.html" rel="next">
-<link href="../_generated/recommended-mathematics.html" rel="prev">
+<link href="../chapters/vectors-and-matrices.html" rel="next">
+<link href="../chapters/combinatorics.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -100,15 +100,15 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-fact.callout {
-  border-left-color: #3EAF3E;
+div.callout-preparations.callout {
+  border-left-color: #8B81FF;
 }
-div.callout-fact.callout-style-default .callout-header {
-  background-color: rgba(62, 175, 62, 0.13);
+div.callout-preparations.callout-style-default .callout-header {
+  background-color: rgba(139, 129, 255, 0.13);
 }
-div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,15 +128,15 @@ div.callout-learning-goals.callout-style-default .callout-icon::before, div.call
   background-position: center;
   content: '';
 }
-div.callout-preparations.callout {
-  border-left-color: #8B81FF;
+div.callout-fact.callout {
+  border-left-color: #3EAF3E;
 }
-div.callout-preparations.callout-style-default .callout-header {
-  background-color: rgba(139, 129, 255, 0.13);
+div.callout-fact.callout-style-default .callout-header {
+  background-color: rgba(62, 175, 62, 0.13);
 }
-div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAACyCAYAAACeGVmMAAAACXBIWXMAAFxGAABcRgEUlENBAAASTUlEQVR4nO2d7XXjNhaGX+zZ/3EH0VSwSgXDVBClgnAqiLaCKBVEU0E0FaymgqEriFxB6ApiV4D9AUCiaEskQFx83uccnGSztgjSfATg4gIQUkowZSCEWAFYA2j0P9cAvhv92DOAHkAH4ATgJKXsw9SQCYlgufNFCPEAJfJG//N7x496hRK90+UkpXxZXEEmKix3ZujWeaPLR8JLPePSundSyhPhtRgCWO4MEEKsAbRQQru2zj54BLfu2cByJ4oQwrTOG7wdN6fCE65b9z5qbZgrWO5E0N3tBkrmn2LWZQHclU8IljsiurttWuf/RK4OBa+4dONZ9sCw3AHR0W0T2U65u03JedwupeziVqVsWG5iKmidl8KyE8Fye4Zb58Ww7J5guT2gW+cG9HPPNcKyO8JyO+AxM4yxh2WfCcs9k0FmWIN8p6pKhGW/Act9B51I0iB+ZhgzHyP7sfapN5Z7wCAYZqTmYFjeVD3PXr3cg2BYC56qKp2qZK9Sbu5uM5qiZa9Cbp57ZmZiZDe58V3U2iykWLk5us14IttofFFyD4RuweNnhgYju2ndk13Tnr3cnLvNRMasae+Q2H50WcqtW+gtOCDGpEcya9qzklu30ntw/jaTD9E2n/xXiIt45AVqW97XyPVgmLl8B9UY/QbgG4B/hBCdbqhIyarlHiKEaHCJhvNYm8mNVwBryjF6tnIPGc1jN+BxOJMHX6SULdWHFyH3mNFmgw04aYVJk0cpZUP14dHl1q3uefxBkSgwyB9vwAktTDp8klIeqD48itwzprJMhPFcfE4p6PG6KRx5Z2JA2iUHIsgthNhBRQ5dGGYHeUsYYNmZgDwC2IVIZQ0mt+5+7wH84vFjnzGYQ/TVurPsDAE/I3AGW0i5j6Af714lDPj6dmTZmaVIKUXoawaRe2FXfCneV/Ww7MyIJ0zkWhQpt45U/0V6ETu+gq4bb6LyPPVWPuY9OkopeyHEXZFKlbtDuq0byU4co6m3Bix7CZh35Qgl9FV+eHVy6xbtG9kF/GNW9HTweCQty54tr7jIfLz3gzXKfYDf6HhojOxHeFyYP5J9DU6XTYlnXITu5v5SjXK/oKxWargw36fsK1y37Cx7WJ5wEdppaFaV3Bl2yV1g2fPlCcABOiC29MNqk3uHeNNfsaCUfbjqraTeUEi+4kZAbCm1yd0h3Sh5KKhk5wDdPM4BMRBvZlib3CfwJgpjjOxmf63ex4cONolswF+o5yDoVITbJ7XJXd5Ccf9QTb01qGuXGhPhPsTakJDlZqbwLnvBu9SYgFgSxwCx3Iwt3ufZB+P1DfLrwl+lfMatyjUsN7MUrwE63ao3uLTsKbbqZBFun7DcjG98y25a9S3iiT475TMlapO7Q37dvtzxJrsQogWwQxjJnVI+U6I2uUNszsDcZ/FadiHEFsAfHutkMF9E0SLcPpnRU/0ZgQ8O5Ay1ujCy382h1t3zFv7PYvOa8pkSFsPQR1ym7UhFp5Q7tU0amGuu1rLr/9bCv9BZBMSW4hBjegXQUPZaeFUY4xsTEOtQuNDAVR7Bnw6//iSlJDszjFruPYBfyS7ApEKUlM9YDITeYGFciTLQRi33CsDfZBdgYhI95TM0Qggj9AZ+eqT5ttxAEbuxMBeSSvkMgc7Tb+FP6CE/Uk79hZD7AepMbR5750myKZ9UEM4WAJeYxIF6Tj/UvuUbAP8jvxDjky8AtqUHxAx6CNnqQpG48xVK6HDLUAOeONLCLaLIhIf0aNlUGOxw04JmaWzUacCgBwGy4NnwodQu+CDS3YImPTqZRJ0Yp3yuoW6+hk0EcoT8aNnQ+Jy6usEz1CGX0YUeEuV8buBqWqFBmksNa+XnUuaqB+8YxWxN8lOB0eS+qgRv5ZsMMVYv+YRgLnqIU6RbD0c3AB4G//kF+px5EB3tm4TcY1j2aGQZSCOeugLUzIFV9p0eCmwxP/ruf4stCrn1wzbfUi9Luy0sezA+Sym3sSsxB/1ObEEntFOke/BF02JZz8Es7DE75XbWnyClXFyghDtAJavId8oL1IPaAlh7uN4K6uHduyYX+7Lz8T5QFf1330K98BT3f9Kf/+BYL8p38QXqfV/NrpcHqTvHivqWfas/8yUBSXItbWyB3/nbPkB9kVMLPVuaQF8098qGVG6o0L+vyvqWfQ2W3aU0sWUeCX0kus8e6v21etcC1GtuOZHIrW+wI668kX3n44UDyz63RJUbavx8IHynDnBoPJCG0Ff3QiV3rJvswLJTl+By4yI0xd/BCD2rGxuwXkvLwbvc8NsVX1o6sOy+SxtI6LV+l3qi+zi63AsugeGU34E9Zgb8bG889o3dKx1Y9qVll7vQsI90U9fLRznpOq6s7s3iIaR88++VDiy7bdl7FnqFMFNXdi+9qlcOQrew/LKylltfJPbNLi2d/oNuljywwmXvPAhtMrNSFDrW1JVLWfSOSinnZagJIXqUlxXm83SONa4z6HLddeZVSvkw/WPXBFp1ZXK6Z2c7BlivTYb0keM/s5WK/S0WophxTe0t++zIsn5WPBdteT9Qw8W7P7+01ZZSYs7DSilCHrLUKvthhtAHovtwmrpCukKbIcR6VN/d1O+GkrtP4CGlUChk7xK4r/fK+GU0EeVkhNb1apGe0CbTcnWn3rupzyGXGyoIEfthpVp6qJeyvfeHnPmSNvoP3iVwXxJKuBZpzkWnllxivpxazJ1/TkTuJoGHl0vpUa7svorrXHRqQvfQvTjHv+9u6ho+5P437tNM/P/Mhe+htvP5BQCEEM6L76Vau9uZ/603xjflo4e6hsR1XbSJvm+QxuxDdkcOT8nNuFOz7GYH0EPmQpvjdpPa+HA2E92HDvG7QKWWHpdu/KJlrkijG++aXEIZrLMtL3AcOuTYLWfo+B7XLfvVedk2Xb+ILbvTHt0B9jyzwSTIdLKQXV8NLHc6fAeV3fUTkLTsJQj9hEt3O4vxswssd7qkJHsJQld3oOGU3D3SDNjUSGjZXfO5UxHa7DFuutzOawdyZY7cTJrckv0Ey61w35F9nanQ5gvpaHP/pcJyl8NQ9t+EEICayulgL/uk2AlNW+U9XUXIlNzFBhsq4aMui2Q3JCK06W53iHQ0bi5MrucWQrwgjYQCxj+TsicidFHdbSHEDsBvEz/2w9JI/hy5j6BZgM+kh5H9hPhCF9vdnik3oHopJ1ziKFbz8HPkbgH8afOhDONANd1tC7nHWB3UODnPLaU8CCH24K4545+iutsB+GgzkzE3iWUPt28ahhlTXTLJkMF+e65sMDPQPXeDxAeoaTFuvRlbzGq4apNJPG/U+ElKeZh13TlyAzz2ZqyoInf7HkQ7r75CrSDsZ9VhrtwAR86Zm5jsOOtNGUpisMVzC/9p249QJ8J0s+tjKfcD1B8xqz2gGRLMziRVB8MC7Nn+BSq/v7P9RSu5ARa8csyWSVY7yZSITu5pQSP0E1QQe1EvyFru8y+q6bFfXS/MZEGxGxm4QJyt57Ss9h7OcgPnpYI78LLQ0vgMdShgH7sisdHveItEhNb1AYDTVKu+SO7BBVdQN98g77OyGIupllIhXsJqvU5e12cLvSXXiCfo9FSMh0tEG8CZyhyRxsZ3XOaVHdWmgKkX0B7raw4uaCzr1MB+08sOesNNLy33FAWdglkyz1LKVexKhCTAKaBfoLrcs+MVgzpt4d5reAWwCiL3GJY9SX6XUu5iV4KaAEJbH8IwmE7beqzTf20y1B6g9qT2nnHEsifBh1IDaAHmol03kGwJ6/Tprtz6oWyhvuWGXYRFO3pMkcGJGqVRXJc8gNDPuJyq0lvUK8TmF08AmqnB/Nxg2Amejre9U5edvk7soFOJ5Rg7oOXxXdlASUfxnHr9nludEIOwp6rsoR28VZl24QVO8HTi5Tt1M9/Ie7DsvsoutpSehKaQx0S6rU70xEXoPsDfr4dq/K5cu1Up3w+p1w9oi4XnYt2QvdWfH+JBlli2sQV1+LuvQXus7wH2Qq/0Ox6i0ekx0Xi+V8E+QMVeoCKKFLKv9E3zHPv80sSW1UJoytbwCMtDAKEal1BCD0s3WbdRRXeRXq4XqADdzveLhuuEmtgSpVqSlRvqy3oHOqFPcBO6JXyn5jRK8+XWFU6ppetAI3uD+MfdplaSkhv03dsT3I4bbkEndA8drINysZ/4eSu5twm8ZHdvBkpKbxF5cHDOFKuxJZHQ1N3bHu8EnWbUizJY1+NG9B3TjY+V3Lm93N6n33AZrx9QV3BuF1HoFgFawxyEJpEb6qWO/YItLRSy17IAJpjcCDNePcB9LronqFMPyy8ZeJQ79S65S6GSfTfjwedWJl8UD8+utrlopy8ZCrlriCRTyF7KeL3PUGgJ97noHWiFXhzDgEe5KW409eJVdlyCc4dMn+fKk9ApzkWvQBes8yY0ldyxX6wUim/ZV8grmaZloWcXEqG9yw017xv7xUqx+JY99WQaq8UjuMjTEz5/q7loXIJ1WQptKXfPcvt92XzK3iC94NxdkZBgcgloo+9BhbaUW86Re5PAS5Vj8S17CsG5Q+DWUOIyTZSK0BIOw4BU5d5FfJlKKt5kR9zMuS2u4wUU1+jhnlxSrNAsdz7Fp+wr5J8555pcQjmdlpTQLHe+pUbZXZNLqhSaQu42gZegxkIlewrTbge4Z4tVK7RvuQVU1PYbmNiYUzM7LDykPtJusi5b+q5Bd7KHdX1SQgjRYWJzUCmluPsZYLlTJQfZWWgifMn9AOAff9ViiBjKfpIL9hhfKLvL4XUrLD9F4xbFCD3Ei9xSSgghXsAHAeTGM65b9t71gwb7xK91GQu4ROgW/k/28HJ+dcrMkRvA74N/7+T4DIG5g3cuyZceHreThgrSNTafBdrdVLILilEH1G68A+dApvmgXQIvJxe/pQfR3vHvCN2CJrmkKqE9yG3KXkp57pavAfwFpmSG3fiTXHDmG/FRPUWOoW2Z2S2/x4fzWWFCiB7+gx1Murziesw+KTvhOVcstEY3tFssf8Y/DuXeA/h1efWYTBnKfpI6OKODbS1YaDJ08LHF2wM3l/DDUO4VgL89fTBTBs/w25tjoTWDoU0L/yfZfpZSbq+O8BVCHAD84vlCTL28QsncgYUGcDW0ofDsFWon2z2g57kHF15BTWPwnDfjihH6KKU8xq5MCgyy8lrQuPUKNTOyl4M8hCu5dUW2AP4gqABTLiYSz0JriLPyDF+hnvnh3TqM5dYVO8L/FAdTFs9QLfRhybRaSQzG0Vv4z8ozzI5b3JL7AeqbmKqCTJ484fJisdAaPY5uQdcgOqXbvis3cBZ8Dw6w1Y51XnkNEE4RGp6hnvvB9bnflPv8A+pbaQ9OcKmJR1yErj7CbSBergpcgpEHOV4E4sCk3OcfVJI3unB3vVw+3QrQ1Ajx6jYDyZfpbLmvfkl12Ruw7KXxVUq5iV2J2AQKjD3jMo7uKS7gJPebD7mWnarLwtDzoeZxtRCiBc1iGIPpdu9DBCS9yP3mQ1VXphkUlj19vkgp29iVCA3hYpghd+ejqSCR+81F4mzYx9hRzVg7QMYYEKDbPUUQud9c9LKtTwP/SfOMG0V3yXVv0iylpOpJmjTQJBJ7osh9VQEeryeBnNhsL0cCRboB1e0+pJZ6G13uMYM/SAPuwofiUUrZxK6ED4iXUg4xyT2HVHMBkpN7zKALvwFPuVGRvdwBIt3AJZ9+n8MQJnm5hwy+lRvQRjdrI0u5A0W6s13CmpXcYwZR+A04MLeEbOQOFOkGCkjBzVruIYPAnGnZOTA3n6TlDhTpBhKYvvJJMXKP4VbdiuTkDhjpTmr6yifFyj2EW/VJkpA7YKQbAL4gw3G0DVXIPYZb9TdElTtQpBsoYBxtQ5VyD+FWHQDwKqV8CHnBQJFuoLBxtA3Vyz2m1lY9RIZawEg37+8GlvsulbXqP1CIQHSaxntkOx9NBcttgW55TFeytGw5b6vCAka6AT7F5CYstyMFZsstWs9NfPLnGKfdQGuD5fZEAa36s5RyZftLxMfjDOFdWC1huQnIuFX/cc6umxwYywOWOwAZReBvds0DBsZYaE+w3IHJIAJ/br0D7QIKcKSbBJY7MqP95VI5n+0zgBVo68NCE8NyJ0bhhz+w0AFhuRNmtEV0ToG5MUnuMVY6LHdGZBSYAzi5JDosd8Yk1oXnLndisNyFMJpbbxAmCs9CJwzLXSiE43UWOhNY7kpYeKSTSSw5+jg3mgkDy10pM2R/AtCBM8WyheVmAJzH7GsA4Na5DP4Pjy4UUrRD74MAAAAASUVORK5CYII=');
+div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -158,6 +158,35 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../math_spacing.css">
@@ -334,7 +363,7 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-by-topic.html">Recommended exercises by topic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/basic-mathematical-proofs.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Basic mathematical proofs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -385,7 +414,7 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../_generated/recommended-by-topic.html" class="sidebar-item-text sidebar-link active">
+  <a href="../_generated/recommended-by-topic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recommended exercises by topic</span></a>
   </div>
 </li>
@@ -426,7 +455,7 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/basic-mathematical-proofs.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/basic-mathematical-proofs.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Basic mathematical proofs</span></span></a>
   </div>
 </li>
@@ -666,29 +695,30 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#coupled-cluster-theory" id="toc-coupled-cluster-theory" class="nav-link active" data-scroll-target="#coupled-cluster-theory">Coupled-cluster theory</a>
+  <li><a href="#some-basic-proof-strategies" id="toc-some-basic-proof-strategies" class="nav-link active" data-scroll-target="#some-basic-proof-strategies"><span class="header-section-number">5.1</span> Some basic proof strategies</a>
   <ul class="collapse">
-  <li><a href="#beginner" id="toc-beginner" class="nav-link" data-scroll-target="#beginner">Beginner</a></li>
-  <li><a href="#intermediate" id="toc-intermediate" class="nav-link" data-scroll-target="#intermediate">Intermediate</a></li>
+  <li><a href="#direct-proof-and-counterexamples" id="toc-direct-proof-and-counterexamples" class="nav-link" data-scroll-target="#direct-proof-and-counterexamples"><span class="header-section-number">5.1.1</span> Direct proof and counterexamples</a></li>
+  <li><a href="#proof-by-contrapositive" id="toc-proof-by-contrapositive" class="nav-link" data-scroll-target="#proof-by-contrapositive"><span class="header-section-number">5.1.2</span> Proof by contrapositive</a></li>
+  <li><a href="#proof-by-contradiction" id="toc-proof-by-contradiction" class="nav-link" data-scroll-target="#proof-by-contradiction"><span class="header-section-number">5.1.3</span> Proof by contradiction</a></li>
+  <li><a href="#the-pigeonhole-principle" id="toc-the-pigeonhole-principle" class="nav-link" data-scroll-target="#the-pigeonhole-principle"><span class="header-section-number">5.1.4</span> The pigeonhole principle</a></li>
+  <li><a href="#proof-by-induction" id="toc-proof-by-induction" class="nav-link" data-scroll-target="#proof-by-induction"><span class="header-section-number">5.1.5</span> Proof by induction</a></li>
   </ul></li>
-  <li><a href="#second-quantization" id="toc-second-quantization" class="nav-link" data-scroll-target="#second-quantization">Second quantization</a>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
   <ul class="collapse">
-  <li><a href="#beginner-1" id="toc-beginner-1" class="nav-link" data-scroll-target="#beginner-1">Beginner</a></li>
-  <li><a href="#intermediate-1" id="toc-intermediate-1" class="nav-link" data-scroll-target="#intermediate-1">Intermediate</a></li>
+  <li><a href="#solution-for-exr-proofs-direct-even" id="toc-solution-for-exr-proofs-direct-even" class="nav-link" data-scroll-target="#solution-for-exr-proofs-direct-even">Solution for Exercise&nbsp;<span>5.1</span></a></li>
+  <li><a href="#solution-for-exr-proofs-counterexample" id="toc-solution-for-exr-proofs-counterexample" class="nav-link" data-scroll-target="#solution-for-exr-proofs-counterexample">Solution for Exercise&nbsp;<span>5.2</span></a></li>
+  <li><a href="#solution-for-exr-proofs-contrapositive-basic" id="toc-solution-for-exr-proofs-contrapositive-basic" class="nav-link" data-scroll-target="#solution-for-exr-proofs-contrapositive-basic">Solution for Exercise&nbsp;<span>5.3</span></a></li>
+  <li><a href="#solution-for-exr-proofs-contradiction-basic" id="toc-solution-for-exr-proofs-contradiction-basic" class="nav-link" data-scroll-target="#solution-for-exr-proofs-contradiction-basic">Solution for Exercise&nbsp;<span>5.4</span></a></li>
+  <li><a href="#solution-for-exr-proofs-pigeonhole-basic" id="toc-solution-for-exr-proofs-pigeonhole-basic" class="nav-link" data-scroll-target="#solution-for-exr-proofs-pigeonhole-basic">Solution for Exercise&nbsp;<span>5.5</span></a></li>
+  <li><a href="#solution-for-exr-proofs-induction-basic" id="toc-solution-for-exr-proofs-induction-basic" class="nav-link" data-scroll-target="#solution-for-exr-proofs-induction-basic">Solution for Exercise&nbsp;<span>5.6</span></a></li>
+  <li><a href="#solution-for-exr-proofs-direct-matrix" id="toc-solution-for-exr-proofs-direct-matrix" class="nav-link" data-scroll-target="#solution-for-exr-proofs-direct-matrix">Solution for Exercise&nbsp;<span>5.7</span></a></li>
+  <li><a href="#solution-for-exr-proofs-contrapositive-matrix" id="toc-solution-for-exr-proofs-contrapositive-matrix" class="nav-link" data-scroll-target="#solution-for-exr-proofs-contrapositive-matrix">Solution for Exercise&nbsp;<span>5.8</span></a></li>
+  <li><a href="#solution-for-exr-proofs-contradiction-orthogonal" id="toc-solution-for-exr-proofs-contradiction-orthogonal" class="nav-link" data-scroll-target="#solution-for-exr-proofs-contradiction-orthogonal">Solution for Exercise&nbsp;<span>5.9</span></a></li>
+  <li><a href="#solution-for-exr-proofs-pigeonhole-orbitals" id="toc-solution-for-exr-proofs-pigeonhole-orbitals" class="nav-link" data-scroll-target="#solution-for-exr-proofs-pigeonhole-orbitals">Solution for Exercise&nbsp;<span>5.10</span></a></li>
+  <li><a href="#solution-for-exr-proofs-induction-geometric" id="toc-solution-for-exr-proofs-induction-geometric" class="nav-link" data-scroll-target="#solution-for-exr-proofs-induction-geometric">Solution for Exercise&nbsp;<span>5.11</span></a></li>
+  <li><a href="#solution-for-exr-proofs-advanced-commutator" id="toc-solution-for-exr-proofs-advanced-commutator" class="nav-link" data-scroll-target="#solution-for-exr-proofs-advanced-commutator">Solution for Exercise&nbsp;<span>5.12</span></a></li>
   </ul></li>
-  <li><a href="#self-consistent-field-theory" id="toc-self-consistent-field-theory" class="nav-link" data-scroll-target="#self-consistent-field-theory">Self-consistent field theory</a></li>
-  <li><a href="#density-functional-theory" id="toc-density-functional-theory" class="nav-link" data-scroll-target="#density-functional-theory">Density functional theory</a></li>
-  <li><a href="#response-theory" id="toc-response-theory" class="nav-link" data-scroll-target="#response-theory">Response theory</a>
-  <ul class="collapse">
-  <li><a href="#beginner-2" id="toc-beginner-2" class="nav-link" data-scroll-target="#beginner-2">Beginner</a></li>
-  <li><a href="#intermediate-2" id="toc-intermediate-2" class="nav-link" data-scroll-target="#intermediate-2">Intermediate</a></li>
-  </ul></li>
-  <li><a href="#relativistic-quantum-chemistry" id="toc-relativistic-quantum-chemistry" class="nav-link" data-scroll-target="#relativistic-quantum-chemistry">Relativistic quantum chemistry</a>
-  <ul class="collapse">
-  <li><a href="#beginner-3" id="toc-beginner-3" class="nav-link" data-scroll-target="#beginner-3">Beginner</a></li>
-  </ul></li>
-  <li><a href="#molecular-properties" id="toc-molecular-properties" class="nav-link" data-scroll-target="#molecular-properties">Molecular properties</a></li>
-  <li><a href="#multiconfigurational-methods" id="toc-multiconfigurational-methods" class="nav-link" data-scroll-target="#multiconfigurational-methods">Multiconfigurational methods</a></li>
   </ul>
 </nav>
     </div>
@@ -696,9 +726,9 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-by-topic.html">Recommended exercises by topic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/sets-and-functions.html">Mathematical foundations</a></li><li class="breadcrumb-item"><a href="../chapters/basic-mathematical-proofs.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Basic mathematical proofs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Recommended exercises by topic</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Basic mathematical proofs</span></h1>
 </div>
 
 
@@ -715,99 +745,462 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 </header>
 
 
-<p>This chapter contains lists of mathematics exercises grouped by each quantum chemistry topic taught at the school. These exercises can be useful as a warm-up to the proper exercises given each day.</p>
-<section id="coupled-cluster-theory" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="coupled-cluster-theory">Coupled-cluster theory</h2>
-<section id="beginner" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="beginner">Beginner</h3>
-<ul>
-<li><a href="../chapters/taylor-series.html#exr-taylor-exp" class="quarto-xref">Exercise&nbsp;<span>23.1</span></a> — Approximating the exponential function</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-matrix-exponential-diagonal" class="quarto-xref">Exercise&nbsp;<span>24.1</span></a> — Exponential of a diagonal matrix</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-matrix-exponential-simple-nilpotent" class="quarto-xref">Exercise&nbsp;<span>24.2</span></a> — An exponential whose series terminates</li>
-</ul>
+<p>Mathematics is a way of establishing, with certainty, that a statement follows from a set of assumptions. A <em>proof</em> is a sequence of logical steps that makes this connection explicit. In quantum chemistry, proofs are useful even when the final goal is numerical. They help us understand why an algorithm works, which properties of matrices and operators are guaranteed, and which conclusions depend on particular assumptions.</p>
+<p>This chapter introduces a small collection of proof strategies that occur repeatedly in mathematics and mathematical physics. We consider direct proof, disproof by counterexample, proof by contrapositive, proof by contradiction, the pigeonhole principle, and proof by induction. The beginner exercises are deliberately elementary: their purpose is to practise the logical structure of each method without making the algebra difficult. The intermediate exercises apply the same ideas to matrices, sums, and simple settings related to quantum mechanics and quantum chemistry.</p>
+<section id="some-basic-proof-strategies" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="some-basic-proof-strategies"><span class="header-section-number">5.1</span> Some basic proof strategies</h2>
+<section id="direct-proof-and-counterexamples" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="direct-proof-and-counterexamples"><span class="header-section-number">5.1.1</span> Direct proof and counterexamples</h3>
+<p>In a <strong>direct proof</strong>, we start from the assumptions and use definitions, algebra, and previously established facts until we reach the desired conclusion. For example, to prove that the sum of two even integers is even, write the integers as <span class="math inline">\(2m\)</span> and <span class="math inline">\(2n\)</span>. Their sum is <span class="math inline">\(2(m+n)\)</span> and is therefore even.</p>
+<p>A universal statement such as “for every <span class="math inline">\(x\)</span>, property <span class="math inline">\(P(x)\)</span> holds” can be disproved by finding a single <strong>counterexample</strong>: one value of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P(x)\)</span> is false. Counterexamples are often the quickest way to test whether a proposed theorem can possibly be correct.</p>
 </section>
-<section id="intermediate" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="intermediate">Intermediate</h3>
-<ul>
-<li><a href="../chapters/taylor-series.html#exr-taylor-matrix-exponential" class="quarto-xref">Exercise&nbsp;<span>23.6</span></a> — From the exponential to rotations</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-exponential-rotation" class="quarto-xref">Exercise&nbsp;<span>24.4</span></a> — A matrix exponential and rotations</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-hadamard-terminating" class="quarto-xref">Exercise&nbsp;<span>24.6</span></a> — A terminating similarity transformation</li>
-</ul>
+<section id="proof-by-contrapositive" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="proof-by-contrapositive"><span class="header-section-number">5.1.2</span> Proof by contrapositive</h3>
+<p>A statement of the form</p>
+<p><span class="math display">\[
+P \Longrightarrow Q
+\]</span></p>
+<p>is logically equivalent to its <strong>contrapositive</strong></p>
+<p><span class="math display">\[
+\neg Q \Longrightarrow \neg P.
+\]</span></p>
+<p>Sometimes the contrapositive is much easier to prove than the original statement. Notice that the contrapositive is not the same as the converse <span class="math inline">\(Q\Longrightarrow P\)</span>.</p>
 </section>
+<section id="proof-by-contradiction" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="proof-by-contradiction"><span class="header-section-number">5.1.3</span> Proof by contradiction</h3>
+<p>In a <strong>proof by contradiction</strong>, we assume that the statement we want to prove is false. We then show that this assumption leads to an impossibility: for example, a statement that contradicts an assumption or a known fact. We conclude that the original statement must be true.</p>
+<p>This method is particularly natural for statements asserting that something cannot exist. It also occurs frequently in proofs about linear algebra and quantum mechanics.</p>
 </section>
-<section id="second-quantization" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="second-quantization">Second quantization</h2>
-<section id="beginner-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="beginner-1">Beginner</h3>
-<ul>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-1" class="quarto-xref">Exercise&nbsp;<span>3.1</span></a> — Very basic sums</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-2" class="quarto-xref">Exercise&nbsp;<span>3.2</span></a> — Simplifying as a sum</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-4" class="quarto-xref">Exercise&nbsp;<span>3.4</span></a> — Reconstruct a vector</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-dummy-index" class="quarto-xref">Exercise&nbsp;<span>3.6</span></a> — The summation index is a dummy index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-linearity" class="quarto-xref">Exercise&nbsp;<span>3.7</span></a> — Linearity of sums</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-constant" class="quarto-xref">Exercise&nbsp;<span>3.8</span></a> — When something does not depend on the summation index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-free-index" class="quarto-xref">Exercise&nbsp;<span>3.9</span></a> — Free and summed indices</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-reindexing" class="quarto-xref">Exercise&nbsp;<span>3.10</span></a> — Shifting the summation index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-kronecker-delta" class="quarto-xref">Exercise&nbsp;<span>3.11</span></a> — The Kronecker delta: basic exercise</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-coefficients" class="quarto-xref">Exercise&nbsp;<span>5.1</span></a> — Basic binomial coefficients</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-theorem-basic" class="quarto-xref">Exercise&nbsp;<span>5.5</span></a> — The binomial theorem</li>
-<li><a href="../chapters/basic-mathematical-proofs.html#exr-proofs-induction-basic" class="quarto-xref">Exercise&nbsp;<span>5.6</span></a> — Your first induction proof</li>
-</ul>
+<section id="the-pigeonhole-principle" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="the-pigeonhole-principle"><span class="header-section-number">5.1.4</span> The pigeonhole principle</h3>
+<p>The <strong>pigeonhole principle</strong> says that if more than <span class="math inline">\(n\)</span> objects are placed into <span class="math inline">\(n\)</span> boxes, at least one box must contain at least two objects. The idea is elementary, but surprisingly powerful. More generally, if <span class="math inline">\(N\)</span> objects are distributed among <span class="math inline">\(n\)</span> boxes, at least one box contains at least <span class="math inline">\(\lceil N/n\rceil\)</span> objects.</p>
 </section>
-<section id="intermediate-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="intermediate-1">Intermediate</h3>
-<ul>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-theorem-coefficients" class="quarto-xref">Exercise&nbsp;<span>5.6</span></a> — Coefficients in binomial expansions</li>
-<li><a href="../chapters/basic-mathematical-proofs.html#exr-proofs-direct-matrix" class="quarto-xref">Exercise&nbsp;<span>5.7</span></a> — Direct proof with a matrix</li>
-<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-exponential-sine-cosine" class="quarto-xref">Exercise&nbsp;<span>21.3</span></a> — The exponential, sine, and cosine series</li>
-<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-cauchy-product" class="quarto-xref">Exercise&nbsp;<span>21.7</span></a> — The Cauchy product of power series</li>
-</ul>
+<section id="proof-by-induction" class="level3" data-number="5.1.5">
+<h3 data-number="5.1.5" class="anchored" data-anchor-id="proof-by-induction"><span class="header-section-number">5.1.5</span> Proof by induction</h3>
+<p><strong>Mathematical induction</strong> is used to prove statements indexed by an integer, usually <span class="math inline">\(n=1,2,3,\ldots\)</span>. A proof has two main steps:</p>
+<ol type="1">
+<li><strong>Base case:</strong> prove the statement for the first value of <span class="math inline">\(n\)</span>.</li>
+<li><strong>Induction step:</strong> assume the statement is true for some <span class="math inline">\(n\)</span> (the <strong>induction hypothesis</strong>) and use this assumption to prove that it is true for <span class="math inline">\(n+1\)</span>.</li>
+</ol>
+<p>If both steps succeed, the statement follows for every integer covered by the induction.</p>
 </section>
 </section>
-<section id="self-consistent-field-theory" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="self-consistent-field-theory">Self-consistent field theory</h2>
-<p><em>No exercises selected.</em></p>
+<section id="exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="exr-proofs-direct-even" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 5.1 (A first direct proof)</strong></span> An integer <span class="math inline">\(n\)</span> is <em>even</em> if it can be written as <span class="math inline">\(n=2k\)</span> for some integer <span class="math inline">\(k\)</span>.</p>
+<ol type="a">
+<li><p>Let <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> be even integers. Write <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> using the definition of an even integer.</p></li>
+<li><p>Use your expressions to show that <span class="math inline">\(m+n\)</span> can be written as <span class="math inline">\(2\)</span> times an integer.</p></li>
+<li><p>Conclude that the sum of two even integers is even.</p></li>
+<li><p>Which part of your argument would fail if one of the two integers were odd?</p></li>
+</ol>
+</div>
+<div id="exr-proofs-counterexample" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 5.2 (Learning to use counterexamples)</strong></span> For each statement below, decide whether it is true. If it is false, disprove it by giving one counterexample.</p>
+<ol type="a">
+<li><p>For every real number <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2\geq 0\)</span>.</p></li>
+<li><p>For every real number <span class="math inline">\(x\)</span>, <span class="math inline">\(x^2&gt;x\)</span>.</p></li>
+<li><p>For all real numbers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, <span class="math inline">\((x+y)^2=x^2+y^2\)</span>.</p></li>
+<li><p>Every diagonal <span class="math inline">\(2\times2\)</span> matrix is invertible.</p></li>
+<li><p>If <span class="math inline">\(A\)</span> is a real matrix, then every entry of <span class="math inline">\(A^\mathsf{T}A\)</span> is positive.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-contrapositive-basic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 5.3 (A first proof by contrapositive)</strong></span> Consider the statement: <em>If <span class="math inline">\(n^2\)</span> is even, then <span class="math inline">\(n\)</span> is even</em>, where <span class="math inline">\(n\)</span> is an integer.</p>
+<ol type="a">
+<li><p>Write down the contrapositive of the statement.</p></li>
+<li><p>An odd integer can be written as <span class="math inline">\(n=2k+1\)</span>. Expand <span class="math inline">\((2k+1)^2\)</span>.</p></li>
+<li><p>Show that the square of an odd integer is odd.</p></li>
+<li><p>Use the contrapositive to conclude that if <span class="math inline">\(n^2\)</span> is even, then <span class="math inline">\(n\)</span> is even.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-contradiction-basic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 5.4 (A first proof by contradiction)</strong></span> Prove that there is no largest integer.</p>
+<ol type="a">
+<li><p>Suppose, for contradiction, that there is a largest integer. Call it <span class="math inline">\(N\)</span>.</p></li>
+<li><p>Consider the integer <span class="math inline">\(N+1\)</span>. How does it compare with <span class="math inline">\(N\)</span>?</p></li>
+<li><p>Explain why this contradicts the assumption that <span class="math inline">\(N\)</span> is the largest integer.</p></li>
+<li><p>State the conclusion.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-pigeonhole-basic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 5.5 (The pigeonhole principle)</strong></span> &nbsp;</p>
+<ol type="a">
+<li><p>A tutorial group contains 13 students. Show that at least two students were born in the same month.</p></li>
+<li><p>Identify explicitly the “pigeons” and the “pigeonholes” in part a.</p></li>
+<li><p>A basis set contains 21 basis functions, each assigned one of four angular-momentum labels: <span class="math inline">\(s\)</span>, <span class="math inline">\(p\)</span>, <span class="math inline">\(d\)</span>, or <span class="math inline">\(f\)</span>. Show that at least six basis functions have the same label.</p></li>
+<li><p>Which version of the pigeonhole principle do you need for part c?</p></li>
+</ol>
+</div>
+<div id="exr-proofs-induction-basic" class="theorem exercise" data-level="beginner" data-recommended="topic" data-topic="second-quantization">
+<p><span class="theorem-title"><strong>Exercise 5.6 (Your first induction proof)</strong></span> Prove by induction that</p>
+<p><span class="math display">\[
+1+2+\cdots+n=\frac{n(n+1)}{2}
+\]</span></p>
+<p>for every positive integer <span class="math inline">\(n\)</span>.</p>
+<ol type="a">
+<li><p>Check the formula for <span class="math inline">\(n=1\)</span>.</p></li>
+<li><p>Assume that the formula is true for some positive integer <span class="math inline">\(n\)</span>. Write down this induction hypothesis explicitly.</p></li>
+<li><p>Add <span class="math inline">\(n+1\)</span> to both sides of the induction hypothesis.</p></li>
+<li><p>Simplify the right-hand side and show that you obtain <span class="math inline">\(\frac{(n+1)(n+2)}{2}\)</span>.</p></li>
+<li><p>Explain why the base case and induction step prove the formula for every positive integer <span class="math inline">\(n\)</span>.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-direct-matrix" class="theorem exercise" data-level="intermediate" data-recommended="topic" data-topic="second-quantization">
+<p><span class="theorem-title"><strong>Exercise 5.7 (Direct proof with a matrix)</strong></span> Let <span class="math inline">\(A\)</span> be a real <span class="math inline">\(m\times n\)</span> matrix and <span class="math inline">\(x\in\mathbb{R}^n\)</span>. Prove directly that</p>
+<p><span class="math display">\[
+x^\mathsf{T}A^\mathsf{T}Ax\geq 0.
+\]</span></p>
+<ol type="a">
+<li><p>Introduce the vector <span class="math inline">\(y=Ax\)</span> and rewrite the expression in terms of <span class="math inline">\(y\)</span>.</p></li>
+<li><p>Write <span class="math inline">\(y^\mathsf{T}y\)</span> as a sum over components.</p></li>
+<li><p>Complete the proof.</p></li>
+<li><p>Show that <span class="math inline">\(A^\mathsf{T}A\)</span> is symmetric.</p></li>
+<li><p>Explain why these results show that <span class="math inline">\(A^\mathsf{T}A\)</span> is positive semidefinite.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-contrapositive-matrix" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 5.8 (Invertibility by contrapositive)</strong></span> Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be square matrices of the same dimension. Prove the statement</p>
+<blockquote class="blockquote">
+<p>If <span class="math inline">\(AB\)</span> is invertible, then both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are invertible.</p>
+</blockquote>
+<p>Use a contrapositive argument for each factor.</p>
+<ol type="a">
+<li><p>Suppose <span class="math inline">\(B\)</span> is not invertible. Show that there is a nonzero vector <span class="math inline">\(x\)</span> such that <span class="math inline">\(Bx=0\)</span>.</p></li>
+<li><p>Show that <span class="math inline">\(ABx=0\)</span> and conclude that <span class="math inline">\(AB\)</span> cannot be invertible.</p></li>
+<li><p>Suppose instead that <span class="math inline">\(A\)</span> is not invertible. You may use the fact that then there exists a nonzero row vector <span class="math inline">\(y^\dagger\)</span> such that <span class="math inline">\(y^\dagger A=0\)</span>. Show that <span class="math inline">\(y^\dagger AB=0\)</span>.</p></li>
+<li><p>Combine the two arguments to prove the original statement.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-contradiction-orthogonal" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 5.9 (Orthogonal eigenvectors from a contradiction)</strong></span> Let <span class="math inline">\(A\)</span> be a Hermitian matrix, and let</p>
+<p><span class="math display">\[
+Au=\lambda u,\qquad Av=\mu v,
+\]</span></p>
+<p>where <span class="math inline">\(\lambda\neq\mu\)</span>.</p>
+<ol type="a">
+<li><p>Using <span class="math inline">\(Au=\lambda u\)</span>, show that <span class="math inline">\(v^\dagger Au=\lambda v^\dagger u\)</span>.</p></li>
+<li><p>Using Hermiticity and <span class="math inline">\(Av=\mu v\)</span>, show that the same quantity is <span class="math inline">\(v^\dagger Au=\mu v^\dagger u\)</span>.</p></li>
+<li><p>Suppose, for contradiction, that <span class="math inline">\(v^\dagger u\neq0\)</span>. Show that this would imply <span class="math inline">\(\lambda=\mu\)</span>.</p></li>
+<li><p>Conclude that eigenvectors of a Hermitian matrix belonging to distinct eigenvalues are orthogonal.</p></li>
+<li><p>Why is this result useful when eigenvectors represent quantum states or molecular orbitals?</p></li>
+</ol>
+</div>
+<div id="exr-proofs-pigeonhole-orbitals" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 5.10 (Pigeonholes and orbital occupations)</strong></span> Consider <span class="math inline">\(N\)</span> electrons distributed among <span class="math inline">\(K\)</span> spatial orbitals. Assume that each spatial orbital can contain at most two electrons.</p>
+<ol type="a">
+<li><p>Use the pigeonhole principle to show that if <span class="math inline">\(N&gt;K\)</span>, at least one spatial orbital must be doubly occupied or the assumptions are inconsistent.</p></li>
+<li><p>If <span class="math inline">\(N=11\)</span> electrons occupy <span class="math inline">\(K=6\)</span> spatial orbitals, what is the minimum possible number of doubly occupied orbitals?</p></li>
+<li><p>Generalize part b: for <span class="math inline">\(K\leq N\leq2K\)</span>, prove that at least <span class="math inline">\(N-K\)</span> orbitals must be doubly occupied.</p></li>
+<li><p>Explain why the result is a counting statement and does not depend on the energies of the orbitals.</p></li>
+</ol>
+</div>
+<div id="exr-proofs-induction-geometric" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 5.11 (Induction and a geometric sum)</strong></span> Let <span class="math inline">\(r\)</span> be a number with <span class="math inline">\(r\neq1\)</span>. Prove by induction that</p>
+<p><span class="math display">\[
+1+r+r^2+\cdots+r^n=\frac{1-r^{n+1}}{1-r}
+\]</span></p>
+<p>for every integer <span class="math inline">\(n\geq0\)</span>.</p>
+<ol type="a">
+<li><p>Verify the base case <span class="math inline">\(n=0\)</span>.</p></li>
+<li><p>Write down the induction hypothesis.</p></li>
+<li><p>Add <span class="math inline">\(r^{n+1}\)</span> and simplify the resulting expression.</p></li>
+<li><p>Complete the induction proof.</p></li>
+<li><p>For <span class="math inline">\(|r|&lt;1\)</span>, what does the formula suggest as <span class="math inline">\(n\to\infty\)</span>?</p></li>
+</ol>
+</div>
+<div id="exr-proofs-advanced-commutator" class="theorem exercise" data-level="advanced">
+<p><span class="theorem-title"><strong>Exercise 5.12 (A finite-dimensional quantum-mechanical impossibility)</strong></span> In quantum mechanics, position and momentum satisfy the canonical commutation relation</p>
+<p><span class="math display">\[
+[\hat{x},\hat{p}]=i\hbar I.
+\]</span></p>
+<p>Here <span class="math inline">\([A,B]=AB-BA\)</span>. Show that <strong>no pair of finite-dimensional matrices</strong> <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> can satisfy</p>
+<p><span class="math display">\[
+[X,P]=i\hbar I
+\]</span></p>
+<p>when <span class="math inline">\(\hbar\neq0\)</span>.</p>
+<ol type="a">
+<li><p>Assume, for contradiction, that <span class="math inline">\(n\times n\)</span> matrices <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> satisfying this equation exist.</p></li>
+<li><p>Prove that <span class="math inline">\(\operatorname{tr}(XP)=\operatorname{tr}(PX)\)</span>.</p></li>
+<li><p>Hence compute <span class="math inline">\(\operatorname{tr}([X,P])\)</span>.</p></li>
+<li><p>On the other hand, compute <span class="math inline">\(\operatorname{tr}(i\hbar I)\)</span>.</p></li>
+<li><p>Derive a contradiction.</p></li>
+<li><p>Explain what this tells us about representing the exact position and momentum operators by finite matrices. Does it prevent us from using finite matrix approximations in practical quantum chemistry?</p></li>
+</ol>
+</div>
 </section>
-<section id="density-functional-theory" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="density-functional-theory">Density functional theory</h2>
-<p><em>No exercises selected.</em></p>
+<section id="solutions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="solution-for-exr-proofs-direct-even" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-direct-even">Solution for <a href="#exr-proofs-direct-even" class="quarto-xref">Exercise&nbsp;<span>5.1</span></a></h3>
+<ol type="a">
+<li><p>Since <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are even, there are integers <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> such that <span class="math inline">\(m=2p\)</span> and <span class="math inline">\(n=2q\)</span>.</p></li>
+<li><p>Their sum is</p></li>
+</ol>
+<p><span class="math display">\[
+m+n=2p+2q=2(p+q).
+\]</span></p>
+<p>Since <span class="math inline">\(p+q\)</span> is an integer, <span class="math inline">\(m+n\)</span> is twice an integer.</p>
+<ol start="3" type="a">
+<li><p>Therefore <span class="math inline">\(m+n\)</span> is even.</p></li>
+<li><p>If, for example, <span class="math inline">\(n\)</span> were odd, we could not write it as <span class="math inline">\(2q\)</span> with <span class="math inline">\(q\)</span> an integer. The first step of the proof would therefore no longer apply.</p></li>
+</ol>
 </section>
-<section id="response-theory" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="response-theory">Response theory</h2>
-<section id="beginner-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="beginner-2">Beginner</h3>
-<ul>
-<li><a href="../chapters/matrix-exp-bch.html#exr-matrix-exponential-diagonal" class="quarto-xref">Exercise&nbsp;<span>24.1</span></a> — Exponential of a diagonal matrix</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-matrix-exponential-simple-nilpotent" class="quarto-xref">Exercise&nbsp;<span>24.2</span></a> — An exponential whose series terminates</li>
-</ul>
+<section id="solution-for-exr-proofs-counterexample" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-counterexample">Solution for <a href="#exr-proofs-counterexample" class="quarto-xref">Exercise&nbsp;<span>5.2</span></a></h3>
+<ol type="a">
+<li><p>True. The square of every real number is nonnegative.</p></li>
+<li><p>False. For example, <span class="math inline">\(x=1\)</span> gives <span class="math inline">\(x^2=x\)</span>, not <span class="math inline">\(x^2&gt;x\)</span>. Also <span class="math inline">\(x=1/2\)</span> gives <span class="math inline">\(x^2&lt;x\)</span>.</p></li>
+<li><p>False. Take <span class="math inline">\(x=y=1\)</span>. Then <span class="math inline">\((x+y)^2=4\)</span>, whereas <span class="math inline">\(x^2+y^2=2\)</span>.</p></li>
+<li><p>False. For example,</p></li>
+</ol>
+<p><span class="math display">\[
+A=\begin{pmatrix}1&amp;0\\0&amp;0\end{pmatrix}
+\]</span></p>
+<p>is diagonal but not invertible.</p>
+<ol start="5" type="a">
+<li>False. Take</li>
+</ol>
+<p><span class="math display">\[
+A=\begin{pmatrix}1&amp;-1\end{pmatrix}.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+A^\mathsf{T}A=\begin{pmatrix}1&amp;-1\\-1&amp;1\end{pmatrix},
+\]</span></p>
+<p>which has negative off-diagonal entries. What is true is that <span class="math inline">\(A^\mathsf{T}A\)</span> is positive semidefinite; this does not mean that every matrix element is positive.</p>
 </section>
-<section id="intermediate-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="intermediate-2">Intermediate</h3>
-<ul>
-<li><a href="../chapters/matrix-exp-bch.html#exr-exponential-rotation" class="quarto-xref">Exercise&nbsp;<span>24.4</span></a> — A matrix exponential and rotations</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-antihermitian-unitary" class="quarto-xref">Exercise&nbsp;<span>24.5</span></a> — Anti-Hermitian matrices and unitary matrices</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-hadamard-terminating" class="quarto-xref">Exercise&nbsp;<span>24.6</span></a> — A terminating similarity transformation</li>
-</ul>
+<section id="solution-for-exr-proofs-contrapositive-basic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-contrapositive-basic">Solution for <a href="#exr-proofs-contrapositive-basic" class="quarto-xref">Exercise&nbsp;<span>5.3</span></a></h3>
+<ol type="a">
+<li><p>The contrapositive is: <em>If <span class="math inline">\(n\)</span> is odd, then <span class="math inline">\(n^2\)</span> is odd.</em></p></li>
+<li><p>Write <span class="math inline">\(n=2k+1\)</span>. Then</p></li>
+</ol>
+<p><span class="math display">\[
+n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
+\]</span></p>
+<ol start="3" type="a">
+<li><p>Since <span class="math inline">\(2k^2+2k\)</span> is an integer, <span class="math inline">\(n^2\)</span> has the form <span class="math inline">\(2m+1\)</span> and is therefore odd.</p></li>
+<li><p>We have proved the contrapositive. Since a statement and its contrapositive are logically equivalent, it follows that if <span class="math inline">\(n^2\)</span> is even, then <span class="math inline">\(n\)</span> is even.</p></li>
+</ol>
 </section>
+<section id="solution-for-exr-proofs-contradiction-basic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-contradiction-basic">Solution for <a href="#exr-proofs-contradiction-basic" class="quarto-xref">Exercise&nbsp;<span>5.4</span></a></h3>
+<ol type="a">
+<li><p>Assume that a largest integer <span class="math inline">\(N\)</span> exists.</p></li>
+<li><p>The number <span class="math inline">\(N+1\)</span> is also an integer, and <span class="math inline">\(N+1&gt;N\)</span>.</p></li>
+<li><p>This contradicts the assumption that no integer is larger than <span class="math inline">\(N\)</span>.</p></li>
+<li><p>Therefore there is no largest integer.</p></li>
+</ol>
 </section>
-<section id="relativistic-quantum-chemistry" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="relativistic-quantum-chemistry">Relativistic quantum chemistry</h2>
-<section id="beginner-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="beginner-3">Beginner</h3>
-<ul>
-<li><a href="../chapters/summing-over-indices.html#exr-levi-civita" class="quarto-xref">Exercise&nbsp;<span>3.12</span></a> — The Levi–Civita symbol: basic exercise</li>
-</ul>
+<section id="solution-for-exr-proofs-pigeonhole-basic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-pigeonhole-basic">Solution for <a href="#exr-proofs-pigeonhole-basic" class="quarto-xref">Exercise&nbsp;<span>5.5</span></a></h3>
+<ol type="a">
+<li><p>There are 13 students but only 12 months. If every month contained at most one birthday, there could be at most 12 students. Therefore at least two students were born in the same month.</p></li>
+<li><p>The students are the pigeons and the 12 months are the pigeonholes.</p></li>
+<li><p>There are 21 basis functions and four labels. Since</p></li>
+</ol>
+<p><span class="math display">\[
+\left\lceil\frac{21}{4}\right\rceil=6,
+\]</span></p>
+<p>at least one label must occur at least six times.</p>
+<ol start="4" type="a">
+<li>We use the generalized pigeonhole principle: distributing <span class="math inline">\(N\)</span> objects among <span class="math inline">\(n\)</span> boxes forces some box to contain at least <span class="math inline">\(\lceil N/n\rceil\)</span> objects.</li>
+</ol>
 </section>
+<section id="solution-for-exr-proofs-induction-basic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-induction-basic">Solution for <a href="#exr-proofs-induction-basic" class="quarto-xref">Exercise&nbsp;<span>5.6</span></a></h3>
+<ol type="a">
+<li>For <span class="math inline">\(n=1\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+1=\frac{1(1+1)}{2}=1,
+\]</span></p>
+<p>so the base case is true.</p>
+<ol start="2" type="a">
+<li>Assume that for some positive integer <span class="math inline">\(n\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+1+2+\cdots+n=\frac{n(n+1)}{2}.
+\]</span></p>
+<ol start="3" type="a">
+<li>Adding <span class="math inline">\(n+1\)</span> gives</li>
+</ol>
+<p><span class="math display">\[
+1+2+\cdots+n+(n+1)=\frac{n(n+1)}{2}+(n+1).
+\]</span></p>
+<ol start="4" type="a">
+<li>Factor and simplify:</li>
+</ol>
+<p><span class="math display">\[
+\frac{n(n+1)}{2}+(n+1)=(n+1)\left(\frac n2+1\right)=\frac{(n+1)(n+2)}{2}.
+\]</span></p>
+<p>This is precisely the claimed formula with <span class="math inline">\(n\)</span> replaced by <span class="math inline">\(n+1\)</span>.</p>
+<ol start="5" type="a">
+<li>The statement is true for <span class="math inline">\(n=1\)</span>, and whenever it is true for <span class="math inline">\(n\)</span> it is true for <span class="math inline">\(n+1\)</span>. By induction, it is true for every positive integer <span class="math inline">\(n\)</span>.</li>
+</ol>
 </section>
-<section id="molecular-properties" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="molecular-properties">Molecular properties</h2>
-<p><em>No exercises selected.</em></p>
+<section id="solution-for-exr-proofs-direct-matrix" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-direct-matrix">Solution for <a href="#exr-proofs-direct-matrix" class="quarto-xref">Exercise&nbsp;<span>5.7</span></a></h3>
+<ol type="a">
+<li>Let <span class="math inline">\(y=Ax\)</span>. Then</li>
+</ol>
+<p><span class="math display">\[
+x^\mathsf{T}A^\mathsf{T}Ax=(Ax)^\mathsf{T}(Ax)=y^\mathsf{T}y.
+\]</span></p>
+<ol start="2" type="a">
+<li>In components,</li>
+</ol>
+<p><span class="math display">\[
+y^\mathsf{T}y=\sum_i y_i^2.
+\]</span></p>
+<ol start="3" type="a">
+<li>Every <span class="math inline">\(y_i^2\)</span> is nonnegative, so</li>
+</ol>
+<p><span class="math display">\[
+x^\mathsf{T}A^\mathsf{T}Ax=\sum_i y_i^2\geq0.
+\]</span></p>
+<ol start="4" type="a">
+<li>Using <span class="math inline">\((BC)^\mathsf{T}=C^\mathsf{T}B^\mathsf{T}\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+(A^\mathsf{T}A)^\mathsf{T}=A^\mathsf{T}(A^\mathsf{T})^\mathsf{T}=A^\mathsf{T}A.
+\]</span></p>
+<p>Thus <span class="math inline">\(A^\mathsf{T}A\)</span> is symmetric.</p>
+<ol start="5" type="a">
+<li>A real symmetric matrix <span class="math inline">\(M\)</span> is positive semidefinite if <span class="math inline">\(x^\mathsf{T}Mx\geq0\)</span> for every <span class="math inline">\(x\)</span>. We have proved exactly this property for <span class="math inline">\(M=A^\mathsf{T}A\)</span>.</li>
+</ol>
 </section>
-<section id="multiconfigurational-methods" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="multiconfigurational-methods">Multiconfigurational methods</h2>
-<p><em>No exercises selected.</em></p>
+<section id="solution-for-exr-proofs-contrapositive-matrix" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-contrapositive-matrix">Solution for <a href="#exr-proofs-contrapositive-matrix" class="quarto-xref">Exercise&nbsp;<span>5.8</span></a></h3>
+<ol type="a">
+<li><p>If <span class="math inline">\(B\)</span> is not invertible, its null space contains a nonzero vector <span class="math inline">\(x\)</span>, so <span class="math inline">\(Bx=0\)</span>.</p></li>
+<li><p>Then</p></li>
+</ol>
+<p><span class="math display">\[
+ABx=A(Bx)=A0=0.
+\]</span></p>
+<p>Thus <span class="math inline">\(AB\)</span> has a nonzero vector in its null space and cannot be invertible. We have proved: if <span class="math inline">\(B\)</span> is not invertible, then <span class="math inline">\(AB\)</span> is not invertible. This is the contrapositive of “if <span class="math inline">\(AB\)</span> is invertible, then <span class="math inline">\(B\)</span> is invertible.”</p>
+<ol start="3" type="a">
+<li>If <span class="math inline">\(A\)</span> is not invertible, choose a nonzero <span class="math inline">\(y^\dagger\)</span> with <span class="math inline">\(y^\dagger A=0\)</span>. Then</li>
+</ol>
+<p><span class="math display">\[
+y^\dagger AB=(y^\dagger A)B=0.
+\]</span></p>
+<p>Therefore <span class="math inline">\(AB\)</span> cannot be invertible. This proves the corresponding contrapositive for <span class="math inline">\(A\)</span>.</p>
+<ol start="4" type="a">
+<li>If <span class="math inline">\(AB\)</span> is invertible, neither <span class="math inline">\(A\)</span> nor <span class="math inline">\(B\)</span> can be noninvertible. Hence both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are invertible.</li>
+</ol>
+</section>
+<section id="solution-for-exr-proofs-contradiction-orthogonal" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-contradiction-orthogonal">Solution for <a href="#exr-proofs-contradiction-orthogonal" class="quarto-xref">Exercise&nbsp;<span>5.9</span></a></h3>
+<ol type="a">
+<li>Since <span class="math inline">\(Au=\lambda u\)</span>,</li>
+</ol>
+<p><span class="math display">\[
+v^\dagger Au=\lambda v^\dagger u.
+\]</span></p>
+<ol start="2" type="a">
+<li>Hermiticity gives <span class="math inline">\(A^\dagger=A\)</span>. From <span class="math inline">\(Av=\mu v\)</span>, and since the eigenvalues of a Hermitian matrix are real,</li>
+</ol>
+<p><span class="math display">\[
+v^\dagger A=\mu v^\dagger.
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+v^\dagger Au=\mu v^\dagger u.
+\]</span></p>
+<ol start="3" type="a">
+<li>Comparing the two expressions,</li>
+</ol>
+<p><span class="math display">\[
+(\lambda-\mu)v^\dagger u=0.
+\]</span></p>
+<p>Suppose <span class="math inline">\(v^\dagger u\neq0\)</span>. We could then divide by <span class="math inline">\(v^\dagger u\)</span> and obtain <span class="math inline">\(\lambda=\mu\)</span>, contradicting the assumption <span class="math inline">\(\lambda\neq\mu\)</span>.</p>
+<ol start="4" type="a">
+<li><p>Therefore <span class="math inline">\(v^\dagger u=0\)</span>: the eigenvectors are orthogonal.</p></li>
+<li><p>Orthogonality allows distinct eigenstates or molecular orbitals of a Hermitian operator to be used as mutually orthogonal basis vectors. It is one of the central structural properties behind spectral expansions in quantum mechanics.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-proofs-pigeonhole-orbitals" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-pigeonhole-orbitals">Solution for <a href="#exr-proofs-pigeonhole-orbitals" class="quarto-xref">Exercise&nbsp;<span>5.10</span></a></h3>
+<ol type="a">
+<li><p>If <span class="math inline">\(N&gt;K\)</span> and every orbital contained at most one electron, at most <span class="math inline">\(K\)</span> electrons could be accommodated. Therefore at least one orbital must contain two electrons, unless the assumed occupation rules cannot be satisfied.</p></li>
+<li><p>With 11 electrons in 6 orbitals, first place one electron in each orbital. This accounts for 6 electrons. The remaining 5 electrons must enter already occupied orbitals, so at least 5 orbitals are doubly occupied. This arrangement is possible, so the minimum is 5.</p></li>
+<li><p>Place at most one electron in each of the <span class="math inline">\(K\)</span> orbitals. This accommodates <span class="math inline">\(K\)</span> electrons. The remaining <span class="math inline">\(N-K\)</span> electrons must each be placed in an already occupied orbital. Since no orbital can hold more than two electrons, these require <span class="math inline">\(N-K\)</span> distinct orbitals. Hence at least <span class="math inline">\(N-K\)</span> orbitals are doubly occupied.</p></li>
+<li><p>The argument uses only the numbers of electrons, orbitals, and allowed occupants. Orbital energies do not enter.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-proofs-induction-geometric" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-induction-geometric">Solution for <a href="#exr-proofs-induction-geometric" class="quarto-xref">Exercise&nbsp;<span>5.11</span></a></h3>
+<ol type="a">
+<li>For <span class="math inline">\(n=0\)</span>, the left-hand side is <span class="math inline">\(1\)</span>, while</li>
+</ol>
+<p><span class="math display">\[
+\frac{1-r^{0+1}}{1-r}=\frac{1-r}{1-r}=1.
+\]</span></p>
+<ol start="2" type="a">
+<li>Assume that</li>
+</ol>
+<p><span class="math display">\[
+1+r+\cdots+r^n=\frac{1-r^{n+1}}{1-r}.
+\]</span></p>
+<ol start="3" type="a">
+<li>Add <span class="math inline">\(r^{n+1}\)</span>:</li>
+</ol>
+<p><span class="math display">\[
+1+r+\cdots+r^n+r^{n+1}=\frac{1-r^{n+1}}{1-r}+r^{n+1}.
+\]</span></p>
+<p>Putting the right-hand side over a common denominator gives</p>
+<p><span class="math display">\[
+\frac{1-r^{n+1}+r^{n+1}(1-r)}{1-r}=\frac{1-r^{n+2}}{1-r}.
+\]</span></p>
+<ol start="4" type="a">
+<li><p>This is the required formula with <span class="math inline">\(n\)</span> replaced by <span class="math inline">\(n+1\)</span>. Together with the base case, induction proves the result for all <span class="math inline">\(n\geq0\)</span>.</p></li>
+<li><p>If <span class="math inline">\(|r|&lt;1\)</span>, then <span class="math inline">\(r^{n+1}\to0\)</span>, suggesting the infinite geometric series</p></li>
+</ol>
+<p><span class="math display">\[
+1+r+r^2+\cdots=\frac{1}{1-r}.
+\]</span></p>
+</section>
+<section id="solution-for-exr-proofs-advanced-commutator" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-proofs-advanced-commutator">Solution for <a href="#exr-proofs-advanced-commutator" class="quarto-xref">Exercise&nbsp;<span>5.12</span></a></h3>
+<ol type="a">
+<li>Assume that finite <span class="math inline">\(n\times n\)</span> matrices <span class="math inline">\(X\)</span> and <span class="math inline">\(P\)</span> exist such that</li>
+</ol>
+<p><span class="math display">\[
+[X,P]=XP-PX=i\hbar I.
+\]</span></p>
+<ol start="2" type="a">
+<li>For finite matrices, the trace is cyclic:</li>
+</ol>
+<p><span class="math display">\[
+\operatorname{tr}(XP)=\operatorname{tr}(PX).
+\]</span></p>
+<p>For example, in components,</p>
+<p><span class="math display">\[
+\operatorname{tr}(XP)=\sum_{ij}X_{ij}P_{ji}=\sum_{ji}P_{ji}X_{ij}=\operatorname{tr}(PX).
+\]</span></p>
+<ol start="3" type="a">
+<li>It follows that</li>
+</ol>
+<p><span class="math display">\[
+\operatorname{tr}([X,P])=\operatorname{tr}(XP)-\operatorname{tr}(PX)=0.
+\]</span></p>
+<ol start="4" type="a">
+<li>But the assumed commutation relation gives</li>
+</ol>
+<p><span class="math display">\[
+\operatorname{tr}([X,P])=\operatorname{tr}(i\hbar I)=i\hbar\operatorname{tr}(I)=i\hbar n.
+\]</span></p>
+<ol start="5" type="a">
+<li><p>Since <span class="math inline">\(n&gt;0\)</span> and <span class="math inline">\(\hbar\neq0\)</span>, we have <span class="math inline">\(i\hbar n\neq0\)</span>. Thus the same trace would have to be both <span class="math inline">\(0\)</span> and <span class="math inline">\(i\hbar n\)</span>, which is a contradiction. Therefore no finite-dimensional matrices can satisfy the canonical commutation relation exactly.</p></li>
+<li><p>Exact position and momentum operators therefore cannot both be represented by finite-dimensional matrices while preserving the exact canonical commutator. In quantum mechanics they act naturally on infinite-dimensional spaces. This does <strong>not</strong> prevent finite matrix approximations: quantum chemistry routinely projects operators onto finite basis sets. Such representations can be extremely accurate for the quantities of interest, but they cannot preserve every exact infinite-dimensional operator identity.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1226,13 +1619,13 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../_generated/recommended-mathematics.html" class="pagination-link" aria-label="Recommended exercises for the first day">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Recommended exercises for the first day</span>
+      <a href="../chapters/combinatorics.html" class="pagination-link" aria-label="Combinatorics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Combinatorics</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/sets-and-functions.html" class="pagination-link" aria-label="Sets and functions">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Sets and functions</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/vectors-and-matrices.html" class="pagination-link" aria-label="Vectors and matrices">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
