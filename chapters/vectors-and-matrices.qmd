@@ -216,7 +216,6 @@ Show a similar result for the rows of $C$.
 
 :::
 
-::: {.content-visible when-profile="tutor"}
 
 
 
@@ -249,6 +248,9 @@ o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o  
    
 
 
+
+
+::: {.content-visible when-profile="tutor"}
 
 
 
@@ -900,3 +902,4 @@ $$
 
 Thus, each row of $C$ is a linear combination of the rows of $B$, with coefficients taken from the corresponding row of $A$.
 
+:::
