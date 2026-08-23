@@ -27,8 +27,8 @@ If an exercise is provided, please cross it out below.
     - [ ] functional derivatives
     - [ ] Transformation formula for multidimensional integrals (calculating Jacobi determinant for transformation from one set of coordinates to another).
 - Response theory
-    - [ ] BCH expansion, manipulation of exponentials of operators.
-    - [ ] Exponential of antihermitian operator is unitary (and maybe also the opposite: Every unitary can be written as an exponential of an antihermitian operator).
+    - [x] BCH expansion, manipulation of exponentials of operators.
+    - [x] Exponential of antihermitian operator is unitary (and maybe also the opposite: Every unitary can be written as an exponential of an antihermitian operator).
     - [ ] Poles and residues of complex functions
     - [ ] Fourier transform
     - [ ] exponential form of the sin and cos functions
@@ -38,7 +38,8 @@ If an exercise is provided, please cross it out below.
     - [x] Levi-Civita symbol
     - [ ] Roots of a 3rd order polynomial
 - Coupled cluster
-    - [ ] Taylor expansion
+    - [X] Taylor expansion
+    - [x] BCH expansion
 - Molecular properties
     - [ ] Writing cross product in terms of Levi-Civita symbols
     - [ ] Evaluating commutator of momentum operator with a local operator (like vector potential)

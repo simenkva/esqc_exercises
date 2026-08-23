@@ -35,6 +35,8 @@ quantum chemistry topic taught at the school.
 - @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate — Gaussian elimination and vector decomposition
 - @exr-general-vector-spaces-recipes — Cooking with vectors 1
 - @exr-bra-ket-column-vectors — Bra-ket notation and column vectors
+- @exr-taylor-exp — Approximating the exponential function
+- @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
 
 ## Intermediate {.unnumbered}
 

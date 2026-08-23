@@ -6,7 +6,17 @@ useful as a warm-up to the proper exercises given each day.
 
 ## Coupled-cluster theory {.unnumbered}
 
-_No exercises selected._
+### Beginner {.unnumbered}
+
+- @exr-taylor-exp — Approximating the exponential function
+- @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
+- @exr-matrix-exponential-simple-nilpotent — An exponential whose series terminates
+
+### Intermediate {.unnumbered}
+
+- @exr-taylor-matrix-exponential — From the exponential to rotations
+- @exr-exponential-rotation — A matrix exponential and rotations
+- @exr-hadamard-terminating — A terminating similarity transformation
 
 ## Second quantization {.unnumbered}
 
@@ -33,7 +43,16 @@ _No exercises selected._
 
 ## Response theory {.unnumbered}
 
-_No exercises selected._
+### Beginner {.unnumbered}
+
+- @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
+- @exr-matrix-exponential-simple-nilpotent — An exponential whose series terminates
+
+### Intermediate {.unnumbered}
+
+- @exr-exponential-rotation — A matrix exponential and rotations
+- @exr-antihermitian-unitary — Anti-Hermitian matrices and unitary matrices
+- @exr-hadamard-terminating — A terminating similarity transformation
 
 ## Relativistic quantum chemistry {.unnumbered}
 

@@ -18,7 +18,7 @@ book:
   author: "Simen Kvaal"
   date: last-modified
   cover-image: figures/cover-a5.png
-  downloads: [pdf, epub]
+#  downloads: [pdf, epub]
   chapters:
     - index.qmd
     - part: "Exercise recommendations"
@@ -50,7 +50,12 @@ book:
         - chapters/open-and-closed-sets.qmd
 
     - part: "Calculus"
-      chapters: []
+      chapters:
+        # - chapters/limits-and-continuity.qmd
+        # - chapters/differentiation.qmd
+        # - chapters/integration.qmd
+        # - chapters/multivariable-calculus.qmd
+        - chapters/taylor-series.qmd
 
     - part: "Multivariable calculus"
       chapters:
@@ -59,7 +64,8 @@ book:
 
     - part: "Series and matrix functions"
       chapters:
-        - chapters/matrix-exponentials-and-commutators.qmd
+#        - chapters/matrix-exponentials-and-commutators.qmd
+        - chapters/matrix-exp-bch.qmd
 
     - part: "Complex numbers and complex analysis"
       chapters:
@@ -108,70 +114,70 @@ format:
       - math_spacing.css
     toc-depth: 3
 
-  epub:
-    toc: true
-    toc-depth: 3
-    css: epub_styles.css
-    cover-image: figures/cover-a5.png
-    epub-fonts:
-      - fonts/RobotoCondensed-Regular.woff2
-      - fonts/RobotoCondensed-Medium.woff2
-      - fonts/RobotoCondensed-Bold.woff2
-      - fonts/STIXTwoText-Regular.woff2
-      - fonts/STIXTwoText-Italic.woff2
-      - fonts/STIXTwoText-Bold.woff2
-      - fonts/STIXTwoText-BoldItalic.woff2
-      - fonts/STIXTwoMath-Regular.woff2
+  #epub:
+  #   toc: true
+  #   toc-depth: 3
+  #   css: epub_styles.css
+  #   cover-image: figures/cover-a5.png
+  #   epub-fonts:
+  #     - fonts/RobotoCondensed-Regular.woff2
+  #     - fonts/RobotoCondensed-Medium.woff2
+  #     - fonts/RobotoCondensed-Bold.woff2
+  #     - fonts/STIXTwoText-Regular.woff2
+  #     - fonts/STIXTwoText-Italic.woff2
+  #     - fonts/STIXTwoText-Bold.woff2
+  #     - fonts/STIXTwoText-BoldItalic.woff2
+  #     - fonts/STIXTwoMath-Regular.woff2
 
-  pdf:
-    pdf-engine: lualatex
-    mainfont: "STIXTwoText"
-    mainfontoptions:
-      - Path=fonts/desktop/
-      - Extension=.otf
-      - UprightFont=*-Regular
-      - ItalicFont=*-Italic
-      - BoldFont=*-Bold
-      - BoldItalicFont=*-BoldItalic
-    sansfont: "RobotoCondensed"
-    sansfontoptions:
-      - Path=fonts/desktop/
-      - Extension=.ttf
-      - UprightFont=*-Regular
-      - BoldFont=*-Bold
-    mathfont: "STIXTwoMath-Regular"
-    mathfontoptions:
-      - Path=fonts/desktop/
-      - Extension=.otf
+  # pdf:
+  #   pdf-engine: lualatex
+  #   mainfont: "STIXTwoText"
+  #   mainfontoptions:
+  #     - Path=fonts/desktop/
+  #     - Extension=.otf
+  #     - UprightFont=*-Regular
+  #     - ItalicFont=*-Italic
+  #     - BoldFont=*-Bold
+  #     - BoldItalicFont=*-BoldItalic
+  #   sansfont: "RobotoCondensed"
+  #   sansfontoptions:
+  #     - Path=fonts/desktop/
+  #     - Extension=.ttf
+  #     - UprightFont=*-Regular
+  #     - BoldFont=*-Bold
+  #   mathfont: "STIXTwoMath-Regular"
+  #   mathfontoptions:
+  #     - Path=fonts/desktop/
+  #     - Extension=.otf
 
-    include-in-header:
-      - text: |
-          \definecolor{brandteal}{HTML}{18BC9C}
-          \usepackage{eso-pic}
-          \AtBeginDocument{%
-            \thispagestyle{empty}%
-            \AddToShipoutPictureBG*{%
-              \AtPageLowerLeft{%
-                \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-a5.png}%
-              }%
-            }%
-            \null\newpage
-          }
+  #   include-in-header:
+  #     - text: |
+  #         \definecolor{brandteal}{HTML}{18BC9C}
+  #         \usepackage{eso-pic}
+  #         \AtBeginDocument{%
+  #           \thispagestyle{empty}%
+  #           \AddToShipoutPictureBG*{%
+  #             \AtPageLowerLeft{%
+  #               \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-a5.png}%
+  #             }%
+  #           }%
+  #           \null\newpage
+  #         }
 
-    toc: true
-    toc-depth: 3
-    colorlinks: true
-    linkcolor: brandteal
-    urlcolor: brandteal
-    citecolor: brandteal
+  #   toc: true
+  #   toc-depth: 3
+  #   colorlinks: true
+  #   linkcolor: brandteal
+  #   urlcolor: brandteal
+  #   citecolor: brandteal
 
-    papersize: a5
-    fontsize: 10pt
-    geometry:
-      - inner=18mm
-      - outer=15mm
-      - top=18mm
-      - bottom=20mm
+  #   papersize: a5
+  #   fontsize: 10pt
+  #   geometry:
+  #     - inner=18mm
+  #     - outer=15mm
+  #     - top=18mm
+  #     - bottom=20mm
 
 
 custom-callout:

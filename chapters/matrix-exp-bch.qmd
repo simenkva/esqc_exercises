@@ -1,0 +1,994 @@
+# Matrix exponentials and operator exponentials
+
+Matrix and operator exponentials occur throughout quantum mechanics and quantum chemistry. They appear in time evolution, unitary transformations, orbital rotations, coupled-cluster theory, and many other settings.
+
+For a square matrix or linear operator $A$, the exponential is defined by its power series
+
+$$
+e^A = I + A + \frac{1}{2!}A^2 + \frac{1}{3!}A^3 + \cdots = \sum_{n=0}^\infty \frac{A^n}{n!}.
+$$
+
+This definition is the direct analogue of the exponential series for a number. The important difference is that matrices and operators generally do **not commute**. If $A$ and $B$ are operators, it is therefore generally true that
+$$
+\text{In general:} \quad e^{A+B} \neq e^Ae^B.
+$$
+
+If $A$ and $B$ commute, however, the familiar rule is recovered:
+
+$$
+[A,B]=AB-BA=0 \quad\Longrightarrow\quad e^{A+B}=e^Ae^B=e^Be^A.
+$$
+
+The inverse of an exponential is particularly simple:
+
+$$
+(e^A)^{-1}=e^{-A}.
+$$
+
+Consequently,
+
+$$
+e^Ae^{-A}=e^{-A}e^A=I.
+$$
+
+This result does not require any additional commutation assumptions, since $A$ always commutes with itself.
+
+A central operation in quantum mechanics is a **similarity transformation**
+
+$$
+\widetilde B=e^A B e^{-A}.
+$$
+
+To understand such expressions, define the commutator
+
+$$
+[A,B]=AB-BA.
+$$
+
+Repeated or nested commutators are written, for example,
+
+$$
+[A,[A,B]], \qquad [A,[A,[A,B]]].
+$$
+
+The exponential similarity transformation can then be expanded as
+
+$$
+e^A B e^{-A}
+=
+B+[A,B]+\frac{1}{2!}[A,[A,B]]
++\frac{1}{3!}[A,[A,[A,B]]]+\cdots.
+$$
+
+This is sometimes called the **Hadamard lemma**. Physicists sometimes call it the **Baker--Campbell--Hausdorff formula**, although the two are not exactly the same.
+
+The above expansion is especially useful when the nested commutators eventually vanish or follow a simple pattern, such as in coupled-cluster theory. 
+
+A closely related problem is to combine two exponentials into one. In general,
+
+$$
+e^Ae^B=e^C,
+$$
+
+where $C$ is not simply $A+B$. The **Baker--Campbell--Hausdorff (BCH) expansion** begins
+
+$$
+C=A+B+\frac12[A,B]+\frac1{12}[A,[A,B]]+\frac1{12}[B,[B,A]]+\cdots.
+$$
+
+Thus, the corrections to the familiar scalar rule are expressed entirely in terms of commutators. When $[A,B]=0$, all these corrections disappear and $C=A+B$.
+
+These formulas are useful not only for formal manipulations. They provide a systematic way of understanding how noncommuting transformations combine, and why operator ordering matters in quantum mechanics.
+
+## Exercises {.unnumbered}
+
+::: {#exr-matrix-exponential-diagonal level="beginner" recommended="math;topic" topic="coupled-cluster;response-theory"}
+
+### Exponential of a diagonal matrix
+
+Consider the matrix
+
+$$
+A=\begin{pmatrix}a&0\\0&b\end{pmatrix}.
+$$
+
+a.	Calculate $A^2$.
+
+b.	Calculate $A^3$.
+
+c.	Use the power-series definition $e^A=I+A+A^2/2!+\cdots$ to show that
+
+	$$
+	e^A=\begin{pmatrix}e^a&0\\0&e^b\end{pmatrix}.
+	$$
+
+d.	Find $e^{-A}$.
+
+e.	Verify explicitly that $e^Ae^{-A}=I$.
+:::
+
+::: {#exr-matrix-exponential-simple-nilpotent level="beginner" recommended="topic" topic="coupled-cluster;response-theory"}
+
+### An exponential whose series terminates
+
+In coupled-cluster theory, the cluster operator $T$ is nilpotent. This means that some power of $T$ vanishes. In this exercise, we explore a simple example of a nilpotent matrix and its exponential. Consider
+
+$$
+N=\begin{pmatrix}0&1\\0&0\end{pmatrix}.
+$$
+
+a.	Calculate $N^2$.
+
+b.	Calculate $N^3$.
+
+c.	Use the power-series definition of the exponential to calculate $e^N$.
+
+d.	Calculate $e^{-N}$.
+
+e.	Multiply your two matrices and verify that $e^Ne^{-N}=I$.
+
+f.	Explain why the exponential series in this example contains only finitely many nonzero terms.
+:::
+
+::: {#exr-commuting-exponentials level="beginner"}
+### Exponentials of commuting matrices
+
+Consider
+
+$$
+A=\begin{pmatrix}a&0\\0&b\end{pmatrix},
+\qquad
+B=\begin{pmatrix}c&0\\0&d\end{pmatrix}.
+$$
+
+a.	Calculate $AB$ and $BA$.
+
+b.	Calculate the commutator $[A,B]$.
+
+c.	Calculate $e^A$, $e^B$, and $e^{A+B}$.
+
+d.	Verify directly that
+
+	$$
+	e^Ae^B=e^{A+B}.
+	$$
+
+e.	Which property of $A$ and $B$ makes the familiar exponential rule work in this example?
+:::
+
+::: {#exr-exponential-rotation level="intermediate" recommended="topic" topic="response-theory;coupled-cluster"}
+
+### A matrix exponential and rotations
+
+Consider
+
+$$
+J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+$$
+
+a.	Calculate $J^2$, $J^3$, and $J^4$.
+
+b.	Use the power series of $e^{\theta J}$ and separate terms containing even and odd powers of $J$.
+
+c.	Recognize the Taylor series of sine and cosine and show that
+
+	$$
+	e^{\theta J}=
+	\begin{pmatrix}
+	\cos\theta&-\sin\theta\\
+	\sin\theta&\cos\theta
+	\end{pmatrix}.
+	$$
+
+d.	Show that $e^{\theta J}e^{\phi J}=e^{(\theta+\phi)J}$.
+
+e.	Explain why the result in part d does not contradict the fact that $e^Ae^B\ne e^{A+B}$ in general.
+:::
+
+::: {#exr-antihermitian-unitary level="intermediate" recommended="topic" topic="response-theory"}
+
+### Anti-Hermitian matrices and unitary matrices
+
+A matrix $A$ is **anti-Hermitian** if
+
+$$
+A^\dagger=-A,
+$$
+
+and a matrix $U$ is **unitary** if
+
+$$
+U^\dagger U=UU^\dagger=I.
+$$
+
+a.	Show from the power-series definition of the matrix exponential that
+
+	$$
+	(e^A)^\dagger=e^{A^\dagger}.
+	$$
+
+b.	Let $A$ be anti-Hermitian and define $U=e^A$. Show that
+
+	$$
+	U^\dagger=e^{-A}.
+	$$
+
+c.	Use the result from part b to prove that $U$ is unitary.
+
+d.	Show that if $H$ is Hermitian and $\alpha$ is real, then $A=i\alpha H$ is anti-Hermitian. Conclude that
+
+	$$
+	U=e^{i\alpha H}
+	$$
+
+	is unitary.
+
+e.	Consider the Hermitian matrix
+
+	$$
+	H=\begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+	$$
+
+	Calculate $U=e^{i\theta H}$ explicitly and verify directly that $U^\dagger U=I$.
+
+f.	The converse is also true: every unitary matrix can be written as the exponential of an anti-Hermitian matrix. Suppose that $U$ has an orthonormal basis of eigenvectors with eigenvalues $e^{i\theta_j}$. Explain how to construct an anti-Hermitian matrix $A$ such that $U=e^A$.
+:::
+
+
+
+
+
+
+
+::: {#exr-hadamard-terminating level="intermediate" recommended="topic" topic="response-theory;coupled-cluster" }
+
+### A terminating similarity transformation
+
+Let
+
+$$
+A=\begin{pmatrix}0&a\\0&0\end{pmatrix},
+\qquad
+B=\begin{pmatrix}b&0\\0&c\end{pmatrix}.
+$$
+
+a.	Calculate the commutator $[A,B]$.
+
+b.	Calculate the nested commutator $[A,[A,B]]$.
+
+c.	Use the expansion
+
+	$$
+	e^A B e^{-A}=B+[A,B]+\frac12[A,[A,B]]+\cdots
+	$$
+
+	to calculate $e^A B e^{-A}$.
+
+d.	Calculate $e^A$ and $e^{-A}$ directly and verify your result by matrix multiplication.
+
+e.	Why did the commutator expansion terminate after only a few terms?
+:::
+
+::: {#exr-bch-simple level="intermediate"}
+### A simple BCH expansion
+
+Suppose that two operators $A$ and $B$ satisfy
+
+$$
+[A,B]=C,
+$$
+
+and that $C$ commutes with both $A$ and $B$:
+
+$$
+[A,C]=[B,C]=0.
+$$
+
+a.	Write the BCH expansion for $\log(e^Ae^B)$ through the first nested commutators.
+
+b.	Show that all nested commutators appearing after $[A,B]$ vanish.
+
+c.	Conclude that
+
+	$$
+	e^Ae^B=e^{A+B+\frac12[A,B]}.
+	$$
+
+d.	Similarly, find an expression for $e^Be^A$ as a single exponential.
+
+e.	Use your answers to show that
+
+	$$
+	e^Ae^B=e^Be^A e^{[A,B]}.
+	$$
+
+f.	What does this result reduce to when $[A,B]=0$?
+:::
+
+::: {#exr-conjugation-eigenoperator level="advanced"}
+### Similarity transformation of an eigenoperator
+
+Suppose $A$ and $B$ satisfy
+
+$$
+[A,B]=\lambda B,
+$$
+
+where $\lambda$ is a scalar.
+
+a.	Show that
+
+	$$
+	[A,[A,B]]=\lambda^2B.
+	$$
+
+b.	Show more generally that the $n$-fold nested commutator of $B$ with $A$ is
+
+	$$
+	\underbrace{[A,[A,\ldots,[A}_{n\text{ times}},B]\ldots]]=\lambda^nB.
+	$$
+
+c.	Insert this result into the commutator expansion of $e^ABe^{-A}$.
+
+d.	Sum the resulting series and show that
+
+	$$
+	e^ABe^{-A}=e^\lambda B.
+	$$
+
+e.	In the harmonic oscillator, the number operator $\hat N$ and creation operator $a^\dagger$ satisfy
+
+	$$
+	[\hat N,a^\dagger]=a^\dagger.
+	$$
+
+	Use the result above to evaluate
+
+	$$
+	e^{\alpha\hat N}a^\dagger e^{-\alpha\hat N}.
+	$$
+
+f.	The annihilation operator satisfies $[\hat N,a]=-a$. Find $e^{\alpha\hat N}ae^{-\alpha\hat N}$.
+:::
+
+::: {#exr-bch-pauli level="advanced"}
+### BCH expansion for noncommuting quantum operators
+
+Let
+
+$$
+A=i\alpha\sigma_x,
+\qquad
+B=i\beta\sigma_y,
+$$
+
+where $\alpha$ and $\beta$ are real and the Pauli matrices satisfy
+
+$$
+[\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k.
+$$
+
+a.	Calculate $[A,B]$.
+
+b.	Calculate $[A,[A,B]]$.
+
+c.	Calculate $[B,[B,A]]$.
+
+d.	Use the BCH expansion
+
+	$$
+	\log(e^Ae^B)=A+B+\frac12[A,B]+\frac1{12}[A,[A,B]]+\frac1{12}[B,[B,A]]+\cdots
+	$$
+
+	to obtain the exponent through terms of total degree three in $\alpha$ and $\beta$.
+
+e.	Explain why the BCH series does not terminate in this case.
+
+f.	Interpret the calculation in terms of successive rotations: why should two rotations about different axes not simply combine by adding their generators?
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::: {.content-visible when-profile="tutor"}
+
+
+## Solutions {.unnumbered}
+
+### Solution for @exr-matrix-exponential-diagonal {.unnumbered}
+
+a.	Since $A$ is diagonal,
+
+	$$
+	A^2=\begin{pmatrix}a^2&0\\0&b^2\end{pmatrix}.
+	$$
+
+b.	Similarly,
+
+	$$
+	A^3=\begin{pmatrix}a^3&0\\0&b^3\end{pmatrix}.
+	$$
+
+	More generally,
+
+	$$
+	A^n=\begin{pmatrix}a^n&0\\0&b^n\end{pmatrix}.
+	$$
+
+c.	Insert this into the exponential series:
+
+	$$
+	e^A=I+A+\frac{A^2}{2!}+\frac{A^3}{3!}+\cdots.
+	$$
+
+	Therefore,
+
+	$$
+	e^A=
+	\begin{pmatrix}
+	1+a+\frac{a^2}{2!}+\frac{a^3}{3!}+\cdots&0\\
+	0&1+b+\frac{b^2}{2!}+\frac{b^3}{3!}+\cdots
+	\end{pmatrix}.
+	$$
+
+	Recognizing the scalar exponential series gives
+
+	$$
+	e^A=\begin{pmatrix}e^a&0\\0&e^b\end{pmatrix}.
+	$$
+
+d.	Replacing $A$ by $-A$ gives
+
+	$$
+	e^{-A}=\begin{pmatrix}e^{-a}&0\\0&e^{-b}\end{pmatrix}.
+	$$
+
+e.	Hence
+
+	$$
+	e^Ae^{-A}
+	=
+	\begin{pmatrix}e^ae^{-a}&0\\0&e^be^{-b}\end{pmatrix}
+	=
+	I.
+	$$
+
+### Solution for @exr-matrix-exponential-simple-nilpotent {.unnumbered}
+
+a.	Direct multiplication gives
+
+	$$
+	N^2=
+	\begin{pmatrix}0&1\\0&0\end{pmatrix}
+	\begin{pmatrix}0&1\\0&0\end{pmatrix}
+	=
+	\begin{pmatrix}0&0\\0&0\end{pmatrix}.
+	$$
+
+b.	Since $N^2=0$, all higher powers vanish. In particular,
+
+	$$
+	N^3=0.
+	$$
+
+c.	The exponential series therefore terminates:
+
+	$$
+	e^N=I+N=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
+	$$
+
+d.	Similarly,
+
+	$$
+	e^{-N}=I-N=\begin{pmatrix}1&-1\\0&1\end{pmatrix}.
+	$$
+
+e.	Multiplication gives
+
+	$$
+	e^Ne^{-N}=
+	\begin{pmatrix}1&1\\0&1\end{pmatrix}
+	\begin{pmatrix}1&-1\\0&1\end{pmatrix}
+	=
+	\begin{pmatrix}1&0\\0&1\end{pmatrix}=I.
+	$$
+
+f.	The series terminates because $N^2=0$. Thus every term involving $N^n$ with $n\ge2$ vanishes. Such a matrix is called **nilpotent**.
+
+### Solution for @exr-commuting-exponentials {.unnumbered}
+
+a.	We find
+
+	$$
+	AB=BA=\begin{pmatrix}ac&0\\0&bd\end{pmatrix}.
+	$$
+
+b.	Therefore,
+
+	$$
+	[A,B]=AB-BA=0.
+	$$
+
+c.	The exponentials are
+
+	$$
+	e^A=\begin{pmatrix}e^a&0\\0&e^b\end{pmatrix},
+	\qquad
+	e^B=\begin{pmatrix}e^c&0\\0&e^d\end{pmatrix},
+	$$
+
+	and
+
+	$$
+	e^{A+B}=\begin{pmatrix}e^{a+c}&0\\0&e^{b+d}\end{pmatrix}.
+	$$
+
+d.	Multiplying,
+
+	$$
+	e^Ae^B
+	=
+	\begin{pmatrix}e^{a+c}&0\\0&e^{b+d}\end{pmatrix}
+	=e^{A+B}.
+	$$
+
+e.	The crucial property is that $A$ and $B$ commute:
+
+	$$
+	[A,B]=0.
+	$$
+
+### Solution for @exr-exponential-rotation {.unnumbered}
+
+a.	The powers are
+
+	$$
+	J^2=-I,\qquad J^3=-J,\qquad J^4=I.
+	$$
+
+b.	The exponential is
+
+	$$
+	e^{\theta J}
+	=
+	I+\theta J+\frac{\theta^2J^2}{2!}
+	+\frac{\theta^3J^3}{3!}+\cdots.
+	$$
+
+	Separating even and odd powers gives
+
+	$$
+	e^{\theta J}
+	=
+	I\left(1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\cdots\right)
+	+
+	J\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\cdots\right).
+	$$
+
+c.	Recognizing the cosine and sine series,
+
+	$$
+	e^{\theta J}=I\cos\theta+J\sin\theta.
+	$$
+
+	Thus,
+
+	$$
+	e^{\theta J}=
+	\begin{pmatrix}
+	\cos\theta&-\sin\theta\\
+	\sin\theta&\cos\theta
+	\end{pmatrix}.
+	$$
+
+d.	Both exponents are scalar multiples of the same matrix $J$, so
+
+	$$
+	[\theta J,\phi J]=0.
+	$$
+
+	Hence
+
+	$$
+	e^{\theta J}e^{\phi J}=e^{(\theta+\phi)J}.
+	$$
+
+	This also follows directly from the angle-addition formulas for sine and cosine.
+
+e.	The general identity fails only when the two exponents do not commute. Here $\theta J$ and $\phi J$ commute, so the usual scalar exponential rule applies.
+
+
+### Solution for @exr-antihermitian-unitary {.unnumbered}
+
+a.	Starting from the power series,
+
+	$$
+	e^A=I+A+\frac{A^2}{2!}+\frac{A^3}{3!}+\cdots,
+	$$
+
+	we take the Hermitian conjugate:
+
+	$$
+	(e^A)^\dagger=I+A^\dagger+\frac{(A^2)^\dagger}{2!}+\frac{(A^3)^\dagger}{3!}+\cdots.
+	$$
+
+	Since $(A^n)^\dagger=(A^\dagger)^n$, we obtain
+
+	$$
+	(e^A)^\dagger=I+A^\dagger+\frac{(A^\dagger)^2}{2!}+\cdots=e^{A^\dagger}.
+	$$
+
+b.	If $A$ is anti-Hermitian, then $A^\dagger=-A$. Therefore,
+
+	$$
+	U^\dagger=(e^A)^\dagger=e^{A^\dagger}=e^{-A}.
+	$$
+
+c.	It follows that
+
+	$$
+	U^\dagger U=e^{-A}e^A=I.
+	$$
+
+	Similarly,
+
+	$$
+	UU^\dagger=e^Ae^{-A}=I.
+	$$
+
+	Thus $U$ is unitary.
+
+d.	If $H^\dagger=H$ and $\alpha$ is real, then
+
+	$$
+	(i\alpha H)^\dagger=-i\alpha H^\dagger=-i\alpha H.
+	$$
+
+	Thus $i\alpha H$ is anti-Hermitian, and consequently
+
+	$$
+	e^{i\alpha H}
+	$$
+
+	is unitary.
+
+	This is the mathematical reason why exponentials of Hermitian operators, multiplied by $i$, occur so frequently in quantum mechanics.
+
+e.	Since $H$ is diagonal,
+
+	$$
+	U=e^{i\theta H}
+	=
+	\begin{pmatrix}
+	e^{i\theta}&0\\
+	0&e^{-i\theta}
+	\end{pmatrix}.
+	$$
+
+	Its Hermitian conjugate is
+
+	$$
+	U^\dagger=
+	\begin{pmatrix}
+	e^{-i\theta}&0\\
+	0&e^{i\theta}
+	\end{pmatrix}.
+	$$
+
+	Therefore,
+
+	$$
+	U^\dagger U=
+	\begin{pmatrix}
+	e^{-i\theta}e^{i\theta}&0\\
+	0&e^{i\theta}e^{-i\theta}
+	\end{pmatrix}
+	=I.
+	$$
+
+f.	A unitary matrix has eigenvalues of modulus one, so its eigenvalues can be written as
+
+	$$
+	e^{i\theta_j}.
+	$$
+
+	Let $\lvert u_j\rangle$ be an orthonormal basis of eigenvectors, so that
+
+	$$
+	U\lvert u_j\rangle=e^{i\theta_j}\lvert u_j\rangle.
+	$$
+
+	Define $A$ by
+
+	$$
+	A\lvert u_j\rangle=i\theta_j\lvert u_j\rangle.
+	$$
+
+	Its eigenvalues $i\theta_j$ are purely imaginary and its eigenvectors are orthonormal, so $A$ is anti-Hermitian. Furthermore,
+
+	$$
+	e^A\lvert u_j\rangle=e^{i\theta_j}\lvert u_j\rangle=U\lvert u_j\rangle.
+	$$
+
+	Hence
+
+	$$
+	U=e^A.
+	$$
+
+	The choice of $A$ is not unique, since each angle $\theta_j$ can be replaced by $\theta_j+2\pi n_j$ without changing $e^{i\theta_j}$.
+
+
+
+
+
+### Solution for @exr-hadamard-terminating {.unnumbered}
+
+a.	First,
+
+	$$
+	AB=\begin{pmatrix}0&ac\\0&0\end{pmatrix},
+	\qquad
+	BA=\begin{pmatrix}0&ab\\0&0\end{pmatrix}.
+	$$
+
+	Therefore,
+
+	$$
+	[A,B]=AB-BA=\begin{pmatrix}0&a(c-b)\\0&0\end{pmatrix}.
+	$$
+
+b.	The first commutator is proportional to $A$. Since $[A,A]=0$,
+
+	$$
+	[A,[A,B]]=0.
+	$$
+
+c.	All subsequent nested commutators therefore vanish, and
+
+	$$
+	e^ABe^{-A}=B+[A,B].
+	$$
+
+	Thus,
+
+	$$
+	e^ABe^{-A}
+	=
+	\begin{pmatrix}
+	b&a(c-b)\\
+	0&c
+	\end{pmatrix}.
+	$$
+
+d.	Since $A^2=0$,
+
+	$$
+	e^A=I+A=\begin{pmatrix}1&a\\0&1\end{pmatrix},
+	\qquad
+	e^{-A}=I-A=\begin{pmatrix}1&-a\\0&1\end{pmatrix}.
+	$$
+
+	Direct multiplication gives
+
+	$$
+	e^ABe^{-A}
+	=
+	\begin{pmatrix}1&a\\0&1\end{pmatrix}
+	\begin{pmatrix}b&0\\0&c\end{pmatrix}
+	\begin{pmatrix}1&-a\\0&1\end{pmatrix}
+	=
+	\begin{pmatrix}b&a(c-b)\\0&c\end{pmatrix}.
+	$$
+
+e.	The first commutator is proportional to $A$, and commuting it once more with $A$ gives zero. Consequently every higher nested commutator also vanishes.
+
+### Solution for @exr-bch-simple {.unnumbered}
+
+a.	The BCH expansion begins
+
+	$$
+	\log(e^Ae^B)
+	=
+	A+B+\frac12[A,B]
+	+\frac1{12}[A,[A,B]]
+	+\frac1{12}[B,[B,A]]
+	+\cdots.
+	$$
+
+b.	Since $[A,B]=C$ and $C$ commutes with both $A$ and $B$,
+
+	$$
+	[A,[A,B]]=[A,C]=0.
+	$$
+
+	Also,
+
+	$$
+	[B,[B,A]]=-[B,C]=0.
+	$$
+
+	All higher nested commutators therefore vanish as well.
+
+c.	The BCH expansion terminates exactly:
+
+	$$
+	e^Ae^B=e^{A+B+\frac12[A,B]}.
+	$$
+
+d.	Interchanging $A$ and $B$,
+
+	$$
+	e^Be^A=e^{A+B+\frac12[B,A]}.
+	$$
+
+	Since $[B,A]=-[A,B]$,
+
+	$$
+	e^Be^A=e^{A+B-\frac12[A,B]}.
+	$$
+
+e.	Because $[A,B]$ commutes with $A$ and $B$, it also commutes with $A+B$. Therefore,
+
+	$$
+	e^Be^Ae^{[A,B]}
+	=
+	e^{A+B-\frac12[A,B]}e^{[A,B]}
+	=
+	e^{A+B+\frac12[A,B]}
+	=
+	e^Ae^B.
+	$$
+
+	Hence
+
+	$$
+	e^Ae^B=e^Be^Ae^{[A,B]}.
+	$$
+
+f.	If $[A,B]=0$, the result becomes
+
+	$$
+	e^Ae^B=e^Be^A=e^{A+B}.
+	$$
+
+### Solution for @exr-conjugation-eigenoperator {.unnumbered}
+
+a.	Using $[A,B]=\lambda B$,
+
+	$$
+	[A,[A,B]]
+	=
+	[A,\lambda B]
+	=
+	\lambda[A,B]
+	=
+	\lambda^2B.
+	$$
+
+b.	Repeating the argument gives one additional factor of $\lambda$ for every commutator. Thus,
+
+	$$
+	\underbrace{[A,[A,\ldots,[A}_{n\text{ times}},B]\ldots]]
+	=
+	\lambda^nB.
+	$$
+
+c.	The similarity transformation becomes
+
+	$$
+	e^ABe^{-A}
+	=
+	B+\lambda B+\frac{\lambda^2}{2!}B+\frac{\lambda^3}{3!}B+\cdots.
+	$$
+
+d.	Factoring out $B$ gives
+
+	$$
+	e^ABe^{-A}
+	=
+	\left(1+\lambda+\frac{\lambda^2}{2!}+\frac{\lambda^3}{3!}+\cdots\right)B
+	=
+	e^\lambda B.
+	$$
+
+e.	For $A=\alpha\hat N$,
+
+	$$
+	[\alpha\hat N,a^\dagger]=\alpha a^\dagger.
+	$$
+
+	Therefore,
+
+	$$
+	e^{\alpha\hat N}a^\dagger e^{-\alpha\hat N}=e^\alpha a^\dagger.
+	$$
+
+f.	Similarly,
+
+	$$
+	[\alpha\hat N,a]=-\alpha a,
+	$$
+
+	so
+
+	$$
+	e^{\alpha\hat N}ae^{-\alpha\hat N}=e^{-\alpha}a.
+	$$
+
+### Solution for @exr-bch-pauli {.unnumbered}
+
+a.	Using $[\sigma_x,\sigma_y]=2i\sigma_z$,
+
+	$$
+	[A,B]=(i\alpha)(i\beta)[\sigma_x,\sigma_y]=-2i\alpha\beta\sigma_z.
+	$$
+
+b.	Using $[\sigma_x,\sigma_z]=-2i\sigma_y$,
+
+	$$
+	[A,[A,B]]
+	=
+	[i\alpha\sigma_x,-2i\alpha\beta\sigma_z]
+	=
+	-4i\alpha^2\beta\sigma_y.
+	$$
+
+c.	First,
+
+	$$
+	[B,A]=2i\alpha\beta\sigma_z.
+	$$
+
+	Using $[\sigma_y,\sigma_z]=2i\sigma_x$,
+
+	$$
+	[B,[B,A]]
+	=
+	[i\beta\sigma_y,2i\alpha\beta\sigma_z]
+	=
+	-4i\alpha\beta^2\sigma_x.
+	$$
+
+d.	Substitution into the BCH expansion gives
+
+	$$
+	\log(e^Ae^B)
+	=
+	i\alpha\sigma_x+i\beta\sigma_y
+	-i\alpha\beta\sigma_z
+	-\frac{i}{3}\alpha^2\beta\sigma_y
+	-\frac{i}{3}\alpha\beta^2\sigma_x
+	+\mathcal O(4),
+	$$
+
+	where $\mathcal O(4)$ denotes terms of total degree four and higher in $\alpha$ and $\beta$.
+
+e.	The nested commutators do not become zero. Instead, commutators of Pauli matrices generate other Pauli matrices. For example,
+
+	$$
+	[\sigma_x,\sigma_y]\propto\sigma_z,\qquad
+	[\sigma_x,\sigma_z]\propto\sigma_y,\qquad
+	[\sigma_y,\sigma_z]\propto\sigma_x.
+	$$
+
+	The commutator algebra therefore closes on the three Pauli matrices, but it does not terminate.
+
+f.	The generators of rotations about different axes do not commute. Performing a rotation about the $x$ axis followed by one about the $y$ axis is therefore different from simply adding the two generators. The commutator terms in the BCH expansion quantify this noncommutativity and generate contributions involving the third rotation axis.
+
+
+
+
+:::
