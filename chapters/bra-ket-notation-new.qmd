@@ -1,0 +1,542 @@
+# Bra-ket notation
+
+Bra-ket notation, introduced by Dirac, is a compact way of writing the linear algebra of quantum mechanics. A vector in a Hilbert space is written as a *ket*,
+$$
+|\psi\rangle,
+$$
+and its Hermitian adjoint is a *bra*,
+$$
+\langle\psi|.
+$$
+
+The inner product of two vectors is therefore written
+$$
+\langle\phi|\psi\rangle,
+$$
+and is a scalar. It satisfies
+$$
+\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^*.
+$$
+In particular,
+$$
+\langle\psi|\psi\rangle = \|\psi\|^2,
+$$
+so a normalized state satisfies $\langle\psi|\psi\rangle=1$.
+
+The product in the opposite order,
+$$
+|\phi\rangle\langle\psi|,
+$$
+is an *outer product*. It is an operator: acting on a ket $|\chi\rangle$ it gives
+$$
+\bigl(|\phi\rangle\langle\psi|\bigr)|\chi\rangle = |\phi\rangle\langle\psi|\chi\rangle.
+$$
+
+A linear operator $\hat A$ acts on kets from the left,
+$$
+|\phi\rangle=\hat A|\psi\rangle.
+$$
+Taking the Hermitian adjoint reverses the order,
+$$
+\langle\phi|=\langle\psi|\hat A^\dagger.
+$$
+For a Hermitian operator, $\hat A^\dagger=\hat A$. Observables in quantum mechanics are represented by Hermitian operators, and the expectation value of $\hat A$ in a normalized state $|\psi\rangle$ is
+$$
+\langle A\rangle=\langle\psi|\hat A|\psi\rangle.
+$$
+
+For an orthonormal basis $\{|i\rangle\}$,
+$$
+\langle i|j\rangle=\delta_{ij},
+$$
+and every vector can be expanded as
+$$
+|\psi\rangle=\sum_i c_i|i\rangle,\qquad c_i=\langle i|\psi\rangle.
+$$
+Equivalently, the basis satisfies the completeness relation
+$$
+\hat I=\sum_i|i\rangle\langle i|.
+$$
+
+In quantum chemistry we also frequently use *nonorthogonal* basis functions, such as atomic orbitals. If the basis is $\{|b_i\rangle\}$, its overlap matrix is
+$$
+S_{ij}=\langle b_i|b_j\rangle.
+$$
+In this case the expansion coefficients cannot in general be obtained simply by projecting with $\langle b_i|$; the overlap matrix must also be taken into account.
+
+
+
+## Exercises
+
+
+
+::: {#exr-bra-ket-column-vectors level="beginner" recommended="math"}
+### Bra-ket notation and column vectors
+
+Consider the orthonormal basis $\{|1\rangle,|2\rangle,|3\rangle\}$. In this basis, the ket
+$$
+|\psi\rangle=2|1\rangle-i|2\rangle+3|3\rangle
+$$
+can be represented by a column vector.
+
+a. Write $|1\rangle$, $|2\rangle$, and $|3\rangle$ as column vectors.
+
+b. Write $|\psi\rangle$ as a column vector.
+
+c. Write the bra $\langle\psi|$ in bra-ket notation.
+
+d. Write $\langle\psi|$ as a row vector. Remember that taking the adjoint involves both transposing and complex conjugating.
+
+e. Calculate $\langle 2|\psi\rangle$, first using bra-ket notation and then by multiplying a row vector by a column vector.
+
+f. Calculate $\langle\psi|\psi\rangle$ using the row and column vectors. What is the norm $\|\psi\|$?
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+::: {#exr-bra-ket-basic level="beginner"}
+### Reading simple bra-ket expressions
+
+Consider two orthonormal states $|1\rangle$ and $|2\rangle$ and the state
+$$
+|\psi\rangle=c_1|1\rangle+c_2|2\rangle.
+$$
+
+a. Write the corresponding bra $\langle\psi|$.
+
+b. Compute $\langle1|\psi\rangle$.
+
+c. Compute $\langle2|\psi\rangle$.
+
+d. Compute $\langle\psi|\psi\rangle$.
+
+e. What condition must $c_1$ and $c_2$ satisfy if $|\psi\rangle$ is normalized?
+:::
+
+::: {#exr-bra-ket-basis-operator level="intermediate"}
+### From coordinate vectors to Hilbert-space vectors
+
+Let $B=\{|b_1\rangle,\ldots,|b_n\rangle\}$ be a basis for an $n$-dimensional Hilbert space $V$, and let $\{|i\rangle\}$ be the standard orthonormal basis of $\mathbb C^n$. Define
+$$
+\hat B=\sum_{i=1}^n|b_i\rangle\langle i|.
+$$
+
+a. What are the domain and range of $\hat B$?
+
+b. Let
+$$
+|x\rangle=\sum_i x_i|i\rangle\in\mathbb C^n.
+$$
+Show that
+$$
+\hat B|x\rangle=\sum_i x_i|b_i\rangle.
+$$
+Interpret the numbers $x_i$.
+
+c. Find $\hat B^\dagger$.
+
+d. Show that
+$$
+\hat B^\dagger\hat B=\sum_{ij}|i\rangle\langle b_i|b_j\rangle\langle j|.
+$$
+
+e. Explain why $\hat B^\dagger\hat B$ is the overlap matrix of the basis $B$, expressed as an operator on $\mathbb C^n$.
+:::
+
+::: {#exr-bra-ket-molecular-orbitals level="intermediate"}
+### Molecular orbitals in a nonorthogonal atomic-orbital basis
+
+Suppose a molecular orbital is expanded in two normalized atomic orbitals,
+$$
+|\psi\rangle=c_1|\chi_1\rangle+c_2|\chi_2\rangle,
+$$
+where
+$$
+\langle\chi_1|\chi_1\rangle=\langle\chi_2|\chi_2\rangle=1,\qquad
+\langle\chi_1|\chi_2\rangle=\langle\chi_2|\chi_1\rangle=s,
+$$
+with $s$ real.
+
+a. Compute $\langle\psi|\psi\rangle$.
+
+b. Write the overlap matrix $S$ in the basis $\{|\chi_1\rangle,|\chi_2\rangle\}$.
+
+c. Show that the normalization condition can be written
+$$
+\mathbf c^\dagger S\mathbf c=1,
+$$
+where $\mathbf c=(c_1,c_2)^T$.
+
+d. Consider the symmetric combination
+$$
+|\psi_+\rangle=N_+\bigl(|\chi_1\rangle+|\chi_2\rangle\bigr).
+$$
+Find the normalization constant $N_+$.
+
+e. Similarly, find the normalization constant $N_-$ for
+$$
+|\psi_-\rangle=N_-\bigl(|\chi_1\rangle-|\chi_2\rangle\bigr).
+$$
+
+f. Show that $\langle\psi_+|\psi_-\rangle=0$. Thus symmetric and antisymmetric combinations can be orthogonal even though the atomic orbitals from which they are constructed are not.
+:::
+
+::: {#exr-bra-ket-nonorthogonal-dual-basis level="advanced"}
+### Nonorthogonal bases, dual vectors, and completeness
+
+Let $\{|b_i\rangle\}_{i=1}^n$ be a linearly independent, but not necessarily orthogonal, basis of an $n$-dimensional Hilbert space. Define the overlap matrix
+$$
+S_{ij}=\langle b_i|b_j\rangle.
+$$
+Assume that $S$ is invertible.
+
+a. Define vectors $|b^i\rangle$ by
+$$
+|b^i\rangle=\sum_j|b_j\rangle(S^{-1})_{ji}.
+$$
+Show that
+$$
+\langle b_k|b^i\rangle=\delta_k^{\,i}.
+$$
+The set $\{|b^i\rangle\}$ is called the *dual basis*.
+
+b. Show that
+$$
+\hat I=\sum_i|b^i\rangle\langle b_i|
+$$
+and hence also
+$$
+\hat I=\sum_{ij}|b_i\rangle(S^{-1})_{ij}\langle b_j|.
+$$
+
+c. Let
+$$
+|\psi\rangle=\sum_i c_i|b_i\rangle.
+$$
+Show that the expansion coefficients are
+$$
+c_i=\langle b^i|\psi\rangle.
+$$
+
+d. Define the projections
+$$
+p_i=\langle b_i|\psi\rangle.
+$$
+Show that
+$$
+p_i=\sum_jS_{ij}c_j
+$$
+and therefore, in matrix notation,
+$$
+\mathbf c=S^{-1}\mathbf p.
+$$
+
+e. Explain why the familiar orthonormal-basis formula $c_i=\langle b_i|\psi\rangle$ is recovered when $S=I$.
+
+f. In quantum chemistry, atomic-orbital basis functions are generally nonorthogonal. Explain briefly why confusing the projections $\langle b_i|\psi\rangle$ with the expansion coefficients $c_i$ can therefore lead to incorrect molecular-orbital coefficients.
+:::
+
+::: {.content-visible when-profile="tutor"}
+
+## Solutions
+
+
+
+
+### Solution for @exr-bra-ket-column-vectors {.unnumbered}
+
+a. The basis kets are represented by the standard basis vectors:
+$$
+|1\rangle=\begin{pmatrix}1\\0\\0\end{pmatrix},\qquad |2\rangle=\begin{pmatrix}0\\1\\0\end{pmatrix},\qquad |3\rangle=\begin{pmatrix}0\\0\\1\end{pmatrix}.
+$$
+
+b. The coefficients in the expansion of $|\psi\rangle$ become the entries of the column vector:
+$$
+|\psi\rangle=\begin{pmatrix}2\\-i\\3\end{pmatrix}.
+$$
+
+c. To form the bra, we take the Hermitian adjoint, so the coefficients are complex conjugated:
+$$
+\langle\psi|=2\langle1|+i\langle2|+3\langle3|.
+$$
+
+d. The corresponding row vector is
+$$
+\langle\psi|=\begin{pmatrix}2&i&3\end{pmatrix}.
+$$
+
+Thus, in matrix notation, changing a ket into a bra means taking the conjugate transpose:
+$$
+|\psi\rangle^\dagger=\langle\psi|.
+$$
+
+e. Since the basis is orthonormal,
+$$
+\langle2|\psi\rangle=2\langle2|1\rangle-i\langle2|2\rangle+3\langle2|3\rangle=-i.
+$$
+
+Using row and column vectors gives the same result:
+$$
+\langle2|\psi\rangle=\begin{pmatrix}0&1&0\end{pmatrix}\begin{pmatrix}2\\-i\\3\end{pmatrix}=-i.
+$$
+
+f. Using the row and column vectors,
+$$
+\langle\psi|\psi\rangle=\begin{pmatrix}2&i&3\end{pmatrix}\begin{pmatrix}2\\-i\\3\end{pmatrix}=4+1+9=14.
+$$
+
+Therefore,
+$$
+\|\psi\|=\sqrt{\langle\psi|\psi\rangle}=\sqrt{14}.
+$$
+
+
+
+
+
+
+
+
+
+
+### Solution for @exr-bra-ket-basic {.unnumbered}
+
+a. Taking the Hermitian adjoint conjugates the coefficients:
+$$
+\langle\psi|=c_1^*\langle1|+c_2^*\langle2|.
+$$
+
+b. Since the basis is orthonormal,
+$$
+\langle1|\psi\rangle=c_1\langle1|1\rangle+c_2\langle1|2\rangle=c_1.
+$$
+
+c. Similarly,
+$$
+\langle2|\psi\rangle=c_2.
+$$
+
+d. We have
+$$
+\langle\psi|\psi\rangle=(c_1^*\langle1|+c_2^*\langle2|)(c_1|1\rangle+c_2|2\rangle).
+$$
+Using $\langle i|j\rangle=\delta_{ij}$ gives
+$$
+\langle\psi|\psi\rangle=|c_1|^2+|c_2|^2.
+$$
+
+e. For a normalized state,
+$$
+|c_1|^2+|c_2|^2=1.
+$$
+
+### Solution for @exr-bra-ket-basis-operator {.unnumbered}
+
+a. The operator $\hat B$ maps coordinate vectors in $\mathbb C^n$ to vectors in $V$. Thus its domain is $\mathbb C^n$ and its range is $V$. Because the vectors $\{|b_i\rangle\}$ form a basis, every vector in $V$ is in the range.
+
+b. Using the definition of $|x\rangle$,
+$$
+\hat B|x\rangle=\sum_{ij}|b_i\rangle\langle i|x_j|j\rangle
+=\sum_{ij}x_j|b_i\rangle\delta_{ij}
+=\sum_i x_i|b_i\rangle.
+$$
+Thus the components $x_i$ of the coordinate vector are precisely the expansion coefficients of the corresponding vector in the basis $B$.
+
+c. Taking the Hermitian adjoint gives
+$$
+\hat B^\dagger=\sum_i|i\rangle\langle b_i|.
+$$
+
+d. Therefore
+$$
+\hat B^\dagger\hat B
+=\left(\sum_i|i\rangle\langle b_i|\right)
+ \left(\sum_j|b_j\rangle\langle j|\right)
+=\sum_{ij}|i\rangle\langle b_i|b_j\rangle\langle j|.
+$$
+
+e. The matrix element of $\hat B^\dagger\hat B$ in the standard basis is
+$$
+\langle i|\hat B^\dagger\hat B|j\rangle=\langle b_i|b_j\rangle=S_{ij}.
+$$
+Hence $\hat B^\dagger\hat B$ is exactly the overlap matrix $S$ represented as an operator on the coordinate space $\mathbb C^n$.
+
+### Solution for @exr-bra-ket-molecular-orbitals {.unnumbered}
+
+a. We have
+$$
+\langle\psi|=c_1^*\langle\chi_1|+c_2^*\langle\chi_2|.
+$$
+Therefore
+$$
+\langle\psi|\psi\rangle
+=|c_1|^2+|c_2|^2+s(c_1^*c_2+c_2^*c_1).
+$$
+Equivalently,
+$$
+\langle\psi|\psi\rangle=|c_1|^2+|c_2|^2+2s\,\operatorname{Re}(c_1^*c_2).
+$$
+
+b. The overlap matrix is
+$$
+S=
+\begin{pmatrix}
+1&s\\
+s&1
+\end{pmatrix}.
+$$
+
+c. With
+$$
+\mathbf c=
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix},
+$$
+we obtain
+$$
+\mathbf c^\dagger S\mathbf c
+=
+\begin{pmatrix}
+c_1^*&c_2^*
+\end{pmatrix}
+\begin{pmatrix}
+1&s\\
+s&1
+\end{pmatrix}
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix},
+$$
+which is exactly
+$$
+|c_1|^2+|c_2|^2+s(c_1^*c_2+c_2^*c_1).
+$$
+Thus normalization requires
+$$
+\mathbf c^\dagger S\mathbf c=1.
+$$
+
+d. For the symmetric combination,
+$$
+1=\langle\psi_+|\psi_+\rangle
+=|N_+|^2(2+2s).
+$$
+Choosing $N_+$ real and positive gives
+$$
+N_+=\frac{1}{\sqrt{2(1+s)}}.
+$$
+
+e. Similarly,
+$$
+1=\langle\psi_-|\psi_-\rangle
+=|N_-|^2(2-2s),
+$$
+so
+$$
+N_-=\frac{1}{\sqrt{2(1-s)}}.
+$$
+
+f. We find
+$$
+\langle\psi_+|\psi_-\rangle
+=N_+N_-\bigl(\langle\chi_1|+\langle\chi_2|\bigr)
+\bigl(|\chi_1\rangle-|\chi_2\rangle\bigr).
+$$
+Hence
+$$
+\langle\psi_+|\psi_-\rangle
+=N_+N_-(1-s+s-1)=0.
+$$
+The symmetric and antisymmetric combinations are therefore orthogonal.
+
+### Solution for @exr-bra-ket-nonorthogonal-dual-basis {.unnumbered}
+
+a. From the definition,
+$$
+\langle b_k|b^i\rangle
+=\sum_j\langle b_k|b_j\rangle(S^{-1})_{ji}
+=\sum_jS_{kj}(S^{-1})_{ji}
+=\delta_k^{\,i}.
+$$
+
+b. Let the proposed operator act on an arbitrary basis vector $|b_k\rangle$:
+$$
+\left(\sum_i|b^i\rangle\langle b_i|\right)|b_k\rangle
+=\sum_i|b^i\rangle S_{ik}.
+$$
+Substituting the definition of the dual vectors,
+$$
+\sum_{ij}|b_j\rangle(S^{-1})_{ji}S_{ik}
+=\sum_j|b_j\rangle\delta_{jk}
+=|b_k\rangle.
+$$
+Since the operator acts as the identity on every basis vector, it is the identity operator:
+$$
+\hat I=\sum_i|b^i\rangle\langle b_i|.
+$$
+Substituting
+$$
+|b^i\rangle=\sum_j|b_j\rangle(S^{-1})_{ji}
+$$
+gives
+$$
+\hat I=\sum_{ij}|b_i\rangle(S^{-1})_{ij}\langle b_j|.
+$$
+
+c. Apply $\langle b^i|$ to the expansion:
+$$
+\langle b^i|\psi\rangle
+=\sum_jc_j\langle b^i|b_j\rangle
+=\sum_jc_j\delta^i_{\,j}
+=c_i.
+$$
+Thus
+$$
+c_i=\langle b^i|\psi\rangle.
+$$
+
+d. Projecting $|\psi\rangle$ onto $\langle b_i|$ gives
+$$
+p_i=\langle b_i|\psi\rangle
+=\sum_jc_j\langle b_i|b_j\rangle
+=\sum_jS_{ij}c_j.
+$$
+Hence
+$$
+\mathbf p=S\mathbf c,
+$$
+and therefore
+$$
+\mathbf c=S^{-1}\mathbf p.
+$$
+
+e. For an orthonormal basis,
+$$
+S_{ij}=\delta_{ij},
+$$
+so $S=I$ and $S^{-1}=I$. The dual basis is then identical to the original basis, and
+$$
+c_i=\langle b_i|\psi\rangle.
+$$
+
+f. For nonorthogonal atomic orbitals,
+$$
+\langle b_i|\psi\rangle=\sum_jS_{ij}c_j,
+$$
+so a projection onto one basis function contains contributions from several expansion coefficients. The projections equal the coefficients only when the basis is orthonormal. In a nonorthogonal atomic-orbital basis, the overlap matrix must therefore be accounted for when recovering the molecular-orbital coefficients.
+
+:::
+
+

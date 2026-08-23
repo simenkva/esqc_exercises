@@ -6,15 +6,16 @@ The geometrical interpretation of the $\mathbb{C}$ as the plane $\mathbb{R}^2$ i
 
 ## Exercises
 
-::: {#exr-complex-vector-space-complex-numbers-real-vector-space recommended="math" level="advanced"}
+::: {#exr-complex-vector-space-complex-numbers-real-vector-space  recommended="math" level="advanced"}
+### Complex numbers as a real vector space
 
-1.  Show that $\mathbb{C}$ regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in $\mathbb{R}^2$? Conclude that $\mathbb{C}$ can be regarded as a *real* Euclidean vector space of dimension $2$.
+a.  Show that $\mathbb{C}$ regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in $\mathbb{R}^2$? Conclude that $\mathbb{C}$ can be regarded as a *real* Euclidean vector space of dimension $2$.
 
-2.  Show that multiplication with a *complex* number $z$ is a linear operator on $\mathbb{R}^2$, and find its matrix in the standard basis. What is the matrix of multiplication with $\mathrm{i}$?
+b.  Show that multiplication with a *complex* number $z$ is a linear operator on $\mathbb{R}^2$, and find its matrix in the standard basis. What is the matrix of multiplication with $\mathrm{i}$?
 
-3.  Show that multiplication with a complex number of modulus 1 is a rotation in $\mathbb{R}^2$.
+c.  Show that multiplication with a complex number of modulus 1 is a rotation in $\mathbb{R}^2$.
 
-4.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb{R}^2$. What kind of linear transformation is this? Is it a linear transformation in $\mathbb{C}$?
+d.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb{R}^2$. What kind of linear transformation is this? Is it a linear transformation in $\mathbb{C}$?
 
 :::
 
@@ -22,24 +23,248 @@ The geometrical interpretation of the $\mathbb{C}$ as the plane $\mathbb{R}^2$ i
 
 ## Solutions
 
-### Tutor note: The complex numbers as a real vector space
 
-This exercise is not essential, so can be skipped for most students.
+### Solution for @exr-complex-vector-space-complex-numbers-real-vector-space {.unnumbered}
 
-### Solution to @exr-complex-vector-space-complex-numbers-real-vector-space {.unnumbered}
+a. Write a complex number as
 
-**Source solution 1.**
+$$
+z=x+\mathrm{i}y,\qquad x,y\in\mathbb{R}.
+$$
 
-The standard basis of $\mathbb{R}^2$ corresponds to $1$ and $\mathrm{i}$.
+Associate $z$ with the vector
 
-**Source solution 2.**
+$$
+\begin{pmatrix}x\\y\end{pmatrix}\in\mathbb{R}^2.
+$$
 
-    $$(a + \mathrm{i}b)(x + \mathrm{i}y) = (ax - by) + \mathrm{i}(ay + bx)$$ We must find a matrix $A$ such that $$A\begin{bmatrix} x\\ y\end{bmatrix} = \begin{bmatrix} ax - by \\ bx + ay \end{bmatrix}$$ The solution is $$A = \begin{bmatrix}
-        a & -b \\ b & a
-    \end{bmatrix}$$
+If
 
-**Source solution 3.**
+$$
+z_1=x_1+\mathrm{i}y_1,\qquad z_2=x_2+\mathrm{i}y_2,
+$$
 
-Strictly speaking, Euler's formula $e^{\mathrm{i}\theta} = \cos\theta + \mathrm{i}\sin\theta$ has not been introduced, so "cannot" be used here. But a complex number of modulus $1$ forms an angle $\theta$ with the $x$-axis. Since complex multiplication now will not change the length of $z$, only add the angles, this is a rotation.
+then
 
+$$
+z_1+z_2=(x_1+x_2)+\mathrm{i}(y_1+y_2),
+$$
+
+which corresponds exactly to
+
+$$
+\begin{pmatrix}x_1\\y_1\end{pmatrix}
++
+\begin{pmatrix}x_2\\y_2\end{pmatrix}
+=
+\begin{pmatrix}x_1+x_2\\y_1+y_2\end{pmatrix}.
+$$
+
+Similarly, for a real scalar $\alpha$,
+
+$$
+\alpha z=\alpha x+\mathrm{i}\alpha y,
+$$
+
+corresponding to
+
+$$
+\alpha
+\begin{pmatrix}x\\y\end{pmatrix}
+=
+\begin{pmatrix}\alpha x\\\alpha y\end{pmatrix}.
+$$
+
+Thus vector addition and multiplication by real scalars agree with the usual operations in $\mathbb{R}^2$. Since these operations are exactly those of $\mathbb{R}^2$, the real vector-space axioms are satisfied.
+
+The Euclidean norm of the corresponding vector is
+
+$$
+\left\|
+\begin{pmatrix}x\\y\end{pmatrix}
+\right\|
+=
+\sqrt{x^2+y^2},
+$$
+
+which is exactly the modulus of the complex number,
+
+$$
+|z|=\sqrt{x^2+y^2}.
+$$
+
+The standard basis vectors in $\mathbb{R}^2$,
+
+$$
+\mathbf{e}_1=
+\begin{pmatrix}1\\0\end{pmatrix},
+\qquad
+\mathbf{e}_2=
+\begin{pmatrix}0\\1\end{pmatrix},
+$$
+
+correspond to the complex numbers
+
+$$
+1,\qquad \mathrm{i}.
+$$
+
+Therefore,
+
+$$
+\mathbb{C}=\operatorname{span}_{\mathbb{R}}\{1,\mathrm{i}\},
+$$
+
+and $\mathbb{C}$ can be regarded as a real Euclidean vector space of dimension $2$.
+
+b. Let
+
+$$
+z=a+\mathrm{i}b
+$$
+
+be fixed, and define
+
+$$
+T_z(w)=zw.
+$$
+
+For real scalars $\alpha,\beta$ and complex numbers $w_1,w_2$,
+
+$$
+T_z(\alpha w_1+\beta w_2)
+=
+z(\alpha w_1+\beta w_2)
+=
+\alpha zw_1+\beta zw_2
+=
+\alpha T_z(w_1)+\beta T_z(w_2).
+$$
+
+Hence multiplication by a fixed complex number is linear when $\mathbb{C}$ is regarded as a vector space over $\mathbb{R}$.
+
+Now let
+
+$$
+w=x+\mathrm{i}y.
+$$
+
+Then
+
+$$
+zw=(a+\mathrm{i}b)(x+\mathrm{i}y)=(ax-by)+\mathrm{i}(bx+ay).
+$$
+
+Therefore,
+
+$$
+\begin{pmatrix}x\\y\end{pmatrix}
+\mapsto
+\begin{pmatrix}ax-by\\bx+ay\end{pmatrix},
+$$
+
+so the matrix of multiplication by $z=a+\mathrm{i}b$ in the standard basis is
+
+$$
+[T_z]=
+\begin{pmatrix}
+a&-b\\
+b&a
+\end{pmatrix}.
+$$
+
+For $z=\mathrm{i}$, we have $a=0$ and $b=1$, giving
+
+$$
+[T_{\mathrm{i}}]=
+\begin{pmatrix}
+0&-1\\
+1&0
+\end{pmatrix}.
+$$
+
+c. Let $z$ have modulus $1$. Then it can be written as
+
+$$
+z=\cos\theta+\mathrm{i}\sin\theta.
+$$
+
+The matrix of multiplication by $z$ is therefore
+
+$$
+\begin{pmatrix}
+\cos\theta&-\sin\theta\\
+\sin\theta&\cos\theta
+\end{pmatrix}.
+$$
+
+This is exactly the standard rotation matrix through the angle $\theta$. Hence multiplication by a complex number of modulus $1$ corresponds to a rotation in $\mathbb{R}^2$.
+
+d. Define complex conjugation by
+
+$$
+T(z)=\bar z.
+$$
+
+If
+
+$$
+z=x+\mathrm{i}y,
+$$
+
+then
+
+$$
+\bar z=x-\mathrm{i}y.
+$$
+
+Thus, in $\mathbb{R}^2$,
+
+$$
+\begin{pmatrix}x\\y\end{pmatrix}
+\mapsto
+\begin{pmatrix}x\\-y\end{pmatrix}.
+$$
+
+Its matrix is therefore
+
+$$
+[T]=
+\begin{pmatrix}
+1&0\\
+0&-1
+\end{pmatrix}.
+$$
+
+For real scalars $\alpha,\beta$,
+
+$$
+\overline{\alpha z_1+\beta z_2}
+=
+\alpha\bar z_1+\beta\bar z_2,
+$$
+
+so complex conjugation is linear over $\mathbb{R}$.
+
+Geometrically, it is a reflection in the real axis.
+
+It is not linear over $\mathbb{C}$. For example, complex linearity would require
+
+$$
+T(\mathrm{i}z)=\mathrm{i}T(z),
+$$
+
+but
+
+$$
+T(\mathrm{i}z)=\overline{\mathrm{i}z}=-\mathrm{i}\bar z,
+$$
+
+whereas
+
+$$
+\mathrm{i}T(z)=\mathrm{i}\bar z.
+$$
+
+These are not equal in general. Thus complex conjugation is real-linear but not complex-linear.
 :::

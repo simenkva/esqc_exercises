@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Simen Kvaal">
-<meta name="dcterms.date" content="2026-08-22">
+<meta name="dcterms.date" content="2026-08-23">
 
 <title>ESQC mathematics exercises</title>
 <style>
@@ -455,14 +455,14 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+  <a href="./chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
+  <a href="./chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -479,7 +479,7 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapters/bra-ket-notation.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
@@ -672,7 +672,11 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#topics-needed-list-from-lucas" id="toc-topics-needed-list-from-lucas" class="nav-link" data-scroll-target="#topics-needed-list-from-lucas">Topics needed (List from Lucas)</a></li>
+  <li><a href="#note" id="toc-note" class="nav-link" data-scroll-target="#note">Note</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -700,7 +704,7 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 22, 2026</p>
+      <p class="date">August 23, 2026</p>
     </div>
   </div>
   
@@ -716,8 +720,87 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1><p><img src="figures/cover-a5.png" title="ESQC mathematics exercises" class="quarto-cover-image nolightbox img-fluid"></p>
 <p>This is a collection of mathematics exercises for the European Summerschool in Quantum Chemistry (ESQC).</p>
+<section id="topics-needed-list-from-lucas" class="level2">
+<h2 class="anchored" data-anchor-id="topics-needed-list-from-lucas">Topics needed (List from Lucas)</h2>
+<p>If an exercise is provided, please cross it out below.</p>
+<ul>
+<li>Second quantization
+<ul class="task-list">
+<li><label><input type="checkbox">Binomial expansion</label></li>
+<li><label><input type="checkbox" checked="">binomial coefficients</label></li>
+<li><label><input type="checkbox" checked="">Pascal’s triangle</label></li>
+<li><label><input type="checkbox">Cauchy product of series</label></li>
+<li><label><input type="checkbox">Proof by induction (or direct)</label></li>
+<li><label><input type="checkbox" checked="">Handling summation signs (also in combination with Kronecker deltas)</label></li>
+<li><label><input type="checkbox">Definition of exp as a power series</label></li>
+<li><label><input type="checkbox">Partial derivatives of vectors (CI eigenvalue problem)</label></li>
+<li><label><input type="checkbox">Finding eigenvalues and eigenvectors of a 2x2 matrix.</label></li>
+</ul></li>
+<li>SCF
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Matrix algebra: matrix multiplication</label></li>
+<li><label><input type="checkbox">unitary transformation</label></li>
+</ul></li>
+<li>DFT
+<ul class="task-list">
+<li><label><input type="checkbox">functional derivatives</label></li>
+<li><label><input type="checkbox">Transformation formula for multidimensional integrals (calculating Jacobi determinant for transformation from one set of coordinates to another).</label></li>
+</ul></li>
+<li>Response theory
+<ul class="task-list">
+<li><label><input type="checkbox">BCH expansion, manipulation of exponentials of operators.</label></li>
+<li><label><input type="checkbox">Exponential of antihermitian operator is unitary (and maybe also the opposite: Every unitary can be written as an exponential of an antihermitian operator).</label></li>
+<li><label><input type="checkbox">Poles and residues of complex functions</label></li>
+<li><label><input type="checkbox">Fourier transform</label></li>
+<li><label><input type="checkbox">exponential form of the sin and cos functions</label></li>
+<li><label><input type="checkbox">Euler’s formula for complex exponentials</label></li>
+<li><label><input type="checkbox">Partial derivatives with respect to dependent variables (In this case: the parameters Pn and their complex conjugates Pn∗)</label></li>
+</ul></li>
+<li>Relativity
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Levi-Civita symbol</label></li>
+<li><label><input type="checkbox">Roots of a 3rd order polynomial</label></li>
+</ul></li>
+<li>Coupled cluster
+<ul class="task-list">
+<li><label><input type="checkbox">Taylor expansion</label></li>
+</ul></li>
+<li>Molecular properties
+<ul class="task-list">
+<li><label><input type="checkbox">Writing cross product in terms of Levi-Civita symbols</label></li>
+<li><label><input type="checkbox">Evaluating commutator of momentum operator with a local operator (like vector potential)</label></li>
+<li><label><input type="checkbox">Lagrange multiplier method</label></li>
+<li><label><input type="checkbox">Total and partial derivatives</label></li>
+</ul></li>
+<li>Multiconfigurational methods
+<ul class="task-list">
+<li><label><input type="checkbox">resolution of the identity, projection operators</label></li>
+</ul></li>
+</ul>
+</section>
+<section id="note" class="level2">
+<h2 class="anchored" data-anchor-id="note">Note</h2>
+<p>Current levels and recommendation values coded in automatic generation of list script:</p>
+<pre><code>vels = ["beginner", "intermediate", "advanced"]
+
+recommendations = ["math", "topic"]
+
+# Topics and their descriptions, the latter used for writing the recommended
+# exercises per topic.
+topics = {
+    "coupled-cluster": "Coupled-cluster theory",
+    "second-quantization": "Second quantization",
+    "scf": "Self-consistent field theory",
+    "dft": "Density functional theory",
+    "response-theory": "Response theory",
+    "relativity": "Relativistic quantum chemistry",
+    "molecular-properties": "Molecular properties",
+    "multiconfig-methods": "Multiconfigurational methods",
+}
+</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

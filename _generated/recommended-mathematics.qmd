@@ -13,33 +13,43 @@ quantum chemistry topic taught at the school.
 
 ## Beginner {.unnumbered}
 
-- @exr-sets-and-functions-write-days-week-set
-- @exr-sets-potential-energy-curve
+- @exr-sets-and-functions-write-days-week-set — Days of the week
+- @exr-sets-potential-energy-curve — Classically allowed region for Morse potential
 - @exr-summing-1 — Very basic sums
 - @exr-summing-2 — Simplifying as a sum
 - @exr-summing-4 — Reconstruct a vector
-- @exr-summing-5 — Exercise 5: A matrix--vector product
+- @exr-summing-5 — Summing in a matrix--vector product
 - @exr-summing-dummy-index — The summation index is a dummy index
 - @exr-summing-linearity — Linearity of sums
+- @exr-summing-constant — When something does not depend on the summation index
+- @exr-summing-free-index — Free and summed indices
+- @exr-summing-reindexing — Shifting the summation index
 - @exr-kronecker-delta — The Kronecker delta: basic exercise
-- @exr-combinatorics-factorial
-- @exr-combinatorics-binomial-coefficients
-- @exr-combinatorics-pascals-triangle
+- @exr-combinatorics-factorial — Basic factorials
+- @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
+- @exr-combinatorics-pascals-triangle — Pascal's triangle
+- @exr-vector-spaces-basic-operations — Basic vector operations
+- @exr-matrix-vector-multiplication — Matrix-vector products
+- @exr-matrix-matrix-multiplication — Matrix-matrix products
+- @exr-vectors-and-matrices-work-space-plane-vectors-define-two — Linear independence and basis
+- @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate — Gaussian elimination and vector decomposition
+- @exr-general-vector-spaces-recipes — Cooking with vectors 1
+- @exr-bra-ket-column-vectors — Bra-ket notation and column vectors
 
 ## Intermediate {.unnumbered}
 
-- @exr-sets-and-functions-write-five-first-natural-numbers-set
-- @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping
-- @exr-molecule-sets
-- @exr-cardinality-and-countability-explicitly-constructing-bijection
+- @exr-sets-and-functions-write-five-first-natural-numbers-set — Five first natural numbers
+- @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping — De Morgan's laws
+- @exr-molecule-sets — Molecules as sets
+- @exr-cardinality-and-countability-explicitly-constructing-bijection — Countability of the integers
 - @exr-summing-3 — Estimating $\sqrt{e}$ via a Taylor series
-- @exr-combinatorics-factorial-arrangements
-- @exr-general-vector-spaces-general-vector-spaces
-- @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate
-- @exr-vectors-and-matrices-person-walks-home-first-they-walk
-- @exr-vectors-and-matrices-matrix-products-between-pairs-these-matrices
-- @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action
-- @exr-gaussian-elimination-robert-beezer-consider-following-system-equations
+- @exr-combinatorics-factorial-arrangements — Lunch line
+- @exr-vectors-and-matrices-person-walks-home-first-they-walk — Office coordinates
+- @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed — Boat sailing on the ocean
+- @exr-vectors-and-matrices-robert-beezer-three-digit-number-has — An exercise by Robert Beezer
+- @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action — Compute the action of a matrix on vectors
+- @exr-general-vector-spaces-meaningful-recipes — Cooking with vectors 2
+- @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined — Gaussian elimination and overlap matrix
 - @exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than
 - @exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear
 - @exr-metric-spaces-metric-spaces
@@ -57,8 +67,8 @@ quantum chemistry topic taught at the school.
 
 - @exr-stirling-factorial — Stirling's approximation
 - @exr-combinatorics-pascals-identity — Pascal's identity
-- @exr-combinatorics-pascal-sierpinski
-- @exr-complex-vector-space-complex-numbers-real-vector-space
+- @exr-combinatorics-pascal-sierpinski — Pascal's triangle and the Sierpinski triangle
+- @exr-complex-vector-space-complex-numbers-real-vector-space — Complex numbers as a real vector space
 - @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition
 - @exr-gram-schmidt-gram-schmidt-orthogonalization
 - @exr-singular-value-decomposition-singular-value-decomposition-compression-tool

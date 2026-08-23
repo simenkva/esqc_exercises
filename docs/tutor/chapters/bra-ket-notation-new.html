@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Metric spaces – ESQC mathematics exercises</title>
+<title>9&nbsp; Bra-ket notation – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/open-and-closed-sets.html" rel="next">
-<link href="../chapters/polynomial-vector-spaces.html" rel="prev">
+<link href="../chapters/eigenvalues-and-diagonalization.html" rel="next">
+<link href="../chapters/gaussian-elimination.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -49,9 +49,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-f2d300d7d3cf9862e200a000ce944afc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,15 +100,15 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-visualization.callout {
-  border-left-color: #E0479E;
+div.callout-preparations.callout {
+  border-left-color: #8B81FF;
 }
-div.callout-visualization.callout-style-default .callout-header {
-  background-color: rgba(224, 71, 158, 0.13);
+div.callout-preparations.callout-style-default .callout-header {
+  background-color: rgba(139, 129, 255, 0.13);
 }
-div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -131,15 +128,15 @@ div.callout-learning-goals.callout-style-default .callout-icon::before, div.call
   background-position: center;
   content: '';
 }
-div.callout-preparations.callout {
-  border-left-color: #8B81FF;
+div.callout-visualization.callout {
+  border-left-color: #E0479E;
 }
-div.callout-preparations.callout-style-default .callout-header {
-  background-color: rgba(139, 129, 255, 0.13);
+div.callout-visualization.callout-style-default .callout-header {
+  background-color: rgba(224, 71, 158, 0.13);
 }
-div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -366,7 +363,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/bra-ket-notation-new.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -486,14 +483,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
+  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -510,7 +507,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/bra-ket-notation.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
@@ -551,7 +548,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
@@ -703,7 +700,15 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">14.1</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">9.1</span> Exercises</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">9.2</span> Solutions</a>
+  <ul class="collapse">
+  <li><a href="#solution-for-exr-bra-ket-column-vectors" id="toc-solution-for-exr-bra-ket-column-vectors" class="nav-link" data-scroll-target="#solution-for-exr-bra-ket-column-vectors">Solution for Exercise&nbsp;<span>9.1</span></a></li>
+  <li><a href="#solution-for-exr-bra-ket-basic" id="toc-solution-for-exr-bra-ket-basic" class="nav-link" data-scroll-target="#solution-for-exr-bra-ket-basic">Solution for Exercise&nbsp;<span>9.2</span></a></li>
+  <li><a href="#solution-for-exr-bra-ket-basis-operator" id="toc-solution-for-exr-bra-ket-basis-operator" class="nav-link" data-scroll-target="#solution-for-exr-bra-ket-basis-operator">Solution for Exercise&nbsp;<span>9.3</span></a></li>
+  <li><a href="#solution-for-exr-bra-ket-molecular-orbitals" id="toc-solution-for-exr-bra-ket-molecular-orbitals" class="nav-link" data-scroll-target="#solution-for-exr-bra-ket-molecular-orbitals">Solution for Exercise&nbsp;<span>9.4</span></a></li>
+  <li><a href="#solution-for-exr-bra-ket-nonorthogonal-dual-basis" id="toc-solution-for-exr-bra-ket-nonorthogonal-dual-basis" class="nav-link" data-scroll-target="#solution-for-exr-bra-ket-nonorthogonal-dual-basis">Solution for Exercise&nbsp;<span>9.5</span></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -711,9 +716,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html">Metric spaces and topology</a></li><li class="breadcrumb-item"><a href="../chapters/metric-spaces.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/bra-ket-notation-new.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Metric spaces</span></h1>
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></h1>
 </div>
 
 
@@ -730,43 +735,339 @@ window.Quarto = {
 </header>
 
 
-<p>A metric measures distance through symmetry, positivity, and the triangle inequality.</p>
-<p>A <em>metric</em> encodes the intuition behind measuring <em>distances</em> in a set <span class="math inline">\(M\)</span>. It is a distance function <span class="math inline">\(d(x,y)\)</span>, where <span class="math inline">\(x,y\in M\)</span>.</p>
-<p>The definition of a metric space is as follows:</p>
-<blockquote class="blockquote">
-<p><strong>Definition: Metric.</strong> Let <span class="math inline">\(M\)</span> be a set. A function <span class="math inline">\(d: M\times M \to \mathbb{R}\)</span> is a <em>metric</em> if it satisfies the following axioms:</p>
-<ol type="1">
-<li><p><span class="math inline">\(d(x,y) = d(y,x)\)</span></p></li>
-<li><p><span class="math inline">\(d(x,y) \geq 0\)</span>, and <span class="math inline">\(d(x,y) = 0\)</span> if and only if <span class="math inline">\(x =y\)</span></p></li>
-<li><p><span class="math inline">\(d(x,y) \leq d(x,z) + d(z,y)\)</span></p></li>
+<p>Bra-ket notation, introduced by Dirac, is a compact way of writing the linear algebra of quantum mechanics. A vector in a Hilbert space is written as a <em>ket</em>, <span class="math display">\[
+|\psi\rangle,
+\]</span> and its Hermitian adjoint is a <em>bra</em>, <span class="math display">\[
+\langle\psi|.
+\]</span></p>
+<p>The inner product of two vectors is therefore written <span class="math display">\[
+\langle\phi|\psi\rangle,
+\]</span> and is a scalar. It satisfies <span class="math display">\[
+\langle\phi|\psi\rangle = \langle\psi|\phi\rangle^*.
+\]</span> In particular, <span class="math display">\[
+\langle\psi|\psi\rangle = \|\psi\|^2,
+\]</span> so a normalized state satisfies <span class="math inline">\(\langle\psi|\psi\rangle=1\)</span>.</p>
+<p>The product in the opposite order, <span class="math display">\[
+|\phi\rangle\langle\psi|,
+\]</span> is an <em>outer product</em>. It is an operator: acting on a ket <span class="math inline">\(|\chi\rangle\)</span> it gives <span class="math display">\[
+\bigl(|\phi\rangle\langle\psi|\bigr)|\chi\rangle = |\phi\rangle\langle\psi|\chi\rangle.
+\]</span></p>
+<p>A linear operator <span class="math inline">\(\hat A\)</span> acts on kets from the left, <span class="math display">\[
+|\phi\rangle=\hat A|\psi\rangle.
+\]</span> Taking the Hermitian adjoint reverses the order, <span class="math display">\[
+\langle\phi|=\langle\psi|\hat A^\dagger.
+\]</span> For a Hermitian operator, <span class="math inline">\(\hat A^\dagger=\hat A\)</span>. Observables in quantum mechanics are represented by Hermitian operators, and the expectation value of <span class="math inline">\(\hat A\)</span> in a normalized state <span class="math inline">\(|\psi\rangle\)</span> is <span class="math display">\[
+\langle A\rangle=\langle\psi|\hat A|\psi\rangle.
+\]</span></p>
+<p>For an orthonormal basis <span class="math inline">\(\{|i\rangle\}\)</span>, <span class="math display">\[
+\langle i|j\rangle=\delta_{ij},
+\]</span> and every vector can be expanded as <span class="math display">\[
+|\psi\rangle=\sum_i c_i|i\rangle,\qquad c_i=\langle i|\psi\rangle.
+\]</span> Equivalently, the basis satisfies the completeness relation <span class="math display">\[
+\hat I=\sum_i|i\rangle\langle i|.
+\]</span></p>
+<p>In quantum chemistry we also frequently use <em>nonorthogonal</em> basis functions, such as atomic orbitals. If the basis is <span class="math inline">\(\{|b_i\rangle\}\)</span>, its overlap matrix is <span class="math display">\[
+S_{ij}=\langle b_i|b_j\rangle.
+\]</span> In this case the expansion coefficients cannot in general be obtained simply by projecting with <span class="math inline">\(\langle b_i|\)</span>; the overlap matrix must also be taken into account.</p>
+<section id="exercises" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">9.1</span> Exercises</h2>
+<div id="exr-bra-ket-column-vectors" class="theorem exercise" data-level="beginner" data-recommended="math">
+<p><span class="theorem-title"><strong>Exercise 9.1 (Bra-ket notation and column vectors)</strong></span> Consider the orthonormal basis <span class="math inline">\(\{|1\rangle,|2\rangle,|3\rangle\}\)</span>. In this basis, the ket <span class="math display">\[
+|\psi\rangle=2|1\rangle-i|2\rangle+3|3\rangle
+\]</span> can be represented by a column vector.</p>
+<ol type="a">
+<li><p>Write <span class="math inline">\(|1\rangle\)</span>, <span class="math inline">\(|2\rangle\)</span>, and <span class="math inline">\(|3\rangle\)</span> as column vectors.</p></li>
+<li><p>Write <span class="math inline">\(|\psi\rangle\)</span> as a column vector.</p></li>
+<li><p>Write the bra <span class="math inline">\(\langle\psi|\)</span> in bra-ket notation.</p></li>
+<li><p>Write <span class="math inline">\(\langle\psi|\)</span> as a row vector. Remember that taking the adjoint involves both transposing and complex conjugating.</p></li>
+<li><p>Calculate <span class="math inline">\(\langle 2|\psi\rangle\)</span>, first using bra-ket notation and then by multiplying a row vector by a column vector.</p></li>
+<li><p>Calculate <span class="math inline">\(\langle\psi|\psi\rangle\)</span> using the row and column vectors. What is the norm <span class="math inline">\(\|\psi\|\)</span>?</p></li>
 </ol>
-<p>The pair <span class="math inline">\((M,d)\)</span> is a <em>metric space</em>. If <span class="math inline">\(M\)</span> is a vector space, we say that <span class="math inline">\((M,d)\)</span> is a <em>metric vector space</em>.</p>
-</blockquote>
-<p>In this exercise, we will try to understand why the axioms are as they are, i.e., what makes them encode the concept of a metric.</p>
-<section id="exercises" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">14.1</span> Exercises</h2>
-<div id="exr-metric-spaces-metric-spaces" class="theorem exercise" data-recommended="math" data-level="intermediate">
-<p><span class="theorem-title"><strong>Exercise 14.1</strong></span> &nbsp;</p>
-<ol type="1">
-<li><p>Consider two persons <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> located at <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in a set <span class="math inline">\(M\)</span>. They both measure the distance to the other person. What would happen if axiom a) is violated? Is this reasonable?</p></li>
-<li><p>What would happen if axiom b) is violated? Is this reasonable?</p></li>
-<li><p>A third person <span class="math inline">\(Z\)</span> located at <span class="math inline">\(z\)</span> enters the picture. Consider axiom c). What happens if this axiom is violated? Is this reasonable?</p></li>
-<li><p>Let <span class="math inline">\(M = \mathbb{R}^2\)</span>, and let <span class="math inline">\(d\)</span> be Euclidean distance, “as the crow flies”. But there are other distance measures as well. Consider for example the “Manhattan distance”, given by <span class="math display">\[d(\mathbf{x},\mathbf{y}) = |x_1-y_1| + |x_2-y_2|.\]</span> This has a standard interpretation in terms of cities with straight streets and taxis driving on these streets. Discuss.</p></li>
-<li><p>Consider a king moving on a chessboard. The king can move one step at a time, either horizontally or vertically, or diagonally. Consider the <em>minimum number of steps</em> the king has to move in order to get from one point to another. See <a href="#fig-chessboard" class="quarto-xref">Figure&nbsp;<span>14.1</span></a> for an illustration. The metric is <span class="math display">\[d(\mathbf{x},\mathbf{y}) = \max (|x_1-y_1|, |x_2-y_2|).\]</span> This is also called the “maximum metric”. Can you verify the metric axioms? How does the maximum metric compare to the Manhattan metric?</p></li>
+</div>
+<div id="exr-bra-ket-basic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 9.2 (Reading simple bra-ket expressions)</strong></span> Consider two orthonormal states <span class="math inline">\(|1\rangle\)</span> and <span class="math inline">\(|2\rangle\)</span> and the state <span class="math display">\[
+|\psi\rangle=c_1|1\rangle+c_2|2\rangle.
+\]</span></p>
+<ol type="a">
+<li><p>Write the corresponding bra <span class="math inline">\(\langle\psi|\)</span>.</p></li>
+<li><p>Compute <span class="math inline">\(\langle1|\psi\rangle\)</span>.</p></li>
+<li><p>Compute <span class="math inline">\(\langle2|\psi\rangle\)</span>.</p></li>
+<li><p>Compute <span class="math inline">\(\langle\psi|\psi\rangle\)</span>.</p></li>
+<li><p>What condition must <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> satisfy if <span class="math inline">\(|\psi\rangle\)</span> is normalized?</p></li>
 </ol>
-<div id="fig-chessboard" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-chessboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../figures/exercises/chess.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;14.1: Illustration of “chessboard metric”: The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels “faster” that way!"><img src="../figures/exercises/chess.svg" class="img-fluid figure-img" style="width:40.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chessboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14.1: Illustration of “chessboard metric”: The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels “faster” that way!
-</figcaption>
-</figure>
+<div id="exr-bra-ket-basis-operator" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 9.3 (From coordinate vectors to Hilbert-space vectors)</strong></span> Let <span class="math inline">\(B=\{|b_1\rangle,\ldots,|b_n\rangle\}\)</span> be a basis for an <span class="math inline">\(n\)</span>-dimensional Hilbert space <span class="math inline">\(V\)</span>, and let <span class="math inline">\(\{|i\rangle\}\)</span> be the standard orthonormal basis of <span class="math inline">\(\mathbb C^n\)</span>. Define <span class="math display">\[
+\hat B=\sum_{i=1}^n|b_i\rangle\langle i|.
+\]</span></p>
+<ol type="a">
+<li><p>What are the domain and range of <span class="math inline">\(\hat B\)</span>?</p></li>
+<li><p>Let <span class="math display">\[
+|x\rangle=\sum_i x_i|i\rangle\in\mathbb C^n.
+\]</span> Show that <span class="math display">\[
+\hat B|x\rangle=\sum_i x_i|b_i\rangle.
+\]</span> Interpret the numbers <span class="math inline">\(x_i\)</span>.</p></li>
+<li><p>Find <span class="math inline">\(\hat B^\dagger\)</span>.</p></li>
+<li><p>Show that <span class="math display">\[
+\hat B^\dagger\hat B=\sum_{ij}|i\rangle\langle b_i|b_j\rangle\langle j|.
+\]</span></p></li>
+<li><p>Explain why <span class="math inline">\(\hat B^\dagger\hat B\)</span> is the overlap matrix of the basis <span class="math inline">\(B\)</span>, expressed as an operator on <span class="math inline">\(\mathbb C^n\)</span>.</p></li>
+</ol>
 </div>
+<div id="exr-bra-ket-molecular-orbitals" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 9.4 (Molecular orbitals in a nonorthogonal atomic-orbital basis)</strong></span> Suppose a molecular orbital is expanded in two normalized atomic orbitals, <span class="math display">\[
+|\psi\rangle=c_1|\chi_1\rangle+c_2|\chi_2\rangle,
+\]</span> where <span class="math display">\[
+\langle\chi_1|\chi_1\rangle=\langle\chi_2|\chi_2\rangle=1,\qquad
+\langle\chi_1|\chi_2\rangle=\langle\chi_2|\chi_1\rangle=s,
+\]</span> with <span class="math inline">\(s\)</span> real.</p>
+<ol type="a">
+<li><p>Compute <span class="math inline">\(\langle\psi|\psi\rangle\)</span>.</p></li>
+<li><p>Write the overlap matrix <span class="math inline">\(S\)</span> in the basis <span class="math inline">\(\{|\chi_1\rangle,|\chi_2\rangle\}\)</span>.</p></li>
+<li><p>Show that the normalization condition can be written <span class="math display">\[
+\mathbf c^\dagger S\mathbf c=1,
+\]</span> where <span class="math inline">\(\mathbf c=(c_1,c_2)^T\)</span>.</p></li>
+<li><p>Consider the symmetric combination <span class="math display">\[
+|\psi_+\rangle=N_+\bigl(|\chi_1\rangle+|\chi_2\rangle\bigr).
+\]</span> Find the normalization constant <span class="math inline">\(N_+\)</span>.</p></li>
+<li><p>Similarly, find the normalization constant <span class="math inline">\(N_-\)</span> for <span class="math display">\[
+|\psi_-\rangle=N_-\bigl(|\chi_1\rangle-|\chi_2\rangle\bigr).
+\]</span></p></li>
+<li><p>Show that <span class="math inline">\(\langle\psi_+|\psi_-\rangle=0\)</span>. Thus symmetric and antisymmetric combinations can be orthogonal even though the atomic orbitals from which they are constructed are not.</p></li>
+</ol>
 </div>
+<div id="exr-bra-ket-nonorthogonal-dual-basis" class="theorem exercise" data-level="advanced">
+<p><span class="theorem-title"><strong>Exercise 9.5 (Nonorthogonal bases, dual vectors, and completeness)</strong></span> Let <span class="math inline">\(\{|b_i\rangle\}_{i=1}^n\)</span> be a linearly independent, but not necessarily orthogonal, basis of an <span class="math inline">\(n\)</span>-dimensional Hilbert space. Define the overlap matrix <span class="math display">\[
+S_{ij}=\langle b_i|b_j\rangle.
+\]</span> Assume that <span class="math inline">\(S\)</span> is invertible.</p>
+<ol type="a">
+<li><p>Define vectors <span class="math inline">\(|b^i\rangle\)</span> by <span class="math display">\[
+|b^i\rangle=\sum_j|b_j\rangle(S^{-1})_{ji}.
+\]</span> Show that <span class="math display">\[
+\langle b_k|b^i\rangle=\delta_k^{\,i}.
+\]</span> The set <span class="math inline">\(\{|b^i\rangle\}\)</span> is called the <em>dual basis</em>.</p></li>
+<li><p>Show that <span class="math display">\[
+\hat I=\sum_i|b^i\rangle\langle b_i|
+\]</span> and hence also <span class="math display">\[
+\hat I=\sum_{ij}|b_i\rangle(S^{-1})_{ij}\langle b_j|.
+\]</span></p></li>
+<li><p>Let <span class="math display">\[
+|\psi\rangle=\sum_i c_i|b_i\rangle.
+\]</span> Show that the expansion coefficients are <span class="math display">\[
+c_i=\langle b^i|\psi\rangle.
+\]</span></p></li>
+<li><p>Define the projections <span class="math display">\[
+p_i=\langle b_i|\psi\rangle.
+\]</span> Show that <span class="math display">\[
+p_i=\sum_jS_{ij}c_j
+\]</span> and therefore, in matrix notation, <span class="math display">\[
+\mathbf c=S^{-1}\mathbf p.
+\]</span></p></li>
+<li><p>Explain why the familiar orthonormal-basis formula <span class="math inline">\(c_i=\langle b_i|\psi\rangle\)</span> is recovered when <span class="math inline">\(S=I\)</span>.</p></li>
+<li><p>In quantum chemistry, atomic-orbital basis functions are generally nonorthogonal. Explain briefly why confusing the projections <span class="math inline">\(\langle b_i|\psi\rangle\)</span> with the expansion coefficients <span class="math inline">\(c_i\)</span> can therefore lead to incorrect molecular-orbital coefficients.</p></li>
+</ol>
+</div>
+</section>
+<section id="solutions" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">9.2</span> Solutions</h2>
+<section id="solution-for-exr-bra-ket-column-vectors" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-bra-ket-column-vectors">Solution for <a href="#exr-bra-ket-column-vectors" class="quarto-xref">Exercise&nbsp;<span>9.1</span></a></h3>
+<ol type="a">
+<li><p>The basis kets are represented by the standard basis vectors: <span class="math display">\[
+|1\rangle=\begin{pmatrix}1\\0\\0\end{pmatrix},\qquad |2\rangle=\begin{pmatrix}0\\1\\0\end{pmatrix},\qquad |3\rangle=\begin{pmatrix}0\\0\\1\end{pmatrix}.
+\]</span></p></li>
+<li><p>The coefficients in the expansion of <span class="math inline">\(|\psi\rangle\)</span> become the entries of the column vector: <span class="math display">\[
+|\psi\rangle=\begin{pmatrix}2\\-i\\3\end{pmatrix}.
+\]</span></p></li>
+<li><p>To form the bra, we take the Hermitian adjoint, so the coefficients are complex conjugated: <span class="math display">\[
+\langle\psi|=2\langle1|+i\langle2|+3\langle3|.
+\]</span></p></li>
+<li><p>The corresponding row vector is <span class="math display">\[
+\langle\psi|=\begin{pmatrix}2&amp;i&amp;3\end{pmatrix}.
+\]</span></p></li>
+</ol>
+<p>Thus, in matrix notation, changing a ket into a bra means taking the conjugate transpose: <span class="math display">\[
+|\psi\rangle^\dagger=\langle\psi|.
+\]</span></p>
+<ol start="5" type="a">
+<li>Since the basis is orthonormal, <span class="math display">\[
+\langle2|\psi\rangle=2\langle2|1\rangle-i\langle2|2\rangle+3\langle2|3\rangle=-i.
+\]</span></li>
+</ol>
+<p>Using row and column vectors gives the same result: <span class="math display">\[
+\langle2|\psi\rangle=\begin{pmatrix}0&amp;1&amp;0\end{pmatrix}\begin{pmatrix}2\\-i\\3\end{pmatrix}=-i.
+\]</span></p>
+<ol start="6" type="a">
+<li>Using the row and column vectors, <span class="math display">\[
+\langle\psi|\psi\rangle=\begin{pmatrix}2&amp;i&amp;3\end{pmatrix}\begin{pmatrix}2\\-i\\3\end{pmatrix}=4+1+9=14.
+\]</span></li>
+</ol>
+<p>Therefore, <span class="math display">\[
+\|\psi\|=\sqrt{\langle\psi|\psi\rangle}=\sqrt{14}.
+\]</span></p>
+</section>
+<section id="solution-for-exr-bra-ket-basic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-bra-ket-basic">Solution for <a href="#exr-bra-ket-basic" class="quarto-xref">Exercise&nbsp;<span>9.2</span></a></h3>
+<ol type="a">
+<li><p>Taking the Hermitian adjoint conjugates the coefficients: <span class="math display">\[
+\langle\psi|=c_1^*\langle1|+c_2^*\langle2|.
+\]</span></p></li>
+<li><p>Since the basis is orthonormal, <span class="math display">\[
+\langle1|\psi\rangle=c_1\langle1|1\rangle+c_2\langle1|2\rangle=c_1.
+\]</span></p></li>
+<li><p>Similarly, <span class="math display">\[
+\langle2|\psi\rangle=c_2.
+\]</span></p></li>
+<li><p>We have <span class="math display">\[
+\langle\psi|\psi\rangle=(c_1^*\langle1|+c_2^*\langle2|)(c_1|1\rangle+c_2|2\rangle).
+\]</span> Using <span class="math inline">\(\langle i|j\rangle=\delta_{ij}\)</span> gives <span class="math display">\[
+\langle\psi|\psi\rangle=|c_1|^2+|c_2|^2.
+\]</span></p></li>
+<li><p>For a normalized state, <span class="math display">\[
+|c_1|^2+|c_2|^2=1.
+\]</span></p></li>
+</ol>
+</section>
+<section id="solution-for-exr-bra-ket-basis-operator" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-bra-ket-basis-operator">Solution for <a href="#exr-bra-ket-basis-operator" class="quarto-xref">Exercise&nbsp;<span>9.3</span></a></h3>
+<ol type="a">
+<li><p>The operator <span class="math inline">\(\hat B\)</span> maps coordinate vectors in <span class="math inline">\(\mathbb C^n\)</span> to vectors in <span class="math inline">\(V\)</span>. Thus its domain is <span class="math inline">\(\mathbb C^n\)</span> and its range is <span class="math inline">\(V\)</span>. Because the vectors <span class="math inline">\(\{|b_i\rangle\}\)</span> form a basis, every vector in <span class="math inline">\(V\)</span> is in the range.</p></li>
+<li><p>Using the definition of <span class="math inline">\(|x\rangle\)</span>, <span class="math display">\[
+\hat B|x\rangle=\sum_{ij}|b_i\rangle\langle i|x_j|j\rangle
+=\sum_{ij}x_j|b_i\rangle\delta_{ij}
+=\sum_i x_i|b_i\rangle.
+\]</span> Thus the components <span class="math inline">\(x_i\)</span> of the coordinate vector are precisely the expansion coefficients of the corresponding vector in the basis <span class="math inline">\(B\)</span>.</p></li>
+<li><p>Taking the Hermitian adjoint gives <span class="math display">\[
+\hat B^\dagger=\sum_i|i\rangle\langle b_i|.
+\]</span></p></li>
+<li><p>Therefore <span class="math display">\[
+\hat B^\dagger\hat B
+=\left(\sum_i|i\rangle\langle b_i|\right)
+\left(\sum_j|b_j\rangle\langle j|\right)
+=\sum_{ij}|i\rangle\langle b_i|b_j\rangle\langle j|.
+\]</span></p></li>
+<li><p>The matrix element of <span class="math inline">\(\hat B^\dagger\hat B\)</span> in the standard basis is <span class="math display">\[
+\langle i|\hat B^\dagger\hat B|j\rangle=\langle b_i|b_j\rangle=S_{ij}.
+\]</span> Hence <span class="math inline">\(\hat B^\dagger\hat B\)</span> is exactly the overlap matrix <span class="math inline">\(S\)</span> represented as an operator on the coordinate space <span class="math inline">\(\mathbb C^n\)</span>.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-bra-ket-molecular-orbitals" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-bra-ket-molecular-orbitals">Solution for <a href="#exr-bra-ket-molecular-orbitals" class="quarto-xref">Exercise&nbsp;<span>9.4</span></a></h3>
+<ol type="a">
+<li><p>We have <span class="math display">\[
+\langle\psi|=c_1^*\langle\chi_1|+c_2^*\langle\chi_2|.
+\]</span> Therefore <span class="math display">\[
+\langle\psi|\psi\rangle
+=|c_1|^2+|c_2|^2+s(c_1^*c_2+c_2^*c_1).
+\]</span> Equivalently, <span class="math display">\[
+\langle\psi|\psi\rangle=|c_1|^2+|c_2|^2+2s\,\operatorname{Re}(c_1^*c_2).
+\]</span></p></li>
+<li><p>The overlap matrix is <span class="math display">\[
+S=
+\begin{pmatrix}
+1&amp;s\\
+s&amp;1
+\end{pmatrix}.
+\]</span></p></li>
+<li><p>With <span class="math display">\[
+\mathbf c=
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix},
+\]</span> we obtain <span class="math display">\[
+\mathbf c^\dagger S\mathbf c
+=
+\begin{pmatrix}
+c_1^*&amp;c_2^*
+\end{pmatrix}
+\begin{pmatrix}
+1&amp;s\\
+s&amp;1
+\end{pmatrix}
+\begin{pmatrix}
+c_1\\
+c_2
+\end{pmatrix},
+\]</span> which is exactly <span class="math display">\[
+|c_1|^2+|c_2|^2+s(c_1^*c_2+c_2^*c_1).
+\]</span> Thus normalization requires <span class="math display">\[
+\mathbf c^\dagger S\mathbf c=1.
+\]</span></p></li>
+<li><p>For the symmetric combination, <span class="math display">\[
+1=\langle\psi_+|\psi_+\rangle
+=|N_+|^2(2+2s).
+\]</span> Choosing <span class="math inline">\(N_+\)</span> real and positive gives <span class="math display">\[
+N_+=\frac{1}{\sqrt{2(1+s)}}.
+\]</span></p></li>
+<li><p>Similarly, <span class="math display">\[
+1=\langle\psi_-|\psi_-\rangle
+=|N_-|^2(2-2s),
+\]</span> so <span class="math display">\[
+N_-=\frac{1}{\sqrt{2(1-s)}}.
+\]</span></p></li>
+<li><p>We find <span class="math display">\[
+\langle\psi_+|\psi_-\rangle
+=N_+N_-\bigl(\langle\chi_1|+\langle\chi_2|\bigr)
+\bigl(|\chi_1\rangle-|\chi_2\rangle\bigr).
+\]</span> Hence <span class="math display">\[
+\langle\psi_+|\psi_-\rangle
+=N_+N_-(1-s+s-1)=0.
+\]</span> The symmetric and antisymmetric combinations are therefore orthogonal.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-bra-ket-nonorthogonal-dual-basis" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-bra-ket-nonorthogonal-dual-basis">Solution for <a href="#exr-bra-ket-nonorthogonal-dual-basis" class="quarto-xref">Exercise&nbsp;<span>9.5</span></a></h3>
+<ol type="a">
+<li><p>From the definition, <span class="math display">\[
+\langle b_k|b^i\rangle
+=\sum_j\langle b_k|b_j\rangle(S^{-1})_{ji}
+=\sum_jS_{kj}(S^{-1})_{ji}
+=\delta_k^{\,i}.
+\]</span></p></li>
+<li><p>Let the proposed operator act on an arbitrary basis vector <span class="math inline">\(|b_k\rangle\)</span>: <span class="math display">\[
+\left(\sum_i|b^i\rangle\langle b_i|\right)|b_k\rangle
+=\sum_i|b^i\rangle S_{ik}.
+\]</span> Substituting the definition of the dual vectors, <span class="math display">\[
+\sum_{ij}|b_j\rangle(S^{-1})_{ji}S_{ik}
+=\sum_j|b_j\rangle\delta_{jk}
+=|b_k\rangle.
+\]</span> Since the operator acts as the identity on every basis vector, it is the identity operator: <span class="math display">\[
+\hat I=\sum_i|b^i\rangle\langle b_i|.
+\]</span> Substituting <span class="math display">\[
+|b^i\rangle=\sum_j|b_j\rangle(S^{-1})_{ji}
+\]</span> gives <span class="math display">\[
+\hat I=\sum_{ij}|b_i\rangle(S^{-1})_{ij}\langle b_j|.
+\]</span></p></li>
+<li><p>Apply <span class="math inline">\(\langle b^i|\)</span> to the expansion: <span class="math display">\[
+\langle b^i|\psi\rangle
+=\sum_jc_j\langle b^i|b_j\rangle
+=\sum_jc_j\delta^i_{\,j}
+=c_i.
+\]</span> Thus <span class="math display">\[
+c_i=\langle b^i|\psi\rangle.
+\]</span></p></li>
+<li><p>Projecting <span class="math inline">\(|\psi\rangle\)</span> onto <span class="math inline">\(\langle b_i|\)</span> gives <span class="math display">\[
+p_i=\langle b_i|\psi\rangle
+=\sum_jc_j\langle b_i|b_j\rangle
+=\sum_jS_{ij}c_j.
+\]</span> Hence <span class="math display">\[
+\mathbf p=S\mathbf c,
+\]</span> and therefore <span class="math display">\[
+\mathbf c=S^{-1}\mathbf p.
+\]</span></p></li>
+<li><p>For an orthonormal basis, <span class="math display">\[
+S_{ij}=\delta_{ij},
+\]</span> so <span class="math inline">\(S=I\)</span> and <span class="math inline">\(S^{-1}=I\)</span>. The dual basis is then identical to the original basis, and <span class="math display">\[
+c_i=\langle b_i|\psi\rangle.
+\]</span></p></li>
+<li><p>For nonorthogonal atomic orbitals, <span class="math display">\[
+\langle b_i|\psi\rangle=\sum_jS_{ij}c_j,
+\]</span> so a projection onto one basis function contains contributions from several expansion coefficients. The projections equal the coefficients only when the basis is orthonormal. In a nonorthogonal atomic-orbital basis, the overlap matrix must therefore be accounted for when recovering the molecular-orbital coefficients.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1185,49 +1486,17 @@ Figure&nbsp;14.1: Illustration of “chessboard metric”: The king can move hor
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/polynomial-vector-spaces.html" class="pagination-link" aria-label="Polynomial vector spaces">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span>
+      <a href="../chapters/gaussian-elimination.html" class="pagination-link" aria-label="Gaussian elimination">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/open-and-closed-sets.html" class="pagination-link" aria-label="Open and closed sets in Euclidean space">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/eigenvalues-and-diagonalization.html" class="pagination-link" aria-label="Eigenvalues and diagonalization">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

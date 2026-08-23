@@ -34,11 +34,11 @@ book:
         - chapters/combinatorics.qmd
     - part: "Linear algebra"
       chapters:
-        - chapters/general-vector-spaces.qmd
         - chapters/vectors-and-matrices.qmd
+        - chapters/general-vector-spaces.qmd
         - chapters/complex-vector-space.qmd
         - chapters/gaussian-elimination.qmd
-        - chapters/bra-ket-notation.qmd
+        - chapters/bra-ket-notation-new.qmd
         - chapters/eigenvalues-and-diagonalization.qmd
         - chapters/gram-schmidt.qmd
         - chapters/singular-value-decomposition.qmd

@@ -2,9 +2,9 @@
 
 A vector space needs vector addition and scalar multiplication, but it need not resemble Euclidean coordinate space.
 
-You may be very familiar with Euclidean space $\mathbb{R}^n$ as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. A general vector space does not have an inner product or a norm, just a "linear structure": Consider for example a general vector space over $\mathbb{R}$: An abstract set $V$ with operations such that one can *add vectors*, $$z = x + y \in V,$$ and *multiply vectors by constants* $c\in\mathbb{R}$, $$z = c x \in V$$ where $c \in \mathbb{R}$. The full set of axioms is as follows:
+You may be very familiar with Euclidean space $\mathbb{R}^n$ as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. An inner product or norm is not part of the definition of a general vector space. Only the a "linear structure" matters: Consider for example a general vector space over $\mathbb{R}$: An abstract set $V$ with operations such that one can *add vectors*, $$z = x + y \in V,$$ and *multiply vectors by constants* $c\in\mathbb{R}$, $$z = c x \in V$$ where $c \in \mathbb{R}$. The full set of axioms is as follows. We focus on vector spaces over the field $\mathbb{R}$, but the definition can be generalized to vector spaces over any field such as $\mathbb{C}$.
 
-> **Definition: Vector space.** A *vector space over the field $\mathbb{F}$* is a set $V$ together with a binary *vector addition* $+ : V \times V \to V$ and *scalar multiplication* $\cdot : \mathbb{F}\times V \to V$ such that, for all $x$, $y$, $z \in V$ and all $\alpha,\beta \in \mathbb{F}$, the following axioms are true:
+> **Definition: Vector space.** A *vector space over the field $\mathbb{R}$* is a set $V$ together with a binary *vector addition* $+ : V \times V \to V$ and *scalar multiplication* $\cdot : \mathbb{R}\times V \to V$ such that, for all $x$, $y$, $z \in V$ and all $\alpha,\beta \in \mathbb{R}$, the following axioms are true:
 >
 > 1.  There exists a $0\in V$ such that $0 + x = x$ for all $x\in V$
 >
@@ -12,7 +12,7 @@ You may be very familiar with Euclidean space $\mathbb{R}^n$ as a vector space, 
 >
 > 3.  $x + y = y + x$
 >
-> 4.  There exists $x'$ such that $x+x'=0$
+> 4.  For every $x \in V$, there exists $x' \in V$ such that $x+x'=0$
 >
 > 5.  $(\alpha\beta)\cdot x = \alpha\cdot(\beta\cdot x)$
 >
@@ -70,48 +70,290 @@ In this exercise, we will train our ability to think abstractly, and also try to
 
 ## Exercises
 
-::: {#exr-general-vector-spaces-general-vector-spaces recommended="math" level="intermediate"}
+::: {#exr-general-vector-spaces-recipes recommended="math" level="beginner"}
+### Cooking with vectors 1
 
-1.  Consider viewing the set $L$ of cake recipe ingredient lists as a vector space. Thus, the components of $L$ are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?
+We can think of an ingredient list as a vector. For example, suppose that our universe of ingredients consists only of
 
-2.  How would you handle recipe lists with different units, such as pints and liters?
+$$
+(\text{butter},\text{sugar},\text{eggs},\text{flour},\text{apples}).
+$$
 
-3.  Consider the vector space $L$ as a vector space of functions on the form $f : S \to \mathbb{R}$, where $S$ is a set. Which set would $S$ be?
+After choosing suitable units for each ingredient, an ingredient list can then be represented by a vector
 
-4.  Define addition of two recipe ingredient lists. Does the sum define a new cake recipe? What is missing?
+$$
+x=(x_1,x_2,x_3,x_4,x_5),
+$$
 
-5.  Consider the scaling of a recipe list to produce a new ingredient list. What are the units of the scaling factor?
+where each component gives the amount of one ingredient.
 
-6.  Not every element in the constructed vector space is a valid recipe list. Which lists must be discarded?
+a. Using grams for butter, sugar, flour, and apples, and number of eggs for eggs, write the corresponding five-component vector for the Somerset Apple Cake recipe.
 
-7.  Let us turn to the recipe steps. At least some of the steps can be interpreted as *linear operators* on the space of ingredients. For example, creaming butter and sugar transforms these two ingredients to an ingredient named "creamed butter and sugar". Can all steps be treated as linear transformations?
+b. What would the vector $(100,0,2,300,0)$ mean? What does a zero component mean?
+
+c. What is the dimension of this vector space? Give a natural set of basis vectors and explain what each basis vector represents.
+
+d. Suppose that $x$ and $y$ are the ingredient vectors for two recipes. What does the vector $x+y$ represent?
+
+e. What does the vector $2x$ represent? What about $\frac{1}{2}x$? Does the scalar $2$ have a physical unit?
+
+f. Our choice of units is part of the way we represent the recipe. Suppose milk were another component. Explain why we should not represent 1 litre of milk as $1$ in one recipe and 1000 ml of milk as $1000$ in another without taking account of the different units.
+
+g. Typical recipes contain ingredients that are not among our five chosen ingredients. How could we enlarge our vector space to accommodate more recipes? What happens to the dimension of the space?
+
+:::
+
+
+
+
+
+
+
+::: {#exr-general-vector-spaces-meaningful-recipes recommended="math" level="intermediate"}
+### Cooking with vectors 2
+
+In @exr-general-vector-spaces-recipes, we represented recipes using a fixed list of possible ingredients. We can make this construction more general.
+
+Let $S$ be the set of all possible ingredients.  An ingredient list can be represented by a function
+
+$$
+f:S\to\mathbb{R},
+$$
+
+where $f(s)$ gives the amount of ingredient $s$. We assume that $f(s)=0$ for all but finitely many ingredients. The set $L$ of all such functions is a vector space, with addition and scalar multiplication defined in the usual way.
+
+a. Explain how this description generalizes the finite-dimensional ingredient vectors used in @exr-general-vector-spaces-recipes. If $S$ contains infinitely many ingredients, what can you say about the dimension of $L$?
+
+b. Mathematically, $L$ contains vectors with negative components. Can such vectors be interpreted as ordinary ingredient lists? What about the zero vector?
+
+c. Define the subset
+
+$$
+L_+=\{f\in L\mid f(s)\geq 0\text{ for every }s\in S\}.
+$$
+
+Is $L_+$ a vector space? Which vector-space properties fail? Is $L_+$ closed under addition? Is it closed under multiplication by _nonnegative_ scalars?
+
+d. Even if $f,g\in L_+$ are ingredient lists for two perfectly good recipes, $f+g$ need not describe a sensible recipe. What information is missing from an ingredient vector?
+
+e. We might try to describe the steps of a recipe by operators acting on $L$. Consider, for example, the instruction "cream the butter and sugar". Can this operation be represented naturally as a linear map $T:L\to L$ on our present ingredient space? Explain the challenges one encounters.
+
+f. What additional information might have to be included in our mathematical description before operations such as mixing, creaming, heating, and baking could be represented?
+
+g. In quantum mechanics, we similarly choose a mathematical space to represent physical states and operators to represent physical quantities and transformations. Why is the choice of the space important for determining what the mathematical model can describe?
 
 :::
 
-::: {.content-visible when-profile="tutor"}
 
-## Solutions
 
-### Solution to @exr-general-vector-spaces-general-vector-spaces {.unnumbered}
 
-**For part 1.**
+## Solutions {.content-visible when-profile="tutor"}
 
-The space has dimension equal to the number of possible ingredients. If this is idealized as infinite, then the space is infinite dimensional. One must consider that each ingredient has a unit attached. Thus, "1 egg" can be a different ingredient than "100 g egg" or "1 lb egg".
 
-**For part 2.**
+### Solution for @exr-general-vector-spaces-recipes {.unnumbered}
 
-It is simplest to standardize the quantities in SI units. Another model could retain several unit systems and convert between cups, deciliters, and grams where a conversion is meaningful.
+a. With the ordering
 
-**For part 3.**
+    $$
+    (\text{butter},\text{sugar},\text{eggs},\text{flour},\text{apples}),
+    $$
 
-The set of possible $(\text{ingredient},\text{unit})$ pairs, for example.
+    the Somerset Apple Cake recipe is represented by
 
-**For part 5.**
+    $$
+    x=(170,170,3,240,700).
+    $$
 
-Dimensionless.
+    The components do not all have the same units: the first, second, fourth, and fifth components are measured in grams, while the third is a number of eggs. This is not a problem as long as the meaning and unit of each component are fixed.
 
-**For part 6.**
+b. The vector
 
-Lists with negative entries.
+    $$
+    (100,0,2,300,0)
+    $$
 
-:::
+    represents an ingredient list containing 100 g butter, no sugar, 2 eggs, 300 g flour, and no apples.
+
+    A zero component means that the corresponding ingredient is absent.
+
+c. The vector space has dimension 5. A natural basis is
+
+    $$
+    e_1=(1,0,0,0,0),\qquad e_2=(0,1,0,0,0),\qquad \ldots,\qquad e_5=(0,0,0,0,1).
+    $$
+
+    Each basis vector represents one unit of one ingredient and zero of all the others. For example, $e_1$ represents 1 g of butter and $e_3$ represents 1 egg.
+
+    Any ingredient vector can be written as a linear combination of these basis vectors. For example,
+
+    $$
+    (170,170,3,240,700)=170e_1+170e_2+3e_3+240e_4+700e_5.
+    $$
+
+d. Addition is performed component by component. If
+
+    $$
+    x=(x_1,\ldots,x_5),\qquad y=(y_1,\ldots,y_5),
+    $$
+
+    then
+
+    $$
+    x+y=(x_1+y_1,\ldots,x_5+y_5).
+    $$
+
+    Thus, $x+y$ represents putting together the ingredient quantities from the two lists. If both recipes require flour, for example, the flour amounts are added.
+
+    The resulting vector is certainly a valid ingredient vector, although it need not correspond to a sensible cake recipe.
+
+e. Multiplying by 2 doubles the amount of every ingredient:
+
+    $$
+    2x=(2x_1,\ldots,2x_5).
+    $$
+
+    This can be interpreted as making twice as much of the recipe. Similarly,
+
+    $$
+    \frac12x
+    $$
+
+    corresponds to making half as much.
+
+    The scaling factor is dimensionless. It simply tells us by what numerical factor all ingredient quantities are changed.
+
+f. The numerical value of a component only has meaning together with the unit chosen for that component. If the milk coordinate is defined to be measured in millilitres, then
+
+    $$
+    1\ \mathrm{litre}=1000\ \mathrm{ml}
+    $$
+
+    must be represented by the number 1000.
+
+    If we sometimes used litres and sometimes millilitres without converting them, then the same physical amount could be represented by different vectors. We therefore choose one standard unit for each component.
+
+g. We can add more components, one for each new ingredient. For example, if cinnamon and milk are added to our list of possible ingredients, the vectors would have seven components instead of five.
+
+    Each additional independent ingredient increases the dimension by one. If we allow $n$ possible ingredients, the corresponding vector space has dimension $n$.
+
+
+
+
+
+
+
+
+
+
+### Solution for @exr-general-vector-spaces-meaningful-recipes {.unnumbered}
+
+a. In the previous exercise, we first chose a finite ordered list of ingredients and represented an ingredient list by a vector in $\mathbb{R}^n$.
+
+    The function description achieves the same without requiring us to choose a finite list in advance. For every possible ingredient $s\in S$, the number $f(s)$ specifies how much of that ingredient is present.
+
+    If $S$ is infinite, the space $L$ is infinite dimensional. A natural basis consists of functions $e_s$, one for every ingredient $s\in S$, defined by
+
+    $$
+    e_s(t)=
+    \begin{cases}
+    1,&t=s,\\
+    0,&t\neq s.
+    \end{cases}
+    $$
+
+    An ingredient list with finitely many ingredients can then be written as a finite linear combination of these basis functions.
+
+b. Mathematically, negative values are perfectly allowed in the vector space $L$. For example, a vector with
+
+    $$
+    f(\text{flour})=-200
+    $$
+
+    is a valid vector in $L$.
+
+    It is not, however, an ordinary ingredient list, since a recipe cannot contain negative amounts of flour.
+    
+    The zero vector, for which
+
+    $$
+    f(s)=0
+    $$
+
+    for every ingredient $s$, is mathematically valid and can be interpreted as a very healthy cake - an empty ingredient list.
+
+c. The set
+
+    $$
+    L_+=\{f\in L\mid f(s)\geq 0\text{ for every }s\in S\}
+    $$
+
+    is not a vector space. It is, however, the natural set of ingredient lists, since a recipe cannot contain negative amounts of any ingredient.
+
+    It is closed under addition: if $f(s)\geq0$ and $g(s)\geq0$, then
+
+    $$
+    (f+g)(s)=f(s)+g(s)\geq0.
+    $$
+
+    It is also closed under multiplication by a nonnegative scalar $c\geq0$, since
+
+    $$
+    (cf)(s)=cf(s)\geq0.
+    $$
+
+    However, it is not closed under multiplication by negative scalars. If $f$ is a nonzero ingredient list, then $-f$ has negative components and therefore does not belong to $L_+$.
+
+    Equivalently, nonzero elements of $L_+$ do not have additive inverses within $L_+$. Thus $L_+$ fails one of the essential requirements for being a vector space.
+
+d. An ingredient vector specifies only which ingredients occur and how much of each one is present. It does not specify, for example,
+
+    - the order in which ingredients are combined,
+    - whether ingredients are mixed, folded, beaten, or creamed,
+    - temperatures and cooking times,
+    - the physical state of the ingredients,
+    - whether a particular combination of ingredients is actually edible or sensible.
+
+    Consequently, $f+g$ is always a mathematically well-defined vector, but it need not correspond to a meaningful recipe.
+
+    The full set $L$ is guaranteed to be a vector space because it was constructed to satisfy the vector-space axioms. The subset $L_+$ is not a vector space, and the still smaller set of sensible recipes is certainly not guaranteed to be one either.
+
+e. Not naturally, at least not on the space $L$ as presently defined.
+
+    The vector $f\in L$ records only amounts of ingredients. After butter and sugar have been creamed together, their physical state has changed, but our vector space has no component that records whether the butter and sugar are separate or have been creamed together.
+
+    One could artificially introduce a new component such as
+
+    $$
+    \text{``creamed butter and sugar''},
+    $$
+
+    but this already shows that the original state space was insufficient. It also raises the question of just how "universal" the set $S$ should be. Should it contain "creamed butter and sugar" as a separate ingredient, and should it contain objects like "50 % butter and 54 % sugar creamed for 10 minutes at 302 K and 1 atm"?
+
+    There is also no obvious reason why the actual physical process of creaming should satisfy linearity,
+
+    $$
+    T(\alpha f+\beta g)=\alpha T(f)+\beta T(g).
+    $$
+
+    Thus the main problem is not merely finding a matrix for the operation: the space $L$ does not contain enough information to describe the process.
+
+f. We would need a richer description of the state. Depending on how detailed the model is, this might include quantities such as
+
+    - which ingredients have already been combined,
+    - temperature,
+    - physical phase or consistency,
+    - degree of mixing,
+    - particle or droplet size,
+    - chemical composition,
+    - elapsed cooking time.
+
+    The appropriate mathematical state space depends on which properties and transformations we want the model to describe.
+
+g. The same general idea appears in quantum mechanics. Before an operator can act on a state, we must first specify what mathematical objects represent the possible states.
+
+    In quantum mechanics, states are represented by vectors in a suitable vector space, some kind of Hilbert space, and observables are represented by linear operators on that space.
+
+    The choice of state space determines which states can be represented and which operators can act on them. If some physically relevant information is absent from the state description, an operator acting only on that space cannot describe transformations involving that missing information.
+
+    Thus, both in the recipe example and in quantum mechanics, choosing the vector space is not merely a matter of notation - it is part of constructing the mathematical model of reality.
+

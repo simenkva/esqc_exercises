@@ -2,3 +2,73 @@
 
 This is a collection of mathematics exercises for the European Summerschool in Quantum Chemistry (ESQC). 
 
+
+
+## Topics needed (List from Lucas)
+
+If an exercise is provided, please cross it out below.
+
+
+
+- Second quantization
+	- [ ] Binomial expansion 
+    - [x] binomial coefficients
+    - [x] Pascal’s triangle
+    - [ ] Cauchy product of series
+    - [ ] Proof by induction (or direct)
+    - [x] Handling summation signs (also in combination with Kronecker deltas)
+    - [ ] Definition of exp as a power series
+    - [ ] Partial derivatives of vectors (CI eigenvalue problem)
+    - [ ] Finding eigenvalues and eigenvectors of a 2x2 matrix.
+- SCF
+    - [x] Matrix algebra: matrix multiplication
+    - [ ] unitary transformation
+- DFT
+    - [ ] functional derivatives
+    - [ ] Transformation formula for multidimensional integrals (calculating Jacobi determinant for transformation from one set of coordinates to another).
+- Response theory
+    - [ ] BCH expansion, manipulation of exponentials of operators.
+    - [ ] Exponential of antihermitian operator is unitary (and maybe also the opposite: Every unitary can be written as an exponential of an antihermitian operator).
+    - [ ] Poles and residues of complex functions
+    - [ ] Fourier transform
+    - [ ] exponential form of the sin and cos functions
+    - [ ] Euler's formula for complex exponentials
+    - [ ] Partial derivatives with respect to dependent variables (In this case: the parameters Pn and their complex conjugates Pn∗)
+- Relativity
+    - [x] Levi-Civita symbol
+    - [ ] Roots of a 3rd order polynomial
+- Coupled cluster
+    - [ ] Taylor expansion
+- Molecular properties
+    - [ ] Writing cross product in terms of Levi-Civita symbols
+    - [ ] Evaluating commutator of momentum operator with a local operator (like vector potential)
+    - [ ] Lagrange multiplier method
+    - [ ] Total and partial derivatives
+- Multiconfigurational methods
+    - [ ] resolution of the identity, projection operators
+
+
+## Note
+
+
+Current levels and recommendation values coded in automatic generation of list script:
+
+```
+vels = ["beginner", "intermediate", "advanced"]
+
+recommendations = ["math", "topic"]
+
+# Topics and their descriptions, the latter used for writing the recommended
+# exercises per topic.
+topics = {
+    "coupled-cluster": "Coupled-cluster theory",
+    "second-quantization": "Second quantization",
+    "scf": "Self-consistent field theory",
+    "dft": "Density functional theory",
+    "response-theory": "Response theory",
+    "relativity": "Relativistic quantum chemistry",
+    "molecular-properties": "Molecular properties",
+    "multiconfig-methods": "Multiconfigurational methods",
+}
+
+```

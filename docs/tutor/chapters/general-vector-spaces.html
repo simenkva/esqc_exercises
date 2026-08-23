@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; General vector spaces – ESQC mathematics exercises</title>
+<title>6&nbsp; General vector spaces – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/vectors-and-matrices.html" rel="next">
-<link href="../chapters/combinatorics.html" rel="prev">
+<link href="../chapters/complex-vector-space.html" rel="next">
+<link href="../chapters/vectors-and-matrices.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -100,20 +100,6 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-preparations.callout {
-  border-left-color: #8B81FF;
-}
-div.callout-preparations.callout-style-default .callout-header {
-  background-color: rgba(139, 129, 255, 0.13);
-}
-div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: '';
-}
 div.callout-learning-goals.callout {
   border-left-color: #8B81FF;
 }
@@ -137,6 +123,20 @@ div.callout-fact.callout-style-default .callout-header {
 div.callout-fact .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.callout-titled .callout-icon::before {
   background-image: url('data:image/png;base64,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');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+div.callout-preparations.callout {
+  border-left-color: #8B81FF;
+}
+div.callout-preparations.callout-style-default .callout-header {
+  background-color: rgba(139, 129, 255, 0.13);
+}
+div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -363,7 +363,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -483,14 +483,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
+  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -700,10 +700,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">5.1</span> Exercises</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">5.2</span> Solutions</a>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises"><span class="header-section-number">6.1</span> Exercises</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="header-section-number">6.2</span> Solutions</a>
   <ul class="collapse">
-  <li><a href="#solution-to-exr-general-vector-spaces-general-vector-spaces" id="toc-solution-to-exr-general-vector-spaces-general-vector-spaces" class="nav-link" data-scroll-target="#solution-to-exr-general-vector-spaces-general-vector-spaces">Solution to Exercise&nbsp;<span>5.1</span></a></li>
+  <li><a href="#solution-for-exr-general-vector-spaces-recipes" id="toc-solution-for-exr-general-vector-spaces-recipes" class="nav-link" data-scroll-target="#solution-for-exr-general-vector-spaces-recipes">Solution for Exercise&nbsp;<span>6.1</span></a></li>
+  <li><a href="#solution-for-exr-general-vector-spaces-meaningful-recipes" id="toc-solution-for-exr-general-vector-spaces-meaningful-recipes" class="nav-link" data-scroll-target="#solution-for-exr-general-vector-spaces-meaningful-recipes">Solution for Exercise&nbsp;<span>6.2</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -712,9 +713,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/general-vector-spaces.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">General vector spaces</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">General vector spaces</span></h1>
 </div>
 
 
@@ -732,14 +733,14 @@ window.Quarto = {
 
 
 <p>A vector space needs vector addition and scalar multiplication, but it need not resemble Euclidean coordinate space.</p>
-<p>You may be very familiar with Euclidean space <span class="math inline">\(\mathbb{R}^n\)</span> as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. A general vector space does not have an inner product or a norm, just a “linear structure”: Consider for example a general vector space over <span class="math inline">\(\mathbb{R}\)</span>: An abstract set <span class="math inline">\(V\)</span> with operations such that one can <em>add vectors</em>, <span class="math display">\[z = x + y \in V,\]</span> and <em>multiply vectors by constants</em> <span class="math inline">\(c\in\mathbb{R}\)</span>, <span class="math display">\[z = c x \in V\]</span> where <span class="math inline">\(c \in \mathbb{R}\)</span>. The full set of axioms is as follows:</p>
+<p>You may be very familiar with Euclidean space <span class="math inline">\(\mathbb{R}^n\)</span> as a vector space, and quite used to the notion that we have an inner product and a corresponding distance measure on this space. However, linear spaces are much more general. An inner product or norm is not part of the definition of a general vector space. Only the a “linear structure” matters: Consider for example a general vector space over <span class="math inline">\(\mathbb{R}\)</span>: An abstract set <span class="math inline">\(V\)</span> with operations such that one can <em>add vectors</em>, <span class="math display">\[z = x + y \in V,\]</span> and <em>multiply vectors by constants</em> <span class="math inline">\(c\in\mathbb{R}\)</span>, <span class="math display">\[z = c x \in V\]</span> where <span class="math inline">\(c \in \mathbb{R}\)</span>. The full set of axioms is as follows. We focus on vector spaces over the field <span class="math inline">\(\mathbb{R}\)</span>, but the definition can be generalized to vector spaces over any field such as <span class="math inline">\(\mathbb{C}\)</span>.</p>
 <blockquote class="blockquote">
-<p><strong>Definition: Vector space.</strong> A <em>vector space over the field <span class="math inline">\(\mathbb{F}\)</span></em> is a set <span class="math inline">\(V\)</span> together with a binary <em>vector addition</em> <span class="math inline">\(+ : V \times V \to V\)</span> and <em>scalar multiplication</em> <span class="math inline">\(\cdot : \mathbb{F}\times V \to V\)</span> such that, for all <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z \in V\)</span> and all <span class="math inline">\(\alpha,\beta \in \mathbb{F}\)</span>, the following axioms are true:</p>
+<p><strong>Definition: Vector space.</strong> A <em>vector space over the field <span class="math inline">\(\mathbb{R}\)</span></em> is a set <span class="math inline">\(V\)</span> together with a binary <em>vector addition</em> <span class="math inline">\(+ : V \times V \to V\)</span> and <em>scalar multiplication</em> <span class="math inline">\(\cdot : \mathbb{R}\times V \to V\)</span> such that, for all <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z \in V\)</span> and all <span class="math inline">\(\alpha,\beta \in \mathbb{R}\)</span>, the following axioms are true:</p>
 <ol type="1">
 <li><p>There exists a <span class="math inline">\(0\in V\)</span> such that <span class="math inline">\(0 + x = x\)</span> for all <span class="math inline">\(x\in V\)</span></p></li>
 <li><p><span class="math inline">\(x + (y + z) = (x + y) + z\)</span></p></li>
 <li><p><span class="math inline">\(x + y = y + x\)</span></p></li>
-<li><p>There exists <span class="math inline">\(x'\)</span> such that <span class="math inline">\(x+x'=0\)</span></p></li>
+<li><p>For every <span class="math inline">\(x \in V\)</span>, there exists <span class="math inline">\(x' \in V\)</span> such that <span class="math inline">\(x+x'=0\)</span></p></li>
 <li><p><span class="math inline">\((\alpha\beta)\cdot x = \alpha\cdot(\beta\cdot x)\)</span></p></li>
 <li><p><span class="math inline">\(1\cdot x = x\)</span></p></li>
 <li><p><span class="math inline">\((\alpha + \beta)\cdot x = \alpha\cdot x + \beta\cdot x\)</span></p></li>
@@ -775,35 +776,189 @@ window.Quarto = {
 <li><p>Serve warm or cold with a dollop of whipped cream, clotted cream, vanilla ice cream, or whatever you like.</p></li>
 </ul>
 </blockquote>
-<section id="exercises" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">5.1</span> Exercises</h2>
-<div id="exr-general-vector-spaces-general-vector-spaces" class="theorem exercise" data-recommended="math" data-level="intermediate">
-<p><span class="theorem-title"><strong>Exercise 5.1</strong></span> &nbsp;</p>
-<ol type="1">
-<li><p>Consider viewing the set <span class="math inline">\(L\)</span> of cake recipe ingredient lists as a vector space. Thus, the components of <span class="math inline">\(L\)</span> are various ingredients and their amounts. What is the dimension of this space? What are the challenges encountered?</p></li>
-<li><p>How would you handle recipe lists with different units, such as pints and liters?</p></li>
-<li><p>Consider the vector space <span class="math inline">\(L\)</span> as a vector space of functions on the form <span class="math inline">\(f : S \to \mathbb{R}\)</span>, where <span class="math inline">\(S\)</span> is a set. Which set would <span class="math inline">\(S\)</span> be?</p></li>
-<li><p>Define addition of two recipe ingredient lists. Does the sum define a new cake recipe? What is missing?</p></li>
-<li><p>Consider the scaling of a recipe list to produce a new ingredient list. What are the units of the scaling factor?</p></li>
-<li><p>Not every element in the constructed vector space is a valid recipe list. Which lists must be discarded?</p></li>
-<li><p>Let us turn to the recipe steps. At least some of the steps can be interpreted as <em>linear operators</em> on the space of ingredients. For example, creaming butter and sugar transforms these two ingredients to an ingredient named “creamed butter and sugar”. Can all steps be treated as linear transformations?</p></li>
+<section id="exercises" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="exercises"><span class="header-section-number">6.1</span> Exercises</h2>
+<div id="exr-general-vector-spaces-recipes" class="theorem exercise" data-recommended="math" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 6.1 (Cooking with vectors 1)</strong></span> We can think of an ingredient list as a vector. For example, suppose that our universe of ingredients consists only of</p>
+<p><span class="math display">\[
+(\text{butter},\text{sugar},\text{eggs},\text{flour},\text{apples}).
+\]</span></p>
+<p>After choosing suitable units for each ingredient, an ingredient list can then be represented by a vector</p>
+<p><span class="math display">\[
+x=(x_1,x_2,x_3,x_4,x_5),
+\]</span></p>
+<p>where each component gives the amount of one ingredient.</p>
+<ol type="a">
+<li><p>Using grams for butter, sugar, flour, and apples, and number of eggs for eggs, write the corresponding five-component vector for the Somerset Apple Cake recipe.</p></li>
+<li><p>What would the vector <span class="math inline">\((100,0,2,300,0)\)</span> mean? What does a zero component mean?</p></li>
+<li><p>What is the dimension of this vector space? Give a natural set of basis vectors and explain what each basis vector represents.</p></li>
+<li><p>Suppose that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are the ingredient vectors for two recipes. What does the vector <span class="math inline">\(x+y\)</span> represent?</p></li>
+<li><p>What does the vector <span class="math inline">\(2x\)</span> represent? What about <span class="math inline">\(\frac{1}{2}x\)</span>? Does the scalar <span class="math inline">\(2\)</span> have a physical unit?</p></li>
+<li><p>Our choice of units is part of the way we represent the recipe. Suppose milk were another component. Explain why we should not represent 1 litre of milk as <span class="math inline">\(1\)</span> in one recipe and 1000 ml of milk as <span class="math inline">\(1000\)</span> in another without taking account of the different units.</p></li>
+<li><p>Typical recipes contain ingredients that are not among our five chosen ingredients. How could we enlarge our vector space to accommodate more recipes? What happens to the dimension of the space?</p></li>
+</ol>
+</div>
+<div id="exr-general-vector-spaces-meaningful-recipes" class="theorem exercise" data-recommended="math" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 6.2 (Cooking with vectors 2)</strong></span> In <a href="#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a>, we represented recipes using a fixed list of possible ingredients. We can make this construction more general.</p>
+<p>Let <span class="math inline">\(S\)</span> be the set of all possible ingredients. An ingredient list can be represented by a function</p>
+<p><span class="math display">\[
+f:S\to\mathbb{R},
+\]</span></p>
+<p>where <span class="math inline">\(f(s)\)</span> gives the amount of ingredient <span class="math inline">\(s\)</span>. We assume that <span class="math inline">\(f(s)=0\)</span> for all but finitely many ingredients. The set <span class="math inline">\(L\)</span> of all such functions is a vector space, with addition and scalar multiplication defined in the usual way.</p>
+<ol type="a">
+<li><p>Explain how this description generalizes the finite-dimensional ingredient vectors used in <a href="#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a>. If <span class="math inline">\(S\)</span> contains infinitely many ingredients, what can you say about the dimension of <span class="math inline">\(L\)</span>?</p></li>
+<li><p>Mathematically, <span class="math inline">\(L\)</span> contains vectors with negative components. Can such vectors be interpreted as ordinary ingredient lists? What about the zero vector?</p></li>
+<li><p>Define the subset</p></li>
+</ol>
+<p><span class="math display">\[
+L_+=\{f\in L\mid f(s)\geq 0\text{ for every }s\in S\}.
+\]</span></p>
+<p>Is <span class="math inline">\(L_+\)</span> a vector space? Which vector-space properties fail? Is <span class="math inline">\(L_+\)</span> closed under addition? Is it closed under multiplication by <em>nonnegative</em> scalars?</p>
+<ol start="4" type="a">
+<li><p>Even if <span class="math inline">\(f,g\in L_+\)</span> are ingredient lists for two perfectly good recipes, <span class="math inline">\(f+g\)</span> need not describe a sensible recipe. What information is missing from an ingredient vector?</p></li>
+<li><p>We might try to describe the steps of a recipe by operators acting on <span class="math inline">\(L\)</span>. Consider, for example, the instruction “cream the butter and sugar”. Can this operation be represented naturally as a linear map <span class="math inline">\(T:L\to L\)</span> on our present ingredient space? Explain the challenges one encounters.</p></li>
+<li><p>What additional information might have to be included in our mathematical description before operations such as mixing, creaming, heating, and baking could be represented?</p></li>
+<li><p>In quantum mechanics, we similarly choose a mathematical space to represent physical states and operators to represent physical quantities and transformations. Why is the choice of the space important for determining what the mathematical model can describe?</p></li>
 </ol>
 </div>
 </section>
-<section id="solutions" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="solutions"><span class="header-section-number">5.2</span> Solutions</h2>
-<section id="solution-to-exr-general-vector-spaces-general-vector-spaces" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-general-vector-spaces-general-vector-spaces">Solution to <a href="#exr-general-vector-spaces-general-vector-spaces" class="quarto-xref">Exercise&nbsp;<span>5.1</span></a></h3>
-<p><strong>For part 1.</strong></p>
-<p>The space has dimension equal to the number of possible ingredients. If this is idealized as infinite, then the space is infinite dimensional. One must consider that each ingredient has a unit attached. Thus, “1 egg” can be a different ingredient than “100 g egg” or “1 lb egg”.</p>
-<p><strong>For part 2.</strong></p>
-<p>It is simplest to standardize the quantities in SI units. Another model could retain several unit systems and convert between cups, deciliters, and grams where a conversion is meaningful.</p>
-<p><strong>For part 3.</strong></p>
-<p>The set of possible <span class="math inline">\((\text{ingredient},\text{unit})\)</span> pairs, for example.</p>
-<p><strong>For part 5.</strong></p>
-<p>Dimensionless.</p>
-<p><strong>For part 6.</strong></p>
-<p>Lists with negative entries.</p>
+<section id="solutions" class="level2 content-visible" data-when-profile="tutor" data-number="6.2">
+<h2 class="content-visible anchored" data-when-profile="tutor" data-number="6.2" data-anchor-id="solutions"><span class="header-section-number">6.2</span> Solutions</h2>
+<section id="solution-for-exr-general-vector-spaces-recipes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-general-vector-spaces-recipes">Solution for <a href="#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a></h3>
+<ol type="a">
+<li><p>With the ordering</p>
+<p><span class="math display">\[
+(\text{butter},\text{sugar},\text{eggs},\text{flour},\text{apples}),
+\]</span></p>
+<p>the Somerset Apple Cake recipe is represented by</p>
+<p><span class="math display">\[
+x=(170,170,3,240,700).
+\]</span></p>
+<p>The components do not all have the same units: the first, second, fourth, and fifth components are measured in grams, while the third is a number of eggs. This is not a problem as long as the meaning and unit of each component are fixed.</p></li>
+<li><p>The vector</p>
+<p><span class="math display">\[
+(100,0,2,300,0)
+\]</span></p>
+<p>represents an ingredient list containing 100 g butter, no sugar, 2 eggs, 300 g flour, and no apples.</p>
+<p>A zero component means that the corresponding ingredient is absent.</p></li>
+<li><p>The vector space has dimension 5. A natural basis is</p>
+<p><span class="math display">\[
+e_1=(1,0,0,0,0),\qquad e_2=(0,1,0,0,0),\qquad \ldots,\qquad e_5=(0,0,0,0,1).
+\]</span></p>
+<p>Each basis vector represents one unit of one ingredient and zero of all the others. For example, <span class="math inline">\(e_1\)</span> represents 1 g of butter and <span class="math inline">\(e_3\)</span> represents 1 egg.</p>
+<p>Any ingredient vector can be written as a linear combination of these basis vectors. For example,</p>
+<p><span class="math display">\[
+(170,170,3,240,700)=170e_1+170e_2+3e_3+240e_4+700e_5.
+\]</span></p></li>
+<li><p>Addition is performed component by component. If</p>
+<p><span class="math display">\[
+x=(x_1,\ldots,x_5),\qquad y=(y_1,\ldots,y_5),
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+x+y=(x_1+y_1,\ldots,x_5+y_5).
+\]</span></p>
+<p>Thus, <span class="math inline">\(x+y\)</span> represents putting together the ingredient quantities from the two lists. If both recipes require flour, for example, the flour amounts are added.</p>
+<p>The resulting vector is certainly a valid ingredient vector, although it need not correspond to a sensible cake recipe.</p></li>
+<li><p>Multiplying by 2 doubles the amount of every ingredient:</p>
+<p><span class="math display">\[
+2x=(2x_1,\ldots,2x_5).
+\]</span></p>
+<p>This can be interpreted as making twice as much of the recipe. Similarly,</p>
+<p><span class="math display">\[
+\frac12x
+\]</span></p>
+<p>corresponds to making half as much.</p>
+<p>The scaling factor is dimensionless. It simply tells us by what numerical factor all ingredient quantities are changed.</p></li>
+<li><p>The numerical value of a component only has meaning together with the unit chosen for that component. If the milk coordinate is defined to be measured in millilitres, then</p>
+<p><span class="math display">\[
+1\ \mathrm{litre}=1000\ \mathrm{ml}
+\]</span></p>
+<p>must be represented by the number 1000.</p>
+<p>If we sometimes used litres and sometimes millilitres without converting them, then the same physical amount could be represented by different vectors. We therefore choose one standard unit for each component.</p></li>
+<li><p>We can add more components, one for each new ingredient. For example, if cinnamon and milk are added to our list of possible ingredients, the vectors would have seven components instead of five.</p>
+<p>Each additional independent ingredient increases the dimension by one. If we allow <span class="math inline">\(n\)</span> possible ingredients, the corresponding vector space has dimension <span class="math inline">\(n\)</span>.</p></li>
+</ol>
+</section>
+<section id="solution-for-exr-general-vector-spaces-meaningful-recipes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-general-vector-spaces-meaningful-recipes">Solution for <a href="#exr-general-vector-spaces-meaningful-recipes" class="quarto-xref">Exercise&nbsp;<span>6.2</span></a></h3>
+<ol type="a">
+<li><p>In the previous exercise, we first chose a finite ordered list of ingredients and represented an ingredient list by a vector in <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p>The function description achieves the same without requiring us to choose a finite list in advance. For every possible ingredient <span class="math inline">\(s\in S\)</span>, the number <span class="math inline">\(f(s)\)</span> specifies how much of that ingredient is present.</p>
+<p>If <span class="math inline">\(S\)</span> is infinite, the space <span class="math inline">\(L\)</span> is infinite dimensional. A natural basis consists of functions <span class="math inline">\(e_s\)</span>, one for every ingredient <span class="math inline">\(s\in S\)</span>, defined by</p>
+<p><span class="math display">\[
+e_s(t)=
+\begin{cases}
+1,&amp;t=s,\\
+0,&amp;t\neq s.
+\end{cases}
+\]</span></p>
+<p>An ingredient list with finitely many ingredients can then be written as a finite linear combination of these basis functions.</p></li>
+<li><p>Mathematically, negative values are perfectly allowed in the vector space <span class="math inline">\(L\)</span>. For example, a vector with</p>
+<p><span class="math display">\[
+f(\text{flour})=-200
+\]</span></p>
+<p>is a valid vector in <span class="math inline">\(L\)</span>.</p>
+<p>It is not, however, an ordinary ingredient list, since a recipe cannot contain negative amounts of flour.</p>
+<p>The zero vector, for which</p>
+<p><span class="math display">\[
+f(s)=0
+\]</span></p>
+<p>for every ingredient <span class="math inline">\(s\)</span>, is mathematically valid and can be interpreted as a very healthy cake - an empty ingredient list.</p></li>
+<li><p>The set</p>
+<p><span class="math display">\[
+L_+=\{f\in L\mid f(s)\geq 0\text{ for every }s\in S\}
+\]</span></p>
+<p>is not a vector space. It is, however, the natural set of ingredient lists, since a recipe cannot contain negative amounts of any ingredient.</p>
+<p>It is closed under addition: if <span class="math inline">\(f(s)\geq0\)</span> and <span class="math inline">\(g(s)\geq0\)</span>, then</p>
+<p><span class="math display">\[
+(f+g)(s)=f(s)+g(s)\geq0.
+\]</span></p>
+<p>It is also closed under multiplication by a nonnegative scalar <span class="math inline">\(c\geq0\)</span>, since</p>
+<p><span class="math display">\[
+(cf)(s)=cf(s)\geq0.
+\]</span></p>
+<p>However, it is not closed under multiplication by negative scalars. If <span class="math inline">\(f\)</span> is a nonzero ingredient list, then <span class="math inline">\(-f\)</span> has negative components and therefore does not belong to <span class="math inline">\(L_+\)</span>.</p>
+<p>Equivalently, nonzero elements of <span class="math inline">\(L_+\)</span> do not have additive inverses within <span class="math inline">\(L_+\)</span>. Thus <span class="math inline">\(L_+\)</span> fails one of the essential requirements for being a vector space.</p></li>
+<li><p>An ingredient vector specifies only which ingredients occur and how much of each one is present. It does not specify, for example,</p>
+<ul>
+<li>the order in which ingredients are combined,</li>
+<li>whether ingredients are mixed, folded, beaten, or creamed,</li>
+<li>temperatures and cooking times,</li>
+<li>the physical state of the ingredients,</li>
+<li>whether a particular combination of ingredients is actually edible or sensible.</li>
+</ul>
+<p>Consequently, <span class="math inline">\(f+g\)</span> is always a mathematically well-defined vector, but it need not correspond to a meaningful recipe.</p>
+<p>The full set <span class="math inline">\(L\)</span> is guaranteed to be a vector space because it was constructed to satisfy the vector-space axioms. The subset <span class="math inline">\(L_+\)</span> is not a vector space, and the still smaller set of sensible recipes is certainly not guaranteed to be one either.</p></li>
+<li><p>Not naturally, at least not on the space <span class="math inline">\(L\)</span> as presently defined.</p>
+<p>The vector <span class="math inline">\(f\in L\)</span> records only amounts of ingredients. After butter and sugar have been creamed together, their physical state has changed, but our vector space has no component that records whether the butter and sugar are separate or have been creamed together.</p>
+<p>One could artificially introduce a new component such as</p>
+<p><span class="math display">\[
+\text{``creamed butter and sugar''},
+\]</span></p>
+<p>but this already shows that the original state space was insufficient. It also raises the question of just how “universal” the set <span class="math inline">\(S\)</span> should be. Should it contain “creamed butter and sugar” as a separate ingredient, and should it contain objects like “50 % butter and 54 % sugar creamed for 10 minutes at 302 K and 1 atm”?</p>
+<p>There is also no obvious reason why the actual physical process of creaming should satisfy linearity,</p>
+<p><span class="math display">\[
+T(\alpha f+\beta g)=\alpha T(f)+\beta T(g).
+\]</span></p>
+<p>Thus the main problem is not merely finding a matrix for the operation: the space <span class="math inline">\(L\)</span> does not contain enough information to describe the process.</p></li>
+<li><p>We would need a richer description of the state. Depending on how detailed the model is, this might include quantities such as</p>
+<ul>
+<li>which ingredients have already been combined,</li>
+<li>temperature,</li>
+<li>physical phase or consistency,</li>
+<li>degree of mixing,</li>
+<li>particle or droplet size,</li>
+<li>chemical composition,</li>
+<li>elapsed cooking time.</li>
+</ul>
+<p>The appropriate mathematical state space depends on which properties and transformations we want the model to describe.</p></li>
+<li><p>The same general idea appears in quantum mechanics. Before an operator can act on a state, we must first specify what mathematical objects represent the possible states.</p>
+<p>In quantum mechanics, states are represented by vectors in a suitable vector space, some kind of Hilbert space, and observables are represented by linear operators on that space.</p>
+<p>The choice of state space determines which states can be represented and which operators can act on them. If some physically relevant information is absent from the state description, an operator acting only on that space cannot describe transformations involving that missing information.</p>
+<p>Thus, both in the recipe example and in quantum mechanics, choosing the vector space is not merely a matter of notation - it is part of constructing the mathematical model of reality.</p></li>
+</ol>
 
 
 </section>
@@ -1225,13 +1380,13 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/combinatorics.html" class="pagination-link" aria-label="Combinatorics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Combinatorics</span></span>
+      <a href="../chapters/vectors-and-matrices.html" class="pagination-link" aria-label="Vectors and matrices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/vectors-and-matrices.html" class="pagination-link" aria-label="Vectors and matrices">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/complex-vector-space.html" class="pagination-link" aria-label="The complex numbers as a real vector space">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

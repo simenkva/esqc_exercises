@@ -123,7 +123,7 @@ o888ooo888 o88o  o888o o88oooo888 o888o 888oooo88
 These exercises are at a very basic level. If you are already comfortable with summation notation, you may skip them.
 
 
-:::{#exr-summing-1 recommended="math" level="beginner"}
+:::{#exr-summing-1 recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Very basic sums
 
 Expand the following sums and calculate their values:
@@ -136,7 +136,7 @@ c) $\displaystyle \sum_{k=0}^{3} 2^k$
 
 :::
 
-::: {#exr-summing-2 recommended="math" level="beginner"}
+::: {#exr-summing-2 recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Simplifying as a sum
 
 Write each expression using summation notation:
@@ -162,7 +162,7 @@ accurate; the point is to see how the index $n$ controls both the power and the
 factorial.
 :::
 
-::: {#exr-summing-4 recommended="math" level="beginner"}
+::: {#exr-summing-4 recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Reconstruct a vector
 
 The components of a vector are $r_1=2$, $r_2=-1$, and $r_3=4$. Let $\mathbf{e}_i$ be the standard basis in $\mathbb{R}^3$.
@@ -173,7 +173,7 @@ b) Gather the result as a column vector
 :::
 
 :::{#exr-summing-5 recommended="math" level="beginner"}
-### Exercise 5: A matrix--vector product
+### Summing in a matrix--vector product
 
 Let
 $$
@@ -194,7 +194,7 @@ to write out and calculate $(A\mathbf{x})_1$ and $(A\mathbf{x})_2$. Collect the 
 :::
 
 
-::: {#exr-summing-dummy-index recommended="math" level="beginner"}
+::: {#exr-summing-dummy-index recommended="math;topic" topic="second-quantization" level="beginner"}
 ### The summation index is a dummy index
 
 Consider
@@ -221,7 +221,7 @@ $$
 using $p$ as the summation index.
 :::
 
-::: {#exr-summing-linearity recommended="math" level="beginner"}
+::: {#exr-summing-linearity recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Linearity of sums
 
 Let $a_i$ and $b_i$, $i=1,2,3$ be two sets of numbers and let $c$ be a constant, i.e., just a number.
@@ -246,7 +246,7 @@ as two separate sums (i.e., each has a single summation sign).
 :::
 
 
-::: {#exr-summing-constant}
+::: {#exr-summing-constant recommended="math;topic" topic="second-quantization" level="beginner"}
 ### When something does not depend on the summation index
 
 Let $x$ be a number independent of the summation index $i$.
@@ -268,7 +268,7 @@ $$
 $$
 :::
 
-::: {#exr-summing-free-index}
+::: {#exr-summing-free-index recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Free and summed indices
 
 Consider the following expression for the $i$-th component of a vector $\mathbf{y}$, being the product of a matrix $A$ and a vector $\mathbf{x}$:
@@ -292,7 +292,7 @@ does not change the equation.
 :::
 
 
-::: {#exr-summing-reindexing}
+::: {#exr-summing-reindexing recommended="math;topic" topic="second-quantization" level="beginner"}
 ### Shifting the summation index
 
 Consider
@@ -322,7 +322,7 @@ as a sum with index $j$ running from $1$ to $n$.
 :::
 
 
-::: {#exr-kronecker-delta recommended="math" level="beginner"}
+::: {#exr-kronecker-delta recommended="math;topic" topic="second-quantization" level="beginner"}
 ### The Kronecker delta: basic exercise
 
 The **Kronecker delta** is defined in the introduction to this chapter. It is a special symbol that is often used in summation notation.
@@ -357,7 +357,8 @@ e. In the expression in (d), which index is a dummy index and which is a free in
 
 
 
-::: {#exr-levi-civita}
+::: {#exr-levi-civita level="beginner" recommended="topic" topic="relativity"}
+
 ### The Levi--Civita symbol: basic exercise
 
 The **Levi--Civita symbol** $\varepsilon_{ijk}$ is defined in the introduction to this chapter.

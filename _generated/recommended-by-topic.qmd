@@ -10,7 +10,18 @@ _No exercises selected._
 
 ## Second quantization {.unnumbered}
 
-_No exercises selected._
+### Beginner {.unnumbered}
+
+- @exr-summing-1 — Very basic sums
+- @exr-summing-2 — Simplifying as a sum
+- @exr-summing-4 — Reconstruct a vector
+- @exr-summing-dummy-index — The summation index is a dummy index
+- @exr-summing-linearity — Linearity of sums
+- @exr-summing-constant — When something does not depend on the summation index
+- @exr-summing-free-index — Free and summed indices
+- @exr-summing-reindexing — Shifting the summation index
+- @exr-kronecker-delta — The Kronecker delta: basic exercise
+- @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
 
 ## Self-consistent field theory {.unnumbered}
 
@@ -26,7 +37,9 @@ _No exercises selected._
 
 ## Relativistic quantum chemistry {.unnumbered}
 
-_No exercises selected._
+### Beginner {.unnumbered}
+
+- @exr-levi-civita — The Levi--Civita symbol: basic exercise
 
 ## Molecular properties {.unnumbered}
 

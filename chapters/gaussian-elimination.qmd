@@ -1,14 +1,46 @@
 # Gaussian elimination
 
-Elementary row operations solve linear systems, compute inverses, and expose the rank and consistency of a system.
+
+
 
 ## Exercises
 
-:::{#exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined}
+:::{#exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined recommended="math" level="intermediate"}
+### Gaussian elimination and overlap matrix
 
-Compute the overlap matrix $S$ of the basis defined in the vectors and matrices chapter. Use Gaussian elimination to compute $S^{-1}$.
+Consider the two vectors
+
+$$
+\mathbf{v}_1=
+\begin{pmatrix}
+1\\
+1\\
+0
+\end{pmatrix},
+\qquad
+\mathbf{v}_2=
+\begin{pmatrix}
+1\\
+0\\
+1
+\end{pmatrix}.
+$$
+
+a. Compute the overlap matrix $S$ with elements
+
+    $$
+    S_{ij}=\mathbf{v}_i^T\mathbf{v}_j.
+    $$
+
+b. Verify that $S$ is symmetric.
+
+c. Use Gaussian elimination on the augmented matrix $[S\,|\,I]$ to compute $S^{-1}$.
+
+d. Verify your result by computing $SS^{-1}$.
 
 :::
+
+
 
 :::{#exr-gaussian-elimination-write-down-dual-basis}
 
@@ -16,34 +48,50 @@ Write down the dual basis of $B = \{\mathbf{b}_1,\mathbf{b}_2\}$.
 
 :::
 
-::: {#exr-gaussian-elimination-robert-beezer-consider-following-system-equations recommended="math" level="intermediate"}
+::: {#exr-gaussian-elimination-robert-beezer-consider-following-system-equations }
 
-(Robert Beezer) Consider the following system of equations: $$\begin{aligned}
+(Robert Beezer) Consider the following system of equations: 
+
+$$
+\begin{aligned}
     2 x_1 -3x_2 + x_3 + 7 x_4 &= 14\\
     2x_1 + 8x_2 - 4x_3 + 5x_4 &= -1\\
     x_1 + 3x_2 - 3x_3 &= 4\\
     -5 x_1 + 2x_2 + 3 x_3 + 4x_4 &= -19
-\end{aligned}$$ Use Gaussian elimination to find all possible solutions. Write the solution set using set notation.
+\end{aligned}
+$$ 
+
+Use Gaussian elimination to find all possible solutions. Write the solution set using set notation.
 
 :::
 
 :::{#exr-gaussian-elimination-robert-beezer-find-all-possible-solutions}
 
-(Robert Beezer) Find all possible solutions of the linear system $$\begin{aligned}
+(Robert Beezer) Find all possible solutions of the linear system 
+$$
+\begin{aligned}
     3 x_1 + 4 x_2 - x_3 + 2 x_4 &= 6 \\
     x_1 - 2 x_2 + 3 x_3 + x_4 &= 2 \\
     10 x_2 - 10 x_3 - x_4 &= 1
-\end{aligned}$$ Write down the solution set using set notation.
+\end{aligned}
+$$ 
+
+Write down the solution set using set notation.
 
 :::
 
 :::{#exr-gaussian-elimination-robert-beezer-find-all-possible-solutions-2}
 
-(Robert Beezer) Find all possible solutions of the linear system $$\begin{aligned}
+(Robert Beezer) Find all possible solutions of the linear system 
+$$
+\begin{aligned}
     2 x_1 + 4 x_2 + 5 x_3 + 7 x_4 &= -26 \\
     x_1 + 2x_2 + x_3 - x_4 &= -4 \\
     -2 x_1 - 4 x_2 + x_3 + 11 x_4 &= -10
-\end{aligned}$$ Write down the solution set using set notation.
+\end{aligned}
+$$ 
+
+Write down the solution set using set notation.
 
 :::
 
@@ -65,35 +113,151 @@ Let $n$ linearly independent vectors $B = \{\mathbf{b}_1, \cdots,\mathbf{b}_n\}$
 
 ## Solutions
 
-### Tutor note: Elementary row operations and Gaussian elimination
 
-Consider the system $$B \mathbf{x} = \mathbf{v}.$$ Here, $B = [\mathbf{b}_1, \mathbf{b}_2]$ is the matrix that has the basis vectors as columns. This system is precisely what we solved above in the two-dimensional case.
+### Solution for @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined {.unnumbered}
 
-We multiply by $B^T$ to get $$S \mathbf{x} = B^T \mathbf{v}.$$ We invert $S$ to get $$\mathbf{x} = S^{-1} B^T \mathbf{v}.$$
+a. The overlap matrix is defined by
 
-### Solution to @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined {.unnumbered}
+    $$
+    S_{ij}=\mathbf{v}_i^T\mathbf{v}_j.
+    $$
 
-The overlap matrix has entries $S_{ij}=\mathbf{b}_i^T\mathbf{b}_j$, so
+    We have
 
-$$
-S=\begin{pmatrix}5&1\\1&2\end{pmatrix}.
-$$
+    $$
+    \mathbf{v}_1^T\mathbf{v}_1=2,\qquad
+    \mathbf{v}_1^T\mathbf{v}_2=1,\qquad
+    \mathbf{v}_2^T\mathbf{v}_1=1,\qquad
+    \mathbf{v}_2^T\mathbf{v}_2=2.
+    $$
 
-Row reduction of the augmented matrix gives
+    Therefore,
 
-$$
-\left(\begin{array}{cc|cc}5&1&1&0\\1&2&0&1\end{array}\right)
-\sim
-\left(\begin{array}{cc|cc}1&0&2/9&-1/9\\0&1&-1/9&5/9\end{array}\right).
-$$
+    $$
+    S=
+    \begin{pmatrix}
+    2&1\\
+    1&2
+    \end{pmatrix}.
+    $$
 
-Therefore
+b. Since
 
-$$
-S^{-1}=\frac{1}{9}\begin{pmatrix}2&-1\\-1&5\end{pmatrix}.
-$$
+    $$
+    S^T=
+    \begin{pmatrix}
+    2&1\\
+    1&2
+    \end{pmatrix}
+    =S,
+    $$
+
+    the overlap matrix is symmetric.
+
+c. To find the inverse, we perform Gaussian elimination on the augmented matrix
+
+    $$
+    \left[
+    \begin{array}{cc|cc}
+    2&1&1&0\\
+    1&2&0&1
+    \end{array}
+    \right].
+    $$
+
+    Interchange the two rows:
+
+    $$
+    \left[
+    \begin{array}{cc|cc}
+    1&2&0&1\\
+    2&1&1&0
+    \end{array}
+    \right].
+    $$
+
+    Now perform $R_2\leftarrow R_2-2R_1$:
+
+    $$
+    \left[
+    \begin{array}{cc|cc}
+    1&2&0&1\\
+    0&-3&1&-2
+    \end{array}
+    \right].
+    $$
+
+    Divide the second row by $-3$:
+
+    $$
+    \left[
+    \begin{array}{cc|cc}
+    1&2&0&1\\
+    0&1&-\frac13&\frac23
+    \end{array}
+    \right].
+    $$
+
+    Finally, perform $R_1\leftarrow R_1-2R_2$:
+
+    $$
+    \left[
+    \begin{array}{cc|cc}
+    1&0&\frac23&-\frac13\\
+    0&1&-\frac13&\frac23
+    \end{array}
+    \right].
+    $$
+
+    Hence,
+
+    $$
+    S^{-1}=
+    \begin{pmatrix}
+    \frac23&-\frac13\\
+    -\frac13&\frac23
+    \end{pmatrix}
+    =
+    \frac13
+    \begin{pmatrix}
+    2&-1\\
+    -1&2
+    \end{pmatrix}.
+    $$
+
+d. We verify that
+
+    $$
+    SS^{-1}
+    =
+    \begin{pmatrix}
+    2&1\\
+    1&2
+    \end{pmatrix}
+    \frac13
+    \begin{pmatrix}
+    2&-1\\
+    -1&2
+    \end{pmatrix}
+    =
+    \frac13
+    \begin{pmatrix}
+    3&0\\
+    0&3
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    1&0\\
+    0&1
+    \end{pmatrix}.
+    $$
+
+    Thus the inverse is correct.
+
 
 ### Solution to @exr-gaussian-elimination-write-down-dual-basis {.unnumbered}
+
+
 
 *The source does not supply a solution.*
 
