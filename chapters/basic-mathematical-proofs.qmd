@@ -306,7 +306,7 @@ d.  Complete the induction proof.
 e.  For $|r|<1$, what does the formula suggest as $n\to\infty$?
 :::
 
-::: {#exr-proofs-advanced-commutator level="advanced"}
+::: {#exr-proofs-advanced-commutator level="advanced" recommended="math"}
 ### A finite-dimensional quantum-mechanical impossibility
 
 In quantum mechanics, position and momentum satisfy the canonical

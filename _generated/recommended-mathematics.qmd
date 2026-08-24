@@ -74,6 +74,7 @@ quantum chemistry topic taught at the school.
 - @exr-stirling-factorial — Stirling's approximation
 - @exr-combinatorics-pascals-identity — Pascal's identity
 - @exr-combinatorics-pascal-sierpinski — Pascal's triangle and the Sierpinski triangle
+- @exr-proofs-advanced-commutator — A finite-dimensional quantum-mechanical impossibility
 - @exr-complex-vector-space-complex-numbers-real-vector-space — Complex numbers as a real vector space
 - @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition
 - @exr-gram-schmidt-gram-schmidt-orthogonalization
