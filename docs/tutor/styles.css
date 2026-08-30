@@ -51,3 +51,34 @@ div[id^="exr-"]:not(
   margin: 1.5em auto;
   border-top: 1px solid;
 }
+
+/* Disable interaction with checkboxes. */
+input[type="checkbox"] {
+  pointer-events: none;
+}
+
+
+/* Add labels for exercise difficulty levels. */
+[id^="exr-"][data-level]::before {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  margin-bottom: 0.75em;
+  border-radius: 1em;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+
+[id^="exr-"][data-level="beginner"]::before {
+  content: "Beginner";
+  background: #dff3df;
+}
+
+[id^="exr-"][data-level="intermediate"]::before {
+  content: "Intermediate";
+  background: #fff0c2;
+}
+
+[id^="exr-"][data-level="advanced"]::before {
+  content: "Advanced";
+  background: #f5d5d5;
+}

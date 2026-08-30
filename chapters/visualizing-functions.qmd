@@ -1,10 +1,9 @@
 # Visualizing functions
 
-Graphs, level sets, and vector fields provide complementary views of scalar- and vector-valued functions.
+In these exercises, you are given functions $f : \mathbb{R}^n \to \mathbb{R}^m$ and asked to visualize them. 
 
-Some paths and their curves:
 
-## Exercises
+## Exercises: paths and their curves
 
 ::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path recommended="math" level="intermediate"}
 
@@ -18,13 +17,27 @@ Let $f : (0,+\infty) \to \mathbb{R}^2$ be a path defined by $$f(t) = [\ln(t), t]
 
 :::
 
-:::{#exr-visualizing-functions-sketch-curve-here-it-probably-easiest}
+::: {#exr-visualizing-functions-heart level="advanced"}
+### A heart-shaped curve
 
-Let $f : [0,\pi] \to \mathbb{R}^2$ be given by $f(t)=[x(t),y(t)]$, with $x(t) = 16\sin(t)^3$ and $y(t) = 13\cos(t) - 5\cos(2t) - 2\cos(3t) - \cos(4t)$. Sketch the curve. Here, it is probably easiest to use Python or a similar tool.
+Consider the parametrically defined curve
 
+$$
+x(t)=16\sin^3t,\qquad
+y(t)=13\cos t-5\cos(2t)-2\cos(3t)-\cos(4t),
+$$
+
+where $0\leq t\leq 2\pi$.
+
+a. Evaluate $(x(t),y(t))$ for $t=0,\pi/2,\pi,3\pi/2,$ and $2\pi$.
+
+b. Use these points, together with the symmetry of the curve, to make a rough sketch by hand.
+
+c. Plot the curve using Python. Use equal scaling on the two coordinate axes.
 :::
 
-Level curves:
+## Exercises: level curves
+
 
 ::: {#exr-visualizing-functions-sketch-level-curves recommended="math" level="intermediate"}
 
@@ -32,31 +45,31 @@ Let $f(x,y) = x^2 + y^2$. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, f
 
 :::
 
-:::{#exr-visualizing-functions-sketch-level-curves-where-can-you}
+:::{#exr-visualizing-functions-sketch-level-curves-where-can-you level="intermediate"}
 
 Let $f(x,y) = x + y + 2$. Sketch the level curves where $f(x,y)=0$, $2$ and $4$. Can you sketch the graph of $f$?
 
 :::
 
-:::{#exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle}
+:::{#exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle level="intermediate"}
 
 Let $f(x,y) = x^2 - y^2$. The graph is called the *hyperbolic paraboloid*, or a saddle. Sketch the graph. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 0$ and $n=-1$, $n=1$. Make sure that you get all "pieces".
 
 :::
 
-:::{#exr-visualizing-functions-write-python-program-sketching-level-curves}
+:::{#exr-visualizing-functions-write-python-program-sketching-level-curves level="intermediate"}
 
 Write a Python program for sketching the level curves in the hyperbolic-paraboloid exercise above, but use more closely spaced constants. There are tools in Matplotlib that are handy.
 
 :::
 
-:::{#exr-visualizing-functions-adapt-your-program-draw-level-curves}
+:::{#exr-visualizing-functions-adapt-your-program-draw-level-curves level="intermediate"}
 
 Adapt your program to draw level curves of $(x,y)\mapsto (x^2 + 3y^2)e^{1-x^2-y^2}$.
 
 :::
 
-Sections and level surfaces:
+## Exercises: sections and level surfaces
 
 Consider the hydrogen-atom eigenfunctions in atomic units. They are indexed by $n\geq1$, $0\leq\ell<n$, and $-\ell\leq m\leq\ell$. Their separated form is
 
@@ -67,29 +80,24 @@ $$
 with
 
 $$
-R_{n\ell}(r)=N_{n\ell}\rho^\ell
-L_{n-\ell-1}^{2\ell+1}(\rho)e^{-\rho/2},
-\qquad \rho=\frac{2r}{n}.
+R_{n\ell}(r)=N_{n\ell}\rho^\ell L_{n-\ell-1}^{2\ell+1}(\rho)e^{-\rho/2}, \qquad \rho=\frac{2r}{n}.
 $$
 
 Here $N_{n\ell}$ is a normalization constant. Coordinate conversion uses
 
 $$
-r=\sqrt{x^2+y^2+z^2},\quad
-x=r\sin\theta\cos\phi,\quad
-y=r\sin\theta\sin\phi,\quad
-z=r\cos\theta.
+r=\sqrt{x^2+y^2+z^2},\quad x=r\sin\theta\cos\phi,\quad y=r\sin\theta\sin\phi,\quad z=r\cos\theta.
 $$
 
-In particular, the 1$s$ and 2$p_z$ functions are given by $$\psi_{1s}(x,y,z) = \frac{1}{\sqrt{\pi}} e^{-r(x,y,z)}, \quad$$ $$\psi_{2p_z}(x,y,z) = \frac{1}{4\sqrt{2\pi}} z e^{-r(x,y,z)/2},$$
+In particular, the 1$s$ and 2$p_z$ functions are given by $$\psi_{1s}(x,y,z) = \frac{1}{\sqrt{\pi}} e^{-r(x,y,z)},$$ $$\psi_{2p_z}(x,y,z) = \frac{1}{4\sqrt{2\pi}} z e^{-r(x,y,z)/2}.$$
 
-:::{#exr-visualizing-functions-write-python-program-draw-level-surfaces}
+:::{#exr-visualizing-functions-write-python-program-draw-level-surfaces level="intermediate"}
 
 Write a Python program to draw the level *surfaces* of hydrogen orbitals, $\{ (x,y,z)\mid  \psi(x,y,z) = c \}$. Choose interesting values of $c$. It can be interesting to color code surfaces of opposite positive and negative $c$.
 
 :::
 
-:::{#exr-visualizing-functions-write-program-visualize-sections-graph-orbitals}
+:::{#exr-visualizing-functions-write-program-visualize-sections-graph-orbitals level="intermediate"}
 
 Write a program to visualize *sections* of the orbital graphs. For example, fix $y=y_\text{const}$ and plot $(x,z)\mapsto\psi(x,y_\text{const},z)$.
 
@@ -101,46 +109,559 @@ Write a program to visualize *sections* of the orbital graphs. For example, fix 
 
 ### Tutor note: Visualization of functions
 
-**Tutor note:** The first few exercises are not hard, and the plots give quick visual feedback. The later exercises require some straightforward programming. The level-curve exercise comes from Marsden and Tromba.
+**Tutor note:** The first exercises are well suited for emphasizing that a useful sketch should normally begin with mathematical analysis. Before plotting, students should ask what can be inferred from symmetry, limiting values, intercepts, monotonicity, and algebraic elimination of parameters. The Python plots then serve as checks and as a way of handling curves and surfaces for which a hand sketch becomes cumbersome.
 
-### Solution to @exr-visualizing-functions-path-defined-sketch-curve-traced-path {.unnumbered}
+### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path {.unnumbered}
 
-*The source does not supply a solution.*
+The coordinates already have polar form,
 
-### Solution to @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 {.unnumbered}
+$$
+x=r\cos\theta,\qquad y=r\sin\theta,
+$$
 
-*The source does not supply a solution.*
+with
 
-### Solution to @exr-visualizing-functions-sketch-curve-here-it-probably-easiest {.unnumbered}
+$$
+r=e^{-t},\qquad \theta=4t.
+$$
 
-*The source does not supply a solution.*
+Thus the angle increases from $0$ to $8\pi$, so the curve makes four complete revolutions about the origin. At the same time, the radius decreases monotonically from $1$ to $e^{-2\pi}$. Eliminating $t$ gives
 
-### Solution to @exr-visualizing-functions-sketch-level-curves {.unnumbered}
+$$
+t=\frac{\theta}{4},\qquad r=e^{-\theta/4},
+$$
 
-*The source does not supply a solution.*
+so the curve is a logarithmic spiral winding inward counterclockwise. This is enough information to make a good hand sketch: start at $(1,0)$, make four counterclockwise turns, and decrease the distance from the origin continuously on every turn.
 
-### Solution to @exr-visualizing-functions-sketch-level-curves-where-can-you {.unnumbered}
+```{python}
+#| echo: true
+#| fig-cap: "The logarithmic spiral traced for $0\\leq t\\leq2\\pi$."
+import numpy as np
+import matplotlib.pyplot as plt
 
-*The source does not supply a solution.*
+t = np.linspace(0, 2 * np.pi, 1000)
+r = np.exp(-t)
+x = r * np.cos(4 * t)
+y = r * np.sin(4 * t)
 
-### Solution to @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle {.unnumbered}
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.scatter([x[0]], [y[0]], label="start")
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.legend()
+plt.show()
+```
 
-*The source does not supply a solution.*
+### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 {.unnumbered}
 
-### Solution to @exr-visualizing-functions-write-python-program-sketching-level-curves {.unnumbered}
+Here
 
-*The source does not supply a solution.*
+$$
+x=\ln t,\qquad y=t,\qquad t>0.
+$$
 
-### Solution to @exr-visualizing-functions-adapt-your-program-draw-level-curves {.unnumbered}
+Since $y=t$, we may eliminate the parameter immediately:
 
-*The source does not supply a solution.*
+$$
+x=\ln y,
+$$
 
-### Solution to @exr-visualizing-functions-write-python-program-draw-level-surfaces {.unnumbered}
+or, equivalently,
 
-*The source does not supply a solution.*
+$$
+y=e^x.
+$$
 
-### Solution to @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals {.unnumbered}
+Therefore the path traces the ordinary exponential curve. As $t\to0^+$, $x\to-\infty$ and $y\to0^+$. As $t\to\infty$, both coordinates tend to $+\infty$. Since both $x(t)$ and $y(t)$ increase with $t$, the path is traversed from the lower left toward the upper right.
 
-*The source does not supply a solution.*
+```{python}
+#| echo: true
+#| fig-cap: "The path $t\\mapsto(\\ln t,t)$ is the graph $y=e^x$."
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0.02, 5, 1000)
+x = np.log(t)
+y = t
+
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.grid(True)
+plt.show()
+```
+
+
+
+
+
+### Solution for @exr-visualizing-functions-heart {.unnumbered}
+
+The curve is
+
+$$
+x(t)=16\sin^3t,\qquad y(t)=13\cos t-5\cos(2t)-2\cos(3t)-\cos(4t),
+$$
+
+with $0\leq t\leq 2\pi$.
+
+a. At the specified parameter values,
+
+$$
+\begin{aligned}
+t=0 &: \qquad (x,y)=(0,5),\\
+t=\frac{\pi}{2} &: \qquad (x,y)=(16,4),\\
+t=\pi &: \qquad (x,y)=(0,-17),\\
+t=\frac{3\pi}{2} &: \qquad (x,y)=(-16,4),\\
+t=2\pi &: \qquad (x,y)=(0,5).
+\end{aligned}
+$$
+
+Thus the curve starts at $(0,5)$, moves around the right-hand side of the heart, reaches the bottom point $(0,-17)$, continues around the left-hand side, and returns to $(0,5)$.
+
+b. The curve is symmetric about the $y$-axis. To see this, compare the point at parameter value $t$ with the point at $2\pi-t$. Since
+
+$$
+\sin(2\pi-t)=-\sin t,
+$$
+
+we have
+
+$$
+x(2\pi-t)=16(-\sin t)^3=-x(t).
+$$
+
+For the $y$-coordinate,
+
+$$
+\cos(n(2\pi-t))=\cos(nt)
+$$
+
+for integer $n$, and therefore
+
+$$
+y(2\pi-t)=y(t).
+$$
+
+Hence the points corresponding to $t$ and $2\pi-t$ have opposite $x$-coordinates but the same $y$-coordinate. They are mirror images in the $y$-axis.
+
+To sketch the curve by hand, first mark the points
+
+$$
+(0,5),\qquad (16,4),\qquad (0,-17),\qquad (-16,4).
+$$
+
+Then draw a smooth curve through them, using the symmetry about the $y$-axis. The curve has the characteristic indentation at the top and a sharp point near the bottom.
+
+c. A numerical plot confirms the shape.
+
+```{python}
+#| echo: true
+#| fig-cap: "Parametric heart curve."
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 2*np.pi, 1000)
+
+x = 16*np.sin(t)**3
+y = (
+    13*np.cos(t)
+    - 5*np.cos(2*t)
+    - 2*np.cos(3*t)
+    - np.cos(4*t)
+)
+
+plt.plot(x, y)
+plt.xlabel(r"$x$")
+plt.ylabel(r"$y$")
+plt.axis("equal")
+plt.grid()
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-sketch-level-curves {.unnumbered}
+
+A level curve with value $n$ satisfies
+
+$$
+x^2+y^2=n.
+$$
+
+This is a circle centered at the origin with radius $\sqrt n$. Hence the requested level curves have radii
+
+$$
+1,\quad \sqrt2,\quad \sqrt3,\quad 2.
+$$
+
+For a hand sketch, draw four concentric circles and remember that equal increments in the function value do **not** give equal increments in radius.
+
+```{python}
+#| echo: true
+#| fig-cap: "Level curves of $f(x,y)=x^2+y^2$."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2.2, 2.2, 400)
+y = np.linspace(-2.2, 2.2, 400)
+X, Y = np.meshgrid(x, y)
+F = X**2 + Y**2
+
+fig, ax = plt.subplots()
+cs = ax.contour(X, Y, F, levels=[1, 2, 3, 4])
+ax.clabel(cs)
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-sketch-level-curves-where-can-you {.unnumbered}
+
+The level curve $f(x,y)=c$ is
+
+$$
+x+y+2=c,
+$$
+
+or
+
+$$
+y=-x+(c-2).
+$$
+
+Thus all level curves are parallel straight lines of slope $-1$. For $c=0,2,4$ they are
+
+$$
+y=-x-2,\qquad y=-x,\qquad y=-x+2.
+$$
+
+The graph of the function is obtained by introducing a vertical coordinate $z$:
+
+$$
+z=x+y+2.
+$$
+
+This is a plane. For a hand sketch, note that it passes through $(0,0,2)$, rises by one unit when either $x$ or $y$ increases by one unit, and intersects the plane $z=0$ along $x+y=-2$.
+
+```{python}
+#| echo: true
+#| fig-cap: "The graph $z=x+y+2$ is a plane."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 50)
+y = np.linspace(-3, 3, 50)
+X, Y = np.meshgrid(x, y)
+Z = X + Y + 2
+
+fig = plt.figure()
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(X, Y, Z, alpha=0.8)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("z")
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle {.unnumbered}
+
+The graph is
+
+$$
+z=x^2-y^2.
+$$
+
+The coordinate sections already reveal the saddle shape. Setting $y=0$ gives
+
+$$
+z=x^2,
+$$
+
+an upward-opening parabola, while setting $x=0$ gives
+
+$$
+z=-y^2,
+$$
+
+a downward-opening parabola. Thus the surface bends upward in the $x$ direction and downward in the $y$ direction.
+
+For the level curves:
+
+- For $n=0$,
+
+  $$x^2-y^2=0 \iff (x-y)(x+y)=0,$$
+
+  so the level set consists of the two lines $y=x$ and $y=-x$.
+
+- For $n=1$,
+
+  $$x^2-y^2=1,$$
+
+  which is a hyperbola opening in the positive and negative $x$ directions. Its vertices are $(\pm1,0)$.
+
+- For $n=-1$,
+
+  $$x^2-y^2=-1 \iff y^2-x^2=1,$$
+
+  which is a hyperbola opening in the positive and negative $y$ directions. Its vertices are $(0,\pm1)$.
+
+All three have asymptotes $y=\pm x$. These asymptotes are particularly useful when making the sketch by hand.
+
+```{python}
+#| echo: true
+#| fig-cap: "The hyperbolic paraboloid $z=x^2-y^2$."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2, 2, 100)
+y = np.linspace(-2, 2, 100)
+X, Y = np.meshgrid(x, y)
+Z = X**2 - Y**2
+
+fig = plt.figure()
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(X, Y, Z, alpha=0.8)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("z")
+plt.show()
+```
+
+```{python}
+#| echo: true
+#| fig-cap: "The levels $-1$, $0$, and $1$ of $x^2-y^2$."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 500)
+y = np.linspace(-3, 3, 500)
+X, Y = np.meshgrid(x, y)
+F = X**2 - Y**2
+
+fig, ax = plt.subplots()
+cs = ax.contour(X, Y, F, levels=[-1, 0, 1])
+ax.clabel(cs)
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-write-python-program-sketching-level-curves {.unnumbered}
+
+Matplotlib's `contour` function is designed precisely for this task. We evaluate the function on a rectangular grid and ask Matplotlib to interpolate the curves on which the function takes prescribed values.
+
+```{python}
+#| echo: true
+#| fig-cap: "A denser family of level curves for the hyperbolic paraboloid."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 600)
+y = np.linspace(-3, 3, 600)
+X, Y = np.meshgrid(x, y)
+F = X**2 - Y**2
+levels = np.arange(-6, 6.5, 0.5)
+
+fig, ax = plt.subplots()
+cs = ax.contour(X, Y, F, levels=levels)
+ax.clabel(cs, inline=True, fontsize=7)
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+
+The plot is also easy to interpret by hand: positive levels are hyperbolas opening along the $x$ axis, negative levels are hyperbolas opening along the $y$ axis, and the zero level consists of the asymptotes themselves.
+
+### Solution for @exr-visualizing-functions-adapt-your-program-draw-level-curves {.unnumbered}
+
+Let
+
+$$
+f(x,y)=(x^2+3y^2)e^{1-x^2-y^2}.
+$$
+
+Before plotting, several qualitative facts are useful. The function is nonnegative and is zero only at the origin for finite $x$ and $y$. It also tends to zero as $x^2+y^2\to\infty$, because the exponential decay eventually dominates the quadratic factor. Consequently, positive level curves can occur in nested families around regions where the function is relatively large, while sufficiently large requested levels give no curve at all.
+
+The factor $x^2+3y^2$ breaks circular symmetry: motion in the $y$ direction is weighted more strongly than motion in the $x$ direction. Along the coordinate axes,
+
+$$
+f(x,0)=x^2e^{1-x^2},\qquad f(0,y)=3y^2e^{1-y^2}.
+$$
+
+Both expressions have their radial maximum at $|x|=1$ or $|y|=1$, giving maxima $1$ on the $x$ axis and $3$ on the $y$ axis. This already predicts a strongly anisotropic contour pattern.
+
+```{python}
+#| echo: true
+#| fig-cap: "Level curves of $(x^2+3y^2)e^{1-x^2-y^2}$."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-3, 3, 600)
+y = np.linspace(-3, 3, 600)
+X, Y = np.meshgrid(x, y)
+F = (X**2 + 3 * Y**2) * np.exp(1 - X**2 - Y**2)
+levels = np.arange(0.2, 3.0, 0.2)
+
+fig, ax = plt.subplots()
+cs = ax.contour(X, Y, F, levels=levels)
+ax.clabel(cs, inline=True, fontsize=7)
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-write-python-program-draw-level-surfaces {.unnumbered}
+
+For the 1$s$ orbital,
+
+$$
+\psi_{1s}=\frac{1}{\sqrt\pi}e^{-r}.
+$$
+
+A positive level $\psi_{1s}=c$ therefore satisfies
+
+$$
+r=-\ln(c\sqrt\pi),
+$$
+
+provided $0<c\leq1/\sqrt\pi$. Thus every 1$s$ level surface is a sphere centered at the nucleus. This can be sketched exactly by hand without any numerical calculation.
+
+For the 2$p_z$ orbital,
+
+$$
+\psi_{2p_z}=\frac{1}{4\sqrt{2\pi}}ze^{-r/2}.
+$$
+
+Its sign is the sign of $z$. The plane $z=0$ is a node, positive level surfaces lie in the upper half-space, and corresponding negative level surfaces lie in the lower half-space. Rotational symmetry about the $z$ axis follows because the function depends on $x$ and $y$ only through $r=\sqrt{x^2+y^2+z^2}$. These facts already give a useful hand sketch of two oppositely signed lobes.
+
+The following dependency-light program approximates an isosurface by plotting grid points for which $\psi$ lies within a small tolerance of the desired level. This is not as smooth as a marching-cubes surface, but it uses only NumPy and Matplotlib and clearly shows the geometry.
+
+```{python}
+#| echo: true
+#| fig-cap: "Approximate level surfaces of the hydrogen $2p_z$ orbital."
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Cartesian grid
+axis = np.linspace(-8, 8, 90)
+X, Y, Z = np.meshgrid(axis, axis, axis, indexing="ij")
+R = np.sqrt(X**2 + Y**2 + Z**2)
+psi_2pz = Z * np.exp(-R / 2) / (4 * np.sqrt(2 * np.pi))
+
+c = 0.025
+tol = 0.0015
+positive = np.abs(psi_2pz - c) < tol
+negative = np.abs(psi_2pz + c) < tol
+
+# Downsample the selected points slightly for a lighter plot.
+pos = np.column_stack((X[positive], Y[positive], Z[positive]))[::2]
+neg = np.column_stack((X[negative], Y[negative], Z[negative]))[::2]
+
+fig = plt.figure()
+ax = fig.add_subplot(projection="3d")
+ax.scatter(pos[:, 0], pos[:, 1], pos[:, 2], s=2, label=f"psi = +{c}")
+ax.scatter(neg[:, 0], neg[:, 1], neg[:, 2], s=2, label=f"psi = -{c}")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("z")
+ax.set_box_aspect((1, 1, 1))
+ax.legend()
+plt.show()
+```
+
+For comparison, an exact 1$s$ level surface can be drawn parametrically as a sphere:
+
+```{python}
+#| echo: true
+#| fig-cap: "An exact level surface of the hydrogen $1s$ orbital."
+import numpy as np
+import matplotlib.pyplot as plt
+
+c = 0.05
+radius = -np.log(c * np.sqrt(np.pi))
+
+theta = np.linspace(0, np.pi, 80)
+phi = np.linspace(0, 2 * np.pi, 120)
+Theta, Phi = np.meshgrid(theta, phi)
+X = radius * np.sin(Theta) * np.cos(Phi)
+Y = radius * np.sin(Theta) * np.sin(Phi)
+Z = radius * np.cos(Theta)
+
+fig = plt.figure()
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(X, Y, Z, alpha=0.8)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_zlabel("z")
+ax.set_box_aspect((1, 1, 1))
+plt.show()
+```
+
+### Solution for @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals {.unnumbered}
+
+Fixing $y=y_{\mathrm{const}}$ turns a function of three variables into a function of two variables,
+
+$$
+(x,z)\longmapsto\psi(x,y_{\mathrm{const}},z).
+$$
+
+For $y_{\mathrm{const}}=0$, the section passes through the nucleus. The 1$s$ section is everywhere positive and radially symmetric in the $xz$ plane. For the 2$p_z$ orbital, the section changes sign across $z=0$ and is zero along the entire $x$ axis. These features should be identified before plotting.
+
+A contour plot is often more informative than a 3D surface plot because it makes nodal lines and signs easy to see:
+
+```{python}
+#| echo: true
+#| fig-cap: "Section $y=0$ of the hydrogen $2p_z$ orbital."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10, 10, 500)
+z = np.linspace(-10, 10, 500)
+X, Z = np.meshgrid(x, z)
+y_const = 0.0
+R = np.sqrt(X**2 + y_const**2 + Z**2)
+psi = Z * np.exp(-R / 2) / (4 * np.sqrt(2 * np.pi))
+
+fig, ax = plt.subplots()
+filled = ax.contourf(X, Z, psi, levels=31)
+ax.contour(X, Z, psi, levels=[0], linewidths=2)
+ax.set_aspect("equal")
+ax.set_xlabel("x")
+ax.set_ylabel("z")
+fig.colorbar(filled, ax=ax, label=r"$\psi_{2p_z}$")
+plt.show()
+```
+
+The same section can also be displayed as the graph of the two-variable function:
+
+```{python}
+#| echo: true
+#| fig-cap: "Graph of the $y=0$ section of the hydrogen $2p_z$ orbital."
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-8, 8, 150)
+z = np.linspace(-8, 8, 150)
+X, Z = np.meshgrid(x, z)
+R = np.sqrt(X**2 + Z**2)
+psi = Z * np.exp(-R / 2) / (4 * np.sqrt(2 * np.pi))
+
+fig = plt.figure()
+ax = fig.add_subplot(projection="3d")
+ax.plot_surface(X, Z, psi)
+ax.set_xlabel("x")
+ax.set_ylabel("z")
+ax.set_zlabel(r"$\psi_{2p_z}$")
+plt.show()
+```
+
+For other sections, change `y_const`. When $y_{\mathrm{const}}\neq0$, the section no longer passes through the nucleus, but the 2$p_z$ nodal line $z=0$ remains because the orbital contains the explicit factor $z$.
 
 :::

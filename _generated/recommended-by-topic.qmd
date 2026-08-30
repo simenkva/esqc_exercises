@@ -34,6 +34,8 @@ useful as a warm-up to the proper exercises given each day.
 - @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
 - @exr-combinatorics-binomial-theorem-basic — The binomial theorem
 - @exr-proofs-induction-basic — Your first induction proof
+- @exr-vector-gradient-components — From components to a gradient
+- @exr-vector-quadratic-form — Differentiating a quadratic form
 
 ### Intermediate {.unnumbered}
 
@@ -54,6 +56,7 @@ _No exercises selected._
 
 ### Beginner {.unnumbered}
 
+- @exr-vector-differentiation-complex-independent — Treating $c$ and $c^*$ as independent variables
 - @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
 - @exr-matrix-exponential-simple-nilpotent — An exponential whose series terminates
 

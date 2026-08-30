@@ -1,107 +1,850 @@
 # Continuity and differentiability
 
-Limits define continuity, while partial derivatives describe local change for functions of several variables.
 
-## Exercises
+Continuity and differentiability are fundamental concepts in calculus. For functions of several variables, the basic ideas are the same as for functions of one variable, but there are some important new features. In particular, a point in $\mathbb{R}^n$ can be approached from infinitely many directions, and a function can have partial derivatives without being differentiable.
 
-### Continuity
+### Continuity {.unnumbered}
 
-::: {#exr-continuity-and-differentiability-given-does-limit-not-exist-why recommended="math" level="intermediate"}
+Consider a function
 
-Let $f:\mathbb{R}\to\mathbb{R}$ be given by $$f(x) = \begin{cases} 1 & x > 0 \\
-        -1 & x \leq 0 \end{cases}$$ For which $x \in \mathbb{R}$ does the limit $$\lim_{h \to 0} f(x + h)$$ *not* exist? Why?
+$$
+f:\mathbb{R}^n\to\mathbb{R}.
+$$
 
+We say that $f$ is **continuous at** $\mathbf{a}\in\mathbb{R}^n$ if
+
+$$
+\lim_{\mathbf{x}\to\mathbf{a}}f(\mathbf{x})=f(\mathbf{a}).
+$$
+
+More precisely, $f$ is continuous at $\mathbf{a}$ if, for every $\epsilon>0$, there exists a $\delta>0$ such that
+
+$$
+\|\mathbf{x}-\mathbf{a}\|<\delta
+\quad\Longrightarrow\quad
+|f(\mathbf{x})-f(\mathbf{a})|<\epsilon.
+$$
+
+Here $\|\mathbf{x}-\mathbf{a}\|$ denotes the Euclidean distance between $\mathbf{x}$ and $\mathbf{a}$. For a function of two variables, $f(x,y)$, continuity at $(a,b)$ therefore means that $f(x,y)$ approaches $f(a,b)$ whenever $(x,y)$ approaches $(a,b)$.
+
+An important difference from one-dimensional calculus is that $(x,y)$ can approach $(a,b)$ along infinitely many different paths. If different paths give different limiting values, the limit does not exist. 
+
+### Partial derivatives {.unnumbered}
+
+For a function of a single variable, the derivative is the slope, or rate of change, when that variable is increased by a small amount. For a function of several variables, however, we can study how the function changes when one variable is varied while all the other variables are held constant. This defines **partial derivatives**.
+
+For a function $f:\mathbb{R}^2\to\mathbb{R}$, the partial derivative with respect to $x$ at $(a,b)$ is
+
+$$
+\frac{\partial f}{\partial x}(a,b)
+=
+\lim_{h\to0}
+\frac{f(a+h,b)-f(a,b)}{h},
+$$
+
+provided that the limit exists. Similarly,
+
+$$
+\frac{\partial f}{\partial y}(a,b)
+=
+\lim_{h\to0}
+\frac{f(a,b+h)-f(a,b)}{h}.
+$$
+
+Thus, $\partial f/\partial x$ measures the rate of change of $f$ in the $x$ direction, while $\partial f/\partial y$ measures the rate of change in the $y$ direction.
+
+For a function $f:\mathbb{R}^n\to\mathbb{R}$, the partial derivatives can be collected into the **gradient**
+
+$$
+\nabla f(\mathbf{x})
+=
+\begin{pmatrix}
+\frac{\partial f}{\partial x_1}\\
+\vdots\\
+\frac{\partial f}{\partial x_n}
+\end{pmatrix}.
+$$
+
+The gradient will play an important role throughout multivariable calculus. In quantum chemistry, for example, the gradient of an energy with respect to nuclear coordinates gives information about how the energy changes when the molecular geometry is displaced.
+
+For functions $f : \mathbb{R}^n \to \mathbb{R}^m$, the matrix of partial derivatives is called **the Jacobian**,
+
+$$
+J_f = \frac{\partial (f_1,\dots,f_m)}{\partial (x_1,\dots,x_n)}
+=
+\begin{pmatrix}
+\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
+\vdots & \ddots & \vdots \\
+\frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
+\end{pmatrix}.
+$$
+
+The function $f$ is differentiable at $\mathbf{x}_0$ if the Jacobian matrix exists and provides a good linear approximation to the function near that point:
+
+$$
+f(\mathbf{x}_0+\mathbf{h})
+\approx
+f(\mathbf{x}_0)
++J_f(\mathbf{x}_0)\mathbf{h},
+$$
+
+
+
+
+### Differentiability {.unnumbered}
+
+In single-variable calculus, differentiability means that sufficiently close to a point, a function is well approximated by a straight line. The same idea applies in several dimensions: a differentiable function is locally well approximated by a **linear function**.
+
+For $f:\mathbb{R}^n\to\mathbb{R}$, we say that $f$ is **differentiable at** $\mathbf{a}$ if
+
+$$
+f(\mathbf{a}+\mathbf{h})
+=
+f(\mathbf{a})
++
+\nabla f(\mathbf{a})\cdot\mathbf{h}
++
+r(\mathbf{h}),
+$$
+
+where the remainder $r(\mathbf{h})$ becomes negligible compared with $\|\mathbf{h}\|$ as $\mathbf{h}\to\mathbf{0}$:
+
+$$
+\lim_{\mathbf{h}\to\mathbf{0}}
+\frac{|r(\mathbf{h})|}{\|\mathbf{h}\|}
+=0.
+$$
+
+Equivalently,
+
+$$
+f(\mathbf{a}+\mathbf{h})
+=
+f(\mathbf{a})
++
+\nabla f(\mathbf{a})\cdot\mathbf{h}
++
+o(\|\mathbf{h}\|).
+$$
+
+For a function $f(x,y)$, writing $\mathbf{h}=(h,k)$ gives the perhaps more familiar expression
+
+$$
+f(a+h,b+k)
+\approx
+f(a,b)
++
+\frac{\partial f}{\partial x}(a,b)h
++
+\frac{\partial f}{\partial y}(a,b)k.
+$$
+
+Geometrically, the graph $z=f(x,y)$ is therefore approximated near $(a,b,f(a,b))$ by its tangent plane.
+
+It is important to distinguish **partial differentiability** from **differentiability**. The existence of all partial derivatives at a point does *not* by itself imply that the function is differentiable there. Partial derivatives examine the function only along the coordinate directions, whereas differentiability requires a single linear approximation that works for small displacements in *all* directions.
+
+There is, however, a very useful sufficient condition: if all the first partial derivatives exist and are continuous in a neighbourhood of a point, then the function is differentiable at that point. Thus, for the smooth functions encountered in most applications, differentiability can usually be established by computing the partial derivatives and checking that they are continuous.
+
+## Exercises: Continuity
+
+::: {#exr-continuity-step-function level="beginner" recommended="math"}
+### A first discontinuity
+
+Consider
+
+$$f(x)=\begin{cases}1,&x>0,\\-1,&x\leq 0.\end{cases}$$
+
+a. Compute $f(-1)$, $f(0)$, and $f(1)$.
+
+b. For $x=1$, what value does $f(x+h)$ have when $h$ is sufficiently small? What is $\lim_{h\to0}f(1+h)$?
+
+c. Approach $x=0$ from the left and from the right. What values does $f(h)$ take?
+
+d. For which $x\in\mathbb{R}$ does $\lim_{h\to0}f(x+h)$ not exist? Explain in words.
 :::
 
-:::{#exr-continuity-and-differentiability-any-polynomial-continuous-theorem-properties-continuous}
+::: {#exr-continuity-distance level="beginner"}
+### Getting close in two dimensions
 
-Show that any polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous, by using the theorem on properties of continuous functions.
+Let $\mathbf{a}=(1,2)$ and $\mathbf{x}=(x,y)$.
 
+a. Write an expression for the Euclidean distance $\|\mathbf{x}-\mathbf{a}\|$.
+
+b. Compute this distance for $\mathbf{x}=(1.1,2)$, $(1,1.9)$, and $(1.06,2.08)$.
+
+c. Which of these points lie inside the disk $\|\mathbf{x}-\mathbf{a}\|<0.1$?
+
+d. In your own words, explain what $\mathbf{x}\to\mathbf{a}$ means.
 :::
 
-:::{#exr-continuity-and-differentiability-marsden-tromba-consider-function-function-defined}
+::: {#exr-continuity-substitution level="beginner" recommended="math"}
+### Continuity by direct substitution
 
-(Marsden and Tromba) Consider the function $$f(x,y) = \frac{\sin(x^2 + y^2)}{x^2 + y^2}.$$ This function is defined on $\mathbb{R}^2 \setminus \{(0,0)\}$. Determine whether $f(x,y)$ approaches some value as $(x,y)\to(0,0)$. What is this value?
+For each function below, evaluate the indicated limit by direct substitution. State briefly why this is allowed.
 
+a. $\displaystyle \lim_{(x,y)\to(1,2)}(x+2y)$.
+
+b. $\displaystyle \lim_{(x,y)\to(1,2)}x^2y$.
+
+c. $\displaystyle \lim_{(x,y)\to(0,0)}e^{-(x^2+y^2)}$.
+
+d. $\displaystyle \lim_{(x,y)\to(1,1)}\frac{x+y}{1+x^2+y^2}$.
 :::
 
-::: {#exr-continuity-and-differentiability-marsden-tromba-does-exist-if-you recommended="math" level="intermediate"}
+::: {#exr-continuity-paths-first level="beginner"}
+### Testing two paths
 
-(Marsden and Tromba) Does $\lim_{(x,y)\to (0,0)} x^2/(x^2+y^2)$ exist? If you want, plotting the function can help.
+Consider
 
+$$f(x,y)=\frac{x^2}{x^2+y^2},\qquad (x,y)\ne(0,0).$$
+
+a. Set $y=0$ and simplify $f(x,0)$ for $x\ne0$.
+
+b. Set $x=0$ and simplify $f(0,y)$ for $y\ne0$.
+
+c. What value is approached along each axis as $(x,y)\to(0,0)$?
+
+d. Can $\lim_{(x,y)\to(0,0)}f(x,y)$ exist? Why or why not?
 :::
 
-:::{#exr-continuity-and-differentiability-marsden-tromba-prove-argument}
+::: {#exr-continuity-python-paths level="beginner"}
+### Approaching a point with Python
 
-(Marsden and Tromba) Prove that $\lim_{(x,y)\to(0,0)} 2x^2y/(x^2+y^2) = 0$ using an $\epsilon$-$\delta$ argument.
+Consider $f(x,y)=x^2+y^2$.
 
+a. By hand, compute $f(0.1,0.1)$, $f(0.01,0.01)$, and $f(0.001,0.001)$.
+
+b. Write a short Python loop that evaluates $f(t,t)$ for $t=10^{-1},10^{-2},\ldots,10^{-6}$.
+
+c. What value do the results appear to approach?
+
+d. Repeat for the path $(x,y)=(t,2t)$. Does the limiting value change?
 :::
 
-### Differentiability
+::: {#exr-continuity-polynomials level="intermediate"}
+### Why polynomials are continuous
 
-:::{#exr-continuity-and-differentiability-compute-partial-derivatives}
+Use standard properties of continuous functions to show that every polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous. Then explain briefly why a polynomial in two variables, such as $p(x,y)=3x^2y-2xy+7$, is also continuous on $\mathbb{R}^2$.
+:::
 
-Compute the partial derivatives of $$f(x,y) =  \frac{xy}{(x^2 + y^2)^{1/2}}.$$
+::: {#exr-continuity-radial-sine level="intermediate"}
+### A radial limit
 
+Consider
+
+$$f(x,y)=\frac{\sin(x^2+y^2)}{x^2+y^2},\qquad (x,y)\ne(0,0).$$
+
+a. Introduce $r^2=x^2+y^2$ and rewrite the function in terms of $r$.
+
+b. Determine $\lim_{(x,y)\to(0,0)}f(x,y)$ using the one-variable limit $\lim_{t\to0}\sin t/t=1$.
+
+c. How could $f$ be defined at $(0,0)$ so that the resulting function is continuous there?
+:::
+
+::: {#exr-continuity-path-dependent level="intermediate"}
+### A path-dependent limit
+
+Consider
+
+$$f(x,y)=\frac{x^2}{x^2+y^2},\qquad (x,y)\ne(0,0).$$
+
+a. Evaluate the limit along the line $y=0$.
+
+b. Evaluate the limit along the line $x=0$.
+
+c. Conclude whether $\lim_{(x,y)\to(0,0)}f(x,y)$ exists.
+
+d. As an optional visualization, make a surface plot or contour plot near the origin and relate what you see to parts a--c.
+:::
+
+::: {#exr-continuity-epsilon-delta level="intermediate"}
+### Bounding a function near the origin
+
+Consider
+
+$$f(x,y)=\frac{2x^2y}{x^2+y^2},\qquad (x,y)\ne(0,0).$$
+
+a. Show that $|f(x,y)|\leq2|y|$.
+
+b. Use $|y|\leq\sqrt{x^2+y^2}$ to obtain a bound in terms of $\|(x,y)\|$.
+
+c. Use the bound to prove with an $\epsilon$--$\delta$ argument that $\lim_{(x,y)\to(0,0)}f(x,y)=0$.
+:::
+
+::: {#exr-continuity-piecewise-extension level="intermediate"}
+### Making a function continuous
+
+For $(x,y)\ne(0,0)$, define
+
+$$f(x,y)=\frac{x^2y^2}{x^2+y^2}.$$
+
+a. Show that $0\leq f(x,y)\leq y^2$.
+
+b. Determine $\lim_{(x,y)\to(0,0)}f(x,y)$.
+
+c. Choose a value for $f(0,0)$ that makes $f$ continuous at the origin.
+
+d. Check your conclusion numerically along the paths $y=x$ and $y=x^2$.
+:::
+
+::: {#exr-continuity-chemistry-energy level="beginner" recommended="math"}
+### Continuity of a model potential energy
+
+A simple model potential energy is
+
+$$E(x,y)=\frac12 k_xx^2+\frac12 k_yy^2+cxy,$$
+
+where $k_x,k_y,$ and $c$ are constants.
+
+a. Explain why $E$ is continuous everywhere.
+
+b. Evaluate $\lim_{(x,y)\to(0,0)}E(x,y)$.
+
+c. Let $k_x=2$, $k_y=3$, and $c=1$. Compute $E(0.1,0)$, $E(0,0.1)$, and $E(0.1,0.1)$.
+
+d. What do these values suggest about the energy surface close to the origin?
+:::
+
+## Exercises: Differentiability
+
+::: {#exr-partial-derivatives-basic level="beginner" recommended="math"}
+### First partial derivatives
+
+Let $f(x,y)=x^2+3xy+y^2$.
+
+a. To compute $\partial f/\partial x$, treat $y$ as a constant. Find $\partial f/\partial x$.
+
+b. To compute $\partial f/\partial y$, treat $x$ as a constant. Find $\partial f/\partial y$.
+
+c. Evaluate both partial derivatives at $(1,2)$.
+
+d. Write the gradient $\nabla f(1,2)$ as a column vector.
+:::
+
+::: {#exr-partial-derivatives-slices level="beginner" recommended="math"}
+### Partial derivatives as one-dimensional derivatives
+
+Let $f(x,y)=x^2y+y^3$ and consider the point $(1,2)$.
+
+a. Hold $y=2$ fixed and define $g(x)=f(x,2)$. Write down $g(x)$ and compute $g'(1)$.
+
+b. Hold $x=1$ fixed and define $h(y)=f(1,y)$. Write down $h(y)$ and compute $h'(2)$.
+
+c. Compute $\partial f/\partial x$ and $\partial f/\partial y$ directly and check your answers from a and b.
+
+d. Explain in one sentence what is held fixed when taking a partial derivative.
+:::
+
+::: {#exr-gradient-displacement level="beginner"}
+### Using a gradient for a small displacement
+
+Suppose an energy $E(x,y)$ has
+
+$$E(1,1)=5,\qquad \nabla E(1,1)=\begin{pmatrix}2\\-1\end{pmatrix}.$$
+
+a. For a small displacement $\mathbf{h}=(0.01,0)$, use the linear approximation to estimate the change in energy.
+
+b. Repeat for $\mathbf{h}=(0,0.01)$.
+
+c. Repeat for $\mathbf{h}=(0.01,0.01)$.
+
+d. Estimate $E(1.01,1.01)$.
+:::
+
+::: {#exr-jacobian-first level="beginner" recommended="math"}
+### A first Jacobian
+
+Let $F:\mathbb{R}^2\to\mathbb{R}^2$ be
+
+$$F(x,y)=\begin{pmatrix}x+y\\xy\end{pmatrix}.$$
+
+a. Identify the two component functions $F_1$ and $F_2$.
+
+b. Compute $\partial F_1/\partial x$ and $\partial F_1/\partial y$.
+
+c. Compute $\partial F_2/\partial x$ and $\partial F_2/\partial y$.
+
+d. Assemble the four derivatives into the Jacobian matrix $J_F(x,y)$ and evaluate it at $(1,2)$.
+:::
+
+::: {#exr-partial-radial-quotient level="intermediate"}
+### Partial derivatives of a radial quotient
+
+For $(x,y)\ne(0,0)$, let
+
+$$f(x,y)=\frac{xy}{\sqrt{x^2+y^2}}.$$
+
+a. Compute $\partial f/\partial x$.
+
+b. Compute $\partial f/\partial y$.
+
+c. Evaluate the gradient at $(1,1)$.
+
+d. Is the formula defined at the origin? What additional question would have to be answered before discussing differentiability there?
+:::
+
+::: {#exr-differentiability-linear-approx level="intermediate"}
+### Linear approximation
+
+Let $f(x,y)=e^x\cos y$.
+
+a. Compute $\nabla f(x,y)$.
+
+b. Find the linear approximation to $f$ near $(0,0)$.
+
+c. Use it to estimate $f(0.02,0.03)$.
+
+d. Compare with a Python evaluation of `exp(0.02)*cos(0.03)`.
+:::
+
+::: {#exr-differentiability-tangent-plane level="intermediate"}
+### Tangent plane to an energy surface
+
+Consider $E(x,y)=x^2+xy+2y^2$.
+
+a. Compute $\nabla E(x,y)$.
+
+b. Find $E(1,1)$ and $\nabla E(1,1)$.
+
+c. Write the tangent-plane approximation to $E$ near $(1,1)$.
+
+d. Use it to estimate $E(1.02,0.99)$ and compare with the exact value.
+:::
+
+::: {#exr-differentiability-continuous-partials level="intermediate"}
+### Checking differentiability efficiently
+
+Let
+
+$$f(x,y)=x^3\sin y+e^{xy}.$$
+
+a. Compute the two first partial derivatives.
+
+b. Explain why these partial derivatives are continuous everywhere.
+
+c. Use the sufficient condition from the text to conclude that $f$ is differentiable everywhere.
+
+d. Compute $\nabla f(0,0)$ and write the linear approximation near the origin.
+:::
+
+::: {#exr-differentiability-numerical-gradient level="intermediate"}
+### A numerical gradient with finite differences
+
+Let $f(x,y)=x^2+xy+3y^2$.
+
+a. Compute $\nabla f(1,2)$ analytically.
+
+b. Approximate $\partial f/\partial x$ at $(1,2)$ by
+
+$$\frac{f(1+h,2)-f(1,2)}{h}$$
+
+for $h=10^{-1},10^{-2},10^{-3}$.
+
+c. Do the same for $\partial f/\partial y$.
+
+d. Write a tiny Python script for b and c. How do the approximations behave as $h$ becomes smaller?
+:::
+
+::: {#exr-advanced-directional-trap level="advanced" recommended="math"}
+### Checking multivariable limits along different paths
+
+Define
+
+$$f(x,y)=\begin{cases}\dfrac{x^2y}{x^4+y^2},&(x,y)\ne(0,0),\\0,&(x,y)=(0,0).\end{cases}$$
+
+a. Along a straight line $y=mx$, show that $f(x,mx)\to0$ as $x\to0$.
+
+b. Along the curved path $y=x^2$, determine the limiting value.
+
+c. Is $f$ continuous at the origin?
+
+d. What does this example teach you about checking multivariable limits using paths?
+:::
+
+::: {#exr-advanced-partials-not-continuous level="advanced"}
+### Partial derivatives without continuity
+
+Define
+
+$$f(x,y)=\begin{cases}\dfrac{xy}{\sqrt{x^2+y^2}},&(x,y)\ne(0,0),\\0,&(x,y)=(0,0).\end{cases}$$
+
+a. Show that $f$ is continuous at the origin by finding a useful bound for $|f(x,y)|$.
+
+b. Compute $\partial f/\partial x(0,0)$ and $\partial f/\partial y(0,0)$ directly from the definitions.
+
+c. Test differentiability at the origin along the path $(x,y)=(t,t)$.
+
+d. Reconcile your result with the statement that continuous first partial derivatives are sufficient for differentiability.
+:::
+
+::: {#exr-advanced-gradient-landscape level="advanced" recommended="math"}
+
+### Explore a two-dimensional energy landscape
+
+Consider the model energy
+
+$$E(x,y)=(x^2-1)^2+y^2+\frac12xy.$$
+
+a. Compute the gradient $\nabla E(x,y)$.
+
+b. Use Python to make a contour plot of $E$ on $-2\leq x\leq2$, $-2\leq y\leq2$.
+
+c. On the same grid, make a quiver plot of $-\nabla E$, or plot a separate vector field if that is clearer.
+
+d. Locate the stationary points numerically or analytically. Which appear to be minima, maxima, or saddle points? Describe how the gradient field reflects this.
+:::
+
+::: {#exr-advanced-differentiability-experiment level="advanced"}
+### A numerical experiment with the definition of differentiability
+
+Let $f(x,y)=\sin(xy)+x^2$ and let $\mathbf{a}=(1,1)$.
+
+a. Compute $f(\mathbf{a})$ and $\nabla f(\mathbf{a})$.
+
+b. For a displacement $\mathbf{h}$, define the linearization error
+
+$$R(\mathbf{h})=f(\mathbf{a}+\mathbf{h})-f(\mathbf{a})-\nabla f(\mathbf{a})\cdot\mathbf{h}.$$
+
+c. Write a short Python program that evaluates $|R(\mathbf{h})|/\|\mathbf{h}\|$ for $\mathbf{h}=t(1,2)$ and $t=10^{-1},\ldots,10^{-7}$.
+
+d. Repeat for a few random directions. What numerical behavior do you expect if $f$ is differentiable at $\mathbf{a}$? Do you observe it?
 :::
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions
 
-### Tutor note: Continuity
+### Solution for @exr-continuity-step-function {.unnumbered}
 
-**Tutor note:** The concept of continuity is basic, so I recommend some of these exercises for everyone. I do not think the tutors need much preparation for them.
+a. $f(-1)=-1$, $f(0)=-1$, and $f(1)=1$.
 
-### Solution to @exr-continuity-and-differentiability-given-does-limit-not-exist-why {.unnumbered}
+b. If $x=1$ and $h$ is sufficiently small, then $1+h>0$, so $f(1+h)=1$. Hence $\lim_{h\to0}f(1+h)=1$.
 
-The limit does not exist at $x=0$. For every interval $]-\epsilon,\epsilon[$, $f$ maps into $\{-1,1\}$, which does not approach a single value.
+c. For $h<0$, $f(h)=-1$, while for $h>0$, $f(h)=1$.
 
-### Solution to @exr-continuity-and-differentiability-any-polynomial-continuous-theorem-properties-continuous {.unnumbered}
+d. The limit fails only at $x=0$, because the left-hand and right-hand limits are different.
 
-The identity function $x \mapsto x$ is continuous. Since sums and products of continuous functions are continuous, every polynomial is continuous.
+### Solution for @exr-continuity-distance {.unnumbered}
 
-### Solution to @exr-continuity-and-differentiability-marsden-tromba-consider-function-function-defined {.unnumbered}
+a. $\|\mathbf{x}-\mathbf{a}\|=\sqrt{(x-1)^2+(y-2)^2}$.
 
-Use $\lim_{t\to0}\sin(t)/t=1$. Given $\epsilon>0$, choose $\eta>0$ such that $0<|t|<\eta$ implies $|\sin(t)/t-1|<\epsilon$. Set $\delta=\sqrt{\eta}$. If $0<\|\mathbf{u}\|<\delta$, then $0<\|\mathbf{u}\|^2<\eta$, so
+b. The distances are $0.1$, $0.1$, and $\sqrt{0.06^2+0.08^2}=0.1$.
 
-$$
-\left|\frac{\sin(\|\mathbf{u}\|^2)}{\|\mathbf{u}\|^2}-1\right|<\epsilon.
-$$
+c. None: the condition is strict, $\|\mathbf{x}-\mathbf{a}\|<0.1$, while all three distances equal $0.1$.
 
-Therefore the limit is $1$.
+d. It means that the Euclidean distance from $\mathbf{x}$ to $\mathbf{a}$ tends to zero.
 
-### Solution to @exr-continuity-and-differentiability-marsden-tromba-does-exist-if-you {.unnumbered}
+### Solution for @exr-continuity-substitution {.unnumbered}
 
-A hint to give the students:
+a. $1+2(2)=5$.
 
-Consider the line $x=0$ and the line $y=0$.
+b. $1^2(2)=2$.
 
-The limit does not exist. Along $y=0$ the function equals $1$, while along $x=0$ it equals $0$.
+c. $e^0=1$.
 
-### Solution to @exr-continuity-and-differentiability-marsden-tromba-prove-argument {.unnumbered}
+d. $(1+1)/(1+1+1)=2/3$.
 
-We have $$|2 x^2 y/(x^2+y^2)| \leq |2 x^2 y/x^2| \leq 2|y|.$$ Thus, given $\epsilon > 0$, choose $\delta = \epsilon /2$. Then $0 < \|(x,y)-(0,0)\| = \sqrt{x^2+y^2} < \delta$ implies $|y|< \delta$, and so $|f(x,y) -0| < 2\delta < \epsilon$.
+These functions are built from continuous elementary functions using sums, products, compositions, and, in d, a quotient whose denominator is nonzero at the limiting point.
 
-### Tutor note: Differentiability
+### Solution for @exr-continuity-paths-first {.unnumbered}
 
-**Tutor note:** The source contains only one exercise on differentiability; more exercises may be added later.
+a. $f(x,0)=1$ for $x\ne0$.
 
-### Solution to @exr-continuity-and-differentiability-compute-partial-derivatives {.unnumbered}
+b. $f(0,y)=0$ for $y\ne0$.
 
-For $(x,y)\neq(0,0)$, write $v=(x^2+y^2)^{1/2}$. The quotient and chain rules give
+c. The values approached are $1$ along the $x$ axis and $0$ along the $y$ axis.
 
-$$
-\frac{\partial f}{\partial x}
-=\frac{yv-xy(x/v)}{v^2}
-=\frac{y^3}{(x^2+y^2)^{3/2}},
-$$
+d. No. A multivariable limit, if it exists, must have the same value along every path.
 
-and, by symmetry,
+### Solution for @exr-continuity-python-paths {.unnumbered}
 
-$$
-\frac{\partial f}{\partial y}
-=\frac{x^3}{(x^2+y^2)^{3/2}}.
-$$
+a. The values are $0.02$, $0.0002$, and $0.000002$.
+
+b. One possible script is
+
+```{python}
+#| echo: true
+
+def f(x, y):
+    return x**2 + y**2
+
+for n in range(1, 7):
+    t = 10**(-n)
+    print(t, f(t, t))
+```
+
+c. The values approach $0$.
+
+d. Along $(t,2t)$, $f(t,2t)=5t^2\to0$. The limiting value does not change.
+
+### Solution for @exr-continuity-polynomials {.unnumbered}
+
+The identity function $x\mapsto x$ and constant functions are continuous. Products of continuous functions are continuous, so every power $x^n$ is continuous. Finite sums and constant multiples of continuous functions are continuous, hence every polynomial is continuous. The same argument applies to monomials $x^my^n$ and finite sums of such monomials, so polynomials in several variables are continuous everywhere.
+
+### Solution for @exr-continuity-radial-sine {.unnumbered}
+
+a. With $r^2=x^2+y^2$, $f=\sin(r^2)/r^2$.
+
+b. As $(x,y)\to(0,0)$, $r^2\to0$, so $\sin(r^2)/r^2\to1$.
+
+c. Define $f(0,0)=1$.
+
+### Solution for @exr-continuity-path-dependent {.unnumbered}
+
+a. Along $y=0$, $f(x,0)=1$.
+
+b. Along $x=0$, $f(0,y)=0$.
+
+c. The limit does not exist because the two paths give different limiting values.
+
+d. A plot shows a surface whose value depends strongly on direction near the origin; the $x$ axis sits at value $1$ and the $y$ axis at value $0$.
+
+### Solution for @exr-continuity-epsilon-delta {.unnumbered}
+
+a. Since $x^2+y^2\geq x^2$,
+
+$$|f(x,y)|=\frac{2x^2|y|}{x^2+y^2}\leq2|y|.$$
+
+b. Therefore $|f(x,y)|\leq2\sqrt{x^2+y^2}=2\|(x,y)\|$.
+
+c. Given $\epsilon>0$, choose $\delta=\epsilon/2$. If $0<\|(x,y)\|<\delta$, then $|f(x,y)|\leq2\|(x,y)\|<2\delta=\epsilon$. Hence the limit is $0$.
+
+### Solution for @exr-continuity-piecewise-extension {.unnumbered}
+
+a. Since $x^2/(x^2+y^2)\leq1$, we have $0\leq f(x,y)=y^2x^2/(x^2+y^2)\leq y^2$.
+
+b. Since $0\leq f(x,y)\leq y^2\to0$, the squeeze theorem gives the limit $0$.
+
+c. Set $f(0,0)=0$.
+
+d. Along $y=x$, $f=x^2/2\to0$. Along $y=x^2$, $f=x^4/(1+x^2)\to0$.
+
+### Solution for @exr-continuity-chemistry-energy {.unnumbered}
+
+a. $E$ is a polynomial in $x$ and $y$, so it is continuous everywhere.
+
+b. The limit is $E(0,0)=0$.
+
+c. With the given constants, $E(0.1,0)=0.01$, $E(0,0.1)=0.015$, and $E(0.1,0.1)=0.035$.
+
+d. The energy changes smoothly and remains small for small displacements from the origin.
+
+### Solution for @exr-partial-derivatives-basic {.unnumbered}
+
+a. $f_x=2x+3y$.
+
+b. $f_y=3x+2y$.
+
+c. $f_x(1,2)=8$ and $f_y(1,2)=7$.
+
+d. $\nabla f(1,2)=(8,7)^T$.
+
+### Solution for @exr-partial-derivatives-slices {.unnumbered}
+
+a. $g(x)=2x^2+8$, so $g'(1)=4$.
+
+b. $h(y)=y+y^3$, so $h'(2)=1+3(2)^2=13$.
+
+c. $f_x=2xy$ and $f_y=x^2+3y^2$, giving $4$ and $13$ at $(1,2)$.
+
+d. All variables except the one being differentiated are held fixed.
+
+### Solution for @exr-gradient-displacement {.unnumbered}
+
+The linear change is $\Delta E\approx\nabla E\cdot\mathbf{h}$.
+
+a. $\Delta E\approx2(0.01)=0.02$.
+
+b. $\Delta E\approx-1(0.01)=-0.01$.
+
+c. $\Delta E\approx0.02-0.01=0.01$.
+
+d. $E(1.01,1.01)\approx5.01$.
+
+### Solution for @exr-jacobian-first {.unnumbered}
+
+a. $F_1=x+y$ and $F_2=xy$.
+
+b. $(F_1)_x=1$ and $(F_1)_y=1$.
+
+c. $(F_2)_x=y$ and $(F_2)_y=x$.
+
+d.
+
+$$J_F(x,y)=\begin{pmatrix}1&1\\y&x\end{pmatrix},\qquad J_F(1,2)=\begin{pmatrix}1&1\\2&1\end{pmatrix}.$$
+
+### Solution for @exr-partial-radial-quotient {.unnumbered}
+
+a. For $(x,y)\ne(0,0)$,
+
+$$f_x=\frac{y^3}{(x^2+y^2)^{3/2}}.$$
+
+b.
+
+$$f_y=\frac{x^3}{(x^2+y^2)^{3/2}}.$$
+
+c. $\nabla f(1,1)=\left(1/(2\sqrt2),1/(2\sqrt2)\right)^T$.
+
+d. The formula is not defined at the origin. One would first need to define a value there, usually by examining whether the function has a limit at the origin.
+
+### Solution for @exr-differentiability-linear-approx {.unnumbered}
+
+a. $\nabla f=(e^x\cos y,-e^x\sin y)^T$.
+
+b. At $(0,0)$, $f=1$ and $\nabla f=(1,0)^T$, so $f(x,y)\approx1+x$.
+
+c. The estimate is $1.02$.
+
+d. Python gives approximately $1.019743$, so the first-order approximation is already close.
+
+### Solution for @exr-differentiability-tangent-plane {.unnumbered}
+
+a. $\nabla E=(2x+y,x+4y)^T$.
+
+b. $E(1,1)=4$ and $\nabla E(1,1)=(3,5)^T$.
+
+c. For $h=x-1$ and $k=y-1$, $E(x,y)\approx4+3h+5k$.
+
+d. At $(1.02,0.99)$, the approximation is $4+3(0.02)+5(-0.01)=4.01$. The exact value is $4.0104$.
+
+### Solution for @exr-differentiability-continuous-partials {.unnumbered}
+
+a.
+
+$$f_x=3x^2\sin y+ye^{xy},\qquad f_y=x^3\cos y+xe^{xy}.$$
+
+b. Polynomials, sine, cosine, and exponential functions are continuous, as are sums and products of continuous functions.
+
+c. Therefore both first partial derivatives are continuous everywhere, so $f$ is differentiable everywhere.
+
+d. $f(0,0)=1$ and $\nabla f(0,0)=(0,0)^T$, so the linear approximation is simply $f(x,y)\approx1$ near the origin.
+
+### Solution for @exr-differentiability-numerical-gradient {.unnumbered}
+
+a. $\nabla f=(2x+y,x+6y)^T$, so $\nabla f(1,2)=(4,13)^T$.
+
+b. The forward-difference values for $f_x$ are $4.1$, $4.01$, and $4.001$.
+
+c. The corresponding values for $f_y$ are $13.3$, $13.03$, and $13.003$.
+
+d. For example:
+
+```{python}
+#| echo: true
+
+def f(x, y):
+    return x**2 + x*y + 3*y**2
+
+for h in [1e-1, 1e-2, 1e-3]:
+    dfdx = (f(1+h, 2) - f(1, 2))/h
+    dfdy = (f(1, 2+h) - f(1, 2))/h
+    print(h, dfdx, dfdy)
+```
+
+The approximations converge toward $4$ and $13$ as $h$ decreases.
+
+### Solution for @exr-advanced-directional-trap {.unnumbered}
+
+a. Along $y=mx$,
+
+$$f(x,mx)=\frac{mx^3}{x^4+m^2x^2}=\frac{mx}{x^2+m^2}\to0$$
+
+for $m\ne0$; for $m=0$ it is identically zero.
+
+b. Along $y=x^2$,
+
+$$f(x,x^2)=\frac{x^4}{x^4+x^4}=\frac12.$$
+
+c. No. The limit at the origin does not exist.
+
+d. Checking many straight lines can disprove a limit, but agreement along all straight lines is not enough to prove that a multivariable limit exists.
+
+### Solution for @exr-advanced-partials-not-continuous {.unnumbered}
+
+a. Using $2|xy|\leq x^2+y^2$,
+
+$$|f(x,y)|\leq\frac{x^2+y^2}{2\sqrt{x^2+y^2}}=\frac12\sqrt{x^2+y^2}\to0.$$
+
+Thus $f$ is continuous at the origin.
+
+b. Since $f(h,0)=f(0,h)=0$, both partial derivatives at the origin are zero.
+
+c. Along $(t,t)$,
+
+$$f(t,t)=\frac{t^2}{\sqrt{2t^2}}=\frac{|t|}{\sqrt2}.$$
+
+If $f$ were differentiable with gradient zero, we would require $f(t,t)/\sqrt{2t^2}\to0$. Instead this ratio equals $1/2$ for $t\ne0$. Hence $f$ is not differentiable at the origin.
+
+d. The theorem says that *continuous* first partial derivatives in a neighbourhood are sufficient. Here the partial derivatives exist at the origin, but they are not continuous there. There is no contradiction.
+
+### Solution for @exr-advanced-gradient-landscape {.unnumbered}
+
+a.
+
+$$\nabla E=\begin{pmatrix}4x(x^2-1)+y/2\\2y+x/2\end{pmatrix}.$$
+
+b.--c. One possible script is:
+
+```{python}
+#| echo: true
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2, 2, 201)
+y = np.linspace(-2, 2, 201)
+X, Y = np.meshgrid(x, y)
+E = (X**2 - 1)**2 + Y**2 + 0.5*X*Y
+
+plt.contour(X, Y, E, levels=25)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+
+# A coarser grid is clearer for the vector field.
+xq = np.linspace(-2, 2, 21)
+yq = np.linspace(-2, 2, 21)
+Xq, Yq = np.meshgrid(xq, yq)
+dEdx = 4*Xq*(Xq**2 - 1) + 0.5*Yq
+dEdy = 2*Yq + 0.5*Xq
+plt.quiver(Xq, Yq, -dEdx, -dEdy)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+```
+
+d. From $2y+x/2=0$, $y=-x/4$. Substitution into the first equation gives $x(4x^2-33/8)=0$, so the stationary points are $(0,0)$ and $x=\pm\sqrt{33/32}$ with $y=-x/4$. The origin is a saddle point, while the two nonzero stationary points are minima. The field $-\nabla E$ points downhill toward the minima and away from the unstable direction of the saddle.
+
+### Solution for @exr-advanced-differentiability-experiment {.unnumbered}
+
+a. $f(1,1)=\sin1+1$ and
+
+$$\nabla f(x,y)=\begin{pmatrix}y\cos(xy)+2x\\x\cos(xy)\end{pmatrix},$$
+
+so $\nabla f(1,1)=(\cos1+2,\cos1)^T$.
+
+b. $R(\mathbf{h})$ is the error left after subtracting the first-order linear approximation.
+
+c. For example:
+
+```{python}
+#| echo: true
+
+import numpy as np
+
+def f(x, y):
+    return np.sin(x*y) + x**2
+
+a = np.array([1.0, 1.0])
+grad = np.array([np.cos(1.0) + 2.0, np.cos(1.0)])
+
+for n in range(1, 8):
+    t = 10.0**(-n)
+    h = t*np.array([1.0, 2.0])
+    R = f(*(a+h)) - f(*a) - grad@h
+    print(t, abs(R)/np.linalg.norm(h))
+```
+
+d. For a differentiable function, $|R(\mathbf{h})|/\|\mathbf{h}\|$ should tend to zero as $\mathbf{h}\to0$. Repeating with several directions gives the same qualitative behavior. At extremely small $t$, floating-point roundoff may eventually obscure the trend.
 
 :::

@@ -1,0 +1,51 @@
+# Functions of a vector
+
+In quantum chemistry, one often views multivariable functions as **functions of one or more vectors**. The archetypal example is the Rayleigh quotient in a non-orthonormal basis: Let $H$ and $S$ be Hermitian $n\times n$ matrices, and additionally $S$ is positive definite. Think of $H$ as the matrix of the Fock operator in a non-orthonormal AO basis $\{\chi_\mu\}_{\mu=1}^n$, and $S$ as the overlap matrix:
+
+$$
+    H_{\mu\nu} = \langle \chi_\mu | \hat{H} | \chi_\nu \rangle,
+    \quad
+    S_{\mu\nu} = \langle \chi_\mu | \chi_\nu \rangle.
+$$
+
+For
+
+$$
+    \psi = \sum_{\mu=1}^n c_\mu \chi_\mu, \quad c_\mu \in \mathbb{C}^n.
+$$
+
+The expectation value of $\hat{H}$ (the Rayleigh quotient) is then expressed as
+$$
+    \begin{split}
+    \langle \hat{H} \rangle  &= \frac{\langle \psi | \hat{H} | \psi \rangle}{\langle \psi | \psi \rangle} \\
+    &= \frac{\mathbf{c}^\dagger H \mathbf{c}}{\mathbf{c}^\dagger S \mathbf{c}}.
+    \end{split}
+$$
+
+Recall that $\mathbf{c}^\dag$ is the Hermitian transpose (conjugate transpose) of the vector $\mathbf{c}$. The last expression is the _Rayleigh quotient_ $R : \mathbb{R}^n \to \mathbb{R}$ expressed in terms of the coefficient vector $\mathbf{c}$:
+
+$$
+    R(\mathbf{c}) = \frac{\mathbf{c}^\dagger H \mathbf{c}}{\mathbf{c}^\dagger S \mathbf{c}}.
+$$
+
+### The gradient of a vector dependent function
+
+(add stuff. function of vector and its complex conjugate)
+
+### The Hessian of a vector dependent function
+
+(add stuff)
+
+## Exercies {.nonumber}
+
+3 absolute beginner exercises that explores differentiation with respect to vectors. One goal is to show that we obtain the generalized eigenvalue problem from the Rayleigh quotient.
+
+3 intermediate exercises, including one that explores bonding and antibonding orbitals of H2+
+
+1 advanced exercise that Taylor expands the Rayleigh quotient up to second order around a given vector, maybe the critical point.
+
+
+## Solutions {.nonumber}
+
+Individual solutions for the exercises above will be provided here.
+
