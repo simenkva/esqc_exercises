@@ -19,7 +19,7 @@ topics = {
 
 # Example exercise syntax:
 #
-# :::{#exr-1 recommended="math;topic" level="beginner" topic="coupled-cluster;scf"}
+# :::{#exr-1 recommended="math;topic" level="beginner" topic="coupled-cluster;scf" priority=1}
 # ### Heading
 # body
 # :::
@@ -91,6 +91,7 @@ def parse_attributes(attr_string):
         "recommended": [],
         "level": None,
         "topic": [],
+        "priority": 0,
     }
 
     # Exercise ID
@@ -118,6 +119,27 @@ def parse_attributes(attr_string):
 
         elif key == "level":
             result["level"] = value.strip()
+
+    # Priority may be quoted or unquoted, unlike the other attributes.
+    priority_attribute = re.search(
+        r"(?:^|\s)priority\s*=\s*(?:([\"'])(.*?)\1|([^\s]+))",
+        attr_string,
+    )
+
+    if priority_attribute:
+        value = (
+            priority_attribute.group(2)
+            if priority_attribute.group(1)
+            else priority_attribute.group(3)
+        ).strip()
+
+        if not re.fullmatch(r"[+-]?\d+", value):
+            raise ValueError(f"priority must be a signed integer, got {value!r}")
+
+        result["priority"] = int(value)
+
+    elif re.search(r"(?:^|\s)priority\s*=", attr_string):
+        raise ValueError("priority must be a signed integer")
 
     return result
 
@@ -277,24 +299,32 @@ def exercise_list_item(ex):
 def exercises_for_day_1(level):
     """Exercises recommended for the mathematics tutorial on day 1."""
 
-    return [
-        ex
-        for ex in exercises
-        if "math" in ex["recommended"]
-        and ex["level"] == level
-    ]
+    return sorted(
+        (
+            ex
+            for ex in exercises
+            if "math" in ex["recommended"]
+            and ex["level"] == level
+        ),
+        key=lambda ex: ex["priority"],
+        reverse=True,
+    )
 
 
 def exercises_for_topic(topic, level):
     """Recommended exercises for a quantum-chemistry topic."""
 
-    return [
-        ex
-        for ex in exercises
-        if "topic" in ex["recommended"]
-        and topic in ex["topic"]
-        and ex["level"] == level
-    ]
+    return sorted(
+        (
+            ex
+            for ex in exercises
+            if "topic" in ex["recommended"]
+            and topic in ex["topic"]
+            and ex["level"] == level
+        ),
+        key=lambda ex: ex["priority"],
+        reverse=True,
+    )
 
 
 # ---------------------------------------------------------------------------

@@ -6,6 +6,12 @@ Many exercises have been written by Simen Kvaal, while many other (excellent) ex
 
 
 
+
+
+::: {.content-visible when-profile="tutor"}
+
+
+
 ## Topics needed (List from Lucas)
 
 If an exercise is provided, please cross it out below.
@@ -74,4 +80,11 @@ topics = {
     "multiconfig-methods": "Multiconfigurational methods",
 }
 
+one can also add `priority=n`
+
+
 ```
+
+
+
+:::
