@@ -100,7 +100,7 @@
     "href": "_generated/recommended-by-topic.html#second-quantization",
     "title": "Recommended exercises by school topic",
     "section": "Second quantization",
-    "text": "Second quantization\n\nBeginner\n\nExercise 3.1 — Very basic sums\nExercise 3.2 — Simplifying as a sum\nExercise 3.4 — Reconstruct a vector\nExercise 3.6 — The summation index is a dummy index\nExercise 3.7 — Linearity of sums\nExercise 3.8 — When something does not depend on the summation index\nExercise 3.9 — Free and summed indices\nExercise 3.10 — Shifting the summation index\nExercise 3.11 — The Kronecker delta: basic exercise\nExercise 4.5 — Basic binomial coefficients\nExercise 4.6 — Pascal’s triangle\nExercise 4.9 — The binomial theorem\nExercise 5.6 — Your first induction proof\nExercise 22.1 — From components to a gradient\nExercise 22.2 — Differentiating a quadratic form\n\n\n\nIntermediate\n\nExercise 4.10 — Coefficients in binomial expansions\nExercise 5.7 — Direct proof with a matrix\nExercise 26.3 — The exponential, sine, and cosine series\nExercise 26.7 — The Cauchy product of power series\n\n\n\nFor the curious\n\nExercise 4.7 — Pascal’s identity",
+    "text": "Second quantization\n\nBeginner\n\nExercise 3.1 — Very basic sums\nExercise 3.2 — Simplifying as a sum\nExercise 9.1 — Checking candidate eigenvectors\nExercise 3.4 — Reconstruct a vector\nExercise 3.6 — The summation index is a dummy index\nExercise 3.7 — Linearity of sums\nExercise 3.8 — When something does not depend on the summation index\nExercise 3.9 — Free and summed indices\nExercise 3.10 — Shifting the summation index\nExercise 3.11 — The Kronecker delta: basic exercise\nExercise 4.5 — Basic binomial coefficients\nExercise 4.6 — Pascal’s triangle\nExercise 4.9 — The binomial theorem\nExercise 5.6 — Your first induction proof\nExercise 22.1 — From components to a gradient\nExercise 22.2 — Differentiating a quadratic form\n\n\n\nIntermediate\n\nExercise 9.3 — Eigenvalues and diagonalization of a Hermitian matrix\nExercise 4.10 — Coefficients in binomial expansions\nExercise 5.7 — Direct proof with a matrix\nExercise 26.3 — The exponential, sine, and cosine series\nExercise 26.7 — The Cauchy product of power series\n\n\n\nFor the curious\n\nExercise 4.7 — Pascal’s identity",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises by school topic"
@@ -144,7 +144,7 @@
     "href": "_generated/recommended-by-topic.html#relativistic-quantum-chemistry",
     "title": "Recommended exercises by school topic",
     "section": "Relativistic quantum chemistry",
-    "text": "Relativistic quantum chemistry\n\nBeginner\n\nExercise 3.12 — The Levi–Civita symbol: basic exercise",
+    "text": "Relativistic quantum chemistry\n\nBeginner\n\nExercise 3.12 — The Levi–Civita symbol: basic exercise\nExercise 17.2 — Roots of a cubic polynomial by guessing and polynomial long division",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises by school topic"
@@ -155,7 +155,7 @@
     "href": "_generated/recommended-by-topic.html#molecular-properties",
     "title": "Recommended exercises by school topic",
     "section": "Molecular properties",
-    "text": "Molecular properties\nNo exercises selected.",
+    "text": "Molecular properties\n\nIntermediate\n\nExercise 7.1 — The vector triple product and the Levi-Civita symbol",
     "crumbs": [
       "Exercise recommendations",
       "Recommended exercises by school topic"

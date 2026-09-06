@@ -28,6 +28,7 @@ useful as a warm-up to the proper exercises given each day.
 
 - @exr-summing-1 — Very basic sums
 - @exr-summing-2 — Simplifying as a sum
+- @exr-check-candidate-eigenvectors — Checking candidate eigenvectors
 - @exr-summing-4 — Reconstruct a vector
 - @exr-summing-dummy-index — The summation index is a dummy index
 - @exr-summing-linearity — Linearity of sums
@@ -44,6 +45,7 @@ useful as a warm-up to the proper exercises given each day.
 
 ### Intermediate {.unnumbered}
 
+- @exr-hermitian-2x2-eigenvalue-problem — Eigenvalues and diagonalization of a Hermitian matrix
 - @exr-combinatorics-binomial-theorem-coefficients — Coefficients in binomial expansions
 - @exr-proofs-direct-matrix — Direct proof with a matrix
 - @exr-complex-power-series-exponential-sine-cosine — The exponential, sine, and cosine series
@@ -80,10 +82,13 @@ _No exercises selected._
 ### Beginner {.unnumbered}
 
 - @exr-levi-civita — The Levi--Civita symbol: basic exercise
+- @exr-rational-roots-cubic — Roots of a cubic polynomial by guessing and polynomial long division
 
 ## Molecular properties {.unnumbered}
 
-_No exercises selected._
+### Intermediate {.unnumbered}
+
+- @exr-levi-civita-vector-triple-product — The vector triple product and the Levi-Civita symbol
 
 ## Multiconfigurational methods {.unnumbered}
 
