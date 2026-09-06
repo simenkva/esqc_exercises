@@ -27,7 +27,7 @@ If an exercise is provided, please cross it out below.
     - [x] Handling summation signs (also in combination with Kronecker deltas)
     - [x] Definition of exp as a power series
     - [x] Partial derivatives of vectors (CI eigenvalue problem)
-    - [ ] Finding eigenvalues and eigenvectors of a 2x2 matrix.
+    - [x] Finding eigenvalues and eigenvectors of a 2x2 matrix.
 - SCF
     - [x] Matrix algebra: matrix multiplication
     - [ ] unitary transformation
@@ -44,12 +44,12 @@ If an exercise is provided, please cross it out below.
     - [x] Partial derivatives with respect to dependent variables (In this case: the parameters Pn and their complex conjugates Pn∗)
 - Relativity
     - [x] Levi-Civita symbol
-    - [ ] Roots of a 3rd order polynomial
+    - [x] Roots of a 3rd order polynomial
 - Coupled cluster
     - [X] Taylor expansion
     - [x] BCH expansion
 - Molecular properties
-    - [ ] Writing cross product in terms of Levi-Civita symbols
+    - [x] Writing cross product in terms of Levi-Civita symbols
     - [ ] Evaluating commutator of momentum operator with a local operator (like vector potential)
     - [ ] Lagrange multiplier method
     - [ ] Total and partial derivatives

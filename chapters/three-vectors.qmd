@@ -50,7 +50,7 @@ This index notation is especially useful for deriving identities involving sever
 
 ## Exercises {.unnumbered}
 
-::: {#exr-levi-civita-vector-triple-product level="intermediate"}
+::: {#exr-levi-civita-vector-triple-product level="intermediate" recommended="topic" topic="molecular-properties"}
 ### The vector triple product and the Levi-Civita symbol
 
 It is recommended that you also look at @exr-levi-civita before doing this exercise, and also @exr-kronecker-delta on the Kronecker delta.

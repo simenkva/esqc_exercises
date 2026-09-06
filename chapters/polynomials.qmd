@@ -192,7 +192,8 @@ c. Write $P(x)$ as a product of four linear factors.
 
 
 
-::: {#exr-rational-roots-cubic level="beginner"}
+::: {#exr-rational-roots-cubic level="beginner" recommended="topic" topic="relativity"}
+
 ### Roots of a cubic polynomial by guessing and polynomial long division
 
 Every cubic equation
