@@ -37,11 +37,12 @@ book:
     - part: "Linear algebra"
       chapters:
         - chapters/vectors-and-matrices.qmd
+        - chapters/hybridization.qmd
+        - chapters/eigenvalues-and-diagonalization.qmd
         - chapters/general-vector-spaces.qmd
         - chapters/complex-vector-space.qmd
         - chapters/gaussian-elimination.qmd
         - chapters/bra-ket-notation-new.qmd
-        - chapters/eigenvalues-and-diagonalization.qmd
         - chapters/gram-schmidt.qmd
         - chapters/singular-value-decomposition.qmd
         - chapters/polynomial-vector-spaces.qmd

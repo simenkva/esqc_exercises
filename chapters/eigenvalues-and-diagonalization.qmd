@@ -1,157 +1,1879 @@
-# Eigenvalues and diagonalization
+# Eigenvalues and eigenvectors
 
-These exercises develop the spectral theorem and apply determinants to finite-dimensional eigenvalue problems.
+Eigenvalue problems are among the most important problems in linear algebra, and they occur throughout quantum chemistry. In an eigenvalue problem, we are given a square matrix $A\in\mathbb{C}^{n\times n}$ and seek a number $\lambda\in\mathbb{C}$ and a nonzero vector $\mathbf{x}\in\mathbb{C}^n$ such that
+
+$$
+A\mathbf{x}=\lambda\mathbf{x}.
+$$
+
+The number $\lambda$ is called an *eigenvalue* of $A$, and the nonzero vector $\mathbf{x}$ is called an *eigenvector* corresponding to $\lambda$. In column-vector notation,
+
+$$
+\mathbf{x}=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix}.
+$$
+
+The equation $A\mathbf{x}=\lambda\mathbf{x}$ says that multiplication by $A$ has a particularly simple effect on an eigenvector: it only multiplies the vector by a number. Thus, the direction represented by $\mathbf{x}$ is left unchanged, apart from multiplication by the scalar $\lambda$. Notice that $\mathbf{x}=\mathbf{0}$ is excluded from the definition, since $A\mathbf{0}=\lambda\mathbf{0}$ holds for every $\lambda$ and therefore tells us nothing about the matrix.
+
+The eigenvalue equation can equivalently be written as
+
+$$
+(A-\lambda I)\mathbf{x}=\mathbf{0},
+$$
+
+where $I$ is the identity matrix. Since we require $\mathbf{x}\neq\mathbf{0}$, the matrix $A-\lambda I$ must have a nontrivial null space and therefore cannot be invertible. For a finite-dimensional square matrix, this is equivalent to
+
+$$
+\det(A-\lambda I)=0.
+$$
+
+This equation is called the **characteristic equation** or **secular equation** of $A$. Its solutions are the eigenvalues of $A$. Once an eigenvalue $\lambda$ has been found, the corresponding eigenvectors are obtained by solving the homogeneous linear system $(A-\lambda I)\mathbf{x}=\mathbf{0}$. 
+
+An especially important situation occurs when $A$ has enough linearly independent eigenvectors to form a basis of $\mathbb{C}^n$. Suppose these eigenvectors are
+
+$$
+\mathbf{x}_1,\mathbf{x}_2,\ldots,\mathbf{x}_n,
+$$
+
+where the subscript labels the different vectors. Thus,
+
+$$
+\mathbf{x}_j=
+\begin{bmatrix}
+x_{1j}\\
+x_{2j}\\
+\vdots\\
+x_{nj}
+\end{bmatrix}
+$$
+
+denotes the $j$'th eigenvector, while $x_{ij}$ denotes its $i$th component. If $\mathbf{x}_j$ has eigenvalue $\lambda_j$, then
+
+$$
+A\mathbf{x}_j=\lambda_j\mathbf{x}_j,\qquad j=1,\ldots,n.
+$$
+
+We can collect these eigenvectors as the columns of a matrix
+
+$$
+X=[\mathbf{x}_1\ \mathbf{x}_2\ \cdots\ \mathbf{x}_n]
+$$
+
+and collect their corresponding eigenvalues in the diagonal matrix
+
+$$
+D=\begin{bmatrix}
+\lambda_1 & 0 & \cdots & 0\\
+0 & \lambda_2 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_n
+\end{bmatrix}.
+$$
+
+The $n$ separate eigenvalue equations can then be written as the single matrix equation
+
+$$
+AX=XD.
+$$
+
+Because the eigenvectors form a basis, $X$ is invertible. Consequently,
+
+$$
+A=XDX^{-1}.
+$$
+
+A matrix for which such an eigenvector basis exists is called *diagonalizable*. Diagonalization is useful because the action of a diagonal matrix is particularly simple: it acts independently on each component. In a basis of eigenvectors, the matrix $A$ therefore has its simplest possible form. This idea is fundamental in quantum mechanics, where many important matrices, in particular Hermitian matrices, possess an orthonormal basis of eigenvectors.
+
+In the exercises below, we study how eigenvalues and eigenvectors are found, when a matrix can be diagonalized, and why Hermitian and, more generally, normal matrices have especially useful eigenvalue decompositions.
+
 
 ## Exercises
 
-### Eigenvalue decomposition
 
-Of great importance to quantum chemistry is the time-independent Schrödinger equation: Given the Hamiltonian operator $\hat{H}$, which is usually Hermitian, find a nonzero $\left|\psi\right\rangle$, called an eigenvector, and a real number $E$, called an eigenvalue, such that $$\hat{H} \left|\psi\right\rangle = E \left|\psi\right\rangle.$$ Choosing a particular orthonormal basis $\{\left|\phi_i\right\rangle\}$ for Hilbert space, a matrix eigenvalue problem arises, $$A \mathbf{u} = E \mathbf{u}, \quad u_i = \left\langle\phi_i|\psi\right\rangle, \quad A_{ij} = \left\langle\phi_i|\hat{H}|\phi_j\right\rangle.$$
+::: {#exr-check-candidate-eigenvectors level="beginner" recommended="math" priority=10}
+### Checking candidate eigenvectors
 
-We prove the spectral theorem for normal operators over finite dimensional Hilbert spaces. The spectral theorem states that one can actually find a *basis* of eigenvectors for normal operators. The normal operators include the Hermitian operators.
+Consider the real symmetric matrix
 
-In this section, we let $M(n) = M(n,n,\mathbb{C}) = \mathbb{C}^{n\times n}$ be the set of complex square matrices of dimension $n$.
+$$
+A=\begin{bmatrix}
+2 & 1\\
+1 & 2
+\end{bmatrix}.
+$$
 
-Two matrices $A$ and $B$ are said to be *similar* if there is an invertible matrix $U$ such that $A = U B U^{-1}$. If $U$ is unitary, then $A$ and $B$ are *unitarily similar*. ($U$ is unitary if and only if $U^H = U^{-1}$.)
+Recall that a nonzero vector $\mathbf{x}$ is an eigenvector of $A$ if
 
-::: {#exr-eigenvalues-and-diagonalization-eigenvalue-decomposition recommended="math" level="advanced"}
+$$
+A\mathbf{x}=\lambda\mathbf{x}
+$$
 
-1.  What does it mean that $A \in M(n)$ is normal?
+for some number $\lambda$. In other words, after multiplication by $A$, the vector must point in the same or exactly opposite direction: it may be stretched, compressed, or multiplied by a negative number, but its direction cannot otherwise change.
 
-2.  Prove that a diagonal matrix $D \in M(n)$ is normal. (A matrix $A$ is diagonal if and only if $A_{ij}=0$ whenever $i\neq j$.)
+For each of the following candidate vectors, compute $A\mathbf{x}$ and decide whether $\mathbf{x}$ is an eigenvector of $A$. If it is, find the corresponding eigenvalue $\lambda$.
 
-3.  Prove that $U$ is unitary if and only if its columns are orthonormal.
+a.	Consider
 
-4.  Prove that if $A$ is normal and $B$ is unitarily similar to $A$, then $B$ is normal.
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\1\end{bmatrix}.
+	$$
 
-5.  Prove that if $A$ is unitarily equivalent to a diagonal matrix, then $A$ is normal.
+	Compute $A\mathbf{x}$. Can the result be written as $\lambda\mathbf{x}$? If so, what is $\lambda$?
 
-The next part requires *Schur's Lemma*:
+b.	Consider
 
-> **Lemma: Schur's Lemma.** Let $A \in M(n)$. Then $A$ is unitarily equivalent to an upper triangular matrix. ($R$ is upper triangular if $R_{ij}=0$ whenever $i > j$.)
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\-1\end{bmatrix}.
+	$$
 
-The proof of Shur's Lemma can be found in, e.g., Fraleigh and Beauregard.
+	Compute $A\mathbf{x}$ and determine whether $\mathbf{x}$ is an eigenvector. If it is, find its eigenvalue.
 
-1.  Prove that every normal matrix $A$ is unitarily equivalent to a normal upper-triangular matrix $B$. (Use Schur's Lemma and exercise that normality is preserved by unitary similarity.)
+c.	Consider
 
-2.  Prove that a normal upper triangular matrix $B$ must be diagonal. Hint: Let $C = B^H B = BB^H$, and compute $C_{11}$ to show that $B_{1j} = 0$ if $j > 1$. Continue to $C_{22}$, and all the way up to $C_{nn}$.
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\0\end{bmatrix}.
+	$$
 
-We have now proved:
+	Compute $A\mathbf{x}$. Is the result a scalar multiple of $\mathbf{x}$? Is $\mathbf{x}$ an eigenvector?
 
-> **Theorem: Spectral theorem for normal matrices.** Suppose $A \in M(n)$ is normal, i.e., $AA^H = A^H A$. Then there is a unitary matrix $U \in M(n)$ and a diagonal matrix $D \in M(n)$ such that $$A = U D U^H. \quad\text{spectral decomposition}$$
+d.	Consider
 
-1.  Let $\mathbf{u}_i = U_{:.i}$ be the $i$th column for $U$. Explain why these vectors form a basis for $\mathbb{C}^n$.
+	$$
+	\mathbf{x}=\begin{bmatrix}2\\2\end{bmatrix}.
+	$$
 
-2.  Show that $$A = \sum_{i=1}^n d_i \mathbf{u}_i \mathbf{u}_i^H, \quad d_i = D_{ii}. \quad\text{spectral decomposition}$$ Write this formula also using bra-ket notation.
+	Without doing the full matrix-vector multiplication at first, compare this vector with the vector in part a. Do you expect it to be an eigenvector? Check your answer by computing $A\mathbf{x}$.
 
-3.  What does $A$ do with the vector $\mathbf{u}_k$ for some $k$? What does $A$ do to a linear combination of the basis vectors?
+e.	The vectors in parts a and d are different vectors, but they point in the same direction. What eigenvalue do they have? What does this tell you about scalar multiples of an eigenvector?
 
-A special kind of normal matrix is a Hermitian matrix, for which $$A^H = A.$$
+f.	Compare the two eigenvectors found in parts a and b. Compute their ordinary dot product. What do you observe?
+:::
 
-1.  Show that a Hermitian matrix is unitarily equivalent to a diagonal matrix with *real* numbers on the diagonal, i.e., $A = U D U^H$ with $D_{ii} \in \mathbb{R}$.
+
+
+
+
+::: {#exr-eigenvalues-chemical-kinetics level="beginner" recommended="math" priority=10}
+### Eigenvalues in chemical kinetics
+
+Consider the reversible reaction
+
+$$
+\mathrm{A}\underset{k}{\stackrel{k}{\rightleftharpoons}}\mathrm{B}.
+$$
+
+The positive number $k$ is called the *rate constant*. It tells us how rapidly the reaction takes place. Here we use the same rate constant for the forward reaction $\mathrm{A}\to\mathrm{B}$ and the backward reaction $\mathrm{B}\to\mathrm{A}$, to keep the example simple.
+
+Let $a(t)$ and $b(t)$ denote the concentrations of A and B. For a first-order reaction, the reaction rate is proportional to the concentration of the reacting species. Thus, A is converted into B at a rate $ka$, while B is converted into A at a rate $kb$. The larger $k$ is, the faster the reaction proceeds. If concentration is measured in $\mathrm{mol\,L^{-1}}$ and time in seconds, $k$ has units of $\mathrm{s^{-1}}$.
+
+The concentration of A therefore decreases due to the forward reaction at a rate $ka$ and increases due to the backward reaction at a rate $kb$. Similarly, the concentration of B increases at a rate $ka$ and decreases at a rate $kb$. This gives the rate equations
+
+$$
+\frac{da}{dt}=-ka+kb,\qquad \frac{db}{dt}=ka-kb.
+$$
+
+If we collect the concentrations in the vector
+
+$$
+\mathbf{x}(t)=\begin{bmatrix}a(t)\\b(t)\end{bmatrix},
+$$
+
+the rate equations can be written as
+
+$$
+\frac{d\mathbf{x}}{dt}=K\mathbf{x},\qquad K=\begin{bmatrix}-k&k\\k&-k\end{bmatrix}.
+$$
+
+We will see that the eigenvectors of $K$ describe two particularly simple ways in which the concentrations can change.
+
+a.	Consider the vector
+
+	$$
+	\mathbf{x}_1=\begin{bmatrix}1\\1\end{bmatrix}.
+	$$
+
+	Calculate $K\mathbf{x}_1$ and show that $\mathbf{x}_1$ is an eigenvector of $K$. What is its eigenvalue? Explain chemically why nothing changes when $a=b$.
+
+b.	Now consider
+
+	$$
+	\mathbf{x}_2=\begin{bmatrix}1\\-1\end{bmatrix}.
+	$$
+
+	Calculate $K\mathbf{x}_2$ and show that it is also an eigenvector. What is its eigenvalue?
+
+c.	Suppose that the concentration vector has the form
+
+	$$
+	\mathbf{x}(t)=c(t)\mathbf{x}_2.
+	$$
+
+	Insert this into the rate equation and use your result from part b to show that
+
+	$$
+	\frac{dc}{dt}=-2kc.
+	$$
+
+	Thus $c(t)=c(0)e^{-2kt}$. What happens to this contribution as time increases? What happens more rapidly if the rate constant $k$ is increased? Explain why the two eigenvectors $\mathbf{x}_1$ and $\mathbf{x}_2$ can be interpreted as an *equilibrium mode* and a *relaxation mode*, respectively.
+:::
+
+
+
+
+
+::: {#exr-hermitian-2x2-eigenvalue-problem level="intermediate" priority=10 recommended="math"}
+### Eigenvalues and diagonalization of a Hermitian matrix
+
+Consider the matrix
+
+$$
+A=\begin{bmatrix}
+2 & -\mathrm{i}\\
+\mathrm{i} & 2
+\end{bmatrix}.
+$$
+
+a.	Show that $A$ is Hermitian, that is, verify that
+
+	$$
+	A^H=A.
+	$$
+
+b.	The eigenvalues of $A$ are the values of $\lambda$ for which
+
+	$$
+	\det(A-\lambda I)=0.
+	$$
+
+	Set up the matrix $A-\lambda I$, calculate its determinant, and find the two eigenvalues $\lambda_1$ and $\lambda_2$. Verify that both eigenvalues are real. (The determinant of $\begin{bmatrix} a & b \\ c & d \end{bmatrix}$ is $ad-bc$.)
+
+c.	For each eigenvalue $\lambda_j$, solve
+
+	$$
+	(A-\lambda_j I)\mathbf{x}_j=\mathbf{0}
+	$$
+
+	to find a corresponding eigenvector $\mathbf{x}_j$. Normalize the eigenvectors so that
+
+	$$
+	\mathbf{x}_j^H\mathbf{x}_j=1.
+	$$
+
+d.	Verify explicitly that your two normalized eigenvectors are orthogonal,
+
+	$$
+	\mathbf{x}_1^H\mathbf{x}_2=0.
+	$$
+
+	Thus, the eigenvectors form an orthonormal basis of $\mathbb{C}^2$.
+
+e.	Form the matrix $U$ whose columns are the normalized eigenvectors,
+
+	$$
+	U=[\mathbf{x}_1\ \mathbf{x}_2].
+	$$
+
+	Show explicitly that $U$ is unitary by calculating $U^HU$.
+
+f.	Form the diagonal matrix
+
+	$$
+	D=\begin{bmatrix}
+	\lambda_1&0\\
+	0&\lambda_2
+	\end{bmatrix},
+	$$
+
+	where the ordering of the eigenvalues must agree with the ordering of the eigenvectors in $U$.
+
+g.	Verify by direct matrix multiplication that
+
+	$$
+	A=UDU^H.
+	$$
+
+	Equivalently, verify that $U^HAU=D$. Explain briefly why $U^{-1}=U^H$ in this diagonalization.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+::: {#exr-nondiagonalizable-2x2-matrix level="intermediate" recommended="math" priority=10}
+### A matrix that cannot be diagonalized
+
+Consider the matrix
+
+$$
+A=\begin{bmatrix}
+2 & 1\\
+0 & 2
+\end{bmatrix}.
+$$
+
+a.	Find the eigenvalues of $A$ by solving the characteristic equation $\det(A-\lambda I)=0$. How many distinct eigenvalues does $A$ have?
+
+b.	Find all eigenvectors corresponding to the eigenvalue you found. How many linearly independent eigenvectors does $A$ have?
+
+c.	To diagonalize a $2\times2$ matrix, we need two linearly independent eigenvectors, which can be used as the columns of an invertible matrix $U$. Explain why this is impossible for $A$, and conclude that $A$ is not diagonalizable.
+:::
+
+
+
+
+
+::: {#exr-eigenvalues-chemical-kinetics-asymmetric level="intermediate"}
+### A reversible reaction with different rate constants
+
+It is recommended that you first complete @exr-eigenvalues-chemical-kinetics.
+
+Consider now the more general reversible reaction
+
+$$
+\mathrm{A}\underset{k_b}{\stackrel{k_f}{\rightleftharpoons}}\mathrm{B},
+$$
+
+where $k_f>0$ is the rate constant for the forward reaction $\mathrm{A}\to\mathrm{B}$ and $k_b>0$ is the rate constant for the backward reaction $\mathrm{B}\to\mathrm{A}$. The concentrations satisfy
+
+$$
+\frac{d\mathbf{x}}{dt}=K\mathbf{x},\qquad \mathbf{x}(t)=\begin{bmatrix}a(t)\\b(t)\end{bmatrix},\qquad K=\begin{bmatrix}-k_f&k_b\\k_f&-k_b\end{bmatrix}.
+$$
+
+a.	Find the two eigenvalues of $K$ and a corresponding eigenvector for each eigenvalue. Show that one eigenvalue is zero and that the other is negative.
+
+b.	The eigenvector with eigenvalue zero describes an equilibrium concentration vector. Use it to show that at equilibrium
+
+	$$
+	\frac{b}{a}=\frac{k_f}{k_b}.
+	$$
+
+	Explain why this result also follows directly by requiring the forward and backward reaction rates to be equal.
+
+c.	The other eigenvector describes relaxation toward equilibrium. Show that its time dependence contains the factor
+
+	$$
+	e^{-(k_f+k_b)t}.
+	$$
+
+	What does this tell you about the rate at which the system approaches equilibrium?
+:::
+
+
+
+
+
+
+::: {#exr-eigenvalues-computational-reaction-network level="advanced" recommended="math" priority=10}
+### Eigenvalues of a reaction network
+
+It is recommended that you first complete or at least read through @exr-eigenvalues-chemical-kinetics and @exr-eigenvalues-chemical-kinetics-asymmetric.
+
+Consider the reaction network
+
+$$
+\mathrm{A}\underset{k_{BA}}{\stackrel{k_{AB}}{\rightleftharpoons}}\mathrm{B}
+\underset{k_{CB}}{\stackrel{k_{BC}}{\rightleftharpoons}}\mathrm{C},
+\qquad
+\mathrm{B}\underset{k_{DB}}{\stackrel{k_{BD}}{\rightleftharpoons}}\mathrm{D}
+\underset{k_{ED}}{\stackrel{k_{DE}}{\rightleftharpoons}}\mathrm{E}.
+$$
+
+All reactions are first order. Let
+
+$$
+\mathbf{x}(t)=
+\begin{bmatrix}
+a(t)\\
+b(t)\\
+c(t)\\
+d(t)\\
+e(t)
+\end{bmatrix}
+$$
+
+contain the concentrations of the five species. Use the rate constants
+
+$$
+k_{AB}=1.0,\quad
+k_{BA}=0.4,\quad
+k_{BC}=0.7,\quad
+k_{CB}=0.2,\quad
+k_{BD}=0.5,\quad
+k_{DB}=0.3,\quad
+k_{DE}=0.8,\quad
+k_{ED}=0.1,
+$$
+
+in units of $\mathrm{s}^{-1}$.
+
+a.	Write the five coupled rate equations and show that they can be written as
+
+	$$
+	\frac{d\mathbf{x}}{dt}=K\mathbf{x}.
+	$$
+
+	Construct the $5\times5$ rate matrix $K$. Check that the sum of the components of $d\mathbf{x}/dt$ is zero. What quantity is therefore conserved?
+
+b.	Use Python to compute the eigenvalues and eigenvectors of $K$. You may use, for example,
+
+	```python
+	import numpy as np
+
+	eigenvalues, eigenvectors = np.linalg.eig(K)
+	```
+
+	Identify the eigenvalue that is zero, up to numerical precision. Verify that all the other eigenvalues have negative real parts. What do the zero eigenvalue and the negative eigenvalues mean physically?
+
+c.	Scale the eigenvector belonging to the zero eigenvalue so that its components sum to $1$. Interpret the resulting components in terms of fractions of A, B, C, D, and E.
+
+d.	Start with all material in A,
+
+	$$
+	\mathbf{x}(0)=
+	\begin{bmatrix}
+	1\\
+	0\\
+	0\\
+	0\\
+	0
+	\end{bmatrix}.
+	$$
+
+	Compute
+
+	$$
+	\mathbf{x}(t)=e^{Kt}\mathbf{x}(0)
+	$$
+
+	numerically for a suitable range of times. You may use `scipy.linalg.expm` to evaluate the matrix exponential. Plot all five concentrations as functions of time.
+
+	Verify from your plot and numerical results that the total concentration remains constant and that the concentration vector approaches the equilibrium composition found in part c.
+
+e.	Sort the nonzero eigenvalues according to the magnitude of their real parts. The eigenvalue closest to zero describes the slowest decaying mode of the reaction network. Determine its characteristic relaxation time
+
+	$$
+	\tau=-\frac{1}{\operatorname{Re}\lambda}.
+	$$
+
+	Compare this value with the time scale over which your numerical solution approaches equilibrium. Explain how the eigenvalues of the rate matrix separate the dynamics of a complicated reaction network into different relaxation time scales.
+
+f.	The eigenvalue analysis predicts not only that the system approaches equilibrium, but also how rapidly it does so. Let $\mathbf{x}_{\mathrm{eq}}$ denote the equilibrium concentration vector found in part c, and define the distance from equilibrium by
+
+	$$
+	d(t)=\|\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}\|_2.
+	$$
+
+	Using your numerical solution from part d, plot $d(t)$ as a function of time using a logarithmic scale for the vertical axis. You can use `plt.semilogy` for this.
+
+	At sufficiently long times, the slowest decaying eigenmode should dominate. If $\lambda_{\mathrm{slow}}$ is the nonzero eigenvalue closest to zero, we therefore expect approximately
+
+	$$
+	d(t)\propto e^{\lambda_{\mathrm{slow}}t}.
+	$$
+
+	On the same plot, add a curve proportional to $e^{\lambda_{\mathrm{slow}}t}$, choosing its prefactor so that it can easily be compared with $d(t)$. Do the two curves become parallel at long times? Explain why a straight line on this logarithmic plot provides a direct visualization of the slowest relaxation mode of the reaction network.
 
 :::
 
-### Diagonalization of a matrix
 
-A matrix $A$ has an eigenvalue $E$ if and only if there is a nonzero solution to the linear system $$(A - EI)\mathbf{x} = 0.$$ Thus, the matrix $A - EI$ must be singular, i.e., not invertible. The eigenvector $\mathbf{x}$ is then a vector in the null space of this matrix.
 
-A sufficient and necessary criterion for invertibility of a matrix $B$ is that the *determinant* is nonzero. The definition of the determinant can be stated as follows:
 
-> **Definition: Determinant.** Let $A \in M(n)$. The determinant, written $\det(A) \in \mathbb{C}$ is defined by $$\det(A) = \sum_{p \in S_n} (-1)^{|p|} A_{1,p(1)} A_{2,p(2)} \cdots A_{n,p(n)}.$$ Here, $S_N$ is the set of *permutations* of the numbers $\{1,2,\cdots,n\}$. A permutation is by definition any bijective map.
 
-Each permutation $p \in S_n$ is a rearrangement is thus completely specified by the new order of the numbers $\{1,2,\cdots,n\}$, i.e., $(p(1),p(2),\cdots,p(n))$. For example, $(1,2,3,4,5,6) \in S_6$ is the *identity permutation* that leaves any number alone. The permutation $(3,2,1,4,6,5)$ makes 1 and 3 switch place, and 5 and 6.
 
-Any permutation can be written as a product (composition) of *transpositions*, i.e., exchanges of exactly two elements. Thus, $(3,1,2) = (1,2)(2,3)$. Here, the two-element notation indicates which elements are switched. Every decomposition of a given permutation uses either an even number of transpositions or an odd number, denoted $|p|$ modulo $2$. The *sign* of a permutation $p$ is $(-1)^{|p|}$.
 
-There are $n!$ unique permutations of an $n$-element set.
 
-:::{#exr-eigenvalues-and-diagonalization-write-out-set-permutations}
 
-Write out the set of permutations $S_1$, $S_2$ and $S_3$.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise}
 
-Compute the sign of the permutations of the previous exercise.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension}
 
-Compute explicit expressions for the determinants of matrices of dimension 1, 2, and 3.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator}
 
-(Extra.) In Python, the module `itertools` contains an iterator class `permutations` that allow efficient looping over permutations. Can you write a function that computes the sign of a permutation? Use the internet for efficiency.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2}
 
-Compute explicit expressions for the determinants of matrices of dimension up to 3. By equating the determinant of $A - EI$ with zero, a polynomial equation in $E$ is obtained. Find the solutions in the case $n=2$.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues}
 
-Consider the matrix $$A = \begin{bmatrix} -1 & z \\ z & 1 \end{bmatrix} .$$ For which $z \in \mathbb{C}$ is $A$ Hermitian? Normal? Compute the eigenvalues as function of $z$. Also find the eigenvectors.
 
-:::
 
-:::{#exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors}
 
-For which values of $z$ does there exist a basis of eigenvectors?
 
-:::
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Eigenvalue decomposition
+### Solution for @exr-check-candidate-eigenvectors {.unnumbered}
 
-**Tutor note:** This exercise may be considered for the especially interested student. It requires some mathematical argument skill. I would not consider it *hard*, though, but perhaps not focus on this exercise to begin with. I will try to make a solution for this in time.
+a.	For
 
-### Solution to @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition {.unnumbered}
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\1\end{bmatrix},
+	$$
 
-*The source does not supply a solution.*
+	we obtain
 
-### Tutor note: Diagonalization of a matrix
+	$$
+	A\mathbf{x}=
+	\begin{bmatrix}
+	2&1\\
+	1&2
+	\end{bmatrix}
+	\begin{bmatrix}1\\1\end{bmatrix}
+	=
+	\begin{bmatrix}3\\3\end{bmatrix}
+	=
+	3\begin{bmatrix}1\\1\end{bmatrix}.
+	$$
 
-**Tutor note:** This exercise, I find quite important for understanding eigenvalue problems. I therefore recommend it. The students could also use computations in Python or similar if they find the analytic part a little hard.
+	Thus $\mathbf{x}$ is an eigenvector with eigenvalue
 
-I think this is one of th exercises that the tutors should spend some time with.
+	$$
+	\lambda=3.
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-write-out-set-permutations {.unnumbered}
+b.	For
 
-*The source does not supply a solution.*
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\-1\end{bmatrix},
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-sign-permutations-previous-exercise {.unnumbered}
+	we find
 
-*The source does not supply a solution.*
+	$$
+	A\mathbf{x}=
+	\begin{bmatrix}
+	2&1\\
+	1&2
+	\end{bmatrix}
+	\begin{bmatrix}1\\-1\end{bmatrix}
+	=
+	\begin{bmatrix}1\\-1\end{bmatrix}.
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension {.unnumbered}
+	Hence
 
-*The source does not supply a solution.*
+	$$
+	A\mathbf{x}=1\mathbf{x},
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-extra-python-module-itertools-contains-iterator {.unnumbered}
+	so $\mathbf{x}$ is an eigenvector with eigenvalue
 
-*The source does not supply a solution.*
+	$$
+	\lambda=1.
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-compute-explicit-expressions-determinants-matrices-dimension-2 {.unnumbered}
+c.	For
 
-*The source does not supply a solution.*
+	$$
+	\mathbf{x}=\begin{bmatrix}1\\0\end{bmatrix},
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-consider-matrix-hermitian-normal-compute-eigenvalues {.unnumbered}
+	we obtain
 
-*The source does not supply a solution.*
+	$$
+	A\mathbf{x}=
+	\begin{bmatrix}
+	2&1\\
+	1&2
+	\end{bmatrix}
+	\begin{bmatrix}1\\0\end{bmatrix}
+	=
+	\begin{bmatrix}2\\1\end{bmatrix}.
+	$$
 
-### Solution to @exr-eigenvalues-and-diagonalization-values-does-there-exist-basis-eigenvectors {.unnumbered}
+	The vector $\begin{bmatrix}2\\1\end{bmatrix}$ is not a scalar multiple of $\begin{bmatrix}1\\0\end{bmatrix}$. Therefore $\mathbf{x}$ is not an eigenvector of $A$.
 
-*The source does not supply a solution.*
+d.	The vector
+
+	$$
+	\begin{bmatrix}2\\2\end{bmatrix}
+	=
+	2\begin{bmatrix}1\\1\end{bmatrix}
+	$$
+
+	is a scalar multiple of the eigenvector from part a, so we expect it to have the same eigenvalue. Indeed,
+
+	$$
+	A\begin{bmatrix}2\\2\end{bmatrix}
+	=
+	\begin{bmatrix}6\\6\end{bmatrix}
+	=
+	3\begin{bmatrix}2\\2\end{bmatrix}.
+	$$
+
+	Thus it is an eigenvector with eigenvalue $\lambda=3$.
+
+e.	Both
+
+	$$
+	\begin{bmatrix}1\\1\end{bmatrix}
+	\qquad\text{and}\qquad
+	\begin{bmatrix}2\\2\end{bmatrix}
+	$$
+
+	have eigenvalue $3$. More generally, if
+
+	$$
+	A\mathbf{x}=\lambda\mathbf{x},
+	$$
+
+	then for any scalar $c$,
+
+	$$
+	A(c\mathbf{x})=cA\mathbf{x}=c\lambda\mathbf{x}=\lambda(c\mathbf{x}).
+	$$
+
+	Thus every nonzero scalar multiple of an eigenvector is also an eigenvector with the same eigenvalue.
+
+f.	The two eigenvectors found in parts a and b are
+
+	$$
+	\mathbf{x}_1=\begin{bmatrix}1\\1\end{bmatrix},
+	\qquad
+	\mathbf{x}_2=\begin{bmatrix}1\\-1\end{bmatrix}.
+	$$
+
+	Their dot product is
+
+	$$
+	\mathbf{x}_1^T\mathbf{x}_2=1\cdot1+1\cdot(-1)=0.
+	$$
+
+	Thus the two eigenvectors are orthogonal. This illustrates an important property of real symmetric matrices: eigenvectors belonging to different eigenvalues can be chosen to be orthogonal.
+
+
+### Solution for @exr-eigenvalues-chemical-kinetics {.unnumbered}
+
+a.	For
+
+	$$
+	\mathbf{x}_1=\begin{bmatrix}1\\1\end{bmatrix},
+	$$
+
+	we obtain
+
+	$$
+	K\mathbf{x}_1=
+	\begin{bmatrix}
+	-k&k\\
+	k&-k
+	\end{bmatrix}
+	\begin{bmatrix}
+	1\\
+	1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	-k+k\\
+	k-k
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	0\\
+	0
+	\end{bmatrix}.
+	$$
+
+	Hence
+
+	$$
+	K\mathbf{x}_1=0\mathbf{x}_1,
+	$$
+
+	so $\mathbf{x}_1$ is an eigenvector with eigenvalue
+
+	$$
+	\lambda_1=0.
+	$$
+
+	Chemically, $\mathbf{x}_1$ corresponds to equal concentrations of A and B. Since the forward rate is $ka$ and the backward rate is $kb$, these two rates are equal when $a=b$. There is therefore no net change in either concentration. This is the equilibrium mode.
+
+b.	For
+
+	$$
+	\mathbf{x}_2=\begin{bmatrix}1\\-1\end{bmatrix},
+	$$
+
+	we find
+
+	$$
+	K\mathbf{x}_2=
+	\begin{bmatrix}
+	-k&k\\
+	k&-k
+	\end{bmatrix}
+	\begin{bmatrix}
+	1\\
+	-1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	-2k\\
+	2k
+	\end{bmatrix}
+	=
+	-2k
+	\begin{bmatrix}
+	1\\
+	-1
+	\end{bmatrix}.
+	$$
+
+	Thus $\mathbf{x}_2$ is an eigenvector with eigenvalue
+
+	$$
+	\lambda_2=-2k.
+	$$
+
+c.	Suppose
+
+	$$
+	\mathbf{x}(t)=c(t)\mathbf{x}_2.
+	$$
+
+	Since $\mathbf{x}_2$ is constant,
+
+	$$
+	\frac{d\mathbf{x}}{dt}=\frac{dc}{dt}\mathbf{x}_2.
+	$$
+
+	On the other hand,
+
+	$$
+	K\mathbf{x}=K\left(c\mathbf{x}_2\right)=cK\mathbf{x}_2.
+	$$
+
+	Using
+
+	$$
+	K\mathbf{x}_2=-2k\mathbf{x}_2,
+	$$
+
+	we get
+
+	$$
+	K\mathbf{x}=-2kc\mathbf{x}_2.
+	$$
+
+	The rate equation
+
+	$$
+	\frac{d\mathbf{x}}{dt}=K\mathbf{x}
+	$$
+
+	therefore becomes
+
+	$$
+	\frac{dc}{dt}\mathbf{x}_2=-2kc\mathbf{x}_2.
+	$$
+
+	Since $\mathbf{x}_2\neq\mathbf{0}$,
+
+	$$
+	\frac{dc}{dt}=-2kc.
+	$$
+
+	The solution is
+
+	$$
+	c(t)=c(0)e^{-2kt}.
+	$$
+
+	As $t$ increases, this term approaches zero. Thus any concentration difference described by $\mathbf{x}_2$ gradually disappears.
+
+	The larger $k$ is, the more rapidly $e^{-2kt}$ decays, so the system approaches equilibrium faster.
+
+	The two eigenvectors therefore have simple interpretations:
+
+	$$
+	\mathbf{x}_1=\begin{bmatrix}1\\1\end{bmatrix}
+	$$
+
+	describes the equilibrium mode, which does not change with time, while
+
+	$$
+	\mathbf{x}_2=\begin{bmatrix}1\\-1\end{bmatrix}
+	$$
+
+	describes a relaxation mode, which decays exponentially toward zero.
+
+
+
+
+### Solution for @exr-hermitian-2x2-eigenvalue-problem {.unnumbered}
+
+a.	We have
+
+	$$
+	A=
+	\begin{bmatrix}
+	2&-i\\
+	i&2
+	\end{bmatrix}.
+	$$
+
+	Taking the complex conjugate and transposing gives
+
+	$$
+	A^H=
+	\begin{bmatrix}
+	2&i\\
+	-i&2
+	\end{bmatrix}^T
+	=
+	\begin{bmatrix}
+	2&-i\\
+	i&2
+	\end{bmatrix}
+	=A.
+	$$
+
+	Thus $A$ is Hermitian.
+
+b.	We have
+
+	$$
+	A-\lambda I=
+	\begin{bmatrix}
+	2-\lambda&-i\\
+	i&2-\lambda
+	\end{bmatrix}.
+	$$
+
+	The characteristic equation is
+
+	$$
+	\det(A-\lambda I)=(2-\lambda)^2-(-i)(i)=0.
+	$$
+
+	Since
+
+	$$
+	(-i)(i)=1,
+	$$
+
+	we obtain
+
+	$$
+	(2-\lambda)^2-1=0.
+	$$
+
+	Therefore
+
+	$$
+	(2-\lambda-1)(2-\lambda+1)=0,
+	$$
+
+	or
+
+	$$
+	(1-\lambda)(3-\lambda)=0.
+	$$
+
+	The eigenvalues are therefore
+
+	$$
+	\lambda_1=1,\qquad \lambda_2=3.
+	$$
+
+	Both eigenvalues are real, as expected for a Hermitian matrix.
+
+c.	For $\lambda_1=1$, we solve
+
+	$$
+	(A-I)\mathbf{x}_1=
+	\begin{bmatrix}
+	1&-i\\
+	i&1
+	\end{bmatrix}
+	\begin{bmatrix}x_1\\x_2\end{bmatrix}
+	=
+	\begin{bmatrix}0\\0\end{bmatrix}.
+	$$
+
+	The first equation gives
+
+	$$
+	x_1-ix_2=0,
+	$$
+
+	so
+
+	$$
+	x_1=ix_2.
+	$$
+
+	Choosing $x_2=1$ gives the eigenvector
+
+	$$
+	\begin{bmatrix}i\\1\end{bmatrix}.
+	$$
+
+	Its norm is
+
+	$$
+	\sqrt{|i|^2+|1|^2}=\sqrt{2},
+	$$
+
+	so a normalized eigenvector is
+
+	$$
+	\mathbf{x}_1=\frac{1}{\sqrt{2}}\begin{bmatrix}i\\1\end{bmatrix}.
+	$$
+
+	For $\lambda_2=3$, we solve
+
+	$$
+	(A-3I)\mathbf{x}_2=
+	\begin{bmatrix}
+	-1&-i\\
+	i&-1
+	\end{bmatrix}
+	\begin{bmatrix}x_1\\x_2\end{bmatrix}
+	=
+	\begin{bmatrix}0\\0\end{bmatrix}.
+	$$
+
+	The first equation gives
+
+	$$
+	-x_1-ix_2=0,
+	$$
+
+	so
+
+	$$
+	x_1=-ix_2.
+	$$
+
+	Choosing $x_2=1$ and normalizing gives
+
+	$$
+	\mathbf{x}_2=\frac{1}{\sqrt{2}}\begin{bmatrix}-i\\1\end{bmatrix}.
+	$$
+
+d.	The inner product of the two normalized eigenvectors is
+
+	$$
+	\mathbf{x}_1^H\mathbf{x}_2
+	=
+	\frac{1}{2}
+	\begin{bmatrix}-i&1\end{bmatrix}
+	\begin{bmatrix}-i\\1\end{bmatrix}
+	=
+	\frac{1}{2}\left((-i)(-i)+1\right)
+	=
+	\frac{1}{2}(-1+1)
+	=0.
+	$$
+
+	Thus the eigenvectors are orthogonal. Since both have norm one, they form an orthonormal basis of $\mathbb{C}^2$.
+
+e.	Putting the normalized eigenvectors into the columns of $U$ gives
+
+	$$
+	U=
+	\frac{1}{\sqrt{2}}
+	\begin{bmatrix}
+	i&-i\\
+	1&1
+	\end{bmatrix}.
+	$$
+
+	Its conjugate transpose is
+
+	$$
+	U^H=
+	\frac{1}{\sqrt{2}}
+	\begin{bmatrix}
+	-i&1\\
+	i&1
+	\end{bmatrix}.
+	$$
+
+	Therefore
+
+	$$
+	U^HU=
+	\frac{1}{2}
+	\begin{bmatrix}
+	-i&1\\
+	i&1
+	\end{bmatrix}
+	\begin{bmatrix}
+	i&-i\\
+	1&1
+	\end{bmatrix}
+	=
+	\frac{1}{2}
+	\begin{bmatrix}
+	2&0\\
+	0&2
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	1&0\\
+	0&1
+	\end{bmatrix}.
+	$$
+
+	Hence $U$ is unitary.
+
+f.	Since the first column of $U$ belongs to $\lambda_1=1$ and the second column belongs to $\lambda_2=3$, the corresponding diagonal matrix is
+
+	$$
+	D=
+	\begin{bmatrix}
+	1&0\\
+	0&3
+	\end{bmatrix}.
+	$$
+
+g.	We now evaluate
+
+	$$
+	UDU^H
+	=
+	\frac{1}{2}
+	\begin{bmatrix}
+	i&-i\\
+	1&1
+	\end{bmatrix}
+	\begin{bmatrix}
+	1&0\\
+	0&3
+	\end{bmatrix}
+	\begin{bmatrix}
+	-i&1\\
+	i&1
+	\end{bmatrix}.
+	$$
+
+	First,
+
+	$$
+	UD=
+	\frac{1}{\sqrt{2}}
+	\begin{bmatrix}
+	i&-3i\\
+	1&3
+	\end{bmatrix}.
+	$$
+
+	Hence
+
+	$$
+	UDU^H
+	=
+	\frac{1}{2}
+	\begin{bmatrix}
+	i&-3i\\
+	1&3
+	\end{bmatrix}
+	\begin{bmatrix}
+	-i&1\\
+	i&1
+	\end{bmatrix}
+	=
+	\frac{1}{2}
+	\begin{bmatrix}
+	4&-2i\\
+	2i&4
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	2&-i\\
+	i&2
+	\end{bmatrix}
+	=A.
+	$$
+
+	Thus
+
+	$$
+	A=UDU^H.
+	$$
+
+	Equivalently,
+
+	$$
+	U^HAU=D.
+	$$
+
+	Because $U$ is unitary, its conjugate transpose is its inverse,
+
+	$$
+	U^{-1}=U^H.
+	$$
+
+	Thus the usual diagonalization $A=UDU^{-1}$ takes the particularly simple form $A=UDU^H$ for a Hermitian matrix when its orthonormal eigenvectors are used as the columns of $U$.
+
+
+
+
+### Solution for @exr-nondiagonalizable-2x2-matrix {.unnumbered}
+
+a.	We solve the characteristic equation
+
+	$$
+	\det(A-\lambda I)
+	=
+	\det
+	\begin{bmatrix}
+	2-\lambda & 1\\
+	0 & 2-\lambda
+	\end{bmatrix}
+	=
+	(2-\lambda)^2.
+	$$
+
+	Thus
+
+	$$
+	(2-\lambda)^2=0,
+	$$
+
+	so the only eigenvalue is
+
+	$$
+	\lambda=2.
+	$$
+
+	It has algebraic multiplicity $2$.
+
+b.	We solve
+
+	$$
+	(A-2I)\mathbf{x}=\mathbf{0}.
+	$$
+
+	Since
+
+	$$
+	A-2I=
+	\begin{bmatrix}
+	0 & 1\\
+	0 & 0
+	\end{bmatrix},
+	$$
+
+	we have
+
+	$$
+	\begin{bmatrix}
+	0 & 1\\
+	0 & 0
+	\end{bmatrix}
+	\begin{bmatrix}
+	x_1\\
+	x_2
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	0\\
+	0
+	\end{bmatrix}.
+	$$
+
+	The first row gives
+
+	$$
+	x_2=0,
+	$$
+
+	while $x_1$ is arbitrary. Therefore all eigenvectors are nonzero scalar multiples of
+
+	$$
+	\begin{bmatrix}
+	1\\
+	0
+	\end{bmatrix}.
+	$$
+
+	Hence $A$ has only one linearly independent eigenvector.
+
+c.	To diagonalize a $2\times2$ matrix, we need two linearly independent eigenvectors so that they can form the columns of an invertible matrix $U$.
+
+	Here, every eigenvector is a scalar multiple of
+
+	$$
+	\begin{bmatrix}
+	1\\
+	0
+	\end{bmatrix},
+	$$
+
+	so we cannot find two linearly independent eigenvectors. Therefore no invertible eigenvector matrix $U$ exists, and $A$ is not diagonalizable.
+
+
+
+
+
+
+
+### Solution for @exr-eigenvalues-chemical-kinetics-asymmetric {.unnumbered}
+
+a.	The rate matrix is
+
+	$$
+	K=\begin{bmatrix}
+	-k_f&k_b\\
+	k_f&-k_b
+	\end{bmatrix}.
+	$$
+
+	The eigenvalues satisfy
+
+	$$
+	\det(K-\lambda I)=0.
+	$$
+
+	Thus
+
+	$$
+	\det
+	\begin{bmatrix}
+	-k_f-\lambda&k_b\\
+	k_f&-k_b-\lambda
+	\end{bmatrix}
+	=0.
+	$$
+
+	Computing the determinant gives
+
+	$$
+	(-k_f-\lambda)(-k_b-\lambda)-k_fk_b=0.
+	$$
+
+	Expanding,
+
+	$$
+	k_fk_b+(k_f+k_b)\lambda+\lambda^2-k_fk_b=0,
+	$$
+
+	so
+
+	$$
+	\lambda^2+(k_f+k_b)\lambda=0.
+	$$
+
+	Therefore
+
+	$$
+	\lambda\bigl(\lambda+k_f+k_b\bigr)=0,
+	$$
+
+	and the two eigenvalues are
+
+	$$
+	\lambda_1=0,\qquad \lambda_2=-(k_f+k_b).
+	$$
+
+	Since $k_f>0$ and $k_b>0$, the second eigenvalue is negative.
+
+	For $\lambda_1=0$, we solve
+
+	$$
+	K\mathbf{x}_1=\mathbf{0}.
+	$$
+
+	This gives
+
+	$$
+	-k_fx_1+k_bx_2=0,
+	$$
+
+	or
+
+	$$
+	k_bx_2=k_fx_1.
+	$$
+
+	One convenient choice is therefore
+
+	$$
+	\mathbf{x}_1=
+	\begin{bmatrix}
+	k_b\\
+	k_f
+	\end{bmatrix}.
+	$$
+
+	For $\lambda_2=-(k_f+k_b)$, we solve
+
+	$$
+	\left(K+(k_f+k_b)I\right)\mathbf{x}_2=\mathbf{0}.
+	$$
+
+	The matrix is
+
+	$$
+	K+(k_f+k_b)I=
+	\begin{bmatrix}
+	k_b&k_b\\
+	k_f&k_f
+	\end{bmatrix}.
+	$$
+
+	Hence
+
+	$$
+	x_1+x_2=0.
+	$$
+
+	A convenient eigenvector is therefore
+
+	$$
+	\mathbf{x}_2=
+	\begin{bmatrix}
+	1\\
+	-1
+	\end{bmatrix}.
+	$$
+
+b.	The eigenvector corresponding to $\lambda_1=0$ describes equilibrium:
+
+	$$
+	\mathbf{x}_1=
+	\begin{bmatrix}
+	k_b\\
+	k_f
+	\end{bmatrix}.
+	$$
+
+	Thus, at equilibrium, the concentrations must occur in the same ratio,
+
+	$$
+	a:b=k_b:k_f.
+	$$
+
+	Therefore
+
+	$$
+	\frac{b}{a}=\frac{k_f}{k_b}.
+	$$
+
+	This can also be obtained directly from the reaction rates. At equilibrium, the forward and backward rates are equal:
+
+	$$
+	k_fa=k_bb.
+	$$
+
+	Rearranging gives
+
+	$$
+	\frac{b}{a}=\frac{k_f}{k_b}.
+	$$
+
+c.	The second eigenvalue is
+
+	$$
+	\lambda_2=-(k_f+k_b).
+	$$
+
+	If the concentration vector contains a contribution along the corresponding eigenvector,
+
+	$$
+	\mathbf{x}(t)=c(t)\mathbf{x}_2,
+	$$
+
+	then
+
+	$$
+	\frac{d\mathbf{x}}{dt}=K\mathbf{x}
+	$$
+
+	gives
+
+	$$
+	\frac{dc}{dt}\mathbf{x}_2
+	=
+	cK\mathbf{x}_2
+	=
+	-(k_f+k_b)c\mathbf{x}_2.
+	$$
+
+	Hence
+
+	$$
+	\frac{dc}{dt}=-(k_f+k_b)c.
+	$$
+
+	The solution is
+
+	$$
+	c(t)=c(0)e^{-(k_f+k_b)t}.
+	$$
+
+	Thus the nonequilibrium part of the concentration vector decays exponentially. The characteristic relaxation rate is $k_f+k_b$: increasing either rate constant makes the system approach equilibrium more rapidly.
+
+
+
+
+
 
 :::
+
+
+
+
+
+
+
+### Solution for @exr-eigenvalues-computational-reaction-network {.unnumbered}
+
+a.	For species A, material is lost through $\mathrm{A}\to\mathrm{B}$ and gained through $\mathrm{B}\to\mathrm{A}$, giving
+
+	$$
+	\frac{da}{dt}=-k_{AB}a+k_{BA}b.
+	$$
+
+	Similarly, the remaining rate equations are
+
+	$$
+	\frac{db}{dt}=k_{AB}a-(k_{BA}+k_{BC}+k_{BD})b+k_{CB}c+k_{DB}d,
+	$$
+
+	$$
+	\frac{dc}{dt}=k_{BC}b-k_{CB}c,
+	$$
+
+	$$
+	\frac{dd}{dt}=k_{BD}b-(k_{DB}+k_{DE})d+k_{ED}e,
+	$$
+
+	and
+
+	$$
+	\frac{de}{dt}=k_{DE}d-k_{ED}e.
+	$$
+
+	Thus,
+
+	$$
+	\frac{d\mathbf{x}}{dt}=K\mathbf{x},
+	$$
+
+	with
+
+	$$
+	K=
+	\begin{bmatrix}
+	-k_{AB} & k_{BA} & 0 & 0 & 0\\
+	k_{AB} & -(k_{BA}+k_{BC}+k_{BD}) & k_{CB} & k_{DB} & 0\\
+	0 & k_{BC} & -k_{CB} & 0 & 0\\
+	0 & k_{BD} & 0 & -(k_{DB}+k_{DE}) & k_{ED}\\
+	0 & 0 & 0 & k_{DE} & -k_{ED}
+	\end{bmatrix}.
+	$$
+
+	With the numerical rate constants, this becomes
+
+	$$
+	K=
+	\begin{bmatrix}
+	-1.0 & 0.4 & 0 & 0 & 0\\
+	1.0 & -1.6 & 0.2 & 0.3 & 0\\
+	0 & 0.7 & -0.2 & 0 & 0\\
+	0 & 0.5 & 0 & -1.1 & 0.1\\
+	0 & 0 & 0 & 0.8 & -0.1
+	\end{bmatrix}.
+	$$
+
+	Adding the five rate equations gives
+
+	$$
+	\frac{d}{dt}(a+b+c+d+e)=0.
+	$$
+
+	All reaction terms cancel pairwise. Therefore the total concentration
+
+	$$
+	a+b+c+d+e
+	$$
+
+	is conserved.
+
+	This is also visible from $K$: every column of $K$ sums to zero.
+
+b.	We construct the matrix and diagonalize it numerically.
+
+	```{python}
+	#| echo: true
+
+	import numpy as np
+
+	kAB = 1.0
+	kBA = 0.4
+	kBC = 0.7
+	kCB = 0.2
+	kBD = 0.5
+	kDB = 0.3
+	kDE = 0.8
+	kED = 0.1
+
+	K = np.array([
+	    [-kAB,  kBA,                   0.0,             0.0,  0.0],
+	    [ kAB, -(kBA + kBC + kBD),     kCB,             kDB,  0.0],
+	    [ 0.0,   kBC,                  -kCB,             0.0,  0.0],
+	    [ 0.0,   kBD,                   0.0, -(kDB + kDE),  kED],
+	    [ 0.0,   0.0,                   0.0,             kDE, -kED]
+	])
+
+	print(K)
+
+	# Check conservation: the columns should sum to zero
+	print("Column sums:", K.sum(axis=0))
+	```
+
+	We now find the eigenvalues and eigenvectors. We sort the eigenvalues from largest to smallest real part so that the eigenvalue closest to zero appears first.
+
+	```{python}
+	#| echo: true
+
+	eigenvalues, eigenvectors = np.linalg.eig(K)
+
+	order = np.argsort(eigenvalues.real)[::-1]
+	eigenvalues = eigenvalues[order]
+	eigenvectors = eigenvectors[:, order]
+
+	print("Eigenvalues:")
+	for value in eigenvalues:
+	    print(value)
+	```
+
+	Numerically, the eigenvalues are approximately
+
+	$$
+	\lambda=
+	0,\;
+	-0.07786,\;
+	-0.62474,\;
+	-1.13527,\;
+	-2.16213
+	\qquad \mathrm{s}^{-1}.
+	$$
+
+	The eigenvalue reported by the computer as a number of order $10^{-17}$ should be interpreted as zero; the small deviation from exactly zero is due to floating-point arithmetic.
+
+	The zero eigenvalue represents an unchanging mode. This is the equilibrium mode of the reaction network. If
+
+	$$
+	K\mathbf{x}_{\mathrm{eq}}=\mathbf{0},
+	$$
+
+	then
+
+	$$
+	\frac{d\mathbf{x}_{\mathrm{eq}}}{dt}=\mathbf{0}.
+	$$
+
+	All the other eigenvalues are negative. A mode with eigenvalue $\lambda<0$ behaves as
+
+	$$
+	e^{\lambda t},
+	$$
+
+	and therefore decays with time. These eigenvalues describe the different ways in which deviations from equilibrium relax.
+
+c.	We identify the eigenvector belonging to the eigenvalue closest to zero and normalize it so that its components sum to one.
+
+	```{python}
+	#| echo: true
+
+	i0 = np.argmin(np.abs(eigenvalues))
+
+	x_eq = eigenvectors[:, i0].real
+
+	# Eigenvectors can have an arbitrary overall sign
+	if x_eq.sum() < 0:
+	    x_eq = -x_eq
+
+	# Normalize to total concentration 1
+	x_eq = x_eq / x_eq.sum()
+
+	print("Equilibrium fractions:")
+	for species, value in zip(["A", "B", "C", "D", "E"], x_eq):
+	    print(f"{species}: {value:.6f}")
+
+	print("Sum:", x_eq.sum())
+	```
+
+	This gives approximately
+
+	$$
+	\mathbf{x}_{\mathrm{eq}}=
+	\begin{bmatrix}
+	0.02010\\
+	0.05025\\
+	0.17588\\
+	0.08375\\
+	0.67002
+	\end{bmatrix}.
+	$$
+
+	Thus the equilibrium mixture contains approximately
+
+	$$
+	2.0\%\ \mathrm{A},\qquad
+	5.0\%\ \mathrm{B},\qquad
+	17.6\%\ \mathrm{C},\qquad
+	8.4\%\ \mathrm{D},\qquad
+	67.0\%\ \mathrm{E}.
+	$$
+
+	The equilibrium vector can also be understood directly from the individual reversible reactions. At equilibrium,
+
+	$$
+	k_{AB}a=k_{BA}b,\qquad
+	k_{BC}b=k_{CB}c,\qquad
+	k_{BD}b=k_{DB}d,\qquad
+	k_{DE}d=k_{ED}e.
+	$$
+
+	For example,
+
+	$$
+	\frac{b}{a}=\frac{k_{AB}}{k_{BA}}=\frac{1.0}{0.4}=2.5,
+	$$
+
+	and the other equilibrium ratios follow similarly.
+
+d.	We now start with all material in A,
+
+	$$
+	\mathbf{x}(0)=
+	\begin{bmatrix}
+	1\\0\\0\\0\\0
+	\end{bmatrix},
+	$$
+
+	and evaluate
+
+	$$
+	\mathbf{x}(t)=e^{Kt}\mathbf{x}(0).
+	$$
+
+	Because the slowest relaxation time will turn out to be around $13\ \mathrm{s}$, a time interval of about $0$--$80\ \mathrm{s}$ is sufficient to see the system approach equilibrium.
+
+	```{python}
+	#| echo: true
+
+	import matplotlib.pyplot as plt
+	from scipy.linalg import expm
+
+	x0 = np.array([1.0, 0.0, 0.0, 0.0, 0.0])
+
+	times = np.linspace(0.0, 80.0, 500)
+
+	x_t = np.array([
+	    expm(K * t) @ x0
+	    for t in times
+	])
+
+	plt.figure()
+	for i, species in enumerate(["A", "B", "C", "D", "E"]):
+	    plt.plot(times, x_t[:, i], label=species)
+
+	plt.xlabel("Time / s")
+	plt.ylabel("Concentration")
+	plt.legend()
+	plt.tight_layout()
+	plt.show()
+	```
+
+	The plot shows the initial A concentration decreasing while the other species are populated. Eventually all five concentrations become constant and approach the equilibrium fractions found in part c.
+
+	We can also check conservation numerically.
+
+	```{python}
+	#| echo: true
+
+	total = x_t.sum(axis=1)
+
+	print("Minimum total concentration:", total.min())
+	print("Maximum total concentration:", total.max())
+	print("Final concentration vector:")
+	print(x_t[-1])
+	print("Equilibrium vector:")
+	print(x_eq)
+	```
+
+	A useful visualization of conservation is
+
+	```{python}
+	#| echo: true
+
+	plt.figure()
+	plt.plot(times, total)
+	plt.xlabel("Time / s")
+	plt.ylabel("Total concentration")
+	plt.tight_layout()
+	plt.show()
+	```
+
+	Apart from tiny floating-point errors, the total concentration remains exactly $1$.
+
+e.	The nonzero eigenvalue closest to zero is
+
+	$$
+	\lambda_{\mathrm{slow}}\approx -0.07786\ \mathrm{s}^{-1}.
+	$$
+
+	Its characteristic relaxation time is therefore
+
+	$$
+	\tau=-\frac{1}{\lambda_{\mathrm{slow}}}
+	\approx\frac{1}{0.07786}\ \mathrm{s}
+	\approx12.84\ \mathrm{s}.
+	$$
+
+	We can obtain all the characteristic relaxation times numerically.
+
+	```{python}
+	#| echo: true
+
+	nonzero = eigenvalues[np.abs(eigenvalues) > 1e-10]
+
+	# Sort from slowest to fastest decay
+	nonzero = nonzero[np.argsort(np.abs(nonzero.real))]
+
+	print("Relaxation modes:")
+	for lam in nonzero:
+	    tau = -1.0 / lam.real
+	    print(f"lambda = {lam.real: .6f} 1/s, tau = {tau:.3f} s")
+	```
+
+	The relaxation times are approximately
+
+	$$
+	12.84,\qquad 1.60,\qquad 0.88,\qquad 0.46\ \mathrm{s}.
+	$$
+
+	Thus the reaction network contains several distinct time scales. Some redistribution takes place very rapidly, while one mode relaxes considerably more slowly.
+
+	After a few multiples of the shorter relaxation times, the fast modes have essentially disappeared. The remaining deviation from equilibrium is then dominated by the slow mode,
+
+	$$
+	\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}
+	\approx
+	c_{\mathrm{slow}}e^{\lambda_{\mathrm{slow}}t}\mathbf{v}_{\mathrm{slow}}.
+	$$
+
+	This illustrates an important use of eigenvalue analysis: a complicated set of coupled rate equations can be decomposed into independent modes with characteristic time scales determined by the eigenvalues.
+
+f.	We now calculate the Euclidean distance from equilibrium,
+
+	$$
+	d(t)=\|\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}\|_2.
+	$$
+
+	```{python}
+	#| echo: true
+
+	distance = np.linalg.norm(x_t - x_eq, axis=1)
+
+	plt.figure()
+	plt.semilogy(times, distance)
+	plt.xlabel("Time / s")
+	plt.ylabel(r"$\|\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}\|_2$")
+	plt.tight_layout()
+	plt.show()
+	```
+
+	The curve becomes approximately straight at long times. To understand this, suppose that only the slowest mode remains. Then
+
+	$$
+	d(t)\propto e^{\lambda_{\mathrm{slow}}t}.
+	$$
+
+	Taking the logarithm gives
+
+	$$
+	\log d(t)=\text{constant}+\lambda_{\mathrm{slow}}t.
+	$$
+
+	Thus an exponential decay becomes a straight line on a semilogarithmic plot, with slope $\lambda_{\mathrm{slow}}$.
+
+	We can compare the numerical distance directly with the predicted slow exponential. We choose a reference time after the faster modes have mostly decayed and set the prefactor so that the two curves agree at that time.
+
+	```{python}
+	#| echo: true
+
+	lambda_slow = nonzero[0].real
+
+	# Choose a reference point in the long-time regime
+	t_ref = 30.0
+	i_ref = np.argmin(np.abs(times - t_ref))
+
+	# Choose the prefactor so the exponential agrees with d(t)
+	# at the reference time
+	prefactor = distance[i_ref] / np.exp(lambda_slow * times[i_ref])
+	slow_decay = prefactor * np.exp(lambda_slow * times)
+
+	plt.figure()
+	plt.semilogy(
+	    times,
+	    distance,
+	    label=r"$\|\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}\|_2$"
+	)
+	plt.semilogy(
+	    times,
+	    slow_decay,
+	    "--",
+	    label=r"$C e^{\lambda_{\mathrm{slow}}t}$"
+	)
+
+	plt.xlabel("Time / s")
+	plt.ylabel("Distance from equilibrium")
+	plt.legend()
+	plt.tight_layout()
+	plt.show()
+	```
+
+	At early times the two curves need not agree because several eigenmodes contribute simultaneously:
+
+	$$
+	\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}
+	=
+	\sum_j c_j e^{\lambda_jt}\mathbf{v}_j.
+	$$
+
+	The modes with more negative eigenvalues decay most rapidly. At sufficiently long times, they become negligible compared with the mode whose eigenvalue is closest to zero. Consequently,
+
+	$$
+	\mathbf{x}(t)-\mathbf{x}_{\mathrm{eq}}
+	\approx
+	c_{\mathrm{slow}}e^{\lambda_{\mathrm{slow}}t}\mathbf{v}_{\mathrm{slow}},
+	$$
+
+	and the two curves become parallel on the logarithmic plot.
+
+	The numerical dynamics therefore provide a direct visualization of the eigenvalue analysis: the smallest-magnitude nonzero eigenvalue controls the long-time approach to equilibrium.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

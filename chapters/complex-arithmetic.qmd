@@ -6,7 +6,7 @@ Cartesian and polar forms connect complex arithmetic with plane geometry, rotati
 
 ### Complex numbers
 
-::: {#exr-complex-arithmetic-compute-real-imaginary-parts-functions recommended="math" level="intermediate"}
+::: {#exr-complex-arithmetic-compute-real-imaginary-parts-functions }
 
 Let $z = x + \mathrm{i}y \in \mathbb{C}$, and compute the real and imaginary parts of $z^2$, $z^3$, and $z^4$, as functions of $x$ and $y$.
 
@@ -24,7 +24,7 @@ Compute closed-form expression for $z^{-1}$, exhibiting the real and imaginary p
 
 :::
 
-::: {#exr-complex-arithmetic-complex-numbers-can-written-polar-form recommended="math" level="intermediate"}
+::: {#exr-complex-arithmetic-complex-numbers-can-written-polar-form  level="intermediate"}
 
 A complex number $z = x + \mathrm{i}y$ can be written in polar form, $$x = r \cos(\theta), \quad y = r \sin(\theta).$$ Write down the rule for $z^n = R\cos \phi + \mathrm{i}R\sin\phi$ using angle $\theta$ and modulus $r$.
 
@@ -40,7 +40,7 @@ Consider the polynomial equation $f(z) = z^3 + 1 = 0$. Find all the roots in the
 
 ![The parallelogram rule. (From Butkov.)](../figures/exercises/parallelogram-rule.png){#fig-parallelogram-rule width="75%"}
 
-::: {#exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule recommended="math" level="intermediate"}
+::: {#exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule level="intermediate"}
 
 Let $z = x + \mathrm{i}y \in \mathbb{C}$. Illustrate the addition $w = z + \bar{z}$ in a coordinate system using the parallelogram rule.
 

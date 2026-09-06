@@ -1,5 +1,10 @@
 # Script for generating recommended exercise lists.
 
+import re
+from pathlib import Path
+
+import yaml
+
 levels = ["beginner", "intermediate", "advanced"]
 
 recommendations = ["math", "topic"]
@@ -17,6 +22,12 @@ topics = {
     "multiconfig-methods": "Multiconfigurational methods",
 }
 
+# Generated sections replace this marker in each QMD template.
+template_marker = "<!-- GENERATED EXERCISE LISTS -->"
+day_1_template_file = Path("templates/recommended-mathematics.qmd")
+topic_template_file = Path("templates/recommended-by-topic.qmd")
+
+
 # Example exercise syntax:
 #
 # :::{#exr-1 recommended="math;topic" level="beginner" topic="coupled-cluster;scf" priority=1}
@@ -24,34 +35,6 @@ topics = {
 # body
 # :::
 #
-
-day_1_intro = r"""# Recommended exercises for the first day {.unnumbered}
-
-This chapter contains recommended exercises for the mathematics
-tutorial on the first day of the school. These recommended exercises are
-considered especially useful.
-
-We provide also a list of recommended exercises for the 'beginners'. If you
-feel that you need training in the _absolute basics_ of the mathematics used
-in quantum chemistry, we recommend that you start here.
-
-In the next chapter, we provide lists of recommended exercises for each
-quantum chemistry topic taught at the school.
-
-"""
-
-topic_intro = r"""# Recommended exercises by topic {.unnumbered}
-
-This chapter contains lists of mathematics exercises grouped by each
-quantum chemistry topic taught at the school. These exercises can be
-useful as a warm-up to the proper exercises given each day.
-
-"""
-
-
-import yaml
-from pathlib import Path
-import re
 
 
 # ---------------------------------------------------------------------------
@@ -296,6 +279,27 @@ def exercise_list_item(ex):
     return f"- @{ex['id']}"
 
 
+def render_template(template_file, generated_sections):
+    """Insert generated sections into a QMD template."""
+
+    template = template_file.read_text(encoding="utf-8")
+    marker_count = template.count(template_marker)
+
+    if marker_count != 1:
+        raise ValueError(
+            f"{template_file} must contain {template_marker!r} exactly once; "
+            f"found {marker_count}"
+        )
+
+    replacement = generated_sections.rstrip() + "\n"
+    output = template.replace(template_marker, replacement)
+
+    if not output.endswith("\n"):
+        output += "\n"
+
+    return output
+
+
 def exercises_for_day_1(level):
     """Exercises recommended for the mathematics tutorial on day 1."""
 
@@ -331,30 +335,32 @@ def exercises_for_topic(topic, level):
 # Generate day-1 exercise list
 # ---------------------------------------------------------------------------
 
-day_1_output = day_1_intro
+day_1_sections = []
 
 for level in levels:
     selected = exercises_for_day_1(level)
 
-    day_1_output += f"## {level_headings[level]} {{.unnumbered}}\n\n"
+    day_1_sections.append(f"## {level_headings[level]} {{.unnumbered}}\n\n")
 
     if selected:
         for ex in selected:
-            day_1_output += exercise_list_item(ex) + "\n"
+            day_1_sections.append(exercise_list_item(ex) + "\n")
     else:
-        day_1_output += "_No exercises selected._\n"
+        day_1_sections.append("_No exercises selected._\n")
 
-    day_1_output += "\n"
+    day_1_sections.append("\n")
+
+day_1_output = render_template(day_1_template_file, "".join(day_1_sections))
 
 
 # ---------------------------------------------------------------------------
 # Generate exercise lists by quantum-chemistry topic
 # ---------------------------------------------------------------------------
 
-topic_output = topic_intro
+topic_sections = []
 
 for topic, description in topics.items():
-    topic_output += f"## {description} {{.unnumbered}}\n\n"
+    topic_sections.append(f"## {description} {{.unnumbered}}\n\n")
 
     found_any = False
 
@@ -366,15 +372,17 @@ for topic, description in topics.items():
 
         found_any = True
 
-        topic_output += f"### {level_headings[level]} {{.unnumbered}}\n\n"
+        topic_sections.append(f"### {level_headings[level]} {{.unnumbered}}\n\n")
 
         for ex in selected:
-            topic_output += exercise_list_item(ex) + "\n"
+            topic_sections.append(exercise_list_item(ex) + "\n")
 
-        topic_output += "\n"
+        topic_sections.append("\n")
 
     if not found_any:
-        topic_output += "_No exercises selected._\n\n"
+        topic_sections.append("_No exercises selected._\n\n")
+
+topic_output = render_template(topic_template_file, "".join(topic_sections))
 
 
 # ---------------------------------------------------------------------------

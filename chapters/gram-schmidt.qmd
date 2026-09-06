@@ -12,7 +12,7 @@ We first define the notion of orthogonal projection onto the span of a single ve
 
 ## Exercises
 
-::: {#exr-gram-schmidt-gram-schmidt-orthogonalization recommended="math" level="advanced"}
+::: {#exr-gram-schmidt-gram-schmidt-orthogonalization  level="advanced"}
 
 1.  Show that the vector $\mathbf{x}_Y$ given by $$\mathbf{x}_Y = \mathbf{y}\frac{\left\langle\mathbf{y}, \mathbf{x}\right\rangle}{\left\langle\mathbf{y},\mathbf{y}\right\rangle}$$ is the *unique* vector in $Y$, such that $$\forall \mathbf{y}' \in Y, \quad \|\mathbf{x} - \mathbf{x}_Y\| \leq \|\mathbf{x} - \mathbf{y}'\|.$$ Hint: Find a function $f : \mathbb{R}\to \mathbb{R}$ which you can study, by using the definition of $Y = \operatorname{span}(\mathbf{y})$.
 

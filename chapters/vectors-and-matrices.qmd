@@ -46,32 +46,32 @@ The same definitions of matrix-vector and matrix-matrix multiplication apply ove
 
 
 
-## Exercises: Basic vectors and matrix calculations
+## Exercises: Basic vector and matrix calculations
 
-::: {#exr-vector-spaces-basic-operations recommended="math" level="beginner"}
+::: {#exr-vector-spaces-basic-operations recommended="math" level="beginner" priority=10}
 ### Basic vector operations
 
 Consider the vectors
 
 $$
-x=(1,2,-1),\qquad y=(3,-1,2),\qquad z=(0,2,1)
+\mathbf{x}=(1,2,-1),\qquad \mathbf{y}=(3,-1,2),\qquad \mathbf{z}=(0,2,1)
 $$
 
-in the vector space $\mathbb{R}^3$.
+in the vector space $\mathbb{R}^3$. (We here write the vectors as an ordered tuple instead of a column.)
 
-a. Compute $x+y$.
+a. Compute $\mathbf{x}+\mathbf{y}$.
 
-b. Compute $x-y$.
+b. Compute $\mathbf{x}-\mathbf{y}$.
 
-c. Compute $2x$ and $-3y$.
+c. Compute $2\mathbf{x}$ and $-3\mathbf{y}$.
 
-d. Compute the linear combination $2x+3y$.
+d. Compute the linear combination $2\mathbf{x}+3\mathbf{y}$.
 
-e. Compute $x+2y-z$.
+e. Compute $\mathbf{x}+2\mathbf{y}-\mathbf{z}$.
 
-f. Find numbers $\alpha$ and $\beta$ such that $\alpha x+\beta y=(7,0,3)$.
+f. Find numbers $\alpha$ and $\beta$ such that $\alpha \mathbf{x}+\beta \mathbf{y}=(7,0,3)$.
 
-g. Verify by direct calculation that $2(x+y)=2x+2y$. Which vector-space axiom does this illustrate?
+g. Verify by direct calculation that $2(\mathbf{x}+\mathbf{y})=2\mathbf{x}+2\mathbf{y}$. Which vector-space axiom does this illustrate?
 
 h. Is $(1,2)$ an element of this vector space? Is $(0,0,0)$ an element? Explain briefly.
 
@@ -79,22 +79,22 @@ h. Is $(1,2)$ an element of this vector space? Is $(0,0,0)$ an element? Explain 
 
 
 
-::: {#exr-matrix-vector-multiplication recommended="math" level="beginner"}
-### Matrix-vector products
+::: {#exr-matrix-vector-multiplication recommended="math" level="beginner" priority=10}
+### Basic matrix-vector products
 
 Consider the matrices and vectors
 
 $$
-A=\begin{pmatrix}2&-1\\3&4\end{pmatrix},\qquad B=\begin{pmatrix}1&0&2\\-1&3&1\end{pmatrix},\qquad x=\begin{pmatrix}3\\2\end{pmatrix},\qquad y=\begin{pmatrix}1\\-2\\3\end{pmatrix}.
+A=\begin{pmatrix}2&-1\\3&4\end{pmatrix},\qquad B=\begin{pmatrix}1&0&2\\-1&3&1\end{pmatrix},\qquad \mathbf{x}=\begin{pmatrix}3\\2\end{pmatrix},\qquad \mathbf{y}=\begin{pmatrix}1\\-2\\3\end{pmatrix}.
 $$
 
-a. Compute $Ax$.
+a. Compute $A\mathbf{x}$.
 
-b. Compute $By$.
+b. Compute $B\mathbf{y}$.
 
-c. Compute $A(2x)$ and $2(Ax)$. Verify that they are equal.
+c. Compute $A(2\mathbf{x})$ and $2(A\mathbf{x})$. Verify that they are equal.
 
-d. Can the products $Ay$ and $Bx$ be formed? Explain your answer in terms of the dimensions of the matrices and vectors.
+d. Can the products $A\mathbf{y}$ and $B\mathbf{x}$ be formed? Explain your answer in terms of the dimensions of the matrices and vectors.
 
 :::
 
@@ -102,7 +102,7 @@ d. Can the products $Ay$ and $Bx$ be formed? Explain your answer in terms of the
 
 
 
-::: {#exr-matrix-matrix-multiplication recommended="math" level="beginner"}
+::: {#exr-matrix-matrix-multiplication recommended="math" level="beginner" priority=10}
 ### Matrix-matrix products
 
 Consider the matrices
@@ -138,13 +138,13 @@ $$
     \mathbf{b}_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathbf{b}_2 = \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
 $$ 
 
-a. Show by elementary means that the two vectors are linearly independent. 
-b. Why do they form a basis for $V$? 
+a. Show by elementary means that the two vectors are linearly independent, that is: If $x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2 = 0$, then $x_1=x_2=0$ must hold.
+b. The vectors form a basis since they are linearly independent. Explain in your own words what a basis is.
 c. Make a 2D drawing or plot of them as arrows from the origin.
 
 :::
 
-::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate recommended="math" level="beginner"}
+::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate level="beginner"}
 ### Gaussian elimination and vector decomposition
 
 Let 
@@ -163,7 +163,7 @@ Illustrate this decomposition in the graph from the previous exercise, using the
 
 :::
 
-::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk recommended="math" level="intermediate"}
+::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk recommended="math" level="intermediate" priority=10}
 ### Office coordinates
 
 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.
@@ -174,14 +174,14 @@ What is the distance to home, as the crow flies?
 
 :::
 
-:::{#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed recommended="math" level="intermediate"}
+:::{#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed recommended="math" level="intermediate" priority=10}
 ### Boat sailing on the ocean
 
 A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?
 
 :::
 
-:::{#exr-vectors-and-matrices-robert-beezer-three-digit-number-has recommended="math" level="intermediate"}
+:::{#exr-vectors-and-matrices-robert-beezer-three-digit-number-has recommended="math" level="intermediate" priority=10}
 ### An exercise by Robert Beezer
 
 A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.
@@ -192,18 +192,77 @@ A three-digit number has two properties. The tens-digit and the ones-digit add u
 
 
 
-::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action recommended="math" level="intermediate"}
+::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action recommended="math" level="intermediate" priority=10}
 ### Compute the action of a matrix on vectors
 
 Let $A$ be the $n\times n$ matrix defined by $A_{i,i+1} = i^2$ for $1 \leq i < n$, and zero otherwise. Compute the action of $A$ and $A^T$ on the standard basis for $\mathbb{R}^n$. Compute the action of $A$ and $A^T$ on an arbitrary vector $\mathbf{x}\in \mathbb{R}^n$.
 
 :::
 
-:::{#exr-vectors-and-matrices-write-terms-column-vectors-prove-i level="intermediate"}
+::: {#exr-vectors-and-matrices-write-terms-column-vectors-prove-i level="intermediate" recommended="math" priority=10}
 ### Matrix-matrix products, rows and columns
 
-Let $A \in M(n,m,\mathbb{F})$, $B \in M(m,o,\mathbb{F})$. Write $B$ in terms of column vectors, $B = [\mathbf{b}_1,\cdots,\mathbf{b}_o]$. Prove that $$AB = [A\mathbf{b}_1, \cdots, A\mathbf{b}_o],$$ i.e., $A$ acts on each individual column of $B$. Similarly, show that, if we write $A$ in terms of its *row vectors*, $$A = \begin{bmatrix} \mathbf{a}_1^T \\ \mathbf{a}_2^T \\ \cdots \\ \mathbf{a}_n^T \end{bmatrix},$$ then $$AB = \begin{bmatrix} \mathbf{a}_1^T B \\ \mathbf{a}_2^T B \\ \cdots \\ \mathbf{a}_n^T B  \end{bmatrix}.$$
+A useful way to understand matrix-matrix multiplication is to think of a matrix as a collection of vectors. This gives two complementary interpretations of the product $AB$:
 
+- $A$ acts separately on each **column** of $B$.
+- $B$ acts separately on each **row** of $A$, when the rows are regarded as row vectors.
+
+These viewpoints are useful both for understanding matrix multiplication and for computations. For example, if the columns of $B$ represent several vectors, then $AB$ applies the linear transformation $A$ to *all of these vectors at once*.
+
+a.	Consider
+	$$
+	A=\begin{bmatrix}1&2\\-1&3\end{bmatrix}, \qquad B=\begin{bmatrix}1&0&2\\2&-1&1\end{bmatrix}.
+	$$
+	Write $B$ as a collection of its three column vectors,
+	$$
+	B=[\mathbf b_1,\mathbf b_2,\mathbf b_3].
+	$$
+	Write down $\mathbf b_1$, $\mathbf b_2$, and $\mathbf b_3$ explicitly.
+
+b.	Compute $A\mathbf b_1$, $A\mathbf b_2$, and $A\mathbf b_3$ separately. Put the three resulting vectors next to each other as the columns of a new matrix:
+	$$
+	[A\mathbf b_1,A\mathbf b_2,A\mathbf b_3].
+	$$
+
+c.	Compute $AB$ directly using ordinary matrix multiplication. Compare your answer with part b.
+
+d.	Now consider the general case. Let
+	$$
+	A\in M(n,m,\mathbb F), \qquad B\in M(m,o,\mathbb F),
+	$$
+	and write the columns of $B$ as
+	$$
+	B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o].
+	$$
+	Explain why
+	$$
+	AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o].
+	$$
+	In other words, explain why the $j$th column of $AB$ is $A\mathbf b_j$.
+
+e.	There is a similar interpretation in terms of rows. Write $A$ using its row vectors,
+	$$
+	A=
+	\begin{bmatrix}
+	\mathbf a_1^T\\
+	\mathbf a_2^T\\
+	\vdots\\
+	\mathbf a_n^T
+	\end{bmatrix}.
+	$$
+	Show that
+	$$
+	AB=
+	\begin{bmatrix}
+	\mathbf a_1^T B\\
+	\mathbf a_2^T B\\
+	\vdots\\
+	\mathbf a_n^T B
+	\end{bmatrix}.
+	$$
+	Thus, the $i$th row of $AB$ is the row vector $\mathbf a_i^T B$.
+
+f.	Suppose the columns of $B$ are several vectors that we want to transform using the same linear transformation $A$. Explain why the identity from part d means that we can collect all the vectors into one matrix $B$ and perform a single matrix-matrix multiplication $AB$.
 :::
 
 :::{#exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined level="intermediate"}
@@ -453,10 +512,47 @@ d. The product $CA$ cannot be formed: $C$ is $2\times3$ and $A$ is $2\times2$, s
 
 ### Solution to @exr-vectors-and-matrices-work-space-plane-vectors-define-two {.unnumbered}
 
-a. Suppose we write $\mathbf{b}_1 x_1 + \mathbf{b}_2 x_2 = 0$. We must show that $x_1=x_2 = 0$ is the only solution. By adding the equations, we get $3 x1 = 0$, and then by insertion into the first equation $x_2 = 0$. 
+a.	Assume that
+	$$
+	x_1\mathbf b_1+x_2\mathbf b_2=\mathbf 0.
+	$$
+	Using the given vectors,
+	$$
+	x_1\begin{bmatrix}1\\2\end{bmatrix}+x_2\begin{bmatrix}-1\\1\end{bmatrix}
+	=
+	\begin{bmatrix}0\\0\end{bmatrix}.
+	$$
+	This gives the two equations
+	$$
+	x_1-x_2=0,
+	$$
+	and
+	$$
+	2x_1+x_2=0.
+	$$
+	From the first equation, $x_2=x_1$. Inserting this into the second equation gives
+	$$
+	2x_1+x_1=3x_1=0,
+	$$
+	so $x_1=0$. Therefore also $x_2=0$.
 
-b. Since we have 2 linearly independent vectors in $\mathbb{R}^2$, these form a basis.
+	Hence the only solution is
+	$$
+	x_1=x_2=0,
+	$$
+	so $\mathbf b_1$ and $\mathbf b_2$ are linearly independent.
 
+b.	A basis is a set of linearly independent vectors that can be used to build every vector in the vector space by taking linear combinations.
+
+	In this case, since $\mathbf b_1$ and $\mathbf b_2$ form a basis for $\mathbb R^2$, every vector $\mathbf v\in\mathbb R^2$ can be written in the form
+	$$
+	\mathbf v=x_1\mathbf b_1+x_2\mathbf b_2
+	$$
+	for suitable numbers $x_1$ and $x_2$.
+
+	Because the basis vectors are linearly independent, these coefficients are unique.
+
+    
 c. See further down.
 
 ### Solution to @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate {.unnumbered}
@@ -740,87 +836,174 @@ $$
 $$
 
 
+
 ### Solution for @exr-vectors-and-matrices-write-terms-column-vectors-prove-i {.unnumbered}
 
-Write the columns of $B$ as
+a.	The columns of
+	$$
+	B=\begin{bmatrix}1&0&2\\2&-1&1\end{bmatrix}
+	$$
+	are
+	$$
+	\mathbf b_1=\begin{bmatrix}1\\2\end{bmatrix}, \qquad
+	\mathbf b_2=\begin{bmatrix}0\\-1\end{bmatrix}, \qquad
+	\mathbf b_3=\begin{bmatrix}2\\1\end{bmatrix}.
+	$$
+	Thus
+	$$
+	B=[\mathbf b_1,\mathbf b_2,\mathbf b_3].
+	$$
 
-$$
-B=[\mathbf{b}_1,\ldots,\mathbf{b}_o].
-$$
+b.	Using
+	$$
+	A=\begin{bmatrix}1&2\\-1&3\end{bmatrix},
+	$$
+	we get
+	$$
+	A\mathbf b_1=
+	\begin{bmatrix}1&2\\-1&3\end{bmatrix}
+	\begin{bmatrix}1\\2\end{bmatrix}
+	=
+	\begin{bmatrix}5\\5\end{bmatrix}.
+	$$
+	Similarly,
+	$$
+	A\mathbf b_2=
+	\begin{bmatrix}1&2\\-1&3\end{bmatrix}
+	\begin{bmatrix}0\\-1\end{bmatrix}
+	=
+	\begin{bmatrix}-2\\-3\end{bmatrix},
+	$$
+	and
+	$$
+	A\mathbf b_3=
+	\begin{bmatrix}1&2\\-1&3\end{bmatrix}
+	\begin{bmatrix}2\\1\end{bmatrix}
+	=
+	\begin{bmatrix}4\\1\end{bmatrix}.
+	$$
+	Therefore
+	$$
+	[A\mathbf b_1,A\mathbf b_2,A\mathbf b_3]
+	=
+	\begin{bmatrix}
+	5&-2&4\\
+	5&-3&1
+	\end{bmatrix}.
+	$$
 
-The $j$th column of the product $AB$ is obtained by multiplying $A$ by the $j$th column of $B$. Indeed, its $i$th component is
+c.	Direct matrix multiplication gives
+	$$
+	AB=
+	\begin{bmatrix}1&2\\-1&3\end{bmatrix}
+	\begin{bmatrix}1&0&2\\2&-1&1\end{bmatrix}.
+	$$
+	Computing the entries,
+	$$
+	AB=
+	\begin{bmatrix}
+	1\cdot 1+2\cdot 2 & 1\cdot 0+2(-1) & 1\cdot 2+2\cdot 1\\
+	-1\cdot 1+3\cdot 2 & -1\cdot 0+3(-1) & -1\cdot 2+3\cdot 1
+	\end{bmatrix},
+	$$
+	so
+	$$
+	AB=
+	\begin{bmatrix}
+	5&-2&4\\
+	5&-3&1
+	\end{bmatrix}.
+	$$
+	This is exactly the same matrix as in part b.
 
-$$
-(AB)_{ij}=\sum_{k=1}^m A_{ik}B_{kj}.
-$$
+d.	Write
+	$$
+	B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o].
+	$$
+	The $j$th column of $B$ is $\mathbf b_j$. When we compute $AB$, the $j$th column of the product is obtained by multiplying $A$ by the $j$th column of $B$.
 
-But the $j$th column of $B$ is
+	Hence the $j$th column of $AB$ is
+	$$
+	A\mathbf b_j.
+	$$
+	Therefore
+	$$
+	AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o].
+	$$
 
-$$
-\mathbf{b}_j=
-\begin{pmatrix}
-B_{1j}\\
-\vdots\\
-B_{mj}
-\end{pmatrix},
-$$
+	So matrix-matrix multiplication can be viewed as applying the linear transformation $A$ separately to each column of $B$.
 
-so
+e.	Write the rows of $A$ as
+	$$
+	A=
+	\begin{bmatrix}
+	\mathbf a_1^T\\
+	\mathbf a_2^T\\
+	\vdots\\
+	\mathbf a_n^T
+	\end{bmatrix}.
+	$$
+	When we multiply by $B$ on the right, each row of $A$ is multiplied by $B$. Therefore the first row of $AB$ is
+	$$
+	\mathbf a_1^T B,
+	$$
+	the second row is
+	$$
+	\mathbf a_2^T B,
+	$$
+	and so on.
 
-$$
-(A\mathbf{b}_j)_i=\sum_{k=1}^m A_{ik}B_{kj}=(AB)_{ij}.
-$$
+	Hence
+	$$
+	AB=
+	\begin{bmatrix}
+	\mathbf a_1^T B\\
+	\mathbf a_2^T B\\
+	\vdots\\
+	\mathbf a_n^T B
+	\end{bmatrix}.
+	$$
 
-Hence the $j$th column of $AB$ is $A\mathbf{b}_j$, and therefore
+f.	Suppose the columns of $B$ are vectors
+	$$
+	B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o]
+	$$
+	that we want to transform using the same matrix $A$.
 
-$$
-AB=[A\mathbf{b}_1,\ldots,A\mathbf{b}_o].
-$$
+	Instead of computing
+	$$
+	A\mathbf b_1,\quad A\mathbf b_2,\quad \ldots,\quad A\mathbf b_o
+	$$
+	separately, we can collect all the vectors into the matrix $B$ and compute
+	$$
+	AB.
+	$$
+	Because
+	$$
+	AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o],
+	$$
+	the columns of the result are precisely the transformed vectors.
 
-Now write $A$ in terms of its row vectors,
+	This is useful whenever the same linear transformation is applied to many vectors at once.
 
-$$
-A=
-\begin{bmatrix}
-\mathbf{a}_1^T\\
-\mathbf{a}_2^T\\
-\vdots\\
-\mathbf{a}_n^T
-\end{bmatrix}.
-$$
 
-The $i$th row of $AB$ is obtained by multiplying the $i$th row of $A$ by $B$. Its $j$th entry is
 
-$$
-(AB)_{ij}=\sum_{k=1}^m A_{ik}B_{kj}.
-$$
 
-Since
 
-$$
-\mathbf{a}_i^T=
-\begin{pmatrix}
-A_{i1}&\cdots&A_{im}
-\end{pmatrix},
-$$
 
-we have
 
-$$
-(\mathbf{a}_i^TB)_j=\sum_{k=1}^m A_{ik}B_{kj}=(AB)_{ij}.
-$$
 
-Thus the $i$th row of $AB$ is $\mathbf{a}_i^TB$, and therefore
 
-$$
-AB=
-\begin{bmatrix}
-\mathbf{a}_1^TB\\
-\mathbf{a}_2^TB\\
-\vdots\\
-\mathbf{a}_n^TB
-\end{bmatrix}.
-$$
+
+
+
+
+
+
+
+
+
+
 
 
 ### Solution for @exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined {.unnumbered}

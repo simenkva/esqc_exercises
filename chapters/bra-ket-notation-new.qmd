@@ -70,7 +70,7 @@ In this case the expansion coefficients cannot in general be obtained simply by 
 
 
 
-::: {#exr-bra-ket-column-vectors level="beginner" recommended="math"}
+::: {#exr-bra-ket-column-vectors level="beginner" }
 ### Bra-ket notation and column vectors
 
 Consider the orthonormal basis $\{|1\rangle,|2\rangle,|3\rangle\}$. In this basis, the ket

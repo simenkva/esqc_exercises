@@ -1,90 +1,58 @@
-# Recommended exercises for the first day {.unnumbered}
+# Exercises for the mathematics tutorial {.unnumbered}
 
 This chapter contains recommended exercises for the mathematics
-tutorial on the first day of the school. These recommended exercises are
-considered especially useful.
+tutorial on the first day of the school. The focus is on _linear algebra_, with some _set theory_ exercises as well, and then some exercises on _continuity and differentiation_. **Start with linear algebra — these are the most important exercises.** The book contains many more exercises as well, if you find time and inspiration!
 
-We provide also a list of recommended exercises for the 'beginners'. If you
-feel that you need training in the _absolute basics_ of the mathematics used
-in quantum chemistry, we recommend that you start here.
 
-In the next chapter, we provide lists of recommended exercises for each
-quantum chemistry topic taught at the school.
+
+The **beginner** list contains exercises that we consider to be especially useful for the students who feel that the need some refreshing to do before embarking on the remaining exercises.
+
+The **intermediate** list contains more advanced exercises, accessible for the majority of the students at the school.
+
+The **for the curious** list contains exercises that go deeper into either mathematics or applications, and can be useful for students that already master the mathematics material at an advanced level. That being said, they should be interesting for most students.
+
 
 ## Beginner {.unnumbered}
 
-- @exr-sets-and-functions-write-days-week-set — Days of the week
-- @exr-sets-potential-energy-curve — Classically allowed region for Morse potential
 - @exr-summing-1 — Very basic sums
 - @exr-summing-2 — Simplifying as a sum
-- @exr-summing-4 — Reconstruct a vector
-- @exr-summing-5 — Summing in a matrix--vector product
-- @exr-summing-dummy-index — The summation index is a dummy index
-- @exr-summing-linearity — Linearity of sums
-- @exr-summing-constant — When something does not depend on the summation index
-- @exr-summing-free-index — Free and summed indices
-- @exr-summing-reindexing — Shifting the summation index
-- @exr-kronecker-delta — The Kronecker delta: basic exercise
-- @exr-combinatorics-factorial — Basic factorials
-- @exr-combinatorics-binomial-coefficients — Basic binomial coefficients
-- @exr-combinatorics-pascals-triangle — Pascal's triangle
-- @exr-combinatorics-binomial-theorem-basic — The binomial theorem
 - @exr-vector-spaces-basic-operations — Basic vector operations
-- @exr-matrix-vector-multiplication — Matrix-vector products
+- @exr-matrix-vector-multiplication — Basic matrix-vector products
 - @exr-matrix-matrix-multiplication — Matrix-matrix products
-- @exr-vectors-and-matrices-work-space-plane-vectors-define-two — Linear independence and basis
-- @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate — Gaussian elimination and vector decomposition
+- @exr-check-candidate-eigenvectors — Checking candidate eigenvectors
+- @exr-eigenvalues-chemical-kinetics — Eigenvalues in chemical kinetics
 - @exr-general-vector-spaces-recipes — Cooking with vectors 1
-- @exr-bra-ket-column-vectors — Bra-ket notation and column vectors
+- @exr-sets-and-functions-write-days-week-set — Days of the week as a set
+- @exr-sets-potential-energy-curve — Classically allowed region for Morse potential
+- @exr-vectors-and-matrices-work-space-plane-vectors-define-two — Linear independence and basis
 - @exr-continuity-step-function — A first discontinuity
 - @exr-continuity-substitution — Continuity by direct substitution
 - @exr-continuity-chemistry-energy — Continuity of a model potential energy
 - @exr-partial-derivatives-basic — First partial derivatives
 - @exr-partial-derivatives-slices — Partial derivatives as one-dimensional derivatives
 - @exr-jacobian-first — A first Jacobian
-- @exr-complex-power-series-geometric-convergence — Convergence of the geometric series
-- @exr-taylor-exp — Approximating the exponential function
-- @exr-matrix-exponential-diagonal — Exponential of a diagonal matrix
 
 ## Intermediate {.unnumbered}
 
-- @exr-sets-and-functions-write-five-first-natural-numbers-set — Five first natural numbers
-- @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping — De Morgan's laws
-- @exr-molecule-sets — Molecules as sets
-- @exr-cardinality-and-countability-explicitly-constructing-bijection — Countability of the integers
-- @exr-summing-3 — Estimating $\sqrt{e}$ via a Taylor series
-- @exr-combinatorics-factorial-arrangements — Lunch line
-- @exr-combinatorics-binomial-theorem-coefficients — Coefficients in binomial expansions
 - @exr-vectors-and-matrices-person-walks-home-first-they-walk — Office coordinates
 - @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed — Boat sailing on the ocean
 - @exr-vectors-and-matrices-robert-beezer-three-digit-number-has — An exercise by Robert Beezer
 - @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action — Compute the action of a matrix on vectors
+- @exr-vectors-and-matrices-write-terms-column-vectors-prove-i — Matrix-matrix products, rows and columns
+- @exr-hermitian-2x2-eigenvalue-problem — Eigenvalues and diagonalization of a Hermitian matrix
+- @exr-nondiagonalizable-2x2-matrix — A matrix that cannot be diagonalized
 - @exr-general-vector-spaces-meaningful-recipes — Cooking with vectors 2
-- @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined — Gaussian elimination and overlap matrix
-- @exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than
-- @exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear
-- @exr-metric-spaces-metric-spaces
-- @exr-visualizing-functions-path-defined-sketch-curve-traced-path
-- @exr-visualizing-functions-sketch-level-curves
-- @exr-complex-arithmetic-compute-real-imaginary-parts-functions
-- @exr-complex-arithmetic-complex-numbers-can-written-polar-form
-- @exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule
-- @exr-complex-sets-exercise
+- @exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping — De Morgan's laws
+- @exr-molecule-sets — Molecules as sets
 - @exr-complex-power-series-exponential-sine-cosine — The exponential, sine, and cosine series
-- @exr-singularities-and-contour-integrals-consider-function-how-many-poles-does
 
 ## For the curious {.unnumbered}
 
+- @exr-hybridization-orbital-geometry — Hybrid orbitals from vectors and matrices
+- @exr-eigenvalues-computational-reaction-network — Eigenvalues of a reaction network
 - @exr-stirling-factorial — Stirling's approximation
-- @exr-combinatorics-pascals-identity — Pascal's identity
-- @exr-combinatorics-pascal-sierpinski — Pascal's triangle and the Sierpinski triangle
 - @exr-proofs-advanced-commutator — A finite-dimensional quantum-mechanical impossibility
 - @exr-complex-vector-space-complex-numbers-real-vector-space — Complex numbers as a real vector space
-- @exr-eigenvalues-and-diagonalization-eigenvalue-decomposition
-- @exr-gram-schmidt-gram-schmidt-orthogonalization
-- @exr-singular-value-decomposition-singular-value-decomposition-compression-tool
 - @exr-advanced-directional-trap — Checking multivariable limits along different paths
 - @exr-advanced-gradient-landscape — Explore a two-dimensional energy landscape
-- @exr-dual-numbers-dual-numbers
-- @exr-complex-step-differentiation-complex-step-method
 

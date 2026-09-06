@@ -61,7 +61,7 @@ d.	Hence show, for $z\neq 1$, that
 	$$
 :::
 
-::: {#exr-complex-power-series-geometric-convergence level="beginner" recommended="math" }
+::: {#exr-complex-power-series-geometric-convergence level="beginner"  }
 ### Convergence of the geometric series
 
 From @exr-complex-power-series-geometric-partial-sum,

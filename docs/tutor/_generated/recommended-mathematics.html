@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recommended exercises for the first day – ESQC mathematics exercises</title>
+<title>Exercises for the mathematics tutorial – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -158,35 +158,6 @@ div.callout-visualization.callout-style-default .callout-icon::before, div.callo
 }
 </style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../math_spacing.css">
@@ -363,7 +334,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Recommended exercises for the first day</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercises for the mathematics tutorial</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -409,13 +380,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../_generated/recommended-mathematics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Recommended exercises for the first day</span></a>
+ <span class="menu-text">Exercises for the mathematics tutorial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../_generated/recommended-by-topic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Recommended exercises by topic</span></a>
+ <span class="menu-text">Recommended exercises by school topic</span></a>
   </div>
 </li>
       </ul>
@@ -478,50 +449,56 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
+  <a href="../chapters/hybridization.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/eigenvalues-and-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Eigenvalues and diagonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenvalues and eigenvectors</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gram-schmidt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singular-value-decomposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomial-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -538,13 +515,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/open-and-closed-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
   </div>
 </li>
       </ul>
@@ -565,19 +542,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/visualizing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/continuity-and-differentiability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/differentiate-wrt-vector-complete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
   </div>
 </li>
       </ul>
@@ -594,31 +571,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-arithmetic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-exponential.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-power-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singularities-and-contour-integrals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
   </div>
 </li>
       </ul>
@@ -635,13 +612,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/taylor-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/matrix-exp-bch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
   </div>
 </li>
       </ul>
@@ -658,19 +635,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/dual-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/newtons-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-step-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -711,9 +688,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Recommended exercises for the first day</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercises for the mathematics tutorial</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Recommended exercises for the first day</h1>
+<h1 class="title">Exercises for the mathematics tutorial</h1>
 </div>
 
 
@@ -730,90 +707,58 @@ window.Quarto = {
 </header>
 
 
-<p>This chapter contains recommended exercises for the mathematics tutorial on the first day of the school. These recommended exercises are considered especially useful.</p>
-<p>We provide also a list of recommended exercises for the ‘beginners’. If you feel that you need training in the <em>absolute basics</em> of the mathematics used in quantum chemistry, we recommend that you start here.</p>
-<p>In the next chapter, we provide lists of recommended exercises for each quantum chemistry topic taught at the school.</p>
+<p>This chapter contains recommended exercises for the mathematics tutorial on the first day of the school. The focus is on <em>linear algebra</em>, with some <em>set theory</em> exercises as well, and then some exercises on <em>continuity and differentiation</em>. <strong>Start with linear algebra — these are the most important exercises.</strong> The book contains many more exercises as well, if you find time and inspiration!</p>
+<p>The <strong>beginner</strong> list contains exercises that we consider to be especially useful for the students who feel that the need some refreshing to do before embarking on the remaining exercises.</p>
+<p>The <strong>intermediate</strong> list contains more advanced exercises, accessible for the majority of the students at the school.</p>
+<p>The <strong>for the curious</strong> list contains exercises that go deeper into either mathematics or applications, and can be useful for students that already master the mathematics material at an advanced level. That being said, they should be interesting for most students.</p>
 <section id="beginner" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="beginner">Beginner</h2>
 <ul>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-write-days-week-set" class="quarto-xref">Exercise&nbsp;<span>1.1</span></a> — Days of the week</li>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-potential-energy-curve" class="quarto-xref">Exercise&nbsp;<span>1.10</span></a> — Classically allowed region for Morse potential</li>
 <li><a href="../chapters/summing-over-indices.html#exr-summing-1" class="quarto-xref">Exercise&nbsp;<span>3.1</span></a> — Very basic sums</li>
 <li><a href="../chapters/summing-over-indices.html#exr-summing-2" class="quarto-xref">Exercise&nbsp;<span>3.2</span></a> — Simplifying as a sum</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-4" class="quarto-xref">Exercise&nbsp;<span>3.4</span></a> — Reconstruct a vector</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-5" class="quarto-xref">Exercise&nbsp;<span>3.5</span></a> — Summing in a matrix–vector product</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-dummy-index" class="quarto-xref">Exercise&nbsp;<span>3.6</span></a> — The summation index is a dummy index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-linearity" class="quarto-xref">Exercise&nbsp;<span>3.7</span></a> — Linearity of sums</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-constant" class="quarto-xref">Exercise&nbsp;<span>3.8</span></a> — When something does not depend on the summation index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-free-index" class="quarto-xref">Exercise&nbsp;<span>3.9</span></a> — Free and summed indices</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-reindexing" class="quarto-xref">Exercise&nbsp;<span>3.10</span></a> — Shifting the summation index</li>
-<li><a href="../chapters/summing-over-indices.html#exr-kronecker-delta" class="quarto-xref">Exercise&nbsp;<span>3.11</span></a> — The Kronecker delta: basic exercise</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-factorial" class="quarto-xref">Exercise&nbsp;<span>4.1</span></a> — Basic factorials</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-coefficients" class="quarto-xref">Exercise&nbsp;<span>5.1</span></a> — Basic binomial coefficients</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-pascals-triangle" class="quarto-xref">Exercise&nbsp;<span>5.2</span></a> — Pascal’s triangle</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-theorem-basic" class="quarto-xref">Exercise&nbsp;<span>5.5</span></a> — The binomial theorem</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vector-spaces-basic-operations" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a> — Basic vector operations</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-matrix-vector-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.2</span></a> — Matrix-vector products</li>
+<li><a href="../chapters/vectors-and-matrices.html#exr-matrix-vector-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.2</span></a> — Basic matrix-vector products</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-matrix-matrix-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.3</span></a> — Matrix-matrix products</li>
+<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-check-candidate-eigenvectors" class="quarto-xref">Exercise&nbsp;<span>8.1</span></a> — Checking candidate eigenvectors</li>
+<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-eigenvalues-chemical-kinetics" class="quarto-xref">Exercise&nbsp;<span>8.2</span></a> — Eigenvalues in chemical kinetics</li>
+<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>9.1</span></a> — Cooking with vectors 1</li>
+<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-write-days-week-set" class="quarto-xref">Exercise&nbsp;<span>1.1</span></a> — Days of the week as a set</li>
+<li><a href="../chapters/sets-and-functions.html#exr-sets-potential-energy-curve" class="quarto-xref">Exercise&nbsp;<span>1.9</span></a> — Classically allowed region for Morse potential</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="quarto-xref">Exercise&nbsp;<span>6.4</span></a> — Linear independence and basis</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" class="quarto-xref">Exercise&nbsp;<span>6.5</span></a> — Gaussian elimination and vector decomposition</li>
-<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>7.1</span></a> — Cooking with vectors 1</li>
-<li><a href="../chapters/bra-ket-notation-new.html#exr-bra-ket-column-vectors" class="quarto-xref">Exercise&nbsp;<span>10.1</span></a> — Bra-ket notation and column vectors</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-step-function" class="quarto-xref">Exercise&nbsp;<span>18.1</span></a> — A first discontinuity</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-substitution" class="quarto-xref">Exercise&nbsp;<span>18.3</span></a> — Continuity by direct substitution</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-chemistry-energy" class="quarto-xref">Exercise&nbsp;<span>18.11</span></a> — Continuity of a model potential energy</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-basic" class="quarto-xref">Exercise&nbsp;<span>18.12</span></a> — First partial derivatives</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-slices" class="quarto-xref">Exercise&nbsp;<span>18.13</span></a> — Partial derivatives as one-dimensional derivatives</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-jacobian-first" class="quarto-xref">Exercise&nbsp;<span>18.15</span></a> — A first Jacobian</li>
-<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-geometric-convergence" class="quarto-xref">Exercise&nbsp;<span>22.2</span></a> — Convergence of the geometric series</li>
-<li><a href="../chapters/taylor-series.html#exr-taylor-exp" class="quarto-xref">Exercise&nbsp;<span>24.1</span></a> — Approximating the exponential function</li>
-<li><a href="../chapters/matrix-exp-bch.html#exr-matrix-exponential-diagonal" class="quarto-xref">Exercise&nbsp;<span>25.1</span></a> — Exponential of a diagonal matrix</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-step-function" class="quarto-xref">Exercise&nbsp;<span>19.1</span></a> — A first discontinuity</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-substitution" class="quarto-xref">Exercise&nbsp;<span>19.3</span></a> — Continuity by direct substitution</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-chemistry-energy" class="quarto-xref">Exercise&nbsp;<span>19.11</span></a> — Continuity of a model potential energy</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-basic" class="quarto-xref">Exercise&nbsp;<span>19.12</span></a> — First partial derivatives</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-slices" class="quarto-xref">Exercise&nbsp;<span>19.13</span></a> — Partial derivatives as one-dimensional derivatives</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-jacobian-first" class="quarto-xref">Exercise&nbsp;<span>19.15</span></a> — A first Jacobian</li>
 </ul>
 </section>
 <section id="intermediate" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="intermediate">Intermediate</h2>
 <ul>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-write-five-first-natural-numbers-set" class="quarto-xref">Exercise&nbsp;<span>1.2</span></a> — Five first natural numbers</li>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping" class="quarto-xref">Exercise&nbsp;<span>1.8</span></a> — De Morgan’s laws</li>
-<li><a href="../chapters/sets-and-functions.html#exr-molecule-sets" class="quarto-xref">Exercise&nbsp;<span>1.11</span></a> — Molecules as sets</li>
-<li><a href="../chapters/cardinality-and-countability.html#exr-cardinality-and-countability-explicitly-constructing-bijection" class="quarto-xref">Exercise&nbsp;<span>2.1</span></a> — Countability of the integers</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-3" class="quarto-xref">Exercise&nbsp;<span>3.3</span></a> — Estimating <span class="math inline">\(\sqrt{e}\)</span> via a Taylor series</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-factorial-arrangements" class="quarto-xref">Exercise&nbsp;<span>4.2</span></a> — Lunch line</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-binomial-theorem-coefficients" class="quarto-xref">Exercise&nbsp;<span>5.6</span></a> — Coefficients in binomial expansions</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-person-walks-home-first-they-walk" class="quarto-xref">Exercise&nbsp;<span>6.6</span></a> — Office coordinates</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="quarto-xref">Exercise&nbsp;<span>6.7</span></a> — Boat sailing on the ocean</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="quarto-xref">Exercise&nbsp;<span>6.8</span></a> — An exercise by Robert Beezer</li>
 <li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="quarto-xref">Exercise&nbsp;<span>6.9</span></a> — Compute the action of a matrix on vectors</li>
-<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-meaningful-recipes" class="quarto-xref">Exercise&nbsp;<span>7.2</span></a> — Cooking with vectors 2</li>
-<li><a href="../chapters/gaussian-elimination.html#exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined" class="quarto-xref">Exercise&nbsp;<span>9.1</span></a> — Gaussian elimination and overlap matrix</li>
-<li><a href="../chapters/polynomial-vector-spaces.html#exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than" class="quarto-xref">Exercise&nbsp;<span>14.1</span></a></li>
-<li><a href="../chapters/polynomial-vector-spaces.html#exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear" class="quarto-xref">Exercise&nbsp;<span>14.2</span></a></li>
-<li><a href="../chapters/metric-spaces.html#exr-metric-spaces-metric-spaces" class="quarto-xref">Exercise&nbsp;<span>15.1</span></a></li>
-<li><a href="../chapters/visualizing-functions.html#exr-visualizing-functions-path-defined-sketch-curve-traced-path" class="quarto-xref">Exercise&nbsp;<span>17.1</span></a></li>
-<li><a href="../chapters/visualizing-functions.html#exr-visualizing-functions-sketch-level-curves" class="quarto-xref">Exercise&nbsp;<span>17.4</span></a></li>
-<li><a href="../chapters/complex-arithmetic.html#exr-complex-arithmetic-compute-real-imaginary-parts-functions" class="quarto-xref">Exercise&nbsp;<span>19.1</span></a></li>
-<li><a href="../chapters/complex-arithmetic.html#exr-complex-arithmetic-complex-numbers-can-written-polar-form" class="quarto-xref">Exercise&nbsp;<span>19.4</span></a></li>
-<li><a href="../chapters/complex-arithmetic.html#exr-complex-arithmetic-illustrate-addition-coordinate-system-parallelogram-rule" class="quarto-xref">Exercise&nbsp;<span>19.6</span></a></li>
-<li><a href="../chapters/complex-sets.html#exr-complex-sets-exercise" class="quarto-xref">Exercise&nbsp;<span>20.1</span></a></li>
-<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-exponential-sine-cosine" class="quarto-xref">Exercise&nbsp;<span>22.3</span></a> — The exponential, sine, and cosine series</li>
-<li><a href="../chapters/singularities-and-contour-integrals.html#exr-singularities-and-contour-integrals-consider-function-how-many-poles-does" class="quarto-xref">Exercise&nbsp;<span>23.1</span></a></li>
+<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="quarto-xref">Exercise&nbsp;<span>6.10</span></a> — Matrix-matrix products, rows and columns</li>
+<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-hermitian-2x2-eigenvalue-problem" class="quarto-xref">Exercise&nbsp;<span>8.3</span></a> — Eigenvalues and diagonalization of a Hermitian matrix</li>
+<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-nondiagonalizable-2x2-matrix" class="quarto-xref">Exercise&nbsp;<span>8.4</span></a> — A matrix that cannot be diagonalized</li>
+<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-meaningful-recipes" class="quarto-xref">Exercise&nbsp;<span>9.2</span></a> — Cooking with vectors 2</li>
+<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping" class="quarto-xref">Exercise&nbsp;<span>1.7</span></a> — De Morgan’s laws</li>
+<li><a href="../chapters/sets-and-functions.html#exr-molecule-sets" class="quarto-xref">Exercise&nbsp;<span>1.10</span></a> — Molecules as sets</li>
+<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-exponential-sine-cosine" class="quarto-xref">Exercise&nbsp;<span>24.3</span></a> — The exponential, sine, and cosine series</li>
 </ul>
 </section>
 <section id="for-the-curious" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="for-the-curious">For the curious</h2>
 <ul>
+<li><a href="../chapters/hybridization.html#exr-hybridization-orbital-geometry" class="quarto-xref">Exercise&nbsp;<span>7.1</span></a> — Hybrid orbitals from vectors and matrices</li>
+<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-eigenvalues-computational-reaction-network" class="quarto-xref">Exercise&nbsp;<span>8.6</span></a> — Eigenvalues of a reaction network</li>
 <li><a href="../chapters/combinatorics.html#exr-stirling-factorial" class="quarto-xref">Exercise&nbsp;<span>4.4</span></a> — Stirling’s approximation</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-pascals-identity" class="quarto-xref">Exercise&nbsp;<span>5.3</span></a> — Pascal’s identity</li>
-<li><a href="../chapters/combinatorics.html#exr-combinatorics-pascal-sierpinski" class="quarto-xref">Exercise&nbsp;<span>5.4</span></a> — Pascal’s triangle and the Sierpinski triangle</li>
 <li><a href="../chapters/basic-mathematical-proofs.html#exr-proofs-advanced-commutator" class="quarto-xref">Exercise&nbsp;<span>5.12</span></a> — A finite-dimensional quantum-mechanical impossibility</li>
-<li><a href="../chapters/complex-vector-space.html#exr-complex-vector-space-complex-numbers-real-vector-space" class="quarto-xref">Exercise&nbsp;<span>8.1</span></a> — Complex numbers as a real vector space</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-eigenvalues-and-diagonalization-eigenvalue-decomposition" class="quarto-xref">Exercise&nbsp;<span>11.1</span></a></li>
-<li><a href="../chapters/gram-schmidt.html#exr-gram-schmidt-gram-schmidt-orthogonalization" class="quarto-xref">Exercise&nbsp;<span>12.1</span></a></li>
-<li><a href="../chapters/singular-value-decomposition.html#exr-singular-value-decomposition-singular-value-decomposition-compression-tool" class="quarto-xref">Exercise&nbsp;<span>13.1</span></a></li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-directional-trap" class="quarto-xref">Exercise&nbsp;<span>18.21</span></a> — Checking multivariable limits along different paths</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-gradient-landscape" class="quarto-xref">Exercise&nbsp;<span>18.23</span></a> — Explore a two-dimensional energy landscape</li>
-<li><a href="../chapters/dual-numbers.html#exr-dual-numbers-dual-numbers" class="quarto-xref">Exercise&nbsp;<span>26.1</span></a></li>
-<li><a href="../chapters/complex-step-differentiation.html#exr-complex-step-differentiation-complex-step-method" class="quarto-xref">Exercise&nbsp;<span>28.1</span></a></li>
+<li><a href="../chapters/complex-vector-space.html#exr-complex-vector-space-complex-numbers-real-vector-space" class="quarto-xref">Exercise&nbsp;<span>10.1</span></a> — Complex numbers as a real vector space</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-directional-trap" class="quarto-xref">Exercise&nbsp;<span>19.21</span></a> — Checking multivariable limits along different paths</li>
+<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-gradient-landscape" class="quarto-xref">Exercise&nbsp;<span>19.23</span></a> — Explore a two-dimensional energy landscape</li>
 </ul>
 
 
@@ -1240,8 +1185,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../_generated/recommended-by-topic.html" class="pagination-link" aria-label="Recommended exercises by topic">
-        <span class="nav-page-text">Recommended exercises by topic</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../_generated/recommended-by-topic.html" class="pagination-link" aria-label="Recommended exercises by school topic">
+        <span class="nav-page-text">Recommended exercises by school topic</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

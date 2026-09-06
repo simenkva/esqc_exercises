@@ -12,7 +12,7 @@ The set $\mathbb{N}$ has an infinite number of elements. By definition, $|\mathb
 
 ## Exercises
 
-::: {#exr-cardinality-and-countability-explicitly-constructing-bijection recommended="math" level="intermediate"}
+::: {#exr-cardinality-and-countability-explicitly-constructing-bijection  level="intermediate"}
 ### Countability of the integers
 
 Show that $|\mathbb{Z}|=\aleph_0$ by explicitly constructing a bijection $f : \mathbb{N}\to \mathbb{Z}$.

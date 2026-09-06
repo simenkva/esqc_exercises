@@ -58,9 +58,11 @@ input[type="checkbox"] {
 }
 
 
-/* Add labels for exercise difficulty levels. */
-[id^="exr-"][data-level]::before {
-  display: inline-block;
+/* Add labels for exercise difficulty levels. Keep the badge on the first
+   paragraph so it does not share the exercise's separator pseudo-element. */
+[id^="exr-"][data-level] > p:first-child::before {
+  display: block;
+  width: fit-content;
   padding: 0.15em 0.6em;
   margin-bottom: 0.75em;
   border-radius: 1em;
@@ -68,17 +70,17 @@ input[type="checkbox"] {
   font-weight: 600;
 }
 
-[id^="exr-"][data-level="beginner"]::before {
+[id^="exr-"][data-level="beginner"] > p:first-child::before {
   content: "Beginner";
   background: #dff3df;
 }
 
-[id^="exr-"][data-level="intermediate"]::before {
+[id^="exr-"][data-level="intermediate"] > p:first-child::before {
   content: "Intermediate";
   background: #fff0c2;
 }
 
-[id^="exr-"][data-level="advanced"]::before {
+[id^="exr-"][data-level="advanced"] > p:first-child::before {
   content: "Advanced";
   background: #f5d5d5;
 }

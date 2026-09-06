@@ -1,0 +1,15 @@
+# Exercises for the mathematics tutorial {.unnumbered}
+
+This chapter contains recommended exercises for the mathematics
+tutorial on the first day of the school. The focus is on _linear algebra_, with some _set theory_ exercises as well, and then some exercises on _continuity and differentiation_. **Start with linear algebra — these are the most important exercises.** The book contains many more exercises as well, if you find time and inspiration!
+
+
+
+The **beginner** list contains exercises that we consider to be especially useful for the students who feel that the need some refreshing to do before embarking on the remaining exercises.
+
+The **intermediate** list contains more advanced exercises, accessible for the majority of the students at the school.
+
+The **for the curious** list contains exercises that go deeper into either mathematics or applications, and can be useful for students that already master the mathematics material at an advanced level. That being said, they should be interesting for most students.
+
+
+<!-- GENERATED EXERCISE LISTS -->

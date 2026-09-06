@@ -4,7 +4,7 @@ Combinatorics is the part of mathematics concerned with _counting_ in a broad se
 
 
 
-## Exercises: Factorials
+## Exercises: Factorials {.unnumbered}
 
 The _factorial_ of a non-negative integer $n$ is defined as the product of all positive integers less than or equal to $n$:
 
@@ -41,14 +41,14 @@ $$
 
 
 
-:::{#exr-combinatorics-factorial recommended="math" level="beginner"}
+:::{#exr-combinatorics-factorial level="beginner"}
 ### Basic factorials
 
 Compute the factorials $0!$, $1!$, $2!$, $3!$, $4!$, and $5!$.
 
 :::
 
-:::{#exr-combinatorics-factorial-arrangements recommended="math" level="intermediate"}
+:::{#exr-combinatorics-factorial-arrangements level="intermediate"}
 ### Lunch line
 
 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?
@@ -102,7 +102,7 @@ e. Based on your results above, what happens to the accuracy of Stirling's appro
 
 
 
-# Exercises: Binomial coefficients and Pascal's triangle
+## Exercises: Binomial coefficients and Pascal's triangle {.unnumbered}
 
 
 The _binomial coefficient_ $\binom{n}{k}$ is defined as the number of ways to choose $k$ elements from a set of $n$ elements, without regard to the order of selection. It is given by the formula:
@@ -127,7 +127,7 @@ $$
 Fact: The $n$-th row of Pascal's triangle contains the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 
-:::{#exr-combinatorics-binomial-coefficients recommended="math;topic" level="beginner" topic="second-quantization"}
+:::{#exr-combinatorics-binomial-coefficients recommended="topic" level="beginner" topic="second-quantization"}
 ### Basic binomial coefficients
 
 a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom{7}{4}$.
@@ -135,14 +135,14 @@ a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom
 b.  In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many different combinations of 7 numbers can be drawn?
 :::
 
-:::{#exr-combinatorics-pascals-triangle recommended="math" level="beginner" topic="second-quantization" recommendation="topic"}
+:::{#exr-combinatorics-pascals-triangle recommended="topic" level="beginner" topic="second-quantization" }
 ### Pascal's triangle
 
 Compute the first 6 rows of Pascal's triangle. Verify that the numbers in the $n$-th row correspond to the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 :::
 
-::: {#exr-combinatorics-pascals-identity recommended="math" level="advanced"}
+::: {#exr-combinatorics-pascals-identity recommended="topic" topic="second-quantization" level="advanced"}
 ### Pascal's identity
 
 The binomial coefficients satisfy **Pascal's identity**,
@@ -174,7 +174,7 @@ e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choos
 
 
 
-::: {#exr-combinatorics-pascal-sierpinski recommended="math" level="advanced"}
+::: {#exr-combinatorics-pascal-sierpinski level="advanced" priority=-1}
 ### Pascal's triangle and the Sierpinski triangle
 
 Write a computer program to generate the first $2^n$ rows of Pascal's triangle, where $n=1,2,\ldots$. Create a $2^n\times 2^n$ lower triangular matrix $T$, where $T_{k,n} = 0$ if $\binom{n}{k}$ is even, and $T_{k,n}=1$ if the coefficient is odd, for $k \leq n$ (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.
@@ -190,7 +190,7 @@ If you use Python and sympy, you can generate binomial factors with the function
 
 
 
-::: {#exr-combinatorics-binomial-theorem-basic recommended="math;topic" topic="second-quantization" level="beginner"}
+::: {#exr-combinatorics-binomial-theorem-basic recommended="topic" topic="second-quantization" level="beginner"}
 ### The binomial theorem
 
 The **binomial theorem** states that
@@ -219,7 +219,7 @@ f.	Without carrying out any multiplication, find the coefficient of $x^3$ in $(1
 :::
 
 
-::: {#exr-combinatorics-binomial-theorem-coefficients recommended="math;topic" topic="second-quantization" level="intermediate"}
+::: {#exr-combinatorics-binomial-theorem-coefficients recommended="topic" topic="second-quantization" level="intermediate"}
 ### Coefficients in binomial expansions
 
 Consider the binomial expansion

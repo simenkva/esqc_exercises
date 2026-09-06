@@ -131,7 +131,7 @@ In molecular physics and quantum chemistry, Taylor expansions appear quite often
 ## Exercises {.unnumbered}
 
 
-::: {#exr-taylor-exp level="beginner" recommended="math;topic" topic="coupled-cluster"}
+::: {#exr-taylor-exp level="beginner" recommended="topic" topic="coupled-cluster"}
 ### Approximating the exponential function
 
 a.  Write down the general Taylor polynomial $T_n(x)$ about $x=0$.

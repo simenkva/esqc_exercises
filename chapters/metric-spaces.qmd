@@ -20,7 +20,7 @@ In this exercise, we will try to understand why the axioms are as they are, i.e.
 
 ## Exercises
 
-::: {#exr-metric-spaces-metric-spaces recommended="math" level="intermediate"}
+::: {#exr-metric-spaces-metric-spaces level="intermediate"}
 
 1.  Consider two persons $X$ and $Y$ located at $x$ and $y$ in a set $M$. They both measure the distance to the other person. What would happen if axiom a) is violated? Is this reasonable?
 

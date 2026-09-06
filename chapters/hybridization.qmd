@@ -1,0 +1,973 @@
+# Hybridization and orbital geometry
+
+Hybrid orbitals provide a useful example of how vectors, matrices, geometry, and chemistry fit together. In this chapter we use the familiar atomic-orbital labels $s$, $p_x$, $p_y$, and $p_z$ as an orthonormal basis for a four-dimensional vector space. A hybrid orbital is then simply a linear combination of these basis functions,
+
+$$
+h=a s+b_xp_x+b_yp_y+b_zp_z.
+$$
+
+It is convenient to represent this orbital by its coefficient vector
+
+$$
+\mathbf{h}=
+\begin{bmatrix}
+a\\
+b_x\\
+b_y\\
+b_z
+\end{bmatrix}.
+$$
+
+The coefficients multiplying $p_x$, $p_y$, and $p_z$ also have a geometrical interpretation. If
+
+$$
+\mathbf{n}=
+\begin{bmatrix}
+n_x\\
+n_y\\
+n_z
+\end{bmatrix},
+\qquad
+\|\mathbf{n}\|=1,
+$$
+
+is a direction in ordinary three-dimensional space, then the linear combination
+
+$$
+p_{\mathbf n}=n_xp_x+n_yp_y+n_zp_z
+$$
+
+is a $p$ orbital oriented along $\mathbf n$. A hybrid orbital pointing in this direction may therefore be written
+
+$$
+h=a s+b\,p_{\mathbf n}
+=a s+b(n_xp_x+n_yp_y+n_zp_z).
+$$
+
+In this exercise we use normalization, orthogonality, dot products, and matrix transformations to construct $sp$, $sp^2$, and $sp^3$ hybrid orbitals. The emphasis is on the linear-algebraic structure of hybridization. The orbitals used for visualization are simple analytic model functions intended to show their shapes and orientations, rather than quantitatively accurate atomic orbitals.
+
+## Exercises {.unnumbered}
+
+::: {#exr-hybridization-orbital-geometry level="advanced" recommended="math" priority=10}
+### Hybrid orbitals from vectors and matrices
+
+Assume that the four orbitals
+
+$$
+s,\qquad p_x,\qquad p_y,\qquad p_z
+$$
+
+form an orthonormal basis.
+
+A hybrid orbital directed along a unit vector
+
+$$
+\mathbf n=
+\begin{bmatrix}
+n_x\\
+n_y\\
+n_z
+\end{bmatrix}
+$$
+
+will be written as
+
+$$
+h=a s+b(n_xp_x+n_yp_y+n_zp_z).
+$$
+
+a.	Consider two $sp$ hybrids directed along the positive and negative $x$ axes,
+
+	$$
+	\mathbf n_1=
+	\begin{bmatrix}
+	1\\0\\0
+	\end{bmatrix},
+	\qquad
+	\mathbf n_2=
+	\begin{bmatrix}
+	-1\\0\\0
+	\end{bmatrix}.
+	$$
+
+	Assume that the two hybrids have the form
+
+	$$
+	h_i=a s+b\,p_{\mathbf n_i}.
+	$$
+
+	Require both hybrids to be normalized and mutually orthogonal. Determine $a$ and $b$, and write the two normalized $sp$ hybrids explicitly in terms of $s$ and $p_x$.
+
+b.	Now consider three directions in the $xy$ plane separated by $120^\circ$,
+
+	$$
+	\mathbf n_1=
+	\begin{bmatrix}
+	1\\0\\0
+	\end{bmatrix},
+	\qquad
+	\mathbf n_2=
+	\begin{bmatrix}
+	-\frac12\\\frac{\sqrt3}{2}\\0
+	\end{bmatrix},
+	\qquad
+	\mathbf n_3=
+	\begin{bmatrix}
+	-\frac12\\-\frac{\sqrt3}{2}\\0
+	\end{bmatrix}.
+	$$
+
+	Verify using dot products that
+
+	$$
+	\mathbf n_i^T\mathbf n_j=-\frac12,\qquad i\neq j.
+	$$
+
+	Assume three hybrids of the form
+
+	$$
+	h_i=a s+b\,p_{\mathbf n_i}.
+	$$
+
+	Use normalization and mutual orthogonality to determine $a$ and $b$. Write the three $sp^2$ hybrids explicitly as linear combinations of $s$, $p_x$, and $p_y$.
+
+c.	Consider the four tetrahedral directions
+
+	$$
+	\mathbf n_1=\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	1\\1\\1
+	\end{bmatrix},
+	\qquad
+	\mathbf n_2=\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	1\\-1\\-1
+	\end{bmatrix},
+	$$
+
+	$$
+	\mathbf n_3=\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	-1\\1\\-1
+	\end{bmatrix},
+	\qquad
+	\mathbf n_4=\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	-1\\-1\\1
+	\end{bmatrix}.
+	$$
+
+	Verify that every $\mathbf n_i$ is a unit vector and that
+
+	$$
+	\mathbf n_i^T\mathbf n_j=-\frac13,\qquad i\neq j.
+	$$
+
+	Use the dot product to calculate the angle between any two tetrahedral directions.
+
+d.	Assume four $sp^3$ hybrids of the form
+
+	$$
+	h_i=a s+b\,p_{\mathbf n_i}.
+	$$
+
+	Require the hybrids to be normalized and mutually orthogonal. Determine $a$ and $b$, and show that the four hybrid orbitals can be written
+
+	$$
+	\begin{bmatrix}
+	h_1\\
+	h_2\\
+	h_3\\
+	h_4
+	\end{bmatrix}
+	=
+	U
+	\begin{bmatrix}
+	s\\
+	p_x\\
+	p_y\\
+	p_z
+	\end{bmatrix},
+	$$
+
+	where
+
+	$$
+	U=\frac12
+	\begin{bmatrix}
+	1&1&1&1\\
+	1&1&-1&-1\\
+	1&-1&1&-1\\
+	1&-1&-1&1
+	\end{bmatrix}.
+	$$
+
+e.	Show by direct matrix multiplication that
+
+	$$
+	U^TU=I.
+	$$
+
+	What does this tell you about the transformation between the original atomic-orbital basis and the hybrid-orbital basis? Find $U^{-1}$ and use it to express $s$, $p_x$, $p_y$, and $p_z$ in terms of the four $sp^3$ hybrids.
+
+f.	Use Python to visualize the tetrahedral directions as arrows from the origin. Confirm visually that the four vectors point toward the corners of a tetrahedron. A possible starting point is
+
+	```{python}
+	#| echo: true
+
+	import numpy as np
+	import plotly.graph_objects as go
+
+	directions = np.array([
+	    [ 1,  1,  1],
+	    [ 1, -1, -1],
+	    [-1,  1, -1],
+	    [-1, -1,  1]
+	], dtype=float)
+
+	directions /= np.linalg.norm(directions, axis=1)[:, None]
+
+	# Build a Plotly figure and add one line and one cone
+	# for each direction vector.
+	#
+	# Hint:
+	#   go.Scatter3d(...) can be used for the lines.
+	#   go.Cone(...) can be used for arrowheads.
+	#
+	# Make the x, y, and z axis scales equal.
+	```
+
+g.	Finally, visualize the four $sp^3$ hybrid orbitals as isosurfaces. For the visualization, use the simple model functions
+
+	$$
+	s(\mathbf r)=e^{-\alpha r},
+	\qquad
+	p_x(\mathbf r)=x e^{-\alpha r},
+	\qquad
+	p_y(\mathbf r)=y e^{-\alpha r},
+	\qquad
+	p_z(\mathbf r)=z e^{-\alpha r},
+	$$
+
+	where $r=\sqrt{x^2+y^2+z^2}$ and $\alpha>0$ controls the radial decay.
+
+	Construct the four hybrids by applying the matrix $U$ to these four functions point by point on a three-dimensional grid. Plot positive and negative isosurfaces for each hybrid using Plotly or any tool you like. The following skeleton may be used as a starting point:
+
+	```{python}
+	#| echo: true
+	#| eval: false
+
+	import numpy as np
+	import plotly.graph_objects as go
+
+	alpha = 1.0
+	L = 4.0
+	n = 50
+
+	x = np.linspace(-L, L, n)
+	y = np.linspace(-L, L, n)
+	z = np.linspace(-L, L, n)
+	X, Y, Z = np.meshgrid(x, y, z, indexing="ij")
+
+	R = np.sqrt(X**2 + Y**2 + Z**2)
+
+	s  = np.exp(-alpha * R)
+	px = X * np.exp(-alpha * R)
+	py = Y * np.exp(-alpha * R)
+	pz = Z * np.exp(-alpha * R)
+
+	U = 0.5 * np.array([
+	    [1,  1,  1,  1],
+	    [1,  1, -1, -1],
+	    [1, -1,  1, -1],
+	    [1, -1, -1,  1]
+	])
+
+	basis = np.stack([s, px, py, pz])
+
+	# Apply U to the first axis of `basis`.
+	# One convenient possibility is np.tensordot.
+	hybrids = ...
+
+	# Select one hybrid, for example:
+	h = hybrids[0]
+
+	# Choose an isovalue. It is often convenient to define it
+	# as a fraction of max(abs(h)).
+	isovalue = ...
+
+	fig = go.Figure()
+
+	# Add one isosurface for +isovalue and one for -isovalue.
+	# Plotly's go.Isosurface expects flattened coordinate and
+	# value arrays.
+	#
+	# fig.add_trace(go.Isosurface(
+	#     x=X.ravel(),
+	#     y=Y.ravel(),
+	#     z=Z.ravel(),
+	#     value=h.ravel(),
+	#     isomin=...,
+	#     isomax=...,
+	#     surface_count=1,
+	#     caps=dict(x_show=False, y_show=False, z_show=False)
+	# ))
+	#
+	# Repeat for the opposite sign.
+	#
+	# Then repeat for h = hybrids[1], hybrids[2], hybrids[3],
+	# either in separate figures or by arranging the results
+	# in a layout of your choice.
+
+	fig.show()
+	```
+
+	Compare the directions of the large lobes in your plots with the four vectors $\mathbf n_1,\ldots,\mathbf n_4$. Explain how the coefficients of $p_x$, $p_y$, and $p_z$ determine the spatial orientation of each hybrid.
+:::
+
+
+
+
+
+
+:::{.content-visible when-profile="tutor"}
+
+## Solutions {.unnumbered}
+
+### Solution for @exr-hybridization-orbital-geometry {.unnumbered}
+
+a.	For an $sp$ hybrid
+
+	$$
+	h_i=a s+b\,p_{\mathbf n_i},
+	$$
+
+	normalization gives
+
+	$$
+	\langle h_i,h_i\rangle=a^2+b^2=1,
+	$$
+
+	because $s$ and $p_{\mathbf n_i}$ are normalized and orthogonal.
+
+	For the two opposite directions,
+
+	$$
+	\mathbf n_1^T\mathbf n_2=-1.
+	$$
+
+	Therefore
+
+	$$
+	\langle h_1,h_2\rangle=a^2+b^2\mathbf n_1^T\mathbf n_2=a^2-b^2.
+	$$
+
+	Orthogonality requires
+
+	$$
+	a^2-b^2=0.
+	$$
+
+	Together with
+
+	$$
+	a^2+b^2=1,
+	$$
+
+	this gives
+
+	$$
+	a^2=b^2=\frac12.
+	$$
+
+	Choosing positive $a$ and $b$,
+
+	$$
+	a=b=\frac{1}{\sqrt2}.
+	$$
+
+	Hence the two normalized $sp$ hybrids are
+
+	$$
+	h_1=\frac{1}{\sqrt2}(s+p_x),
+	\qquad
+	h_2=\frac{1}{\sqrt2}(s-p_x).
+	$$
+
+b.	The dot products are
+
+	$$
+	\mathbf n_1^T\mathbf n_2=-\frac12,
+	\qquad
+	\mathbf n_1^T\mathbf n_3=-\frac12,
+	$$
+
+	and
+
+	$$
+	\mathbf n_2^T\mathbf n_3=
+	\left(-\frac12\right)\left(-\frac12\right)
+	+
+	\left(\frac{\sqrt3}{2}\right)\left(-\frac{\sqrt3}{2}\right)
+	=
+	\frac14-\frac34
+	=
+	-\frac12.
+	$$
+
+	Thus all pairs satisfy
+
+	$$
+	\mathbf n_i^T\mathbf n_j=-\frac12,\qquad i\neq j.
+	$$
+
+	Normalization again gives
+
+	$$
+	a^2+b^2=1.
+	$$
+
+	For two different hybrids,
+
+	$$
+	\langle h_i,h_j\rangle
+	=
+	a^2+b^2\mathbf n_i^T\mathbf n_j
+	=
+	a^2-\frac12b^2.
+	$$
+
+	Orthogonality therefore requires
+
+	$$
+	a^2-\frac12b^2=0.
+	$$
+
+	Hence
+
+	$$
+	b^2=2a^2.
+	$$
+
+	Using normalization,
+
+	$$
+	a^2+2a^2=1,
+	$$
+
+	so
+
+	$$
+	a=\frac{1}{\sqrt3},
+	\qquad
+	b=\sqrt{\frac23},
+	$$
+
+	where we have again chosen positive coefficients.
+
+	For $\mathbf n_1$,
+
+	$$
+	h_1=
+	\frac{1}{\sqrt3}s
+	+
+	\sqrt{\frac23}p_x.
+	$$
+
+	For $\mathbf n_2$,
+
+	$$
+	h_2=
+	\frac{1}{\sqrt3}s
+	+
+	\sqrt{\frac23}
+	\left(
+	-\frac12p_x+\frac{\sqrt3}{2}p_y
+	\right).
+	$$
+
+	Thus
+
+	$$
+	h_2=
+	\frac{1}{\sqrt3}s
+	-\frac{1}{\sqrt6}p_x
+	+\frac{1}{\sqrt2}p_y.
+	$$
+
+	Similarly,
+
+	$$
+	h_3=
+	\frac{1}{\sqrt3}s
+	-\frac{1}{\sqrt6}p_x
+	-\frac{1}{\sqrt2}p_y.
+	$$
+
+c.	For example,
+
+	$$
+	\|\mathbf n_1\|^2
+	=
+	\frac13(1^2+1^2+1^2)=1,
+	$$
+
+	and the same argument applies to the other three vectors.
+
+	For two distinct tetrahedral directions, for example $\mathbf n_1$ and $\mathbf n_2$,
+
+	$$
+	\mathbf n_1^T\mathbf n_2
+	=
+	\frac13(1-1-1)
+	=
+	-\frac13.
+	$$
+
+	The same result is obtained for every distinct pair:
+
+	$$
+	\mathbf n_i^T\mathbf n_j=-\frac13.
+	$$
+
+	If $\theta$ is the angle between two tetrahedral directions, then
+
+	$$
+	\cos\theta
+	=
+	\frac{\mathbf n_i^T\mathbf n_j}
+	{\|\mathbf n_i\|\|\mathbf n_j\|}
+	=
+	-\frac13.
+	$$
+
+	Therefore
+
+	$$
+	\theta=\arccos\left(-\frac13\right)
+	\approx109.47^\circ.
+	$$
+
+	This is the tetrahedral angle.
+
+d.	Normalization gives
+
+	$$
+	a^2+b^2=1.
+	$$
+
+	For $i\neq j$,
+
+	$$
+	\langle h_i,h_j\rangle
+	=
+	a^2+b^2\mathbf n_i^T\mathbf n_j
+	=
+	a^2-\frac13b^2.
+	$$
+
+	Orthogonality requires
+
+	$$
+	a^2-\frac13b^2=0.
+	$$
+
+	Thus
+
+	$$
+	b^2=3a^2.
+	$$
+
+	Combining this with normalization gives
+
+	$$
+	4a^2=1,
+	$$
+
+	and therefore
+
+	$$
+	a=\frac12,
+	\qquad
+	b=\frac{\sqrt3}{2}.
+	$$
+
+	For the first tetrahedral direction,
+
+	$$
+	b\mathbf n_1
+	=
+	\frac{\sqrt3}{2}
+	\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	1\\1\\1
+	\end{bmatrix}
+	=
+	\frac12
+	\begin{bmatrix}
+	1\\1\\1
+	\end{bmatrix}.
+	$$
+
+	Thus
+
+	$$
+	h_1=\frac12(s+p_x+p_y+p_z).
+	$$
+
+	In the same way,
+
+	$$
+	h_2=\frac12(s+p_x-p_y-p_z),
+	$$
+
+	$$
+	h_3=\frac12(s-p_x+p_y-p_z),
+	$$
+
+	and
+
+	$$
+	h_4=\frac12(s-p_x-p_y+p_z).
+	$$
+
+	Collecting these four equations gives
+
+	$$
+	\begin{bmatrix}
+	h_1\\
+	h_2\\
+	h_3\\
+	h_4
+	\end{bmatrix}
+	=
+	\frac12
+	\begin{bmatrix}
+	1&1&1&1\\
+	1&1&-1&-1\\
+	1&-1&1&-1\\
+	1&-1&-1&1
+	\end{bmatrix}
+	\begin{bmatrix}
+	s\\
+	p_x\\
+	p_y\\
+	p_z
+	\end{bmatrix}.
+	$$
+
+e.	We calculate
+
+	$$
+	U^TU
+	=
+	\frac14
+	\begin{bmatrix}
+	1&1&1&1\\
+	1&1&-1&-1\\
+	1&-1&1&-1\\
+	1&-1&-1&1
+	\end{bmatrix}^T
+	\begin{bmatrix}
+	1&1&1&1\\
+	1&1&-1&-1\\
+	1&-1&1&-1\\
+	1&-1&-1&1
+	\end{bmatrix}.
+	$$
+
+	The rows and columns of the unscaled matrix are mutually orthogonal and each has squared length $4$. Hence
+
+	$$
+	U^TU=I.
+	$$
+
+	Thus $U$ is an orthogonal matrix. In particular,
+
+	$$
+	U^{-1}=U^T.
+	$$
+
+	Here $U$ is also symmetric, so
+
+	$$
+	U^{-1}=U^T=U.
+	$$
+
+	Therefore the inverse transformation is
+
+	$$
+	\begin{bmatrix}
+	s\\
+	p_x\\
+	p_y\\
+	p_z
+	\end{bmatrix}
+	=
+	U^T
+	\begin{bmatrix}
+	h_1\\
+	h_2\\
+	h_3\\
+	h_4
+	\end{bmatrix}
+	=
+	U
+	\begin{bmatrix}
+	h_1\\
+	h_2\\
+	h_3\\
+	h_4
+	\end{bmatrix}.
+	$$
+
+	Explicitly,
+
+	$$
+	s=\frac12(h_1+h_2+h_3+h_4),
+	$$
+
+	$$
+	p_x=\frac12(h_1+h_2-h_3-h_4),
+	$$
+
+	$$
+	p_y=\frac12(h_1-h_2+h_3-h_4),
+	$$
+
+	and
+
+	$$
+	p_z=\frac12(h_1-h_2-h_3+h_4).
+	$$
+
+	The transformation therefore preserves inner products and norms. It is simply a change from one orthonormal basis of the same four-dimensional orbital space to another.
+
+f.	The following code visualizes the four tetrahedral directions.
+
+	```{python}
+	#| echo: true
+
+	import numpy as np
+	import plotly.graph_objects as go
+
+	directions = np.array([
+	    [ 1,  1,  1],
+	    [ 1, -1, -1],
+	    [-1,  1, -1],
+	    [-1, -1,  1]
+	], dtype=float)
+
+	directions /= np.linalg.norm(directions, axis=1)[:, None]
+
+	fig = go.Figure()
+
+	for nvec in directions:
+	    # Shaft of the arrow
+	    fig.add_trace(
+	        go.Scatter3d(
+	            x=[0, nvec[0]],
+	            y=[0, nvec[1]],
+	            z=[0, nvec[2]],
+	            mode="lines",
+	            showlegend=False
+	        )
+	    )
+
+	    # Arrowhead
+	    fig.add_trace(
+	        go.Cone(
+	            x=[nvec[0]],
+	            y=[nvec[1]],
+	            z=[nvec[2]],
+	            u=[nvec[0]],
+	            v=[nvec[1]],
+	            w=[nvec[2]],
+	            anchor="tip",
+	            sizemode="absolute",
+	            sizeref=0.18,
+	            showscale=False
+	        )
+	    )
+
+	fig.update_layout(
+	    scene=dict(
+	        xaxis_title="x",
+	        yaxis_title="y",
+	        zaxis_title="z",
+	        aspectmode="cube"
+	    ),
+	    showlegend=False
+	)
+
+	fig.show()
+	```
+
+	The four arrows point from the origin toward the four corners of a regular tetrahedron. The angle between every pair is approximately $109.47^\circ$, in agreement with part c.
+
+	We can also verify all pairwise dot products numerically.
+
+	```{python}
+	#| echo: true
+
+	print(directions @ directions.T)
+	```
+
+	The diagonal entries are $1$, while all off-diagonal entries are $-1/3$, up to floating-point roundoff.
+
+g.	We first construct the model basis functions on a three-dimensional grid and then apply the hybridization matrix $U$.
+
+	```{python}
+	#| echo: true
+
+	import numpy as np
+	import plotly.graph_objects as go
+
+	alpha = 1.0
+	L = 4.0
+	n = 50
+
+	x = np.linspace(-L, L, n)
+	y = np.linspace(-L, L, n)
+	z = np.linspace(-L, L, n)
+	X, Y, Z = np.meshgrid(x, y, z, indexing="ij")
+
+	R = np.sqrt(X**2 + Y**2 + Z**2)
+
+	s  = np.exp(-alpha * R)
+	px = X * np.exp(-alpha * R)
+	py = Y * np.exp(-alpha * R)
+	pz = Z * np.exp(-alpha * R)
+
+	U = 0.5 * np.array([
+	    [1,  1,  1,  1],
+	    [1,  1, -1, -1],
+	    [1, -1,  1, -1],
+	    [1, -1, -1,  1]
+	])
+
+	basis = np.stack([s, px, py, pz])
+
+	# Contract the second index of U with the first index of basis.
+	hybrids = np.tensordot(U, basis, axes=(1, 0))
+
+	print(hybrids.shape)
+	```
+
+	The result has shape `(4, n, n, n)`: the first index labels the four hybrid orbitals.
+
+	A small function is useful for plotting positive and negative isosurfaces of one orbital.
+
+	```{python}
+	#| echo: true
+
+	def plot_orbital(X, Y, Z, orbital, title, fraction=0.25):
+	    isovalue = fraction * np.max(np.abs(orbital))
+
+	    fig = go.Figure()
+
+	    # Positive phase
+	    fig.add_trace(
+	        go.Isosurface(
+	            x=X.ravel(),
+	            y=Y.ravel(),
+	            z=Z.ravel(),
+	            value=orbital.ravel(),
+	            isomin=isovalue,
+	            isomax=isovalue,
+	            surface_count=1,
+	            caps=dict(x_show=False, y_show=False, z_show=False),
+	            showscale=False,
+	            name="positive"
+	        )
+	    )
+
+	    # Negative phase
+	    fig.add_trace(
+	        go.Isosurface(
+	            x=X.ravel(),
+	            y=Y.ravel(),
+	            z=Z.ravel(),
+	            value=orbital.ravel(),
+	            isomin=-isovalue,
+	            isomax=-isovalue,
+	            surface_count=1,
+	            caps=dict(x_show=False, y_show=False, z_show=False),
+	            showscale=False,
+	            name="negative"
+	        )
+	    )
+
+	    fig.update_layout(
+	        title=title,
+	        scene=dict(
+	            xaxis_title="x",
+	            yaxis_title="y",
+	            zaxis_title="z",
+	            aspectmode="cube"
+	        )
+	    )
+
+	    # Render a static image so the dense volumetric arrays are not embedded
+	    # in the HTML as Plotly JSON.
+	    fig.show(renderer="png", width=900, height=700, scale=1.5)
+	```
+
+	We can now visualize all four hybrids.
+
+	```{python}
+	#| echo: true
+
+	for i in range(4):
+	    plot_orbital(
+	        X, Y, Z,
+	        hybrids[i],
+	        title=f"sp3 hybrid h{i+1}"
+	    )
+	```
+
+	The dominant lobe of $h_1$ points approximately in the direction
+
+	$$
+	\mathbf n_1=
+	\frac{1}{\sqrt3}
+	\begin{bmatrix}
+	1\\1\\1
+	\end{bmatrix},
+	$$
+
+	because the $p$ part of
+
+	$$
+	h_1=\frac12(s+p_x+p_y+p_z)
+	$$
+
+	is proportional to
+
+	$$
+	p_x+p_y+p_z.
+	$$
+
+	Similarly, the signs of the coefficients in
+
+	$$
+	h_2=\frac12(s+p_x-p_y-p_z)
+	$$
+
+	direct its $p$ contribution along $(1,-1,-1)$, while $h_3$ and $h_4$ point along $(-1,1,-1)$ and $(-1,-1,1)$, respectively.
+
+	The visualization therefore makes the relation between the coefficient vector
+
+	$$
+	\begin{bmatrix}
+	b_x\\b_y\\b_z
+	\end{bmatrix}
+	$$
+
+	and ordinary spatial direction explicit: the coefficients multiplying $p_x$, $p_y$, and $p_z$ behave as the Cartesian components of a direction vector.
+
+	One should keep in mind that the simple functions used here are chosen for visualization. In an actual atomic-orbital basis the radial forms and normalizations are different. The geometrical relation between the coefficients of $p_x$, $p_y$, and $p_z$ and the orientation of the resulting orbital, however, is the same.
+
+
+
+:::

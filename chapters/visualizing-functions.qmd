@@ -5,7 +5,7 @@ In these exercises, you are given functions $f : \mathbb{R}^n \to \mathbb{R}^m$ 
 
 ## Exercises: paths and their curves
 
-::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path recommended="math" level="intermediate"}
+::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path  level="intermediate"}
 
 Let $f : \mathbb{R}\to \mathbb{R}^2$ be a path defined by $$f(t) = [r(t)\cos(4t), r(t)\sin(4t)], \quad r(t) = \exp(-t).$$ Sketch the curve traced by the path for $0 \leq t \leq 2\pi$. You can check your sketch against, say, a Python plot.
 
@@ -39,7 +39,7 @@ c. Plot the curve using Python. Use equal scaling on the two coordinate axes.
 ## Exercises: level curves
 
 
-::: {#exr-visualizing-functions-sketch-level-curves recommended="math" level="intermediate"}
+::: {#exr-visualizing-functions-sketch-level-curves  level="intermediate"}
 
 Let $f(x,y) = x^2 + y^2$. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 1$ and $n=2$, $n=3$, and $n=4$.
 

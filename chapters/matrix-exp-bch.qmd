@@ -82,7 +82,7 @@ These formulas are useful not only for formal manipulations. They provide a syst
 
 ## Exercises {.unnumbered}
 
-::: {#exr-matrix-exponential-diagonal level="beginner" recommended="math;topic" topic="coupled-cluster;response-theory"}
+::: {#exr-matrix-exponential-diagonal level="beginner" recommended="topic" topic="coupled-cluster;response-theory"}
 
 ### Exponential of a diagonal matrix
 

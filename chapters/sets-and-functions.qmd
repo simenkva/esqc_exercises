@@ -3,20 +3,45 @@
 Sets and set notation appear many places in quantum chemistry. The goal of this chapter is to train you in the basic usage of sets and set notation.
 
 
+
+
+
 ## Exercises: abstract sets and functions
 
 ::: {#exr-sets-and-functions-write-days-week-set recommended="math" level="beginner"}
-### Days of the week
+### Days of the week as a set
 
-Write the days of the week as a set
+The days of the week form a simple example of a finite set. Recall that we write the elements of a set inside braces, such as
 
-:::
+$$
+A=\{a,b,c\}.
+$$
 
-::: {#exr-sets-and-functions-write-five-first-natural-numbers-set recommended="math" level="intermediate"}
-### Five first natural numbers
+a.	Write the days of the week as a set $D$ using braces $\{\ \}$.
 
-Write the five first natural numbers using set notation as indicated in the lecture notes
+b.	How many elements does $D$ contain? Write your answer using the notation $|D|$ for the number of elements in a set.
 
+c.	Is Monday an element of $D$? Write your answer using the symbol $\in$.
+
+d.	Is January an element of $D$? Write your answer using the symbol $\notin$.
+
+e.	Let $W$ be the set consisting of Saturday and Sunday. Write $W$ using braces. Is $W$ a subset of $D$? Express your answer using the symbol $\subseteq$.
+
+f.	Let
+
+	$$
+	M=\{\text{Monday},\text{Tuesday},\text{Wednesday},\text{Thursday},\text{Friday}\}.
+	$$
+
+	What is $M\cup W$? What is $M\cap W$?
+
+g.	Suppose another student writes the days in a different order,
+
+	$$
+	D'=\{\text{Sunday},\text{Saturday},\text{Friday},\text{Thursday},\text{Wednesday},\text{Tuesday},\text{Monday}\}.
+	$$
+
+	Is $D'=D$? 
 :::
 
 :::{#exr-sets-and-functions-ordered-pair-two-element-set-where}
@@ -217,35 +242,102 @@ h. Show that $M$ and $S$ have the same cardinality. Explain why this is possible
 :::
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Sets etc.
 
-The first two exercises should be accessible to everyone. The von Neumann representation of natural numbers grows quickly, so five numbers suffice.
+### Solution for @exr-sets-and-functions-write-days-week-set {.unnumbered}
 
-The visual exercise on De Morgan's laws supports the later discussion of open sets and is recommended.
+a.	The set of days of the week is
 
-### Solution to @exr-sets-and-functions-write-days-week-set {.unnumbered}
+	$$
+	D=\{\text{Monday},\text{Tuesday},\text{Wednesday},\text{Thursday},\text{Friday},\text{Saturday},\text{Sunday}\}.
+	$$
 
-$$U = \{ \text{Mandag, Tirsdag, Onsdag, Torsdag, Fredag, Lørdag, Søndag} \}$$
+b.	There are seven elements in $D$, so
 
-### Solution to @exr-sets-and-functions-write-five-first-natural-numbers-set {.unnumbered}
+	$$
+	|D|=7.
+	$$
 
-Okay, so each number doubles in size. After ten numbers, we have on the order of 1000 characters per number. So the five first is enough.
+c.	Monday is an element of $D$. We write
 
-With $0=\emptyset$ and $n+1=n\cup\{n\}$, the first five natural numbers are
+	$$
+	\text{Monday}\in D.
+	$$
 
-$$
-\begin{aligned}
-0 &= \emptyset, \\
-1 &= \{\emptyset\}, \\
-2 &= \{\emptyset,\{\emptyset\}\}, \\
-3 &= \{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}, \\
-4 &= \{0,1,2,3\}.
-\end{aligned}
-$$
+d.	January is not an element of $D$. We write
+
+	$$
+	\text{January}\notin D.
+	$$
+
+e.	The set containing Saturday and Sunday is
+
+	$$
+	W=\{\text{Saturday},\text{Sunday}\}.
+	$$
+
+	Every element of $W$ is also an element of $D$. Therefore $W$ is a subset of $D$:
+
+	$$
+	W\subseteq D.
+	$$
+
+f.	The set $M$ contains the weekdays and $W$ contains Saturday and Sunday. Their union therefore contains all days of the week:
+
+	$$
+	M\cup W=D.
+	$$
+
+	There are no elements belonging to both $M$ and $W$, so their intersection is the empty set:
+
+	$$
+	M\cap W=\varnothing.
+	$$
+
+g.	Yes,
+
+	$$
+	D'=D.
+	$$
+
+	The order in which we write the elements of a set does not matter. Two sets are equal if they contain exactly the same elements. Thus, for example,
+
+	$$
+	\{\text{Monday},\text{Tuesday}\}
+	=
+	\{\text{Tuesday},\text{Monday}\}.
+	$$
+
+
 
 ### Solution to @exr-sets-and-functions-ordered-pair-two-element-set-where {.unnumbered}
 

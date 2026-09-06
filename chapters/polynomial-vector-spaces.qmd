@@ -8,13 +8,13 @@ Recall that a polynomial of degree $n$ over $\mathbb{F}$ has the form $$p(x) = a
 
 ## Exercises
 
-::: {#exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than recommended="math" level="intermediate"}
+::: {#exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than  level="intermediate"}
 
 Let $P_n$ be the set of all polynomials of degree less than or equal to $n$. Show that $P_n$ is a vector space of dimension $n+1$ over $\mathbb{C}$.
 
 :::
 
-::: {#exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear recommended="math" level="intermediate"}
+::: {#exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear  level="intermediate"}
 
 Let $D : P_n \to P_n$ be the differentiation operator, i.e., $$(D p)(x) = p'(x).$$ Show that $D$ is indeed a linear operator.
 
