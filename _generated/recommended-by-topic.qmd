@@ -4,6 +4,10 @@ This chapter contains lists of mathematics exercises grouped by each
 quantum chemistry topic taught at the school. These exercises can be
 useful as a warm-up to the proper exercises given each day. 
 
+**The list is not complete, and is continually updated!**
+
+
+
 ## Coupled-cluster theory {.unnumbered}
 
 ### Beginner {.unnumbered}
