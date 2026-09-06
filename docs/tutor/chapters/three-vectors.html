@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercises for the mathematics tutorial – ESQC mathematics exercises</title>
+<title>7&nbsp; Vectors in 3D space – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../_generated/recommended-by-topic.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../chapters/hybridization.html" rel="next">
+<link href="../chapters/vectors-and-matrices.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -100,15 +100,15 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-preparations.callout {
-  border-left-color: #8B81FF;
+div.callout-visualization.callout {
+  border-left-color: #E0479E;
 }
-div.callout-preparations.callout-style-default .callout-header {
-  background-color: rgba(139, 129, 255, 0.13);
+div.callout-visualization.callout-style-default .callout-header {
+  background-color: rgba(224, 71, 158, 0.13);
 }
-div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,20 +128,6 @@ div.callout-learning-goals.callout-style-default .callout-icon::before, div.call
   background-position: center;
   content: '';
 }
-div.callout-visualization.callout {
-  border-left-color: #E0479E;
-}
-div.callout-visualization.callout-style-default .callout-header {
-  background-color: rgba(224, 71, 158, 0.13);
-}
-div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: '';
-}
 div.callout-fact.callout {
   border-left-color: #3EAF3E;
 }
@@ -156,8 +142,51 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
   background-position: center;
   content: '';
 }
+div.callout-preparations.callout {
+  border-left-color: #8B81FF;
+}
+div.callout-preparations.callout-style-default .callout-header {
+  background-color: rgba(139, 129, 255, 0.13);
+}
+div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../math_spacing.css">
@@ -334,7 +363,7 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercises for the mathematics tutorial</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/three-vectors.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -379,7 +408,7 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../_generated/recommended-mathematics.html" class="sidebar-item-text sidebar-link active">
+  <a href="../_generated/recommended-mathematics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercises for the mathematics tutorial</span></a>
   </div>
 </li>
@@ -449,56 +478,62 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/three-vectors.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/hybridization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/eigenvalues-and-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenvalues and eigenvectors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenvalues and eigenvectors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gram-schmidt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singular-value-decomposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomial-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -515,7 +550,7 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Polynomials</span></span></a>
   </div>
 </li>
       </ul>
@@ -532,13 +567,13 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/open-and-closed-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
   </div>
 </li>
       </ul>
@@ -559,19 +594,19 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/visualizing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/continuity-and-differentiability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/differentiate-wrt-vector-complete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
   </div>
 </li>
       </ul>
@@ -588,31 +623,31 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-arithmetic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-exponential.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-power-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singularities-and-contour-integrals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
   </div>
 </li>
       </ul>
@@ -629,13 +664,13 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/taylor-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/matrix-exp-bch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
   </div>
 </li>
       </ul>
@@ -652,19 +687,19 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/dual-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/newtons-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-step-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -695,9 +730,10 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#beginner" id="toc-beginner" class="nav-link active" data-scroll-target="#beginner">Beginner</a></li>
-  <li><a href="#intermediate" id="toc-intermediate" class="nav-link" data-scroll-target="#intermediate">Intermediate</a></li>
-  <li><a href="#for-the-curious" id="toc-for-the-curious" class="nav-link" data-scroll-target="#for-the-curious">For the curious</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises">Exercises</a>
+  <ul class="collapse">
+  <li><a href="#solution-for-exr-levi-civita-vector-triple-product" id="toc-solution-for-exr-levi-civita-vector-triple-product" class="nav-link" data-scroll-target="#solution-for-exr-levi-civita-vector-triple-product">Solution for Exercise&nbsp;<span>7.1</span></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -750,9 +786,9 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
 })();
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercise recommendations</a></li><li class="breadcrumb-item"><a href="../_generated/recommended-mathematics.html">Exercises for the mathematics tutorial</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/three-vectors.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Exercises for the mathematics tutorial</h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></h1>
 </div>
 
 
@@ -769,61 +805,104 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
 </header>
 
 
-<p>This chapter contains recommended exercises for the mathematics tutorial on the first day of the school. The focus is on <em>linear algebra</em>, with some <em>set theory</em> exercises as well, and then some exercises on <em>continuity and differentiation</em>. <strong>Start with linear algebra — these are the most important exercises.</strong> The book contains many more exercises as well, if you find time and inspiration!</p>
-<p>The <strong>beginner</strong> list contains exercises that we consider to be especially useful for the students who feel that the need some refreshing to do before embarking on the remaining exercises.</p>
-<p>The <strong>intermediate</strong> list contains more advanced exercises, accessible for the majority of the students at the school.</p>
-<p>The <strong>for the curious</strong> list contains exercises that go deeper into either mathematics or applications, and can be useful for students that already master the mathematics material at an advanced level. That being said, they should be interesting for most students.</p>
-<section id="beginner" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="beginner">Beginner</h2>
-<ul>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-1" class="quarto-xref">Exercise&nbsp;<span>3.1</span></a> — Very basic sums</li>
-<li><a href="../chapters/summing-over-indices.html#exr-summing-2" class="quarto-xref">Exercise&nbsp;<span>3.2</span></a> — Simplifying as a sum</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vector-spaces-basic-operations" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a> — Basic vector operations</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-matrix-vector-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.2</span></a> — Basic matrix-vector products</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-matrix-matrix-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.3</span></a> — Matrix-matrix products</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-check-candidate-eigenvectors" class="quarto-xref">Exercise&nbsp;<span>8.1</span></a> — Checking candidate eigenvectors</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-eigenvalues-chemical-kinetics" class="quarto-xref">Exercise&nbsp;<span>8.2</span></a> — Eigenvalues in chemical kinetics</li>
-<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-recipes" class="quarto-xref">Exercise&nbsp;<span>9.1</span></a> — Cooking with vectors 1</li>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-write-days-week-set" class="quarto-xref">Exercise&nbsp;<span>1.1</span></a> — Days of the week as a set</li>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-potential-energy-curve" class="quarto-xref">Exercise&nbsp;<span>1.9</span></a> — Classically allowed region for Morse potential</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="quarto-xref">Exercise&nbsp;<span>6.4</span></a> — Linear independence and basis</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-step-function" class="quarto-xref">Exercise&nbsp;<span>19.1</span></a> — A first discontinuity</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-substitution" class="quarto-xref">Exercise&nbsp;<span>19.3</span></a> — Continuity by direct substitution</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-continuity-chemistry-energy" class="quarto-xref">Exercise&nbsp;<span>19.11</span></a> — Continuity of a model potential energy</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-basic" class="quarto-xref">Exercise&nbsp;<span>19.12</span></a> — First partial derivatives</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-partial-derivatives-slices" class="quarto-xref">Exercise&nbsp;<span>19.13</span></a> — Partial derivatives as one-dimensional derivatives</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-jacobian-first" class="quarto-xref">Exercise&nbsp;<span>19.15</span></a> — A first Jacobian</li>
-</ul>
-</section>
-<section id="intermediate" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="intermediate">Intermediate</h2>
-<ul>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-person-walks-home-first-they-walk" class="quarto-xref">Exercise&nbsp;<span>6.6</span></a> — Office coordinates</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="quarto-xref">Exercise&nbsp;<span>6.7</span></a> — Boat sailing on the ocean</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="quarto-xref">Exercise&nbsp;<span>6.8</span></a> — An exercise by Robert Beezer</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="quarto-xref">Exercise&nbsp;<span>6.9</span></a> — Compute the action of a matrix on vectors</li>
-<li><a href="../chapters/vectors-and-matrices.html#exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="quarto-xref">Exercise&nbsp;<span>6.10</span></a> — Matrix-matrix products, rows and columns</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-hermitian-2x2-eigenvalue-problem" class="quarto-xref">Exercise&nbsp;<span>8.3</span></a> — Eigenvalues and diagonalization of a Hermitian matrix</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-nondiagonalizable-2x2-matrix" class="quarto-xref">Exercise&nbsp;<span>8.4</span></a> — A matrix that cannot be diagonalized</li>
-<li><a href="../chapters/general-vector-spaces.html#exr-general-vector-spaces-meaningful-recipes" class="quarto-xref">Exercise&nbsp;<span>9.2</span></a> — Cooking with vectors 2</li>
-<li><a href="../chapters/sets-and-functions.html#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping" class="quarto-xref">Exercise&nbsp;<span>1.7</span></a> — De Morgan’s laws</li>
-<li><a href="../chapters/sets-and-functions.html#exr-molecule-sets" class="quarto-xref">Exercise&nbsp;<span>1.10</span></a> — Molecules as sets</li>
-<li><a href="../chapters/complex-power-series.html#exr-complex-power-series-exponential-sine-cosine" class="quarto-xref">Exercise&nbsp;<span>24.3</span></a> — The exponential, sine, and cosine series</li>
-</ul>
-</section>
-<section id="for-the-curious" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="for-the-curious">For the curious</h2>
-<ul>
-<li><a href="../chapters/hybridization.html#exr-hybridization-orbital-geometry" class="quarto-xref">Exercise&nbsp;<span>7.1</span></a> — Hybrid orbitals from vectors and matrices</li>
-<li><a href="../chapters/eigenvalues-and-diagonalization.html#exr-eigenvalues-computational-reaction-network" class="quarto-xref">Exercise&nbsp;<span>8.6</span></a> — Eigenvalues of a reaction network</li>
-<li><a href="../chapters/combinatorics.html#exr-stirling-factorial" class="quarto-xref">Exercise&nbsp;<span>4.4</span></a> — Stirling’s approximation</li>
-<li><a href="../chapters/basic-mathematical-proofs.html#exr-proofs-advanced-commutator" class="quarto-xref">Exercise&nbsp;<span>5.12</span></a> — A finite-dimensional quantum-mechanical impossibility</li>
-<li><a href="../chapters/complex-vector-space.html#exr-complex-vector-space-complex-numbers-real-vector-space" class="quarto-xref">Exercise&nbsp;<span>10.1</span></a> — Complex numbers as a real vector space</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-directional-trap" class="quarto-xref">Exercise&nbsp;<span>19.21</span></a> — Checking multivariable limits along different paths</li>
-<li><a href="../chapters/continuity-and-differentiability.html#exr-advanced-gradient-landscape" class="quarto-xref">Exercise&nbsp;<span>19.23</span></a> — Explore a two-dimensional energy landscape</li>
-</ul>
+<p>A vector in three-dimensional Euclidean space is specified by three components. We write <span class="math display">\[
+\mathbf{x}=(x_1,x_2,x_3)\in\mathbb{R}^3.
+\]</span> Geometrically, <span class="math inline">\(\mathbf{x}\)</span> can be regarded as a directed displacement in space. Its Euclidean length is <span class="math display">\[
+\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+x_3^2}.
+\]</span> Vectors can be added componentwise and multiplied by scalars, exactly as for vectors in <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p>Two particularly useful operations are available for vectors in three dimensions. The <strong>dot product</strong> of <span class="math inline">\(\mathbf{x}\)</span> and <span class="math inline">\(\mathbf{y}\)</span> is the scalar <span class="math display">\[
+\mathbf{x}\cdot\mathbf{y}=x_1y_1+x_2y_2+x_3y_3=\sum_{i=1}^3x_i y_i.
+\]</span> It contains geometric information about the relative directions of the vectors: <span class="math display">\[
+\mathbf{x}\cdot\mathbf{y}=\|\mathbf{x}\|\,\|\mathbf{y}\|\cos\theta,
+\]</span> where <span class="math inline">\(\theta\)</span> is the angle between them. In particular, two nonzero vectors are perpendicular if and only if <span class="math inline">\(\mathbf{x}\cdot\mathbf{y}=0\)</span>.</p>
+<p>The <strong>cross product</strong> <span class="math inline">\(\mathbf{x}\times\mathbf{y}\)</span> is instead a vector. It is perpendicular to both <span class="math inline">\(\mathbf{x}\)</span> and <span class="math inline">\(\mathbf{y}\)</span>, with direction determined by the right-hand rule, and its length is <span class="math display">\[
+\|\mathbf{x}\times\mathbf{y}\|=\|\mathbf{x}\|\,\|\mathbf{y}\|\sin\theta.
+\]</span> In components, <span class="math display">\[
+\mathbf{x}\times\mathbf{y}=(x_2y_3-x_3y_2,\;x_3y_1-x_1y_3,\;x_1y_2-x_2y_1).
+\]</span></p>
+<p>For manipulating vector expressions, it is often more convenient to work with components rather than with this explicit formula. The <strong>Kronecker delta</strong> <span class="math display">\[
+\delta_{ij}=
+\begin{cases}
+1,&amp;i=j,\\
+0,&amp;i\neq j,
+\end{cases}
+\]</span> acts as an identity for indices, while the <strong>Levi-Civita symbol</strong> <span class="math inline">\(\varepsilon_{ijk}\)</span> encodes the orientation of three-dimensional space. It is <span class="math inline">\(+1\)</span> for even permutations of <span class="math inline">\((1,2,3)\)</span>, <span class="math inline">\(-1\)</span> for odd permutations, and zero whenever two indices are equal. With this notation the cross product has the compact representation <span class="math display">\[
+(\mathbf{x}\times\mathbf{y})_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}x_jy_k.
+\]</span> This index notation is especially useful for deriving identities involving several dot and cross products: complicated-looking vector expressions can be reduced to systematic manipulations of sums, Kronecker deltas, and Levi-Civita symbols.</p>
+<section id="exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="exr-levi-civita-vector-triple-product" class="theorem exercise" data-level="intermediate">
+<p><span class="theorem-title"><strong>Exercise 7.1 (The vector triple product and the Levi-Civita symbol)</strong></span> It is recommended that you also look at <a href="summing-over-indices.html#exr-levi-civita" class="quarto-xref">Exercise&nbsp;<span>3.12</span></a> before doing this exercise, and also <a href="summing-over-indices.html#exr-kronecker-delta" class="quarto-xref">Exercise&nbsp;<span>3.11</span></a> on the Kronecker delta.</p>
+<p>Recall that the <span class="math inline">\(i\)</span>th Cartesian component of the cross product of two vectors <span class="math inline">\(\mathbf{a}\)</span> and <span class="math inline">\(\mathbf{b}\)</span> can be written as <span class="math display">\[
+(\mathbf{a}\times\mathbf{b})_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}a_jb_k,
+\]</span> where <span class="math inline">\(\varepsilon_{ijk}\)</span> is the Levi-Civita symbol.</p>
+<p>You may also use the contraction identity <span class="math display">\[
+\sum_{i=1}^3\varepsilon_{ijk}\varepsilon_{imn}=\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km},
+\]</span> where <span class="math inline">\(\delta_{ij}\)</span> is the Kronecker delta.</p>
+<ol type="a">
+<li><p>Write the <span class="math inline">\(i\)</span>th component of <span class="math inline">\(\mathbf{a}\times(\mathbf{b}\times\mathbf{c})\)</span> using two Levi-Civita symbols. Be careful to use different dummy indices for the two cross products.</p></li>
+<li><p>Use the cyclic property <span class="math display">\[
+\varepsilon_{ijk}=\varepsilon_{kij}
+\]</span> and the contraction identity above to show that <span class="math display">\[
+\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+\]</span></p></li>
+<li><p>Use the Kronecker deltas to carry out the remaining sums and show that <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i\sum_{j=1}^3a_jc_j-c_i\sum_{j=1}^3a_jb_j.
+\]</span></p></li>
+<li><p>Hence prove the vector triple-product identity <span class="math display">\[
+\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}).
+\]</span> This identity is sometimes remembered as ``BAC minus CAB’’.</p></li>
+</ol>
+</div>
+<section id="solution-for-exr-levi-civita-vector-triple-product" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-levi-civita-vector-triple-product">Solution for <a href="#exr-levi-civita-vector-triple-product" class="quarto-xref">Exercise&nbsp;<span>7.1</span></a></h3>
+<ol type="a">
+<li><p>Applying the definition of the cross product to the outer product gives <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}a_j(\mathbf{b}\times\mathbf{c})_k.
+\]</span></p>
+<p>For the inner cross product, we introduce two new dummy indices <span class="math inline">\(l\)</span> and <span class="math inline">\(m\)</span>: <span class="math display">\[
+(\mathbf{b}\times\mathbf{c})_k=\sum_{l=1}^3\sum_{m=1}^3\varepsilon_{klm}b_lc_m.
+\]</span></p>
+<p>Therefore, <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j,k,l,m=1}^3\varepsilon_{ijk}\varepsilon_{klm}a_jb_lc_m.
+\]</span></p></li>
+<li><p>The common index <span class="math inline">\(k\)</span> occurs in the third position of the first Levi-Civita symbol and in the first position of the second. Using cyclic invariance, <span class="math display">\[
+\varepsilon_{ijk}=\varepsilon_{kij}.
+\]</span></p>
+<p>Thus <span class="math display">\[
+\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\sum_{k=1}^3\varepsilon_{kij}\varepsilon_{klm}.
+\]</span></p>
+<p>We can now use the given contraction identity: <span class="math display">\[
+\sum_{k=1}^3\varepsilon_{kij}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+\]</span></p>
+<p>Hence <span class="math display">\[
+\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+\]</span></p></li>
+<li><p>Substituting this result into the expression from part (a) gives <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j,l,m=1}^3(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})a_jb_lc_m.
+\]</span></p>
+<p>For the first term, <span class="math inline">\(\delta_{il}\)</span> sets <span class="math inline">\(l=i\)</span>, while <span class="math inline">\(\delta_{jm}\)</span> sets <span class="math inline">\(m=j\)</span>. Therefore, <span class="math display">\[
+\sum_{j,l,m=1}^3\delta_{il}\delta_{jm}a_jb_lc_m=\sum_{j=1}^3a_jb_ic_j=b_i\sum_{j=1}^3a_jc_j.
+\]</span></p>
+<p>For the second term, <span class="math inline">\(\delta_{im}\)</span> sets <span class="math inline">\(m=i\)</span>, while <span class="math inline">\(\delta_{jl}\)</span> sets <span class="math inline">\(l=j\)</span>. Hence <span class="math display">\[
+\sum_{j,l,m=1}^3\delta_{im}\delta_{jl}a_jb_lc_m=\sum_{j=1}^3a_jb_jc_i=c_i\sum_{j=1}^3a_jb_j.
+\]</span></p>
+<p>Combining the two terms, <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i\sum_{j=1}^3a_jc_j-c_i\sum_{j=1}^3a_jb_j.
+\]</span></p></li>
+<li><p>Recognizing the sums as scalar products, <span class="math display">\[
+\sum_{j=1}^3a_jc_j=\mathbf{a}\cdot\mathbf{c},\qquad \sum_{j=1}^3a_jb_j=\mathbf{a}\cdot\mathbf{b},
+\]</span> we obtain <span class="math display">\[
+[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i(\mathbf{a}\cdot\mathbf{c})-c_i(\mathbf{a}\cdot\mathbf{b}).
+\]</span></p>
+<p>Since this holds for every Cartesian component <span class="math inline">\(i\)</span>, <span class="math display">\[
+\boxed{\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}).}
+\]</span></p>
+<p>This is the ``BAC minus CAB’’ identity.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1242,13 +1321,13 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="../chapters/vectors-and-matrices.html" class="pagination-link" aria-label="Vectors and matrices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../_generated/recommended-by-topic.html" class="pagination-link" aria-label="Recommended exercises by school topic">
-        <span class="nav-page-text">Recommended exercises by school topic</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/hybridization.html" class="pagination-link" aria-label="Hybridization and orbital geometry">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

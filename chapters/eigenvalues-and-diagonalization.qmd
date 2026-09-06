@@ -1,4 +1,4 @@
-# Eigenvalues and eigenvectors
+# Eigenvalues and eigenvectors {#sec-eigenvalues-and-eigenvectors}
 
 Eigenvalue problems are among the most important problems in linear algebra, and they occur throughout quantum chemistry. In an eigenvalue problem, we are given a square matrix $A\in\mathbb{C}^{n\times n}$ and seek a number $\lambda\in\mathbb{C}$ and a nonzero vector $\mathbf{x}\in\mathbb{C}^n$ such that
 

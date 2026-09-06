@@ -37,6 +37,7 @@ book:
     - part: "Linear algebra"
       chapters:
         - chapters/vectors-and-matrices.qmd
+        - chapters/three-vectors.qmd
         - chapters/hybridization.qmd
         - chapters/eigenvalues-and-diagonalization.qmd
         - chapters/general-vector-spaces.qmd
@@ -46,6 +47,10 @@ book:
         - chapters/gram-schmidt.qmd
         - chapters/singular-value-decomposition.qmd
         - chapters/polynomial-vector-spaces.qmd
+
+    - part: "Polynomials"
+      chapters:
+        - chapters/polynomials.qmd
 
     - part: "Metric spaces and topology"
       chapters:

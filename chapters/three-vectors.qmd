@@ -1,0 +1,186 @@
+# Vectors in 3D space
+
+A vector in three-dimensional Euclidean space is specified by three components. We write
+$$
+\mathbf{x}=(x_1,x_2,x_3)\in\mathbb{R}^3.
+$$
+Geometrically, $\mathbf{x}$ can be regarded as a directed displacement in space. Its Euclidean length is
+$$
+\|\mathbf{x}\|=\sqrt{x_1^2+x_2^2+x_3^2}.
+$$
+Vectors can be added componentwise and multiplied by scalars, exactly as for vectors in $\mathbb{R}^n$.
+
+Two particularly useful operations are available for vectors in three dimensions. The **dot product** of $\mathbf{x}$ and $\mathbf{y}$ is the scalar
+$$
+\mathbf{x}\cdot\mathbf{y}=x_1y_1+x_2y_2+x_3y_3=\sum_{i=1}^3x_i y_i.
+$$
+It contains geometric information about the relative directions of the vectors:
+$$
+\mathbf{x}\cdot\mathbf{y}=\|\mathbf{x}\|\,\|\mathbf{y}\|\cos\theta,
+$$
+where $\theta$ is the angle between them. In particular, two nonzero vectors are perpendicular if and only if $\mathbf{x}\cdot\mathbf{y}=0$.
+
+The **cross product** $\mathbf{x}\times\mathbf{y}$ is instead a vector. It is perpendicular to both $\mathbf{x}$ and $\mathbf{y}$, with direction determined by the right-hand rule, and its length is
+$$
+\|\mathbf{x}\times\mathbf{y}\|=\|\mathbf{x}\|\,\|\mathbf{y}\|\sin\theta.
+$$
+In components,
+$$
+\mathbf{x}\times\mathbf{y}=(x_2y_3-x_3y_2,\;x_3y_1-x_1y_3,\;x_1y_2-x_2y_1).
+$$
+
+For manipulating vector expressions, it is often more convenient to work with components rather than with this explicit formula. The **Kronecker delta**
+$$
+\delta_{ij}=
+\begin{cases}
+1,&i=j,\\
+0,&i\neq j,
+\end{cases}
+$$
+acts as an identity for indices, while the **Levi-Civita symbol** $\varepsilon_{ijk}$ encodes the orientation of three-dimensional space. It is $+1$ for even permutations of $(1,2,3)$, $-1$ for odd permutations, and zero whenever two indices are equal. With this notation the cross product has the compact representation
+$$
+(\mathbf{x}\times\mathbf{y})_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}x_jy_k.
+$$
+This index notation is especially useful for deriving identities involving several dot and cross products: complicated-looking vector expressions can be reduced to systematic manipulations of sums, Kronecker deltas, and Levi-Civita symbols.
+
+
+
+
+
+
+## Exercises {.unnumbered}
+
+::: {#exr-levi-civita-vector-triple-product level="intermediate"}
+### The vector triple product and the Levi-Civita symbol
+
+It is recommended that you also look at @exr-levi-civita before doing this exercise, and also @exr-kronecker-delta on the Kronecker delta.
+
+Recall that the $i$th Cartesian component of the cross product of two vectors $\mathbf{a}$ and $\mathbf{b}$ can be written as
+$$
+(\mathbf{a}\times\mathbf{b})_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}a_jb_k,
+$$
+where $\varepsilon_{ijk}$ is the Levi-Civita symbol.
+
+You may also use the contraction identity
+$$
+\sum_{i=1}^3\varepsilon_{ijk}\varepsilon_{imn}=\delta_{jm}\delta_{kn}-\delta_{jn}\delta_{km},
+$$
+where $\delta_{ij}$ is the Kronecker delta.
+
+a. Write the $i$th component of $\mathbf{a}\times(\mathbf{b}\times\mathbf{c})$ using two Levi-Civita symbols. Be careful to use different dummy indices for the two cross products.
+
+b. Use the cyclic property
+	$$
+	\varepsilon_{ijk}=\varepsilon_{kij}
+	$$
+	and the contraction identity above to show that
+	$$
+	\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+	$$
+
+c. Use the Kronecker deltas to carry out the remaining sums and show that
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i\sum_{j=1}^3a_jc_j-c_i\sum_{j=1}^3a_jb_j.
+	$$
+
+d. Hence prove the vector triple-product identity
+	$$
+	\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}).
+	$$
+	This identity is sometimes remembered as ``BAC minus CAB''.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::::{.content-visible when-profile="tutor"}
+
+### Solution for @exr-levi-civita-vector-triple-product {.unnumbered}
+
+a. Applying the definition of the cross product to the outer product gives
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j=1}^3\sum_{k=1}^3\varepsilon_{ijk}a_j(\mathbf{b}\times\mathbf{c})_k.
+	$$
+
+	For the inner cross product, we introduce two new dummy indices $l$ and $m$:
+	$$
+	(\mathbf{b}\times\mathbf{c})_k=\sum_{l=1}^3\sum_{m=1}^3\varepsilon_{klm}b_lc_m.
+	$$
+
+	Therefore,
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j,k,l,m=1}^3\varepsilon_{ijk}\varepsilon_{klm}a_jb_lc_m.
+	$$
+
+b. The common index $k$ occurs in the third position of the first Levi-Civita symbol and in the first position of the second. Using cyclic invariance,
+	$$
+	\varepsilon_{ijk}=\varepsilon_{kij}.
+	$$
+
+	Thus
+	$$
+	\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\sum_{k=1}^3\varepsilon_{kij}\varepsilon_{klm}.
+	$$
+
+	We can now use the given contraction identity:
+	$$
+	\sum_{k=1}^3\varepsilon_{kij}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+	$$
+
+	Hence
+	$$
+	\sum_{k=1}^3\varepsilon_{ijk}\varepsilon_{klm}=\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl}.
+	$$
+
+c. Substituting this result into the expression from part (a) gives
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=\sum_{j,l,m=1}^3(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})a_jb_lc_m.
+	$$
+
+	For the first term, $\delta_{il}$ sets $l=i$, while $\delta_{jm}$ sets $m=j$. Therefore,
+	$$
+	\sum_{j,l,m=1}^3\delta_{il}\delta_{jm}a_jb_lc_m=\sum_{j=1}^3a_jb_ic_j=b_i\sum_{j=1}^3a_jc_j.
+	$$
+
+	For the second term, $\delta_{im}$ sets $m=i$, while $\delta_{jl}$ sets $l=j$. Hence
+	$$
+	\sum_{j,l,m=1}^3\delta_{im}\delta_{jl}a_jb_lc_m=\sum_{j=1}^3a_jb_jc_i=c_i\sum_{j=1}^3a_jb_j.
+	$$
+
+	Combining the two terms,
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i\sum_{j=1}^3a_jc_j-c_i\sum_{j=1}^3a_jb_j.
+	$$
+
+d. Recognizing the sums as scalar products,
+	$$
+	\sum_{j=1}^3a_jc_j=\mathbf{a}\cdot\mathbf{c},\qquad \sum_{j=1}^3a_jb_j=\mathbf{a}\cdot\mathbf{b},
+	$$
+	we obtain
+	$$
+	[\mathbf{a}\times(\mathbf{b}\times\mathbf{c})]_i=b_i(\mathbf{a}\cdot\mathbf{c})-c_i(\mathbf{a}\cdot\mathbf{b}).
+	$$
+
+	Since this holds for every Cartesian component $i$,
+	$$
+	\boxed{\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}).}
+	$$
+
+	This is the ``BAC minus CAB'' identity.
+
+
+
+::::

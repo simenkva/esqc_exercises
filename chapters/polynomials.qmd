@@ -1,0 +1,447 @@
+# Polynomials
+
+Polynomials are among the simplest functions we encounter in mathematics, but they appear almost everywhere. A polynomial in one variable $x$ has the form
+$$
+P(x)=a_0+a_1x+a_2x^2+\cdots+a_nx^n,
+$$
+where the numbers $a_0,a_1,\ldots,a_n$ are called the **coefficients**. If $a_n\neq 0$, we say that the polynomial has **degree** $n$. For example,
+$$
+P(x)=2x^3-x^2+4x-7
+$$
+is a polynomial of degree $3$. Polynomials of degree $1$, $2$, and $3$ are commonly called linear, quadratic, and cubic polynomials, respectively.
+
+Polynomials are important in their own right, but they also occur naturally in linear algebra and quantum mechanics. For example, the eigenvalues of a matrix $A$ are found by solving the **characteristic equation**
+$$
+\det(A-\lambda I)=0.
+$$
+See @sec-eigenvalues-and-eigenvectors. For a finite-dimensional matrix, $\det(A-\lambda I)$ is a polynomial in $\lambda$. Finding eigenvalues therefore leads directly to the problem of finding the roots of a polynomial.
+
+## Roots and factors
+
+A number $r$ is called a **root** or **zero** of the polynomial $P$ if
+$$
+P(r)=0.
+$$
+For example, consider
+$$
+P(x)=x^2-3x+2.
+$$
+Since
+$$
+P(1)=1-3+2=0
+$$
+and
+$$
+P(2)=4-6+2=0,
+$$
+both $1$ and $2$ are roots. Indeed, the polynomial can be factorized as
+$$
+P(x)=(x-1)(x-2).
+$$
+
+This illustrates an important general result, the **factor theorem**:
+$$
+P(r)=0\quad\Longleftrightarrow\quad (x-r)\text{ is a factor of }P(x).
+$$
+Thus there is a close connection between **finding roots** and **factorizing polynomials**. If we know that $r$ is a root of $P$, we know that
+$$
+P(x)=(x-r)Q(x)
+$$
+for some polynomial $Q$ whose degree is one less than that of $P$.
+
+For a quadratic polynomial
+$$
+ax^2+bx+c,
+$$
+the roots can always be found using the quadratic "ABC-formula",
+$$
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+$$
+For polynomials of higher degree, finding the roots can be more difficult. A useful strategy is therefore to find one root first, remove its corresponding linear factor, and reduce the problem to a polynomial of lower degree.
+
+## Division of polynomials
+
+Polynomials can be divided in much the same way as integers. For integers, division with remainder gives, for example,
+$$
+17=3\cdot5+2.
+$$
+Similarly, if we divide a polynomial $P(x)$ by another polynomial $D(x)$, we can write
+$$
+P(x)=Q(x)D(x)+R(x),
+$$
+where $Q(x)$ is the **quotient** and $R(x)$ is the **remainder**. The degree of the remainder must be smaller than the degree of the divisor $D$.
+
+
+For example, let us divide
+$$
+x^3-2x^2-5x+6
+$$
+by $x-1$. Using polynomial long division, we write
+
+For example, let us divide
+$$
+P(x)=x^3-2x^2-5x+6
+$$
+by
+$$
+D(x)=x-1.
+$$
+Polynomial long division can be arranged as follows:
+$$
+\begin{array}{rrrr@{\;}c@{\;}l}
+x^3&-2x^2&-5x&+6&:&x-1=x^2-x-6\\
+\hline
+-x^3&+x^2&&&&\\
+\hline
+&-x^2&-5x&+6&&\\
+&+x^2&-x&&&\\
+\hline
+&&-6x&+6&&\\
+&&+6x&-6&&\\
+\hline
+&&&0&&
+\end{array}
+$$
+At each stage, we choose the next term in the quotient so that its product with the leading term of the divisor cancels the leading term on the left. Thus the quotient is
+$$
+Q(x)=x^2-x-6,
+$$
+and the remainder is zero. Therefore,
+$$
+P(x)=(x-1)(x^2-x-6).
+$$
+Thus
+$$
+x^3-2x^2-5x+6=(x-1)(x^2-x-6).
+$$
+
+The quadratic factor can now be factorized further:
+$$
+x^2-x-6=(x-3)(x+2),
+$$
+so
+$$
+x^3-2x^2-5x+6=(x-1)(x-3)(x+2).
+$$
+Hence the three roots are
+$$
+x=1,\qquad x=3,\qquad x=-2.
+$$
+
+## Finding roots
+
+For simple polynomials with integer coefficients, it is often possible to guess a root by trying a few small integers. A more systematic version of this idea is provided by the **rational root theorem**. If
+$$
+P(x)=a_nx^n+\cdots+a_1x+a_0
+$$
+has integer coefficients and a rational root
+$$
+r=\frac{p}{q},
+$$
+written in lowest terms, then $p$ must divide the constant coefficient $a_0$, and $q$ must divide the leading coefficient $a_n$.
+
+In the particularly common case of a **monic polynomial**, where $a_n=1$, every rational root must therefore be an integer that divides the constant term. For
+$$
+P(x)=x^3-2x^2-5x+6,
+$$
+the only possible integer roots are consequently
+$$
+\pm1,\quad\pm2,\quad\pm3,\quad\pm6.
+$$
+Trying these candidates quickly reveals that $P(1)=0$. We can then divide by $x-1$, as above, and solve the remaining quadratic equation.
+
+The general strategy for simple polynomial equations is therefore:
+
+1. Look for a root, for example by testing the candidates suggested by the rational root theorem.
+2. If $r$ is a root, use the factor theorem to conclude that $(x-r)$ is a factor.
+3. Divide the polynomial by $(x-r)$ using polynomial long division.
+4. Find the roots of the polynomial of lower degree.
+5. Continue until the polynomial has been completely factorized.
+
+A polynomial of degree $n$ has exactly $n$ complex roots when roots are counted with their **multiplicities**. This is the **fundamental theorem of algebra**. Some or all of these roots may be real. For example,
+$$
+x^2+1=0
+$$
+has no real roots, but it has the two complex roots $i$ and $-i$, and
+$$
+x^2+1=(x-i)(x+i).
+$$
+This is one reason complex numbers arise naturally in mathematics: over the complex numbers, every polynomial can ultimately be factorized into linear factors.
+
+
+## Exercises {.unnumbered}
+
+::: {#exr-polynomial-long-division-quartic level="beginner"}
+### Polynomial long division: roots of a quartic polynomial
+
+Consider the polynomials
+$$
+P(x) = x^4 - 6x^3 + 3x^2 + 26x - 24
+$$
+and
+$$
+d(x) = x^2 + x - 2.
+$$
+
+a. Perform the polynomial long division of $P(x)$ by $d(x)$ and verify that the remainder vanishes.
+
+b. Use the result of part (a) and the quadratic formula to find all four roots of $P(x)$.
+
+c. Write $P(x)$ as a product of four linear factors.
+:::
+
+
+
+::: {#exr-rational-roots-cubic level="beginner"}
+### Roots of a cubic polynomial by guessing and polynomial long division
+
+Every cubic equation
+$$
+ax^3+bx^2+cx+d=0,\qquad a\neq0,
+$$
+can in principle be solved by a general formula, but that formula is rather cumbersome. For simple polynomial equations there is often an easier approach.
+
+The **rational root theorem** says that if a polynomial with integer coefficients has a rational root
+$$
+x=\frac{p}{q},
+$$
+written in lowest terms, then $p$ must divide the constant term $d$, while $q$ must divide the leading coefficient $a$.
+
+Once one root $x_0$ has been found, $(x-x_0)$ is a factor of the polynomial. We can divide out this factor using polynomial long division, leaving a quadratic polynomial.
+
+Consider
+$$
+x^3-2x^2-5x+6=0.
+$$
+
+a. Use the rational root theorem to list all possible rational roots. Test these candidates until you find one root.
+
+b. Divide $x^3-2x^2-5x+6$ by the corresponding linear factor using polynomial long division.
+
+c. Determine the remaining two roots from the resulting quadratic polynomial.
+
+d. Write the original polynomial as a product of three linear factors.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::: {.content-visible when-profile="tutor"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Solution for @exr-polynomial-long-division-quartic {.unnumbered}
+
+a. We divide
+	$$
+	P(x)=x^4-6x^3+3x^2+26x-24
+	$$
+	by
+	$$
+	d(x)=x^2+x-2.
+	$$
+
+	The leading term is obtained from
+	$$
+	\frac{x^4}{x^2}=x^2.
+	$$
+	Multiplying the divisor by $x^2$ gives
+	$$
+	x^2(x^2+x-2)=x^4+x^3-2x^2.
+	$$
+	Subtracting this from $P(x)$ gives
+	$$
+	-7x^3+5x^2+26x-24.
+	$$
+
+	The next term in the quotient is
+	$$
+	\frac{-7x^3}{x^2}=-7x.
+	$$
+	Multiplying the divisor by $-7x$ gives
+	$$
+	-7x(x^2+x-2)=-7x^3-7x^2+14x.
+	$$
+	Subtracting gives
+	$$
+	12x^2+12x-24.
+	$$
+
+	The final term in the quotient is
+	$$
+	\frac{12x^2}{x^2}=12.
+	$$
+	Multiplying the divisor by $12$ gives
+	$$
+	12(x^2+x-2)=12x^2+12x-24.
+	$$
+	The remainder is therefore zero. Hence
+	$$
+	P(x)=(x^2+x-2)(x^2-7x+12).
+	$$
+
+b. We first solve
+	$$
+	x^2+x-2=0.
+	$$
+	Using the quadratic formula,
+	$$
+	x=\frac{-1\pm\sqrt{1+8}}{2}=\frac{-1\pm3}{2},
+	$$
+	so
+	$$
+	x=-2,\qquad x=1.
+	$$
+
+	Next, solve
+	$$
+	x^2-7x+12=0.
+	$$
+	The quadratic formula gives
+	$$
+	x=\frac{7\pm\sqrt{49-48}}{2}=\frac{7\pm1}{2},
+	$$
+	so
+	$$
+	x=3,\qquad x=4.
+	$$
+
+	Thus the four roots are
+	$$
+	x=-2,\quad 1,\quad 3,\quad 4.
+	$$
+
+c. The corresponding factorization is
+	$$
+	P(x)=(x+2)(x-1)(x-3)(x-4).
+	$$
+
+
+
+
+:::
+
+
+
+### Solution for @exr-rational-roots-cubic {.unnumbered}
+
+a. The leading coefficient is $1$ and the constant term is $6$. Therefore, any rational root must be an integer that divides $6$. The possible roots are
+	$$
+	x=\pm1,\quad\pm2,\quad\pm3,\quad\pm6.
+	$$
+
+	Testing $x=1$ gives
+	$$
+	1^3-2(1)^2-5(1)+6=1-2-5+6=0.
+	$$
+	Thus $x=1$ is a root, and therefore $(x-1)$ is a factor.
+
+b. We divide
+	$$
+	x^3-2x^2-5x+6
+	$$
+	by $x-1$.
+
+	The first term of the quotient is
+	$$
+	\frac{x^3}{x}=x^2.
+	$$
+	Multiplying,
+	$$
+	x^2(x-1)=x^3-x^2.
+	$$
+	Subtracting gives
+	$$
+	-x^2-5x+6.
+	$$
+
+	The next quotient term is
+	$$
+	\frac{-x^2}{x}=-x.
+	$$
+	Multiplying,
+	$$
+	-x(x-1)=-x^2+x.
+	$$
+	Subtracting gives
+	$$
+	-6x+6.
+	$$
+
+	The final quotient term is
+	$$
+	\frac{-6x}{x}=-6.
+	$$
+	Multiplying,
+	$$
+	-6(x-1)=-6x+6.
+	$$
+	The remainder is zero. Therefore,
+	$$
+	x^3-2x^2-5x+6=(x-1)(x^2-x-6).
+	$$
+
+c. We solve
+	$$
+	x^2-x-6=0.
+	$$
+	Using the quadratic formula,
+	$$
+	x=\frac{1\pm\sqrt{1+24}}{2}=\frac{1\pm5}{2}.
+	$$
+	Hence
+	$$
+	x=3\qquad\text{or}\qquad x=-2.
+	$$
+
+	Together with the root from part (a), the three roots are therefore
+	$$
+	x=1,\quad x=3,\quad x=-2.
+	$$
+
+d. The complete factorization is
+	$$
+	x^3-2x^2-5x+6=(x-1)(x-3)(x+2).
+	$$

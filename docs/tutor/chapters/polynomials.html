@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Vectors and matrices – ESQC mathematics exercises</title>
+<title>16&nbsp; Polynomials – ESQC mathematics exercises</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/three-vectors.html" rel="next">
-<link href="../chapters/basic-mathematical-proofs.html" rel="prev">
+<link href="../chapters/metric-spaces.html" rel="next">
+<link href="../chapters/polynomial-vector-spaces.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -49,9 +49,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-f2d300d7d3cf9862e200a000ce944afc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-096cdd5438ffd95159dbee2f21e8df00.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,15 +100,15 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 0 !important;
   line-height: 1;
 }
-div.callout-preparations.callout {
-  border-left-color: #8B81FF;
+div.callout-visualization.callout {
+  border-left-color: #E0479E;
 }
-div.callout-preparations.callout-style-default .callout-header {
-  background-color: rgba(139, 129, 255, 0.13);
+div.callout-visualization.callout-style-default .callout-header {
+  background-color: rgba(224, 71, 158, 0.13);
 }
-div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -131,15 +128,15 @@ div.callout-fact.callout-style-default .callout-icon::before, div.callout-fact.c
   background-position: center;
   content: '';
 }
-div.callout-visualization.callout {
-  border-left-color: #E0479E;
+div.callout-preparations.callout {
+  border-left-color: #8B81FF;
 }
-div.callout-visualization.callout-style-default .callout-header {
-  background-color: rgba(224, 71, 158, 0.13);
+div.callout-preparations.callout-style-default .callout-header {
+  background-color: rgba(139, 129, 255, 0.13);
 }
-div.callout-visualization .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-visualization.callout-style-default .callout-icon::before, div.callout-visualization.callout-titled .callout-icon::before {
-  background-image: url('data:image/png;base64,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');
+div.callout-preparations .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-preparations.callout-style-default .callout-icon::before, div.callout-preparations.callout-titled .callout-icon::before {
+  background-image: url('data:image/png;base64,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');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -366,7 +363,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/polynomials.html">Polynomials</a></li><li class="breadcrumb-item"><a href="../chapters/polynomials.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomials</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -475,68 +472,62 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/vectors-and-matrices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/three-vectors.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../chapters/hybridization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hybridization and orbital geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/eigenvalues-and-diagonalization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Eigenvalues and eigenvectors</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Eigenvalues and eigenvectors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/general-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">General vector spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-vector-space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">The complex numbers as a real vector space</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gaussian-elimination.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Gaussian elimination</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/bra-ket-notation-new.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Bra-ket notation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/gram-schmidt.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Gram–Schmidt orthogonalization</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singular-value-decomposition.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">The singular-value decomposition</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/polynomial-vector-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span></a>
   </div>
 </li>
       </ul>
@@ -552,8 +543,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/polynomials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Polynomials</span></span></a>
+  <a href="../chapters/polynomials.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomials</span></span></a>
   </div>
 </li>
       </ul>
@@ -570,13 +561,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/metric-spaces.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Metric spaces</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/open-and-closed-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Open and closed sets in Euclidean space</span></span></a>
   </div>
 </li>
       </ul>
@@ -597,19 +588,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/visualizing-functions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Visualizing functions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/continuity-and-differentiability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Continuity and differentiability</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/differentiate-wrt-vector-complete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Functions of a vector</span></span></a>
   </div>
 </li>
       </ul>
@@ -626,31 +617,31 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-arithmetic.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Complex arithmetic and geometry</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-sets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Subsets of the complex plane</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-exponential.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">The complex exponential</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-power-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Complex power series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/singularities-and-contour-integrals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Singularities and contour integrals</span></span></a>
   </div>
 </li>
       </ul>
@@ -667,13 +658,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/taylor-series.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Taylor Series</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/matrix-exp-bch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Matrix exponentials and operator exponentials</span></span></a>
   </div>
 </li>
       </ul>
@@ -690,19 +681,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/dual-numbers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Dual numbers and automatic differentiation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/newtons-method.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Newton’s method</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/complex-step-differentiation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Complex-step differentiation</span></span></a>
   </div>
 </li>
       </ul>
@@ -733,21 +724,13 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#exercises-basic-vector-and-matrix-calculations" id="toc-exercises-basic-vector-and-matrix-calculations" class="nav-link active" data-scroll-target="#exercises-basic-vector-and-matrix-calculations">Exercises: Basic vector and matrix calculations</a></li>
-  <li><a href="#exercises-more-vectors-and-matrices" id="toc-exercises-more-vectors-and-matrices" class="nav-link" data-scroll-target="#exercises-more-vectors-and-matrices">Exercises: More vectors and matrices</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <li><a href="#roots-and-factors" id="toc-roots-and-factors" class="nav-link active" data-scroll-target="#roots-and-factors"><span class="header-section-number">16.1</span> Roots and factors</a></li>
+  <li><a href="#division-of-polynomials" id="toc-division-of-polynomials" class="nav-link" data-scroll-target="#division-of-polynomials"><span class="header-section-number">16.2</span> Division of polynomials</a></li>
+  <li><a href="#finding-roots" id="toc-finding-roots" class="nav-link" data-scroll-target="#finding-roots"><span class="header-section-number">16.3</span> Finding roots</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
   <ul class="collapse">
-  <li><a href="#solution-for-exr-vector-spaces-basic-operations" id="toc-solution-for-exr-vector-spaces-basic-operations" class="nav-link" data-scroll-target="#solution-for-exr-vector-spaces-basic-operations">Solution for Exercise&nbsp;<span>6.1</span></a></li>
-  <li><a href="#solution-for-exr-matrix-vector-multiplication" id="toc-solution-for-exr-matrix-vector-multiplication" class="nav-link" data-scroll-target="#solution-for-exr-matrix-vector-multiplication">Solution for Exercise&nbsp;<span>6.2</span></a></li>
-  <li><a href="#solution-for-exr-matrix-matrix-multiplication" id="toc-solution-for-exr-matrix-matrix-multiplication" class="nav-link" data-scroll-target="#solution-for-exr-matrix-matrix-multiplication">Solution for Exercise&nbsp;<span>6.3</span></a></li>
-  <li><a href="#solution-to-exr-vectors-and-matrices-work-space-plane-vectors-define-two" id="toc-solution-to-exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="nav-link" data-scroll-target="#solution-to-exr-vectors-and-matrices-work-space-plane-vectors-define-two">Solution to Exercise&nbsp;<span>6.4</span></a></li>
-  <li><a href="#solution-to-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" id="toc-solution-to-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" class="nav-link" data-scroll-target="#solution-to-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate">Solution to Exercise&nbsp;<span>6.5</span></a></li>
-  <li><a href="#solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk" id="toc-solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk" class="nav-link" data-scroll-target="#solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk">Solution for Exercise&nbsp;<span>6.6</span></a></li>
-  <li><a href="#solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" id="toc-solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="nav-link" data-scroll-target="#solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed">Solution for Exercise&nbsp;<span>6.7</span></a></li>
-  <li><a href="#solution-to-exr-vectors-and-matrices-robert-beezer-three-digit-number-has" id="toc-solution-to-exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="nav-link" data-scroll-target="#solution-to-exr-vectors-and-matrices-robert-beezer-three-digit-number-has">Solution to Exercise&nbsp;<span>6.8</span></a></li>
-  <li><a href="#solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" id="toc-solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="nav-link" data-scroll-target="#solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action">Solution for Exercise&nbsp;<span>6.9</span></a></li>
-  <li><a href="#solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i" id="toc-solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="nav-link" data-scroll-target="#solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i">Solution for Exercise&nbsp;<span>6.10</span></a></li>
-  <li><a href="#solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined" id="toc-solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined" class="nav-link" data-scroll-target="#solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined">Solution for Exercise&nbsp;<span>6.11</span></a></li>
+  <li><a href="#solution-for-exr-polynomial-long-division-quartic" id="toc-solution-for-exr-polynomial-long-division-quartic" class="nav-link" data-scroll-target="#solution-for-exr-polynomial-long-division-quartic">Solution for Exercise&nbsp;<span>16.1</span></a></li>
+  <li><a href="#solution-for-exr-rational-roots-cubic" id="toc-solution-for-exr-rational-roots-cubic" class="nav-link" data-scroll-target="#solution-for-exr-rational-roots-cubic">Solution for Exercise&nbsp;<span>16.2</span></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -801,9 +784,9 @@ window.Quarto = {
 })();
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html">Linear algebra</a></li><li class="breadcrumb-item"><a href="../chapters/vectors-and-matrices.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/polynomials.html">Polynomials</a></li><li class="breadcrumb-item"><a href="../chapters/polynomials.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomials</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Vectors and matrices</span></h1>
+<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Polynomials</span></h1>
 </div>
 
 
@@ -820,693 +803,237 @@ window.Quarto = {
 </header>
 
 
-<p>The vector space <span class="math inline">\(\mathbb{R}^n\)</span> consists of all column vectors</p>
-<p><span class="math display">\[
-x=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix},\qquad x_i\in\mathbb{R},
-\]</span></p>
-<p>with the usual vector addition and scalar multiplication. Similarly, <span class="math inline">\(\mathbb{C}^n\)</span> consists of column vectors with complex components. More generally, a vector space <span class="math inline">\(V\)</span> over a field <span class="math inline">\(\mathbb{F}\)</span> is a set equipped with vector addition and scalar multiplication such that, for all <span class="math inline">\(x,y,z\in V\)</span> and <span class="math inline">\(\alpha,\beta\in\mathbb{F}\)</span>,</p>
-<ol type="1">
-<li><p><strong>Commutativity of addition:</strong> <span class="math inline">\(x+y=y+x\)</span>.</p></li>
-<li><p><strong>Associativity of addition:</strong> <span class="math inline">\(x+(y+z)=(x+y)+z\)</span>.</p></li>
-<li><p><strong>Additive identity:</strong> There exists a zero vector <span class="math inline">\(0\in V\)</span> such that <span class="math inline">\(x+0=x\)</span>.</p></li>
-<li><p><strong>Additive inverse:</strong> For every <span class="math inline">\(x\in V\)</span>, there exists <span class="math inline">\(-x\in V\)</span> such that <span class="math inline">\(x+(-x)=0\)</span>.</p></li>
-<li><p><strong>Distributivity over vector addition:</strong> <span class="math inline">\(\alpha(x+y)=\alpha x+\alpha y\)</span>.</p></li>
-<li><p><strong>Distributivity over scalar addition:</strong> <span class="math inline">\((\alpha+\beta)x=\alpha x+\beta x\)</span>.</p></li>
-<li><p><strong>Associativity of scalar multiplication:</strong> <span class="math inline">\((\alpha\beta)x=\alpha(\beta x)\)</span>.</p></li>
-<li><p><strong>Scalar identity:</strong> <span class="math inline">\(1x=x\)</span>.</p></li>
-</ol>
-<p>For a matrix <span class="math inline">\(A\in\mathbb{R}^{m\times n}\)</span> and a column vector <span class="math inline">\(x\in\mathbb{R}^n\)</span>, the matrix-vector product <span class="math inline">\(y=Ax\in\mathbb{R}^m\)</span> is defined componentwise by</p>
-<p><span class="math display">\[
-y_i=\sum_{j=1}^n A_{ij}x_j.
-\]</span></p>
-<p>For matrices <span class="math inline">\(A\in\mathbb{R}^{m\times n}\)</span> and <span class="math inline">\(B\in\mathbb{R}^{n\times p}\)</span>, the matrix product <span class="math inline">\(C=AB\in\mathbb{R}^{m\times p}\)</span> is defined by</p>
-<p><span class="math display">\[
-C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}.
-\]</span></p>
-<p>The same definitions of matrix-vector and matrix-matrix multiplication apply over <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<section id="exercises-basic-vector-and-matrix-calculations" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="exercises-basic-vector-and-matrix-calculations">Exercises: Basic vector and matrix calculations</h2>
-<div id="exr-vector-spaces-basic-operations" class="theorem exercise" data-recommended="math" data-level="beginner" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.1 (Basic vector operations)</strong></span> Consider the vectors</p>
-<p><span class="math display">\[
-\mathbf{x}=(1,2,-1),\qquad \mathbf{y}=(3,-1,2),\qquad \mathbf{z}=(0,2,1)
-\]</span></p>
-<p>in the vector space <span class="math inline">\(\mathbb{R}^3\)</span>. (We here write the vectors as an ordered tuple instead of a column.)</p>
-<ol type="a">
-<li><p>Compute <span class="math inline">\(\mathbf{x}+\mathbf{y}\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(\mathbf{x}-\mathbf{y}\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(2\mathbf{x}\)</span> and <span class="math inline">\(-3\mathbf{y}\)</span>.</p></li>
-<li><p>Compute the linear combination <span class="math inline">\(2\mathbf{x}+3\mathbf{y}\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(\mathbf{x}+2\mathbf{y}-\mathbf{z}\)</span>.</p></li>
-<li><p>Find numbers <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> such that <span class="math inline">\(\alpha \mathbf{x}+\beta \mathbf{y}=(7,0,3)\)</span>.</p></li>
-<li><p>Verify by direct calculation that <span class="math inline">\(2(\mathbf{x}+\mathbf{y})=2\mathbf{x}+2\mathbf{y}\)</span>. Which vector-space axiom does this illustrate?</p></li>
-<li><p>Is <span class="math inline">\((1,2)\)</span> an element of this vector space? Is <span class="math inline">\((0,0,0)\)</span> an element? Explain briefly.</p></li>
-</ol>
-</div>
-<div id="exr-matrix-vector-multiplication" class="theorem exercise" data-recommended="math" data-level="beginner" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.2 (Basic matrix-vector products)</strong></span> Consider the matrices and vectors</p>
-<p><span class="math display">\[
-A=\begin{pmatrix}2&amp;-1\\3&amp;4\end{pmatrix},\qquad B=\begin{pmatrix}1&amp;0&amp;2\\-1&amp;3&amp;1\end{pmatrix},\qquad \mathbf{x}=\begin{pmatrix}3\\2\end{pmatrix},\qquad \mathbf{y}=\begin{pmatrix}1\\-2\\3\end{pmatrix}.
-\]</span></p>
-<ol type="a">
-<li><p>Compute <span class="math inline">\(A\mathbf{x}\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(B\mathbf{y}\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(A(2\mathbf{x})\)</span> and <span class="math inline">\(2(A\mathbf{x})\)</span>. Verify that they are equal.</p></li>
-<li><p>Can the products <span class="math inline">\(A\mathbf{y}\)</span> and <span class="math inline">\(B\mathbf{x}\)</span> be formed? Explain your answer in terms of the dimensions of the matrices and vectors.</p></li>
-</ol>
-</div>
-<div id="exr-matrix-matrix-multiplication" class="theorem exercise" data-recommended="math" data-level="beginner" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.3 (Matrix-matrix products)</strong></span> Consider the matrices</p>
-<p><span class="math display">\[
-A=\begin{pmatrix}1&amp;2\\3&amp;-1\end{pmatrix},\qquad B=\begin{pmatrix}2&amp;0\\-1&amp;4\end{pmatrix},\qquad C=\begin{pmatrix}1&amp;2&amp;0\\-1&amp;3&amp;2\end{pmatrix}.
-\]</span></p>
-<ol type="a">
-<li><p>Compute <span class="math inline">\(AB\)</span>.</p></li>
-<li><p>Compute <span class="math inline">\(BA\)</span>. Is <span class="math inline">\(AB=BA\)</span>?</p></li>
-<li><p>Compute <span class="math inline">\(AC\)</span>. What are the dimensions of the resulting matrix?</p></li>
-<li><p>Can the product <span class="math inline">\(CA\)</span> be formed? Can the product <span class="math inline">\(BC\)</span> be formed? Explain your answers using the dimensions of the matrices.</p></li>
-</ol>
-</div>
-<div id="exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="theorem exercise" data-recommended="math" data-level="beginner">
-<p><span class="theorem-title"><strong>Exercise 6.4 (Linear independence and basis)</strong></span> We work in the space <span class="math inline">\(V = \mathbb{R}^2\)</span>, plane vectors. We define two vectors, <span class="math display">\[
-    \mathbf{b}_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad \mathbf{b}_2 = \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
-\]</span></p>
-<ol type="a">
-<li>Show by elementary means that the two vectors are linearly independent, that is: If <span class="math inline">\(x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2 = 0\)</span>, then <span class="math inline">\(x_1=x_2=0\)</span> must hold.</li>
-<li>The vectors form a basis since they are linearly independent. Explain in your own words what a basis is.</li>
-<li>Make a 2D drawing or plot of them as arrows from the origin.</li>
-</ol>
-</div>
-<div id="exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" class="theorem exercise" data-level="beginner">
-<p><span class="theorem-title"><strong>Exercise 6.5 (Gaussian elimination and vector decomposition)</strong></span> Let</p>
-<p><span class="math display">\[
-    \mathbf{v} = \begin{bmatrix} 2\\2 \end{bmatrix}
-\]</span></p>
-<p>Using Gaussian elimination, compute the coefficients <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> such that</p>
-<p><span class="math display">\[
-\mathbf{v} = x_1 \mathbf{b}_1 + x_2 \mathbf{b}_2.
-\]</span></p>
-<p>Illustrate this decomposition in the graph from the previous exercise, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.</p>
-</div>
-<div id="exr-vectors-and-matrices-person-walks-home-first-they-walk" class="theorem exercise" data-recommended="math" data-level="intermediate" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.6 (Office coordinates)</strong></span> A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.</p>
-<p>What are the coordinates of the office, relative to the person’s home?</p>
-<p>What is the distance to home, as the crow flies?</p>
-</div>
-<div id="exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="theorem exercise" data-recommended="math" data-level="intermediate" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.7 (Boat sailing on the ocean)</strong></span> A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?</p>
-</div>
-<div id="exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="theorem exercise" data-recommended="math" data-level="intermediate" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.8 (An exercise by Robert Beezer)</strong></span> A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.</p>
-</div>
-</section>
-<section id="exercises-more-vectors-and-matrices" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="exercises-more-vectors-and-matrices">Exercises: More vectors and matrices</h2>
-<div id="exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="theorem exercise" data-recommended="math" data-level="intermediate" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.9 (Compute the action of a matrix on vectors)</strong></span> Let <span class="math inline">\(A\)</span> be the <span class="math inline">\(n\times n\)</span> matrix defined by <span class="math inline">\(A_{i,i+1} = i^2\)</span> for <span class="math inline">\(1 \leq i &lt; n\)</span>, and zero otherwise. Compute the action of <span class="math inline">\(A\)</span> and <span class="math inline">\(A^T\)</span> on the standard basis for <span class="math inline">\(\mathbb{R}^n\)</span>. Compute the action of <span class="math inline">\(A\)</span> and <span class="math inline">\(A^T\)</span> on an arbitrary vector <span class="math inline">\(\mathbf{x}\in \mathbb{R}^n\)</span>.</p>
-</div>
-<div id="exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="theorem exercise" data-level="intermediate" data-recommended="math" data-priority="10">
-<p><span class="theorem-title"><strong>Exercise 6.10 (Matrix-matrix products, rows and columns)</strong></span> A useful way to understand matrix-matrix multiplication is to think of a matrix as a collection of vectors. This gives two complementary interpretations of the product <span class="math inline">\(AB\)</span>:</p>
-<ul>
-<li><span class="math inline">\(A\)</span> acts separately on each <strong>column</strong> of <span class="math inline">\(B\)</span>.</li>
-<li><span class="math inline">\(B\)</span> acts separately on each <strong>row</strong> of <span class="math inline">\(A\)</span>, when the rows are regarded as row vectors.</li>
-</ul>
-<p>These viewpoints are useful both for understanding matrix multiplication and for computations. For example, if the columns of <span class="math inline">\(B\)</span> represent several vectors, then <span class="math inline">\(AB\)</span> applies the linear transformation <span class="math inline">\(A\)</span> to <em>all of these vectors at once</em>.</p>
-<ol type="a">
-<li><p>Consider <span class="math display">\[
-A=\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix}, \qquad B=\begin{bmatrix}1&amp;0&amp;2\\2&amp;-1&amp;1\end{bmatrix}.
-\]</span> Write <span class="math inline">\(B\)</span> as a collection of its three column vectors, <span class="math display">\[
-B=[\mathbf b_1,\mathbf b_2,\mathbf b_3].
-\]</span> Write down <span class="math inline">\(\mathbf b_1\)</span>, <span class="math inline">\(\mathbf b_2\)</span>, and <span class="math inline">\(\mathbf b_3\)</span> explicitly.</p></li>
-<li><p>Compute <span class="math inline">\(A\mathbf b_1\)</span>, <span class="math inline">\(A\mathbf b_2\)</span>, and <span class="math inline">\(A\mathbf b_3\)</span> separately. Put the three resulting vectors next to each other as the columns of a new matrix: <span class="math display">\[
-[A\mathbf b_1,A\mathbf b_2,A\mathbf b_3].
-\]</span></p></li>
-<li><p>Compute <span class="math inline">\(AB\)</span> directly using ordinary matrix multiplication. Compare your answer with part b.</p></li>
-<li><p>Now consider the general case. Let <span class="math display">\[
-A\in M(n,m,\mathbb F), \qquad B\in M(m,o,\mathbb F),
-\]</span> and write the columns of <span class="math inline">\(B\)</span> as <span class="math display">\[
-B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o].
-\]</span> Explain why <span class="math display">\[
-AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o].
-\]</span> In other words, explain why the <span class="math inline">\(j\)</span>th column of <span class="math inline">\(AB\)</span> is <span class="math inline">\(A\mathbf b_j\)</span>.</p></li>
-<li><p>There is a similar interpretation in terms of rows. Write <span class="math inline">\(A\)</span> using its row vectors, <span class="math display">\[
-A=
-\begin{bmatrix}
-\mathbf a_1^T\\
-\mathbf a_2^T\\
-\vdots\\
-\mathbf a_n^T
-\end{bmatrix}.
-\]</span> Show that <span class="math display">\[
-AB=
-\begin{bmatrix}
-\mathbf a_1^T B\\
-\mathbf a_2^T B\\
-\vdots\\
-\mathbf a_n^T B
-\end{bmatrix}.
-\]</span> Thus, the <span class="math inline">\(i\)</span>th row of <span class="math inline">\(AB\)</span> is the row vector <span class="math inline">\(\mathbf a_i^T B\)</span>.</p></li>
-<li><p>Suppose the columns of <span class="math inline">\(B\)</span> are several vectors that we want to transform using the same linear transformation <span class="math inline">\(A\)</span>. Explain why the identity from part d means that we can collect all the vectors into one matrix <span class="math inline">\(B\)</span> and perform a single matrix-matrix multiplication <span class="math inline">\(AB\)</span>.</p></li>
-</ol>
-</div>
-<div id="exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined" class="theorem exercise" data-level="intermediate">
-<p><span class="theorem-title"><strong>Exercise 6.11</strong></span> Show that each column of <span class="math inline">\(C = AB\)</span> is a linear combination of the columns of <span class="math inline">\(A\)</span> with coefficients determined by <span class="math inline">\(B\)</span>, <span class="math display">\[
-\mathbf{c}_i = \sum_j \mathbf{a}_j B_{ji}.
-\]</span> Show a similar result for the rows of <span class="math inline">\(C\)</span>.</p>
-</div>
-<!--
- oooooooo8    ooooooo  ooooo      ooooo  oooo ooooooooooo ooooo  ooooooo  oooo   oooo oooooooo8  
-888         o888   888o 888        888    88  88  888  88  888 o888   888o 8888o  88 888         
- 888oooooo  888     888 888        888    88      888      888 888     888 88 888o88  888oooooo  
-        888 888o   o888 888      o 888    88      888      888 888o   o888 88   8888         888 
-o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o    88 o88oooo888  
--->
-</section>
-<section id="solutions" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="solutions">Solutions</h2>
-<section id="solution-for-exr-vector-spaces-basic-operations" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vector-spaces-basic-operations">Solution for <a href="#exr-vector-spaces-basic-operations" class="quarto-xref">Exercise&nbsp;<span>6.1</span></a></h3>
-<ol type="a">
-<li><p>Vector addition is performed component by component:</p>
-<p><span class="math display">\[
-x+y=(1,2,-1)+(3,-1,2)=(4,1,1).
-\]</span></p></li>
-<li><p>Similarly,</p>
-<p><span class="math display">\[
-x-y=(1,2,-1)-(3,-1,2)=(-2,3,-3).
-\]</span></p></li>
-<li><p>Scalar multiplication multiplies every component by the scalar:</p>
-<p><span class="math display">\[
-2x=(2,4,-2),
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
--3y=(-9,3,-6).
-\]</span></p></li>
-<li><p>We have</p>
-<p><span class="math display">\[
-2x+3y=(2,4,-2)+(9,-3,6)=(11,1,4).
-\]</span></p></li>
-<li><p>First,</p>
-<p><span class="math display">\[
-2y=(6,-2,4),
-\]</span></p>
-<p>so</p>
-<p><span class="math display">\[
-x+2y-z=(1,2,-1)+(6,-2,4)-(0,2,1)=(7,-2,2).
-\]</span></p></li>
-<li><p>We want</p>
-<p><span class="math display">\[
-\alpha x+\beta y=(7,0,3).
-\]</span></p>
-<p>Substituting the vectors gives</p>
-<p><span class="math display">\[
-\alpha(1,2,-1)+\beta(3,-1,2)=(7,0,3).
-\]</span></p>
-<p>Comparing components,</p>
-<p><span class="math display">\[
-\alpha+3\beta=7,\qquad 2\alpha-\beta=0,\qquad -\alpha+2\beta=3.
-\]</span></p>
-<p>From the second equation, <span class="math inline">\(\beta=2\alpha\)</span>. Substituting into the first equation gives</p>
-<p><span class="math display">\[
-\alpha+6\alpha=7,
-\]</span></p>
-<p>so <span class="math inline">\(\alpha=1\)</span> and <span class="math inline">\(\beta=2\)</span>. Indeed,</p>
-<p><span class="math display">\[
-x+2y=(1,2,-1)+(6,-2,4)=(7,0,3).
-\]</span></p></li>
-<li><p>The left-hand side is</p>
-<p><span class="math display">\[
-2(x+y)=2(4,1,1)=(8,2,2).
-\]</span></p>
-<p>The right-hand side is</p>
-<p><span class="math display">\[
-2x+2y=(2,4,-2)+(6,-2,4)=(8,2,2).
-\]</span></p>
-<p>Thus,</p>
-<p><span class="math display">\[
-2(x+y)=2x+2y.
-\]</span></p>
-<p>This illustrates the distributive law</p>
-<p><span class="math display">\[
-\alpha(x+y)=\alpha x+\alpha y.
-\]</span></p></li>
-<li><p>The vector <span class="math inline">\((1,2)\)</span> is not an element of <span class="math inline">\(\mathbb{R}^3\)</span>, since vectors in <span class="math inline">\(\mathbb{R}^3\)</span> have three components.</p>
-<p>The vector</p>
-<p><span class="math display">\[
-(0,0,0)
-\]</span></p>
-<p>is an element of <span class="math inline">\(\mathbb{R}^3\)</span>. It is the zero vector of the vector space.</p></li>
-</ol>
-</section>
-<section id="solution-for-exr-matrix-vector-multiplication" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-matrix-vector-multiplication">Solution for <a href="#exr-matrix-vector-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.2</span></a></h3>
-<ol type="a">
-<li><p>We multiply each row of <span class="math inline">\(A\)</span> by the column vector <span class="math inline">\(x\)</span>:</p>
-<p><span class="math display">\[
-Ax=\begin{pmatrix}2&amp;-1\\3&amp;4\end{pmatrix}\begin{pmatrix}3\\2\end{pmatrix}=\begin{pmatrix}2\cdot3-1\cdot2\\3\cdot3+4\cdot2\end{pmatrix}=\begin{pmatrix}4\\17\end{pmatrix}.
-\]</span></p></li>
-<li><p>Similarly,</p>
-<p><span class="math display">\[
-By=\begin{pmatrix}1&amp;0&amp;2\\-1&amp;3&amp;1\end{pmatrix}\begin{pmatrix}1\\-2\\3\end{pmatrix}=\begin{pmatrix}1\cdot1+0\cdot(-2)+2\cdot3\\-1\cdot1+3\cdot(-2)+1\cdot3\end{pmatrix}=\begin{pmatrix}7\\-4\end{pmatrix}.
-\]</span></p></li>
-<li><p>Since</p>
-<p><span class="math display">\[
-2x=\begin{pmatrix}6\\4\end{pmatrix},
-\]</span></p>
-<p>we obtain</p>
-<p><span class="math display">\[
-A(2x)=\begin{pmatrix}2&amp;-1\\3&amp;4\end{pmatrix}\begin{pmatrix}6\\4\end{pmatrix}=\begin{pmatrix}8\\34\end{pmatrix}.
-\]</span></p>
-<p>From part a,</p>
-<p><span class="math display">\[
-2(Ax)=2\begin{pmatrix}4\\17\end{pmatrix}=\begin{pmatrix}8\\34\end{pmatrix}.
-\]</span></p>
-<p>Thus <span class="math inline">\(A(2x)=2(Ax)\)</span>.</p></li>
-<li><p>The product <span class="math inline">\(Ay\)</span> cannot be formed because <span class="math inline">\(A\)</span> has two columns while <span class="math inline">\(y\)</span> has three components. The product <span class="math inline">\(Bx\)</span> cannot be formed because <span class="math inline">\(B\)</span> has three columns while <span class="math inline">\(x\)</span> has two components. In general, if <span class="math inline">\(A\)</span> is an <span class="math inline">\(m\times n\)</span> matrix, then <span class="math inline">\(Ax\)</span> is defined when <span class="math inline">\(x\)</span> has <span class="math inline">\(n\)</span> components, and the resulting vector has <span class="math inline">\(m\)</span> components.</p></li>
-</ol>
-</section>
-<section id="solution-for-exr-matrix-matrix-multiplication" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-matrix-matrix-multiplication">Solution for <a href="#exr-matrix-matrix-multiplication" class="quarto-xref">Exercise&nbsp;<span>6.3</span></a></h3>
-<ol type="a">
-<li><p>We obtain</p>
-<p><span class="math display">\[
-AB=\begin{pmatrix}1&amp;2\\3&amp;-1\end{pmatrix}\begin{pmatrix}2&amp;0\\-1&amp;4\end{pmatrix}=\begin{pmatrix}1\cdot2+2\cdot(-1)&amp;1\cdot0+2\cdot4\\3\cdot2+(-1)\cdot(-1)&amp;3\cdot0+(-1)\cdot4\end{pmatrix}=\begin{pmatrix}0&amp;8\\7&amp;-4\end{pmatrix}.
-\]</span></p></li>
-<li><p>Reversing the order,</p>
-<p><span class="math display">\[
-BA=\begin{pmatrix}2&amp;0\\-1&amp;4\end{pmatrix}\begin{pmatrix}1&amp;2\\3&amp;-1\end{pmatrix}=\begin{pmatrix}2&amp;4\\11&amp;-6\end{pmatrix}.
-\]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-AB\neq BA.
-\]</span></p>
-<p>Matrix multiplication is in general <strong>not commutative</strong>.</p></li>
-<li><p>Since <span class="math inline">\(A\)</span> is <span class="math inline">\(2\times2\)</span> and <span class="math inline">\(C\)</span> is <span class="math inline">\(2\times3\)</span>, the product <span class="math inline">\(AC\)</span> is a <span class="math inline">\(2\times3\)</span> matrix:</p>
-<p><span class="math display">\[
-AC=\begin{pmatrix}1&amp;2\\3&amp;-1\end{pmatrix}\begin{pmatrix}1&amp;2&amp;0\\-1&amp;3&amp;2\end{pmatrix}=\begin{pmatrix}-1&amp;8&amp;4\\4&amp;3&amp;-2\end{pmatrix}.
-\]</span></p></li>
-<li><p>The product <span class="math inline">\(CA\)</span> cannot be formed: <span class="math inline">\(C\)</span> is <span class="math inline">\(2\times3\)</span> and <span class="math inline">\(A\)</span> is <span class="math inline">\(2\times2\)</span>, so the inner dimensions, 3 and 2, do not agree. The product <span class="math inline">\(BC\)</span> can be formed because <span class="math inline">\(B\)</span> is <span class="math inline">\(2\times2\)</span> and <span class="math inline">\(C\)</span> is <span class="math inline">\(2\times3\)</span>. The result would be a <span class="math inline">\(2\times3\)</span> matrix. In general, the product of an <span class="math inline">\(m\times n\)</span> matrix and an <span class="math inline">\(n\times p\)</span> matrix is defined and gives an <span class="math inline">\(m\times p\)</span> matrix.</p></li>
-</ol>
-</section>
-<section id="solution-to-exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-vectors-and-matrices-work-space-plane-vectors-define-two">Solution to <a href="#exr-vectors-and-matrices-work-space-plane-vectors-define-two" class="quarto-xref">Exercise&nbsp;<span>6.4</span></a></h3>
-<ol type="a">
-<li><p>Assume that <span class="math display">\[
-x_1\mathbf b_1+x_2\mathbf b_2=\mathbf 0.
-\]</span> Using the given vectors, <span class="math display">\[
-x_1\begin{bmatrix}1\\2\end{bmatrix}+x_2\begin{bmatrix}-1\\1\end{bmatrix}
-=
-\begin{bmatrix}0\\0\end{bmatrix}.
-\]</span> This gives the two equations <span class="math display">\[
-x_1-x_2=0,
+<p>Polynomials are among the simplest functions we encounter in mathematics, but they appear almost everywhere. A polynomial in one variable <span class="math inline">\(x\)</span> has the form <span class="math display">\[
+P(x)=a_0+a_1x+a_2x^2+\cdots+a_nx^n,
+\]</span> where the numbers <span class="math inline">\(a_0,a_1,\ldots,a_n\)</span> are called the <strong>coefficients</strong>. If <span class="math inline">\(a_n\neq 0\)</span>, we say that the polynomial has <strong>degree</strong> <span class="math inline">\(n\)</span>. For example, <span class="math display">\[
+P(x)=2x^3-x^2+4x-7
+\]</span> is a polynomial of degree <span class="math inline">\(3\)</span>. Polynomials of degree <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span>, and <span class="math inline">\(3\)</span> are commonly called linear, quadratic, and cubic polynomials, respectively.</p>
+<p>Polynomials are important in their own right, but they also occur naturally in linear algebra and quantum mechanics. For example, the eigenvalues of a matrix <span class="math inline">\(A\)</span> are found by solving the <strong>characteristic equation</strong> <span class="math display">\[
+\det(A-\lambda I)=0.
+\]</span> See <a href="eigenvalues-and-diagonalization.html" class="quarto-xref"><span>Chapter 8</span></a>. For a finite-dimensional matrix, <span class="math inline">\(\det(A-\lambda I)\)</span> is a polynomial in <span class="math inline">\(\lambda\)</span>. Finding eigenvalues therefore leads directly to the problem of finding the roots of a polynomial.</p>
+<section id="roots-and-factors" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="roots-and-factors"><span class="header-section-number">16.1</span> Roots and factors</h2>
+<p>A number <span class="math inline">\(r\)</span> is called a <strong>root</strong> or <strong>zero</strong> of the polynomial <span class="math inline">\(P\)</span> if <span class="math display">\[
+P(r)=0.
+\]</span> For example, consider <span class="math display">\[
+P(x)=x^2-3x+2.
+\]</span> Since <span class="math display">\[
+P(1)=1-3+2=0
 \]</span> and <span class="math display">\[
-2x_1+x_2=0.
-\]</span> From the first equation, <span class="math inline">\(x_2=x_1\)</span>. Inserting this into the second equation gives <span class="math display">\[
-2x_1+x_1=3x_1=0,
-\]</span> so <span class="math inline">\(x_1=0\)</span>. Therefore also <span class="math inline">\(x_2=0\)</span>.</p>
-<p>Hence the only solution is <span class="math display">\[
-x_1=x_2=0,
-\]</span> so <span class="math inline">\(\mathbf b_1\)</span> and <span class="math inline">\(\mathbf b_2\)</span> are linearly independent.</p></li>
-<li><p>A basis is a set of linearly independent vectors that can be used to build every vector in the vector space by taking linear combinations.</p>
-<p>In this case, since <span class="math inline">\(\mathbf b_1\)</span> and <span class="math inline">\(\mathbf b_2\)</span> form a basis for <span class="math inline">\(\mathbb R^2\)</span>, every vector <span class="math inline">\(\mathbf v\in\mathbb R^2\)</span> can be written in the form <span class="math display">\[
-\mathbf v=x_1\mathbf b_1+x_2\mathbf b_2
-\]</span> for suitable numbers <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>.</p>
-<p>Because the basis vectors are linearly independent, these coefficients are unique.</p></li>
-<li><p>See further down.</p></li>
-</ol>
+P(2)=4-6+2=0,
+\]</span> both <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> are roots. Indeed, the polynomial can be factorized as <span class="math display">\[
+P(x)=(x-1)(x-2).
+\]</span></p>
+<p>This illustrates an important general result, the <strong>factor theorem</strong>: <span class="math display">\[
+P(r)=0\quad\Longleftrightarrow\quad (x-r)\text{ is a factor of }P(x).
+\]</span> Thus there is a close connection between <strong>finding roots</strong> and <strong>factorizing polynomials</strong>. If we know that <span class="math inline">\(r\)</span> is a root of <span class="math inline">\(P\)</span>, we know that <span class="math display">\[
+P(x)=(x-r)Q(x)
+\]</span> for some polynomial <span class="math inline">\(Q\)</span> whose degree is one less than that of <span class="math inline">\(P\)</span>.</p>
+<p>For a quadratic polynomial <span class="math display">\[
+ax^2+bx+c,
+\]</span> the roots can always be found using the quadratic “ABC-formula”, <span class="math display">\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+\]</span> For polynomials of higher degree, finding the roots can be more difficult. A useful strategy is therefore to find one root first, remove its corresponding linear factor, and reduce the problem to a polynomial of lower degree.</p>
 </section>
-<section id="solution-to-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate">Solution to <a href="#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate" class="quarto-xref">Exercise&nbsp;<span>6.5</span></a></h3>
-<p>The equation gives a linear system <span class="math display">\[\begin{gathered}
-    \begin{bmatrix}
-        b_{11} &amp; b_{21} \\ b_{12} &amp; b_{22}
-    \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} v_1 \\ v_2 \end{bmatrix}
-\end{gathered}\]</span> where <span class="math inline">\(b_{ij} = (\mathbf{b}_i)_j\)</span>. We get an augmented matrix <span class="math display">\[\begin{bmatrix} 1 &amp; -1 &amp; 2 \\ 2 &amp; 1 &amp; 2 \end{bmatrix}\]</span> Multiply row 2 by <span class="math inline">\(-1/2\)</span> <span class="math display">\[\begin{bmatrix} 1 &amp; -1 &amp; 2 \\ -1 &amp; -1/2 &amp; -1 \end{bmatrix}\]</span> Add row 1 to row 2: <span class="math display">\[\begin{bmatrix} 1 &amp; -1 &amp; 2 \\ 0 &amp; -3/2 &amp; 1 \end{bmatrix}\]</span> Divide row 2 by <span class="math inline">\(-3/2\)</span>: <span class="math display">\[\begin{bmatrix} 1 &amp; -1 &amp; 2 \\ 0 &amp; 1 &amp; -2/3 \end{bmatrix}\]</span> Add row 2 to row 1: <span class="math display">\[\begin{bmatrix} 1 &amp; 0 &amp; 4/3  \\ 0 &amp; 1 &amp; -2/3 \end{bmatrix}\]</span> This system is equivalent to <span class="math display">\[x_1 = 4/3, \quad x_2 = -2/3,\]</span> which is the solution.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../figures/exercises/sol-fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="image"><img src="../figures/exercises/sol-fig1.png" class="img-fluid figure-img" style="width:6cm" alt="image"></a></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
-</section>
-<section id="solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk">Solution for <a href="#exr-vectors-and-matrices-person-walks-home-first-they-walk" class="quarto-xref">Exercise&nbsp;<span>6.6</span></a></h3>
-<p>Take east as the positive <span class="math inline">\(x\)</span>-direction and north as the positive <span class="math inline">\(y\)</span>-direction. The three displacements are</p>
-<p><span class="math display">\[
-\begin{pmatrix}0.5\\1\end{pmatrix}\text{ km},\qquad
-\begin{pmatrix}3\\-2\end{pmatrix}\text{ km},\qquad
-\begin{pmatrix}-0.4\\-0.2\end{pmatrix}\text{ km}.
-\]</span></p>
-<p>The position of the office relative to home is therefore</p>
-<p><span class="math display">\[
-\begin{pmatrix}0.5\\1\end{pmatrix}
-+
-\begin{pmatrix}3\\-2\end{pmatrix}
-+
-\begin{pmatrix}-0.4\\-0.2\end{pmatrix}
-=
-\begin{pmatrix}3.1\\-1.2\end{pmatrix}\text{ km}.
-\]</span></p>
-<p>Thus, the office is <span class="math inline">\(3.1\)</span> km east and <span class="math inline">\(1.2\)</span> km south of the person’s home.</p>
-<p>The straight-line distance from home is the Euclidean norm,</p>
-<p><span class="math display">\[
-\sqrt{3.1^2+(-1.2)^2}=\sqrt{11.05}\text{ km}\approx 3.32\text{ km}.
-\]</span></p>
-</section>
-<section id="solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed">Solution for <a href="#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed" class="quarto-xref">Exercise&nbsp;<span>6.7</span></a></h3>
-<p>Take east as the positive <span class="math inline">\(x\)</span>-direction and north as the positive <span class="math inline">\(y\)</span>-direction. Since the boat travels northeast at <span class="math inline">\(20\)</span> km/h relative to the water, its velocity relative to the water is</p>
-<p><span class="math display">\[
-\mathbf{v}=\frac{20}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}=10\sqrt{2}\begin{pmatrix}1\\1\end{pmatrix}\text{ km/h}.
-\]</span></p>
-<p>Let <span class="math inline">\(\mathbf{u}\)</span> be the velocity of the ocean drift. After two hours, the observed displacement of the boat is</p>
-<p><span class="math display">\[
-\begin{pmatrix}10\\20\end{pmatrix}\text{ km},
-\]</span></p>
-<p>so its velocity relative to the ground is</p>
-<p><span class="math display">\[
-\frac{1}{2}\begin{pmatrix}10\\20\end{pmatrix}
-=
-\begin{pmatrix}5\\10\end{pmatrix}\text{ km/h}.
-\]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-\mathbf{v}+\mathbf{u}=\begin{pmatrix}5\\10\end{pmatrix},
-\]</span></p>
-<p>and hence</p>
-<p><span class="math display">\[
-\mathbf{u}=
-\begin{pmatrix}5\\10\end{pmatrix}
--
-10\sqrt{2}\begin{pmatrix}1\\1\end{pmatrix}
-=
-\begin{pmatrix}5-10\sqrt{2}\\10-10\sqrt{2}\end{pmatrix}
-\approx
-\begin{pmatrix}-9.14\\-4.14\end{pmatrix}\text{ km/h}.
-\]</span></p>
-<p>The speed of the ocean drift is</p>
-<p><span class="math display">\[
-\|\mathbf{u}\|=\sqrt{(5-10\sqrt{2})^2+(10-10\sqrt{2})^2}\approx 10.04\text{ km/h}.
-\]</span></p>
-<p>Both components are negative, so the drift is toward the southwest. Its direction is approximately <span class="math inline">\(24.4^\circ\)</span> south of west.</p>
-</section>
-<section id="solution-to-exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-to-exr-vectors-and-matrices-robert-beezer-three-digit-number-has">Solution to <a href="#exr-vectors-and-matrices-robert-beezer-three-digit-number-has" class="quarto-xref">Exercise&nbsp;<span>6.8</span></a></h3>
-<p>Let <span class="math inline">\(a\)</span> be the hundreds digit, <span class="math inline">\(b\)</span> the tens digit, and <span class="math inline">\(c\)</span> the ones digit. The first condition gives</p>
-<p><span class="math display">\[
-b+c=5.
-\]</span></p>
-<p>The original number is</p>
-<p><span class="math display">\[
-100a+10b+c,
-\]</span></p>
-<p>while the reversed number is</p>
-<p><span class="math display">\[
-100c+10b+a.
-\]</span></p>
-<p>The second condition therefore gives</p>
-<p><span class="math display">\[
-(100a+10b+c)-(100c+10b+a)=792,
-\]</span></p>
-<p>or</p>
-<p><span class="math display">\[
-99a-99c=792.
-\]</span></p>
-<p>Dividing by <span class="math inline">\(99\)</span> gives</p>
-<p><span class="math display">\[
-a-c=8.
-\]</span></p>
-<p>We therefore have the system</p>
-<p><span class="math display">\[
-a-c=8,\qquad b+c=5.
-\]</span></p>
-<p>As a system over the real numbers, these two equations have infinitely many solutions. However, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> must be decimal digits, with <span class="math inline">\(a\neq 0\)</span>. From</p>
-<p><span class="math display">\[
-a=c+8,
-\]</span></p>
-<p>we see that <span class="math inline">\(c\)</span> can only be <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span>, since otherwise <span class="math inline">\(a&gt;9\)</span>.</p>
-<p>If <span class="math inline">\(c=0\)</span>, then</p>
-<p><span class="math display">\[
-a=8,\qquad b=5,
-\]</span></p>
-<p>giving the number <span class="math inline">\(850\)</span>.</p>
-<p>If <span class="math inline">\(c=1\)</span>, then</p>
-<p><span class="math display">\[
-a=9,\qquad b=4,
-\]</span></p>
-<p>giving the number <span class="math inline">\(941\)</span>.</p>
-<p>Thus, the two possible numbers are</p>
-<p><span class="math display">\[
-\boxed{850\text{ and }941}.
-\]</span></p>
-</section>
-<section id="solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action">Solution for <a href="#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action" class="quarto-xref">Exercise&nbsp;<span>6.9</span></a></h3>
-<p>The matrix <span class="math inline">\(A\)</span> has the form</p>
-<p><span class="math display">\[
-A=
-\begin{pmatrix}
-0&amp;1^2&amp;0&amp;\cdots&amp;0\\
-0&amp;0&amp;2^2&amp;\cdots&amp;0\\
-\vdots&amp;&amp;\ddots&amp;\ddots&amp;\vdots\\
-0&amp;\cdots&amp;0&amp;0&amp;(n-1)^2\\
-0&amp;\cdots&amp;\cdots&amp;0&amp;0
-\end{pmatrix}.
-\]</span></p>
-<p>Let <span class="math inline">\(\mathbf{e}_1,\ldots,\mathbf{e}_n\)</span> be the standard basis vectors of <span class="math inline">\(\mathbb{R}^n\)</span>. Since the <span class="math inline">\(j\)</span>th column of <span class="math inline">\(A\)</span> is <span class="math inline">\(A\mathbf{e}_j\)</span>, we obtain</p>
-<p><span class="math display">\[
-A\mathbf{e}_1=0,
-\]</span></p>
-<p>and for <span class="math inline">\(2\leq j\leq n\)</span>,</p>
-<p><span class="math display">\[
-A\mathbf{e}_j=(j-1)^2\mathbf{e}_{j-1}.
-\]</span></p>
-<p>Similarly, since <span class="math inline">\(A^T\)</span> has entries <span class="math inline">\((A^T)_{i+1,i}=i^2\)</span>,</p>
-<p><span class="math display">\[
-A^T\mathbf{e}_n=0,
-\]</span></p>
-<p>and for <span class="math inline">\(1\leq j&lt;n\)</span>,</p>
-<p><span class="math display">\[
-A^T\mathbf{e}_j=j^2\mathbf{e}_{j+1}.
-\]</span></p>
-<p>Now let</p>
-<p><span class="math display">\[
-\mathbf{x}=
-\begin{pmatrix}
-x_1\\
-x_2\\
-\vdots\\
-x_n
-\end{pmatrix}.
-\]</span></p>
-<p>Using</p>
-<p><span class="math display">\[
-\mathbf{x}=\sum_{j=1}^n x_j\mathbf{e}_j,
-\]</span></p>
-<p>we find</p>
-<p><span class="math display">\[
-A\mathbf{x}
-=
-\sum_{j=2}^n x_j(j-1)^2\mathbf{e}_{j-1}
-=
-\begin{pmatrix}
-1^2x_2\\
-2^2x_3\\
-\vdots\\
-(n-1)^2x_n\\
-0
-\end{pmatrix}.
-\]</span></p>
-<p>Thus,</p>
-<p><span class="math display">\[
-(A\mathbf{x})_i=i^2x_{i+1},\qquad 1\leq i&lt;n,
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-(A\mathbf{x})_n=0.
-\]</span></p>
-<p>Likewise,</p>
-<p><span class="math display">\[
-A^T\mathbf{x}
-=
-\sum_{j=1}^{n-1} x_jj^2\mathbf{e}_{j+1}
-=
-\begin{pmatrix}
-0\\
-1^2x_1\\
-2^2x_2\\
-\vdots\\
-(n-1)^2x_{n-1}
-\end{pmatrix}.
-\]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-(A^T\mathbf{x})_1=0,
-\]</span></p>
-<p>and</p>
-<p><span class="math display">\[
-(A^T\mathbf{x})_i=(i-1)^2x_{i-1},\qquad 2\leq i\leq n.
-\]</span></p>
-</section>
-<section id="solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i">Solution for <a href="#exr-vectors-and-matrices-write-terms-column-vectors-prove-i" class="quarto-xref">Exercise&nbsp;<span>6.10</span></a></h3>
-<ol type="a">
-<li><p>The columns of <span class="math display">\[
-B=\begin{bmatrix}1&amp;0&amp;2\\2&amp;-1&amp;1\end{bmatrix}
-\]</span> are <span class="math display">\[
-\mathbf b_1=\begin{bmatrix}1\\2\end{bmatrix}, \qquad
-\mathbf b_2=\begin{bmatrix}0\\-1\end{bmatrix}, \qquad
-\mathbf b_3=\begin{bmatrix}2\\1\end{bmatrix}.
+<section id="division-of-polynomials" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="division-of-polynomials"><span class="header-section-number">16.2</span> Division of polynomials</h2>
+<p>Polynomials can be divided in much the same way as integers. For integers, division with remainder gives, for example, <span class="math display">\[
+17=3\cdot5+2.
+\]</span> Similarly, if we divide a polynomial <span class="math inline">\(P(x)\)</span> by another polynomial <span class="math inline">\(D(x)\)</span>, we can write <span class="math display">\[
+P(x)=Q(x)D(x)+R(x),
+\]</span> where <span class="math inline">\(Q(x)\)</span> is the <strong>quotient</strong> and <span class="math inline">\(R(x)\)</span> is the <strong>remainder</strong>. The degree of the remainder must be smaller than the degree of the divisor <span class="math inline">\(D\)</span>.</p>
+<p>For example, let us divide <span class="math display">\[
+x^3-2x^2-5x+6
+\]</span> by <span class="math inline">\(x-1\)</span>. Using polynomial long division, we write</p>
+<p>For example, let us divide <span class="math display">\[
+P(x)=x^3-2x^2-5x+6
+\]</span> by <span class="math display">\[
+D(x)=x-1.
+\]</span> Polynomial long division can be arranged as follows: <span class="math display">\[
+\begin{array}{rrrr@{\;}c@{\;}l}
+x^3&amp;-2x^2&amp;-5x&amp;+6&amp;:&amp;x-1=x^2-x-6\\
+\hline
+-x^3&amp;+x^2&amp;&amp;&amp;&amp;\\
+\hline
+&amp;-x^2&amp;-5x&amp;+6&amp;&amp;\\
+&amp;+x^2&amp;-x&amp;&amp;&amp;\\
+\hline
+&amp;&amp;-6x&amp;+6&amp;&amp;\\
+&amp;&amp;+6x&amp;-6&amp;&amp;\\
+\hline
+&amp;&amp;&amp;0&amp;&amp;
+\end{array}
+\]</span> At each stage, we choose the next term in the quotient so that its product with the leading term of the divisor cancels the leading term on the left. Thus the quotient is <span class="math display">\[
+Q(x)=x^2-x-6,
+\]</span> and the remainder is zero. Therefore, <span class="math display">\[
+P(x)=(x-1)(x^2-x-6).
 \]</span> Thus <span class="math display">\[
-B=[\mathbf b_1,\mathbf b_2,\mathbf b_3].
-\]</span></p></li>
-<li><p>Using <span class="math display">\[
-A=\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix},
-\]</span> we get <span class="math display">\[
-A\mathbf b_1=
-\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix}
-\begin{bmatrix}1\\2\end{bmatrix}
-=
-\begin{bmatrix}5\\5\end{bmatrix}.
-\]</span> Similarly, <span class="math display">\[
-A\mathbf b_2=
-\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix}
-\begin{bmatrix}0\\-1\end{bmatrix}
-=
-\begin{bmatrix}-2\\-3\end{bmatrix},
-\]</span> and <span class="math display">\[
-A\mathbf b_3=
-\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix}
-\begin{bmatrix}2\\1\end{bmatrix}
-=
-\begin{bmatrix}4\\1\end{bmatrix}.
-\]</span> Therefore <span class="math display">\[
-[A\mathbf b_1,A\mathbf b_2,A\mathbf b_3]
-=
-\begin{bmatrix}
-5&amp;-2&amp;4\\
-5&amp;-3&amp;1
-\end{bmatrix}.
-\]</span></p></li>
-<li><p>Direct matrix multiplication gives <span class="math display">\[
-AB=
-\begin{bmatrix}1&amp;2\\-1&amp;3\end{bmatrix}
-\begin{bmatrix}1&amp;0&amp;2\\2&amp;-1&amp;1\end{bmatrix}.
-\]</span> Computing the entries, <span class="math display">\[
-AB=
-\begin{bmatrix}
-1\cdot 1+2\cdot 2 &amp; 1\cdot 0+2(-1) &amp; 1\cdot 2+2\cdot 1\\
--1\cdot 1+3\cdot 2 &amp; -1\cdot 0+3(-1) &amp; -1\cdot 2+3\cdot 1
-\end{bmatrix},
-\]</span> so <span class="math display">\[
-AB=
-\begin{bmatrix}
-5&amp;-2&amp;4\\
-5&amp;-3&amp;1
-\end{bmatrix}.
-\]</span> This is exactly the same matrix as in part b.</p></li>
-<li><p>Write <span class="math display">\[
-B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o].
-\]</span> The <span class="math inline">\(j\)</span>th column of <span class="math inline">\(B\)</span> is <span class="math inline">\(\mathbf b_j\)</span>. When we compute <span class="math inline">\(AB\)</span>, the <span class="math inline">\(j\)</span>th column of the product is obtained by multiplying <span class="math inline">\(A\)</span> by the <span class="math inline">\(j\)</span>th column of <span class="math inline">\(B\)</span>.</p>
-<p>Hence the <span class="math inline">\(j\)</span>th column of <span class="math inline">\(AB\)</span> is <span class="math display">\[
-A\mathbf b_j.
-\]</span> Therefore <span class="math display">\[
-AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o].
+x^3-2x^2-5x+6=(x-1)(x^2-x-6).
 \]</span></p>
-<p>So matrix-matrix multiplication can be viewed as applying the linear transformation <span class="math inline">\(A\)</span> separately to each column of <span class="math inline">\(B\)</span>.</p></li>
-<li><p>Write the rows of <span class="math inline">\(A\)</span> as <span class="math display">\[
-A=
-\begin{bmatrix}
-\mathbf a_1^T\\
-\mathbf a_2^T\\
-\vdots\\
-\mathbf a_n^T
-\end{bmatrix}.
-\]</span> When we multiply by <span class="math inline">\(B\)</span> on the right, each row of <span class="math inline">\(A\)</span> is multiplied by <span class="math inline">\(B\)</span>. Therefore the first row of <span class="math inline">\(AB\)</span> is <span class="math display">\[
-\mathbf a_1^T B,
-\]</span> the second row is <span class="math display">\[
-\mathbf a_2^T B,
-\]</span> and so on.</p>
-<p>Hence <span class="math display">\[
-AB=
-\begin{bmatrix}
-\mathbf a_1^T B\\
-\mathbf a_2^T B\\
-\vdots\\
-\mathbf a_n^T B
-\end{bmatrix}.
+<p>The quadratic factor can now be factorized further: <span class="math display">\[
+x^2-x-6=(x-3)(x+2),
+\]</span> so <span class="math display">\[
+x^3-2x^2-5x+6=(x-1)(x-3)(x+2).
+\]</span> Hence the three roots are <span class="math display">\[
+x=1,\qquad x=3,\qquad x=-2.
+\]</span></p>
+</section>
+<section id="finding-roots" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="finding-roots"><span class="header-section-number">16.3</span> Finding roots</h2>
+<p>For simple polynomials with integer coefficients, it is often possible to guess a root by trying a few small integers. A more systematic version of this idea is provided by the <strong>rational root theorem</strong>. If <span class="math display">\[
+P(x)=a_nx^n+\cdots+a_1x+a_0
+\]</span> has integer coefficients and a rational root <span class="math display">\[
+r=\frac{p}{q},
+\]</span> written in lowest terms, then <span class="math inline">\(p\)</span> must divide the constant coefficient <span class="math inline">\(a_0\)</span>, and <span class="math inline">\(q\)</span> must divide the leading coefficient <span class="math inline">\(a_n\)</span>.</p>
+<p>In the particularly common case of a <strong>monic polynomial</strong>, where <span class="math inline">\(a_n=1\)</span>, every rational root must therefore be an integer that divides the constant term. For <span class="math display">\[
+P(x)=x^3-2x^2-5x+6,
+\]</span> the only possible integer roots are consequently <span class="math display">\[
+\pm1,\quad\pm2,\quad\pm3,\quad\pm6.
+\]</span> Trying these candidates quickly reveals that <span class="math inline">\(P(1)=0\)</span>. We can then divide by <span class="math inline">\(x-1\)</span>, as above, and solve the remaining quadratic equation.</p>
+<p>The general strategy for simple polynomial equations is therefore:</p>
+<ol type="1">
+<li>Look for a root, for example by testing the candidates suggested by the rational root theorem.</li>
+<li>If <span class="math inline">\(r\)</span> is a root, use the factor theorem to conclude that <span class="math inline">\((x-r)\)</span> is a factor.</li>
+<li>Divide the polynomial by <span class="math inline">\((x-r)\)</span> using polynomial long division.</li>
+<li>Find the roots of the polynomial of lower degree.</li>
+<li>Continue until the polynomial has been completely factorized.</li>
+</ol>
+<p>A polynomial of degree <span class="math inline">\(n\)</span> has exactly <span class="math inline">\(n\)</span> complex roots when roots are counted with their <strong>multiplicities</strong>. This is the <strong>fundamental theorem of algebra</strong>. Some or all of these roots may be real. For example, <span class="math display">\[
+x^2+1=0
+\]</span> has no real roots, but it has the two complex roots <span class="math inline">\(i\)</span> and <span class="math inline">\(-i\)</span>, and <span class="math display">\[
+x^2+1=(x-i)(x+i).
+\]</span> This is one reason complex numbers arise naturally in mathematics: over the complex numbers, every polynomial can ultimately be factorized into linear factors.</p>
+</section>
+<section id="exercises" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="exr-polynomial-long-division-quartic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 16.1 (Polynomial long division: roots of a quartic polynomial)</strong></span> Consider the polynomials <span class="math display">\[
+P(x) = x^4 - 6x^3 + 3x^2 + 26x - 24
+\]</span> and <span class="math display">\[
+d(x) = x^2 + x - 2.
+\]</span></p>
+<ol type="a">
+<li><p>Perform the polynomial long division of <span class="math inline">\(P(x)\)</span> by <span class="math inline">\(d(x)\)</span> and verify that the remainder vanishes.</p></li>
+<li><p>Use the result of part (a) and the quadratic formula to find all four roots of <span class="math inline">\(P(x)\)</span>.</p></li>
+<li><p>Write <span class="math inline">\(P(x)\)</span> as a product of four linear factors.</p></li>
+</ol>
+</div>
+<div id="exr-rational-roots-cubic" class="theorem exercise" data-level="beginner">
+<p><span class="theorem-title"><strong>Exercise 16.2 (Roots of a cubic polynomial by guessing and polynomial long division)</strong></span> Every cubic equation <span class="math display">\[
+ax^3+bx^2+cx+d=0,\qquad a\neq0,
+\]</span> can in principle be solved by a general formula, but that formula is rather cumbersome. For simple polynomial equations there is often an easier approach.</p>
+<p>The <strong>rational root theorem</strong> says that if a polynomial with integer coefficients has a rational root <span class="math display">\[
+x=\frac{p}{q},
+\]</span> written in lowest terms, then <span class="math inline">\(p\)</span> must divide the constant term <span class="math inline">\(d\)</span>, while <span class="math inline">\(q\)</span> must divide the leading coefficient <span class="math inline">\(a\)</span>.</p>
+<p>Once one root <span class="math inline">\(x_0\)</span> has been found, <span class="math inline">\((x-x_0)\)</span> is a factor of the polynomial. We can divide out this factor using polynomial long division, leaving a quadratic polynomial.</p>
+<p>Consider <span class="math display">\[
+x^3-2x^2-5x+6=0.
+\]</span></p>
+<ol type="a">
+<li><p>Use the rational root theorem to list all possible rational roots. Test these candidates until you find one root.</p></li>
+<li><p>Divide <span class="math inline">\(x^3-2x^2-5x+6\)</span> by the corresponding linear factor using polynomial long division.</p></li>
+<li><p>Determine the remaining two roots from the resulting quadratic polynomial.</p></li>
+<li><p>Write the original polynomial as a product of three linear factors.</p></li>
+</ol>
+</div>
+<section id="solution-for-exr-polynomial-long-division-quartic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-polynomial-long-division-quartic">Solution for <a href="#exr-polynomial-long-division-quartic" class="quarto-xref">Exercise&nbsp;<span>16.1</span></a></h3>
+<ol type="a">
+<li><p>We divide <span class="math display">\[
+P(x)=x^4-6x^3+3x^2+26x-24
+\]</span> by <span class="math display">\[
+d(x)=x^2+x-2.
+\]</span></p>
+<p>The leading term is obtained from <span class="math display">\[
+\frac{x^4}{x^2}=x^2.
+\]</span> Multiplying the divisor by <span class="math inline">\(x^2\)</span> gives <span class="math display">\[
+x^2(x^2+x-2)=x^4+x^3-2x^2.
+\]</span> Subtracting this from <span class="math inline">\(P(x)\)</span> gives <span class="math display">\[
+-7x^3+5x^2+26x-24.
+\]</span></p>
+<p>The next term in the quotient is <span class="math display">\[
+\frac{-7x^3}{x^2}=-7x.
+\]</span> Multiplying the divisor by <span class="math inline">\(-7x\)</span> gives <span class="math display">\[
+-7x(x^2+x-2)=-7x^3-7x^2+14x.
+\]</span> Subtracting gives <span class="math display">\[
+12x^2+12x-24.
+\]</span></p>
+<p>The final term in the quotient is <span class="math display">\[
+\frac{12x^2}{x^2}=12.
+\]</span> Multiplying the divisor by <span class="math inline">\(12\)</span> gives <span class="math display">\[
+12(x^2+x-2)=12x^2+12x-24.
+\]</span> The remainder is therefore zero. Hence <span class="math display">\[
+P(x)=(x^2+x-2)(x^2-7x+12).
 \]</span></p></li>
-<li><p>Suppose the columns of <span class="math inline">\(B\)</span> are vectors <span class="math display">\[
-B=[\mathbf b_1,\mathbf b_2,\ldots,\mathbf b_o]
-\]</span> that we want to transform using the same matrix <span class="math inline">\(A\)</span>.</p>
-<p>Instead of computing <span class="math display">\[
-A\mathbf b_1,\quad A\mathbf b_2,\quad \ldots,\quad A\mathbf b_o
-\]</span> separately, we can collect all the vectors into the matrix <span class="math inline">\(B\)</span> and compute <span class="math display">\[
-AB.
-\]</span> Because <span class="math display">\[
-AB=[A\mathbf b_1,A\mathbf b_2,\ldots,A\mathbf b_o],
-\]</span> the columns of the result are precisely the transformed vectors.</p>
-<p>This is useful whenever the same linear transformation is applied to many vectors at once.</p></li>
+<li><p>We first solve <span class="math display">\[
+x^2+x-2=0.
+\]</span> Using the quadratic formula, <span class="math display">\[
+x=\frac{-1\pm\sqrt{1+8}}{2}=\frac{-1\pm3}{2},
+\]</span> so <span class="math display">\[
+x=-2,\qquad x=1.
+\]</span></p>
+<p>Next, solve <span class="math display">\[
+x^2-7x+12=0.
+\]</span> The quadratic formula gives <span class="math display">\[
+x=\frac{7\pm\sqrt{49-48}}{2}=\frac{7\pm1}{2},
+\]</span> so <span class="math display">\[
+x=3,\qquad x=4.
+\]</span></p>
+<p>Thus the four roots are <span class="math display">\[
+x=-2,\quad 1,\quad 3,\quad 4.
+\]</span></p></li>
+<li><p>The corresponding factorization is <span class="math display">\[
+P(x)=(x+2)(x-1)(x-3)(x-4).
+\]</span></p></li>
 </ol>
 </section>
-<section id="solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined">Solution for <a href="#exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined" class="quarto-xref">Exercise&nbsp;<span>6.11</span></a></h3>
-<p>Let the columns of <span class="math inline">\(A\)</span> be</p>
-<p><span class="math display">\[
-A=[\mathbf{a}_1,\ldots,\mathbf{a}_m],
+<section id="solution-for-exr-rational-roots-cubic" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="solution-for-exr-rational-roots-cubic">Solution for <a href="#exr-rational-roots-cubic" class="quarto-xref">Exercise&nbsp;<span>16.2</span></a></h3>
+<ol type="a">
+<li><p>The leading coefficient is <span class="math inline">\(1\)</span> and the constant term is <span class="math inline">\(6\)</span>. Therefore, any rational root must be an integer that divides <span class="math inline">\(6\)</span>. The possible roots are <span class="math display">\[
+x=\pm1,\quad\pm2,\quad\pm3,\quad\pm6.
 \]</span></p>
-<p>and let the <span class="math inline">\(i\)</span>th column of <span class="math inline">\(B\)</span> be <span class="math inline">\(\mathbf{b}_i\)</span>. From the previous exercise, the <span class="math inline">\(i\)</span>th column of <span class="math inline">\(C=AB\)</span> is</p>
-<p><span class="math display">\[
-\mathbf{c}_i=A\mathbf{b}_i.
+<p>Testing <span class="math inline">\(x=1\)</span> gives <span class="math display">\[
+1^3-2(1)^2-5(1)+6=1-2-5+6=0.
+\]</span> Thus <span class="math inline">\(x=1\)</span> is a root, and therefore <span class="math inline">\((x-1)\)</span> is a factor.</p></li>
+<li><p>We divide <span class="math display">\[
+x^3-2x^2-5x+6
+\]</span> by <span class="math inline">\(x-1\)</span>.</p>
+<p>The first term of the quotient is <span class="math display">\[
+\frac{x^3}{x}=x^2.
+\]</span> Multiplying, <span class="math display">\[
+x^2(x-1)=x^3-x^2.
+\]</span> Subtracting gives <span class="math display">\[
+-x^2-5x+6.
 \]</span></p>
-<p>Now</p>
-<p><span class="math display">\[
-\mathbf{b}_i=
-\begin{pmatrix}
-B_{1i}\\
-B_{2i}\\
-\vdots\\
-B_{mi}
-\end{pmatrix},
+<p>The next quotient term is <span class="math display">\[
+\frac{-x^2}{x}=-x.
+\]</span> Multiplying, <span class="math display">\[
+-x(x-1)=-x^2+x.
+\]</span> Subtracting gives <span class="math display">\[
+-6x+6.
 \]</span></p>
-<p>so matrix-vector multiplication gives</p>
-<p><span class="math display">\[
-A\mathbf{b}_i
-=
-B_{1i}\mathbf{a}_1+B_{2i}\mathbf{a}_2+\cdots+B_{mi}\mathbf{a}_m.
+<p>The final quotient term is <span class="math display">\[
+\frac{-6x}{x}=-6.
+\]</span> Multiplying, <span class="math display">\[
+-6(x-1)=-6x+6.
+\]</span> The remainder is zero. Therefore, <span class="math display">\[
+x^3-2x^2-5x+6=(x-1)(x^2-x-6).
+\]</span></p></li>
+<li><p>We solve <span class="math display">\[
+x^2-x-6=0.
+\]</span> Using the quadratic formula, <span class="math display">\[
+x=\frac{1\pm\sqrt{1+24}}{2}=\frac{1\pm5}{2}.
+\]</span> Hence <span class="math display">\[
+x=3\qquad\text{or}\qquad x=-2.
 \]</span></p>
-<p>Hence</p>
-<p><span class="math display">\[
-\boxed{\mathbf{c}_i=\sum_{j=1}^m \mathbf{a}_jB_{ji}}.
-\]</span></p>
-<p>Thus, each column of <span class="math inline">\(C\)</span> is a linear combination of the columns of <span class="math inline">\(A\)</span>, with coefficients taken from the corresponding column of <span class="math inline">\(B\)</span>.</p>
-<p>A similar statement holds for the rows. Let the rows of <span class="math inline">\(B\)</span> be</p>
-<p><span class="math display">\[
-\mathbf{b}_1^T,\ldots,\mathbf{b}_m^T,
-\]</span></p>
-<p>and let the <span class="math inline">\(i\)</span>th row of <span class="math inline">\(A\)</span> be <span class="math inline">\(\mathbf{a}_i^T\)</span>. The <span class="math inline">\(i\)</span>th row of <span class="math inline">\(C=AB\)</span> is</p>
-<p><span class="math display">\[
-\mathbf{c}_i^T=\mathbf{a}_i^TB.
-\]</span></p>
-<p>Since</p>
-<p><span class="math display">\[
-\mathbf{a}_i^T=
-\begin{pmatrix}
-A_{i1}&amp;A_{i2}&amp;\cdots&amp;A_{im}
-\end{pmatrix},
-\]</span></p>
-<p>we obtain</p>
-<p><span class="math display">\[
-\mathbf{c}_i^T
-=
-A_{i1}\mathbf{b}_1^T+A_{i2}\mathbf{b}_2^T+\cdots+A_{im}\mathbf{b}_m^T.
-\]</span></p>
-<p>Therefore,</p>
-<p><span class="math display">\[
-\mathbf{c}_i^T=\sum_{j=1}^m A_{ij}\mathbf{b}_j^T.
-\]</span></p>
-<p>Thus, each row of <span class="math inline">\(C\)</span> is a linear combination of the rows of <span class="math inline">\(B\)</span>, with coefficients taken from the corresponding row of <span class="math inline">\(A\)</span>.</p>
+<p>Together with the root from part (a), the three roots are therefore <span class="math display">\[
+x=1,\quad x=3,\quad x=-2.
+\]</span></p></li>
+<li><p>The complete factorization is <span class="math display">\[
+x^3-2x^2-5x+6=(x-1)(x-3)(x+2).
+\]</span></p></li>
+</ol>
 
 
 </section>
@@ -1928,49 +1455,17 @@ A_{i1}\mathbf{b}_1^T+A_{i2}\mathbf{b}_2^T+\cdots+A_{im}\mathbf{b}_m^T.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/basic-mathematical-proofs.html" class="pagination-link" aria-label="Basic mathematical proofs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Basic mathematical proofs</span></span>
+      <a href="../chapters/polynomial-vector-spaces.html" class="pagination-link" aria-label="Polynomial vector spaces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Polynomial vector spaces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/three-vectors.html" class="pagination-link" aria-label="Vectors in 3D space">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vectors in 3D space</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/metric-spaces.html" class="pagination-link" aria-label="Metric spaces">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Metric spaces</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 
