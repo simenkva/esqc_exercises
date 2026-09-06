@@ -242,7 +242,7 @@ g. We can add more components, one for each new ingredient. For example, if cinn
 
 
 
-
+:::{.content-visible when-profile="tutor"}
 
 
 ### Solution for @exr-general-vector-spaces-meaningful-recipes {.unnumbered}
@@ -357,3 +357,6 @@ g. The same general idea appears in quantum mechanics. Before an operator can ac
 
     Thus, both in the recipe example and in quantum mechanics, choosing the vector space is not merely a matter of notation - it is part of constructing the mathematical model of reality.
 
+
+
+:::

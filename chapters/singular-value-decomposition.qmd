@@ -20,7 +20,7 @@ $$
 A=U_{:,:k}\Sigma_{:k,:k}V_{:,:k}^H.
 $$
 
-![A parrot, <https://www.dropbox.com/s/8r4svs6uuhgwawt/parrot.png> ](../figures/exercises/parrot.jpg){#fig-parrot width="75%"}
+![A parrot](../figures/exercises/parrot.jpg){#fig-parrot width="75%"}
 
 ## Exercises
 
