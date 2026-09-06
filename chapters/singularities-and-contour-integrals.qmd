@@ -2,9 +2,9 @@
 
 Laurent series classify isolated singularities and determine contour integrals around poles.
 
-## Exercises
+## Exercises {.unnumbered}
 
-### Singularities
+### Singularities {.unnumbered}
 
 ::: {#exr-singularities-and-contour-integrals-consider-function-how-many-poles-does recommended="math"}
 
@@ -24,7 +24,7 @@ Find the singularities of $f(z) = e^{-1/(z-1)^2}$.
 
 :::
 
-### Line integrals
+### Line integrals {.unnumbered}
 
 Let
 
@@ -58,7 +58,7 @@ Find the value of the line integrals $$\oint_{\Gamma_\epsilon(w_i)} f(z) \, \mat
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution to @exr-singularities-and-contour-integrals-consider-function-how-many-poles-does {.unnumbered}
 

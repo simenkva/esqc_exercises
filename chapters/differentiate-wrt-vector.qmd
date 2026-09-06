@@ -28,15 +28,15 @@ $$
     R(\mathbf{c}) = \frac{\mathbf{c}^\dagger H \mathbf{c}}{\mathbf{c}^\dagger S \mathbf{c}}.
 $$
 
-### The gradient of a vector dependent function
+### The gradient of a vector dependent function {.unnumbered}
 
 (add stuff. function of vector and its complex conjugate)
 
-### The Hessian of a vector dependent function
+### The Hessian of a vector dependent function {.unnumbered}
 
 (add stuff)
 
-## Exercies {.nonumber}
+## Exercies {.unnumbered}
 
 3 absolute beginner exercises that explores differentiation with respect to vectors. One goal is to show that we obtain the generalized eigenvalue problem from the Rayleigh quotient.
 
@@ -45,7 +45,7 @@ $$
 1 advanced exercise that Taylor expands the Rayleigh quotient up to second order around a given vector, maybe the critical point.
 
 
-## Solutions {.nonumber}
+## Solutions {.unnumbered}
 
 Individual solutions for the exercises above will be provided here.
 

@@ -182,7 +182,11 @@ def extract_exercises(filename):
                 )
 
                 if heading_match:
-                    heading = heading_match.group(1)
+                    heading = re.sub(
+                        r"\s+\{[^{}]*\}\s*$",
+                        "",
+                        heading_match.group(1),
+                    )
 
             j += 1
 

@@ -10,7 +10,7 @@ We will find a set of orthonormal vectors $U = [\mathbf{u}_1,\cdots,\mathbf{u}_m
 
 We first define the notion of orthogonal projection onto the span of a single vector: Let $\mathbf{y}\in \mathbb{F}^n$ be nonzero, $Y = \operatorname{span}(\mathbf{y})$, and let $\mathbf{x} \in \mathbb{F}^n$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-gram-schmidt-gram-schmidt-orthogonalization  level="advanced"}
 
@@ -62,9 +62,9 @@ We now turn to a computational exercise:
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Gram--Schmidt orthogonalization
+### Tutor note: Gram--Schmidt orthogonalization {.unnumbered}
 
 **Tutor note:** I think Gram--Schmidt is important, but maybe there is not enough time in the exercise session.
 

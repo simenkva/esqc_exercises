@@ -132,7 +132,7 @@ In molecular physics and quantum chemistry, Taylor expansions appear quite often
 
 
 ::: {#exr-taylor-exp level="beginner" recommended="topic" topic="coupled-cluster"}
-### Approximating the exponential function
+### Approximating the exponential function {.unnumbered}
 
 a.  Write down the general Taylor polynomial $T_n(x)$ about $x=0$.
 
@@ -148,7 +148,7 @@ f.  Repeat the calculation for $e^1$. Why are the low-order approximations less 
 :::
 
 ::: {#exr-taylor-trigonometric level="beginner"}
-### Sine and cosine near the origin
+### Sine and cosine near the origin {.unnumbered}
 
 a.  Compute the first four derivatives of $f(x)=\sin x$ and evaluate them at $x=0$.
 
@@ -164,7 +164,7 @@ f.  Explain why $\sin x\approx x$ is called the small-angle approximation. Angle
 :::
 
 ::: {#exr-taylor-remainder-exp level="intermediate"}
-### Controlling the error
+### Controlling the error {.unnumbered}
 
 Consider the Taylor polynomial $T_n(x)$ for $e^x$ about $x=0$.
 
@@ -180,7 +180,7 @@ d.  Compute the corresponding approximation to $e^{1/2}$ and compare it with $e^
 :::
 
 ::: {#exr-taylor-gaussian level="intermediate"}
-### A Gaussian near its maximum
+### A Gaussian near its maximum {.unnumbered}
 
 The Gaussian function $f(x)=e^{-x^2}$ is closely related to the Gaussian functions used extensively in quantum chemistry.
 
@@ -196,7 +196,7 @@ e.  Explain why no finite Taylor polynomial can reproduce the behavior $e^{-x^2}
 :::
 
 ::: {#exr-taylor-harmonic level="advanced"}
-### The harmonic approximation
+### The harmonic approximation {.unnumbered}
 
 Let $V(R)$ be the potential energy of a diatomic molecule as a function of the internuclear distance $R$. Suppose $R_e$ is an equilibrium bond length and a local minimum of $V$.
 
@@ -223,7 +223,7 @@ f.  Explain qualitatively why the harmonic approximation is expected to work bes
 
 ::: {#exr-taylor-matrix-exponential level="intermediate" recommended="topic" topic="coupled-cluster"}
 
-### From the exponential to rotations
+### From the exponential to rotations {.unnumbered}
 
 Consider the matrix
 

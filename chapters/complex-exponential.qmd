@@ -8,7 +8,7 @@ In this exercise, we derive the complex exponential function. The starting point
 
 To avoid confusion, we call this unknown function $f : \mathbb{C}\to \mathbb{C}$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-complex-exponential-thus-need-determine}
 
@@ -54,9 +54,9 @@ Show that $\exp(z) \neq 0$.
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: The complex exponential function
+### Tutor note: The complex exponential function {.unnumbered}
 
 **Tutor note:** I think that this exercise is very nice. It is not too hard if the student has some experience with the equation $y'' = -y$.
 

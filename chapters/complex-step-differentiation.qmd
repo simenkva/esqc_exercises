@@ -4,7 +4,7 @@ Complex-step differentiation estimates derivatives without the subtractive cance
 
 Let $f(x)$ be a real-valued function, assumed to be analytic near some $x$, i.e., it agrees with its Taylor series in the vicinity of $x$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-complex-step-differentiation-complex-step-method  level="advanced"}
 
@@ -28,9 +28,9 @@ The *complex step method* utilizes complex analyticity to avoid the cancellation
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Complex step method
+### Tutor note: Complex step method {.unnumbered}
 
 **Tutor note:** I think the tutors might be surprised by this exercise! I learned about the method only last year. This exercise is very nice, in my opinion. However, it may be a little advanced for some students, because it requires basic understanding of cancellation errors in floating point arithmetic.
 

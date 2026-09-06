@@ -15,7 +15,7 @@ $$
 It is also defined that $0! = 1$. The factorial appears in many mathematical contexts, including series expansions, and of course combinatorics. Its basic use is the following:
 
 ::: fact
-## Factorial and counting
+## Factorial and counting {.unnumbered}
 
 Given a set of $n$ distinct objects, the number of ways to arrange them in a sequence (i.e., the number of permutations) is $n!$.
 
@@ -24,7 +24,7 @@ Given a set of $n$ distinct objects, the number of ways to arrange them in a seq
 In one exercise, you will need the following approximation for large $n$, known as Stirling's approximation:
 
 ::: fact
-### Stirling's approximation
+### Stirling's approximation {.unnumbered}
 For large $n$, the factorial $n!$ can be approximated as
 
 $$
@@ -42,20 +42,20 @@ $$
 
 
 :::{#exr-combinatorics-factorial level="beginner"}
-### Basic factorials
+### Basic factorials {.unnumbered}
 
 Compute the factorials $0!$, $1!$, $2!$, $3!$, $4!$, and $5!$.
 
 :::
 
 :::{#exr-combinatorics-factorial-arrangements level="intermediate"}
-### Lunch line
+### Lunch line {.unnumbered}
 
 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?
 :::
 
 :::{#exr-combinatorics-factorial-arrangements-chemists}
-### Chemist's shelf
+### Chemist's shelf {.unnumbered}
 
 Compute the number of arrangements for the following scenarios:
 
@@ -67,7 +67,7 @@ b. A chemist has 10 different chemical samples. 4 of the samples are liquids, an
 
 
 ::: {#exr-stirling-factorial recommended="math" level="advanced"}
-### Stirling's approximation
+### Stirling's approximation {.unnumbered}
 
 We study Stirling's approximation for the factorial.
 
@@ -128,7 +128,7 @@ Fact: The $n$-th row of Pascal's triangle contains the binomial coefficients $\b
 
 
 :::{#exr-combinatorics-binomial-coefficients recommended="topic" level="beginner" topic="second-quantization"}
-### Basic binomial coefficients
+### Basic binomial coefficients {.unnumbered}
 
 a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom{7}{4}$.
 
@@ -136,14 +136,14 @@ b.  In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many d
 :::
 
 :::{#exr-combinatorics-pascals-triangle recommended="topic" level="beginner" topic="second-quantization" }
-### Pascal's triangle
+### Pascal's triangle {.unnumbered}
 
 Compute the first 6 rows of Pascal's triangle. Verify that the numbers in the $n$-th row correspond to the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 :::
 
 ::: {#exr-combinatorics-pascals-identity recommended="topic" topic="second-quantization" level="advanced"}
-### Pascal's identity
+### Pascal's identity {.unnumbered}
 
 The binomial coefficients satisfy **Pascal's identity**,
 
@@ -175,7 +175,7 @@ e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choos
 
 
 ::: {#exr-combinatorics-pascal-sierpinski level="advanced" priority=-1}
-### Pascal's triangle and the Sierpinski triangle
+### Pascal's triangle and the Sierpinski triangle {.unnumbered}
 
 Write a computer program to generate the first $2^n$ rows of Pascal's triangle, where $n=1,2,\ldots$. Create a $2^n\times 2^n$ lower triangular matrix $T$, where $T_{k,n} = 0$ if $\binom{n}{k}$ is even, and $T_{k,n}=1$ if the coefficient is odd, for $k \leq n$ (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.
 
@@ -191,7 +191,7 @@ If you use Python and sympy, you can generate binomial factors with the function
 
 
 ::: {#exr-combinatorics-binomial-theorem-basic recommended="topic" topic="second-quantization" level="beginner"}
-### The binomial theorem
+### The binomial theorem {.unnumbered}
 
 The **binomial theorem** states that
 
@@ -220,7 +220,7 @@ f.	Without carrying out any multiplication, find the coefficient of $x^3$ in $(1
 
 
 ::: {#exr-combinatorics-binomial-theorem-coefficients recommended="topic" topic="second-quantization" level="intermediate"}
-### Coefficients in binomial expansions
+### Coefficients in binomial expansions {.unnumbered}
 
 Consider the binomial expansion
 
@@ -277,7 +277,7 @@ o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o  
 ::: {.content-visible when-profile="tutor"}
 
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution for @exr-combinatorics-factorial {.unnumbered}
 

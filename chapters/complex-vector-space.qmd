@@ -4,10 +4,10 @@ Identifying $x + \mathrm{i}y$ with $(x,y)$ turns the complex plane into a two-di
 
 The geometrical interpretation of the $\mathbb{C}$ as the plane $\mathbb{R}^2$ indicates that $\mathbb{C}$ can be viewed as a two-dimensional real vector space. Indeed, addition and multiplication with *real* scalars are compatible with the axioms for Euclidean space $\mathbb{R}^2$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-complex-vector-space-complex-numbers-real-vector-space  recommended="math" level="advanced"}
-### Complex numbers as a real vector space
+### Complex numbers as a real vector space {.unnumbered}
 
 a.  Show that $\mathbb{C}$ regarded can be regarded as the Euclidean plane: Check axioms for Euclidean space and check that vector addition and multiplication with real scalars are the same in the two spaces. Check also that the Euclidean norm is the modulus of the complex number. What are the complex numbers that correspond to the standard basis in $\mathbb{R}^2$? Conclude that $\mathbb{C}$ can be regarded as a *real* Euclidean vector space of dimension $2$.
 
@@ -21,7 +21,7 @@ d.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 
 ### Solution for @exr-complex-vector-space-complex-numbers-real-vector-space {.unnumbered}

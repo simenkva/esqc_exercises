@@ -2,7 +2,7 @@
 
 Open balls define interior points, open sets, closed sets, boundaries, and closures in Euclidean space.
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-open-and-closed-sets-any-ball-open}
 
@@ -48,9 +48,9 @@ Let $$A = \{ (x,y) \in \mathbb{R}^2 \mid 0 \leq x < 1, \quad 0 \leq y < 1\}.$$ C
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Open and closed sets in Euclidean space
+### Tutor note: Open and closed sets in Euclidean space {.unnumbered}
 
 **Tutor note:** This exercise really develops the basic skills thinking about open and closed sets, and also mathematical argumentation. Even if the exercises are fairly basic by undergrad maths standards, maybe this style of thinking is difficult for some students, and therefore I think it is worthwhile.
 

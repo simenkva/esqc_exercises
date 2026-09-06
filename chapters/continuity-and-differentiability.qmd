@@ -145,10 +145,10 @@ It is important to distinguish **partial differentiability** from **differentiab
 
 There is, however, a very useful sufficient condition: if all the first partial derivatives exist and are continuous in a neighbourhood of a point, then the function is differentiable at that point. Thus, for the smooth functions encountered in most applications, differentiability can usually be established by computing the partial derivatives and checking that they are continuous.
 
-## Exercises: Continuity
+## Exercises: Continuity {.unnumbered}
 
 ::: {#exr-continuity-step-function level="beginner" recommended="math"}
-### A first discontinuity
+### A first discontinuity {.unnumbered}
 
 Consider
 
@@ -164,7 +164,7 @@ d. For which $x\in\mathbb{R}$ does $\lim_{h\to0}f(x+h)$ not exist? Explain in wo
 :::
 
 ::: {#exr-continuity-distance level="beginner"}
-### Getting close in two dimensions
+### Getting close in two dimensions {.unnumbered}
 
 Let $\mathbf{a}=(1,2)$ and $\mathbf{x}=(x,y)$.
 
@@ -178,7 +178,7 @@ d. In your own words, explain what $\mathbf{x}\to\mathbf{a}$ means.
 :::
 
 ::: {#exr-continuity-substitution level="beginner" recommended="math"}
-### Continuity by direct substitution
+### Continuity by direct substitution {.unnumbered}
 
 For each function below, evaluate the indicated limit by direct substitution. State briefly why this is allowed.
 
@@ -192,7 +192,7 @@ d. $\displaystyle \lim_{(x,y)\to(1,1)}\frac{x+y}{1+x^2+y^2}$.
 :::
 
 ::: {#exr-continuity-paths-first level="beginner"}
-### Testing two paths
+### Testing two paths {.unnumbered}
 
 Consider
 
@@ -208,7 +208,7 @@ d. Can $\lim_{(x,y)\to(0,0)}f(x,y)$ exist? Why or why not?
 :::
 
 ::: {#exr-continuity-python-paths level="beginner"}
-### Approaching a point with Python
+### Approaching a point with Python {.unnumbered}
 
 Consider $f(x,y)=x^2+y^2$.
 
@@ -222,13 +222,13 @@ d. Repeat for the path $(x,y)=(t,2t)$. Does the limiting value change?
 :::
 
 ::: {#exr-continuity-polynomials level="intermediate"}
-### Why polynomials are continuous
+### Why polynomials are continuous {.unnumbered}
 
 Use standard properties of continuous functions to show that every polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous. Then explain briefly why a polynomial in two variables, such as $p(x,y)=3x^2y-2xy+7$, is also continuous on $\mathbb{R}^2$.
 :::
 
 ::: {#exr-continuity-radial-sine level="intermediate"}
-### A radial limit
+### A radial limit {.unnumbered}
 
 Consider
 
@@ -242,7 +242,7 @@ c. How could $f$ be defined at $(0,0)$ so that the resulting function is continu
 :::
 
 ::: {#exr-continuity-path-dependent level="intermediate"}
-### A path-dependent limit
+### A path-dependent limit {.unnumbered}
 
 Consider
 
@@ -258,7 +258,7 @@ d. As an optional visualization, make a surface plot or contour plot near the or
 :::
 
 ::: {#exr-continuity-epsilon-delta level="intermediate"}
-### Bounding a function near the origin
+### Bounding a function near the origin {.unnumbered}
 
 Consider
 
@@ -272,7 +272,7 @@ c. Use the bound to prove with an $\epsilon$--$\delta$ argument that $\lim_{(x,y
 :::
 
 ::: {#exr-continuity-piecewise-extension level="intermediate"}
-### Making a function continuous
+### Making a function continuous {.unnumbered}
 
 For $(x,y)\ne(0,0)$, define
 
@@ -288,7 +288,7 @@ d. Check your conclusion numerically along the paths $y=x$ and $y=x^2$.
 :::
 
 ::: {#exr-continuity-chemistry-energy level="beginner" recommended="math"}
-### Continuity of a model potential energy
+### Continuity of a model potential energy {.unnumbered}
 
 A simple model potential energy is
 
@@ -305,10 +305,10 @@ c. Let $k_x=2$, $k_y=3$, and $c=1$. Compute $E(0.1,0)$, $E(0,0.1)$, and $E(0.1,0
 d. What do these values suggest about the energy surface close to the origin?
 :::
 
-## Exercises: Differentiability
+## Exercises: Differentiability {.unnumbered}
 
 ::: {#exr-partial-derivatives-basic level="beginner" recommended="math"}
-### First partial derivatives
+### First partial derivatives {.unnumbered}
 
 Let $f(x,y)=x^2+3xy+y^2$.
 
@@ -322,7 +322,7 @@ d. Write the gradient $\nabla f(1,2)$ as a column vector.
 :::
 
 ::: {#exr-partial-derivatives-slices level="beginner" recommended="math"}
-### Partial derivatives as one-dimensional derivatives
+### Partial derivatives as one-dimensional derivatives {.unnumbered}
 
 Let $f(x,y)=x^2y+y^3$ and consider the point $(1,2)$.
 
@@ -336,7 +336,7 @@ d. Explain in one sentence what is held fixed when taking a partial derivative.
 :::
 
 ::: {#exr-gradient-displacement level="beginner"}
-### Using a gradient for a small displacement
+### Using a gradient for a small displacement {.unnumbered}
 
 Suppose an energy $E(x,y)$ has
 
@@ -352,7 +352,7 @@ d. Estimate $E(1.01,1.01)$.
 :::
 
 ::: {#exr-jacobian-first level="beginner" recommended="math"}
-### A first Jacobian
+### A first Jacobian {.unnumbered}
 
 Let $F:\mathbb{R}^2\to\mathbb{R}^2$ be
 
@@ -368,7 +368,7 @@ d. Assemble the four derivatives into the Jacobian matrix $J_F(x,y)$ and evaluat
 :::
 
 ::: {#exr-partial-radial-quotient level="intermediate"}
-### Partial derivatives of a radial quotient
+### Partial derivatives of a radial quotient {.unnumbered}
 
 For $(x,y)\ne(0,0)$, let
 
@@ -384,7 +384,7 @@ d. Is the formula defined at the origin? What additional question would have to 
 :::
 
 ::: {#exr-differentiability-linear-approx level="intermediate"}
-### Linear approximation
+### Linear approximation {.unnumbered}
 
 Let $f(x,y)=e^x\cos y$.
 
@@ -398,7 +398,7 @@ d. Compare with a Python evaluation of `exp(0.02)*cos(0.03)`.
 :::
 
 ::: {#exr-differentiability-tangent-plane level="intermediate"}
-### Tangent plane to an energy surface
+### Tangent plane to an energy surface {.unnumbered}
 
 Consider $E(x,y)=x^2+xy+2y^2$.
 
@@ -412,7 +412,7 @@ d. Use it to estimate $E(1.02,0.99)$ and compare with the exact value.
 :::
 
 ::: {#exr-differentiability-continuous-partials level="intermediate"}
-### Checking differentiability efficiently
+### Checking differentiability efficiently {.unnumbered}
 
 Let
 
@@ -428,7 +428,7 @@ d. Compute $\nabla f(0,0)$ and write the linear approximation near the origin.
 :::
 
 ::: {#exr-differentiability-numerical-gradient level="intermediate"}
-### A numerical gradient with finite differences
+### A numerical gradient with finite differences {.unnumbered}
 
 Let $f(x,y)=x^2+xy+3y^2$.
 
@@ -446,7 +446,7 @@ d. Write a tiny Python script for b and c. How do the approximations behave as $
 :::
 
 ::: {#exr-advanced-directional-trap level="advanced" recommended="math"}
-### Checking multivariable limits along different paths
+### Checking multivariable limits along different paths {.unnumbered}
 
 Define
 
@@ -462,7 +462,7 @@ d. What does this example teach you about checking multivariable limits using pa
 :::
 
 ::: {#exr-advanced-partials-not-continuous level="advanced"}
-### Partial derivatives without continuity
+### Partial derivatives without continuity {.unnumbered}
 
 Define
 
@@ -479,7 +479,7 @@ d. Reconcile your result with the statement that continuous first partial deriva
 
 ::: {#exr-advanced-gradient-landscape level="advanced" recommended="math"}
 
-### Explore a two-dimensional energy landscape
+### Explore a two-dimensional energy landscape {.unnumbered}
 
 Consider the model energy
 
@@ -495,7 +495,7 @@ d. Locate the stationary points numerically or analytically. Which appear to be 
 :::
 
 ::: {#exr-advanced-differentiability-experiment level="advanced"}
-### A numerical experiment with the definition of differentiability
+### A numerical experiment with the definition of differentiability {.unnumbered}
 
 Let $f(x,y)=\sin(xy)+x^2$ and let $\mathbf{a}=(1,1)$.
 
@@ -512,7 +512,7 @@ d. Repeat for a few random directions. What numerical behavior do you expect if 
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution for @exr-continuity-step-function {.unnumbered}
 

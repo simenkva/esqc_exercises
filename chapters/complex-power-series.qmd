@@ -30,7 +30,7 @@ Power series are especially useful because they can often be manipulated much li
 
 
 ::: {#exr-complex-power-series-geometric-partial-sum level="beginner"}
-### Partial sums of the geometric series
+### Partial sums of the geometric series {.unnumbered}
 
 Consider the geometric series
 
@@ -62,7 +62,7 @@ d.	Hence show, for $z\neq 1$, that
 :::
 
 ::: {#exr-complex-power-series-geometric-convergence level="beginner"  }
-### Convergence of the geometric series
+### Convergence of the geometric series {.unnumbered}
 
 From @exr-complex-power-series-geometric-partial-sum,
 
@@ -92,7 +92,7 @@ f.	The condition $|z|<1$ describes a region in the complex plane. What does this
 :::
 
 ::: {#exr-complex-power-series-exponential-sine-cosine level="intermediate" recommended="math;topic" topic="second-quantization"}
-### The exponential, sine, and cosine series
+### The exponential, sine, and cosine series {.unnumbered}
 
 The complex exponential is represented by the power series
 
@@ -134,7 +134,7 @@ e.	Use the series to obtain polynomial approximations to $\cos x$ and $\sin x$ c
 :::
 
 ::: {#exr-complex-power-series-plot-sine-cosine level="intermediate"}
-### Approximating sine and cosine by polynomials
+### Approximating sine and cosine by polynomials {.unnumbered}
 
 Define the partial sums
 
@@ -156,7 +156,7 @@ e.	Describe what happens to the quality of the approximation as more terms are i
 :::
 
 ::: {#exr-complex-power-series-exponential-removable-singularity level="intermediate"}
-### A removable singularity
+### A removable singularity {.unnumbered}
 
 Consider
 
@@ -182,7 +182,7 @@ e.	Define $f(0)$ using your answer to part d. Explain why the apparent singulari
 :::
 
 ::: {#exr-complex-power-series-sinc level="intermediate"}
-### The function $\sin z/z$
+### The function $\sin z/z$ {.unnumbered}
 
 Consider the function
 
@@ -225,7 +225,7 @@ f.	Show directly from the power series that $f(-z)=f(z)$. Thus $f$ is an even fu
 
 ::: {#exr-complex-power-series-cauchy-product level="intermediate" recommended="topic" topic="second-quantization"}
 
-### The Cauchy product of power series
+### The Cauchy product of power series {.unnumbered}
 
 Consider two power series
 

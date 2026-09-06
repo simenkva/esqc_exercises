@@ -18,7 +18,7 @@ The definition of a metric space is as follows:
 
 In this exercise, we will try to understand why the axioms are as they are, i.e., what makes them encode the concept of a metric.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-metric-spaces-metric-spaces level="intermediate"}
 
@@ -38,7 +38,7 @@ In this exercise, we will try to understand why the axioms are as they are, i.e.
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution to @exr-metric-spaces-metric-spaces {.unnumbered}
 

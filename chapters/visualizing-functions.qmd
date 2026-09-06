@@ -3,7 +3,7 @@
 In these exercises, you are given functions $f : \mathbb{R}^n \to \mathbb{R}^m$ and asked to visualize them. 
 
 
-## Exercises: paths and their curves
+## Exercises: paths and their curves {.unnumbered}
 
 ::: {#exr-visualizing-functions-path-defined-sketch-curve-traced-path  level="intermediate"}
 
@@ -18,7 +18,7 @@ Let $f : (0,+\infty) \to \mathbb{R}^2$ be a path defined by $$f(t) = [\ln(t), t]
 :::
 
 ::: {#exr-visualizing-functions-heart level="advanced"}
-### A heart-shaped curve
+### A heart-shaped curve {.unnumbered}
 
 Consider the parametrically defined curve
 
@@ -36,7 +36,7 @@ b. Use these points, together with the symmetry of the curve, to make a rough sk
 c. Plot the curve using Python. Use equal scaling on the two coordinate axes.
 :::
 
-## Exercises: level curves
+## Exercises: level curves {.unnumbered}
 
 
 ::: {#exr-visualizing-functions-sketch-level-curves  level="intermediate"}
@@ -69,7 +69,7 @@ Adapt your program to draw level curves of $(x,y)\mapsto (x^2 + 3y^2)e^{1-x^2-y^
 
 :::
 
-## Exercises: sections and level surfaces
+## Exercises: sections and level surfaces {.unnumbered}
 
 Consider the hydrogen-atom eigenfunctions in atomic units. They are indexed by $n\geq1$, $0\leq\ell<n$, and $-\ell\leq m\leq\ell$. Their separated form is
 
@@ -105,9 +105,9 @@ Write a program to visualize *sections* of the orbital graphs. For example, fix 
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Visualization of functions
+### Tutor note: Visualization of functions {.unnumbered}
 
 **Tutor note:** The first exercises are well suited for emphasizing that a useful sketch should normally begin with mathematical analysis. Before plotting, students should ask what can be inferred from symmetry, limiting values, intercepts, monotonicity, and algebraic elimination of parameters. The Python plots then serve as checks and as a way of handling curves and surfaces for which a hand sketch becomes cumbersome.
 

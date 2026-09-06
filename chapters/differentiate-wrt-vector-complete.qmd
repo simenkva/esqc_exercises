@@ -32,7 +32,7 @@ $$
 
 Thus the Rayleigh quotient depends on the *direction* represented by $\mathbf c$, but not on its overall normalization or phase.
 
-### The gradient of a vector-dependent function
+### The gradient of a vector-dependent function {.unnumbered}
 
 A function of a real vector $\mathbf x=(x_1,\ldots,x_n)^T$ is simply a multivariable function written using vector notation,
 
@@ -130,7 +130,7 @@ $$
 
 Thus stationary points of the Rayleigh quotient are generalized eigenvectors of $\mathbf H$ with respect to $\mathbf S$, and the stationary value of the quotient is the corresponding generalized eigenvalue. This is one of the fundamental variational ideas underlying quantum chemistry.
 
-### The Hessian of a vector-dependent function
+### The Hessian of a vector-dependent function {.unnumbered}
 
 The gradient describes the first-order change of a scalar function. The **Hessian** describes its second-order change. For a real-valued function $f(\mathbf x)$, the Hessian is the matrix
 
@@ -169,7 +169,7 @@ For functions of complex vectors, the complete second-derivative structure can b
 ## Exercises {.unnumbered}
 
 ::: {#exr-vector-gradient-components level="beginner" recommended="topic" topic="second-quantization"}
-### From components to a gradient
+### From components to a gradient {.unnumbered}
 
 Let $\mathbf x=(x_1,x_2)^T$ and
 
@@ -189,7 +189,7 @@ e. Evaluate the gradient at $\mathbf x=(1,2)^T$.
 :::
 
 ::: {#exr-vector-quadratic-form level="beginner" recommended="topic" topic="second-quantization"}
-### Differentiating a quadratic form
+### Differentiating a quadratic form {.unnumbered}
 
 Consider
 
@@ -213,7 +213,7 @@ e. Use a short Python script to evaluate $f$ and its gradient at $\mathbf x=(1,-
 :::
 
 ::: {#exr-rayleigh-two-dimensional level="beginner"}
-### A first Rayleigh quotient
+### A first Rayleigh quotient {.unnumbered}
 
 Let
 
@@ -242,7 +242,7 @@ e. Repeat part d for $\mathbf c=(0,1)^T$. What familiar matrix problem have you 
 
 ::: {#exr-vector-differentiation-complex-independent level="beginner" recommended="topic" topic="response-theory"}
 
-### Treating $c$ and $c^*$ as independent variables
+### Treating $c$ and $c^*$ as independent variables {.unnumbered}
 
 When differentiating expressions involving a complex number $c$ and its complex conjugate $c^*$, it is often useful to **formally treat $c$ and $c^*$ as independent variables**.
 
@@ -293,7 +293,7 @@ f.	Let $c=x+iy$. Check that $c^*c=x^2+y^2$. Thus, although we treated $c$ and $c
 
 
 ::: {#exr-rayleigh-gradient-generalized-eigenproblem level="intermediate"}
-### From the Rayleigh quotient to an eigenvalue problem
+### From the Rayleigh quotient to an eigenvalue problem {.unnumbered}
 
 Let
 
@@ -333,7 +333,7 @@ e. Explain in words why minimizing the Rayleigh quotient is closely connected to
 :::
 
 ::: {#exr-h2plus-bonding-antibonding level="intermediate"}
-### Bonding and antibonding orbitals of $\mathrm{H}_2^+$
+### Bonding and antibonding orbitals of $\mathrm{H}_2^+$ {.unnumbered}
 
 Consider a minimal basis for $\mathrm{H}_2^+$ consisting of two normalized hydrogen $1s$ orbitals, $\chi_A$ and $\chi_B$. In this basis, suppose
 
@@ -367,7 +367,7 @@ f. Use Python and `scipy.linalg.eigh(H, S)` to calculate the generalized eigenva
 :::
 
 ::: {#exr-rayleigh-angle level="intermediate"}
-### Exploring an energy surface
+### Exploring an energy surface {.unnumbered}
 
 Let
 
@@ -397,7 +397,7 @@ e. What does this example suggest about the relationship between the smallest/la
 :::
 
 ::: {#exr-rayleigh-second-order level="advanced"}
-### Second-order variation of the Rayleigh quotient
+### Second-order variation of the Rayleigh quotient {.unnumbered}
 
 Let $\mathbf H$ be a real symmetric matrix with orthonormal eigenvectors $\mathbf u_1,\ldots,\mathbf u_n$ and eigenvalues
 

@@ -10,7 +10,7 @@ $$
 
 Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i}^2=-1$ while $\varepsilon^2=0$. Dual numbers support automatic differentiation.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-dual-numbers-dual-numbers  level="advanced"}
 
@@ -32,9 +32,9 @@ Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Dual numbers
+### Tutor note: Dual numbers {.unnumbered}
 
 This exercise is perhaps for the specially interested.
 

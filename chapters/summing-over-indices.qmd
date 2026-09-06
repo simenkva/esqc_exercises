@@ -44,7 +44,7 @@ $$
 $$
 
 
-### Manipulating sums
+### Manipulating sums {.unnumbered}
 
 The index in a sum is called a **summation index** or **dummy index**. Its name has no significance. For example,
 
@@ -78,7 +78,7 @@ $j$ is a dummy index, while $i$ is a free index. The equation therefore represen
 
 
 
-### Special symbols used in summation notation
+### Special symbols used in summation notation {.unnumbered}
 
 The **Kronecker delta** $\delta_{ij}$ is a special symbol that is often used in summation notation. It is defined as
 $$
@@ -118,13 +118,13 @@ o888ooo888 o88o  o888o o88oooo888 o888o 888oooo88
                                                    
                                                    
 
-## Exercises: Basic summation
+## Exercises: Basic summation {.unnumbered}
 
 These exercises are at a very basic level. If you are already comfortable with summation notation, you may skip them.
 
 
 :::{#exr-summing-1 recommended="math;topic" topic="second-quantization" level="beginner" priority=100}
-### Very basic sums
+### Very basic sums {.unnumbered}
 
 Expand the following sums and calculate their values:
 
@@ -137,7 +137,7 @@ c) $\displaystyle \sum_{k=0}^{3} 2^k$
 :::
 
 ::: {#exr-summing-2 recommended="math;topic" topic="second-quantization" level="beginner" priority=100}
-### Simplifying as a sum
+### Simplifying as a sum {.unnumbered}
 
 Write each expression using summation notation:
 
@@ -151,7 +151,7 @@ c) $a_1b_1+a_2b_2+a_3b_3$
 
 
 ::: {#exr-summing-3  level="intermediate"}
-### Estimating $\sqrt{e}$ via a Taylor series
+### Estimating $\sqrt{e}$ via a Taylor series {.unnumbered}
 
 Use the first four terms of the series for $e^x$ to estimate $\sqrt{e}$:
 $$
@@ -163,7 +163,7 @@ factorial.
 :::
 
 ::: {#exr-summing-4 recommended="topic" topic="second-quantization" level="beginner"}
-### Reconstruct a vector
+### Reconstruct a vector {.unnumbered}
 
 The components of a vector are $r_1=2$, $r_2=-1$, and $r_3=4$. Let $\mathbf{e}_i$ be the standard basis in $\mathbb{R}^3$.
 
@@ -173,7 +173,7 @@ b) Gather the result as a column vector
 :::
 
 :::{#exr-summing-5  level="beginner"}
-### Summing in a matrix--vector product
+### Summing in a matrix--vector product {.unnumbered}
 
 Let
 $$
@@ -195,7 +195,7 @@ to write out and calculate $(A\mathbf{x})_1$ and $(A\mathbf{x})_2$. Collect the 
 
 
 ::: {#exr-summing-dummy-index recommended="topic" topic="second-quantization" level="beginner"}
-### The summation index is a dummy index
+### The summation index is a dummy index {.unnumbered}
 
 Consider
 $$
@@ -222,7 +222,7 @@ using $p$ as the summation index.
 :::
 
 ::: {#exr-summing-linearity recommended="topic" topic="second-quantization" level="beginner"}
-### Linearity of sums
+### Linearity of sums {.unnumbered}
 
 Let $a_i$ and $b_i$, $i=1,2,3$ be two sets of numbers and let $c$ be a constant, i.e., just a number.
 
@@ -247,7 +247,7 @@ as two separate sums (i.e., each has a single summation sign).
 
 
 ::: {#exr-summing-constant recommended="topic" topic="second-quantization" level="beginner"}
-### When something does not depend on the summation index
+### When something does not depend on the summation index {.unnumbered}
 
 Let $x$ be a number independent of the summation index $i$.
 
@@ -269,7 +269,7 @@ $$
 :::
 
 ::: {#exr-summing-free-index recommended="topic" topic="second-quantization" level="beginner"}
-### Free and summed indices
+### Free and summed indices {.unnumbered}
 
 Consider the following expression for the $i$-th component of a vector $\mathbf{y}$, being the product of a matrix $A$ and a vector $\mathbf{x}$:
 $$
@@ -293,7 +293,7 @@ does not change the equation.
 
 
 ::: {#exr-summing-reindexing recommended="topic" topic="second-quantization" level="beginner"}
-### Shifting the summation index
+### Shifting the summation index {.unnumbered}
 
 Consider
 $$
@@ -323,7 +323,7 @@ as a sum with index $j$ running from $1$ to $n$.
 
 
 ::: {#exr-kronecker-delta recommended="topic" topic="second-quantization" level="beginner"}
-### The Kronecker delta: basic exercise
+### The Kronecker delta: basic exercise {.unnumbered}
 
 The **Kronecker delta** is defined in the introduction to this chapter. It is a special symbol that is often used in summation notation.
 
@@ -359,7 +359,7 @@ e. In the expression in (d), which index is a dummy index and which is a free in
 
 ::: {#exr-levi-civita level="beginner" recommended="topic" topic="relativity"}
 
-### The Levi--Civita symbol: basic exercise
+### The Levi--Civita symbol: basic exercise {.unnumbered}
 
 The **Levi--Civita symbol** $\varepsilon_{ijk}$ is defined in the introduction to this chapter.
 
@@ -395,7 +395,7 @@ o888o o88o    88     o888o    o888ooo8888 o888o  88o8 o88o  8  o88o o888ooo8888 
 
 
 ::: {#exr-summing-mo-expansion level="beginner"}
-### A molecular orbital in an atomic-orbital basis
+### A molecular orbital in an atomic-orbital basis {.unnumbered}
 
 In quantum chemistry, a molecular orbital $\psi_p(\mathbf{r})$ is commonly expanded in a finite set of atomic-orbital basis functions $\chi_\mu(\mathbf{r})$,
 

@@ -4,7 +4,7 @@ Power series define matrix exponentials. Differentiating products of exponential
 
 Consider the *matrix-valued function* $$f(t) = e^{-tA} B e^{tA},$$ where $A$ and $B$ are square matrices. The matrix exponential is defined in terms of the Taylor series, $$\exp(X) = \mathbf{1} + X + \frac{1}{2!} X^2 + \frac{1}{3!} X^3 + \cdots,$$ which is convergent. It is a fact that if $XY-YX=[X,Y]=0$ (commuting matrices) then $\exp(X+Y) = \exp(X) \exp(Y)$, by the same proof as for the exponential function over a field $\mathbb{F}$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-matrix-exponentials-and-commutators-explain-why-may-view-vector-valued}
 
@@ -26,9 +26,9 @@ Show that $f$ is differentiable. Compute its derivatives to arbitrary order
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Taylor polynomials
+### Tutor note: Taylor polynomials {.unnumbered}
 
 **Tutor note:** I think it is important in quantum chemistry to be able to view matrices as vectors and as function parameters. On the other hand, some of this exercise may be hard for the student.
 

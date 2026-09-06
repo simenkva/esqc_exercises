@@ -1,17 +1,17 @@
 # Title of chapter
 
-## Introduction
+## Introduction {.unnumbered}
 
 Introduction text goes here.
 
 
-## Exercises
+## Exercises {.unnumbered}
 
 Exercises go here.
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 Solutions go here.
 

@@ -3,10 +3,10 @@
 
 
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined  level="intermediate"}
-### Gaussian elimination and overlap matrix
+### Gaussian elimination and overlap matrix {.unnumbered}
 
 Consider the two vectors
 
@@ -111,7 +111,7 @@ Let $n$ linearly independent vectors $B = \{\mathbf{b}_1, \cdots,\mathbf{b}_n\}$
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 
 ### Solution for @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined {.unnumbered}

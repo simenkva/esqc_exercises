@@ -8,7 +8,7 @@ Let $f : \Omega \subset \mathbb{R}^n \to \mathbb{R}^n$ be a function of class $C
 
 Assume we have an initial guess $\mathbf{x}_0\in\Omega$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-newtons-method-explain-why-following-polynomial-good-approximation}
 
@@ -42,9 +42,9 @@ Make a Python implementation of Newton's method and test it on the following fun
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Newton--Raphson method
+### Tutor note: Newton--Raphson method {.unnumbered}
 
 **Tutor note:** Newton--Raphson is an important nonlinear root-finding algorithm, although quantum-chemistry calculations may avoid a full Newton step because solving with the Jacobian is expensive. This exercise also develops Taylor approximations of vector-valued functions.
 

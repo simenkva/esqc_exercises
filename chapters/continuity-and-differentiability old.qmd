@@ -147,7 +147,7 @@ There is, however, a very useful sufficient condition: if all the first partial 
 
 
 
-## Exercises: Continuity
+## Exercises: Continuity {.unnumbered}
 
 
 ::: {#exr-continuity-and-differentiability-given-does-limit-not-exist-why recommended="math" level="intermediate"}
@@ -181,7 +181,7 @@ Show that any polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous, by using the
 
 :::
 
-### Exercises: Differentiability
+### Exercises: Differentiability {.unnumbered}
 
 :::{#exr-continuity-and-differentiability-compute-partial-derivatives}
 
@@ -191,9 +191,9 @@ Compute the partial derivatives of $$f(x,y) =  \frac{xy}{(x^2 + y^2)^{1/2}}.$$
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Continuity
+### Tutor note: Continuity {.unnumbered}
 
 **Tutor note:** The concept of continuity is basic, so I recommend some of these exercises for everyone. I do not think the tutors need much preparation for them.
 
@@ -227,7 +227,7 @@ The limit does not exist. Along $y=0$ the function equals $1$, while along $x=0$
 
 We have $$|2 x^2 y/(x^2+y^2)| \leq |2 x^2 y/x^2| \leq 2|y|.$$ Thus, given $\epsilon > 0$, choose $\delta = \epsilon /2$. Then $0 < \|(x,y)-(0,0)\| = \sqrt{x^2+y^2} < \delta$ implies $|y|< \delta$, and so $|f(x,y) -0| < 2\delta < \epsilon$.
 
-### Tutor note: Differentiability
+### Tutor note: Differentiability {.unnumbered}
 
 **Tutor note:** The source contains only one exercise on differentiability; more exercises may be added later.
 

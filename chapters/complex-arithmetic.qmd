@@ -2,9 +2,9 @@
 
 Cartesian and polar forms connect complex arithmetic with plane geometry, rotations, dot products, and cross products.
 
-## Exercises
+## Exercises {.unnumbered}
 
-### Complex numbers
+### Complex numbers {.unnumbered}
 
 ::: {#exr-complex-arithmetic-compute-real-imaginary-parts-functions }
 
@@ -36,7 +36,7 @@ Consider the polynomial equation $f(z) = z^3 + 1 = 0$. Find all the roots in the
 
 :::
 
-### Basic calculations
+### Basic calculations {.unnumbered}
 
 ![The parallelogram rule. (From Butkov.)](../figures/exercises/parallelogram-rule.png){#fig-parallelogram-rule width="75%"}
 
@@ -66,7 +66,7 @@ Show that the function $z \mapsto \mathrm{i}z$ is a counterclockwise rotation by
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution to @exr-complex-arithmetic-compute-real-imaginary-parts-functions {.unnumbered}
 

@@ -82,7 +82,7 @@ you create another chapter, but retain its hierarchy, labels, and profile gate.
 
 # BCH expansion and exponentials of operators
 
-## Introduction
+## Introduction {.unnumbered}
 
 Coupled-cluster calculations use exponentials of operators. We will treat the
 operators as finite square matrices. For a square matrix $T$, define the matrix
@@ -94,7 +94,7 @@ $$ {#eq-matrix-exponential}
 
 The zeroth power is the identity matrix, $T^0=I$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 :::{#exr-matrix-exponential}
 
@@ -121,7 +121,7 @@ c. Let
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution to @exr-matrix-exponential {.unnumbered}
 

@@ -22,7 +22,7 @@ $$
 
 ![A parrot](../figures/exercises/parrot.jpg){#fig-parrot width="75%"}
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-singular-value-decomposition-singular-value-decomposition-compression-tool level="advanced"}
 
@@ -61,9 +61,9 @@ $$
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: The singular value decomposition as a compression tool
+### Tutor note: The singular value decomposition as a compression tool {.unnumbered}
 
 **Tutor note:** This exercise combines computations with accessible analysis. It will probably take most of an hour, depending on the student.
 

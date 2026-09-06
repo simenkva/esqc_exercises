@@ -66,12 +66,12 @@ In this case the expansion coefficients cannot in general be obtained simply by 
 
 
 
-## Exercises
+## Exercises {.unnumbered}
 
 
 
 ::: {#exr-bra-ket-column-vectors level="beginner" }
-### Bra-ket notation and column vectors
+### Bra-ket notation and column vectors {.unnumbered}
 
 Consider the orthonormal basis $\{|1\rangle,|2\rangle,|3\rangle\}$. In this basis, the ket
 $$
@@ -104,7 +104,7 @@ f. Calculate $\langle\psi|\psi\rangle$ using the row and column vectors. What is
 
 
 ::: {#exr-bra-ket-basic level="beginner"}
-### Reading simple bra-ket expressions
+### Reading simple bra-ket expressions {.unnumbered}
 
 Consider two orthonormal states $|1\rangle$ and $|2\rangle$ and the state
 $$
@@ -123,7 +123,7 @@ e. What condition must $c_1$ and $c_2$ satisfy if $|\psi\rangle$ is normalized?
 :::
 
 ::: {#exr-bra-ket-basis-operator level="intermediate"}
-### From coordinate vectors to Hilbert-space vectors
+### From coordinate vectors to Hilbert-space vectors {.unnumbered}
 
 Let $B=\{|b_1\rangle,\ldots,|b_n\rangle\}$ be a basis for an $n$-dimensional Hilbert space $V$, and let $\{|i\rangle\}$ be the standard orthonormal basis of $\mathbb C^n$. Define
 $$
@@ -153,7 +153,7 @@ e. Explain why $\hat B^\dagger\hat B$ is the overlap matrix of the basis $B$, ex
 :::
 
 ::: {#exr-bra-ket-molecular-orbitals level="intermediate"}
-### Molecular orbitals in a nonorthogonal atomic-orbital basis
+### Molecular orbitals in a nonorthogonal atomic-orbital basis {.unnumbered}
 
 Suppose a molecular orbital is expanded in two normalized atomic orbitals,
 $$
@@ -191,7 +191,7 @@ f. Show that $\langle\psi_+|\psi_-\rangle=0$. Thus symmetric and antisymmetric c
 :::
 
 ::: {#exr-bra-ket-nonorthogonal-dual-basis level="advanced"}
-### Nonorthogonal bases, dual vectors, and completeness
+### Nonorthogonal bases, dual vectors, and completeness {.unnumbered}
 
 Let $\{|b_i\rangle\}_{i=1}^n$ be a linearly independent, but not necessarily orthogonal, basis of an $n$-dimensional Hilbert space. Define the overlap matrix
 $$
@@ -247,7 +247,7 @@ f. In quantum chemistry, atomic-orbital basis functions are generally nonorthogo
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 
 

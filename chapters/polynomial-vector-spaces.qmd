@@ -6,7 +6,7 @@ In this exercise, we study a vector space that is not $\mathbb{F}^n$. We start o
 
 Recall that a polynomial of degree $n$ over $\mathbb{F}$ has the form $$p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n,$$ with $a_i \in \mathbb{F}$ and $a_n \neq 0$.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than  level="intermediate"}
 
@@ -80,9 +80,9 @@ The so-called Golub--Welsch algorithm is a simple algorithm based on diagonaliza
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
-### Tutor note: Space of polynomials
+### Tutor note: Space of polynomials {.unnumbered}
 
 **Tutor note:** Treating functions as vectors is important in quantum chemistry. The recommended sub-exercises should be broadly accessible; the remaining exercises may require tutor preparation.
 

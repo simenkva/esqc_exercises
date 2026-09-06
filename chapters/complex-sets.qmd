@@ -4,7 +4,7 @@ The modulus and real and imaginary parts describe curves and regions in the comp
 
 Visualize the following subsets of $\mathbb{C}$. Decide which sets are open, closed, or neither.
 
-## Exercises
+## Exercises {.unnumbered}
 
 ::: {#exr-complex-sets-exercise level="intermediate"}
 
@@ -44,7 +44,7 @@ $\{ z \mid \Im(z^2) > 0 \}$
 
 ::: {.content-visible when-profile="tutor"}
 
-## Solutions
+## Solutions {.unnumbered}
 
 ### Solution to @exr-complex-sets-exercise {.unnumbered}
 
