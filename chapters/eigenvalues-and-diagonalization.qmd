@@ -89,7 +89,7 @@ In the exercises below, we study how eigenvalues and eigenvectors are found, whe
 ## Exercises {.unnumbered}
 
 
-::: {#exr-check-candidate-eigenvectors level="beginner" recommended="math" priority=10}
+::: {#exr-check-candidate-eigenvectors level="beginner" recommended="math;topic" topic="second-quantization" priority=10}
 ### Checking candidate eigenvectors
 
 Consider the real symmetric matrix
@@ -220,7 +220,7 @@ c.	Suppose that the concentration vector has the form
 
 
 
-::: {#exr-hermitian-2x2-eigenvalue-problem level="intermediate" priority=10 recommended="math"}
+::: {#exr-hermitian-2x2-eigenvalue-problem level="intermediate" priority=10 recommended="math;topic" topic="second-quantization"}
 ### Eigenvalues and diagonalization of a Hermitian matrix
 
 Consider the matrix
