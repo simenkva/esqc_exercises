@@ -71,7 +71,7 @@ In this exercise, we will train our ability to think abstractly, and also try to
 ## Exercises {.unnumbered}
 
 ::: {#exr-general-vector-spaces-recipes recommended="math" level="beginner" priority=10}
-### Cooking with vectors 1 {.unnumbered}
+### Cooking with vectors 1
 
 We can think of an ingredient list as a vector. For example, suppose that our universe of ingredients consists only of
 
@@ -110,7 +110,7 @@ g. Typical recipes contain ingredients that are not among our five chosen ingred
 
 
 ::: {#exr-general-vector-spaces-meaningful-recipes recommended="math" level="intermediate" priority=10}
-### Cooking with vectors 2 {.unnumbered}
+### Cooking with vectors 2
 
 In @exr-general-vector-spaces-recipes, we represented recipes using a fixed list of possible ingredients. If you did not do this exercise already, please do so first. In this exercise, we make this construction more general.
 

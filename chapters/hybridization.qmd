@@ -49,7 +49,7 @@ In this exercise we use normalization, orthogonality, dot products, and matrix t
 ## Exercises {.unnumbered}
 
 ::: {#exr-hybridization-orbital-geometry level="advanced" recommended="math" priority=10}
-### Hybrid orbitals from vectors and matrices {.unnumbered}
+### Hybrid orbitals from vectors and matrices
 
 Assume that the four orbitals
 

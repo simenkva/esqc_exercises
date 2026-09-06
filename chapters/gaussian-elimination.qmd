@@ -6,7 +6,7 @@
 ## Exercises {.unnumbered}
 
 :::{#exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined  level="intermediate"}
-### Gaussian elimination and overlap matrix {.unnumbered}
+### Gaussian elimination and overlap matrix
 
 Consider the two vectors
 

@@ -13,35 +13,35 @@ The set $\mathbb{N}$ has an infinite number of elements. By definition, $|\mathb
 ## Exercises {.unnumbered}
 
 ::: {#exr-cardinality-and-countability-explicitly-constructing-bijection  level="intermediate"}
-### Countability of the integers {.unnumbered}
+### Countability of the integers
 
 Show that $|\mathbb{Z}|=\aleph_0$ by explicitly constructing a bijection $f : \mathbb{N}\to \mathbb{Z}$.
 
 :::
 
 :::{#exr-cardinality-and-countability-hint-draw-picture-try-draw-line}
-### Countability of the natural number plane {.unnumbered}
+### Countability of the natural number plane
 
 Show that $|\mathbb{N}\times \mathbb{N}| = \aleph_0$. Hint: Draw a picture of $\mathbb{N}\times \mathbb{N}$, and try to draw a line through all the points in this set. How does this show the existence of a bijection between $\mathbb{N}$ and $\mathbb{N}\times\mathbb{N}$?
 
 :::
 
 :::{#exr-cardinality-and-countability-exercise}
-### Countability of the rational numbers {.unnumbered}
+### Countability of the rational numbers
 
 Show that $|\mathbb{Q}|= \aleph_0$.
 
 :::
 
 :::{#exr-cardinality-and-countability-interval-has-same-cardinality-you-must}
-### Interval vs. real numbers {.unnumbered}
+### Interval vs. real numbers
 
 Show that the interval $I = (-1,1)$ has the same cardinality as $\mathbb{R}$. You must construct a function $f : (-1,1)\to\mathbb{R}$ that is a bijection.
 
 :::
 
 :::{#exr-cardinality-and-countability-exercise-cardinality-would-if-could-write}
-### Uncountability of the real numbers {.unnumbered}
+### Uncountability of the real numbers
 
 In this exercise, we show that $|\mathbb{R}|  > \aleph_0$. The cardinality would be $\aleph_0$ if we could write a list of the real numbers. It suffices to find a list of the numbers in $I = [0,1[$, i.e., infinite decimal expansions $0.d_1d_2d_3\cdots$, with $d_i\in \{0,1,2,3,4,5,6,7,8,9\}$.
 
@@ -52,7 +52,7 @@ The cardinality of $\mathbb{R}$, "the continuum", is written $2^{\aleph_0}$.
 :::
 
 :::{#exr-cardinality-and-countability-constructing-one-one-map-hint-use}
-### Constructing a one-to-one map {.unnumbered}
+### Constructing a one-to-one map
 
 Show that $|[0,1[\times [0,1[| = |[0,1[|$, by constructing a one-to-one map. Hint: Use decimal expansions. Conclude that also $|\mathbb{R}^2| = |\mathbb{C}| = |\mathbb{R}|$.
 

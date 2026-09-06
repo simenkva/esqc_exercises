@@ -42,20 +42,20 @@ $$
 
 
 :::{#exr-combinatorics-factorial level="beginner"}
-### Basic factorials {.unnumbered}
+### Basic factorials
 
 Compute the factorials $0!$, $1!$, $2!$, $3!$, $4!$, and $5!$.
 
 :::
 
 :::{#exr-combinatorics-factorial-arrangements level="intermediate"}
-### Lunch line {.unnumbered}
+### Lunch line
 
 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?
 :::
 
 :::{#exr-combinatorics-factorial-arrangements-chemists}
-### Chemist's shelf {.unnumbered}
+### Chemist's shelf
 
 Compute the number of arrangements for the following scenarios:
 
@@ -67,7 +67,7 @@ b. A chemist has 10 different chemical samples. 4 of the samples are liquids, an
 
 
 ::: {#exr-stirling-factorial recommended="math" level="advanced"}
-### Stirling's approximation {.unnumbered}
+### Stirling's approximation
 
 We study Stirling's approximation for the factorial.
 
@@ -128,7 +128,7 @@ Fact: The $n$-th row of Pascal's triangle contains the binomial coefficients $\b
 
 
 :::{#exr-combinatorics-binomial-coefficients recommended="topic" level="beginner" topic="second-quantization"}
-### Basic binomial coefficients {.unnumbered}
+### Basic binomial coefficients
 
 a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom{7}{4}$.
 
@@ -136,14 +136,14 @@ b.  In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many d
 :::
 
 :::{#exr-combinatorics-pascals-triangle recommended="topic" level="beginner" topic="second-quantization" }
-### Pascal's triangle {.unnumbered}
+### Pascal's triangle
 
 Compute the first 6 rows of Pascal's triangle. Verify that the numbers in the $n$-th row correspond to the binomial coefficients $\binom{n}{0}, \binom{n}{1}, \ldots, \binom{n}{n}$.
 
 :::
 
 ::: {#exr-combinatorics-pascals-identity recommended="topic" topic="second-quantization" level="advanced"}
-### Pascal's identity {.unnumbered}
+### Pascal's identity
 
 The binomial coefficients satisfy **Pascal's identity**,
 
@@ -175,7 +175,7 @@ e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choos
 
 
 ::: {#exr-combinatorics-pascal-sierpinski level="advanced" priority=-1}
-### Pascal's triangle and the Sierpinski triangle {.unnumbered}
+### Pascal's triangle and the Sierpinski triangle
 
 Write a computer program to generate the first $2^n$ rows of Pascal's triangle, where $n=1,2,\ldots$. Create a $2^n\times 2^n$ lower triangular matrix $T$, where $T_{k,n} = 0$ if $\binom{n}{k}$ is even, and $T_{k,n}=1$ if the coefficient is odd, for $k \leq n$ (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.
 
@@ -191,7 +191,7 @@ If you use Python and sympy, you can generate binomial factors with the function
 
 
 ::: {#exr-combinatorics-binomial-theorem-basic recommended="topic" topic="second-quantization" level="beginner"}
-### The binomial theorem {.unnumbered}
+### The binomial theorem
 
 The **binomial theorem** states that
 
@@ -220,7 +220,7 @@ f.	Without carrying out any multiplication, find the coefficient of $x^3$ in $(1
 
 
 ::: {#exr-combinatorics-binomial-theorem-coefficients recommended="topic" topic="second-quantization" level="intermediate"}
-### Coefficients in binomial expansions {.unnumbered}
+### Coefficients in binomial expansions
 
 Consider the binomial expansion
 

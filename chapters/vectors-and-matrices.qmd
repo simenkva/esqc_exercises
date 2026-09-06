@@ -49,7 +49,7 @@ The same definitions of matrix-vector and matrix-matrix multiplication apply ove
 ## Exercises: Basic vector and matrix calculations {.unnumbered}
 
 ::: {#exr-vector-spaces-basic-operations recommended="math" level="beginner" priority=10}
-### Basic vector operations {.unnumbered}
+### Basic vector operations
 
 Consider the vectors
 
@@ -80,7 +80,7 @@ h. Is $(1,2)$ an element of this vector space? Is $(0,0,0)$ an element? Explain 
 
 
 ::: {#exr-matrix-vector-multiplication recommended="math" level="beginner" priority=10}
-### Basic matrix-vector products {.unnumbered}
+### Basic matrix-vector products
 
 Consider the matrices and vectors
 
@@ -103,7 +103,7 @@ d. Can the products $A\mathbf{y}$ and $B\mathbf{x}$ be formed? Explain your answ
 
 
 ::: {#exr-matrix-matrix-multiplication recommended="math" level="beginner" priority=10}
-### Matrix-matrix products {.unnumbered}
+### Matrix-matrix products
 
 Consider the matrices
 
@@ -131,7 +131,7 @@ d. Can the product $CA$ be formed? Can the product $BC$ be formed? Explain your 
 
 
 :::{#exr-vectors-and-matrices-work-space-plane-vectors-define-two recommended="math" level="beginner"}
-### Linear independence and basis {.unnumbered}
+### Linear independence and basis
 
 We work in the space $V = \mathbb{R}^2$, plane vectors. We define two vectors, 
 $$
@@ -145,7 +145,7 @@ c. Make a 2D drawing or plot of them as arrows from the origin.
 :::
 
 ::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate level="beginner"}
-### Gaussian elimination and vector decomposition {.unnumbered}
+### Gaussian elimination and vector decomposition
 
 Let 
 
@@ -164,7 +164,7 @@ Illustrate this decomposition in the graph from the previous exercise, using the
 :::
 
 ::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk recommended="math" level="intermediate" priority=10}
-### Office coordinates {.unnumbered}
+### Office coordinates
 
 A person walks from home. First, they walk to the subway station. This is 1 km north and 500 m east as the crow flies. The subway takes the person to the city centre, which 3 km east and 2 km south of the subway station, as the crow flies. The person then walks 200 m south and 400 m west to their office.
 
@@ -175,14 +175,14 @@ What is the distance to home, as the crow flies?
 :::
 
 :::{#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed recommended="math" level="intermediate" priority=10}
-### Boat sailing on the ocean {.unnumbered}
+### Boat sailing on the ocean
 
 A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?
 
 :::
 
 :::{#exr-vectors-and-matrices-robert-beezer-three-digit-number-has recommended="math" level="intermediate" priority=10}
-### An exercise by Robert Beezer {.unnumbered}
+### An exercise by Robert Beezer
 
 A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.
 
@@ -193,14 +193,14 @@ A three-digit number has two properties. The tens-digit and the ones-digit add u
 
 
 ::: {#exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action recommended="math" level="intermediate" priority=10}
-### Compute the action of a matrix on vectors {.unnumbered}
+### Compute the action of a matrix on vectors
 
 Let $A$ be the $n\times n$ matrix defined by $A_{i,i+1} = i^2$ for $1 \leq i < n$, and zero otherwise. Compute the action of $A$ and $A^T$ on the standard basis for $\mathbb{R}^n$. Compute the action of $A$ and $A^T$ on an arbitrary vector $\mathbf{x}\in \mathbb{R}^n$.
 
 :::
 
 ::: {#exr-vectors-and-matrices-write-terms-column-vectors-prove-i level="intermediate" recommended="math" priority=10}
-### Matrix-matrix products, rows and columns {.unnumbered}
+### Matrix-matrix products, rows and columns
 
 A useful way to understand matrix-matrix multiplication is to think of a matrix as a collection of vectors. This gives two complementary interpretations of the product $AB$:
 

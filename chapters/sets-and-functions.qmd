@@ -9,7 +9,7 @@ Sets and set notation appear many places in quantum chemistry. The goal of this 
 ## Exercises: abstract sets and functions {.unnumbered}
 
 ::: {#exr-sets-and-functions-write-days-week-set recommended="math" level="beginner"}
-### Days of the week as a set {.unnumbered}
+### Days of the week as a set
 
 The days of the week form a simple example of a finite set. Recall that we write the elements of a set inside braces, such as
 
@@ -45,35 +45,35 @@ g.	Suppose another student writes the days in a different order,
 :::
 
 :::{#exr-sets-and-functions-ordered-pair-two-element-set-where}
-### Ordered pair {.unnumbered}
+### Ordered pair
 
 An *ordered pair* $(x,y)$ is a two-element "set" where the order matters. Two ordered pairs $(x,y)$ and $(u,v)$ are equal if and only if $x=u$ and $y = v$. From this it follows that $(x,y) = (y,x)$ if and only if $x=y$. A definition of an ordered pair as a *set* is $$(x,y) = \{ \{x\}, \{x,y\} \}.$$ Show that $(x,y) = (y,x)$ if and only if $x=y$ using the set theoretic definition.
 
 :::
 
 :::{#exr-sets-and-functions-nonnegative-rational-number-can-written-ordered}
-### Rational numbers as ordered pairs {.unnumbered}
+### Rational numbers as ordered pairs
 
 A nonnegative rational number $p/q$, $p,q\in\mathbb{N}$, $q > 0$, can be written as an ordered pair $(p,q)$. Write down the rational numbers $1/4$, $2/3$, $0$, $1/3$ as ordered pairs using set theory, both for the pair and for each integer. (Strictly speaking we the number itself is an *equivalence class* of such pairs, i.e., $pn/qn = p/q$, so we must identify $(p,q)$ and $(np,nq)$. Ignore equivalence classes in this exercise.)
 
 :::
 
 :::{#exr-sets-and-functions-cartesian-product-two-sets-write-down}
-### Cartesian product of two sets {.unnumbered}
+### Cartesian product of two sets
 
 The *cartesian product* of two sets $A$ and $B$ is $$A \times B = \{ (a,b) \mid a\in A, \; b\in B\}.$$ Write down the cartesian product of $\{\heartsuit,\diamondsuit,\spadesuit,\clubsuit\}$ and $\{1,2,3\}$, using the set theoretic definition for the ordered pair. You can skip spelling out the set theoretic definition of the natural numbers.
 
 :::
 
 :::{#exr-sets-and-functions-similar-previous-exercise-write-down}
-### Ordered pair as a two-element set {.unnumbered}
+### Ordered pair as a two-element set
 
 Similar to the previous exercise, write down $\{1,2,3\} \times \{2,3,4\}$.
 
 :::
 
 :::{#exr-sets-and-functions-function-one-set-another-set-rule}
-### Function from one set to another set {.unnumbered}
+### Function from one set to another set
 
 A *function* $f: A \to B$ from one set $A$ to another set $B$ is a rule that assigns to every $a\in A$ precisely one $b\in B$. In terms of set theory, a function $f:A\to B$ is a subset of $A\times B$, such that
 
@@ -92,14 +92,14 @@ De Morgan's laws are useful when discussing subsets $A,B$ of a larger set $X$. R
 - $(A \cap B)^\complement = A^\complement \cup B^\complement$.
 
 ::: {#exr-sets-and-functions-draw-picture-representing-whole-sheet-overlapping recommended="math" level="intermediate"}
-### De Morgan's laws {.unnumbered}
+### De Morgan's laws
 
 Draw a picture, representing $X$ as the whole sheet, $A$ and $B$ as overlapping shapes, e.g., circles. Label $A$, $B$, $A\cap B$, and $A \cup B$, making another drawing if necessary. Convince yourself that De Morgan's laws are correct.
 
 :::
 
 :::{#exr-sets-and-functions-prove-de-morgan-s-laws-mathematically}
-### De Morgan's laws 2 {.unnumbered}
+### De Morgan's laws 2
 
 Prove De Morgan's laws mathematically. Note that the complement operation acts like negation of truth, i.e., $a \in A^\complement$ if and only if $a \in X$ and $a \notin A$.
 
@@ -112,7 +112,7 @@ Prove De Morgan's laws mathematically. Note that the complement operation acts l
 
 
 ::: {#exr-sets-potential-energy-curve recommended="math" level="beginner"}
-### Classically allowed region for Morse potential {.unnumbered}
+### Classically allowed region for Morse potential
 
 Figure @fig-morse-potential shows the _Morse potential_ - a common model potential for vibrational motion of a diatomic molecule: 
 
@@ -147,7 +147,7 @@ e. Based on the figure, which of the following statements are true?
 
 
 ::: {#exr-molecule-sets recommended="math" level="intermediate"}
-### Molecules as sets {.unnumbered}
+### Molecules as sets
 
 In this exercise, a *molecule* is informally defined only by its chemical composition: the number of atoms of each element occurring in its molecular formula. Thus, $\mathrm{H_2}$ and $\mathrm{CO}$ are two distinct molecules, while $\mathrm{HCOOH}$ and $\mathrm{CO_2H_2}$ represent the same molecule, since both contain one C atom, two H atoms, and two O atoms.
 

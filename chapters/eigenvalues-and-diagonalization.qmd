@@ -90,7 +90,7 @@ In the exercises below, we study how eigenvalues and eigenvectors are found, whe
 
 
 ::: {#exr-check-candidate-eigenvectors level="beginner" recommended="math" priority=10}
-### Checking candidate eigenvectors {.unnumbered}
+### Checking candidate eigenvectors
 
 Consider the real symmetric matrix
 
@@ -153,7 +153,7 @@ f.	Compare the two eigenvectors found in parts a and b. Compute their ordinary d
 
 
 ::: {#exr-eigenvalues-chemical-kinetics level="beginner" recommended="math" priority=10}
-### Eigenvalues in chemical kinetics {.unnumbered}
+### Eigenvalues in chemical kinetics
 
 Consider the reversible reaction
 
@@ -221,7 +221,7 @@ c.	Suppose that the concentration vector has the form
 
 
 ::: {#exr-hermitian-2x2-eigenvalue-problem level="intermediate" priority=10 recommended="math"}
-### Eigenvalues and diagonalization of a Hermitian matrix {.unnumbered}
+### Eigenvalues and diagonalization of a Hermitian matrix
 
 Consider the matrix
 
@@ -307,7 +307,7 @@ g.	Verify by direct matrix multiplication that
 
 
 ::: {#exr-nondiagonalizable-2x2-matrix level="intermediate" recommended="math" priority=10}
-### A matrix that cannot be diagonalized {.unnumbered}
+### A matrix that cannot be diagonalized
 
 Consider the matrix
 
@@ -330,7 +330,7 @@ c.	To diagonalize a $2\times2$ matrix, we need two linearly independent eigenvec
 
 
 ::: {#exr-eigenvalues-chemical-kinetics-asymmetric level="intermediate"}
-### A reversible reaction with different rate constants {.unnumbered}
+### A reversible reaction with different rate constants
 
 It is recommended that you first complete @exr-eigenvalues-chemical-kinetics.
 
@@ -371,7 +371,7 @@ c.	The other eigenvector describes relaxation toward equilibrium. Show that its 
 
 
 ::: {#exr-eigenvalues-computational-reaction-network level="advanced" recommended="math" priority=10}
-### Eigenvalues of a reaction network {.unnumbered}
+### Eigenvalues of a reaction network
 
 It is recommended that you first complete or at least read through @exr-eigenvalues-chemical-kinetics and @exr-eigenvalues-chemical-kinetics-asymmetric.
 

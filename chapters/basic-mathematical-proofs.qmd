@@ -86,7 +86,7 @@ by the induction.
 ## Exercises {#exercises .unnumbered}
 
 ::: {#exr-proofs-direct-even level="beginner"}
-### A first direct proof {.unnumbered}
+### A first direct proof
 
 An integer $n$ is *even* if it can be written as $n=2k$ for some integer
 $k$.
@@ -104,7 +104,7 @@ d.  Which part of your argument would fail if one of the two integers
 :::
 
 ::: {#exr-proofs-counterexample level="beginner"}
-### Learning to use counterexamples {.unnumbered}
+### Learning to use counterexamples
 
 For each statement below, decide whether it is true. If it is false,
 disprove it by giving one counterexample.
@@ -122,7 +122,7 @@ e.  If $A$ is a real matrix, then every entry of $A^\mathsf{T}A$ is
 :::
 
 ::: {#exr-proofs-contrapositive-basic level="beginner"}
-### A first proof by contrapositive {.unnumbered}
+### A first proof by contrapositive
 
 Consider the statement: *If $n^2$ is even, then $n$ is even*, where $n$
 is an integer.
@@ -138,7 +138,7 @@ d.  Use the contrapositive to conclude that if $n^2$ is even, then $n$
 :::
 
 ::: {#exr-proofs-contradiction-basic level="beginner"}
-### A first proof by contradiction {.unnumbered}
+### A first proof by contradiction
 
 Prove that there is no largest integer.
 
@@ -154,7 +154,7 @@ d.  State the conclusion.
 :::
 
 ::: {#exr-proofs-pigeonhole-basic level="beginner"}
-### The pigeonhole principle {.unnumbered}
+### The pigeonhole principle
 
 a.  A tutorial group contains 13 students. Show that at least two
     students were born in the same month.
@@ -169,7 +169,7 @@ d.  Which version of the pigeonhole principle do you need for part c?
 :::
 
 ::: {#exr-proofs-induction-basic level="beginner" recommended="topic" topic="second-quantization"}
-### Your first induction proof {.unnumbered}
+### Your first induction proof
 
 Prove by induction that
 
@@ -194,7 +194,7 @@ e.  Explain why the base case and induction step prove the formula for
 :::
 
 ::: {#exr-proofs-direct-matrix level="intermediate" recommended="topic" topic="second-quantization"}
-### Direct proof with a matrix {.unnumbered}
+### Direct proof with a matrix
 
 Let $A$ be a real $m\times n$ matrix and $x\in\mathbb{R}^n$. Prove
 directly that
@@ -217,7 +217,7 @@ e.  Explain why these results show that $A^\mathsf{T}A$ is positive
 :::
 
 ::: {#exr-proofs-contrapositive-matrix level="intermediate"}
-### Invertibility by contrapositive {.unnumbered}
+### Invertibility by contrapositive
 
 Let $A$ and $B$ be square matrices of the same dimension. Prove the
 statement
@@ -239,7 +239,7 @@ d.  Combine the two arguments to prove the original statement.
 :::
 
 ::: {#exr-proofs-contradiction-orthogonal level="intermediate"}
-### Orthogonal eigenvectors from a contradiction {.unnumbered}
+### Orthogonal eigenvectors from a contradiction
 
 Let $A$ be a Hermitian matrix, and let
 
@@ -265,7 +265,7 @@ e.  Why is this result useful when eigenvectors represent quantum states
 :::
 
 ::: {#exr-proofs-pigeonhole-orbitals level="intermediate"}
-### Pigeonholes and orbital occupations {.unnumbered}
+### Pigeonholes and orbital occupations
 
 Consider $N$ electrons distributed among $K$ spatial orbitals. Assume
 that each spatial orbital can contain at most two electrons.
@@ -285,7 +285,7 @@ d.  Explain why the result is a counting statement and does not depend
 :::
 
 ::: {#exr-proofs-induction-geometric level="intermediate"}
-### Induction and a geometric sum {.unnumbered}
+### Induction and a geometric sum
 
 Let $r$ be a number with $r\neq1$. Prove by induction that
 
@@ -307,7 +307,7 @@ e.  For $|r|<1$, what does the formula suggest as $n\to\infty$?
 :::
 
 ::: {#exr-proofs-advanced-commutator level="advanced" recommended="math"}
-### A finite-dimensional quantum-mechanical impossibility {.unnumbered}
+### A finite-dimensional quantum-mechanical impossibility
 
 In quantum mechanics, position and momentum satisfy the canonical
 commutation relation

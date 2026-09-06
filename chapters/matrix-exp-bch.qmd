@@ -84,7 +84,7 @@ These formulas are useful not only for formal manipulations. They provide a syst
 
 ::: {#exr-matrix-exponential-diagonal level="beginner" recommended="topic" topic="coupled-cluster;response-theory"}
 
-### Exponential of a diagonal matrix {.unnumbered}
+### Exponential of a diagonal matrix
 
 Consider the matrix
 
@@ -109,7 +109,7 @@ e.	Verify explicitly that $e^Ae^{-A}=I$.
 
 ::: {#exr-matrix-exponential-simple-nilpotent level="beginner" recommended="topic" topic="coupled-cluster;response-theory"}
 
-### An exponential whose series terminates {.unnumbered}
+### An exponential whose series terminates
 
 In coupled-cluster theory, the cluster operator $T$ is nilpotent. This means that some power of $T$ vanishes. In this exercise, we explore a simple example of a nilpotent matrix and its exponential. Consider
 
@@ -131,7 +131,7 @@ f.	Explain why the exponential series in this example contains only finitely man
 :::
 
 ::: {#exr-commuting-exponentials level="beginner"}
-### Exponentials of commuting matrices {.unnumbered}
+### Exponentials of commuting matrices
 
 Consider
 
@@ -158,7 +158,7 @@ e.	Which property of $A$ and $B$ makes the familiar exponential rule work in thi
 
 ::: {#exr-exponential-rotation level="intermediate" recommended="topic" topic="response-theory;coupled-cluster"}
 
-### A matrix exponential and rotations {.unnumbered}
+### A matrix exponential and rotations
 
 Consider
 
@@ -187,7 +187,7 @@ e.	Explain why the result in part d does not contradict the fact that $e^Ae^B\ne
 
 ::: {#exr-antihermitian-unitary level="intermediate" recommended="topic" topic="response-theory"}
 
-### Anti-Hermitian matrices and unitary matrices {.unnumbered}
+### Anti-Hermitian matrices and unitary matrices
 
 A matrix $A$ is **anti-Hermitian** if
 
@@ -242,7 +242,7 @@ f.	The converse is also true: every unitary matrix can be written as the exponen
 
 ::: {#exr-hadamard-terminating level="intermediate" recommended="topic" topic="response-theory;coupled-cluster" }
 
-### A terminating similarity transformation {.unnumbered}
+### A terminating similarity transformation
 
 Let
 
@@ -270,7 +270,7 @@ e.	Why did the commutator expansion terminate after only a few terms?
 :::
 
 ::: {#exr-bch-simple level="intermediate"}
-### A simple BCH expansion {.unnumbered}
+### A simple BCH expansion
 
 Suppose that two operators $A$ and $B$ satisfy
 
@@ -306,7 +306,7 @@ f.	What does this result reduce to when $[A,B]=0$?
 :::
 
 ::: {#exr-conjugation-eigenoperator level="advanced"}
-### Similarity transformation of an eigenoperator {.unnumbered}
+### Similarity transformation of an eigenoperator
 
 Suppose $A$ and $B$ satisfy
 
@@ -352,7 +352,7 @@ f.	The annihilation operator satisfies $[\hat N,a]=-a$. Find $e^{\alpha\hat N}ae
 :::
 
 ::: {#exr-bch-pauli level="advanced"}
-### BCH expansion for noncommuting quantum operators {.unnumbered}
+### BCH expansion for noncommuting quantum operators
 
 Let
 

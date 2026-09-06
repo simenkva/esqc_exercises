@@ -18,7 +18,7 @@ Let $f : (0,+\infty) \to \mathbb{R}^2$ be a path defined by $$f(t) = [\ln(t), t]
 :::
 
 ::: {#exr-visualizing-functions-heart level="advanced"}
-### A heart-shaped curve {.unnumbered}
+### A heart-shaped curve
 
 Consider the parametrically defined curve
 
