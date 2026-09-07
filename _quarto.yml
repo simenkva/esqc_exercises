@@ -18,7 +18,7 @@ book:
   author: "Simen Kvaal"
   date: last-modified
   cover-image: figures/cover-a5.png
-#  downloads: [pdf, epub]
+  downloads: [pdf]
   chapters:
     - index.qmd
     - part: "Exercise recommendations"
@@ -151,55 +151,55 @@ format:
   #     - fonts/STIXTwoText-BoldItalic.woff2
   #     - fonts/STIXTwoMath-Regular.woff2
 
-  # pdf:
-  #   pdf-engine: lualatex
-  #   mainfont: "STIXTwoText"
-  #   mainfontoptions:
-  #     - Path=fonts/desktop/
-  #     - Extension=.otf
-  #     - UprightFont=*-Regular
-  #     - ItalicFont=*-Italic
-  #     - BoldFont=*-Bold
-  #     - BoldItalicFont=*-BoldItalic
-  #   sansfont: "RobotoCondensed"
-  #   sansfontoptions:
-  #     - Path=fonts/desktop/
-  #     - Extension=.ttf
-  #     - UprightFont=*-Regular
-  #     - BoldFont=*-Bold
-  #   mathfont: "STIXTwoMath-Regular"
-  #   mathfontoptions:
-  #     - Path=fonts/desktop/
-  #     - Extension=.otf
+  pdf:
+    pdf-engine: lualatex
+    mainfont: "STIXTwoText"
+    mainfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.otf
+      - UprightFont=*-Regular
+      - ItalicFont=*-Italic
+      - BoldFont=*-Bold
+      - BoldItalicFont=*-BoldItalic
+    sansfont: "RobotoCondensed"
+    sansfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.ttf
+      - UprightFont=*-Regular
+      - BoldFont=*-Bold
+    mathfont: "STIXTwoMath-Regular"
+    mathfontoptions:
+      - Path=fonts/desktop/
+      - Extension=.otf
 
-  #   include-in-header:
-  #     - text: |
-  #         \definecolor{brandteal}{HTML}{18BC9C}
-  #         \usepackage{eso-pic}
-  #         \AtBeginDocument{%
-  #           \thispagestyle{empty}%
-  #           \AddToShipoutPictureBG*{%
-  #             \AtPageLowerLeft{%
-  #               \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-a5.png}%
-  #             }%
-  #           }%
-  #           \null\newpage
-  #         }
+    include-in-header:
+      - text: |
+          \definecolor{brandteal}{HTML}{18BC9C}
+          \usepackage{eso-pic}
+          \AtBeginDocument{%
+            \thispagestyle{empty}%
+            \AddToShipoutPictureBG*{%
+              \AtPageLowerLeft{%
+                \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover-a5.png}%
+              }%
+            }%
+            \null\newpage
+          }
 
-  #   toc: true
-  #   toc-depth: 3
-  #   colorlinks: true
-  #   linkcolor: brandteal
-  #   urlcolor: brandteal
-  #   citecolor: brandteal
+    toc: true
+    toc-depth: 3
+    colorlinks: true
+    linkcolor: brandteal
+    urlcolor: brandteal
+    citecolor: brandteal
 
-  #   papersize: a5
-  #   fontsize: 10pt
-  #   geometry:
-  #     - inner=18mm
-  #     - outer=15mm
-  #     - top=18mm
-  #     - bottom=20mm
+    papersize: a5
+    fontsize: 10pt
+    geometry:
+      - inner=18mm
+      - outer=15mm
+      - top=18mm
+      - bottom=20mm
 
 
 custom-callout:
