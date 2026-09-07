@@ -11,6 +11,7 @@ project:
   resources:
     - /figures/**
     - /fonts/**
+    - /output/**
 
 book:
   title: "ESQC mathematics exercises"
@@ -18,7 +19,7 @@ book:
   author: "Simen Kvaal"
   date: last-modified
   cover-image: figures/cover-a5.png
-  downloads: [pdf]
+#  downloads: [pdf]
   chapters:
     - index.qmd
     - part: "Exercise recommendations"

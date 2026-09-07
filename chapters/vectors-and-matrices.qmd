@@ -1,47 +1,236 @@
 # Vectors and matrices
 
-The vector space $\mathbb{R}^n$ consists of all column vectors
+Vectors and matrices are among the basic building blocks of quantum chemistry. They give us a convenient way of collecting many numbers into a single mathematical object and, more importantly, of describing transformations between such collections of numbers.
+
+For example, suppose that a molecular orbital is expanded in a basis of $n$ functions,
 
 $$
-x=\begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix},\qquad x_i\in\mathbb{R},
+\phi = c_1\chi_1+c_2\chi_2+\cdots+c_n\chi_n.
 $$
 
-with the usual vector addition and scalar multiplication. Similarly, $\mathbb{C}^n$ consists of column vectors with complex components. More generally, a vector space $V$ over a field $\mathbb{F}$ is a set equipped with vector addition and scalar multiplication such that, for all $x,y,z\in V$ and $\alpha,\beta\in\mathbb{F}$,
+Instead of considering the coefficients $c_1,\ldots,c_n$ separately, we collect them in a **vector**
 
-1. **Commutativity of addition:** $x+y=y+x$.
+$$
+\mathbf{c}=\begin{bmatrix}c_1\\c_2\\\vdots\\c_n\end{bmatrix}.
+$$
 
-2. **Associativity of addition:** $x+(y+z)=(x+y)+z$.
+A vector is an object whose components describe some quantity with respect to a chosen basis. In quantum chemistry, vectors may contain orbital coefficients, amplitudes, coordinates, concentrations,  values of a function on a grid, and much more.
 
-3. **Additive identity:** There exists a zero vector $0\in V$ such that $x+0=x$.
+The set of all real vectors with $n$ components is denoted by $\mathbb{R}^n$, while $\mathbb{C}^n$ denotes the corresponding set of vectors with complex components. We sometimes use $\mathbf{F}$ if the underlying number field is arbitrary. 
 
-4. **Additive inverse:** For every $x\in V$, there exists $-x\in V$ such that $x+(-x)=0$.
+We can add vectors component by component and multiply them by scalars. For example,
 
-5. **Distributivity over vector addition:** $\alpha(x+y)=\alpha x+\alpha y$.
+$$
+\begin{bmatrix}x_1\\x_2\end{bmatrix}
++
+\begin{bmatrix}y_1\\y_2\end{bmatrix}
+=
+\begin{bmatrix}x_1+y_1\\x_2+y_2\end{bmatrix},
+\qquad
+\alpha
+\begin{bmatrix}x_1\\x_2\end{bmatrix}
+=
+\begin{bmatrix}\alpha x_1\\\alpha x_2\end{bmatrix}.
+$$
 
-6. **Distributivity over scalar addition:** $(\alpha+\beta)x=\alpha x+\beta x$.
+These operations obey a collection of familiar rules: vector addition is associative and commutative, there is a zero vector and an additive inverse, and scalar multiplication distributes over addition. A set equipped with operations satisfying these rules is called a **vector space**. The importance of this abstraction is that the same algebra applies to many different kinds of objects. Ordinary coordinate vectors, functions, polynomials, and quantum-mechanical states can all form vector spaces.
 
-7. **Associativity of scalar multiplication:** $(\alpha\beta)x=\alpha(\beta x)$.
+## Matrices as transformations
 
-8. **Scalar identity:** $1x=x$.
+Once quantities have been represented by vectors, we need a way of describing operations on them. This is one of the main roles of **matrices**.
 
-For a matrix $A\in\mathbb{R}^{m\times n}$ and a column vector $x\in\mathbb{R}^n$, the matrix-vector product $y=Ax\in\mathbb{R}^m$ is defined componentwise by
+An $m\times n$ matrix is a rectangular array of numbers,
+
+$$
+A=\begin{bmatrix}
+A_{11} & A_{12} & \cdots & A_{1n}\\
+A_{21} & A_{22} & \cdots & A_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+A_{m1} & A_{m2} & \cdots & A_{mn}
+\end{bmatrix}.
+$$
+
+We write $A\in\mathbb{R}^{m\times n}$ when the entries are real and $A\in\mathbb{C}^{m\times n}$ when they may be complex.
+
+A matrix can act on a vector. If $A$ is an $m\times n$ matrix and $\mathbf{x}$ has $n$ components, then
+
+$$
+\mathbf{y}=A\mathbf{x}
+$$
+
+is a vector with $m$ components. Its components are
 
 $$
 y_i=\sum_{j=1}^n A_{ij}x_j.
 $$
 
-For matrices $A\in\mathbb{R}^{m\times n}$ and $B\in\mathbb{R}^{n\times p}$, the matrix product $C=AB\in\mathbb{R}^{m\times p}$ is defined by
+Notice which indices are summed, which are "free", i.e., not summed. For example,
 
 $$
-C_{ij}=\sum_{k=1}^n A_{ik}B_{kj}.
+\begin{bmatrix}a&b\\c&d\end{bmatrix}
+\begin{bmatrix}x\\y\end{bmatrix}
+=
+\begin{bmatrix}ax+by\\cx+dy\end{bmatrix}.
 $$
 
-The same definitions of matrix-vector and matrix-matrix multiplication apply over $\mathbb{C}$.
+Thus, a matrix takes one vector as input and produces another vector as output. This point of view is fundamental: **matrices represent linear transformations**.
 
+If one matrix transforms $\mathbf{x}$ into $\mathbf{y}$ and another transforms $\mathbf{y}$ into $\mathbf{z}$,
 
+$$
+\mathbf{y}=B\mathbf{x},
+\qquad
+\mathbf{z}=A\mathbf{y},
+$$
 
+then the combined transformation is
 
+$$
+\mathbf{z}=A(B\mathbf{x})=(AB)\mathbf{x}.
+$$
 
+This explains why matrix multiplication is defined as it is. For $A\in\mathbb{F}^{m\times n}$ and $B\in\mathbb{F}^{n\times p}$, the product $AB\in\mathbb{F}^{m\times p}$ has entries
+
+$$
+(AB)_{ij}=\sum_{k=1}^n A_{ik}B_{kj}.
+$$
+
+Matrix multiplication therefore describes the **composition of linear transformations**. The order matters: $AB$ means that $B$ acts first and $A$ acts second. Consequently, matrix multiplication is generally not commutative,
+
+$$
+AB\neq BA.
+$$
+
+This is an important difference between matrices and ordinary numbers.
+
+## Transpose
+
+So far, we have written vectors as columns. Sometimes, however, we need a vector to appear as a row. The operation that exchanges rows and columns is called the **transpose**.
+
+For an $m\times n$ matrix $A$, its transpose $A^T$ is the $n\times m$ matrix defined by
+
+$$
+(A^T)_{ij}=A_{ji}.
+$$
+
+For example,
+
+$$
+A=\begin{bmatrix}1&2&3\\4&5&6\end{bmatrix}
+\qquad\Longrightarrow\qquad
+A^T=\begin{bmatrix}1&4\\2&5\\3&6\end{bmatrix}.
+$$
+
+In particular, the transpose turns a column vector into a row vector,
+
+$$
+\mathbf{x}=
+\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+\qquad\Longrightarrow\qquad
+\mathbf{x}^T=
+\begin{bmatrix}x_1&x_2&x_3\end{bmatrix}.
+$$
+
+Why is this useful? One reason is that it allows us to write the ordinary scalar product of two real vectors using matrix multiplication:
+
+$$
+\mathbf{x}^T\mathbf{y}
+=
+\begin{bmatrix}x_1&\cdots&x_n\end{bmatrix}
+\begin{bmatrix}y_1\\\vdots\\y_n\end{bmatrix}
+=
+\sum_{i=1}^n x_i y_i.
+$$
+
+The transpose therefore occurs naturally whenever rows and columns need to be interchanged. An important identity is
+
+$$
+(AB)^T=B^TA^T.
+$$
+
+Notice that the order is reversed.
+
+## Complex vectors and the Hermitian transpose
+
+Quantum mechanics requires complex numbers, so we must extend these ideas from real vectors to complex vectors. Here an important subtlety appears.
+
+For real vectors, the scalar product is $\mathbf{x}^T\mathbf{y}$. If we simply used the same expression for a complex vector $\mathbf{z}$, we would obtain
+
+$$
+\mathbf{z}^T\mathbf{z}=\sum_i z_i^2,
+$$
+
+which need not even be real. This cannot serve as a sensible squared length.
+
+Instead, the complex scalar product uses the complex conjugate of the first vector:
+
+$$
+\sum_i z_i^*z_i=\sum_i |z_i|^2.
+$$
+
+This quantity is always real and non-negative. We therefore need an operation that both transposes a matrix **and** complex-conjugates its entries. This is the **Hermitian transpose**, also known as  the **conjugate transpose** or the **Hermitian adjoint**.
+
+The Hermitian transpose of $A$ is denoted by $A^H$, or oftentimes $A^\dagger$, and defined by
+
+$$
+(A^H)_{ij}=A_{ji}^*.
+$$
+
+Equivalently,
+
+$$
+A^H=(A^*)^T.
+$$
+
+For example,
+
+$$
+A=\begin{bmatrix}1&i\\2-i&3\end{bmatrix}
+\qquad\Longrightarrow\qquad
+A^H=\begin{bmatrix}1&2+i\\-i&3\end{bmatrix}.
+$$
+
+The scalar product of two complex vectors can now be written compactly as
+
+$$
+\mathbf{x}^H\mathbf{y}=\sum_i x_i^*y_i,
+$$
+
+and in particular,
+
+$$
+\|\mathbf{x}\|^2 = \mathbf{x}^H\mathbf{x}=\sum_i |x_i|^2\geq 0.
+$$
+
+For a real matrix, complex conjugation has no effect, and therefore
+
+$$
+A^H=A^T \quad \text{(for a real matrix)}.
+$$
+
+Just as for the ordinary transpose, taking the Hermitian transpose reverses the order of a product:
+
+$$
+(AB)^H=B^H A^H.
+$$
+
+The Hermitian transpose is especially important in quantum mechanics. A matrix satisfying
+
+$$
+A^H=A
+$$
+
+is called **Hermitian**. Hermitian matrices have real eigenvalues and represent observables in the usual matrix formulation of quantum mechanics.
+
+A matrix satisfying
+
+$$
+U^H U=UU^H=I
+$$
+
+is called **unitary**. Unitary matrices preserve scalar products and lengths. They therefore describe, among other things, changes between orthonormal bases and quantum-mechanical time evolution.
+
+These ideas - vectors, matrices, matrix products, transposes, and Hermitian transpose - provide the algebraic language needed for much of the linear algebra used throughout quantum chemistry.
 
 
 
