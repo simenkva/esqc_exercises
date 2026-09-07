@@ -10,11 +10,15 @@ Visualize the following subsets of $\mathbb{C}$. Decide which sets are open, clo
 
 $\{ z \mid |z-1| = 1 \}$
 
+[[Solution ↓](#solution-for-exr-complex-sets-exercise)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-complex-sets-exercise-2}
 
 $\{ z \mid |\mathrm{i}z-1| < 1 \}$
+
+[[Solution ↓](#solution-for-exr-complex-sets-exercise-2)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -22,17 +26,23 @@ $\{ z \mid |\mathrm{i}z-1| < 1 \}$
 
 $\{ z \mid |z-\mathrm{i}| + |z + \mathrm{i}| < 4 \}$
 
+[[Solution ↓](#solution-for-exr-complex-sets-exercise-3)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-complex-sets-exercise-4}
 
 $\{ z^2 \mid |z - \mathrm{i}| = 1 \}$
 
+[[Solution ↓](#solution-for-exr-complex-sets-exercise-4)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-complex-sets-exercise-5}
 
 $\{ z \mid \Re(e^{\mathrm{i}\pi/2} z) > 0 \}$
+
+[[Solution ↓](#solution-for-exr-complex-sets-exercise-5)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -46,23 +56,23 @@ $\{ z \mid \Im(z^2) > 0 \}$
 
 ## Solutions {.unnumbered}
 
-### Solution to @exr-complex-sets-exercise {.unnumbered}
+### Solution to @exr-complex-sets-exercise {#solution-for-exr-complex-sets-exercise .unnumbered}
 
 Square the equation and introduce $x$ and $y$ to get the equation for a circle, i.e., boundary of a circle. Alternatively just realize that the modulus $|w|$ is the distance from the origin.
 
-### Solution to @exr-complex-sets-exercise-2 {.unnumbered}
+### Solution to @exr-complex-sets-exercise-2 {#solution-for-exr-complex-sets-exercise-2 .unnumbered}
 
 Interior of a circle.
 
-### Solution to @exr-complex-sets-exercise-3 {.unnumbered}
+### Solution to @exr-complex-sets-exercise-3 {#solution-for-exr-complex-sets-exercise-3 .unnumbered}
 
 Ellipse with foci at $\pm \mathrm{i}$.
 
-### Solution to @exr-complex-sets-exercise-4 {.unnumbered}
+### Solution to @exr-complex-sets-exercise-4 {#solution-for-exr-complex-sets-exercise-4 .unnumbered}
 
 Parameterize the original circle by $z(t)=\mathrm{i}+e^{\mathrm{i}t}$, $0\leq t<2\pi$, and plot or analyze the image curve $z(t)^2$.
 
-### Solution to @exr-complex-sets-exercise-5 {.unnumbered}
+### Solution to @exr-complex-sets-exercise-5 {#solution-for-exr-complex-sets-exercise-5 .unnumbered}
 
 This is a half-plane.
 

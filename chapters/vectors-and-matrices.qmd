@@ -75,6 +75,8 @@ g. Verify by direct calculation that $2(\mathbf{x}+\mathbf{y})=2\mathbf{x}+2\mat
 
 h. Is $(1,2)$ an element of this vector space? Is $(0,0,0)$ an element? Explain briefly.
 
+[[Solution ↓](#solution-for-exr-vector-spaces-basic-operations)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -95,6 +97,8 @@ b. Compute $B\mathbf{y}$.
 c. Compute $A(2\mathbf{x})$ and $2(A\mathbf{x})$. Verify that they are equal.
 
 d. Can the products $A\mathbf{y}$ and $B\mathbf{x}$ be formed? Explain your answer in terms of the dimensions of the matrices and vectors.
+
+[[Solution ↓](#solution-for-exr-matrix-vector-multiplication)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -119,6 +123,8 @@ c. Compute $AC$. What are the dimensions of the resulting matrix?
 
 d. Can the product $CA$ be formed? Can the product $BC$ be formed? Explain your answers using the dimensions of the matrices.
 
+[[Solution ↓](#solution-for-exr-matrix-matrix-multiplication)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -142,6 +148,8 @@ a. Show by elementary means that the two vectors are linearly independent, that 
 b. The vectors form a basis since they are linearly independent. Explain in your own words what a basis is.
 c. Make a 2D drawing or plot of them as arrows from the origin.
 
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-work-space-plane-vectors-define-two)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate level="beginner"}
@@ -161,6 +169,8 @@ $$
 
 Illustrate this decomposition in the graph from the previous exercise, using the parallelogram rule: The sum of two vectors is obtained by placing the origin of one at the end of the second, or vice versa.
 
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-vectors-and-matrices-person-walks-home-first-they-walk recommended="math" level="intermediate" priority=10}
@@ -172,6 +182,8 @@ What are the coordinates of the office, relative to the person's home?
 
 What is the distance to home, as the crow flies?
 
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed recommended="math" level="intermediate" priority=10}
@@ -179,12 +191,16 @@ What is the distance to home, as the crow flies?
 
 A boat is sailing on the ocean, at a constant speed 20 km/h relative to the water surface, in the northeast direction. However, the water surface is moving too, at a constant velocity. After two hours, the boat is located 20 km north and 10 km east of the starting point. What is the speed and direction of ocean drift?
 
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-vectors-and-matrices-robert-beezer-three-digit-number-has recommended="math" level="intermediate" priority=10}
 ### An exercise by Robert Beezer
 
 A three-digit number has two properties. The tens-digit and the ones-digit add up to 5. If the number is written with the digits in the reverse order, and then subtracted from the original number, the result is 792. Use a system of equations to find all of the three-digit numbers with these properties.
+
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-robert-beezer-three-digit-number-has)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -196,6 +212,8 @@ A three-digit number has two properties. The tens-digit and the ones-digit add u
 ### Compute the action of a matrix on vectors
 
 Let $A$ be the $n\times n$ matrix defined by $A_{i,i+1} = i^2$ for $1 \leq i < n$, and zero otherwise. Compute the action of $A$ and $A^T$ on the standard basis for $\mathbb{R}^n$. Compute the action of $A$ and $A^T$ on an arbitrary vector $\mathbf{x}\in \mathbb{R}^n$.
+
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -263,6 +281,9 @@ e.	There is a similar interpretation in terms of rows. Write $A$ using its row v
 	Thus, the $i$th row of $AB$ is the row vector $\mathbf a_i^T B$.
 
 f.	Suppose the columns of $B$ are several vectors that we want to transform using the same linear transformation $A$. Explain why the identity from part d means that we can collect all the vectors into one matrix $B$ and perform a single matrix-matrix multiplication $AB$.
+
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined level="intermediate"}
@@ -272,6 +293,8 @@ $$
 \mathbf{c}_i = \sum_j \mathbf{a}_j B_{ji}.
 $$ 
 Show a similar result for the rows of $C$.
+
+[[Solution ↓](#solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -324,7 +347,7 @@ o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o  
 
 
 
-### Solution for @exr-vector-spaces-basic-operations {.unnumbered}
+### Solution for @exr-vector-spaces-basic-operations {#solution-for-exr-vector-spaces-basic-operations .unnumbered}
 
 a. Vector addition is performed component by component:
 
@@ -434,7 +457,7 @@ h. The vector $(1,2)$ is not an element of $\mathbb{R}^3$, since vectors in $\ma
 
 
 
-### Solution for @exr-matrix-vector-multiplication {.unnumbered}
+### Solution for @exr-matrix-vector-multiplication {#solution-for-exr-matrix-vector-multiplication .unnumbered}
 
 a. We multiply each row of $A$ by the column vector $x$:
 
@@ -476,7 +499,7 @@ d. The product $Ay$ cannot be formed because $A$ has two columns while $y$ has t
 
 
 
-### Solution for @exr-matrix-matrix-multiplication {.unnumbered}
+### Solution for @exr-matrix-matrix-multiplication {#solution-for-exr-matrix-matrix-multiplication .unnumbered}
 
 a. We obtain
 
@@ -510,7 +533,7 @@ d. The product $CA$ cannot be formed: $C$ is $2\times3$ and $A$ is $2\times2$, s
 
 
 
-### Solution to @exr-vectors-and-matrices-work-space-plane-vectors-define-two {.unnumbered}
+### Solution to @exr-vectors-and-matrices-work-space-plane-vectors-define-two {#solution-for-exr-vectors-and-matrices-work-space-plane-vectors-define-two .unnumbered}
 
 a.	Assume that
 	$$
@@ -555,7 +578,7 @@ b.	A basis is a set of linearly independent vectors that can be used to build ev
     
 c. See further down.
 
-### Solution to @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate {.unnumbered}
+### Solution to @exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate {#solution-for-exr-vectors-and-matrices-gaussian-elimination-compute-coefficients-such-illustrate .unnumbered}
 
 The equation gives a linear system $$\begin{gathered}
     \begin{bmatrix}
@@ -566,7 +589,7 @@ The equation gives a linear system $$\begin{gathered}
 ![image](../figures/exercises/sol-fig1.png){width="6cm"}
 
 
-### Solution for @exr-vectors-and-matrices-person-walks-home-first-they-walk {.unnumbered}
+### Solution for @exr-vectors-and-matrices-person-walks-home-first-they-walk {#solution-for-exr-vectors-and-matrices-person-walks-home-first-they-walk .unnumbered}
 
 Take east as the positive $x$-direction and north as the positive $y$-direction. The three displacements are
 
@@ -597,7 +620,7 @@ $$
 $$
 
 
-### Solution for @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed {.unnumbered}
+### Solution for @exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed {#solution-for-exr-vectors-and-matrices-boat-sailing-ocean-at-constant-speed .unnumbered}
 
 Take east as the positive $x$-direction and north as the positive $y$-direction. Since the boat travels northeast at $20$ km/h relative to the water, its velocity relative to the water is
 
@@ -646,7 +669,7 @@ $$
 
 Both components are negative, so the drift is toward the southwest. Its direction is approximately $24.4^\circ$ south of west.
 
-### Solution to @exr-vectors-and-matrices-robert-beezer-three-digit-number-has {.unnumbered}
+### Solution to @exr-vectors-and-matrices-robert-beezer-three-digit-number-has {#solution-for-exr-vectors-and-matrices-robert-beezer-three-digit-number-has .unnumbered}
 
 Let $a$ be the hundreds digit, $b$ the tens digit, and $c$ the ones digit. The first condition gives
 
@@ -722,7 +745,7 @@ $$
 
 
 
-### Solution for @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action {.unnumbered}
+### Solution for @exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action {#solution-for-exr-vectors-and-matrices-matrix-defined-zero-otherwise-compute-action .unnumbered}
 
 The matrix $A$ has the form
 
@@ -837,7 +860,7 @@ $$
 
 
 
-### Solution for @exr-vectors-and-matrices-write-terms-column-vectors-prove-i {.unnumbered}
+### Solution for @exr-vectors-and-matrices-write-terms-column-vectors-prove-i {#solution-for-exr-vectors-and-matrices-write-terms-column-vectors-prove-i .unnumbered}
 
 a.	The columns of
 	$$
@@ -1006,7 +1029,7 @@ f.	Suppose the columns of $B$ are vectors
 
 
 
-### Solution for @exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined {.unnumbered}
+### Solution for @exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined {#solution-for-exr-vectors-and-matrices-columns-linear-combination-columns-coefficients-determined .unnumbered}
 
 Let the columns of $A$ be
 

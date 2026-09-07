@@ -59,6 +59,9 @@ d.	Hence show, for $z\neq 1$, that
 	$$
 	S_N(z)=\frac{1-z^{N+1}}{1-z}.
 	$$
+
+[[Solution ↓](#solution-for-exr-complex-power-series-geometric-partial-sum)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-complex-power-series-geometric-convergence level="beginner"  }
@@ -89,6 +92,9 @@ d.	Conclude that
 e.	What happens when $z=1$? What happens when $z=-1$? Do these series converge?
 
 f.	The condition $|z|<1$ describes a region in the complex plane. What does this region look like?
+
+[[Solution ↓](#solution-for-exr-complex-power-series-geometric-convergence)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-complex-power-series-exponential-sine-cosine level="intermediate" recommended="math;topic" topic="second-quantization"}
@@ -131,6 +137,9 @@ c.	By comparing with Euler's formula, show that
 d.	Write out the first four nonzero terms of each series.
 
 e.	Use the series to obtain polynomial approximations to $\cos x$ and $\sin x$ containing terms up to and including order $x^5$.
+
+[[Solution ↓](#solution-for-exr-complex-power-series-exponential-sine-cosine)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-complex-power-series-plot-sine-cosine level="intermediate"}
@@ -153,6 +162,9 @@ c.	Plot $\cos x$ together with $C_0(x)$, $C_1(x)$, $C_2(x)$, and $C_3(x)$ over t
 d.	Make a corresponding plot for $\sin x$ and $S_0(x)$, $S_1(x)$, $S_2(x)$, and $S_3(x)$.
 
 e.	Describe what happens to the quality of the approximation as more terms are included. Is the approximation equally good close to $x=0$ and far away from $x=0$?
+
+[[Solution ↓](#solution-for-exr-complex-power-series-plot-sine-cosine)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-complex-power-series-exponential-removable-singularity level="intermediate"}
@@ -179,6 +191,9 @@ c.	Write the result using summation notation.
 d.	What value does the power series suggest that we should assign to $f(0)$?
 
 e.	Define $f(0)$ using your answer to part d. Explain why the apparent singularity at $z=0$ is then removed.
+
+[[Solution ↓](#solution-for-exr-complex-power-series-exponential-removable-singularity)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-complex-power-series-sinc level="intermediate"}
@@ -215,6 +230,9 @@ d.	Use the series to explain why the choice $f(0)=1$ is natural.
 e.	What is the coefficient of $z^2$ in the power series? What is the coefficient of $z^4$?
 
 f.	Show directly from the power series that $f(-z)=f(z)$. Thus $f$ is an even function.
+
+[[Solution ↓](#solution-for-exr-complex-power-series-sinc)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -280,6 +298,9 @@ e.	Use your result to show directly from the power series that
 	$$
 	e^ze^z=e^{2z}.
 	$$
+
+[[Solution ↓](#solution-for-exr-complex-power-series-cauchy-product)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -297,7 +318,7 @@ e.	Use your result to show directly from the power series that
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-complex-power-series-geometric-partial-sum {.unnumbered}
+### Solution for @exr-complex-power-series-geometric-partial-sum {#solution-for-exr-complex-power-series-geometric-partial-sum .unnumbered}
 
 a.	The first partial sums are
 
@@ -350,7 +371,7 @@ d.	For $z\neq1$, division by $1-z$ gives
 	$$
 
 
-### Solution for @exr-complex-power-series-geometric-convergence {.unnumbered}
+### Solution for @exr-complex-power-series-geometric-convergence {#solution-for-exr-complex-power-series-geometric-convergence .unnumbered}
 
 a.	For $z=\frac12$,
 
@@ -427,7 +448,7 @@ f.	The condition
 	describes the interior of the circle of radius $1$ centred at the origin in the complex plane. It is called the open unit disk.
 
 
-### Solution for @exr-complex-power-series-exponential-sine-cosine {.unnumbered}
+### Solution for @exr-complex-power-series-exponential-sine-cosine {#solution-for-exr-complex-power-series-exponential-sine-cosine .unnumbered}
 
 a.	Substituting $z=ix$ gives
 
@@ -502,7 +523,7 @@ e.	Keeping terms up to order $x^5$ gives
 	$$
 
 
-### Solution for @exr-complex-power-series-plot-sine-cosine {.unnumbered}
+### Solution for @exr-complex-power-series-plot-sine-cosine {#solution-for-exr-complex-power-series-plot-sine-cosine .unnumbered}
 
 a.	The first cosine partial sums are
 
@@ -575,7 +596,7 @@ e.	As more terms are included, the partial sums approximate sine and cosine accu
 	The full power series for sine and cosine converge for every real or complex value of their argument, but a low-order polynomial approximation need not be accurate far from the origin.
 
 
-### Solution for @exr-complex-power-series-exponential-removable-singularity {.unnumbered}
+### Solution for @exr-complex-power-series-exponential-removable-singularity {#solution-for-exr-complex-power-series-exponential-removable-singularity .unnumbered}
 
 a.	Starting from
 
@@ -616,7 +637,7 @@ e.	Although the original quotient $(e^z-1)/z$ is undefined at $z=0$, its power-s
 	fills in the missing value and removes the apparent singularity. Such a point is called a **removable singularity**.
 
 
-### Solution for @exr-complex-power-series-sinc {.unnumbered}
+### Solution for @exr-complex-power-series-sinc {#solution-for-exr-complex-power-series-sinc .unnumbered}
 
 a.	Dividing
 
@@ -677,7 +698,7 @@ f.	Only even powers of $z$ occur in the series. Therefore,
 
 
 
-### Solution for @exr-complex-power-series-cauchy-product {.unnumbered}
+### Solution for @exr-complex-power-series-cauchy-product {#solution-for-exr-complex-power-series-cauchy-product .unnumbered}
 
 a.	We have
 

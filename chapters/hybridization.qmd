@@ -323,6 +323,9 @@ g.	Finally, visualize the four $sp^3$ hybrid orbitals as isosurfaces. For the vi
 	```
 
 	Compare the directions of the large lobes in your plots with the four vectors $\mathbf n_1,\ldots,\mathbf n_4$. Explain how the coefficients of $p_x$, $p_y$, and $p_z$ determine the spatial orientation of each hybrid.
+
+[[Solution ↓](#solution-for-exr-hybridization-orbital-geometry)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -334,7 +337,7 @@ g.	Finally, visualize the four $sp^3$ hybrid orbitals as isosurfaces. For the vi
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-hybridization-orbital-geometry {.unnumbered}
+### Solution for @exr-hybridization-orbital-geometry {#solution-for-exr-hybridization-orbital-geometry .unnumbered}
 
 a.	For an $sp$ hybrid
 

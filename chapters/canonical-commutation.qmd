@@ -1,0 +1,236 @@
+# Canonical commutation relations
+
+# Canonical commutation relations
+
+In quantum mechanics, physical quantities such as position, momentum, and energy are represented by **linear operators** acting on quantum states. Unlike ordinary numbers, operators do not in general commute: the order in which two operators are applied can matter. Given two operators $\hat{A}$ and $\hat{B}$, their **commutator** is defined as
+$$
+[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}.
+$$
+Thus $[\hat{A},\hat{B}]=0$ precisely when the two operators commute. Commutators play a fundamental role throughout quantum mechanics, both in expressing the mathematical structure of the theory and in deriving properties of quantum systems.
+
+The most important example in elementary quantum mechanics is the **canonical commutation relation** between position and momentum. In one spatial dimension,
+$$
+[\hat{x},\hat{p}]=i\hbar\hat{1},
+$$
+where $\hat{1}$ denotes the identity operator. In the position representation, the two operators act on a wavefunction $\psi$ according to
+$$
+(\hat{x}\psi)(x)=x\psi(x),\qquad (\hat{p}\psi)(x)=\frac{\hbar}{i}\frac{d\psi(x)}{dx}.
+$$
+The commutation relation follows directly from these definitions and the product rule for differentiation. It is important to understand this as an **operator identity**: it states that applying $[\hat{x},\hat{p}]$ to any suitable wavefunction has the same effect as multiplying that wavefunction by $i\hbar$.
+
+Canonical commutation relations also appear naturally when quantum systems are described using **creation and annihilation operators**. For bosons, creation and annihilation operators $\hat{a}_p^\dagger$ and $\hat{a}_p$ satisfy the canonical commutation relations
+$$
+[\hat{a}_p,\hat{a}_q^\dagger]=\delta_{pq}\hat{1},\qquad [\hat{a}_p,\hat{a}_q]=0,\qquad [\hat{a}_p^\dagger,\hat{a}_q^\dagger]=0.
+$$
+These relations encode the algebraic structure associated with particles obeying Bose--Einstein statistics.
+
+For fermions, ordinary commutators are replaced by **anticommutators**. The anticommutator is defined by
+$$
+\{\hat{A},\hat{B}\}=\hat{A}\hat{B}+\hat{B}\hat{A},
+$$
+and fermionic creation and annihilation operators satisfy the canonical anticommutation relations
+$$
+\{\hat{a}_p,\hat{a}_q^\dagger\}=\delta_{pq}\hat{1},\qquad \{\hat{a}_p,\hat{a}_q\}=0,\qquad \{\hat{a}_p^\dagger,\hat{a}_q^\dagger\}=0.
+$$
+In particular, setting $p=q$ gives
+$$
+(\hat{a}_p^\dagger)^2=(\hat{a}_p)^2=0.
+$$
+Thus a fermionic one-particle state cannot be occupied more than once. This is the algebraic manifestation of the Pauli exclusion principle and is one reason anticommutation relations are central to electronic-structure theory.
+
+Commutation and anticommutation relations allow us to manipulate products of operators without referring to a particular matrix representation. For example, if
+$$
+[\hat{A},\hat{B}]=\hat{C},
+$$
+then we can interchange the order of $\hat{A}$ and $\hat{B}$ according to
+$$
+\hat{A}\hat{B}=\hat{B}\hat{A}+\hat{C}.
+$$
+Similarly, canonical (anti)commutation relations can be used repeatedly to rearrange strings of creation and annihilation operators. Such manipulations occur throughout quantum chemistry, in particular in second quantization and many-body theory. The exercises in this chapter provide practice with these algebraic rules, beginning with the position--momentum commutator and progressing to bosonic and fermionic creation and annihilation operators.
+
+
+
+## Exercises {.unnumbered}
+
+
+
+::: {#exr-canonical-commutation-relation level="intermediate"}
+### The canonical commutation relation in one dimension
+
+Consider wavefunctions of one spatial variable,
+$$
+\psi\in L^2(\mathbb{R})=\mathcal{H}.
+$$
+
+A linear operator $\hat{A}$ maps wavefunctions to wavefunctions,
+$$
+\hat{A}:\mathcal{H}\to\mathcal{H},\qquad \psi\mapsto\hat{A}\psi.
+$$
+
+Strictly speaking, some operators are defined only on suitable subspaces of $\mathcal{H}$.
+
+The position and momentum operators are defined by their action on a wavefunction:
+$$
+(\hat{x}\psi)(x)=x\psi(x)
+$$
+and
+$$
+(\hat{p}\psi)(x)=\frac{\hbar}{i}\frac{d\psi(x)}{dx}.
+$$
+
+Products of operators mean composition,
+$$
+(\hat{A}\hat{B})\psi=\hat{A}(\hat{B}\psi),
+$$
+and the commutator of two operators is
+$$
+[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}.
+$$
+
+a. In the expression
+	$$
+	(\hat{x}\psi)(x)=x\psi(x),
+	$$
+	the letter $x$ occurs in several different roles. Explain the difference between the operator $\hat{x}$, the argument $x$ on the left-hand side, and the factor $x$ on the right-hand side. What are the input and output of the operator $\hat{x}$? Why is it mathematically misleading to write simply $\hat{x}=x$?
+
+b. Show that the position operator $\hat{x}$ is linear. That is, show that for wavefunctions $\psi,\varphi$ and scalars $a,b\in\mathbb{C}$,
+	$$
+	\hat{x}(a\psi+b\varphi)=a\hat{x}\psi+b\hat{x}\varphi.
+	$$
+
+c. Let $\psi$ be an arbitrary sufficiently differentiable wavefunction. Evaluate
+	$$
+	([\hat{x},\hat{p}]\psi)(x)
+	$$
+	by first expanding the definition of the commutator and then applying the definitions of $\hat{x}$ and $\hat{p}$. Use the product rule when necessary.
+
+d. Hence show that
+	$$
+	[\hat{x},\hat{p}]=i\hbar\hat{1},
+	$$
+	where $\hat{1}$ is the identity operator. Explain why the right-hand side is written as $i\hbar\hat{1}$ rather than simply as the number $i\hbar$.
+
+[[Solution ↓](#solution-for-exr-canonical-commutation-relation)]{.content-visible when-profile="tutor"}
+
+:::
+
+
+
+
+
+::::{.content-visible when-profile="tutor"}
+
+## Solutions {.unnumbered}
+
+
+
+### Solution for @exr-canonical-commutation-relation {#solution-for-exr-canonical-commutation-relation .unnumbered}
+
+a. In
+	$$
+	(\hat{x}\psi)(x)=x\psi(x),
+	$$
+	the hatted symbol $\hat{x}$ denotes an **operator**. It takes a wavefunction $\psi$ as input and returns a new wavefunction:
+	$$
+	\hat{x}:\psi\mapsto\big(x\mapsto x\psi(x)\big).
+	$$
+
+	The $x$ in $(\hat{x}\psi)(x)$ is the point at which the resulting wavefunction is evaluated. The unhatted $x$ on the right-hand side is the value of that same real variable, now acting as an ordinary numerical factor multiplying $\psi(x)$.
+
+	Thus $\hat{x}$ and $x$ are different kinds of mathematical objects. The former is an operator acting on functions, whereas the latter is a real number or variable. Therefore, writing
+	$$
+	\hat{x}=x
+	$$
+	is mathematically misleading. A more precise statement is that **the position operator acts by multiplication by $x$**.
+
+b. Let $\psi,\varphi\in\mathcal{H}$ and $a,b\in\mathbb{C}$. Applying the position operator gives
+	$$
+	\big(\hat{x}(a\psi+b\varphi)\big)(x)=x\big(a\psi(x)+b\varphi(x)\big).
+	$$
+
+	Distributing $x$,
+	$$
+	\big(\hat{x}(a\psi+b\varphi)\big)(x)=a\,x\psi(x)+b\,x\varphi(x).
+	$$
+
+	Using the definition of $\hat{x}$ again,
+	$$
+	\big(\hat{x}(a\psi+b\varphi)\big)(x)=a(\hat{x}\psi)(x)+b(\hat{x}\varphi)(x).
+	$$
+
+	Since this holds for every $x$,
+	$$
+	\hat{x}(a\psi+b\varphi)=a\hat{x}\psi+b\hat{x}\varphi.
+	$$
+
+	Thus $\hat{x}$ is a linear operator.
+
+c. From the definition of the commutator,
+	$$
+	[\hat{x},\hat{p}]=\hat{x}\hat{p}-\hat{p}\hat{x}.
+	$$
+
+	Applying this operator to an arbitrary wavefunction $\psi$ gives
+	$$
+	([\hat{x},\hat{p}]\psi)(x)=(\hat{x}\hat{p}\psi)(x)-(\hat{p}\hat{x}\psi)(x).
+	$$
+
+	For the first term, the outer operator is $\hat{x}$, so
+	$$
+	(\hat{x}\hat{p}\psi)(x)=x(\hat{p}\psi)(x)=x\frac{\hbar}{i}\frac{d\psi(x)}{dx}.
+	$$
+
+	For the second term, the outer operator is $\hat{p}$:
+	$$
+	(\hat{p}\hat{x}\psi)(x)=\frac{\hbar}{i}\frac{d}{dx}(\hat{x}\psi)(x)=\frac{\hbar}{i}\frac{d}{dx}\big(x\psi(x)\big).
+	$$
+
+	Using the product rule,
+	$$
+	\frac{d}{dx}\big(x\psi(x)\big)=\psi(x)+x\frac{d\psi(x)}{dx}.
+	$$
+
+	Therefore,
+	$$
+	([\hat{x},\hat{p}]\psi)(x)=x\frac{\hbar}{i}\frac{d\psi(x)}{dx}-\frac{\hbar}{i}\left(\psi(x)+x\frac{d\psi(x)}{dx}\right).
+	$$
+
+	The two terms containing $x\psi'(x)$ cancel:
+	$$
+	([\hat{x},\hat{p}]\psi)(x)=-\frac{\hbar}{i}\psi(x).
+	$$
+
+	Since $1/i=-i$,
+	$$
+	-\frac{\hbar}{i}=i\hbar,
+	$$
+	and hence
+	$$
+	([\hat{x},\hat{p}]\psi)(x)=i\hbar\psi(x).
+	$$
+
+d. The identity operator $\hat{1}$ is defined by
+	$$
+	\hat{1}\psi=\psi.
+	$$
+
+	Therefore,
+	$$
+	i\hbar\psi=(i\hbar\hat{1})\psi.
+	$$
+
+	We have shown that, for an arbitrary wavefunction $\psi$,
+	$$
+	[\hat{x},\hat{p}]\psi=i\hbar\hat{1}\psi.
+	$$
+
+	Hence the operator identity is
+	$$
+	\boxed{[\hat{x},\hat{p}]=i\hbar\hat{1}.}
+	$$
+
+	The left-hand side is an operator, so the right-hand side must also be an operator. The quantity $i\hbar$ by itself is a scalar, whereas $i\hbar\hat{1}$ is the operator that multiplies every wavefunction by $i\hbar$.
+
+	A useful general principle is that when an operator identity is unclear, one can apply both sides to an arbitrary wavefunction and compare the resulting functions.
+
+::::

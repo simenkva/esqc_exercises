@@ -101,6 +101,9 @@ c.  Conclude that the sum of two even integers is even.
 
 d.  Which part of your argument would fail if one of the two integers
     were odd?
+
+[[Solution ↓](#solution-for-exr-proofs-direct-even)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-counterexample level="beginner"}
@@ -119,6 +122,9 @@ d.  Every diagonal $2\times2$ matrix is invertible.
 
 e.  If $A$ is a real matrix, then every entry of $A^\mathsf{T}A$ is
     positive.
+
+[[Solution ↓](#solution-for-exr-proofs-counterexample)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-contrapositive-basic level="beginner"}
@@ -135,6 +141,9 @@ c.  Show that the square of an odd integer is odd.
 
 d.  Use the contrapositive to conclude that if $n^2$ is even, then $n$
     is even.
+
+[[Solution ↓](#solution-for-exr-proofs-contrapositive-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-contradiction-basic level="beginner"}
@@ -151,6 +160,9 @@ c.  Explain why this contradicts the assumption that $N$ is the largest
     integer.
 
 d.  State the conclusion.
+
+[[Solution ↓](#solution-for-exr-proofs-contradiction-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-pigeonhole-basic level="beginner"}
@@ -166,6 +178,9 @@ c.  A basis set contains 21 basis functions, each assigned one of four
     six basis functions have the same label.
 
 d.  Which version of the pigeonhole principle do you need for part c?
+
+[[Solution ↓](#solution-for-exr-proofs-pigeonhole-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-induction-basic level="beginner" recommended="topic" topic="second-quantization"}
@@ -191,6 +206,9 @@ d.  Simplify the right-hand side and show that you obtain
 
 e.  Explain why the base case and induction step prove the formula for
     every positive integer $n$.
+
+[[Solution ↓](#solution-for-exr-proofs-induction-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-direct-matrix level="intermediate" recommended="topic" topic="second-quantization"}
@@ -214,6 +232,9 @@ d.  Show that $A^\mathsf{T}A$ is symmetric.
 
 e.  Explain why these results show that $A^\mathsf{T}A$ is positive
     semidefinite.
+
+[[Solution ↓](#solution-for-exr-proofs-direct-matrix)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-contrapositive-matrix level="intermediate"}
@@ -236,6 +257,9 @@ c.  Suppose instead that $A$ is not invertible. You may use the fact
     $y^\dagger A=0$. Show that $y^\dagger AB=0$.
 
 d.  Combine the two arguments to prove the original statement.
+
+[[Solution ↓](#solution-for-exr-proofs-contrapositive-matrix)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-contradiction-orthogonal level="intermediate"}
@@ -262,6 +286,9 @@ d.  Conclude that eigenvectors of a Hermitian matrix belonging to
 
 e.  Why is this result useful when eigenvectors represent quantum states
     or molecular orbitals?
+
+[[Solution ↓](#solution-for-exr-proofs-contradiction-orthogonal)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-pigeonhole-orbitals level="intermediate"}
@@ -282,6 +309,9 @@ c.  Generalize part b: for $K\leq N\leq2K$, prove that at least $N-K$
 
 d.  Explain why the result is a counting statement and does not depend
     on the energies of the orbitals.
+
+[[Solution ↓](#solution-for-exr-proofs-pigeonhole-orbitals)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-induction-geometric level="intermediate"}
@@ -304,6 +334,9 @@ c.  Add $r^{n+1}$ and simplify the resulting expression.
 d.  Complete the induction proof.
 
 e.  For $|r|<1$, what does the formula suggest as $n\to\infty$?
+
+[[Solution ↓](#solution-for-exr-proofs-induction-geometric)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-proofs-advanced-commutator level="advanced" recommended="math"}
@@ -339,6 +372,9 @@ e.  Derive a contradiction.
 f.  Explain what this tells us about representing the exact position and
     momentum operators by finite matrices. Does it prevent us from using
     finite matrix approximations in practical quantum chemistry?
+
+[[Solution ↓](#solution-for-exr-proofs-advanced-commutator)]{.content-visible when-profile="tutor"}
+
 :::
 
 ## Solutions {#solutions .unnumbered}

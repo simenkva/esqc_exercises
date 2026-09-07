@@ -186,6 +186,9 @@ c. Compute $\partial f/\partial x_2$.
 d. Collect the two partial derivatives into the gradient $\nabla_{\mathbf x}f$.
 
 e. Evaluate the gradient at $\mathbf x=(1,2)^T$.
+
+[[Solution ↓](#solution-for-exr-vector-gradient-components)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-vector-quadratic-form level="beginner" recommended="topic" topic="second-quantization"}
@@ -210,6 +213,9 @@ d. Verify explicitly that
 	$$
 
 e. Use a short Python script to evaluate $f$ and its gradient at $\mathbf x=(1,-1)^T$.
+
+[[Solution ↓](#solution-for-exr-vector-quadratic-form)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-rayleigh-two-dimensional level="beginner"}
@@ -236,6 +242,9 @@ c. Verify directly that multiplying $\mathbf c$ by $2$ does not change $R$.
 d. The stationary vectors satisfy $\mathbf H\mathbf c=R\mathbf S\mathbf c$. Insert $\mathbf c=(1,0)^T$ and determine $R$.
 
 e. Repeat part d for $\mathbf c=(0,1)^T$. What familiar matrix problem have you recovered?
+
+[[Solution ↓](#solution-for-exr-rayleigh-two-dimensional)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -281,6 +290,9 @@ e.	Now consider
 	where $A$ is a constant number. Compute $\partial g/\partial c$ and $\partial g/\partial c^*$.
 
 f.	Let $c=x+iy$. Check that $c^*c=x^2+y^2$. Thus, although we treated $c$ and $c^*$ as independent when differentiating, are they actually independent complex numbers?
+
+[[Solution ↓](#solution-for-exr-vector-differentiation-complex-independent)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -330,6 +342,9 @@ c. Show that a stationary point satisfies
 d. Suppose $\mathbf c$ satisfies $\mathbf H\mathbf c=\varepsilon\mathbf S\mathbf c$. Show directly that $R(\mathbf c)=\varepsilon$.
 
 e. Explain in words why minimizing the Rayleigh quotient is closely connected to finding the lowest-energy eigenvector.
+
+[[Solution ↓](#solution-for-exr-rayleigh-gradient-generalized-eigenproblem)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-h2plus-bonding-antibonding level="intermediate"}
@@ -364,6 +379,9 @@ d. Take $\alpha=-0.50$, $\beta=-0.20$, and $s=0.30$ in atomic units. Compute the
 e. Normalize $\mathbf c_+$ and $\mathbf c_-$ with respect to the overlap matrix, so that $\mathbf c^T \mathbf S\mathbf c=1$.
 
 f. Use Python and `scipy.linalg.eigh(H, S)` to calculate the generalized eigenvalues and eigenvectors numerically, and compare with your results.
+
+[[Solution ↓](#solution-for-exr-h2plus-bonding-antibonding)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-rayleigh-angle level="intermediate"}
@@ -394,6 +412,9 @@ c. Identify which stationary points are minima and which are maxima. Relate the 
 d. Write a short Python script that plots $R(\theta)$ for $0\leq\theta\leq2\pi$. Mark or print the minimum and maximum values.
 
 e. What does this example suggest about the relationship between the smallest/largest eigenvalues and the minimum/maximum of the Rayleigh quotient?
+
+[[Solution ↓](#solution-for-exr-rayleigh-angle)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-rayleigh-second-order level="advanced"}
@@ -448,6 +469,9 @@ e. Now choose $\mathbf v=\mathbf u_j$ with $j\ne k$. Show that
 f. Use this result to explain why the lowest eigenvector is a minimum of the Rayleigh quotient, the highest eigenvector is a maximum, and an eigenvector in the middle generally has both uphill and downhill directions.
 
 g. Choose a diagonal $3\times3$ matrix with three different eigenvalues and verify the second-order formula numerically with a short Python script. Try several decreasing values of $\delta$ and examine how rapidly the approximation improves.
+
+[[Solution ↓](#solution-for-exr-rayleigh-second-order)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -472,7 +496,7 @@ g. Choose a diagonal $3\times3$ matrix with three different eigenvalues and veri
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-vector-gradient-components {.unnumbered}
+### Solution for @exr-vector-gradient-components {#solution-for-exr-vector-gradient-components .unnumbered}
 
 The vector notation is only a compact way of writing an ordinary function of two variables.
 
@@ -506,7 +530,7 @@ $$
 \nabla f(1,2)=\begin{pmatrix}2\\12\end{pmatrix}.
 $$
 
-### Solution for @exr-vector-quadratic-form {.unnumbered}
+### Solution for @exr-vector-quadratic-form {#solution-for-exr-vector-quadratic-form .unnumbered}
 
 a. Matrix-vector multiplication gives
 
@@ -554,7 +578,7 @@ print(f)
 print(grad)
 ```
 
-### Solution for @exr-rayleigh-two-dimensional {.unnumbered}
+### Solution for @exr-rayleigh-two-dimensional {#solution-for-exr-rayleigh-two-dimensional .unnumbered}
 
 a. Since $\mathbf S=\mathbf I$,
 
@@ -602,7 +626,7 @@ so $R=3$. We have recovered the ordinary eigenvalue equation $\mathbf H\mathbf c
 
 
 
-### Solution for @exr-vector-differentiation-complex-independent {.unnumbered}
+### Solution for @exr-vector-differentiation-complex-independent {#solution-for-exr-vector-differentiation-complex-independent .unnumbered}
 
 a.	When differentiating with respect to $c$, we treat $c^*$ as a constant. Therefore
 	$$
@@ -662,7 +686,7 @@ f.	We have
 
 
 
-### Solution for @exr-rayleigh-gradient-generalized-eigenproblem {.unnumbered}
+### Solution for @exr-rayleigh-gradient-generalized-eigenproblem {#solution-for-exr-rayleigh-gradient-generalized-eigenproblem .unnumbered}
 
 a. Writing the numerator with indices,
 
@@ -712,7 +736,7 @@ Division by the positive denominator gives $R(\mathbf c)=\varepsilon$.
 
 e. The stationary vectors of $R$ are generalized eigenvectors, and at each such vector the value of $R$ is the corresponding eigenvalue. The variational principle states, in particular, that the smallest possible Rayleigh quotient is the lowest generalized eigenvalue. Thus energy minimization leads naturally to the lowest-energy eigenvector.
 
-### Solution for @exr-h2plus-bonding-antibonding {.unnumbered}
+### Solution for @exr-h2plus-bonding-antibonding {#solution-for-exr-h2plus-bonding-antibonding .unnumbered}
 
 a. Apart from normalization,
 
@@ -795,7 +819,7 @@ print(C.T @ S @ C)
 
 The eigenvalues agree with the analytical values. The eigenvectors may differ from the expressions above by an overall sign, which has no physical significance. The final matrix should be the identity, showing that the returned eigenvectors are $\mathbf S$-orthonormal.
 
-### Solution for @exr-rayleigh-angle {.unnumbered}
+### Solution for @exr-rayleigh-angle {#solution-for-exr-rayleigh-angle .unnumbered}
 
 a. Since $\mathbf c(\theta)$ is normalized,
 
@@ -837,7 +861,7 @@ print("maximum:", R.max())
 
 e. In this example the minimum of the Rayleigh quotient is the smallest eigenvalue, $1$, and the maximum is the largest eigenvalue, $4$. This is true much more generally for Hermitian matrices.
 
-### Solution for @exr-rayleigh-second-order {.unnumbered}
+### Solution for @exr-rayleigh-second-order {#solution-for-exr-rayleigh-second-order .unnumbered}
 
 a. Expanding the norm,
 

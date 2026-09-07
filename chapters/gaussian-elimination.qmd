@@ -38,6 +38,8 @@ c. Use Gaussian elimination on the augmented matrix $[S\,|\,I]$ to compute $S^{-
 
 d. Verify your result by computing $SS^{-1}$.
 
+[[Solution ↓](#solution-for-exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -63,6 +65,8 @@ $$
 
 Use Gaussian elimination to find all possible solutions. Write the solution set using set notation.
 
+[[Solution ↓](#solution-for-exr-gaussian-elimination-robert-beezer-consider-following-system-equations)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-gaussian-elimination-robert-beezer-find-all-possible-solutions}
@@ -77,6 +81,8 @@ $$
 $$ 
 
 Write down the solution set using set notation.
+
+[[Solution ↓](#solution-for-exr-gaussian-elimination-robert-beezer-find-all-possible-solutions)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -93,6 +99,8 @@ $$
 
 Write down the solution set using set notation.
 
+[[Solution ↓](#solution-for-exr-gaussian-elimination-robert-beezer-find-all-possible-solutions-2)]{.content-visible when-profile="tutor"}
+
 :::
 
 <!-- -->
@@ -101,11 +109,15 @@ Write down the solution set using set notation.
 
 Let $\mathbf{b}_i$, $i=1,2,\cdots,n$ be a basis for $\mathbb{R}^n$. Let $$B = [\mathbf{b}_1, \mathbf{b}_2, \cdots, \mathbf{b}_n]$$ be the *basis matrix*, whose columns are precisely the $\mathbf{b}_i$. Explain that if $\mathbf{y} = x_1 \mathbf{b}_1 + \cdots + x_n \mathbf{b}_n$, then $$B \mathbf{x} = \mathbf{y}.$$ Solve for $\mathbf{x}$ using $B$ in symbols.
 
+[[Solution ↓](#solution-for-exr-gaussian-elimination-basis-basis-matrix-whose-columns-precisely)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-gaussian-elimination-linearly-independent-vectors-given-write-down}
 
 Let $n$ linearly independent vectors $B = \{\mathbf{b}_1, \cdots,\mathbf{b}_n\}$ of $\mathbb{F}^n$ be given. Write down a formula for the dual basis in terms of the overlap matrix.
+
+[[Solution ↓](#solution-for-exr-gaussian-elimination-linearly-independent-vectors-given-write-down)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -114,7 +126,7 @@ Let $n$ linearly independent vectors $B = \{\mathbf{b}_1, \cdots,\mathbf{b}_n\}$
 ## Solutions {.unnumbered}
 
 
-### Solution for @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined {.unnumbered}
+### Solution for @exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined {#solution-for-exr-gaussian-elimination-compute-overlap-matrix-basis-basis-defined .unnumbered}
 
 a. The overlap matrix is defined by
 
@@ -261,15 +273,15 @@ d. We verify that
 
 *The source does not supply a solution.*
 
-### Solution to @exr-gaussian-elimination-robert-beezer-consider-following-system-equations {.unnumbered}
+### Solution to @exr-gaussian-elimination-robert-beezer-consider-following-system-equations {#solution-for-exr-gaussian-elimination-robert-beezer-consider-following-system-equations .unnumbered}
 
 Using elementary operations, we get the augmented matrix $$\begin{bmatrix} 1 & 0 & 0 & 0 & 1 \\ 0 & 1 & 0 & 0 & -3 \\ 0 & 0 & 1 & 0 & -4 \\ 0 & 0 & 0 & 1 & 1 \end{bmatrix}.$$ The solution is unique: $x_1=1$, $x_2=-3$, $x_3=-4$, and $x_4=1$. Thus $$S=\{[1,-3,-4,1]^T\}.$$
 
-### Solution to @exr-gaussian-elimination-robert-beezer-find-all-possible-solutions {.unnumbered}
+### Solution to @exr-gaussian-elimination-robert-beezer-find-all-possible-solutions {#solution-for-exr-gaussian-elimination-robert-beezer-find-all-possible-solutions .unnumbered}
 
 By elementary row operations, we obtain the augmented matrix: $$\begin{bmatrix} 1 & 0 & 1 & 4/5 & 0 \\ 0 & 1 & -1 & -1/10 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{bmatrix}$$ The last row represents the equation $0=1$, so there cannot be a solution to the system. $S = \{ \} = \emptyset$.
 
-### Solution to @exr-gaussian-elimination-robert-beezer-find-all-possible-solutions-2 {.unnumbered}
+### Solution to @exr-gaussian-elimination-robert-beezer-find-all-possible-solutions-2 {#solution-for-exr-gaussian-elimination-robert-beezer-find-all-possible-solutions-2 .unnumbered}
 
 The augmented matrix reduces to $$\begin{pmatrix} 1 & 2 & 0 & -4 & 2 \\ 0 & 0 & 1 & 3 & -6 \\ 0 & 0 & 0 & 0 & 0 \end{pmatrix}.$$ Hence $x_2$ and $x_4$ are free, while $$x_1=-2x_2+4x_4+2,\qquad x_3=-3x_4-6.$$ The solution set is
 
@@ -277,11 +289,11 @@ $$
 S=\{[-2x_2+4x_4+2,x_2,-3x_4-6,x_4]^T\mid x_2,x_4\in\mathbb{F}\}.
 $$
 
-### Solution to @exr-gaussian-elimination-basis-basis-matrix-whose-columns-precisely {.unnumbered}
+### Solution to @exr-gaussian-elimination-basis-basis-matrix-whose-columns-precisely {#solution-for-exr-gaussian-elimination-basis-basis-matrix-whose-columns-precisely .unnumbered}
 
 We know that the overlap matrix should be key here. So we multiply with $B^T$ from the left to get $B^T B \mathbf{x} = B^T \mathbf{y}$. Thus, $$\mathbf{x} = S^{-1} B^T \mathbf{y}.$$ We know that the overlap matrix $S = B^T B$ is invertible, since $B$ is a basis matrix.
 
-### Solution to @exr-gaussian-elimination-linearly-independent-vectors-given-write-down {.unnumbered}
+### Solution to @exr-gaussian-elimination-linearly-independent-vectors-given-write-down {#solution-for-exr-gaussian-elimination-linearly-independent-vectors-given-write-down .unnumbered}
 
 The dual basis $\tilde{B} = [\tilde{\mathbf{b}}_1, \cdots \tilde{\mathbf{b}}_n]$ is such that $\left\langle\tilde{\mathbf{b}}_i,\mathbf{b}_j\right\rangle = \delta_{ij}$. We obtain the equation $$\tilde{B}^H B = I.$$ Thus, $$\tilde{B} = (B^{-1})^H.$$
 

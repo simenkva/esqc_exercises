@@ -57,6 +57,8 @@ $$
 
 5.  Make visualizations of the truncated SVD of the image $A$, with various $m$. Compute the relative error $\| A^{(m)} - A\|_\text{HS} / \|A\|_\text{HS}$ for each $m$ you consider. Discuss the image quality.
 
+[[Solution ↓](#solution-for-exr-singular-value-decomposition-singular-value-decomposition-compression-tool)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
@@ -67,7 +69,7 @@ $$
 
 **Tutor note:** This exercise combines computations with accessible analysis. It will probably take most of an hour, depending on the student.
 
-### Solution to @exr-singular-value-decomposition-singular-value-decomposition-compression-tool {.unnumbered}
+### Solution to @exr-singular-value-decomposition-singular-value-decomposition-compression-tool {#solution-for-exr-singular-value-decomposition-singular-value-decomposition-compression-tool .unnumbered}
 
 **For the orthonormal-matrix question.**
 

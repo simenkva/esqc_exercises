@@ -42,6 +42,9 @@ g.	Suppose another student writes the days in a different order,
 	$$
 
 	Is $D'=D$? 
+
+[[Solution ↓](#solution-for-exr-sets-and-functions-write-days-week-set)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-sets-and-functions-ordered-pair-two-element-set-where}
@@ -103,6 +106,8 @@ Draw a picture, representing $X$ as the whole sheet, $A$ and $B$ as overlapping 
 
 Prove De Morgan's laws mathematically. Note that the complement operation acts like negation of truth, i.e., $a \in A^\complement$ if and only if $a \in X$ and $a \notin A$.
 
+[[Solution ↓](#solution-for-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically)]{.content-visible when-profile="tutor"}
+
 :::
 
 ## Exercises: Sets in quantum chemistry {.unnumbered}
@@ -143,6 +148,9 @@ e. Based on the figure, which of the following statements are true?
     - $S_{E_2} = (r_1,+\infty)$
     - $S_{E_2} = [r_1,+\infty)$
     - $S_{E_2} = \{ r_1,r_2, r_3 \}$
+
+[[Solution ↓](#solution-for-exr-sets-potential-energy-curve)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -239,6 +247,8 @@ g. Explain why
 
 h. Show that $M$ and $S$ have the same cardinality. Explain why this is possible even though $S$ is a proper subset of $M$.
 
+[[Solution ↓](#solution-for-exr-molecule-sets)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -273,7 +283,7 @@ h. Show that $M$ and $S$ have the same cardinality. Explain why this is possible
 ## Solutions {.unnumbered}
 
 
-### Solution for @exr-sets-and-functions-write-days-week-set {.unnumbered}
+### Solution for @exr-sets-and-functions-write-days-week-set {#solution-for-exr-sets-and-functions-write-days-week-set .unnumbered}
 
 a.	The set of days of the week is
 
@@ -363,11 +373,11 @@ g.	Yes,
 
 *The source does not supply a solution.*
 
-### Solution to @exr-sets-and-functions-prove-de-morgan-s-laws-mathematically {.unnumbered}
+### Solution to @exr-sets-and-functions-prove-de-morgan-s-laws-mathematically {#solution-for-exr-sets-and-functions-prove-de-morgan-s-laws-mathematically .unnumbered}
 
 Here is the proof of the first one: $x \in (A \cup B)^\complement$ iff $x \notin A \cup B$ iff $x\notin A$ and $x \notin B$ iff $x \in A^\complement$ and $x \in B^\complement$ iff $x \in A^\complement \cap B^\complement$.
 
-### Solution to @exr-sets-potential-energy-curve {.unnumbered}
+### Solution to @exr-sets-potential-energy-curve {#solution-for-exr-sets-potential-energy-curve .unnumbered}
 
 a. The notation
 
@@ -491,7 +501,7 @@ Hence the statements have truth values
 
 
 
-### Solution to @exr-molecule-sets {.unnumbered}
+### Solution to @exr-molecule-sets {#solution-for-exr-molecule-sets .unnumbered}
 
 a. A molecule is uniquely determined by an ordered quadruple
 

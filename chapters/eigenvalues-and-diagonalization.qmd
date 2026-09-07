@@ -146,6 +146,9 @@ d.	Consider
 e.	The vectors in parts a and d are different vectors, but they point in the same direction. What eigenvalue do they have? What does this tell you about scalar multiples of an eigenvector?
 
 f.	Compare the two eigenvectors found in parts a and b. Compute their ordinary dot product. What do you observe?
+
+[[Solution ↓](#solution-for-exr-check-candidate-eigenvectors)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -214,6 +217,9 @@ c.	Suppose that the concentration vector has the form
 	$$
 
 	Thus $c(t)=c(0)e^{-2kt}$. What happens to this contribution as time increases? What happens more rapidly if the rate constant $k$ is increased? Explain why the two eigenvectors $\mathbf{x}_1$ and $\mathbf{x}_2$ can be interpreted as an *equilibrium mode* and a *relaxation mode*, respectively.
+
+[[Solution ↓](#solution-for-exr-eigenvalues-chemical-kinetics)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -292,6 +298,9 @@ g.	Verify by direct matrix multiplication that
 	$$
 
 	Equivalently, verify that $U^HAU=D$. Explain briefly why $U^{-1}=U^H$ in this diagonalization.
+
+[[Solution ↓](#solution-for-exr-hermitian-2x2-eigenvalue-problem)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -323,6 +332,9 @@ a.	Find the eigenvalues of $A$ by solving the characteristic equation $\det(A-\l
 b.	Find all eigenvectors corresponding to the eigenvalue you found. How many linearly independent eigenvectors does $A$ have?
 
 c.	To diagonalize a $2\times2$ matrix, we need two linearly independent eigenvectors, which can be used as the columns of an invertible matrix $U$. Explain why this is impossible for $A$, and conclude that $A$ is not diagonalizable.
+
+[[Solution ↓](#solution-for-exr-nondiagonalizable-2x2-matrix)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -363,6 +375,9 @@ c.	The other eigenvector describes relaxation toward equilibrium. Show that its 
 	$$
 
 	What does this tell you about the rate at which the system approaches equilibrium?
+
+[[Solution ↓](#solution-for-exr-eigenvalues-chemical-kinetics-asymmetric)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -480,6 +495,8 @@ f.	The eigenvalue analysis predicts not only that the system approaches equilibr
 
 	On the same plot, add a curve proportional to $e^{\lambda_{\mathrm{slow}}t}$, choosing its prefactor so that it can easily be compared with $d(t)$. Do the two curves become parallel at long times? Explain why a straight line on this logarithmic plot provides a direct visualization of the slowest relaxation mode of the reaction network.
 
+[[Solution ↓](#solution-for-exr-eigenvalues-computational-reaction-network)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -514,7 +531,7 @@ f.	The eigenvalue analysis predicts not only that the system approaches equilibr
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-check-candidate-eigenvectors {.unnumbered}
+### Solution for @exr-check-candidate-eigenvectors {#solution-for-exr-check-candidate-eigenvectors .unnumbered}
 
 a.	For
 
@@ -654,7 +671,7 @@ f.	The two eigenvectors found in parts a and b are
 	Thus the two eigenvectors are orthogonal. This illustrates an important property of real symmetric matrices: eigenvectors belonging to different eigenvalues can be chosen to be orthogonal.
 
 
-### Solution for @exr-eigenvalues-chemical-kinetics {.unnumbered}
+### Solution for @exr-eigenvalues-chemical-kinetics {#solution-for-exr-eigenvalues-chemical-kinetics .unnumbered}
 
 a.	For
 
@@ -812,7 +829,7 @@ c.	Suppose
 
 
 
-### Solution for @exr-hermitian-2x2-eigenvalue-problem {.unnumbered}
+### Solution for @exr-hermitian-2x2-eigenvalue-problem {#solution-for-exr-hermitian-2x2-eigenvalue-problem .unnumbered}
 
 a.	We have
 
@@ -1123,7 +1140,7 @@ g.	We now evaluate
 
 
 
-### Solution for @exr-nondiagonalizable-2x2-matrix {.unnumbered}
+### Solution for @exr-nondiagonalizable-2x2-matrix {#solution-for-exr-nondiagonalizable-2x2-matrix .unnumbered}
 
 a.	We solve the characteristic equation
 
@@ -1223,7 +1240,7 @@ c.	To diagonalize a $2\times2$ matrix, we need two linearly independent eigenvec
 
 
 
-### Solution for @exr-eigenvalues-chemical-kinetics-asymmetric {.unnumbered}
+### Solution for @exr-eigenvalues-chemical-kinetics-asymmetric {#solution-for-exr-eigenvalues-chemical-kinetics-asymmetric .unnumbered}
 
 a.	The rate matrix is
 
@@ -1432,7 +1449,7 @@ c.	The second eigenvalue is
 
 
 
-### Solution for @exr-eigenvalues-computational-reaction-network {.unnumbered}
+### Solution for @exr-eigenvalues-computational-reaction-network {#solution-for-exr-eigenvalues-computational-reaction-network .unnumbered}
 
 a.	For species A, material is lost through $\mathrm{A}\to\mathrm{B}$ and gained through $\mathrm{B}\to\mathrm{A}$, giving
 

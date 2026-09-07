@@ -35,13 +35,15 @@ c. Let
    Compute $T^2$, $T^3$, and $T^4$. Use the results to evaluate the degree-four
    approximation to $\exp(T)$.
 
+[[Solution ↓](#solution-for-exr-matrix-exponential)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions {.unnumbered}
 
-### Solution to @exr-matrix-exponential {.unnumbered}
+### Solution to @exr-matrix-exponential {#solution-for-exr-matrix-exponential .unnumbered}
 
 a. Substituting $n=0,1,2,3,4$ in @eq-matrix-exponential gives
 

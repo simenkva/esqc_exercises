@@ -14,11 +14,15 @@ Assume we have an initial guess $\mathbf{x}_0\in\Omega$.
 
 Explain why the following polynomial is a good approximation to $f(\mathbf{x})$ near $\mathbf{x}_0$: $$p(\mathbf{x}) = f(\mathbf{x}_0) + J(\mathbf{x}-\mathbf{x}_0), \quad J = Df(\mathbf{x}_0).$$
 
+[[Solution ↓](#solution-for-exr-newtons-method-explain-why-following-polynomial-good-approximation)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-newtons-method-newton-s-method-now-finds-new}
 
 Newton's method now finds a new guess $\mathbf{x}_1$ by finding the root of the Taylor polynomial, i.e., $p(\mathbf{x}_1) = 0$. Write down a formula for $\mathbf{x}_1$, assuming that the matrix $J$ has an inverse.
+
+[[Solution ↓](#solution-for-exr-newtons-method-newton-s-method-now-finds-new)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -48,7 +52,7 @@ Make a Python implementation of Newton's method and test it on the following fun
 
 **Tutor note:** Newton--Raphson is an important nonlinear root-finding algorithm, although quantum-chemistry calculations may avoid a full Newton step because solving with the Jacobian is expensive. This exercise also develops Taylor approximations of vector-valued functions.
 
-### Solution to @exr-newtons-method-explain-why-following-polynomial-good-approximation {.unnumbered}
+### Solution to @exr-newtons-method-explain-why-following-polynomial-good-approximation {#solution-for-exr-newtons-method-explain-why-following-polynomial-good-approximation .unnumbered}
 
 For a $C^2$ function, Taylor's theorem gives
 
@@ -57,7 +61,7 @@ f(\mathbf{x})=f(\mathbf{x}_0)+Df(\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0)
 +\mathcal{O}(\|\mathbf{x}-\mathbf{x}_0\|^2).
 $$
 
-### Solution to @exr-newtons-method-newton-s-method-now-finds-new {.unnumbered}
+### Solution to @exr-newtons-method-newton-s-method-now-finds-new {#solution-for-exr-newtons-method-newton-s-method-now-finds-new .unnumbered}
 
 $$\mathbf{x}_1 = \mathbf{x}_0 - J^{-1} f(\mathbf{x}_0).$$
 

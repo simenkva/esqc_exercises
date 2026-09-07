@@ -41,6 +41,8 @@ descriptive identifier:
 ```markdown
 ::: {#exr-short-name}
 Write the exercise here.
+
+[[Solution ↓](#solution-for-exr-short-name)]{.content-visible when-profile="tutor"}
 :::
 ```
 
@@ -97,7 +99,7 @@ Keep solutions and tutor notes inside the tutor profile gate:
 ::: {.content-visible when-profile="tutor"}
 ## Solutions
 
-### Solution to @exr-short-name {.unnumbered}
+### Solution to @exr-short-name {#solution-for-exr-short-name .unnumbered}
 
 Write the solution here.
 :::

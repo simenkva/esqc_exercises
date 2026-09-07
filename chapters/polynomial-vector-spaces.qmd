@@ -12,6 +12,8 @@ Recall that a polynomial of degree $n$ over $\mathbb{F}$ has the form $$p(x) = a
 
 Let $P_n$ be the set of all polynomials of degree less than or equal to $n$. Show that $P_n$ is a vector space of dimension $n+1$ over $\mathbb{C}$.
 
+[[Solution ↓](#solution-for-exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-polynomial-vector-spaces-differentiation-operator-i-e-indeed-linear  level="intermediate"}
@@ -24,11 +26,15 @@ Let $D : P_n \to P_n$ be the differentiation operator, i.e., $$(D p)(x) = p'(x).
 
 Does there exist an inverse of $D$?
 
+[[Solution ↓](#solution-for-exr-polynomial-vector-spaces-does-there-exist-inverse)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write}
 
 Let $B = \{1, x, x^2, \cdots, x^n\}$ be the basis of *monomials*. Using bra-ket notation, we write the basis operator as $$\hat{B} = \sum_{i=1}^{n+1} \left|x^{i-1}\right\rangle\left\langle i\right|,$$ where $\left|i\right\rangle$ is a standard basis vector for $\mathbb{F}^{n+1}$. Compute the matrix of $D$ relative to this basis. (Note carefully that we do not have an inner product defined.) That is, find a matrix $T$ such that $$D \hat{B} = \hat{B} T.$$
+
+[[Solution ↓](#solution-for-exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -45,6 +51,8 @@ Show that $\left\langle\cdot|\cdot\right\rangle$ is indeed an inner product by c
 :::{#exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis}
 
 Compute the overlap matrix $S$ of the monomial basis. Is the basis orthonormal?
+
+[[Solution ↓](#solution-for-exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -86,7 +94,7 @@ The so-called Golub--Welsch algorithm is a simple algorithm based on diagonaliza
 
 **Tutor note:** Treating functions as vectors is important in quantum chemistry. The recommended sub-exercises should be broadly accessible; the remaining exercises may require tutor preparation.
 
-### Solution to @exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than {.unnumbered}
+### Solution to @exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than {#solution-for-exr-polynomial-vector-spaces-set-all-polynomials-degree-less-than .unnumbered}
 
 The sum of two polynomials is a polynomial. A scalar multiple of a polynomial is a polynomial. The polynomials $x^i$ are clearly linearly independent. Since all polynomials are linear combinations of such, the dimension must be equal to the number of coefficients, $n+1$.
 
@@ -94,11 +102,11 @@ The sum of two polynomials is a polynomial. A scalar multiple of a polynomial is
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-does-there-exist-inverse {.unnumbered}
+### Solution to @exr-polynomial-vector-spaces-does-there-exist-inverse {#solution-for-exr-polynomial-vector-spaces-does-there-exist-inverse .unnumbered}
 
 No inverse exists, since the null space of $D$ is nontrivial (the constant polynomials). The indefinite integral would be a candidate for inverse, but the integral is only determined up to a constant.
 
-### Solution to @exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write {.unnumbered}
+### Solution to @exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write {#solution-for-exr-polynomial-vector-spaces-basis-monomials-bra-ket-notation-write .unnumbered}
 
 Since $(x^{i-1})' = (i-1)x^{i-2}$ for $i>1$, we get $$T_{i-1,i}=i-1, \qquad i=2,\ldots,n+1,$$ and all other matrix elements are zero.
 
@@ -106,7 +114,7 @@ Since $(x^{i-1})' = (i-1)x^{i-2}$ for $i>1$, we get $$T_{i-1,i}=i-1, \qquad i=2,
 
 *The source does not supply a solution.*
 
-### Solution to @exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis {.unnumbered}
+### Solution to @exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis {#solution-for-exr-polynomial-vector-spaces-compute-overlap-matrix-monomial-basis-basis .unnumbered}
 
 $$\int_{-1}^1 x^i x^j \; \mathrm{d}x = \frac{1}{i+j+1}(1-(-1)^{i+j+1}).$$ Clearly not an orthonormal basis, since the matrix is not the identity matrix.
 

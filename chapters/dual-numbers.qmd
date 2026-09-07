@@ -28,6 +28,8 @@ Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i
 
 7.  Let $p(x)$ and $q(x)$ be polynomials, and consider the *rational function* $f(x) = p(x)/q(x)$. Where $q(x)\neq0$, extend the rational function to $\mathbb{R}(\varepsilon)$ and prove that $f(x+\varepsilon) = f(x) + \varepsilon f'(x)$.
 
+[[Solution ↓](#solution-for-exr-dual-numbers-dual-numbers)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
@@ -38,7 +40,7 @@ Their construction resembles $\mathbb{C}=\mathbb{R}(\mathrm{i})$, but $\mathrm{i
 
 This exercise is perhaps for the specially interested.
 
-### Solution to @exr-dual-numbers-dual-numbers {.unnumbered}
+### Solution to @exr-dual-numbers-dual-numbers {#solution-for-exr-dual-numbers-dual-numbers .unnumbered}
 
 **For part 2.**
 

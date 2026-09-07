@@ -1,0 +1,642 @@
+---
+title: "Complex numbers"
+---
+
+Complex numbers extend the real numbers by introducing a number $i$ satisfying
+$$
+i^2=-1.
+$$
+They are indispensable in quantum mechanics: wave functions, state vectors, matrix elements, Fourier transforms, and time evolution are naturally complex-valued. Before using complex numbers in these settings, it is important to be comfortable with their elementary arithmetic and geometry.
+
+## Basic facts
+
+A **complex number** has the form
+$$
+z=a+ib,
+$$
+where $a,b\in\mathbb{R}$. The number $a$ is the **real part** and $b$ is the **imaginary part**:
+$$
+\operatorname{Re}z=a,\qquad \operatorname{Im}z=b.
+$$
+Notice that the imaginary part is the real number $b$, not $ib$.
+
+Two complex numbers are equal precisely when their real and imaginary parts are equal:
+$$
+a+ib=c+id \quad\Longleftrightarrow\quad a=c\text{ and }b=d.
+$$
+
+Real numbers are special complex numbers: $a=a+i0$. A **purely imaginary** number has zero real part, for example $3i$ or $-i/2$.
+
+### Arithmetic
+
+Addition and subtraction are performed by collecting real and imaginary parts:
+$$
+(a+ib)+(c+id)=(a+c)+i(b+d),
+$$
+$$
+(a+ib)-(c+id)=(a-c)+i(b-d).
+$$
+
+For multiplication, use the ordinary distributive law together with $i^2=-1$:
+$$
+(a+ib)(c+id)=ac+iad+ibc+i^2bd=(ac-bd)+i(ad+bc).
+$$
+
+The powers of $i$ repeat every four steps:
+$$
+i^0=1,\qquad i^1=i,\qquad i^2=-1,\qquad i^3=-i,\qquad i^4=1.
+$$
+
+### Complex conjugation and absolute value
+
+The **complex conjugate** of
+$$
+z=a+ib
+$$
+is
+$$
+\overline z=a-ib.
+$$
+Geometrically, conjugation reflects a complex number across the real axis.
+
+Multiplying a number by its conjugate gives a nonnegative real number:
+$$
+z\overline z=(a+ib)(a-ib)=a^2+b^2.
+$$
+The **absolute value**, or **modulus**, is therefore
+$$
+|z|=\sqrt{a^2+b^2},
+$$
+so that
+$$
+|z|^2=z\overline z.
+$$
+
+This identity is useful for division. If $w\neq0$, multiply numerator and denominator by $\overline w$:
+$$
+\frac{z}{w}=\frac{z\overline w}{w\overline w}=\frac{z\overline w}{|w|^2}.
+$$
+The denominator is then real.
+
+Some useful conjugation rules are
+$$
+\overline{z+w}=\overline z+\overline w,\qquad
+\overline{zw}=\overline z\,\overline w,\qquad
+\overline{\left(\frac zw\right)}=\frac{\overline z}{\overline w}.
+$$
+
+### The complex plane
+
+We can represent $z=a+ib$ as the point $(a,b)$ in the **complex plane**. The horizontal axis is the real axis and the vertical axis is the imaginary axis. The modulus $|z|$ is the distance from the origin to $z$.
+
+A nonzero complex number can also be described by its modulus $r=|z|$ and an angle $\theta$, called an **argument**:
+$$
+z=r(\cos\theta+i\sin\theta).
+$$
+The angle is not unique: adding $2\pi k$, with $k\in\mathbb Z$, gives the same point.
+
+Euler's formula,
+$$
+e^{i\theta}=\cos\theta+i\sin\theta,
+$$
+allows the compact **polar form**
+$$
+z=re^{i\theta}.
+$$
+This makes multiplication especially simple:
+$$
+r_1e^{i\theta_1}r_2e^{i\theta_2}=r_1r_2e^{i(\theta_1+\theta_2)}.
+$$
+Thus, multiplying complex numbers multiplies their lengths and adds their angles. Similarly,
+$$
+\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}
+=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}.
+$$
+
+For an integer $n$, De Moivre's formula follows:
+$$
+(\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta).
+$$
+
+Complex numbers also have multiple roots. For example, the equation $z^n=1$ has the $n$ solutions
+$$
+z_k=e^{2\pi i k/n},\qquad k=0,1,\ldots,n-1.
+$$
+These are equally spaced around the unit circle. This simple fact is an early example of how algebra and geometry fit together beautifully in the complex plane.
+
+## Exercises {.unnumbered}
+
+::: {#exr-complex-identify-parts level="beginner"}
+### Real and imaginary parts
+
+For each complex number, state its real and imaginary parts.
+
+a.	$z=3+2i$
+
+b.	$z=-4+5i$
+
+c.	$z=7$
+
+d.	$z=-3i$
+
+e.	$z=\frac12-\frac34i$
+
+[[Solution ↓](#solution-for-exr-complex-identify-parts)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-basic-arithmetic level="beginner"}
+### First arithmetic with complex numbers
+
+Compute and write each answer in the form $a+ib$.
+
+a.	$(2+3i)+(4-i)$
+
+b.	$(5+2i)-(1+7i)$
+
+c.	$3(2-i)$
+
+d.	$i(2+3i)$
+
+e.	$(1+i)(1-i)$
+
+f.	$(2+i)^2$
+
+[[Solution ↓](#solution-for-exr-complex-basic-arithmetic)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-powers-i level="beginner"}
+### Powers of $i$
+
+Use the repeating pattern of powers of $i$ to simplify the following.
+
+a.	$i^2$
+
+b.	$i^3$
+
+c.	$i^4$
+
+d.	$i^5$
+
+e.	$i^{10}$
+
+f.	$i^{2026}$
+
+[[Solution ↓](#solution-for-exr-complex-powers-i)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-conjugate-modulus level="beginner"}
+### Conjugates and absolute values
+
+For each number $z$, find $\overline z$, $|z|$, and $z\overline z$.
+
+a.	$z=3+4i$
+
+b.	$z=1-i$
+
+c.	$z=-2i$
+
+d.	$z=-5$
+
+[[Solution ↓](#solution-for-exr-complex-conjugate-modulus)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-plane level="beginner"}
+### Finding your way in the complex plane
+
+Sketch a complex plane and mark the following numbers. For each number, also state its distance from the origin.
+
+a.	$1+i$
+
+b.	$-1+i$
+
+c.	$-1-i$
+
+d.	$1-i$
+
+e.	$2$
+
+f.	$-2i$
+
+	What geometric operation changes $z$ into $\overline z$?
+
+[[Solution ↓](#solution-for-exr-complex-plane)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-division level="intermediate"}
+### Division of complex numbers
+
+Write each quotient in the form $a+ib$ by multiplying numerator and denominator by the conjugate of the denominator.
+
+a.	$\displaystyle\frac{1}{1+i}$
+
+b.	$\displaystyle\frac{2+i}{1-i}$
+
+c.	$\displaystyle\frac{3-2i}{2+i}$
+
+d.	Show directly that $\displaystyle\frac{1}{z}=\frac{\overline z}{|z|^2}$ for every $z\neq0$.
+
+[[Solution ↓](#solution-for-exr-complex-division)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-conjugation-identities level="intermediate"}
+### Working with conjugation
+
+Let $z,w\in\mathbb C$.
+
+a.	Verify, by writing $z=a+ib$, that $z+\overline z=2\operatorname{Re}z$.
+
+b.	Verify that $z-\overline z=2i\operatorname{Im}z$.
+
+c.	Use these results to express $\operatorname{Re}z$ and $\operatorname{Im}z$ using only $z$ and $\overline z$.
+
+d.	Show that $\overline{zw}=\overline z\,\overline w$.
+
+e.	Show that $|zw|=|z||w|$.
+
+[[Solution ↓](#solution-for-exr-complex-conjugation-identities)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-polar-form level="intermediate"}
+### Cartesian and polar form
+
+For each number, find a modulus $r$ and an argument $\theta$, and write the number as $re^{i\theta}$.
+
+a.	$1+i$
+
+b.	$-1+i$
+
+c.	$-i$
+
+d.	$-\sqrt{3}+i$
+
+e.	Convert $2e^{i\pi/3}$ back to the form $a+ib$.
+
+[[Solution ↓](#solution-for-exr-complex-polar-form)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-multiply-polar level="intermediate"}
+### Multiplication as rotation and scaling
+
+Let
+$$
+z=2e^{i\pi/6},\qquad w=3e^{i\pi/4}.
+$$
+
+a.	Find $zw$ in polar form.
+
+b.	Find $z/w$ in polar form.
+
+c.	What happens to the modulus when we multiply by $w$?
+
+d.	What happens to the argument when we multiply by $w$?
+
+e.	Explain geometrically why multiplication by a complex number can be viewed as a combination of scaling and rotation.
+
+[[Solution ↓](#solution-for-exr-complex-multiply-polar)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-roots-unity level="intermediate"}
+### Roots of unity: algebra becomes geometry
+
+Solve
+$$
+z^4=1.
+$$
+
+a.	Write $1$ as $e^{2\pi i k}$, where $k\in\mathbb Z$.
+
+b.	Find the four distinct fourth roots of $1$ in exponential form.
+
+c.	Write them in the form $a+ib$.
+
+d.	Plot the four roots in the complex plane.
+
+e.	What geometric figure do they form?
+
+[[Solution ↓](#solution-for-exr-complex-roots-unity)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-quantum-phase level="intermediate"}
+### A first glimpse of quantum-mechanical phase
+
+In quantum mechanics, multiplying a state by a complex number of modulus one,
+$$
+e^{i\theta},
+$$
+is called multiplication by a **phase factor**.
+
+Let
+$$
+z=3+4i.
+$$
+
+a.	Show that $|e^{i\theta}|=1$.
+
+b.	Show that $|e^{i\theta}z|=|z|$.
+
+c.	Compute $iz$ and locate both $z$ and $iz$ in the complex plane.
+
+d.	What rotation takes $z$ into $iz$?
+
+e.	Compute $e^{i\pi}z$. What geometric operation has occurred?
+
+	This preservation of magnitude under multiplication by a phase is one reason complex numbers appear so naturally in quantum mechanics.
+
+[[Solution ↓](#solution-for-exr-complex-quantum-phase)]{.content-visible when-profile="tutor"}
+
+:::
+
+::: {#exr-complex-mandelbrot level="advanced"}
+### An excursion: the Mandelbrot iteration
+
+Complex arithmetic can produce unexpectedly intricate geometry. Starting from $z_0=0$, choose a complex number $c$ and repeatedly calculate
+$$
+z_{n+1}=z_n^2+c.
+$$
+The Mandelbrot set consists of those values of $c$ for which this sequence does not escape to infinity.
+
+a.	For $c=0$, calculate $z_0,z_1,\ldots,z_5$.
+
+b.	For $c=-1$, calculate $z_0,z_1,\ldots,z_6$. What pattern do you see?
+
+c.	For $c=1$, calculate terms until $|z_n|>2$.
+
+d.	Write a short Python function that takes $c$ and a maximum number of iterations and performs this iteration. Stop if $|z_n|>2$.
+
+e.	Optional: sample many values $c=x+iy$ in a rectangle of the complex plane and make an image in which each point is represented by the number of iterations required before $|z_n|>2$. Explore the boundary of the Mandelbrot set.
+
+[[Solution ↓](#solution-for-exr-complex-mandelbrot)]{.content-visible when-profile="tutor"}
+
+:::
+
+## Solutions {.unnumbered}
+
+### Solution for @exr-complex-identify-parts {#solution-for-exr-complex-identify-parts .unnumbered}
+
+a. $\operatorname{Re}z=3$, $\operatorname{Im}z=2$.
+
+b. $\operatorname{Re}z=-4$, $\operatorname{Im}z=5$.
+
+c. $\operatorname{Re}z=7$, $\operatorname{Im}z=0$.
+
+d. $\operatorname{Re}z=0$, $\operatorname{Im}z=-3$.
+
+e. $\operatorname{Re}z=\frac12$, $\operatorname{Im}z=-\frac34$.
+
+### Solution for @exr-complex-basic-arithmetic {#solution-for-exr-complex-basic-arithmetic .unnumbered}
+
+a. $6+2i$.
+
+b. $4-5i$.
+
+c. $6-3i$.
+
+d. $2i+3i^2=-3+2i$.
+
+e. $(1+i)(1-i)=1-i^2=2$.
+
+f. $(2+i)^2=4+4i+i^2=3+4i$.
+
+### Solution for @exr-complex-powers-i {#solution-for-exr-complex-powers-i .unnumbered}
+
+a. $-1$.
+
+b. $-i$.
+
+c. $1$.
+
+d. $i$.
+
+e. Since $10=4\cdot2+2$, $i^{10}=i^2=-1$.
+
+f. Since $2026=4\cdot506+2$, $i^{2026}=i^2=-1$.
+
+### Solution for @exr-complex-conjugate-modulus {#solution-for-exr-complex-conjugate-modulus .unnumbered}
+
+a. $\overline z=3-4i$, $|z|=5$, and $z\overline z=25$.
+
+b. $\overline z=1+i$, $|z|=\sqrt2$, and $z\overline z=2$.
+
+c. $\overline z=2i$, $|z|=2$, and $z\overline z=4$.
+
+d. $\overline z=-5$, $|z|=5$, and $z\overline z=25$.
+
+### Solution for @exr-complex-plane {#solution-for-exr-complex-plane .unnumbered}
+
+The points are $(1,1)$, $(-1,1)$, $(-1,-1)$, $(1,-1)$, $(2,0)$, and $(0,-2)$, respectively. Their distances from the origin are $\sqrt2,\sqrt2,\sqrt2,\sqrt2,2,2$.
+
+Complex conjugation reflects a point across the real axis: $(a,b)\mapsto(a,-b)$.
+
+### Solution for @exr-complex-division {#solution-for-exr-complex-division .unnumbered}
+
+a.
+$$
+\frac{1}{1+i}=\frac{1-i}{(1+i)(1-i)}=\frac{1-i}{2}=\frac12-\frac12i.
+$$
+
+b.
+$$
+\frac{2+i}{1-i}=\frac{(2+i)(1+i)}{2}=\frac{1+3i}{2}.
+$$
+
+c.
+$$
+\frac{3-2i}{2+i}=\frac{(3-2i)(2-i)}{5}=\frac{4-7i}{5}.
+$$
+
+d. Since $z\overline z=|z|^2$,
+$$
+\frac1z=\frac{\overline z}{z\overline z}=\frac{\overline z}{|z|^2}.
+$$
+
+### Solution for @exr-complex-conjugation-identities {#solution-for-exr-complex-conjugation-identities .unnumbered}
+
+Write $z=a+ib$.
+
+a.
+$$
+z+\overline z=(a+ib)+(a-ib)=2a=2\operatorname{Re}z.
+$$
+
+b.
+$$
+z-\overline z=(a+ib)-(a-ib)=2ib=2i\operatorname{Im}z.
+$$
+
+c.
+$$
+\operatorname{Re}z=\frac{z+\overline z}{2},\qquad
+\operatorname{Im}z=\frac{z-\overline z}{2i}.
+$$
+
+d. If $z=a+ib$ and $w=c+id$, then
+$$
+zw=(ac-bd)+i(ad+bc),
+$$
+so
+$$
+\overline{zw}=(ac-bd)-i(ad+bc)=(a-ib)(c-id)=\overline z\,\overline w.
+$$
+
+e.
+$$
+|zw|^2=(zw)\overline{zw}=z\overline z\,w\overline w=|z|^2|w|^2.
+$$
+Both sides are nonnegative, so $|zw|=|z||w|$.
+
+### Solution for @exr-complex-polar-form {#solution-for-exr-complex-polar-form .unnumbered}
+
+a. $r=\sqrt2$, $\theta=\pi/4$, so $z=\sqrt2e^{i\pi/4}$.
+
+b. $r=\sqrt2$, $\theta=3\pi/4$, so $z=\sqrt2e^{3\pi i/4}$.
+
+c. $r=1$, $\theta=-\pi/2$, so $z=e^{-i\pi/2}$.
+
+d. $r=2$, $\theta=5\pi/6$, so $z=2e^{5\pi i/6}$.
+
+e.
+$$
+2e^{i\pi/3}=2\left(\frac12+i\frac{\sqrt3}{2}\right)=1+i\sqrt3.
+$$
+
+### Solution for @exr-complex-multiply-polar {#solution-for-exr-complex-multiply-polar .unnumbered}
+
+a.
+$$
+zw=6e^{i(\pi/6+\pi/4)}=6e^{5\pi i/12}.
+$$
+
+b.
+$$
+\frac zw=\frac23e^{i(\pi/6-\pi/4)}=\frac23e^{-i\pi/12}.
+$$
+
+c. Multiplication by $w$ multiplies the modulus by $|w|=3$.
+
+d. It increases the argument by $\pi/4$.
+
+e. For $w=re^{i\theta}$, multiplication by $w$ changes $\rho e^{i\phi}$ into $r\rho e^{i(\phi+\theta)}$. Thus lengths are scaled by $r$ and angles are rotated by $\theta$.
+
+### Solution for @exr-complex-roots-unity {#solution-for-exr-complex-roots-unity .unnumbered}
+
+a.
+$$
+1=e^{2\pi i k},\qquad k\in\mathbb Z.
+$$
+
+b. Taking fourth roots gives
+$$
+z=e^{2\pi i k/4}=e^{i\pi k/2}.
+$$
+The four distinct solutions are obtained for $k=0,1,2,3$:
+$$
+1,\quad e^{i\pi/2},\quad e^{i\pi},\quad e^{3i\pi/2}.
+$$
+
+c. These are
+$$
+1,\quad i,\quad -1,\quad -i.
+$$
+
+d. They lie at $(1,0)$, $(0,1)$, $(-1,0)$, and $(0,-1)$.
+
+e. They form the vertices of a square centered at the origin.
+
+### Solution for @exr-complex-quantum-phase {#solution-for-exr-complex-quantum-phase .unnumbered}
+
+a. Using Euler's formula,
+$$
+|e^{i\theta}|=|\cos\theta+i\sin\theta|=\sqrt{\cos^2\theta+\sin^2\theta}=1.
+$$
+
+b.
+$$
+|e^{i\theta}z|=|e^{i\theta}||z|=|z|.
+$$
+
+c.
+$$
+iz=i(3+4i)=-4+3i.
+$$
+Thus $z$ is the point $(3,4)$ and $iz$ is $(-4,3)$.
+
+d. Multiplication by $i=e^{i\pi/2}$ is a counterclockwise rotation by $\pi/2$.
+
+e. Since $e^{i\pi}=-1$,
+$$
+e^{i\pi}z=-z=-3-4i.
+$$
+This is a rotation by $\pi$ about the origin.
+
+### Solution for @exr-complex-mandelbrot {#solution-for-exr-complex-mandelbrot .unnumbered}
+
+a. For $c=0$, every term is zero:
+$$
+z_0=z_1=\cdots=z_5=0.
+$$
+
+b. For $c=-1$,
+$$
+z_0=0,\quad z_1=-1,\quad z_2=0,\quad z_3=-1,\quad z_4=0,\quad z_5=-1,\quad z_6=0.
+$$
+The sequence alternates between $0$ and $-1$.
+
+c. For $c=1$,
+$$
+z_0=0,\quad z_1=1,\quad z_2=2,\quad z_3=5.
+$$
+Thus $|z_3|>2$.
+
+d. One possible implementation is
+
+```{python}
+def mandelbrot_iterations(c, max_iterations=100):
+    z = 0j
+    for n in range(max_iterations):
+        z = z**2 + c
+        if abs(z) > 2:
+            return n + 1
+    return max_iterations
+```
+
+e. A compact visualization is
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+nx, ny = 700, 500
+xs = np.linspace(-2.0, 1.0, nx)
+ys = np.linspace(-1.2, 1.2, ny)
+
+iterations = np.empty((ny, nx))
+
+for j, y in enumerate(ys):
+    for i, x in enumerate(xs):
+        c = x + 1j*y
+        iterations[j, i] = mandelbrot_iterations(c, max_iterations=100)
+
+plt.figure(figsize=(8, 6))
+plt.imshow(
+    iterations,
+    extent=[xs.min(), xs.max(), ys.min(), ys.max()],
+    origin="lower",
+    aspect="equal",
+)
+plt.xlabel(r"$\operatorname{Re}c$")
+plt.ylabel(r"$\operatorname{Im}c$")
+plt.title("Mandelbrot iteration")
+plt.show()
+```
+
+The most intricate structure appears near the boundary between points that escape rapidly and points that remain bounded for many iterations.

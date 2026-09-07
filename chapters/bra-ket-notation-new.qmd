@@ -90,6 +90,9 @@ d. Write $\langle\psi|$ as a row vector. Remember that taking the adjoint involv
 e. Calculate $\langle 2|\psi\rangle$, first using bra-ket notation and then by multiplying a row vector by a column vector.
 
 f. Calculate $\langle\psi|\psi\rangle$ using the row and column vectors. What is the norm $\|\psi\|$?
+
+[[Solution ↓](#solution-for-exr-bra-ket-column-vectors)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -120,6 +123,9 @@ c. Compute $\langle2|\psi\rangle$.
 d. Compute $\langle\psi|\psi\rangle$.
 
 e. What condition must $c_1$ and $c_2$ satisfy if $|\psi\rangle$ is normalized?
+
+[[Solution ↓](#solution-for-exr-bra-ket-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-bra-ket-basis-operator level="intermediate"}
@@ -150,6 +156,9 @@ $$
 $$
 
 e. Explain why $\hat B^\dagger\hat B$ is the overlap matrix of the basis $B$, expressed as an operator on $\mathbb C^n$.
+
+[[Solution ↓](#solution-for-exr-bra-ket-basis-operator)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-bra-ket-molecular-orbitals level="intermediate"}
@@ -188,6 +197,9 @@ $$
 $$
 
 f. Show that $\langle\psi_+|\psi_-\rangle=0$. Thus symmetric and antisymmetric combinations can be orthogonal even though the atomic orbitals from which they are constructed are not.
+
+[[Solution ↓](#solution-for-exr-bra-ket-molecular-orbitals)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-bra-ket-nonorthogonal-dual-basis level="advanced"}
@@ -243,6 +255,9 @@ $$
 e. Explain why the familiar orthonormal-basis formula $c_i=\langle b_i|\psi\rangle$ is recovered when $S=I$.
 
 f. In quantum chemistry, atomic-orbital basis functions are generally nonorthogonal. Explain briefly why confusing the projections $\langle b_i|\psi\rangle$ with the expansion coefficients $c_i$ can therefore lead to incorrect molecular-orbital coefficients.
+
+[[Solution ↓](#solution-for-exr-bra-ket-nonorthogonal-dual-basis)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
@@ -252,7 +267,7 @@ f. In quantum chemistry, atomic-orbital basis functions are generally nonorthogo
 
 
 
-### Solution for @exr-bra-ket-column-vectors {.unnumbered}
+### Solution for @exr-bra-ket-column-vectors {#solution-for-exr-bra-ket-column-vectors .unnumbered}
 
 a. The basis kets are represented by the standard basis vectors:
 $$
@@ -308,7 +323,7 @@ $$
 
 
 
-### Solution for @exr-bra-ket-basic {.unnumbered}
+### Solution for @exr-bra-ket-basic {#solution-for-exr-bra-ket-basic .unnumbered}
 
 a. Taking the Hermitian adjoint conjugates the coefficients:
 $$
@@ -339,7 +354,7 @@ $$
 |c_1|^2+|c_2|^2=1.
 $$
 
-### Solution for @exr-bra-ket-basis-operator {.unnumbered}
+### Solution for @exr-bra-ket-basis-operator {#solution-for-exr-bra-ket-basis-operator .unnumbered}
 
 a. The operator $\hat B$ maps coordinate vectors in $\mathbb C^n$ to vectors in $V$. Thus its domain is $\mathbb C^n$ and its range is $V$. Because the vectors $\{|b_i\rangle\}$ form a basis, every vector in $V$ is in the range.
 
@@ -370,7 +385,7 @@ $$
 $$
 Hence $\hat B^\dagger\hat B$ is exactly the overlap matrix $S$ represented as an operator on the coordinate space $\mathbb C^n$.
 
-### Solution for @exr-bra-ket-molecular-orbitals {.unnumbered}
+### Solution for @exr-bra-ket-molecular-orbitals {#solution-for-exr-bra-ket-molecular-orbitals .unnumbered}
 
 a. We have
 $$
@@ -461,7 +476,7 @@ $$
 $$
 The symmetric and antisymmetric combinations are therefore orthogonal.
 
-### Solution for @exr-bra-ket-nonorthogonal-dual-basis {.unnumbered}
+### Solution for @exr-bra-ket-nonorthogonal-dual-basis {#solution-for-exr-bra-ket-nonorthogonal-dual-basis .unnumbered}
 
 a. From the definition,
 $$

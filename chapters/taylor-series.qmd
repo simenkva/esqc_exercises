@@ -145,6 +145,9 @@ d.  Use $T_1$, $T_2$, and $T_3$ to approximate $e^{0.1}$.
 e.  Compare your approximations with $e^{0.1}\approx 1.105170$. Which polynomial gives the best approximation?
 
 f.  Repeat the calculation for $e^1$. Why are the low-order approximations less accurate at $x=1$ than at $x=0.1$?
+
+[[Solution ↓](#solution-for-exr-taylor-exp)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-taylor-trigonometric level="beginner"}
@@ -161,6 +164,9 @@ d.  Use the lowest nonconstant approximations to estimate $\sin(0.1)$ and $\cos(
 e.  Compare with $\sin(0.1)\approx0.0998334$ and $\cos(0.1)\approx0.995004$.
 
 f.  Explain why $\sin x\approx x$ is called the small-angle approximation. Angles are measured in radians.
+
+[[Solution ↓](#solution-for-exr-taylor-trigonometric)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-taylor-remainder-exp level="intermediate"}
@@ -177,6 +183,9 @@ b.  Use the Lagrange remainder to show that, for $0\leq x\leq1$,
 c.  Find the smallest $n$ for which this bound guarantees an error below $10^{-3}$ when approximating $e^{1/2}$.
 
 d.  Compute the corresponding approximation to $e^{1/2}$ and compare it with $e^{1/2}\approx1.64872127$. Compare the actual error with the error bound.
+
+[[Solution ↓](#solution-for-exr-taylor-remainder-exp)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-taylor-gaussian level="intermediate"}
@@ -193,6 +202,9 @@ c.  Evaluate these three approximations at $x=0.5$ and compare them with $e^{-0.
 d.  Repeat at $x=1$, where $e^{-1}\approx0.367879$. What do you observe?
 
 e.  Explain why no finite Taylor polynomial can reproduce the behavior $e^{-x^2}\to0$ as $|x|\to\infty$.
+
+[[Solution ↓](#solution-for-exr-taylor-gaussian)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-taylor-harmonic level="advanced"}
@@ -219,6 +231,9 @@ e.  Consider the Morse potential
 	Expand it through fourth order in $q=R-R_e$ and identify its quadratic, cubic, and quartic coefficients.
 
 f.  Explain qualitatively why the harmonic approximation is expected to work best for small-amplitude vibrations near $R_e$.
+
+[[Solution ↓](#solution-for-exr-taylor-harmonic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-taylor-matrix-exponential level="intermediate" recommended="topic" topic="coupled-cluster"}
@@ -252,6 +267,9 @@ d.  Hence show that
 e.  Write approximations to $e^{\theta A}$ obtained by truncating the exponential series after terms of order $\theta^2$ and $\theta^4$.
 
 f.  Explain how this example illustrates the connection between the Taylor series of the exponential, sine, and cosine functions.
+
+[[Solution ↓](#solution-for-exr-taylor-matrix-exponential)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -288,7 +306,7 @@ o88oooo888    88ooo88  o888o  888o88 8o  888o o888o  88ooo88  o888o o888o 88oooo
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-taylor-exp {.unnumbered}
+### Solution for @exr-taylor-exp {#solution-for-exr-taylor-exp .unnumbered}
 
 a.  About $x=0$,
 
@@ -326,7 +344,7 @@ f.  At $x=1$,
 
 	while $e\approx2.71828$. The Taylor polynomials were constructed to agree with $e^x$ at $x=0$. Since $1$ is farther from the expansion point than $0.1$, the neglected higher-order terms are more important.
 
-### Solution for @exr-taylor-trigonometric {.unnumbered}
+### Solution for @exr-taylor-trigonometric {#solution-for-exr-taylor-trigonometric .unnumbered}
 
 a.  The derivatives cycle as
 
@@ -354,7 +372,7 @@ e.  These are close to the given values. The cosine approximation is already acc
 
 f.  When $|x|$ is small, the next term in the sine series, $-x^3/6$, is much smaller than $x$. Thus $\sin x$ is well approximated by $x$. This statement assumes that $x$ is measured in radians.
 
-### Solution for @exr-taylor-remainder-exp {.unnumbered}
+### Solution for @exr-taylor-remainder-exp {#solution-for-exr-taylor-remainder-exp .unnumbered}
 
 a.  Since all derivatives of $e^x$ at zero equal one,
 
@@ -392,7 +410,7 @@ d.  We obtain
 
 	which is smaller than the guaranteed bound $7.08\times10^{-4}$. An error bound need not equal the actual error; it only guarantees that the error cannot exceed the bound.
 
-### Solution for @exr-taylor-gaussian {.unnumbered}
+### Solution for @exr-taylor-gaussian {#solution-for-exr-taylor-gaussian .unnumbered}
 
 a.  Starting with
 
@@ -438,7 +456,7 @@ d.  At $x=1$,
 
 e.  A nonconstant polynomial grows without bound in magnitude as $|x|\to\infty$, whereas $e^{-x^2}\to0$. Taylor polynomials therefore describe the Gaussian locally but cannot reproduce its asymptotic decay with any finite number of terms.
 
-### Solution for @exr-taylor-harmonic {.unnumbered}
+### Solution for @exr-taylor-harmonic {#solution-for-exr-taylor-harmonic .unnumbered}
 
 a.  With $q=R-R_e$,
 
@@ -478,7 +496,7 @@ e.  Using
 
 f.  The neglected terms contain higher powers of $q$. When $|q|$ is small, $q^3,q^4,\ldots$ are small compared with $q^2$, so the quadratic term dominates. At larger displacements the anharmonic terms become increasingly important.
 
-### Solution for @exr-taylor-matrix-exponential {.unnumbered}
+### Solution for @exr-taylor-matrix-exponential {#solution-for-exr-taylor-matrix-exponential .unnumbered}
 
 a.  Direct multiplication gives
 

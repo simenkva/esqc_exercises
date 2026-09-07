@@ -18,6 +18,8 @@ Authoring rules
 
    ::: {#exr-short-name}
    Exercise text.
+
+   [[Solution ↓](#solution-for-exr-short-name)]{.content-visible when-profile="tutor"}
    :::
 
    ::: {#exr-another-short-name .recommended topic="recommended"}
@@ -35,14 +37,15 @@ Authoring rules
 
    ::: {.content-visible when-profile="tutor"}
    ## Solutions
-   ### Solution to @exr-short-name
+   ### Solution to @exr-short-name {#solution-for-exr-short-name .unnumbered}
    Solution text.
    :::
 
-5. Match each solution to the exercise through its `@exr-...` reference. Show
-   enough algebra to expose the method and finish with the requested result.
-   Keep answers, hints that reveal an answer, and grading notes inside the
-   tutor-only div.
+5. Match each solution to the exercise through its `@exr-...` reference and
+   `solution-for-exr-...` ID. Add a tutor-only link to that ID at the end of
+   the exercise. Show enough algebra to expose the method and finish with the
+   requested result. Keep answers, hints that reveal an answer, and grading
+   notes inside the tutor-only div.
 6. Encode recommended status with the `recommended` class and the `topic`
    attribute, not in the exercise ID. Replace a legacy `recommended` tag with
    `.recommended topic="recommended"` and a legacy `for the curious` tag with
@@ -117,13 +120,15 @@ c. Let
    Compute $T^2$, $T^3$, and $T^4$. Use the results to evaluate the degree-four
    approximation to $\exp(T)$.
 
+[[Solution ↓](#solution-for-exr-matrix-exponential)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions {.unnumbered}
 
-### Solution to @exr-matrix-exponential {.unnumbered}
+### Solution to @exr-matrix-exponential {#solution-for-exr-matrix-exponential .unnumbered}
 
 a. Substituting $n=0,1,2,3,4$ in @eq-matrix-exponential gives
 

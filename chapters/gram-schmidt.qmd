@@ -58,6 +58,8 @@ We now turn to a computational exercise:
 
 2.  Let $n\geq m>0$ be integers, and define the matrix $A\in \mathbb{R}^{n\times m}$ by $$A_{ij} = \left(\frac{i-1}{n-1}\right)^{j-1}.$$ This the matrix of the $m$ first monomials $x^{j-1}$ evaluated at an equidistant grid of $n$ points in the interval $[0,1]$. Test your QR implementation on $A$ for various $n,m$, say $m=10$ and $m=200$. In particular, compute the difference between your factorization and $A$, and compare also with the NumPy implementation.
 
+[[Solution ↓](#solution-for-exr-gram-schmidt-gram-schmidt-orthogonalization)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
@@ -70,7 +72,7 @@ We now turn to a computational exercise:
 
 This exercise may be hard for students who have little experience with proofs. Tutors should prepare the projection and span arguments.
 
-### Solution to @exr-gram-schmidt-gram-schmidt-orthogonalization {.unnumbered}
+### Solution to @exr-gram-schmidt-gram-schmidt-orthogonalization {#solution-for-exr-gram-schmidt-gram-schmidt-orthogonalization .unnumbered}
 
 **For the rank-deficient QR question.**
 

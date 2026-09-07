@@ -88,6 +88,9 @@ d. Hence prove the vector triple-product identity
 	\mathbf{a}\times(\mathbf{b}\times\mathbf{c})=\mathbf{b}(\mathbf{a}\cdot\mathbf{c})-\mathbf{c}(\mathbf{a}\cdot\mathbf{b}).
 	$$
 	This identity is sometimes remembered as ``BAC minus CAB''.
+
+[[Solution ↓](#solution-for-exr-levi-civita-vector-triple-product)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -108,7 +111,7 @@ d. Hence prove the vector triple-product identity
 
 ::::{.content-visible when-profile="tutor"}
 
-### Solution for @exr-levi-civita-vector-triple-product {.unnumbered}
+### Solution for @exr-levi-civita-vector-triple-product {#solution-for-exr-levi-civita-vector-triple-product .unnumbered}
 
 a. Applying the definition of the cross product to the outer product gives
 	$$

@@ -105,6 +105,9 @@ c.	Use the power-series definition $e^A=I+A+A^2/2!+\cdots$ to show that
 d.	Find $e^{-A}$.
 
 e.	Verify explicitly that $e^Ae^{-A}=I$.
+
+[[Solution ↓](#solution-for-exr-matrix-exponential-diagonal)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-matrix-exponential-simple-nilpotent level="beginner" recommended="topic" topic="coupled-cluster;response-theory"}
@@ -128,6 +131,9 @@ d.	Calculate $e^{-N}$.
 e.	Multiply your two matrices and verify that $e^Ne^{-N}=I$.
 
 f.	Explain why the exponential series in this example contains only finitely many nonzero terms.
+
+[[Solution ↓](#solution-for-exr-matrix-exponential-simple-nilpotent)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-commuting-exponentials level="beginner"}
@@ -154,6 +160,9 @@ d.	Verify directly that
 	$$
 
 e.	Which property of $A$ and $B$ makes the familiar exponential rule work in this example?
+
+[[Solution ↓](#solution-for-exr-commuting-exponentials)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-exponential-rotation level="intermediate" recommended="topic" topic="response-theory;coupled-cluster"}
@@ -183,6 +192,9 @@ c.	Recognize the Taylor series of sine and cosine and show that
 d.	Show that $e^{\theta J}e^{\phi J}=e^{(\theta+\phi)J}$.
 
 e.	Explain why the result in part d does not contradict the fact that $e^Ae^B\ne e^{A+B}$ in general.
+
+[[Solution ↓](#solution-for-exr-exponential-rotation)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-antihermitian-unitary level="intermediate" recommended="topic" topic="response-theory"}
@@ -232,6 +244,9 @@ e.	Consider the Hermitian matrix
 	Calculate $U=e^{i\theta H}$ explicitly and verify directly that $U^\dagger U=I$.
 
 f.	The converse is also true: every unitary matrix can be written as the exponential of an anti-Hermitian matrix. Suppose that $U$ has an orthonormal basis of eigenvectors with eigenvalues $e^{i\theta_j}$. Explain how to construct an anti-Hermitian matrix $A$ such that $U=e^A$.
+
+[[Solution ↓](#solution-for-exr-antihermitian-unitary)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -267,6 +282,9 @@ c.	Use the expansion
 d.	Calculate $e^A$ and $e^{-A}$ directly and verify your result by matrix multiplication.
 
 e.	Why did the commutator expansion terminate after only a few terms?
+
+[[Solution ↓](#solution-for-exr-hadamard-terminating)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-bch-simple level="intermediate"}
@@ -303,6 +321,9 @@ e.	Use your answers to show that
 	$$
 
 f.	What does this result reduce to when $[A,B]=0$?
+
+[[Solution ↓](#solution-for-exr-bch-simple)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-conjugation-eigenoperator level="advanced"}
@@ -349,6 +370,9 @@ e.	In the harmonic oscillator, the number operator $\hat N$ and creation operato
 	$$
 
 f.	The annihilation operator satisfies $[\hat N,a]=-a$. Find $e^{\alpha\hat N}ae^{-\alpha\hat N}$.
+
+[[Solution ↓](#solution-for-exr-conjugation-eigenoperator)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-bch-pauli level="advanced"}
@@ -385,6 +409,9 @@ d.	Use the BCH expansion
 e.	Explain why the BCH series does not terminate in this case.
 
 f.	Interpret the calculation in terms of successive rotations: why should two rotations about different axes not simply combine by adding their generators?
+
+[[Solution ↓](#solution-for-exr-bch-pauli)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -407,7 +434,7 @@ f.	Interpret the calculation in terms of successive rotations: why should two ro
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-matrix-exponential-diagonal {.unnumbered}
+### Solution for @exr-matrix-exponential-diagonal {#solution-for-exr-matrix-exponential-diagonal .unnumbered}
 
 a.	Since $A$ is diagonal,
 
@@ -465,7 +492,7 @@ e.	Hence
 	I.
 	$$
 
-### Solution for @exr-matrix-exponential-simple-nilpotent {.unnumbered}
+### Solution for @exr-matrix-exponential-simple-nilpotent {#solution-for-exr-matrix-exponential-simple-nilpotent .unnumbered}
 
 a.	Direct multiplication gives
 
@@ -507,7 +534,7 @@ e.	Multiplication gives
 
 f.	The series terminates because $N^2=0$. Thus every term involving $N^n$ with $n\ge2$ vanishes. Such a matrix is called **nilpotent**.
 
-### Solution for @exr-commuting-exponentials {.unnumbered}
+### Solution for @exr-commuting-exponentials {#solution-for-exr-commuting-exponentials .unnumbered}
 
 a.	We find
 
@@ -550,7 +577,7 @@ e.	The crucial property is that $A$ and $B$ commute:
 	[A,B]=0.
 	$$
 
-### Solution for @exr-exponential-rotation {.unnumbered}
+### Solution for @exr-exponential-rotation {#solution-for-exr-exponential-rotation .unnumbered}
 
 a.	The powers are
 
@@ -610,7 +637,7 @@ d.	Both exponents are scalar multiples of the same matrix $J$, so
 e.	The general identity fails only when the two exponents do not commute. Here $\theta J$ and $\phi J$ commute, so the usual scalar exponential rule applies.
 
 
-### Solution for @exr-antihermitian-unitary {.unnumbered}
+### Solution for @exr-antihermitian-unitary {#solution-for-exr-antihermitian-unitary .unnumbered}
 
 a.	Starting from the power series,
 
@@ -734,7 +761,7 @@ f.	A unitary matrix has eigenvalues of modulus one, so its eigenvalues can be wr
 
 
 
-### Solution for @exr-hadamard-terminating {.unnumbered}
+### Solution for @exr-hadamard-terminating {#solution-for-exr-hadamard-terminating .unnumbered}
 
 a.	First,
 
@@ -795,7 +822,7 @@ d.	Since $A^2=0$,
 
 e.	The first commutator is proportional to $A$, and commuting it once more with $A$ gives zero. Consequently every higher nested commutator also vanishes.
 
-### Solution for @exr-bch-simple {.unnumbered}
+### Solution for @exr-bch-simple {#solution-for-exr-bch-simple .unnumbered}
 
 a.	The BCH expansion begins
 
@@ -864,7 +891,7 @@ f.	If $[A,B]=0$, the result becomes
 	e^Ae^B=e^Be^A=e^{A+B}.
 	$$
 
-### Solution for @exr-conjugation-eigenoperator {.unnumbered}
+### Solution for @exr-conjugation-eigenoperator {#solution-for-exr-conjugation-eigenoperator .unnumbered}
 
 a.	Using $[A,B]=\lambda B$,
 
@@ -928,7 +955,7 @@ f.	Similarly,
 	e^{\alpha\hat N}ae^{-\alpha\hat N}=e^{-\alpha}a.
 	$$
 
-### Solution for @exr-bch-pauli {.unnumbered}
+### Solution for @exr-bch-pauli {#solution-for-exr-bch-pauli .unnumbered}
 
 a.	Using $[\sigma_x,\sigma_y]=2i\sigma_z$,
 

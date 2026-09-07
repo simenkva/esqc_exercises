@@ -101,6 +101,8 @@ f. Our choice of units is part of the way we represent the recipe. Suppose milk 
 
 g. Typical recipes contain ingredients that are not among our five chosen ingredients. How could we enlarge our vector space to accommodate more recipes? What happens to the dimension of the space?
 
+[[Solution ↓](#solution-for-exr-general-vector-spaces-recipes)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -142,6 +144,8 @@ f. What additional information might have to be included in our mathematical des
 
 g. In quantum mechanics, we similarly choose a mathematical space to represent physical states and operators to represent physical quantities and transformations. Why is the choice of the space important for determining what the mathematical model can describe?
 
+[[Solution ↓](#solution-for-exr-general-vector-spaces-meaningful-recipes)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -150,7 +154,7 @@ g. In quantum mechanics, we similarly choose a mathematical space to represent p
 ## Solutions {.content-visible when-profile="tutor" .unnumbered}
 
 
-### Solution for @exr-general-vector-spaces-recipes {.unnumbered}
+### Solution for @exr-general-vector-spaces-recipes {#solution-for-exr-general-vector-spaces-recipes .unnumbered}
 
 a. With the ordering
 
@@ -245,7 +249,7 @@ g. We can add more components, one for each new ingredient. For example, if cinn
 :::{.content-visible when-profile="tutor"}
 
 
-### Solution for @exr-general-vector-spaces-meaningful-recipes {.unnumbered}
+### Solution for @exr-general-vector-spaces-meaningful-recipes {#solution-for-exr-general-vector-spaces-meaningful-recipes .unnumbered}
 
 a. In the previous exercise, we first chose a finite ordered list of ingredients and represented an ingredient list by a vector in $\mathbb{R}^n$.
 

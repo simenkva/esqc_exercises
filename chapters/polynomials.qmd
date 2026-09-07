@@ -188,6 +188,9 @@ a. Perform the polynomial long division of $P(x)$ by $d(x)$ and verify that the 
 b. Use the result of part (a) and the quadratic formula to find all four roots of $P(x)$.
 
 c. Write $P(x)$ as a product of four linear factors.
+
+[[Solution ↓](#solution-for-exr-polynomial-long-division-quartic)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -222,6 +225,9 @@ b. Divide $x^3-2x^2-5x+6$ by the corresponding linear factor using polynomial lo
 c. Determine the remaining two roots from the resulting quadratic polynomial.
 
 d. Write the original polynomial as a product of three linear factors.
+
+[[Solution ↓](#solution-for-exr-rational-roots-cubic)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -273,7 +279,7 @@ d. Write the original polynomial as a product of three linear factors.
 
 
 
-### Solution for @exr-polynomial-long-division-quartic {.unnumbered}
+### Solution for @exr-polynomial-long-division-quartic {#solution-for-exr-polynomial-long-division-quartic .unnumbered}
 
 a. We divide
 	$$
@@ -366,7 +372,7 @@ c. The corresponding factorization is
 
 
 
-### Solution for @exr-rational-roots-cubic {.unnumbered}
+### Solution for @exr-rational-roots-cubic {#solution-for-exr-rational-roots-cubic .unnumbered}
 
 a. The leading coefficient is $1$ and the constant term is $6$. Therefore, any rational root must be an integer that divides $6$. The possible roots are
 	$$

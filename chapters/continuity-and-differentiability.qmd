@@ -161,6 +161,9 @@ b. For $x=1$, what value does $f(x+h)$ have when $h$ is sufficiently small? What
 c. Approach $x=0$ from the left and from the right. What values does $f(h)$ take?
 
 d. For which $x\in\mathbb{R}$ does $\lim_{h\to0}f(x+h)$ not exist? Explain in words.
+
+[[Solution ↓](#solution-for-exr-continuity-step-function)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-distance level="beginner"}
@@ -175,6 +178,9 @@ b. Compute this distance for $\mathbf{x}=(1.1,2)$, $(1,1.9)$, and $(1.06,2.08)$.
 c. Which of these points lie inside the disk $\|\mathbf{x}-\mathbf{a}\|<0.1$?
 
 d. In your own words, explain what $\mathbf{x}\to\mathbf{a}$ means.
+
+[[Solution ↓](#solution-for-exr-continuity-distance)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-substitution level="beginner" recommended="math"}
@@ -189,6 +195,9 @@ b. $\displaystyle \lim_{(x,y)\to(1,2)}x^2y$.
 c. $\displaystyle \lim_{(x,y)\to(0,0)}e^{-(x^2+y^2)}$.
 
 d. $\displaystyle \lim_{(x,y)\to(1,1)}\frac{x+y}{1+x^2+y^2}$.
+
+[[Solution ↓](#solution-for-exr-continuity-substitution)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-paths-first level="beginner"}
@@ -205,6 +214,9 @@ b. Set $x=0$ and simplify $f(0,y)$ for $y\ne0$.
 c. What value is approached along each axis as $(x,y)\to(0,0)$?
 
 d. Can $\lim_{(x,y)\to(0,0)}f(x,y)$ exist? Why or why not?
+
+[[Solution ↓](#solution-for-exr-continuity-paths-first)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-python-paths level="beginner"}
@@ -219,12 +231,18 @@ b. Write a short Python loop that evaluates $f(t,t)$ for $t=10^{-1},10^{-2},\ldo
 c. What value do the results appear to approach?
 
 d. Repeat for the path $(x,y)=(t,2t)$. Does the limiting value change?
+
+[[Solution ↓](#solution-for-exr-continuity-python-paths)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-polynomials level="intermediate"}
 ### Why polynomials are continuous
 
 Use standard properties of continuous functions to show that every polynomial $p:\mathbb{R}\to\mathbb{R}$ is continuous. Then explain briefly why a polynomial in two variables, such as $p(x,y)=3x^2y-2xy+7$, is also continuous on $\mathbb{R}^2$.
+
+[[Solution ↓](#solution-for-exr-continuity-polynomials)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-radial-sine level="intermediate"}
@@ -239,6 +257,9 @@ a. Introduce $r^2=x^2+y^2$ and rewrite the function in terms of $r$.
 b. Determine $\lim_{(x,y)\to(0,0)}f(x,y)$ using the one-variable limit $\lim_{t\to0}\sin t/t=1$.
 
 c. How could $f$ be defined at $(0,0)$ so that the resulting function is continuous there?
+
+[[Solution ↓](#solution-for-exr-continuity-radial-sine)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-path-dependent level="intermediate"}
@@ -255,6 +276,9 @@ b. Evaluate the limit along the line $x=0$.
 c. Conclude whether $\lim_{(x,y)\to(0,0)}f(x,y)$ exists.
 
 d. As an optional visualization, make a surface plot or contour plot near the origin and relate what you see to parts a--c.
+
+[[Solution ↓](#solution-for-exr-continuity-path-dependent)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-epsilon-delta level="intermediate"}
@@ -269,6 +293,9 @@ a. Show that $|f(x,y)|\leq2|y|$.
 b. Use $|y|\leq\sqrt{x^2+y^2}$ to obtain a bound in terms of $\|(x,y)\|$.
 
 c. Use the bound to prove with an $\epsilon$--$\delta$ argument that $\lim_{(x,y)\to(0,0)}f(x,y)=0$.
+
+[[Solution ↓](#solution-for-exr-continuity-epsilon-delta)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-piecewise-extension level="intermediate"}
@@ -285,6 +312,9 @@ b. Determine $\lim_{(x,y)\to(0,0)}f(x,y)$.
 c. Choose a value for $f(0,0)$ that makes $f$ continuous at the origin.
 
 d. Check your conclusion numerically along the paths $y=x$ and $y=x^2$.
+
+[[Solution ↓](#solution-for-exr-continuity-piecewise-extension)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-continuity-chemistry-energy level="beginner" recommended="math"}
@@ -303,6 +333,9 @@ b. Evaluate $\lim_{(x,y)\to(0,0)}E(x,y)$.
 c. Let $k_x=2$, $k_y=3$, and $c=1$. Compute $E(0.1,0)$, $E(0,0.1)$, and $E(0.1,0.1)$.
 
 d. What do these values suggest about the energy surface close to the origin?
+
+[[Solution ↓](#solution-for-exr-continuity-chemistry-energy)]{.content-visible when-profile="tutor"}
+
 :::
 
 ## Exercises: Differentiability {.unnumbered}
@@ -319,6 +352,9 @@ b. To compute $\partial f/\partial y$, treat $x$ as a constant. Find $\partial f
 c. Evaluate both partial derivatives at $(1,2)$.
 
 d. Write the gradient $\nabla f(1,2)$ as a column vector.
+
+[[Solution ↓](#solution-for-exr-partial-derivatives-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-partial-derivatives-slices level="beginner" recommended="math"}
@@ -333,6 +369,9 @@ b. Hold $x=1$ fixed and define $h(y)=f(1,y)$. Write down $h(y)$ and compute $h'(
 c. Compute $\partial f/\partial x$ and $\partial f/\partial y$ directly and check your answers from a and b.
 
 d. Explain in one sentence what is held fixed when taking a partial derivative.
+
+[[Solution ↓](#solution-for-exr-partial-derivatives-slices)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-gradient-displacement level="beginner"}
@@ -349,6 +388,9 @@ b. Repeat for $\mathbf{h}=(0,0.01)$.
 c. Repeat for $\mathbf{h}=(0.01,0.01)$.
 
 d. Estimate $E(1.01,1.01)$.
+
+[[Solution ↓](#solution-for-exr-gradient-displacement)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-jacobian-first level="beginner" recommended="math"}
@@ -365,6 +407,9 @@ b. Compute $\partial F_1/\partial x$ and $\partial F_1/\partial y$.
 c. Compute $\partial F_2/\partial x$ and $\partial F_2/\partial y$.
 
 d. Assemble the four derivatives into the Jacobian matrix $J_F(x,y)$ and evaluate it at $(1,2)$.
+
+[[Solution ↓](#solution-for-exr-jacobian-first)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-partial-radial-quotient level="intermediate"}
@@ -381,6 +426,9 @@ b. Compute $\partial f/\partial y$.
 c. Evaluate the gradient at $(1,1)$.
 
 d. Is the formula defined at the origin? What additional question would have to be answered before discussing differentiability there?
+
+[[Solution ↓](#solution-for-exr-partial-radial-quotient)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-differentiability-linear-approx level="intermediate"}
@@ -395,6 +443,9 @@ b. Find the linear approximation to $f$ near $(0,0)$.
 c. Use it to estimate $f(0.02,0.03)$.
 
 d. Compare with a Python evaluation of `exp(0.02)*cos(0.03)`.
+
+[[Solution ↓](#solution-for-exr-differentiability-linear-approx)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-differentiability-tangent-plane level="intermediate"}
@@ -409,6 +460,9 @@ b. Find $E(1,1)$ and $\nabla E(1,1)$.
 c. Write the tangent-plane approximation to $E$ near $(1,1)$.
 
 d. Use it to estimate $E(1.02,0.99)$ and compare with the exact value.
+
+[[Solution ↓](#solution-for-exr-differentiability-tangent-plane)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-differentiability-continuous-partials level="intermediate"}
@@ -425,6 +479,9 @@ b. Explain why these partial derivatives are continuous everywhere.
 c. Use the sufficient condition from the text to conclude that $f$ is differentiable everywhere.
 
 d. Compute $\nabla f(0,0)$ and write the linear approximation near the origin.
+
+[[Solution ↓](#solution-for-exr-differentiability-continuous-partials)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-differentiability-numerical-gradient level="intermediate"}
@@ -443,6 +500,9 @@ for $h=10^{-1},10^{-2},10^{-3}$.
 c. Do the same for $\partial f/\partial y$.
 
 d. Write a tiny Python script for b and c. How do the approximations behave as $h$ becomes smaller?
+
+[[Solution ↓](#solution-for-exr-differentiability-numerical-gradient)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-advanced-directional-trap level="advanced" recommended="math"}
@@ -459,6 +519,9 @@ b. Along the curved path $y=x^2$, determine the limiting value.
 c. Is $f$ continuous at the origin?
 
 d. What does this example teach you about checking multivariable limits using paths?
+
+[[Solution ↓](#solution-for-exr-advanced-directional-trap)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-advanced-partials-not-continuous level="advanced"}
@@ -475,6 +538,9 @@ b. Compute $\partial f/\partial x(0,0)$ and $\partial f/\partial y(0,0)$ directl
 c. Test differentiability at the origin along the path $(x,y)=(t,t)$.
 
 d. Reconcile your result with the statement that continuous first partial derivatives are sufficient for differentiability.
+
+[[Solution ↓](#solution-for-exr-advanced-partials-not-continuous)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-advanced-gradient-landscape level="advanced" recommended="math"}
@@ -492,6 +558,9 @@ b. Use Python to make a contour plot of $E$ on $-2\leq x\leq2$, $-2\leq y\leq2$.
 c. On the same grid, make a quiver plot of $-\nabla E$, or plot a separate vector field if that is clearer.
 
 d. Locate the stationary points numerically or analytically. Which appear to be minima, maxima, or saddle points? Describe how the gradient field reflects this.
+
+[[Solution ↓](#solution-for-exr-advanced-gradient-landscape)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {#exr-advanced-differentiability-experiment level="advanced"}
@@ -508,13 +577,16 @@ $$R(\mathbf{h})=f(\mathbf{a}+\mathbf{h})-f(\mathbf{a})-\nabla f(\mathbf{a})\cdot
 c. Write a short Python program that evaluates $|R(\mathbf{h})|/\|\mathbf{h}\|$ for $\mathbf{h}=t(1,2)$ and $t=10^{-1},\ldots,10^{-7}$.
 
 d. Repeat for a few random directions. What numerical behavior do you expect if $f$ is differentiable at $\mathbf{a}$? Do you observe it?
+
+[[Solution ↓](#solution-for-exr-advanced-differentiability-experiment)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-continuity-step-function {.unnumbered}
+### Solution for @exr-continuity-step-function {#solution-for-exr-continuity-step-function .unnumbered}
 
 a. $f(-1)=-1$, $f(0)=-1$, and $f(1)=1$.
 
@@ -524,7 +596,7 @@ c. For $h<0$, $f(h)=-1$, while for $h>0$, $f(h)=1$.
 
 d. The limit fails only at $x=0$, because the left-hand and right-hand limits are different.
 
-### Solution for @exr-continuity-distance {.unnumbered}
+### Solution for @exr-continuity-distance {#solution-for-exr-continuity-distance .unnumbered}
 
 a. $\|\mathbf{x}-\mathbf{a}\|=\sqrt{(x-1)^2+(y-2)^2}$.
 
@@ -534,7 +606,7 @@ c. None: the condition is strict, $\|\mathbf{x}-\mathbf{a}\|<0.1$, while all thr
 
 d. It means that the Euclidean distance from $\mathbf{x}$ to $\mathbf{a}$ tends to zero.
 
-### Solution for @exr-continuity-substitution {.unnumbered}
+### Solution for @exr-continuity-substitution {#solution-for-exr-continuity-substitution .unnumbered}
 
 a. $1+2(2)=5$.
 
@@ -546,7 +618,7 @@ d. $(1+1)/(1+1+1)=2/3$.
 
 These functions are built from continuous elementary functions using sums, products, compositions, and, in d, a quotient whose denominator is nonzero at the limiting point.
 
-### Solution for @exr-continuity-paths-first {.unnumbered}
+### Solution for @exr-continuity-paths-first {#solution-for-exr-continuity-paths-first .unnumbered}
 
 a. $f(x,0)=1$ for $x\ne0$.
 
@@ -556,7 +628,7 @@ c. The values approached are $1$ along the $x$ axis and $0$ along the $y$ axis.
 
 d. No. A multivariable limit, if it exists, must have the same value along every path.
 
-### Solution for @exr-continuity-python-paths {.unnumbered}
+### Solution for @exr-continuity-python-paths {#solution-for-exr-continuity-python-paths .unnumbered}
 
 a. The values are $0.02$, $0.0002$, and $0.000002$.
 
@@ -577,11 +649,11 @@ c. The values approach $0$.
 
 d. Along $(t,2t)$, $f(t,2t)=5t^2\to0$. The limiting value does not change.
 
-### Solution for @exr-continuity-polynomials {.unnumbered}
+### Solution for @exr-continuity-polynomials {#solution-for-exr-continuity-polynomials .unnumbered}
 
 The identity function $x\mapsto x$ and constant functions are continuous. Products of continuous functions are continuous, so every power $x^n$ is continuous. Finite sums and constant multiples of continuous functions are continuous, hence every polynomial is continuous. The same argument applies to monomials $x^my^n$ and finite sums of such monomials, so polynomials in several variables are continuous everywhere.
 
-### Solution for @exr-continuity-radial-sine {.unnumbered}
+### Solution for @exr-continuity-radial-sine {#solution-for-exr-continuity-radial-sine .unnumbered}
 
 a. With $r^2=x^2+y^2$, $f=\sin(r^2)/r^2$.
 
@@ -589,7 +661,7 @@ b. As $(x,y)\to(0,0)$, $r^2\to0$, so $\sin(r^2)/r^2\to1$.
 
 c. Define $f(0,0)=1$.
 
-### Solution for @exr-continuity-path-dependent {.unnumbered}
+### Solution for @exr-continuity-path-dependent {#solution-for-exr-continuity-path-dependent .unnumbered}
 
 a. Along $y=0$, $f(x,0)=1$.
 
@@ -599,7 +671,7 @@ c. The limit does not exist because the two paths give different limiting values
 
 d. A plot shows a surface whose value depends strongly on direction near the origin; the $x$ axis sits at value $1$ and the $y$ axis at value $0$.
 
-### Solution for @exr-continuity-epsilon-delta {.unnumbered}
+### Solution for @exr-continuity-epsilon-delta {#solution-for-exr-continuity-epsilon-delta .unnumbered}
 
 a. Since $x^2+y^2\geq x^2$,
 
@@ -609,7 +681,7 @@ b. Therefore $|f(x,y)|\leq2\sqrt{x^2+y^2}=2\|(x,y)\|$.
 
 c. Given $\epsilon>0$, choose $\delta=\epsilon/2$. If $0<\|(x,y)\|<\delta$, then $|f(x,y)|\leq2\|(x,y)\|<2\delta=\epsilon$. Hence the limit is $0$.
 
-### Solution for @exr-continuity-piecewise-extension {.unnumbered}
+### Solution for @exr-continuity-piecewise-extension {#solution-for-exr-continuity-piecewise-extension .unnumbered}
 
 a. Since $x^2/(x^2+y^2)\leq1$, we have $0\leq f(x,y)=y^2x^2/(x^2+y^2)\leq y^2$.
 
@@ -619,7 +691,7 @@ c. Set $f(0,0)=0$.
 
 d. Along $y=x$, $f=x^2/2\to0$. Along $y=x^2$, $f=x^4/(1+x^2)\to0$.
 
-### Solution for @exr-continuity-chemistry-energy {.unnumbered}
+### Solution for @exr-continuity-chemistry-energy {#solution-for-exr-continuity-chemistry-energy .unnumbered}
 
 a. $E$ is a polynomial in $x$ and $y$, so it is continuous everywhere.
 
@@ -629,7 +701,7 @@ c. With the given constants, $E(0.1,0)=0.01$, $E(0,0.1)=0.015$, and $E(0.1,0.1)=
 
 d. The energy changes smoothly and remains small for small displacements from the origin.
 
-### Solution for @exr-partial-derivatives-basic {.unnumbered}
+### Solution for @exr-partial-derivatives-basic {#solution-for-exr-partial-derivatives-basic .unnumbered}
 
 a. $f_x=2x+3y$.
 
@@ -639,7 +711,7 @@ c. $f_x(1,2)=8$ and $f_y(1,2)=7$.
 
 d. $\nabla f(1,2)=(8,7)^T$.
 
-### Solution for @exr-partial-derivatives-slices {.unnumbered}
+### Solution for @exr-partial-derivatives-slices {#solution-for-exr-partial-derivatives-slices .unnumbered}
 
 a. $g(x)=2x^2+8$, so $g'(1)=4$.
 
@@ -649,7 +721,7 @@ c. $f_x=2xy$ and $f_y=x^2+3y^2$, giving $4$ and $13$ at $(1,2)$.
 
 d. All variables except the one being differentiated are held fixed.
 
-### Solution for @exr-gradient-displacement {.unnumbered}
+### Solution for @exr-gradient-displacement {#solution-for-exr-gradient-displacement .unnumbered}
 
 The linear change is $\Delta E\approx\nabla E\cdot\mathbf{h}$.
 
@@ -661,7 +733,7 @@ c. $\Delta E\approx0.02-0.01=0.01$.
 
 d. $E(1.01,1.01)\approx5.01$.
 
-### Solution for @exr-jacobian-first {.unnumbered}
+### Solution for @exr-jacobian-first {#solution-for-exr-jacobian-first .unnumbered}
 
 a. $F_1=x+y$ and $F_2=xy$.
 
@@ -673,7 +745,7 @@ d.
 
 $$J_F(x,y)=\begin{pmatrix}1&1\\y&x\end{pmatrix},\qquad J_F(1,2)=\begin{pmatrix}1&1\\2&1\end{pmatrix}.$$
 
-### Solution for @exr-partial-radial-quotient {.unnumbered}
+### Solution for @exr-partial-radial-quotient {#solution-for-exr-partial-radial-quotient .unnumbered}
 
 a. For $(x,y)\ne(0,0)$,
 
@@ -687,7 +759,7 @@ c. $\nabla f(1,1)=\left(1/(2\sqrt2),1/(2\sqrt2)\right)^T$.
 
 d. The formula is not defined at the origin. One would first need to define a value there, usually by examining whether the function has a limit at the origin.
 
-### Solution for @exr-differentiability-linear-approx {.unnumbered}
+### Solution for @exr-differentiability-linear-approx {#solution-for-exr-differentiability-linear-approx .unnumbered}
 
 a. $\nabla f=(e^x\cos y,-e^x\sin y)^T$.
 
@@ -697,7 +769,7 @@ c. The estimate is $1.02$.
 
 d. Python gives approximately $1.019743$, so the first-order approximation is already close.
 
-### Solution for @exr-differentiability-tangent-plane {.unnumbered}
+### Solution for @exr-differentiability-tangent-plane {#solution-for-exr-differentiability-tangent-plane .unnumbered}
 
 a. $\nabla E=(2x+y,x+4y)^T$.
 
@@ -707,7 +779,7 @@ c. For $h=x-1$ and $k=y-1$, $E(x,y)\approx4+3h+5k$.
 
 d. At $(1.02,0.99)$, the approximation is $4+3(0.02)+5(-0.01)=4.01$. The exact value is $4.0104$.
 
-### Solution for @exr-differentiability-continuous-partials {.unnumbered}
+### Solution for @exr-differentiability-continuous-partials {#solution-for-exr-differentiability-continuous-partials .unnumbered}
 
 a.
 
@@ -719,7 +791,7 @@ c. Therefore both first partial derivatives are continuous everywhere, so $f$ is
 
 d. $f(0,0)=1$ and $\nabla f(0,0)=(0,0)^T$, so the linear approximation is simply $f(x,y)\approx1$ near the origin.
 
-### Solution for @exr-differentiability-numerical-gradient {.unnumbered}
+### Solution for @exr-differentiability-numerical-gradient {#solution-for-exr-differentiability-numerical-gradient .unnumbered}
 
 a. $\nabla f=(2x+y,x+6y)^T$, so $\nabla f(1,2)=(4,13)^T$.
 
@@ -743,7 +815,7 @@ for h in [1e-1, 1e-2, 1e-3]:
 
 The approximations converge toward $4$ and $13$ as $h$ decreases.
 
-### Solution for @exr-advanced-directional-trap {.unnumbered}
+### Solution for @exr-advanced-directional-trap {#solution-for-exr-advanced-directional-trap .unnumbered}
 
 a. Along $y=mx$,
 
@@ -759,7 +831,7 @@ c. No. The limit at the origin does not exist.
 
 d. Checking many straight lines can disprove a limit, but agreement along all straight lines is not enough to prove that a multivariable limit exists.
 
-### Solution for @exr-advanced-partials-not-continuous {.unnumbered}
+### Solution for @exr-advanced-partials-not-continuous {#solution-for-exr-advanced-partials-not-continuous .unnumbered}
 
 a. Using $2|xy|\leq x^2+y^2$,
 
@@ -777,7 +849,7 @@ If $f$ were differentiable with gradient zero, we would require $f(t,t)/\sqrt{2t
 
 d. The theorem says that *continuous* first partial derivatives in a neighbourhood are sufficient. Here the partial derivatives exist at the origin, but they are not continuous there. There is no contradiction.
 
-### Solution for @exr-advanced-gradient-landscape {.unnumbered}
+### Solution for @exr-advanced-gradient-landscape {#solution-for-exr-advanced-gradient-landscape .unnumbered}
 
 a.
 
@@ -815,7 +887,7 @@ plt.show()
 
 d. From $2y+x/2=0$, $y=-x/4$. Substitution into the first equation gives $x(4x^2-33/8)=0$, so the stationary points are $(0,0)$ and $x=\pm\sqrt{33/32}$ with $y=-x/4$. The origin is a saddle point, while the two nonzero stationary points are minima. The field $-\nabla E$ points downhill toward the minima and away from the unstable direction of the saddle.
 
-### Solution for @exr-advanced-differentiability-experiment {.unnumbered}
+### Solution for @exr-advanced-differentiability-experiment {#solution-for-exr-advanced-differentiability-experiment .unnumbered}
 
 a. $f(1,1)=\sin1+1$ and
 

@@ -9,11 +9,15 @@ In these exercises, you are given functions $f : \mathbb{R}^n \to \mathbb{R}^m$ 
 
 Let $f : \mathbb{R}\to \mathbb{R}^2$ be a path defined by $$f(t) = [r(t)\cos(4t), r(t)\sin(4t)], \quad r(t) = \exp(-t).$$ Sketch the curve traced by the path for $0 \leq t \leq 2\pi$. You can check your sketch against, say, a Python plot.
 
+[[Solution ↓](#solution-for-exr-visualizing-functions-path-defined-sketch-curve-traced-path)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-visualizing-functions-path-defined-sketch-curve-traced-path-2}
 
 Let $f : (0,+\infty) \to \mathbb{R}^2$ be a path defined by $$f(t) = [\ln(t), t].$$ Sketch the curve traced by the path. You can check your sketch against, say, a Python plot.
+
+[[Solution ↓](#solution-for-exr-visualizing-functions-path-defined-sketch-curve-traced-path-2)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -34,6 +38,9 @@ a. Evaluate $(x(t),y(t))$ for $t=0,\pi/2,\pi,3\pi/2,$ and $2\pi$.
 b. Use these points, together with the symmetry of the curve, to make a rough sketch by hand.
 
 c. Plot the curve using Python. Use equal scaling on the two coordinate axes.
+
+[[Solution ↓](#solution-for-exr-visualizing-functions-heart)]{.content-visible when-profile="tutor"}
+
 :::
 
 ## Exercises: level curves {.unnumbered}
@@ -43,11 +50,15 @@ c. Plot the curve using Python. Use equal scaling on the two coordinate axes.
 
 Let $f(x,y) = x^2 + y^2$. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 1$ and $n=2$, $n=3$, and $n=4$.
 
+[[Solution ↓](#solution-for-exr-visualizing-functions-sketch-level-curves)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-visualizing-functions-sketch-level-curves-where-can-you level="intermediate"}
 
 Let $f(x,y) = x + y + 2$. Sketch the level curves where $f(x,y)=0$, $2$ and $4$. Can you sketch the graph of $f$?
+
+[[Solution ↓](#solution-for-exr-visualizing-functions-sketch-level-curves-where-can-you)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -55,17 +66,23 @@ Let $f(x,y) = x + y + 2$. Sketch the level curves where $f(x,y)=0$, $2$ and $4$.
 
 Let $f(x,y) = x^2 - y^2$. The graph is called the *hyperbolic paraboloid*, or a saddle. Sketch the graph. Sketch the level curves $\{(x,y) \mid f(x,y) = n\}$, for $n = 0$ and $n=-1$, $n=1$. Make sure that you get all "pieces".
 
+[[Solution ↓](#solution-for-exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-visualizing-functions-write-python-program-sketching-level-curves level="intermediate"}
 
 Write a Python program for sketching the level curves in the hyperbolic-paraboloid exercise above, but use more closely spaced constants. There are tools in Matplotlib that are handy.
 
+[[Solution ↓](#solution-for-exr-visualizing-functions-write-python-program-sketching-level-curves)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-visualizing-functions-adapt-your-program-draw-level-curves level="intermediate"}
 
 Adapt your program to draw level curves of $(x,y)\mapsto (x^2 + 3y^2)e^{1-x^2-y^2}$.
+
+[[Solution ↓](#solution-for-exr-visualizing-functions-adapt-your-program-draw-level-curves)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -95,11 +112,15 @@ In particular, the 1$s$ and 2$p_z$ functions are given by $$\psi_{1s}(x,y,z) = \
 
 Write a Python program to draw the level *surfaces* of hydrogen orbitals, $\{ (x,y,z)\mid  \psi(x,y,z) = c \}$. Choose interesting values of $c$. It can be interesting to color code surfaces of opposite positive and negative $c$.
 
+[[Solution ↓](#solution-for-exr-visualizing-functions-write-python-program-draw-level-surfaces)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-visualizing-functions-write-program-visualize-sections-graph-orbitals level="intermediate"}
 
 Write a program to visualize *sections* of the orbital graphs. For example, fix $y=y_\text{const}$ and plot $(x,z)\mapsto\psi(x,y_\text{const},z)$.
+
+[[Solution ↓](#solution-for-exr-visualizing-functions-write-program-visualize-sections-graph-orbitals)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -111,7 +132,7 @@ Write a program to visualize *sections* of the orbital graphs. For example, fix 
 
 **Tutor note:** The first exercises are well suited for emphasizing that a useful sketch should normally begin with mathematical analysis. Before plotting, students should ask what can be inferred from symmetry, limiting values, intercepts, monotonicity, and algebraic elimination of parameters. The Python plots then serve as checks and as a way of handling curves and surfaces for which a hand sketch becomes cumbersome.
 
-### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path {.unnumbered}
+### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path {#solution-for-exr-visualizing-functions-path-defined-sketch-curve-traced-path .unnumbered}
 
 The coordinates already have polar form,
 
@@ -154,7 +175,7 @@ ax.legend()
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 {.unnumbered}
+### Solution for @exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 {#solution-for-exr-visualizing-functions-path-defined-sketch-curve-traced-path-2 .unnumbered}
 
 Here
 
@@ -198,7 +219,7 @@ plt.show()
 
 
 
-### Solution for @exr-visualizing-functions-heart {.unnumbered}
+### Solution for @exr-visualizing-functions-heart {#solution-for-exr-visualizing-functions-heart .unnumbered}
 
 The curve is
 
@@ -283,7 +304,7 @@ plt.grid()
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-sketch-level-curves {.unnumbered}
+### Solution for @exr-visualizing-functions-sketch-level-curves {#solution-for-exr-visualizing-functions-sketch-level-curves .unnumbered}
 
 A level curve with value $n$ satisfies
 
@@ -319,7 +340,7 @@ ax.set_ylabel("y")
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-sketch-level-curves-where-can-you {.unnumbered}
+### Solution for @exr-visualizing-functions-sketch-level-curves-where-can-you {#solution-for-exr-visualizing-functions-sketch-level-curves-where-can-you .unnumbered}
 
 The level curve $f(x,y)=c$ is
 
@@ -367,7 +388,7 @@ ax.set_zlabel("z")
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle {.unnumbered}
+### Solution for @exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle {#solution-for-exr-visualizing-functions-graph-called-hyperbolic-paraboloid-or-saddle .unnumbered}
 
 The graph is
 
@@ -451,7 +472,7 @@ ax.set_ylabel("y")
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-write-python-program-sketching-level-curves {.unnumbered}
+### Solution for @exr-visualizing-functions-write-python-program-sketching-level-curves {#solution-for-exr-visualizing-functions-write-python-program-sketching-level-curves .unnumbered}
 
 Matplotlib's `contour` function is designed precisely for this task. We evaluate the function on a rectangular grid and ask Matplotlib to interpolate the curves on which the function takes prescribed values.
 
@@ -478,7 +499,7 @@ plt.show()
 
 The plot is also easy to interpret by hand: positive levels are hyperbolas opening along the $x$ axis, negative levels are hyperbolas opening along the $y$ axis, and the zero level consists of the asymptotes themselves.
 
-### Solution for @exr-visualizing-functions-adapt-your-program-draw-level-curves {.unnumbered}
+### Solution for @exr-visualizing-functions-adapt-your-program-draw-level-curves {#solution-for-exr-visualizing-functions-adapt-your-program-draw-level-curves .unnumbered}
 
 Let
 
@@ -517,7 +538,7 @@ ax.set_ylabel("y")
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-write-python-program-draw-level-surfaces {.unnumbered}
+### Solution for @exr-visualizing-functions-write-python-program-draw-level-surfaces {#solution-for-exr-visualizing-functions-write-python-program-draw-level-surfaces .unnumbered}
 
 For the 1$s$ orbital,
 
@@ -604,7 +625,7 @@ ax.set_box_aspect((1, 1, 1))
 plt.show()
 ```
 
-### Solution for @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals {.unnumbered}
+### Solution for @exr-visualizing-functions-write-program-visualize-sections-graph-orbitals {#solution-for-exr-visualizing-functions-write-program-visualize-sections-graph-orbitals .unnumbered}
 
 Fixing $y=y_{\mathrm{const}}$ turns a function of three variables into a function of two variables,
 

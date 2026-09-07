@@ -17,6 +17,8 @@ c.  Show that multiplication with a complex number of modulus 1 is a rotation in
 
 d.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb{R}^2$. What kind of linear transformation is this? Is it a linear transformation in $\mathbb{C}$?
 
+[[Solution ↓](#solution-for-exr-complex-vector-space-complex-numbers-real-vector-space)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
@@ -24,7 +26,7 @@ d.  Show that the map $z \mapsto \bar{z}$ is a linear transformation in $\mathbb
 ## Solutions {.unnumbered}
 
 
-### Solution for @exr-complex-vector-space-complex-numbers-real-vector-space {.unnumbered}
+### Solution for @exr-complex-vector-space-complex-numbers-real-vector-space {#solution-for-exr-complex-vector-space-complex-numbers-real-vector-space .unnumbered}
 
 a. Write a complex number as
 

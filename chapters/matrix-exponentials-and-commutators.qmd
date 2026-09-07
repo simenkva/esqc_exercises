@@ -10,17 +10,23 @@ Consider the *matrix-valued function* $$f(t) = e^{-tA} B e^{tA},$$ where $A$ and
 
 Explain why we may view $f$ as a vector-valued function
 
+[[Solution ↓](#solution-for-exr-matrix-exponentials-and-commutators-explain-why-may-view-vector-valued)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-matrix-exponentials-and-commutators-differentiable}
 
 Show that $t \mapsto e^{tA}$ is differentiable.
 
+[[Solution ↓](#solution-for-exr-matrix-exponentials-and-commutators-differentiable)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-matrix-exponentials-and-commutators-differentiable-compute-its-derivatives-arbitrary-order}
 
 Show that $f$ is differentiable. Compute its derivatives to arbitrary order
+
+[[Solution ↓](#solution-for-exr-matrix-exponentials-and-commutators-differentiable-compute-its-derivatives-arbitrary-order)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -34,11 +40,11 @@ Show that $f$ is differentiable. Compute its derivatives to arbitrary order
 
 The first source item supplied the setup but no question, so it now appears in the chapter introduction.
 
-### Solution to @exr-matrix-exponentials-and-commutators-explain-why-may-view-vector-valued {.unnumbered}
+### Solution to @exr-matrix-exponentials-and-commutators-explain-why-may-view-vector-valued {#solution-for-exr-matrix-exponentials-and-commutators-explain-why-may-view-vector-valued .unnumbered}
 
 Identification of $\mathbb{F}^{n\times m}$ with $\mathbb{F}^{nm}$.
 
-### Solution to @exr-matrix-exponentials-and-commutators-differentiable {.unnumbered}
+### Solution to @exr-matrix-exponentials-and-commutators-differentiable {#solution-for-exr-matrix-exponentials-and-commutators-differentiable .unnumbered}
 
 Since $tA$ and $hA$ commute,
 
@@ -53,7 +59,7 @@ $$
 \lim_{h\to0}\frac{e^{(t+h)A}-e^{tA}}{h}=e^{tA}A=Ae^{tA}.
 $$
 
-### Solution to @exr-matrix-exponentials-and-commutators-differentiable-compute-its-derivatives-arbitrary-order {.unnumbered}
+### Solution to @exr-matrix-exponentials-and-commutators-differentiable-compute-its-derivatives-arbitrary-order {#solution-for-exr-matrix-exponentials-and-commutators-differentiable-compute-its-derivatives-arbitrary-order .unnumbered}
 
 $f$ is a product of differentiable matrix-valued functions. The product rule gives
 

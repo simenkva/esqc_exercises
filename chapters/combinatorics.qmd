@@ -46,12 +46,17 @@ $$
 
 Compute the factorials $0!$, $1!$, $2!$, $3!$, $4!$, and $5!$.
 
+[[Solution ↓](#solution-for-exr-combinatorics-factorial)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-combinatorics-factorial-arrangements level="intermediate"}
 ### Lunch line
 
 42 people stand in a lunch line. How many different lunch line arrangements with 42 people are possible?
+
+[[Solution ↓](#solution-for-exr-combinatorics-factorial-arrangements)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-combinatorics-factorial-arrangements-chemists}
@@ -62,6 +67,8 @@ Compute the number of arrangements for the following scenarios:
 a. A chemist has 10 different chemical samples. How many ways can the chemist arrange the samples on a shelf?
 
 b. A chemist has 10 different chemical samples. 4 of the samples are liquids, and the other 6 are solids. How many ways can the chemist arrange the samples on a shelf if all the liquids must be together?
+
+[[Solution ↓](#solution-for-exr-combinatorics-factorial-arrangements-chemists)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -98,6 +105,9 @@ $$
 $$
 
 e. Based on your results above, what happens to the accuracy of Stirling's approximation as $n$ increases?
+
+[[Solution ↓](#solution-for-exr-stirling-factorial)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -133,6 +143,9 @@ Fact: The $n$-th row of Pascal's triangle contains the binomial coefficients $\b
 a. Compute the binomial coefficients $\binom{5}{2}$, $\binom{6}{3}$, and $\binom{7}{4}$.
 
 b.  In Norwegian Lotto, 7 numbers are drawn from a set of 34 numbers. How many different combinations of 7 numbers can be drawn?
+
+[[Solution ↓](#solution-for-exr-combinatorics-binomial-coefficients)]{.content-visible when-profile="tutor"}
+
 :::
 
 :::{#exr-combinatorics-pascals-triangle recommended="topic" level="beginner" topic="second-quantization" }
@@ -170,6 +183,9 @@ d. Show that the resulting expression is
     and hence prove Pascal's identity.
 
 e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choosing $k$ objects from a set of $n$ objects. Pick one particular object and separate the choices into two cases: those that contain this object and those that do not.
+
+[[Solution ↓](#solution-for-exr-combinatorics-pascals-identity)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -180,6 +196,8 @@ e. Give a combinatorial explanation of Pascal's identity. *Hint:* Consider choos
 Write a computer program to generate the first $2^n$ rows of Pascal's triangle, where $n=1,2,\ldots$. Create a $2^n\times 2^n$ lower triangular matrix $T$, where $T_{k,n} = 0$ if $\binom{n}{k}$ is even, and $T_{k,n}=1$ if the coefficient is odd, for $k \leq n$ (indexing from zero). Visualize the matrix. What pattern do you observe? This pattern is known as the Sierpinski triangle.
 
 If you use Python and sympy, you can generate binomial factors with the function `sympy.binomial(n, k)`. Check for parity using the modulo operator `%`. For example, `sympy.binomial(n, k) % 2` will return `0` for even numbers and `1` for odd numbers.
+
+[[Solution ↓](#solution-for-exr-combinatorics-pascal-sierpinski)]{.content-visible when-profile="tutor"}
 
 :::
 
@@ -216,6 +234,9 @@ d.	Compare the coefficients in your expansion of $(x+y)^4$ with the row
 e.	Use the binomial theorem to expand $(1+x)^5$.
 
 f.	Without carrying out any multiplication, find the coefficient of $x^3$ in $(1+x)^7$.
+
+[[Solution ↓](#solution-for-exr-combinatorics-binomial-theorem-basic)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -245,6 +266,9 @@ f.	Use the binomial theorem with $a=b=1$ to show that
 	$$
 
 	Interpret this result in terms of the number of possible assignments of the two labels $\alpha$ and $\beta$ to $n$ electrons.
+
+[[Solution ↓](#solution-for-exr-combinatorics-binomial-theorem-coefficients)]{.content-visible when-profile="tutor"}
+
 :::
 
 
@@ -279,7 +303,7 @@ o88oooo888    88ooo88  o888ooooo88  888oo88      o888o    o888o  88ooo88  o88o  
 
 ## Solutions {.unnumbered}
 
-### Solution for @exr-combinatorics-factorial {.unnumbered}
+### Solution for @exr-combinatorics-factorial {#solution-for-exr-combinatorics-factorial .unnumbered}
 
 Recall that $0! = 1$ and, for a positive integer $n$,
 
@@ -298,7 +322,7 @@ $$
 5! = 120.
 $$
 
-### Solution for @exr-combinatorics-factorial-arrangements {.unnumbered}
+### Solution for @exr-combinatorics-factorial-arrangements {#solution-for-exr-combinatorics-factorial-arrangements .unnumbered}
 
 There are 42 choices for the first person in the line, 41 choices for the second, and so on. Hence the number of possible arrangements is
 
@@ -306,7 +330,7 @@ $$
 42! = 42\cdot 41\cdots 2\cdot 1.
 $$
 
-### Solution for @exr-combinatorics-factorial-arrangements-chemists {.unnumbered}
+### Solution for @exr-combinatorics-factorial-arrangements-chemists {#solution-for-exr-combinatorics-factorial-arrangements-chemists .unnumbered}
 
 a. The 10 different chemical samples can be arranged in
 
@@ -324,7 +348,7 @@ b. Since the 4 liquids must be together, we can first regard them as a single ob
 
 
 
-### Solution for @exr-stirling-factorial {.unnumbered}
+### Solution for @exr-stirling-factorial {#solution-for-exr-stirling-factorial .unnumbered}
 
 We use Stirling's approximation,
 
@@ -408,7 +432,7 @@ d. For $n=50$,
 
 e. The relative error becomes smaller as $n$ increases. Thus, Stirling's approximation becomes increasingly accurate for large $n$.
 
-### Solution for @exr-combinatorics-binomial-coefficients {.unnumbered}
+### Solution for @exr-combinatorics-binomial-coefficients {#solution-for-exr-combinatorics-binomial-coefficients .unnumbered}
 
 a. The binomial coefficient is given by
 
@@ -468,7 +492,7 @@ b. Since the order in which the 7 numbers are drawn does not matter, the number 
 
 
 
-### Solution for @exr-combinatorics-pascals-identity {.unnumbered}
+### Solution for @exr-combinatorics-pascals-identity {#solution-for-exr-combinatorics-pascals-identity .unnumbered}
 
 a. The relation is equivalent to the construction of Pascal's triangle because each number in the triangle is the sum of the two numbers directly above it. The left term on the right-hand side corresponds to the number directly above and to the left, while the right term corresponds to the number directly above and to the right:
 
@@ -610,7 +634,7 @@ e. Now consider choosing $k$ objects from a set of $n$ objects. Select one parti
 
 
 
-### Solution for @exr-combinatorics-pascal-sierpinski {.unnumbered}
+### Solution for @exr-combinatorics-pascal-sierpinski {#solution-for-exr-combinatorics-pascal-sierpinski .unnumbered}
 
 
 ```{python}
@@ -646,7 +670,7 @@ plt.show()
 ```
 
 
-### Solution for @exr-combinatorics-binomial-theorem-basic {.unnumbered}
+### Solution for @exr-combinatorics-binomial-theorem-basic {#solution-for-exr-combinatorics-binomial-theorem-basic .unnumbered}
 
 a.	Multiplying directly,
 
@@ -699,7 +723,7 @@ f.	In
 	$$
 
 
-### Solution for @exr-combinatorics-binomial-theorem-coefficients {.unnumbered}
+### Solution for @exr-combinatorics-binomial-theorem-coefficients {#solution-for-exr-combinatorics-binomial-theorem-coefficients .unnumbered}
 
 a.	The binomial coefficients for $n=6$ are
 

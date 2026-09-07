@@ -74,6 +74,7 @@ book:
 
     - part: "Complex numbers and complex analysis"
       chapters:
+        - chapters/complex-numbers.qmd
         - chapters/complex-arithmetic.qmd
         - chapters/complex-sets.qmd
         - chapters/complex-exponential.qmd
@@ -95,17 +96,24 @@ book:
         - chapters/newtons-method.qmd
         - chapters/complex-step-differentiation.qmd
 
-    - part: "Fourier analysis"
-      chapters: []
+    # - part: "Fourier analysis"
+    #   chapters: []
 
-    - part: "Ordinary differential equations"
-      chapters: []
+    # - part: "Ordinary differential equations"
+    #   chapters: []
 
-    - part: "Partial differential equations"
-      chapters: []
+    # - part: "Partial differential equations"
+    #   chapters: []
 
-    - part: "Optimization"
-      chapters: []
+    # - part: "Probability and statistics"
+    #   chapters: []
+
+    - part: "Functional analysis"
+      chapters: 
+        - chapters/canonical-commutation.qmd
+
+#    - part: "Optimization"
+#      chapters: []
 
 
 bibliography: references.bib

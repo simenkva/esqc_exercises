@@ -34,13 +34,15 @@ In this exercise, we will try to understand why the axioms are as they are, i.e.
 
 ![Illustration of "chessboard metric": The king can move horizontally, vertically, and diagonally. The chessboard metric is the smallest number of steps the king must move in order to get from one point to another. Here, the king starts at A1, and two paths are shown: The optimal path to C7, and the optimal path to E1. Note that the king will move diagonally as much as he can, because he travels "faster" that way!](../figures/exercises/chess.svg){#fig-chessboard width="40%"}
 
+[[Solution ↓](#solution-for-exr-metric-spaces-metric-spaces)]{.content-visible when-profile="tutor"}
+
 :::
 
 ::: {.content-visible when-profile="tutor"}
 
 ## Solutions {.unnumbered}
 
-### Solution to @exr-metric-spaces-metric-spaces {.unnumbered}
+### Solution to @exr-metric-spaces-metric-spaces {#solution-for-exr-metric-spaces-metric-spaces .unnumbered}
 
 **For part 1.**
 
